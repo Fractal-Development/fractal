@@ -50,6 +50,7 @@ We have other dependencies that are used by all platforms so we manage that auto
 ```
 "framer-motion": "^4.1.17",
 "react": "16.13.1",
+"react-virtualized-auto-sizer": "^1.0.5"
 ```
 
 ### Is there more configuration needed?

@@ -1,0 +1,33 @@
+{
+    "name": "fractal-ui-next-js-example",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/size-class": "^2.2.3",
+        "fractal-ui-example-fragments": "2.0.0",
+        "framer-motion": "^4.1.17",
+        "next": "^11.0.1",
+        "next-transpile-modules": "^8.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-virtualized-auto-sizer": "^1.0.5"
+    },
+    "devDependencies": {
+        "@types/node": "^15.12.5",
+        "@types/react": "17.0.11",
+        "eslint": "7.29.0",
+        "eslint-config-next": "11.0.1",
+        "typescript": "4.3.4"
+    },
+    "resolutions": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
