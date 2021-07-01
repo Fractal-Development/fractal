@@ -14,10 +14,12 @@
         "lint": "eslint src/ --fix"
     },
     "peerDependencies": {
+        "@bma98/fractal-charts": "1.0.0",
         "@bma98/fractal-ui": "2.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
+        "@bma98/fractal-charts": "1.0.0",
         "@bma98/fractal-ui": "2.0.0",
         "@bma98/size-class": "^2.2.3",
         "@react-native-community/datetimepicker": "^3.5.2",

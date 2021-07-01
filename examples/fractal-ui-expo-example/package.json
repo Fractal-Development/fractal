@@ -9,6 +9,7 @@
         "eject": "expo eject"
     },
     "dependencies": {
+        "@bma98/fractal-charts": "1.0.0",
         "@bma98/fractal-ui": "2.0.0",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",

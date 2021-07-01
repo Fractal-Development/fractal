@@ -1666,7 +1666,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bma98/fractal-charts@workspace:packages/fractal-charts":
+"@bma98/fractal-charts@1.0.0, @bma98/fractal-charts@workspace:packages/fractal-charts":
   version: 0.0.0-use.local
   resolution: "@bma98/fractal-charts@workspace:packages/fractal-charts"
   dependencies:
@@ -8064,6 +8064,7 @@ __metadata:
   resolution: "fractal-ui-example-fragments@workspace:examples/fractal-ui-example-fragments"
   dependencies:
     "@babel/core": ^7.9.0
+    "@bma98/fractal-charts": 1.0.0
     "@bma98/fractal-ui": 2.0.0
     "@bma98/size-class": ^2.2.3
     "@react-native-community/datetimepicker": ^3.5.2
@@ -8100,6 +8101,7 @@ __metadata:
     typescript: ^4.3.4
     utility-types: ^3.10.0
   peerDependencies:
+    "@bma98/fractal-charts": 1.0.0
     "@bma98/fractal-ui": 2.0.0
   languageName: unknown
   linkType: soft
@@ -8109,6 +8111,7 @@ __metadata:
   resolution: "fractal-ui-expo-example@workspace:examples/fractal-ui-expo-example"
   dependencies:
     "@babel/core": ^7.9.0
+    "@bma98/fractal-charts": 1.0.0
     "@bma98/fractal-ui": 2.0.0
     "@react-native-community/datetimepicker": ^3.5.2
     "@react-native-community/slider": ^3.0.3
