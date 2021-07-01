@@ -32,6 +32,12 @@ yarn set version berry
 
 This will set up your local environment to use Yarn 2.x.x and all the workspaces features will work as expected.
 
+Just one more thing to install, this will install some handy tools to work with workspaces:
+
+```
+yarn plugin import workspace-tools
+```
+
 ### Installing root dependencies
 
 Now you have to install the root dependencies on your project
