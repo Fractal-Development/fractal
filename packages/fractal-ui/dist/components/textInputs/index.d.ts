@@ -8,7 +8,6 @@ export * from './IconTextField';
 export * from './PickerButton';
 export * from './SearchBar';
 export * from './TextField';
-export * from './MessageInput';
 export * from './ButtonTextField';
 export * from './TextFieldButton';
 export * from './MultiSelectInput';

@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-charts",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "description": "Charts and Graphs Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -13,8 +13,21 @@
         "clean": "rm -rf ./dist",
         "lint": "eslint src/ --fix"
     },
+    "dependencies": {
+        "@bma98/fractal-ui": "2.0.0",
+        "d3-array": "^3.0.1",
+        "d3-scale": "^4.0.0",
+        "d3-shape": "^3.0.1",
+        "react-native-svg": "12.1.0"
+    },
+    "peerDependencies": {
+        "react-native-reanimated": "~2.1.0"
+    },
     "devDependencies": {
         "@babel/core": "^7.9.0",
+        "@types/d3-array": "^3.0.0",
+        "@types/d3-scale": "^3.3.0",
+        "@types/d3-shape": "^2.1.0",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
@@ -36,7 +49,7 @@
         "expo-module-scripts": "^2.0.0",
         "framer-motion": "^4.1.17",
         "prettier": "^2.3.2",
-        "react-native-svg": "^12.1.1",
+        "react-native-reanimated": "~2.1.0",
         "typescript": "^4.3.4",
         "utility-types": "^3.10.0"
     },
