@@ -1,0 +1,1 @@
+{"version":3,"file":"isAcceptedFileType.js","sourceRoot":"","sources":["../../../../../../src/components/Dropzone/hooks/useValidateFileType/utils/isAcceptedFileType.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,kBAAkB,CAAC,aAA4B,EAAE,QAAgB;IAC7E,OAAO,aAAa,CAAC,QAAQ,CAAC,QAAQ,CAAC,CAAC;AAC5C,CAAC"}

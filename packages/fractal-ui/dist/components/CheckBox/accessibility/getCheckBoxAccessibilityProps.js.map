@@ -1,0 +1,1 @@
+{"version":3,"file":"getCheckBoxAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/CheckBox/accessibility/getCheckBoxAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,6BAA6B,CAAC,OAAgB,EAAE,QAAkB;IAC9E,OAAO;QACH,IAAI,EAAE,UAAU;QAChB,cAAc,EAAE,OAAO;QACvB,eAAe,EAAE,QAAQ;KAC5B,CAAC;AACN,CAAC"}

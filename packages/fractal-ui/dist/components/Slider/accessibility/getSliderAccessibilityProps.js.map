@@ -1,0 +1,1 @@
+{"version":3,"file":"getSliderAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/Slider/accessibility/getSliderAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,2BAA2B;IACvC,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,QAAQ;KACzB,CAAC;AACN,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"percentageToValue.js","sourceRoot":"","sources":["../../../../src/components/Slider/utils/percentageToValue.tsx"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,UAAU,iBAAiB,CAAC,UAAkB,EAAE,GAAW,EAAE,GAAW;IAC1E,OAAO,CAAC,CAAC,GAAG,GAAG,GAAG,CAAC,GAAG,GAAG,CAAC,GAAG,UAAU,GAAG,GAAG,CAAC;AAClD,CAAC"}

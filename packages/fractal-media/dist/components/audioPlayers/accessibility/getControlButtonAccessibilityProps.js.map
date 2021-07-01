@@ -1,0 +1,1 @@
+{"version":3,"file":"getControlButtonAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/audioPlayers/accessibility/getControlButtonAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,kCAAkC,CAAC,OAAe;IAC9D,OAAO;QACH,YAAY,EAAE,OAAO;KACxB,CAAC;AACN,CAAC"}

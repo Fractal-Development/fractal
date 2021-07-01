@@ -1,0 +1,1 @@
+{"version":3,"file":"getTableContainerAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/tables/accessibility/getTableContainerAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,mCAAmC;IAC/C,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,cAAc;KAC/B,CAAC;AACN,CAAC"}

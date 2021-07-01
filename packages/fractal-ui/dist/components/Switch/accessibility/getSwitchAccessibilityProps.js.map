@@ -1,0 +1,1 @@
+{"version":3,"file":"getSwitchAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/Switch/accessibility/getSwitchAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,2BAA2B,CAAC,OAAiB,EAAE,QAAkB;IAC7E,OAAO;QACH,IAAI,EAAE,QAAQ;QACd,YAAY,EAAE,QAAQ;QACtB,cAAc,EAAE,OAAO;QACvB,eAAe,EAAE,QAAQ;KAC5B,CAAC;AACN,CAAC"}

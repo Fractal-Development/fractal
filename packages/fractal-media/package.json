@@ -1,0 +1,57 @@
+{
+    "name": "@bma98/fractal-media",
+    "version": "2.0.0",
+    "description": "Media Components easy to customize for apps made by Fractal.",
+    "author": "BrandonMA",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "source": "src/index.tsx",
+    "scripts": {
+        "start": "expo start",
+        "build": "expo-module build",
+        "clean": "rm -rf ./dist",
+        "lint": "eslint src/ --fix"
+    },
+    "dependencies": {
+        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/size-class": "^2.2.3",
+        "expo-av": "^9.1.2",
+        "react-native-webview": "^11.6.4",
+        "react-native-youtube-iframe": "^2.1.0",
+        "styled-components": "^5.2.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@types/react": "~16.14.8",
+        "@types/react-dom": "^17.0.8",
+        "@types/react-native": "~0.63.52",
+        "@types/styled-components": "^5.1.10",
+        "@typescript-eslint/eslint-plugin": "^4.28.0",
+        "@typescript-eslint/parser": "^4.15.1",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.29.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-config-standard-react": "^11.0.1",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-standard": "^5.0.0",
+        "expo-module-scripts": "^2.0.0",
+        "framer-motion": "^4.1.17",
+        "prettier": "^2.3.2",
+        "react-native-svg": "^12.1.1",
+        "typescript": "^4.3.4",
+        "utility-types": "^3.10.0"
+    },
+    "keywords": [
+        "Javascript",
+        "React",
+        "React native",
+        "UI Library"
+    ]
+}

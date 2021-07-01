@@ -1,0 +1,1 @@
+{"version":3,"file":"getRadioButtonAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/radio/accessibility/getRadioButtonAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,gCAAgC,CAAC,OAAgB,EAAE,QAAkB;IACjF,OAAO;QACH,IAAI,EAAE,OAAO;QACb,cAAc,EAAE,OAAO;QACvB,eAAe,EAAE,QAAQ;KAC5B,CAAC;AACN,CAAC"}

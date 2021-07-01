@@ -1,0 +1,1 @@
+{"version":3,"file":"getSegmentedControlButtonAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/SegmentedControl/accessibility/getSegmentedControlButtonAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,2CAA2C,CAAC,OAAgB,EAAE,QAAkB;IAC5F,OAAO;QACH,cAAc,EAAE,OAAO;QACvB,eAAe,EAAE,QAAQ;KAC5B,CAAC;AACN,CAAC"}

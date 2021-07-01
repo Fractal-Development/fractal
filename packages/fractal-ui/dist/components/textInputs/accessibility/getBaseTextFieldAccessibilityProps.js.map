@@ -1,0 +1,1 @@
+{"version":3,"file":"getBaseTextFieldAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/textInputs/accessibility/getBaseTextFieldAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,kCAAkC,CAAC,WAAoB,EAAE,QAAkB;IACvF,OAAO;QACH,IAAI,EAAE,SAAS;QACf,kBAAkB,EAAE,WAAW;QAC/B,eAAe,EAAE,QAAQ;KAC5B,CAAC;AACN,CAAC"}

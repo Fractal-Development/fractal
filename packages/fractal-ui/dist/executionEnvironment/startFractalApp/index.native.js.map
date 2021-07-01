@@ -1,0 +1,1 @@
+{"version":3,"file":"index.native.js","sourceRoot":"","sources":["../../../src/executionEnvironment/startFractalApp/index.native.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,SAAS,EAAE,MAAM,cAAc,CAAC;AAEnD,MAAM,UAAU,eAAe;IAC3B,IAAI,QAAQ,CAAC,EAAE,KAAK,SAAS,EAAE;QAC3B,IAAI,SAAS,CAAC,qCAAqC,EAAE;YACjD,SAAS,CAAC,qCAAqC,CAAC,IAAI,CAAC,CAAC;SACzD;KACJ;AACL,CAAC"}

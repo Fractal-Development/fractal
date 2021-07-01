@@ -1,0 +1,1 @@
+{"version":3,"file":"getGridColumnAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/grids/accessibility/getGridColumnAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,+BAA+B;IAC3C,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,aAAa;KAC9B,CAAC;AACN,CAAC"}

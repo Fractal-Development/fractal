@@ -1,0 +1,1 @@
+{"version":3,"file":"useThemeIdentifier.js","sourceRoot":"","sources":["../../../src/context/hooks/useThemeIdentifier.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,sBAAsB,EAAuB,MAAM,2BAA2B,CAAC;AAExF,MAAM,UAAU,kBAAkB;IAC9B,MAAM,CAAC,UAAU,CAAC,GAAG,UAAU,CAAC,sBAAsB,CAAC,CAAC;IACxD,OAAO,UAAU,CAAC;AACtB,CAAC"}
