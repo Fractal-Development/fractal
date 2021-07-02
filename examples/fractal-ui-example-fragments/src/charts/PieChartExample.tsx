@@ -16,13 +16,31 @@ export function PieChartExample({ data }: Props): JSX.Element {
         setSelectedIndex(index);
     };
 
+    const flexDirection = getValueForLargeSizeType(type, 'row', 'column');
+
     return (
         <Box marginBottom={spacings.m}>
             <PieChart height={200} data={data} selectedSliceIndex={selectedIndex} />
-            <Layer flexDirection={getValueForLargeSizeType(type, 'row', 'column')} marginTop={spacings.m}>
-                <Button text={'One'} onPress={() => handleIndex(0)} />
-                <Button text={'Two'} onPress={() => handleIndex(1)} />
-                <Button text={'Three'} onPress={() => handleIndex(2)} />
+            <Layer
+                flexDirection={flexDirection}
+                justifyContent={flexDirection == 'row' ? 'space-evenly' : undefined}
+                marginTop={spacings.m}
+            >
+                <Button
+                    text={'One'}
+                    onPress={() => handleIndex(0)}
+                    minWidth={120}
+                    backgroundColor={data[0].color}
+                    marginBottom={flexDirection == 'column' ? spacings.m : 0}
+                />
+                <Button
+                    text={'Two'}
+                    onPress={() => handleIndex(1)}
+                    minWidth={120}
+                    backgroundColor={data[1].color}
+                    marginBottom={flexDirection == 'column' ? spacings.m : 0}
+                />
+                <Button text={'Three'} onPress={() => handleIndex(2)} minWidth={120} backgroundColor={data[2].color} />
             </Layer>
         </Box>
     );
