@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MoreVerticalIcon } from '../../assets/MoreVerticalIcon';
+import { ThreeDotsHorizontalIcon } from '../../assets/ThreeDotsHorizontalIcon';
 import { useTheme } from '../../context';
 import { CircularIconButton } from './CircularIconButton';
 import { TouchableOpacity } from './TouchableOpacity';
@@ -19,6 +19,6 @@ export function OptionsMenuButton({ options, onOptionPress, customIcon }) {
         React.createElement(Text, { variant: 'normal', flexShrink: 1, style: { textAlign: 'left' } }, option))))));
     return (React.createElement(Popover, { placement: 'bottom', active: optionsVisible, onRequestClose: hideOptions, popoverChildren: renderMenu }, (ref) => (React.createElement(CircularIconButton, { ref: ref, variant: 'content', reduceColor: true, onPress: toggleOptions }, customIcon
         ? customIcon
-        : (color) => React.createElement(MoreVerticalIcon, { height: sizes.textFieldIconSize, width: sizes.textFieldIconSize, fill: color })))));
+        : (color) => (React.createElement(ThreeDotsHorizontalIcon, { height: sizes.textFieldIconSize, width: sizes.textFieldIconSize, fill: color }))))));
 }
 //# sourceMappingURL=OptionsMenuButton.js.map

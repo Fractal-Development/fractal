@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, Popover, PlacementType } from '@bma98/fractal-ui';
 
 function PopoverContent(): JSX.Element {
@@ -66,7 +66,7 @@ export function PopoverFragment(): JSX.Element {
     };
 
     return (
-        <Fragment>
+        <>
             <Text variant={'title'}>PopoverView Example</Text>
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover
@@ -108,6 +108,6 @@ export function PopoverFragment(): JSX.Element {
                     {(ref) => <Button ref={ref} variant={'main'} width={120} onPress={() => showPopover('left')} text={'Left'} />}
                 </Popover>
             </Box>
-        </Fragment>
+        </>
     );
 }

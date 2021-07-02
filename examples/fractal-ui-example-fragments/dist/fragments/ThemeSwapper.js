@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react';
+import React from 'react';
+import { useCallback } from 'react';
 import { Button, useSetThemeIdentifier, Text } from '@bma98/fractal-ui';
 export function ThemeSwapper() {
     const setThemeIdentifier = useSetThemeIdentifier();

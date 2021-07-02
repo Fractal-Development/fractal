@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton } from '@bma98/fractal-ui';
+import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
 function PopoverContent() {
     return (React.createElement(Box, { width: 110 },
         React.createElement(Button, { variant: 'alternative', text: 'Pasion' })));
@@ -53,6 +53,6 @@ export function AutocompleteFragment() {
             React.createElement(HorizontalLayer, null,
                 React.createElement(Layer, { flex: 1 },
                     React.createElement(AutoComplete, { placeholder: 'AutoComplete and other component', options: top20Films, onChangeText: (text) => console.log(`New text is ${text}`), getOptionLabel: (option) => option.title, onSelect: handleSelect })),
-                React.createElement(Popover, { active: active, onRequestClose: deactivate, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => (React.createElement(CircularIconButton, { ref: ref, onPress: toggleActive, variant: 'success', marginLeft: spacings.s }, () => React.createElement(CircularIconButton, { height: 24, width: 24 }))))))));
+                React.createElement(Popover, { active: active, onRequestClose: deactivate, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => (React.createElement(CircularIconButton, { ref: ref, onPress: toggleActive, variant: 'success', marginLeft: spacings.s }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color }))))))));
 }
 //# sourceMappingURL=AutocompleteFragment.js.map

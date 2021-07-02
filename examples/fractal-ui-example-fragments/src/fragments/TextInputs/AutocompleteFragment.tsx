@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton } from '@bma98/fractal-ui';
+import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
 
 function PopoverContent(): JSX.Element {
     return (
@@ -85,7 +85,7 @@ export function AutocompleteFragment(): JSX.Element {
                     <Popover active={active} onRequestClose={deactivate} popoverChildren={() => <PopoverContent />}>
                         {(ref) => (
                             <CircularIconButton ref={ref} onPress={toggleActive} variant={'success'} marginLeft={spacings.s}>
-                                {() => <CircularIconButton height={24} width={24} />}
+                                {(color) => <LoadIcon height={24} width={24} fill={color} />}
                             </CircularIconButton>
                         )}
                     </Popover>

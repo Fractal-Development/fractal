@@ -1,6 +1,6 @@
 import React, { memo, SVGProps } from 'react';
 
-const ThreeDotsIcon = memo((props: SVGProps<SVGSVGElement>) => {
+const ThreeDotsHorizontalIcon = memo((props: SVGProps<SVGSVGElement>) => {
     return (
         <svg focusable={false} viewBox='0 0 18 4' {...props}>
             <g fillRule='evenodd'>
@@ -12,6 +12,6 @@ const ThreeDotsIcon = memo((props: SVGProps<SVGSVGElement>) => {
     );
 });
 
-ThreeDotsIcon.displayName = 'ThreeDotsIcon';
+ThreeDotsHorizontalIcon.displayName = 'ThreeDotsHorizontalIcon';
 
-export { ThreeDotsIcon };
+export { ThreeDotsHorizontalIcon };

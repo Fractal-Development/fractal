@@ -10,14 +10,14 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { forwardRef } from 'react';
-import { ThreeDotsIcon } from '../../assets/ThreeDotsIcon';
+import { ThreeDotsHorizontalIcon } from '../../assets/ThreeDotsHorizontalIcon';
 import { useTheme } from '../../context/hooks/useTheme';
 import { BaseButton } from './BaseButton';
 const OptionsButton = forwardRef((_a, ref) => {
     var { size = 24 } = _a, others = __rest(_a, ["size"]);
     const { colors } = useTheme();
     return (React.createElement(BaseButton, Object.assign({ ref: ref, height: size, width: size, justifyContent: 'center', alignItems: 'center', "aria-label": 'Options' }, others),
-        React.createElement(ThreeDotsIcon, { height: size, width: size, fill: colors.text })));
+        React.createElement(ThreeDotsHorizontalIcon, { height: size, width: size, fill: colors.text })));
 });
 OptionsButton.displayName = 'CrossButton';
 export { OptionsButton };

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, Popover } from '@bma98/fractal-ui';
 function PopoverContent() {
     return (React.createElement(Box, { width: 120 },
@@ -56,7 +56,7 @@ export function PopoverFragment() {
             });
         }
     };
-    return (React.createElement(Fragment, null,
+    return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title' }, "PopoverView Example"),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },
             React.createElement(Popover, { placement: 'bottom', active: popoversVisibles.bottom, onRequestClose: () => hidePopover('bottom'), popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: () => showPopover('bottom'), text: 'Bottom' }))),

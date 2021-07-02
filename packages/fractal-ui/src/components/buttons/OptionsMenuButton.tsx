@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react';
-import { MoreVerticalIcon } from '../../assets/MoreVerticalIcon';
+import { ThreeDotsHorizontalIcon } from '../../assets/ThreeDotsHorizontalIcon';
 import { useTheme } from '../../context';
 import { CircularIconButton } from './CircularIconButton';
 import { TouchableOpacity } from './TouchableOpacity';
@@ -44,7 +44,9 @@ export function OptionsMenuButton({ options, onOptionPress, customIcon }: Option
                 <CircularIconButton ref={ref} variant={'content'} reduceColor onPress={toggleOptions}>
                     {customIcon
                         ? customIcon
-                        : (color) => <MoreVerticalIcon height={sizes.textFieldIconSize} width={sizes.textFieldIconSize} fill={color} />}
+                        : (color) => (
+                              <ThreeDotsHorizontalIcon height={sizes.textFieldIconSize} width={sizes.textFieldIconSize} fill={color} />
+                          )}
                 </CircularIconButton>
             )}
         </Popover>
