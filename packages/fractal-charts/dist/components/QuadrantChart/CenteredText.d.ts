@@ -7,5 +7,5 @@ interface CenteredTextProps extends TextProps {
     position?: 'absolute' | 'relative';
     marginTop?: number;
 }
-export declare function CenteredText({ style, children, ...others }: CenteredTextProps): JSX.Element;
+export declare function CenteredText({ style, children, color, ...others }: CenteredTextProps): JSX.Element;
 export {};

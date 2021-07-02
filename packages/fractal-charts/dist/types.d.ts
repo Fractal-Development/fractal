@@ -116,7 +116,7 @@ export interface YAxisProps extends AxisProps {
 }
 export declare type QuadrantVariant = 'first' | 'second' | 'third' | 'fourth';
 export interface QuadrantChartColors {
-    text: string;
+    text?: string;
     firstQuadrant: string;
     secondQuadrant: string;
     thirdQuadrant: string;

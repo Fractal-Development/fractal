@@ -36,8 +36,7 @@ export function QuadrantChartExample(): JSX.Element {
                     firstQuadrant: '#fec201',
                     secondQuadrant: '#00a5b5',
                     thirdQuadrant: '#fd4e15',
-                    fourthQuadrant: '#10164a',
-                    text: '#444F4F'
+                    fourthQuadrant: '#10164a'
                 }}
             />
         </Box>

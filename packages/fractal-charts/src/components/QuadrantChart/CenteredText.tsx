@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextProps } from '@bma98/fractal-ui';
+import { Text, TextProps, useTheme } from '@bma98/fractal-ui';
 
 interface CenteredTextProps extends TextProps {
     style?: any;
@@ -10,9 +10,10 @@ interface CenteredTextProps extends TextProps {
     marginTop?: number;
 }
 
-export function CenteredText({ style, children, ...others }: CenteredTextProps): JSX.Element {
+export function CenteredText({ style, children, color, ...others }: CenteredTextProps): JSX.Element {
+    const { colors } = useTheme();
     return (
-        <Text fontWeight={300} fontSize={14} style={{ textAlign: 'center', ...style }} {...others}>
+        <Text fontWeight={300} fontSize={14} color={colors.label || color} style={{ textAlign: 'center', ...style }} {...others}>
             {children}
         </Text>
     );

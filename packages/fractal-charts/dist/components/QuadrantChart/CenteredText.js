@@ -10,9 +10,10 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import { Text } from '@bma98/fractal-ui';
+import { Text, useTheme } from '@bma98/fractal-ui';
 export function CenteredText(_a) {
-    var { style, children } = _a, others = __rest(_a, ["style", "children"]);
-    return (React.createElement(Text, Object.assign({ fontWeight: 300, fontSize: 14, style: Object.assign({ textAlign: 'center' }, style) }, others), children));
+    var { style, children, color } = _a, others = __rest(_a, ["style", "children", "color"]);
+    const { colors } = useTheme();
+    return (React.createElement(Text, Object.assign({ fontWeight: 300, fontSize: 14, color: colors.label || color, style: Object.assign({ textAlign: 'center' }, style) }, others), children));
 }
 //# sourceMappingURL=CenteredText.js.map
