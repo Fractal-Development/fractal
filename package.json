@@ -24,6 +24,7 @@
     },
     "homepage": "https://github.com/BrandonMA/fractal#readme",
     "resolutions": {
-        "d3-array": "2.3.3"
+        "d3-array": "2.3.3",
+        "babel-jest": "^26.6.0"
     }
 }
