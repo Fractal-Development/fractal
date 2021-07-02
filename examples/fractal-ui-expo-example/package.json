@@ -9,8 +9,8 @@
         "eject": "expo eject"
     },
     "dependencies": {
-        "@bma98/fractal-charts": "1.0.0",
-        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
+        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",
         "@react-native-picker/picker": "^1.16.3",
@@ -18,7 +18,7 @@
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
         "expo-status-bar": "~1.0.4",
-        "fractal-ui-example-fragments": "2.0.0",
+        "fractal-ui-example-fragments": "https://gitpkg.now.sh/BrandonMA/fractal/examples/fractal-ui-example-fragments?master",
         "framer-motion": "^4.1.17",
         "react": "16.13.1",
         "react-dom": "16.13.1",
