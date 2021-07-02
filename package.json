@@ -5,10 +5,6 @@
     "scripts": {},
     "author": "BrandonMA",
     "license": "MIT",
-    "devDependencies": {
-        "prettier": "^2.3.2",
-        "typescript": "^4.3.4"
-    },
     "workspaces": [
         "packages/*",
         "examples/*"
@@ -26,5 +22,8 @@
     "bugs": {
         "url": "https://github.com/BrandonMA/fractal/issues"
     },
-    "homepage": "https://github.com/BrandonMA/fractal#readme"
+    "homepage": "https://github.com/BrandonMA/fractal#readme",
+    "resolutions": {
+        "d3-array": "2.3.3"
+    }
 }
