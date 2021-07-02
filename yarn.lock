@@ -1672,9 +1672,9 @@ __metadata:
   dependencies:
     "@babel/core": ^7.9.0
     "@bma98/fractal-ui": 2.0.0
-    "@types/d3-array": ^3.0.0
-    "@types/d3-scale": ^3.3.0
-    "@types/d3-shape": ^2.1.0
+    "@types/d3-array": ^3.0.1
+    "@types/d3-scale": ^4.0.1
+    "@types/d3-shape": ^3.0.0
     "@types/react": ~16.14.8
     "@types/react-dom": ^17.0.8
     "@types/react-native": ~0.63.52
@@ -1682,8 +1682,8 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.28.0
     "@typescript-eslint/parser": ^4.15.1
     babel-eslint: ^10.1.0
-    d3-array: ^3.0.1
-    d3-scale: ^4.0.0
+    d3-array: 2.3.3
+    d3-scale: 3.3.0
     d3-shape: ^3.0.1
     eslint: ^7.29.0
     eslint-config-prettier: ^8.3.0
@@ -1699,11 +1699,12 @@ __metadata:
     expo-module-scripts: ^2.0.0
     prettier: ^2.3.2
     react-native-reanimated: ~2.1.0
-    react-native-svg: ^12.1.1
     typescript: ^4.3.4
     utility-types: ^3.10.0
   peerDependencies:
+    "@bma98/fractal-ui": 2.0.0
     react-native-reanimated: ~2.1.0
+    react-native-svg: ^12.1.1
   languageName: unknown
   linkType: soft
 
@@ -1741,6 +1742,8 @@ __metadata:
     styled-components: ^5.2.1
     typescript: ^4.3.4
     utility-types: ^3.10.0
+  peerDependencies:
+    "@bma98/fractal-ui": 2.0.0
   languageName: unknown
   linkType: soft
 
@@ -1776,6 +1779,8 @@ __metadata:
     styled-components: ^5.3.0
     typescript: ^4.3.4
     utility-types: ^3.10.0
+  peerDependencies:
+    "@bma98/fractal-ui": 2.0.0
   languageName: unknown
   linkType: soft
 
@@ -3364,42 +3369,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-array@npm:^3.0.0":
+"@types/d3-array@npm:^3.0.1":
   version: 3.0.1
   resolution: "@types/d3-array@npm:3.0.1"
   checksum: 75992e056b4cd3efe4d8c58bee692407c0dfaabd06046b248699fd2528b3fd44d05287f368aae598af4eba66d4b5f2e849cfaf117f3d82f29c405e1a9a63e784
   languageName: node
   linkType: hard
 
-"@types/d3-path@npm:^2":
-  version: 2.0.1
-  resolution: "@types/d3-path@npm:2.0.1"
-  checksum: 0c6130236cff3e1e517e945e2e009a45fa8da0b793526b8ba22e5e8d23c9f5250229c1867603feef52c2de9a263ad4eb10eed6e6aa04fd2f306f644e056e7738
+"@types/d3-path@npm:*":
+  version: 3.0.0
+  resolution: "@types/d3-path@npm:3.0.0"
+  checksum: cfa5339cc9c6f7584c62a9c02c1913d91c2a78a979820b3fad26e9ab2a3fa533b2ceed5f4a7127bcae9b1fff45678925686d240216088662a9a80dc3ff5c4e3e
   languageName: node
   linkType: hard
 
-"@types/d3-scale@npm:^3.3.0":
-  version: 3.3.2
-  resolution: "@types/d3-scale@npm:3.3.2"
+"@types/d3-scale@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@types/d3-scale@npm:4.0.1"
   dependencies:
-    "@types/d3-time": ^2
-  checksum: 652c76f69734ecd9992920df8bf6bcd8c2c344dcafa7199ca17d2327e2e88b8ed1b1c34fc59926ceadccc613751718aa7680119752ca642f099679afcbd25b4f
+    "@types/d3-time": "*"
+  checksum: e0b43422c4f9e6634aa60e49f1b25ff40499fa843d8f20068ef49b85794a99267063116fda77b37244be4711cc935fbf2b4b8646f345187ba9928ef01223d3f2
   languageName: node
   linkType: hard
 
-"@types/d3-shape@npm:^2.1.0":
-  version: 2.1.2
-  resolution: "@types/d3-shape@npm:2.1.2"
+"@types/d3-shape@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/d3-shape@npm:3.0.0"
   dependencies:
-    "@types/d3-path": ^2
-  checksum: 263836f80f984055510a9b191594d1a5fda572caecf70deefef290526cba2311d2495fa35497a5f231631f7d0a1a2176eccba2efa7a6350b69f48d078343d423
+    "@types/d3-path": "*"
+  checksum: 953132a40a879a13292d884dec77acc87ab58f4b42ce2dfa395d3b29290daaa5eba06545de4bf533e2980fcd438ec8382258b0acad9a5e447847519949514720
   languageName: node
   linkType: hard
 
-"@types/d3-time@npm:^2":
-  version: 2.1.1
-  resolution: "@types/d3-time@npm:2.1.1"
-  checksum: 3308932f9f4640f0b47a17b08002dfcd2c8f4a1fd9f852293cc11079d82bb6c888c33dc345fc22325fe780fa5fbb99eaa599bcdc6390f828a62bd61f92370dba
+"@types/d3-time@npm:*":
+  version: 3.0.0
+  resolution: "@types/d3-time@npm:3.0.0"
+  checksum: 8550a6b08a9e779933487ce19f4db64ccb2aeb9cee2b5b46b05cf8f98447771dc32892b5ac418d43dcc81f654c0b903c010c4781c1303994085b9eb123b43e18
   languageName: node
   linkType: hard
 
@@ -6047,35 +6052,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-array@npm:2 - 3, d3-array@npm:2.10.0 - 3, d3-array@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "d3-array@npm:3.0.1"
+"d3-array@npm:2.3.3":
+  version: 2.3.3
+  resolution: "d3-array@npm:2.3.3"
+  checksum: 340e42f76f2f9b98c74fc74788f91fe19581ed7eb00048a4b80bf765e86091c358b597f8bb14f5b9800e7a35195f0d1e6121481f0841dab5e1ccf26494de8bd5
+  languageName: node
+  linkType: hard
+
+"d3-color@npm:1 - 2":
+  version: 2.0.0
+  resolution: "d3-color@npm:2.0.0"
+  checksum: 637e1115981b7598d3f86418478e7bfc4939d23b48eecbf5ea2297048724e13e42dda60963cbf2ebe3866705fe2eb87fa27e529da55ad57cda16aa799747554d
+  languageName: node
+  linkType: hard
+
+"d3-format@npm:1 - 2":
+  version: 2.0.0
+  resolution: "d3-format@npm:2.0.0"
+  checksum: 515b8c3c407f6a73575c639eedd0470a659073d7c4f1f56b1b63c2a6a68d03543b7f9484bc351ac52d3a130c3768701952e000fe4d4c65bc3952c8beb6063768
+  languageName: node
+  linkType: hard
+
+"d3-interpolate@npm:1.2.0 - 2":
+  version: 2.0.1
+  resolution: "d3-interpolate@npm:2.0.1"
   dependencies:
-    internmap: 1 - 2
-  checksum: b9d9e09be270ff981340f1d82a9494ed6bb4400fe00bacae8a2fd6872f6134f785f4f6d065e9a1075d87a5ae4a7fe108304bc33d381912b368e194e3c54a1dda
-  languageName: node
-  linkType: hard
-
-"d3-color@npm:1 - 3":
-  version: 3.0.1
-  resolution: "d3-color@npm:3.0.1"
-  checksum: aae96d2d4e3e0b1376c9a5395823d330562cf1cae61885c3cebc9f2119bd2a87c5129b05196dd50ae102ef6135a5f910a860a285c53cb6d5c9e2646663b288b8
-  languageName: node
-  linkType: hard
-
-"d3-format@npm:1 - 3":
-  version: 3.0.1
-  resolution: "d3-format@npm:3.0.1"
-  checksum: 151b97173359611dc3dfca595ff2bfae13f5811965ae2e843247d18324ea0228ff99d53957219b00788cfe49025b3d13f064fbbfd6d2d8bd32e383e93bc08b1d
-  languageName: node
-  linkType: hard
-
-"d3-interpolate@npm:1.2.0 - 3":
-  version: 3.0.1
-  resolution: "d3-interpolate@npm:3.0.1"
-  dependencies:
-    d3-color: 1 - 3
-  checksum: ec6d6c1733a492c7dfe1b795f3f504b736b5a2be4ac714a14a3dc4f657c907f802fffff46a2775c6a6ac5b5bf7ae761fa07244a19896a7113fc391b4b555db70
+    d3-color: 1 - 2
+  checksum: a996521ffaabceebaa241a3afc2787c9a0976c02491b806463778b962cabb72cfeb43d230b0cf7d3a9a25def85c6eefcad55ecb1b700cfbfa6344ce178bed478
   languageName: node
   linkType: hard
 
@@ -6086,16 +6089,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-scale@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "d3-scale@npm:4.0.0"
+"d3-scale@npm:3.3.0":
+  version: 3.3.0
+  resolution: "d3-scale@npm:3.3.0"
   dependencies:
-    d3-array: 2.10.0 - 3
-    d3-format: 1 - 3
-    d3-interpolate: 1.2.0 - 3
-    d3-time: 2.1.1 - 3
-    d3-time-format: 2 - 4
-  checksum: 688bd334c5e19b632a3fa382bc311d0b83b2d17acf6cfd9d7393087e8f60e3f2a03d63483ea6ef1c2c6147ac5316a48a397a2c29527627563897df8e4b3b9e18
+    d3-array: ^2.3.0
+    d3-format: 1 - 2
+    d3-interpolate: 1.2.0 - 2
+    d3-time: ^2.1.1
+    d3-time-format: 2 - 3
+  checksum: 2a22d0f5381ccb208a9d593b64db3a6f069ea928f132f042f0e12d5836ea5999f0f58b20c5aeddff96946deb277ed8d6ba3958e3330610e0ebaa6085f42baf9e
   languageName: node
   linkType: hard
 
@@ -6108,21 +6111,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-time-format@npm:2 - 4":
-  version: 4.0.0
-  resolution: "d3-time-format@npm:4.0.0"
+"d3-time-format@npm:2 - 3":
+  version: 3.0.0
+  resolution: "d3-time-format@npm:3.0.0"
   dependencies:
-    d3-time: 1 - 3
-  checksum: 578ff1765bb5127fa9919cf1ea0dd3a6838336fb90f40daa0984b29c34053673231a0dbd6317d924a1d4babc859f3ee8ca5204bc5ea1ba8b2f73af80113d0e6e
+    d3-time: 1 - 2
+  checksum: 3e67e7eb5b8e1d0f31cc5b78bd5c4857d7fa59c0d9c1356b317e128095f93f8530c7046ccd903a3b8565268448596bc40ec0826df10f6dca9970a8b5faa0baab
   languageName: node
   linkType: hard
 
-"d3-time@npm:1 - 3, d3-time@npm:2.1.1 - 3":
-  version: 3.0.0
-  resolution: "d3-time@npm:3.0.0"
+"d3-time@npm:1 - 2, d3-time@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "d3-time@npm:2.1.1"
   dependencies:
-    d3-array: 2 - 3
-  checksum: 6e9201715ef03eb260c0491f3d9dcdabe9b9f9395b31a1757e6628fe92ce004d226262d1fb76e0ff43ad5cd52971ac442032a0abf1a0f575d6c687fc9c76c8cc
+    d3-array: 2
+  checksum: 4f90b2ba35de50e8cc436be0cd2c660b27261fdb9d75ce3c5a943f09de1bf27f8d01e1607c892174ccdeb26147f973593a38c80a8e20a007cbf071aece02086b
   languageName: node
   linkType: hard
 
@@ -8061,6 +8064,7 @@ __metadata:
     "@babel/core": ^7.9.0
     "@bma98/fractal-charts": 1.0.0
     "@bma98/fractal-ui": 2.0.0
+    "@bma98/size-class": ^2.2.3
     "@types/react": ~16.14.8
     "@types/react-dom": ^17.0.8
     "@types/react-native": ~0.63.52
@@ -8081,12 +8085,12 @@ __metadata:
     eslint-plugin-standard: ^5.0.0
     expo-module-scripts: ^2.0.0
     prettier: ^2.3.2
-    react-native-svg: ^12.1.1
     typescript: ^4.3.4
     utility-types: ^3.10.0
   peerDependencies:
     "@bma98/fractal-charts": 1.0.0
     "@bma98/fractal-ui": 2.0.0
+    react-native-svg: ^12.1.1
   languageName: unknown
   linkType: soft
 
@@ -8144,9 +8148,6 @@ __metadata:
 "fractal@workspace:.":
   version: 0.0.0-use.local
   resolution: "fractal@workspace:."
-  dependencies:
-    prettier: ^2.3.2
-    typescript: ^4.3.4
   languageName: unknown
   linkType: soft
 
@@ -9020,13 +9021,6 @@ fsevents@^1.2.7:
     has: ^1.0.3
     side-channel: ^1.0.4
   checksum: 2465f832aa80c3740f2cfc5c75e74c727b4a45b8d80e295bb66dbb59435de536b9951b7f4d1a8075d5bb90054bd30ff22a37356a247fba3608987c7765569345
-  languageName: node
-  linkType: hard
-
-"internmap@npm:1 - 2":
-  version: 2.0.1
-  resolution: "internmap@npm:2.0.1"
-  checksum: bbe94cac976b48873f54d9bdabd83a4d3df252ef508d8bba7a2415d1251ce43a204490c3e15fc418855874f3a5304ae11845bd4b95ad49757bd1d4cc33a1c627
   languageName: node
   linkType: hard
 
