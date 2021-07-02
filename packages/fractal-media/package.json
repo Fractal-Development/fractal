@@ -14,10 +14,15 @@
         "lint": "eslint src/ --fix"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "2.0.0"
+        "@bma98/fractal-ui": "2.0.0",
+        "react": "*",
+        "react-dom": "*",
+        "react-is": "*",
+        "react-native": "~0.63.4",
+        "react-native-gesture-handler": "~1.10.3"
     },
     "dependencies": {
-        "@bma98/size-class": "^2.2.3",
+        "@bma98/size-class": "^2.2.4",
         "expo-av": "^9.1.2",
         "react-native-webview": "^11.6.4",
         "react-native-youtube-iframe": "^2.1.0",
