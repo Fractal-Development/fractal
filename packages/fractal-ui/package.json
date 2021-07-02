@@ -8,10 +8,10 @@
     "types": "./dist/index.d.ts",
     "source": "src/index.tsx",
     "scripts": {
-        "start": "expo start",
         "build": "expo-module build",
         "clean": "rm -rf ./dist",
-        "lint": "eslint src/ --fix"
+        "lint": "eslint src/ --fix",
+        "expo-module": "expo-module"
     },
     "peerDependencies": {
         "@react-native-community/datetimepicker": "^3.5.2",
@@ -19,14 +19,55 @@
         "@react-native-picker/picker": "^1.16.3",
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
-        "react": "16.13.1",
+        "react": "*",
+        "react-dom": "*",
+        "react-is": "*",
         "react-native": "~0.63.4",
+        "react-native-gesture-handler": "~1.10.3",
         "react-native-reanimated": "~2.1.0",
         "react-native-svg": "^12.1.1",
         "react-virtualized-auto-sizer": "^1.0.5"
     },
+    "peerDependenciesMeta": {
+        "@react-native-community/datetimepicker": {
+            "optional": true
+        },
+        "@react-native-community/slider": {
+            "optional": true
+        },
+        "@react-native-picker/picker": {
+            "optional": true
+        },
+        "expo-blur": {
+            "optional": true
+        },
+        "expo-document-picker": {
+            "optional": true
+        },
+        "react-dom": {
+            "optional": true
+        },
+        "react-is": {
+            "optional": true
+        },
+        "react-native": {
+            "optional": true
+        },
+        "react-native-gesture-handler": {
+            "optional": true
+        },
+        "react-native-reanimated": {
+            "optional": true
+        },
+        "react-native-svg": {
+            "optional": true
+        },
+        "react-virtualized-auto-sizer": {
+            "optional": true
+        }
+    },
     "dependencies": {
-        "@bma98/size-class": "^2.2.3",
+        "@bma98/size-class": "^2.2.4",
         "framer-motion": "^4.1.17",
         "recyclerlistview": "^3.0.5",
         "styled-components": "^5.3.0"
