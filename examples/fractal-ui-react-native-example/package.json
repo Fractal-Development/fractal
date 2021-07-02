@@ -1,0 +1,43 @@
+{
+  "name": "fractal-ui-react-native-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
+    "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+    "@react-native-community/datetimepicker": "3.0.4",
+    "@react-native-community/slider": "^3.0.3",
+    "@react-native-picker/picker": "1.9.2",
+    "expo-blur": "~8.2.2",
+    "expo-document-picker": "^9.1.2",
+    "fractal-ui-example-fragments": "https://gitpkg.now.sh/BrandonMA/fractal/examples/fractal-ui-example-fragments?master",
+    "framer-motion": "^4.1.11",
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "react-native-reanimated": "^2.0.0",
+    "react-native-svg": "12.1.0",
+    "react-native-unimodules": "^0.13.3",
+    "react-virtualized-auto-sizer": "^1.0.5",
+    "recyclerlistview": "^3.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "react-test-renderer": "17.0.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
