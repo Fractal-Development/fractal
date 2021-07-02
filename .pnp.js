@@ -19819,7 +19819,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:17.0.2"],
             ["react-scripts", "virtual:b87a6390df8124de3b6f46addb767923453790c90fef5bfbb9fa2da0a4c0cf65bd9f537ec07014c3df490b229b9b64e367b53aafcf6304504e43bd92c3307b8f#npm:4.0.3"],
             ["react-virtualized-auto-sizer", "virtual:b87a6390df8124de3b6f46addb767923453790c90fef5bfbb9fa2da0a4c0cf65bd9f537ec07014c3df490b229b9b64e367b53aafcf6304504e43bd92c3307b8f#npm:1.0.5"],
-            ["recyclerlistview", "virtual:b87a6390df8124de3b6f46addb767923453790c90fef5bfbb9fa2da0a4c0cf65bd9f537ec07014c3df490b229b9b64e367b53aafcf6304504e43bd92c3307b8f#npm:3.0.5"],
             ["typescript", "patch:typescript@npm%3A4.3.4#builtin<compat/typescript>::version=4.3.4&hash=ddfc1b"],
             ["web-vitals", "npm:1.1.2"]
           ],
@@ -29431,26 +29430,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.debounce", "npm:4.0.8"],
             ["prop-types", "npm:15.5.8"],
             ["react", null],
-            ["react-native", null],
-            ["ts-object-utils", "npm:0.0.5"]
-          ],
-          "packagePeers": [
-            "@types/react-native",
-            "@types/react",
-            "react-native",
-            "react"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:b87a6390df8124de3b6f46addb767923453790c90fef5bfbb9fa2da0a4c0cf65bd9f537ec07014c3df490b229b9b64e367b53aafcf6304504e43bd92c3307b8f#npm:3.0.5", {
-          "packageLocation": "./.yarn/$$virtual/recyclerlistview-virtual-4ca9209286/0/cache/recyclerlistview-npm-3.0.5-5e1fb2ca3d-8f9ff80d01.zip/node_modules/recyclerlistview/",
-          "packageDependencies": [
-            ["recyclerlistview", "virtual:b87a6390df8124de3b6f46addb767923453790c90fef5bfbb9fa2da0a4c0cf65bd9f537ec07014c3df490b229b9b64e367b53aafcf6304504e43bd92c3307b8f#npm:3.0.5"],
-            ["@types/react", "npm:17.0.13"],
-            ["@types/react-native", null],
-            ["lodash.debounce", "npm:4.0.8"],
-            ["prop-types", "npm:15.5.8"],
-            ["react", "npm:17.0.2"],
             ["react-native", null],
             ["ts-object-utils", "npm:0.0.5"]
           ],
