@@ -53,3 +53,7 @@ We have other dependencies that are used by all platforms so we manage that auto
 ### Is there more configuration needed?
 
 For Expo/React Native no, and depending on your set up for React.JS or Next.JS you might need to transpile our modules too, check out our examples in this same repo to see a small project using `fractal-ui`.
+
+### Is it a problem if we do not use the exact same React version?
+
+Most of the time no, we are only using this version as is the one that Expo supports, but you should be fine using any other version of React as long as it is backwards compatible.
