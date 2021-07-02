@@ -1,6 +1,6 @@
 import React from 'react';
 import { FractalAppRoot, useTheme, Background, ScrollView, PaddingLayer, Box } from '@bma98/fractal-ui';
-import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerAnimatedFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, MessageInputFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, RecyclerTable } from './fragments';
+import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerAnimatedFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, RecyclerTable } from './fragments';
 function SwapThemeFragment() {
     const { spacings } = useTheme();
     return (React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
@@ -33,7 +33,6 @@ function Content() {
         React.createElement(ColorPickerFragment, null),
         React.createElement(SearchBarFragment, null),
         React.createElement(AutocompleteFragment, null),
-        React.createElement(MessageInputFragment, null),
         React.createElement(TextFieldFragment, null),
         React.createElement(TextFieldMaskFragment, null),
         React.createElement(IconTextFieldFragment, null),

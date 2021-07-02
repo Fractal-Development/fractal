@@ -26,7 +26,6 @@ import {
     SeparatorsFragment,
     SearchBarFragment,
     AutocompleteFragment,
-    MessageInputFragment,
     TextFieldFragment,
     TextFieldMaskFragment,
     IconTextFieldFragment,
@@ -82,7 +81,6 @@ function Content(): JSX.Element {
             <ColorPickerFragment />
             <SearchBarFragment />
             <AutocompleteFragment />
-            <MessageInputFragment />
             <TextFieldFragment />
             <TextFieldMaskFragment />
             <IconTextFieldFragment />
