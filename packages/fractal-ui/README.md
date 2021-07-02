@@ -8,7 +8,7 @@ UI Components easy to customize for apps made by Fractal.
 
 yarn add @bma98/fractal-ui
 
-### Dependencies
+### Peer Dependencies
 
 Depending on the platforms that you want to support, we have different peer-dependencies that you should install for `fractal-ui` to work as expected. We are aware that we might be using too many dependencies for some people's taste, but the thing is that most of our projects were using this before hand already, and we are trying to reduce the need of configuration so we are adding this by default.
 
@@ -22,7 +22,6 @@ We have other dependencies that are used by all platforms so we manage that auto
 "@react-native-picker/picker": "^1.16.3",
 "expo-blur": "^9.0.3",
 "expo-document-picker": "^9.1.2",
-"framer-motion": "^4.1.17",
 "react": "16.13.1",
 "react-native": "~0.63.4",
 "react-native-reanimated": "~2.1.0",
@@ -38,7 +37,6 @@ We have other dependencies that are used by all platforms so we manage that auto
 "@react-native-picker/picker": "^1.16.3",
 "expo-blur": "^9.0.3",
 "expo-document-picker": "^9.1.2",
-"framer-motion": "^4.1.17",
 "react": "16.13.1",
 "react-native": "~0.63.4",
 "react-native-reanimated": "~2.1.0",
@@ -48,7 +46,6 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### React.JS or Next.JS(Web only)
 
 ```
-"framer-motion": "^4.1.17",
 "react": "16.13.1",
 "react-virtualized-auto-sizer": "^1.0.5"
 ```
