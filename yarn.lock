@@ -1697,10 +1697,9 @@ __metadata:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
     expo-module-scripts: ^2.0.0
-    framer-motion: ^4.1.17
     prettier: ^2.3.2
     react-native-reanimated: ~2.1.0
-    react-native-svg: 12.1.0
+    react-native-svg: ^12.1.1
     typescript: ^4.3.4
     utility-types: ^3.10.0
   peerDependencies:
@@ -1735,7 +1734,6 @@ __metadata:
     eslint-plugin-standard: ^5.0.0
     expo-av: ^9.1.2
     expo-module-scripts: ^2.0.0
-    framer-motion: ^4.1.17
     prettier: ^2.3.2
     react-native-svg: ^12.1.1
     react-native-webview: ^11.6.4
@@ -1773,7 +1771,6 @@ __metadata:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
     expo-module-scripts: ^2.0.0
-    framer-motion: ^4.1.17
     prettier: ^2.3.2
     react-native-svg: ^12.1.1
     styled-components: ^5.3.0
@@ -1806,7 +1803,6 @@ __metadata:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
     expo-module-scripts: ^2.0.0
-    framer-motion: ^4.1.17
     prettier: ^2.3.2
     react-native-svg: ^12.1.1
     typescript: ^4.3.4
@@ -1859,7 +1855,6 @@ __metadata:
     "@react-native-picker/picker": ^1.16.3
     expo-blur: ^9.0.3
     expo-document-picker: ^9.1.2
-    framer-motion: ^4.1.17
     react: 16.13.1
     react-native: ~0.63.4
     react-native-reanimated: ~2.1.0
@@ -8066,14 +8061,9 @@ __metadata:
     "@babel/core": ^7.9.0
     "@bma98/fractal-charts": 1.0.0
     "@bma98/fractal-ui": 2.0.0
-    "@bma98/size-class": ^2.2.3
-    "@react-native-community/datetimepicker": ^3.5.2
-    "@react-native-community/slider": ^3.0.3
-    "@react-native-picker/picker": ^1.16.3
     "@types/react": ~16.14.8
     "@types/react-dom": ^17.0.8
     "@types/react-native": ~0.63.52
-    "@types/react-virtualized-auto-sizer": ^1.0.0
     "@types/styled-components": ^5.1.10
     "@typescript-eslint/eslint-plugin": ^4.28.0
     "@typescript-eslint/parser": ^4.15.1
@@ -8089,15 +8079,9 @@ __metadata:
     eslint-plugin-react: ^7.24.0
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
-    expo-blur: ^9.0.3
-    expo-document-picker: ^9.1.2
     expo-module-scripts: ^2.0.0
-    framer-motion: ^4.1.17
     prettier: ^2.3.2
-    react-native-reanimated: ~2.1.0
     react-native-svg: ^12.1.1
-    recyclerlistview: ^3.0.5
-    styled-components: ^5.3.0
     typescript: ^4.3.4
     utility-types: ^3.10.0
   peerDependencies:
@@ -13371,19 +13355,6 @@ fsevents@^1.2.7:
     react: "*"
     react-native: "*"
   checksum: e0d89f305359506be594a1604ac980af3b3ad258acdd3043f8e2633ad1ea95575ef80b8313c411630a7b50e9a882a0ad8f0525f6545efc2652fad40d0c7f86a1
-  languageName: node
-  linkType: hard
-
-"react-native-svg@npm:12.1.0":
-  version: 12.1.0
-  resolution: "react-native-svg@npm:12.1.0"
-  dependencies:
-    css-select: ^2.1.0
-    css-tree: ^1.0.0-alpha.39
-  peerDependencies:
-    react: "*"
-    react-native: ">=0.50.0"
-  checksum: e962d59ce518c0a0baf04835a5030c2b38c8d16081abf25f995daf5f4c6e5e8ce44e1bd93053a89e63ed6d4ed1bb23672ada39089a9173907cd862677a149de1
   languageName: node
   linkType: hard
 
