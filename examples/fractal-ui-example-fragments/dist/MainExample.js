@@ -1,6 +1,6 @@
 import React from 'react';
 import { FractalAppRoot, useTheme, Background, ScrollView, PaddingLayer, Box } from '@bma98/fractal-ui';
-import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerAnimatedFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, RecyclerTable } from './fragments';
+import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerFragment, LayerAnimatedFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, BottomCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, RecyclerTable } from './fragments';
 function SwapThemeFragment() {
     const { spacings } = useTheme();
     return (React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
@@ -21,10 +21,13 @@ function Content() {
         React.createElement(CheckBoxFragment, null),
         React.createElement(RadioFragment, null),
         React.createElement(TextsFragment, null),
+        React.createElement(LayerFragment, null),
         React.createElement(LayerAnimatedFragment, null),
         React.createElement(BoxContentFragment, null),
         React.createElement(SeparatorsFragment, null),
         React.createElement(CrossButtonFragment, null),
+        React.createElement(OptionsMenuButtonFragment, null),
+        React.createElement(OptionsButtonFragment, null),
         React.createElement(TextButtonFragment, null),
         React.createElement(ButtonFragment, null),
         React.createElement(ToggleButtonFragment, null),
@@ -41,6 +44,7 @@ function Content() {
         React.createElement(TimePickerFragment, null),
         React.createElement(BlurredModalFragment, null),
         React.createElement(MiddleCellModalFragment, null),
+        React.createElement(BottomCellModalFragment, null),
         React.createElement(ErrorMessageFragment, null),
         React.createElement(PopoverFragment, null),
         React.createElement(DetailsListFragment, null),
