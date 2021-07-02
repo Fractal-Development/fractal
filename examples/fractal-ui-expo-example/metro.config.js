@@ -9,6 +9,7 @@ const path = require('path');
 
 // Listen for our libraries in their respective folder inside the monorepo
 const fractalUI = path.resolve(__dirname + '/../../packages/fractal-ui');
+const fractalCharts = path.resolve(__dirname + '/../../packages/fractal-charts');
 const fractalUIEXampleFragmentsPath = path.resolve(__dirname + '/../fractal-ui-example-fragments');
 
 module.exports = {
@@ -23,8 +24,9 @@ module.exports = {
     resolver: {
         extraNodeModules: new Proxy(
             {
-                'fractal-ui-example-fragments': fractalUIEXampleFragmentsPath,
-                '@bma98/fractal-ui': fractalUI
+                '@bma98/fractal-ui': fractalUI,
+                '@bma98/fractal-charts': fractalCharts,
+                'fractal-ui-example-fragments': fractalUIEXampleFragmentsPath
             },
             {
                 // This will resolve all dependencies using React to the one inside our node_modules
@@ -38,5 +40,5 @@ module.exports = {
             }
         )
     },
-    watchFolders: [fractalUIEXampleFragmentsPath, fractalUI]
+    watchFolders: [fractalUIEXampleFragmentsPath, fractalUI, fractalCharts]
 };
