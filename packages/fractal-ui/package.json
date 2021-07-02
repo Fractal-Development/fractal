@@ -19,7 +19,6 @@
         "@react-native-picker/picker": "^1.16.3",
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
-        "framer-motion": "^4.1.17",
         "react": "16.13.1",
         "react-native": "~0.63.4",
         "react-native-reanimated": "~2.1.0",
@@ -28,6 +27,7 @@
     },
     "dependencies": {
         "@bma98/size-class": "^2.2.3",
+        "framer-motion": "^4.1.17",
         "recyclerlistview": "^3.0.5",
         "styled-components": "^5.3.0"
     },
@@ -58,7 +58,6 @@
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
         "expo-module-scripts": "^2.0.0",
-        "framer-motion": "^4.1.17",
         "prettier": "^2.3.2",
         "react-native-reanimated": "~2.1.0",
         "react-native-svg": "^12.1.1",
