@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text, useTheme, Box } from '@bma98/fractal-ui';
 import { HorizontalBar } from '@bma98/fractal-charts';
 import { PieChartExample } from './PieChartExample';
@@ -25,7 +25,7 @@ export function ChartsExamples(): JSX.Element {
     ];
 
     return (
-        <Fragment>
+        <>
             <Text variant={'title'} marginBottom={spacings.m}>
                 Pie Chart Example
             </Text>
@@ -44,6 +44,6 @@ export function ChartsExamples(): JSX.Element {
             <Box marginBottom={spacings.m}>
                 <HorizontalBar percentage={0.6} colors={{ background: '#F8D9FE', bar: '#AF43F7' }} />
             </Box>
-        </Fragment>
+        </>
     );
 }

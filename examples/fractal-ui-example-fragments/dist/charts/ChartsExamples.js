@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text, useTheme, Box } from '@bma98/fractal-ui';
 import { HorizontalBar } from '@bma98/fractal-charts';
 import { PieChartExample } from './PieChartExample';
@@ -21,7 +21,7 @@ export function ChartsExamples() {
             color: randomColor()
         }
     ];
-    return (React.createElement(Fragment, null,
+    return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title', marginBottom: spacings.m }, "Pie Chart Example"),
         React.createElement(PieChartExample, { data: pieData }),
         React.createElement(Text, { variant: 'title', marginBottom: spacings.m }, "Area Chart Example"),

@@ -1,4 +1,3 @@
 import React from 'react';
-import { SvgProps } from 'react-native-svg';
-declare const CalmFaceIcon: React.MemoExoticComponent<(props: SvgProps) => JSX.Element>;
+declare const CalmFaceIcon: React.MemoExoticComponent<(props: any) => JSX.Element>;
 export { CalmFaceIcon };

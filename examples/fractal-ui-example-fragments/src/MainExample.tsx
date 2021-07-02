@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background, Box, PaddingLayer, Text, FractalAppRoot, useTheme } from '@bma98/fractal-ui';
+import { Background, Box, PaddingLayer, Text, FractalAppRoot, useTheme, ScrollView } from '@bma98/fractal-ui';
 import { ChartsExamples } from './charts/ChartsExamples';
 
 export function MainExample() {
@@ -8,10 +8,12 @@ export function MainExample() {
         <FractalAppRoot>
             <Background>
                 <PaddingLayer>
-                    <Box alignItems={'center'} marginBottom={spacings.m}>
-                        <Text>Welcome to Fractal UI!</Text>
-                    </Box>
-                    <ChartsExamples />
+                    <ScrollView>
+                        <Box alignItems={'center'} marginBottom={spacings.m}>
+                            <Text>Welcome to Fractal UI!</Text>
+                        </Box>
+                        <ChartsExamples />
+                    </ScrollView>
                 </PaddingLayer>
             </Background>
         </FractalAppRoot>

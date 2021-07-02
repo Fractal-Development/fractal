@@ -12,35 +12,20 @@ export function PieChartExample({ data }: Props): JSX.Element {
     const [type] = useWidthSizeGroup();
     const { spacings } = useTheme();
 
+    const flexDirection = getValueForLargeSizeType(type, 'row', 'column');
+    const marginBottom = getValueForLargeSizeType(type, 0, spacings.m);
+
     const handleIndex = (index: number) => {
         setSelectedIndex(index);
     };
 
-    const flexDirection = getValueForLargeSizeType(type, 'row', 'column');
-
     return (
         <Box marginBottom={spacings.m}>
-            <PieChart height={200} data={data} selectedSliceIndex={selectedIndex} />
-            <Layer
-                flexDirection={flexDirection}
-                justifyContent={flexDirection == 'row' ? 'space-evenly' : undefined}
-                marginTop={spacings.m}
-            >
-                <Button
-                    text={'One'}
-                    onPress={() => handleIndex(0)}
-                    minWidth={120}
-                    backgroundColor={data[0].color}
-                    marginBottom={flexDirection == 'column' ? spacings.m : 0}
-                />
-                <Button
-                    text={'Two'}
-                    onPress={() => handleIndex(1)}
-                    minWidth={120}
-                    backgroundColor={data[1].color}
-                    marginBottom={flexDirection == 'column' ? spacings.m : 0}
-                />
-                <Button text={'Three'} onPress={() => handleIndex(2)} minWidth={120} backgroundColor={data[2].color} />
+            <PieChart height={200} data={data} selectedSliceIndex={selectedIndex} flexDirection={flexDirection} />
+            <Layer flexDirection={getValueForLargeSizeType(type, 'row', 'column')} marginTop={spacings.m}>
+                <Button variant={'main'} minWidth={120} marginBottom={marginBottom} text={'One'} onPress={() => handleIndex(0)} />
+                <Button variant={'alternative'} minWidth={120} marginBottom={marginBottom} text={'Two'} onPress={() => handleIndex(1)} />
+                <Button variant={'success'} minWidth={120} marginBottom={marginBottom} text={'Three'} onPress={() => handleIndex(2)} />
             </Layer>
         </Box>
     );

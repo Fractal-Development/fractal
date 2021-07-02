@@ -29,13 +29,14 @@ module.exports = {
                 'fractal-ui-example-fragments': fractalUIEXampleFragmentsPath
             },
             {
-                // This will resolve all dependencies using React to the one inside our node_modules
+                // This will resolve dependencies on the previous list
                 // Is similar to webpack's config.resolve.alias['react']
                 get: (target, name) => {
                     if (target.hasOwnProperty(name)) {
                         return target[name];
                     }
-                    return path.join(__dirname, `node_modules/${name}`);
+
+                    return path.join(__dirname, `/node_modules/${name}`);
                 }
             }
         )
