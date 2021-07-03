@@ -15,12 +15,15 @@ import {
     RadioFragment,
     TextsFragment,
     CrossButtonFragment,
+    OptionsMenuButtonFragment,
+    OptionsButtonFragment,
     TextButtonFragment,
     ButtonFragment,
     ToggleButtonFragment,
     RoundedToggleButtonFragment,
     CircularIconButtonFragment,
     ColorPickerFragment,
+    LayerFragment,
     LayerAnimatedFragment,
     BoxContentFragment,
     SeparatorsFragment,
@@ -34,6 +37,7 @@ import {
     TimePickerFragment,
     BlurredModalFragment,
     MiddleCellModalFragment,
+    BottomCellModalFragment,
     ErrorMessageFragment,
     PopoverFragment,
     DetailsListFragment,
@@ -69,10 +73,13 @@ function Content(): JSX.Element {
             <CheckBoxFragment />
             <RadioFragment />
             <TextsFragment />
+            <LayerFragment />
             <LayerAnimatedFragment />
             <BoxContentFragment />
             <SeparatorsFragment />
             <CrossButtonFragment />
+            <OptionsMenuButtonFragment />
+            <OptionsButtonFragment />
             <TextButtonFragment />
             <ButtonFragment />
             <ToggleButtonFragment />
@@ -89,6 +96,7 @@ function Content(): JSX.Element {
             <TimePickerFragment />
             <BlurredModalFragment />
             <MiddleCellModalFragment />
+            <BottomCellModalFragment />
             <ErrorMessageFragment />
             <PopoverFragment />
             <DetailsListFragment />

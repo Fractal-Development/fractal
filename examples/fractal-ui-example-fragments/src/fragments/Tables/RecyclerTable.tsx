@@ -137,11 +137,16 @@ export function TableTwo(): JSX.Element {
 }
 
 export function RecyclerTable(): JSX.Element {
+    const { spacings } = useTheme();
+
     return (
-        <Layer height={500}>
-            <Layer flex={1}>
-                <TableTwo />
+        <>
+            <Text variant={'title'}>Table Example</Text>
+            <Layer height={500} marginTop={spacings.s} marginBottom={spacings.xl}>
+                <Layer flex={1}>
+                    <TableTwo />
+                </Layer>
             </Layer>
-        </Layer>
+        </>
     );
 }

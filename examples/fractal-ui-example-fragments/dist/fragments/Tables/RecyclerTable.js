@@ -84,8 +84,11 @@ export function TableTwo() {
             React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: 1000 }))));
 }
 export function RecyclerTable() {
-    return (React.createElement(Layer, { height: 500 },
-        React.createElement(Layer, { flex: 1 },
-            React.createElement(TableTwo, null))));
+    const { spacings } = useTheme();
+    return (React.createElement(React.Fragment, null,
+        React.createElement(Text, { variant: 'title' }, "Table Example"),
+        React.createElement(Layer, { height: 500, marginTop: spacings.s, marginBottom: spacings.xl },
+            React.createElement(Layer, { flex: 1 },
+                React.createElement(TableTwo, null)))));
 }
 //# sourceMappingURL=RecyclerTable.js.map

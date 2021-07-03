@@ -1,5 +1,15 @@
 import React from 'react';
-import { useTheme, Box, CircularIconButton, Text, LoadIcon, ThreeDotsHorizontalIcon, SearchIcon } from '@bma98/fractal-ui';
+import {
+    useTheme,
+    Box,
+    CircularIconButton,
+    Text,
+    LoadIcon,
+    UploadIcon,
+    ChevronDownIcon,
+    ThreeDotsHorizontalIcon,
+    SearchIcon
+} from '@bma98/fractal-ui';
 
 export function CircularIconButtonFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -21,28 +31,28 @@ export function CircularIconButtonFragment(): JSX.Element {
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s}>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s} disabled>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s} reduceColor>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s} reduceColor disabled>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'danger'} marginBottom={spacings.s}>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'danger'} marginBottom={spacings.s} disabled>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'danger'} marginBottom={spacings.s} reduceColor>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'danger'} marginBottom={spacings.s} reduceColor disabled>
-                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                    {(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'warning'} marginBottom={spacings.s}>
                     {(color) => <ThreeDotsHorizontalIcon height={24} width={24} fill={color} />}
