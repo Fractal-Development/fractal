@@ -1,6 +1,6 @@
 const path = require('path');
 
-const withTM = require('next-transpile-modules')(['@bma98/fractal-ui', '@bma98/size-class', 'fractal-ui-example-fragments']);
+const withTM = require('next-transpile-modules')(['@bma98/fractal-ui', '@bma98/size-class', 'fractal-examples']);
 
 module.exports = withTM({
     reactStrictMode: true,

@@ -8,10 +8,10 @@
     "types": "./dist/index.d.ts",
     "source": "src/index.tsx",
     "scripts": {
-        "start": "expo start",
         "build": "expo-module build",
         "clean": "rm -rf ./dist",
-        "lint": "eslint src/ --fix"
+        "lint": "eslint src/ --fix",
+        "expo-module": "expo-module"
     },
     "peerDependencies": {
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
