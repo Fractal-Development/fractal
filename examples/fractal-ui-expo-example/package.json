@@ -18,7 +18,7 @@
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
         "expo-status-bar": "~1.0.4",
-        "fractal-ui-example-fragments": "https://gitpkg.now.sh/BrandonMA/fractal/examples/fractal-ui-example-fragments?master",
+        "@bma98/fractal-examples": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master",
         "framer-motion": "^4.1.17",
         "react": "16.13.1",
         "react-dom": "16.13.1",

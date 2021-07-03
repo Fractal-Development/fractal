@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainExample } from 'fractal-examples';
+import { MainExample } from '@bma98/fractal-examples';
 
 export default function App() {
     return <MainExample />;
