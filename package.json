@@ -5,10 +5,6 @@
     "scripts": {},
     "author": "BrandonMA",
     "license": "MIT",
-    "workspaces": [
-        "packages/*",
-        "examples/*"
-    ],
     "keywords": [
         "Javascript",
         "React",
@@ -23,8 +19,5 @@
         "url": "https://github.com/BrandonMA/fractal/issues"
     },
     "homepage": "https://github.com/BrandonMA/fractal#readme",
-    "resolutions": {
-        "d3-array": "2.3.3",
-        "babel-jest": "^26.6.0"
-    }
+    "private": true
 }
