@@ -9,7 +9,7 @@ export function usePressableAnimationStyles({ whileTap, opacity, width, height, 
     const [heightAnimatedValue, animateHeight, resetHeight] = useSharedValueCallbacks(height !== null && height !== void 0 ? height : 0, whileTap === null || whileTap === void 0 ? void 0 : whileTap.height);
     const [scaleAnimatedValue, animateScale, resetScale] = useSharedValueCallbacks(1, whileTap === null || whileTap === void 0 ? void 0 : whileTap.scale);
     const [rotationAnimatedValue, animateRotation, resetRotation] = useSharedValueCallbacks('0deg', whileTap === null || whileTap === void 0 ? void 0 : whileTap.rotate);
-    const [backgroundColorAnimatedValue, backgroundColors, animateBackgroundColor, resetBackgroundColor] = useColorAnimationCallbacks(backgroundColor, whileTap === null || whileTap === void 0 ? void 0 : whileTap.backgroundColor);
+    const [backgroundColorAnimatedValue, backgroundColors, animateBackgroundColor, resetBackgroundColor, initialPressDone] = useColorAnimationCallbacks(backgroundColor, whileTap === null || whileTap === void 0 ? void 0 : whileTap.backgroundColor);
     const handlePressIn = () => {
         animateOpacity();
         animateBackgroundColor();
@@ -40,10 +40,9 @@ export function usePressableAnimationStyles({ whileTap, opacity, width, height, 
         insertTransitionValue(styles, 'width', widthAnimatedValue.value);
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
         if (backgroundColors.length === 2) {
-            styles['backgroundColor'] = interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors);
-        }
-        else if (backgroundColor != null) {
-            styles['backgroundColor'] = backgroundColor;
+            styles['backgroundColor'] = initialPressDone
+                ? interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors)
+                : backgroundColor;
         }
         insertTransformTransitionValue(styles, 'scale', scaleAnimatedValue.value);
         insertTransformTransitionValue(styles, 'rotate', rotationAnimatedValue.value);

@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
-    "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
     "@bma98/fractal-examples": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master",
+    "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
     "@react-native-community/datetimepicker": "3.0.4",
     "@react-native-community/slider": "^3.0.3",
     "@react-native-picker/picker": "1.9.2",
@@ -21,8 +21,8 @@
     "framer-motion": "^4.1.11",
     "react": "17.0.1",
     "react-native": "0.64.2",
-    "react-native-reanimated": "~2.1.0",
     "react-native-gesture-handler": "~1.10.3",
+    "react-native-reanimated": "~2.1.0",
     "react-native-svg": "12.1.0",
     "react-native-unimodules": "^0.13.3",
     "recyclerlistview": "^3.0.5"

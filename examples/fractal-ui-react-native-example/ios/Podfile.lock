@@ -302,7 +302,9 @@ PODS:
     - React-Core
   - RNDateTimePicker (3.0.4):
     - React-Core
-  - RNReanimated (2.0.1):
+  - RNGestureHandler (1.10.3):
+    - React-Core
+  - RNReanimated (2.1.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -398,6 +400,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
@@ -496,6 +499,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-picker/picker"
   RNDateTimePicker:
     :path: "../node_modules/@react-native-community/datetimepicker"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNSVG:
@@ -569,7 +574,8 @@ SPEC CHECKSUMS:
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   RNCPicker: 4850f485a2b6a51788c7582d90d4b7d0e1644036
   RNDateTimePicker: 3d1931e387248cb8f1d1d33740d4a1a82dfe622a
-  RNReanimated: 7d2b97cf2dd7c8c69956080fe911edc08cf0a8c7
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNReanimated: b8c8004b43446e3c2709fe64b2b41072f87428ad
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   UMAppLoader: fe2708bb0ac5cd70052bc207d06aa3b7e72b9e97
   UMBarCodeScannerInterface: 79f92bea5f7af39b381a4c82298105ceb537408a

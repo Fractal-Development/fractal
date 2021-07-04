@@ -20,10 +20,8 @@ export function usePressableAnimationStyles({
     const [heightAnimatedValue, animateHeight, resetHeight] = useSharedValueCallbacks(height ?? 0, whileTap?.height);
     const [scaleAnimatedValue, animateScale, resetScale] = useSharedValueCallbacks(1, whileTap?.scale);
     const [rotationAnimatedValue, animateRotation, resetRotation] = useSharedValueCallbacks('0deg', whileTap?.rotate);
-    const [backgroundColorAnimatedValue, backgroundColors, animateBackgroundColor, resetBackgroundColor] = useColorAnimationCallbacks(
-        backgroundColor,
-        whileTap?.backgroundColor
-    );
+    const [backgroundColorAnimatedValue, backgroundColors, animateBackgroundColor, resetBackgroundColor, initialPressDone] =
+        useColorAnimationCallbacks(backgroundColor, whileTap?.backgroundColor);
 
     const handlePressIn = () => {
         animateOpacity();
@@ -61,9 +59,9 @@ export function usePressableAnimationStyles({
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
 
         if (backgroundColors.length === 2) {
-            styles['backgroundColor'] = interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors);
-        } else if (backgroundColor != null) {
-            styles['backgroundColor'] = backgroundColor;
+            styles['backgroundColor'] = initialPressDone
+                ? interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors)
+                : backgroundColor;
         }
 
         insertTransformTransitionValue(styles, 'scale', scaleAnimatedValue.value);
