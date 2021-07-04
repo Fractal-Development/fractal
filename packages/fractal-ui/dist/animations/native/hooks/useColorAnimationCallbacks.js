@@ -1,4 +1,4 @@
-import { Easing, useSharedValue, withTiming } from 'react-native-reanimated';
+import { useSharedValue, withTiming } from 'react-native-reanimated';
 import { useCallback, useMemo } from 'react';
 export function useColorAnimationCallbacks(backgroundColor, pressedBackgroundColor) {
     const animatedValue = useSharedValue(0);
@@ -15,12 +15,12 @@ export function useColorAnimationCallbacks(backgroundColor, pressedBackgroundCol
     }, [backgroundColor, pressedBackgroundColor]);
     const startAnimation = useCallback(() => {
         if (colorsAvailable) {
-            animatedValue.value = withTiming(1, { duration: 200, easing: Easing.ease });
+            animatedValue.value = withTiming(1);
         }
     }, [animatedValue, colorsAvailable]);
     const resetAnimation = useCallback(() => {
         if (colorsAvailable) {
-            animatedValue.value = withTiming(0, { duration: 200, easing: Easing.ease });
+            animatedValue.value = withTiming(0);
         }
     }, [animatedValue, colorsAvailable]);
     return [animatedValue, colors, startAnimation, resetAnimation];

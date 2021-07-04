@@ -40,7 +40,7 @@ export function usePressableAnimationStyles({ whileTap, opacity, width, height, 
         insertTransitionValue(styles, 'width', widthAnimatedValue.value);
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
         if (backgroundColors.length === 2) {
-            styles['backgroundColor'] = interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors);
+            styles['backgroundColor'] = interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors, 'HSV');
         }
         insertTransformTransitionValue(styles, 'scale', scaleAnimatedValue.value);
         insertTransformTransitionValue(styles, 'rotate', rotationAnimatedValue.value);
