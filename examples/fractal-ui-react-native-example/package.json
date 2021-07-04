@@ -21,7 +21,7 @@
     "framer-motion": "^4.1.11",
     "react": "17.0.1",
     "react-native": "0.64.2",
-    "react-native-reanimated": "~2.1.0",
+    "react-native-reanimated": "~2.2.0",
     "react-native-svg": "12.1.0",
     "react-native-unimodules": "^0.13.3",
     "react-virtualized-auto-sizer": "^1.0.5",
