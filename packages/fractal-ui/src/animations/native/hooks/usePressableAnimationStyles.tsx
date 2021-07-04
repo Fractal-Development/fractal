@@ -1,10 +1,11 @@
 import { PressableProps } from '../../../components/buttons/Pressable/types';
 import { ViewStyle } from 'react-native';
 import { useSharedValueCallbacks } from './useSharedValueCallbacks';
-import { interpolateColor, useAnimatedStyle } from 'react-native-reanimated';
+import { useAnimatedStyle } from 'react-native-reanimated';
 import { useColorAnimationCallbacks } from './useColorAnimationCallbacks';
 import { insertTransitionValue } from '../worklets/inserTransitionValue';
 import { insertTransformTransitionValue } from '../worklets/insertTransformTransitionValue';
+import { insertTransitionValueAnimated } from '../worklets/insertTransitionValueAnimated';
 
 export function usePressableAnimationStyles({
     whileTap,
@@ -20,7 +21,7 @@ export function usePressableAnimationStyles({
     const [heightAnimatedValue, animateHeight, resetHeight] = useSharedValueCallbacks(height ?? 0, whileTap?.height);
     const [scaleAnimatedValue, animateScale, resetScale] = useSharedValueCallbacks(1, whileTap?.scale);
     const [rotationAnimatedValue, animateRotation, resetRotation] = useSharedValueCallbacks('0deg', whileTap?.rotate);
-    const [backgroundColorAnimatedValue, backgroundColors, animateBackgroundColor, resetBackgroundColor] = useColorAnimationCallbacks(
+    const [backgroundColorAnimatedValue, animateBackgroundColor, resetBackgroundColor] = useColorAnimationCallbacks(
         backgroundColor,
         whileTap?.backgroundColor
     );
@@ -60,9 +61,7 @@ export function usePressableAnimationStyles({
         insertTransitionValue(styles, 'width', widthAnimatedValue.value);
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
 
-        if (backgroundColors.length === 2) {
-            styles['backgroundColor'] = interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors);
-        }
+        insertTransitionValueAnimated(styles, 'backgroundColor', backgroundColorAnimatedValue.value);
 
         insertTransformTransitionValue(styles, 'scale', scaleAnimatedValue.value);
         insertTransformTransitionValue(styles, 'rotate', rotationAnimatedValue.value);

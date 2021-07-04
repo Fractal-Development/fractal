@@ -1,28 +1,18 @@
-import { useSharedValue, withTiming } from 'react-native-reanimated';
-import { useCallback, useMemo } from 'react';
+import { useSharedValue } from 'react-native-reanimated';
+import { useCallback } from 'react';
 export function useColorAnimationCallbacks(backgroundColor, pressedBackgroundColor) {
-    const animatedValue = useSharedValue(0);
+    const animatedValue = useSharedValue(backgroundColor);
     const colorsAvailable = backgroundColor != null && pressedBackgroundColor != null;
-    const colors = useMemo(() => {
-        const colors = Array();
-        if (backgroundColor != null) {
-            colors.push(backgroundColor);
-        }
-        if (pressedBackgroundColor != null) {
-            colors.push(pressedBackgroundColor);
-        }
-        return colors;
-    }, [backgroundColor, pressedBackgroundColor]);
     const startAnimation = useCallback(() => {
         if (colorsAvailable) {
-            animatedValue.value = withTiming(1);
+            animatedValue.value = pressedBackgroundColor;
         }
-    }, [animatedValue, colorsAvailable]);
+    }, [animatedValue, colorsAvailable, pressedBackgroundColor]);
     const resetAnimation = useCallback(() => {
         if (colorsAvailable) {
-            animatedValue.value = withTiming(0);
+            animatedValue.value = backgroundColor;
         }
-    }, [animatedValue, colorsAvailable]);
-    return [animatedValue, colors, startAnimation, resetAnimation];
+    }, [animatedValue, colorsAvailable, backgroundColor]);
+    return [animatedValue, startAnimation, resetAnimation];
 }
 //# sourceMappingURL=useColorAnimationCallbacks.js.map
