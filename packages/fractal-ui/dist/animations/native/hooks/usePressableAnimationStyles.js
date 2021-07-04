@@ -10,7 +10,7 @@ export function usePressableAnimationStyles({ whileTap, opacity, width, height, 
     const [heightAnimatedValue, animateHeight, resetHeight] = useSharedValueCallbacks(height !== null && height !== void 0 ? height : 0, whileTap === null || whileTap === void 0 ? void 0 : whileTap.height);
     const [scaleAnimatedValue, animateScale, resetScale] = useSharedValueCallbacks(1, whileTap === null || whileTap === void 0 ? void 0 : whileTap.scale);
     const [rotationAnimatedValue, animateRotation, resetRotation] = useSharedValueCallbacks('0deg', whileTap === null || whileTap === void 0 ? void 0 : whileTap.rotate);
-    const [backgroundColorAnimatedValue, animateBackgroundColor, resetBackgroundColor] = useColorAnimationCallbacks(backgroundColor, whileTap === null || whileTap === void 0 ? void 0 : whileTap.backgroundColor);
+    const [backgroundColorAnimatedValue, backgroundColors, animateBackgroundColor, resetBackgroundColor] = useColorAnimationCallbacks(backgroundColor, whileTap === null || whileTap === void 0 ? void 0 : whileTap.backgroundColor);
     const handlePressIn = () => {
         animateOpacity();
         animateBackgroundColor();
@@ -40,7 +40,9 @@ export function usePressableAnimationStyles({ whileTap, opacity, width, height, 
         insertTransitionValue(styles, 'opacity', opacityAnimatedValue.value);
         insertTransitionValue(styles, 'width', widthAnimatedValue.value);
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
-        insertTransitionValueAnimated(styles, 'backgroundColor', backgroundColorAnimatedValue.value);
+        if (backgroundColors.length === 2) {
+            insertTransitionValueAnimated(styles, 'backgroundColor', backgroundColorAnimatedValue.value);
+        }
         insertTransformTransitionValue(styles, 'scale', scaleAnimatedValue.value);
         insertTransformTransitionValue(styles, 'rotate', rotationAnimatedValue.value);
         return styles;
