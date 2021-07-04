@@ -1,5 +1,5 @@
 import Reanimated, { useSharedValue, withTiming } from 'react-native-reanimated';
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 
 export function useColorAnimationCallbacks(
     backgroundColor: string | undefined,
@@ -9,7 +9,7 @@ export function useColorAnimationCallbacks(
 
     const colorsAvailable = backgroundColor != null && pressedBackgroundColor != null;
 
-    const colors = useMemo(() => {
+    const colors = (() => {
         const colors = Array<string>();
 
         if (backgroundColor != null) {
@@ -21,7 +21,7 @@ export function useColorAnimationCallbacks(
         }
 
         return colors;
-    }, [backgroundColor, pressedBackgroundColor]);
+    })();
 
     const startAnimation = useCallback(() => {
         if (colorsAvailable) {
