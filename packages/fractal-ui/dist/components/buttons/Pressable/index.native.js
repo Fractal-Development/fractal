@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import Reanimated from 'react-native-reanimated';
 import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
@@ -31,11 +31,7 @@ const Pressable = forwardRef((_a, ref) => {
     var { style } = _a, others = __rest(_a, ["style"]);
     const animationStyles = useAnimationStyles(others);
     const [tapStyles, handlePressIn, handlePressOut] = usePressableAnimationStyles(others);
-    const [initialRenderDone, setInitialRenderDone] = useState(false);
-    useEffect(() => {
-        setInitialRenderDone(true);
-    }, []);
-    return (React.createElement(StyledPressable, Object.assign({ ref: ref, onPressIn: handlePressIn, onPressOut: handlePressOut, style: [animationStyles, initialRenderDone ? tapStyles : undefined, style] }, others)));
+    return (React.createElement(StyledPressable, Object.assign({ ref: ref, onPressIn: handlePressIn, onPressOut: handlePressOut, style: [animationStyles, tapStyles, style] }, others)));
 });
 Pressable.displayName = 'Pressable';
 export { Pressable };

@@ -1,11 +1,10 @@
 import { PressableProps } from '../../../components/buttons/Pressable/types';
 import { ViewStyle } from 'react-native';
 import { useSharedValueCallbacks } from './useSharedValueCallbacks';
-import { useAnimatedStyle } from 'react-native-reanimated';
+import { interpolateColor, useAnimatedStyle } from 'react-native-reanimated';
 import { useColorAnimationCallbacks } from './useColorAnimationCallbacks';
 import { insertTransitionValue } from '../worklets/inserTransitionValue';
 import { insertTransformTransitionValue } from '../worklets/insertTransformTransitionValue';
-import { insertTransitionValueAnimated } from '../worklets/insertTransitionValueAnimated';
 
 export function usePressableAnimationStyles({
     whileTap,
@@ -62,7 +61,9 @@ export function usePressableAnimationStyles({
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
 
         if (backgroundColors.length === 2) {
-            insertTransitionValueAnimated(styles, 'backgroundColor', backgroundColorAnimatedValue.value);
+            styles['backgroundColor'] = interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors);
+        } else if (backgroundColor != null) {
+            styles['backgroundColor'] = backgroundColor;
         }
 
         insertTransformTransitionValue(styles, 'scale', scaleAnimatedValue.value);
