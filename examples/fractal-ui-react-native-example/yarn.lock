@@ -1019,7 +1019,7 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#1bfc466ed1eea0b7763a0eb2a4cd79a51f5e0406"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#97f222ced98b6f736a00a5a7773164a2349b89ce"
   dependencies:
     d3-array "2.3.3"
     d3-scale "3.3.0"
@@ -1027,13 +1027,13 @@
 
 "@bma98/fractal-examples@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#bec0d1c2a2e8a189b3013e3dc5e5a983e54ddbe7"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#6de9c38e2f5aeb5bf8d9e5791ef90bb8a158f3fa"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#cd0b271debc62a74c590f4f489dd8086452d3d97"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#7ff117383e42fb42f32d864a1b2209efa8f8e97e"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -1121,9 +1121,9 @@
     xml2js "^0.4.23"
 
 "@expo/config-plugins@^3.0.0":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-3.0.2.tgz#3c9fb54164b48330494cd0172d21121686bddbc4"
-  integrity sha512-bS7t9JbPBK1lCcMo2mp7QSDq2a4xsc8E6sEYVwD+YS5RKx7nxEtSYohnFWlKthm624dHCaVzqEbKxhIGO3M3Uw==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-3.0.3.tgz#4aff484fd2adedbd12a1cd73daabf07b1a5af0e5"
+  integrity sha512-+DWHd/2L3O+njVercxGSzcBUXMm5CSzdvIK+7dU+FRhoiF57y2NzBhfNQcReYx/EY1coBrYOsMtENPhV1tWoWQ==
   dependencies:
     "@expo/config-types" "^41.0.0"
     "@expo/json-file" "8.2.30"

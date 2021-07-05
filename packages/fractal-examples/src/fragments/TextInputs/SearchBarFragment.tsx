@@ -3,7 +3,7 @@ import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, Circu
 
 function PopoverContent(): JSX.Element {
     return (
-        <Box width={110}>
+        <Box>
             <Button variant={'alternative'} text={'Pasion'} />
         </Box>
     );

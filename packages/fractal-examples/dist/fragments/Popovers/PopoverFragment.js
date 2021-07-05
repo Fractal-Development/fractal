@@ -6,65 +6,23 @@ function PopoverContent() {
 }
 export function PopoverFragment() {
     const { spacings } = useTheme();
-    const [popoversVisibles, setPopoversVisibles] = useState({
-        top: false,
-        bottom: false,
-        right: false,
-        left: false
-    });
-    const showPopover = (popover) => {
-        if (popover === 'top') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { top: true });
-            });
-        }
-        if (popover === 'bottom') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { bottom: true });
-            });
-        }
-        if (popover === 'right') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { right: true });
-            });
-        }
-        if (popover === 'left') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { left: true });
-            });
-        }
-    };
-    const hidePopover = (popover) => {
-        if (popover === 'top') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { top: false });
-            });
-        }
-        if (popover === 'bottom') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { bottom: false });
-            });
-        }
-        if (popover === 'right') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { right: false });
-            });
-        }
-        if (popover === 'left') {
-            setPopoversVisibles((currentValue) => {
-                return Object.assign(Object.assign({}, currentValue), { left: false });
-            });
-        }
-    };
+    const [isTopPopoverVisible, setTopPopoverVisible] = useState(false);
+    const toggleTopPopover = () => setTopPopoverVisible((current) => !current);
+    const [isRightPopoverVisible, setRightPopoverVisible] = useState(false);
+    const toggleRightPopover = () => setRightPopoverVisible((current) => !current);
+    const [isBottomPopoverVisible, setBottomPopoverVisible] = useState(false);
+    const toggleBottomPopover = () => setBottomPopoverVisible((current) => !current);
+    const [isLeftPopoverVisible, setLeftPopoverVisible] = useState(false);
+    const toggleLeftPopover = () => setLeftPopoverVisible((current) => !current);
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title' }, "PopoverView Example"),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },
-            React.createElement(Popover, { placement: 'bottom', active: popoversVisibles.bottom, onRequestClose: () => hidePopover('bottom'), popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: () => showPopover('bottom'), text: 'Bottom' }))),
+            React.createElement(Popover, { placement: 'bottom', active: isBottomPopoverVisible, onRequestClose: toggleBottomPopover, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: toggleBottomPopover, text: 'Bottom' }))),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },
-            React.createElement(Popover, { placement: 'top', active: popoversVisibles.top, onRequestClose: () => hidePopover('top'), popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: () => showPopover('top'), text: 'Top' }))),
+            React.createElement(Popover, { placement: 'top', active: isTopPopoverVisible, onRequestClose: toggleTopPopover, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: toggleTopPopover, text: 'Top' }))),
         React.createElement(Box, { marginTop: spacings.m },
-            React.createElement(Popover, { placement: 'right', active: popoversVisibles.right, onRequestClose: () => hidePopover('right'), popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 120, onPress: () => showPopover('right'), text: 'Right' }))),
+            React.createElement(Popover, { placement: 'right', active: isRightPopoverVisible, onRequestClose: toggleRightPopover, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 120, onPress: toggleRightPopover, text: 'Right' }))),
         React.createElement(Box, { marginTop: spacings.m, marginBottom: spacings.m, alignItems: 'flex-end' },
-            React.createElement(Popover, { placement: 'left', active: popoversVisibles.left, onRequestClose: () => hidePopover('left'), popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 120, onPress: () => showPopover('left'), text: 'Left' })))));
+            React.createElement(Popover, { placement: 'left', active: isLeftPopoverVisible, onRequestClose: toggleLeftPopover, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 120, onPress: toggleLeftPopover, text: 'Left' })))));
 }
 //# sourceMappingURL=PopoverFragment.js.map

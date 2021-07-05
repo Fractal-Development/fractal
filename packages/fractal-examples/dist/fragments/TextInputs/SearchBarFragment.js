@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
 function PopoverContent() {
-    return (React.createElement(Box, { width: 110 },
+    return (React.createElement(Box, null,
         React.createElement(Button, { variant: 'alternative', text: 'Pasion' })));
 }
 export function SearchBarFragment() {
