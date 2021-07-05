@@ -8,6 +8,7 @@ interface BaseTextInputProps {
     placeholder?: string;
     onChangeText?: (text: string) => void;
     onSubmitEditing?: () => void;
+    onFocus?: () => void;
 }
 
 export interface TextFieldProps extends FractalSharedProps, AnimationProps, BaseTextInputProps, FractalTextProps, PlaceholderProps {

@@ -54,6 +54,8 @@ export function AutoComplete<T extends IDEnabled>({
         }
     };
 
+    const showSuggestions = () => setSuggestionsVisible(true);
+
     const hideSuggestions = () => setSuggestionsVisible(false);
 
     const handleChangeText = (query: string) => {
@@ -78,6 +80,9 @@ export function AutoComplete<T extends IDEnabled>({
             onItemPress={onOptionPress}
             selectedIds={selectedOptionsIds}
             multiple={multiple}
+            textFieldProps={{
+                onFocus: showSuggestions
+            }}
             {...searchBarProps}
         />
     );

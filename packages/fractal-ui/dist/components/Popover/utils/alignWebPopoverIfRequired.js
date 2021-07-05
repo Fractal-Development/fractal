@@ -19,7 +19,6 @@ export function alignWebPopoverIfRequired(style, anchorElement, popoverWidth, po
     const isOverflowingLeft = offset.right + (isVertical ? offsetWidth / 2 : offsetWidth) + offsetPopoverWidth > window.innerWidth;
     const isOverflowingBottom = offset.top + (isVertical ? offsetHeight : offsetHeight / 2) + offsetPopoverHeight > window.innerHeight;
     const isOverflowingTop = offset.bottom + (isVertical ? offsetHeight : offsetHeight / 2) + offsetPopoverHeight > window.innerHeight;
-    console.log({ isOverflowingRight, isOverflowingLeft, isOverflowingBottom, isOverflowingTop });
     if (isOverflowingRight) {
         style.left = undefined;
         style.right = isVertical ? 0 : offsetWidth;
@@ -29,12 +28,12 @@ export function alignWebPopoverIfRequired(style, anchorElement, popoverWidth, po
     }
     if (isOverflowingTop) {
         style.top = offsetHeight;
-        style.transform = undefined;
+        style.transform = isVertical ? style.transform : undefined;
     }
     if (isOverflowingBottom) {
         style.top = undefined;
         style.bottom = offsetHeight;
-        style.transform = undefined;
+        style.transform = isVertical ? style.transform : undefined;
     }
     if (isOverflowingLeft) {
         style.left = isVertical ? 0 : offsetWidth;

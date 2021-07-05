@@ -53,6 +53,7 @@ export function AutoComplete(_a) {
             removeSelectedOption(option);
         }
     };
+    const showSuggestions = () => setSuggestionsVisible(true);
     const hideSuggestions = () => setSuggestionsVisible(false);
     const handleChangeText = (query) => {
         const newFilteredOptions = options.filter((option) => {
@@ -64,6 +65,8 @@ export function AutoComplete(_a) {
         setFilteredOptions(newFilteredOptions);
         setUserInput(query);
     };
-    return (React.createElement(BaseAutoComplete, Object.assign({ value: userInput, onChangeText: handleChangeText, suggestionsVisible: suggestionsVisible, hideSuggestions: hideSuggestions, filteredData: filteredOptions, getLabel: getOptionLabel, onItemPress: onOptionPress, selectedIds: selectedOptionsIds, multiple: multiple }, searchBarProps)));
+    return (React.createElement(BaseAutoComplete, Object.assign({ value: userInput, onChangeText: handleChangeText, suggestionsVisible: suggestionsVisible, hideSuggestions: hideSuggestions, filteredData: filteredOptions, getLabel: getOptionLabel, onItemPress: onOptionPress, selectedIds: selectedOptionsIds, multiple: multiple, textFieldProps: {
+            onFocus: showSuggestions
+        } }, searchBarProps)));
 }
 //# sourceMappingURL=index.js.map
