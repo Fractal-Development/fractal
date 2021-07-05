@@ -59,7 +59,7 @@ export function usePressableAnimationStyles({
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
 
         if (backgroundColors.length === 2) {
-            styles['backgroundColor'] = initialPressDone
+            styles['backgroundColor'] = initialPressDone.value
                 ? interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors)
                 : backgroundColor;
         }

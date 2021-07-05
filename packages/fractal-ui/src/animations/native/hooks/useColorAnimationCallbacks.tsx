@@ -1,12 +1,12 @@
 import Reanimated, { useSharedValue, withTiming } from 'react-native-reanimated';
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 
 export function useColorAnimationCallbacks(
     backgroundColor: string | undefined,
     pressedBackgroundColor: string | undefined
-): [Reanimated.SharedValue<number>, Array<string>, () => void, () => void, boolean] {
+): [Reanimated.SharedValue<number>, Array<string>, () => void, () => void, Reanimated.SharedValue<boolean>] {
     const animatedValue = useSharedValue<number>(0);
-    const [initialPressDone, setInitialPressDone] = useState(false);
+    const initialPressDone = useSharedValue<boolean>(false);
 
     const colorsAvailable = backgroundColor != null && pressedBackgroundColor != null;
 
@@ -25,11 +25,11 @@ export function useColorAnimationCallbacks(
     })();
 
     const startAnimation = useCallback(() => {
-        setInitialPressDone(true);
+        initialPressDone.value = true;
         if (colorsAvailable) {
             animatedValue.value = withTiming(1);
         }
-    }, [animatedValue, colorsAvailable]);
+    }, [animatedValue, colorsAvailable, initialPressDone]);
 
     const resetAnimation = useCallback(() => {
         if (colorsAvailable) {
