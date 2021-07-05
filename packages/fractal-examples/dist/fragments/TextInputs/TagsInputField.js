@@ -11,7 +11,9 @@ export function TagsInputField() {
     ]);
     const [selectedTags, setSelectedTags] = useState([]);
     const handleSubmitEditing = () => {
-        addNewTag(tag);
+        if (tag != '') {
+            addNewTag(tag);
+        }
     };
     const addNewTag = (tag) => {
         const newTag = { id: `${tags.length}`, value: tag };

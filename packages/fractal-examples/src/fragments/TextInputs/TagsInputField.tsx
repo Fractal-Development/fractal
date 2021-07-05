@@ -18,7 +18,9 @@ export function TagsInputField(): JSX.Element {
     const [selectedTags, setSelectedTags] = useState<Array<Tag>>([]);
 
     const handleSubmitEditing = () => {
-        addNewTag(tag);
+        if(tag != ''){
+            addNewTag(tag);   
+        }
     };
 
     const addNewTag = (tag: string) => {
