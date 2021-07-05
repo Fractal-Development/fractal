@@ -1,15 +1,17 @@
-import React from 'react';
-import { useCallback } from 'react';
-import { Button, useSetThemeIdentifier, Text } from '@bma98/fractal-ui';
+import React, { useCallback } from 'react';
+import { useSetThemeIdentifier, useTheme, Box, Button, Text } from '@bma98/fractal-ui';
 
 export function ThemeSwapper(): JSX.Element {
+    const { spacings } = useTheme();
     const setThemeIdentifier = useSetThemeIdentifier();
     const handlePress = useCallback(() => setThemeIdentifier((current) => (current === 'light' ? 'dark' : 'light')), [setThemeIdentifier]);
 
     return (
         <>
             <Text variant={'title'}>Swap Theme</Text>
-            <Button onPress={handlePress} variant='alternative' text='Swap Theme' />
+            <Box marginTop={spacings.s} marginBottom={spacings.xl}>
+                <Button onPress={handlePress} variant='alternative' text='Swap Theme' />
+            </Box>
         </>
     );
 }

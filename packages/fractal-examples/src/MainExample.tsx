@@ -1,5 +1,5 @@
 import React from 'react';
-import { FractalAppRoot, useTheme, Background, ScrollView, PaddingLayer, Box } from '@bma98/fractal-ui';
+import { FractalAppRoot, Background, ScrollView, PaddingLayer } from '@bma98/fractal-ui';
 import {
     ThemeSwapper,
     DropZoneFragment,
@@ -44,23 +44,14 @@ import {
     GridListFragment,
     GridFragment,
     SocialMediaButtonsFragment,
-    RecyclerTable
+    RecyclerTable,
+    LoadingBackgroundFragment
 } from './fragments';
-
-function SwapThemeFragment(): JSX.Element {
-    const { spacings } = useTheme();
-
-    return (
-        <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-            <ThemeSwapper />
-        </Box>
-    );
-}
 
 function Content(): JSX.Element {
     return (
         <PaddingLayer>
-            <SwapThemeFragment />
+            <ThemeSwapper />
             <DropZoneFragment />
             <ChipFragment />
             <TagsInputField />
@@ -104,6 +95,7 @@ function Content(): JSX.Element {
             <GridFragment />
             <SocialMediaButtonsFragment />
             <RecyclerTable />
+            <LoadingBackgroundFragment />
         </PaddingLayer>
     );
 }
