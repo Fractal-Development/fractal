@@ -1166,7 +1166,7 @@
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#cc89ba5df4504b39371d90e09102c12844c917f1"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#c93b73466538b6e6d676798607ac0dbd3399b4ba"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"

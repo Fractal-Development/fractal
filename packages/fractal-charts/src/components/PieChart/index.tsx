@@ -48,7 +48,7 @@ export function PieChart({
     }, [pieSlices, selectedSliceIndex]);
 
     return (
-        <ChartContainer style={style} onChangeDimensions={setDimensions} rotate={-rotateValue} {...layerProps}>
+        <ChartContainer style={style} onChangeDimensions={setDimensions} rotate={-rotateValue} overflow={'hidden'} {...layerProps}>
             <PieChartContent width={width} height={height} data={data} pieSlices={pieSlices} createArc={createArc} />
         </ChartContainer>
     );

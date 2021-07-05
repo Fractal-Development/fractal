@@ -39,7 +39,7 @@ export function PieChart(_a) {
             setRotateValue(radiansToDegrees(middleAngle));
         }
     }, [pieSlices, selectedSliceIndex]);
-    return (React.createElement(ChartContainer, Object.assign({ style: style, onChangeDimensions: setDimensions, rotate: -rotateValue }, layerProps),
+    return (React.createElement(ChartContainer, Object.assign({ style: style, onChangeDimensions: setDimensions, rotate: -rotateValue, overflow: 'hidden' }, layerProps),
         React.createElement(PieChartContent, { width: width, height: height, data: data, pieSlices: pieSlices, createArc: createArc })));
 }
 //# sourceMappingURL=index.js.map
