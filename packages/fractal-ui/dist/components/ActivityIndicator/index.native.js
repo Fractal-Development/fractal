@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
-import { Layer } from '../containers';
+import { Layer } from '../containers/Layer';
 import { ActivityIndicator as RNActivityIndicator } from 'react-native';
 const StyledRNActivityIndicator = styled(RNActivityIndicator) `
     width: 100%;

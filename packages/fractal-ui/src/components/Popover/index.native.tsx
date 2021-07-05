@@ -35,7 +35,7 @@ const Popover = forwardRef(
 
         const measureInWindow = useCallback(() => {
             anchorRef.current?.measureInWindow((x, y, width, height) => {
-                setAnchorViewLayout({ x, y, width, height });
+                setAnchorViewLayout({ x, y, width: Math.ceil(width), height: Math.ceil(height) });
             });
         }, []);
 
