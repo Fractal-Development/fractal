@@ -1,4 +1,34 @@
 {
-  "name": "fractal_ui",
-  "displayName": "fractal_ui"
+  "expo": {
+    "name": "fractal_ui",
+    "slug": "fractal_ui",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "fractal.ui"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "fractal.ui"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
 }
