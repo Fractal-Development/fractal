@@ -1,7 +1,6 @@
-import { AnimationProps } from '../../../sharedProps/AnimationProps';
-import { FractalSharedProps } from '../../../sharedProps/FractalSharedProps';
+import { AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
 
-export interface ActionButtonProps extends FractalSharedProps, AnimationProps {
+export interface ActionButtonProps extends FractalSharedStyleProps, AnimationProps {
     onPress?: () => void;
     size?: number;
 }

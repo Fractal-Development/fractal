@@ -1,9 +1,8 @@
 import React, { forwardRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Transition } from 'framer-motion';
 import styled from 'styled-components';
 import { ActivityIndicatorCircleProps, ActivityIndicatorProps } from './types';
-import { Layer } from '../containers/Layer';
-import { FractalTransition } from '../../sharedProps';
+import { Layer } from '../containers';
 import { getActivityIndicatorAccessibilityProps } from './accessibility/getActivityIndicatorAccessibilityProps';
 
 const BackgroundCircle = styled(motion.circle)`
@@ -17,7 +16,7 @@ const AnimatedSection = styled(motion.circle)`
     stroke-dashoffset: 60;
 `;
 
-const transition: FractalTransition = { repeat: Infinity, type: 'ease', duration: 0.75 };
+const transition: Transition = { repeat: Infinity, type: 'ease', duration: 0.75 };
 
 const animate = {
     rotate: 360

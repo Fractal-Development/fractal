@@ -3,7 +3,7 @@ export * from './BackgroundProps';
 export * from './BorderProps';
 export * from './DimensionProps';
 export * from './DisplayProps';
-export * from './FractalSharedProps';
+export * from './FractalSharedStyleProps';
 export * from './PlaceholderProps';
 export * from './ShadowProps';
 export * from './TextProps';

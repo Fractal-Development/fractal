@@ -1,13 +1,13 @@
 import React, { ReactNode, forwardRef, useState } from 'react';
 import { useTheme } from '../../context/hooks/useTheme';
-import { AnimationProps, FractalSharedProps } from '../../sharedProps';
+import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
 import { BaseButton } from './BaseButton';
 import { ButtonVariant } from './types/ButtonVariant';
 import { useToggleButtonColors } from './hooks/useToggleButtonColors';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';
 import { useControllableState } from '../../hooks/useControllableState';
 
-export interface ToggleButtonProps extends FractalSharedProps, AnimationProps {
+export interface ToggleButtonProps extends FractalSharedStyleProps, AnimationProps {
     variant: ButtonVariant;
     active?: boolean;
     useGrayVariant?: boolean;

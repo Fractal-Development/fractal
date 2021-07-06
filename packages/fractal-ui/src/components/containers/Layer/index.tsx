@@ -1,6 +1,5 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { LayerProps } from './types';
 import { motion } from 'framer-motion';
 import {
     extractBackgroundProps,
@@ -8,8 +7,10 @@ import {
     extractDimensionProps,
     extractDisplayProps,
     extractShadowProps,
-    extractWebProps
+    extractWebProps,
+    WebAnimationProps
 } from '../../../sharedProps';
+import { LayerProps } from './types';
 
 const StyledLayer = styled(motion.div as any)`
     ${extractBackgroundProps};
@@ -18,10 +19,10 @@ const StyledLayer = styled(motion.div as any)`
     ${extractBorderProps};
     ${extractShadowProps};
     ${extractWebProps};
-` as typeof motion.div;
+` as FunctionComponent<WebAnimationProps>;
 
-const Layer = forwardRef(({ transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => {
-    return <StyledLayer ref={ref} transition={transition} {...others} />;
+const Layer = forwardRef(({ from, transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => {
+    return <StyledLayer ref={ref} initial={from} transition={transition} {...others} />;
 });
 
 Layer.displayName = 'Layer';

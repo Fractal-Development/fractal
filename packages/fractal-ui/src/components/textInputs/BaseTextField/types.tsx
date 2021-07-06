@@ -1,5 +1,5 @@
 import { AnimationProps } from '../../../sharedProps/AnimationProps';
-import { FractalSharedProps } from '../../../sharedProps/FractalSharedProps';
+import { FractalSharedStyleProps } from '../../../sharedProps/FractalSharedStyleProps';
 import { PlaceholderProps } from '../../../sharedProps/PlaceholderProps';
 import { TextProps as FractalTextProps } from '../../../sharedProps/TextProps';
 
@@ -11,6 +11,6 @@ interface BaseTextInputProps {
     onFocus?: () => void;
 }
 
-export interface TextFieldProps extends FractalSharedProps, AnimationProps, BaseTextInputProps, FractalTextProps, PlaceholderProps {
+export interface TextFieldProps extends FractalSharedStyleProps, AnimationProps, BaseTextInputProps, FractalTextProps, PlaceholderProps {
     style?: any;
 }

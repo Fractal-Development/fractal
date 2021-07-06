@@ -26,7 +26,8 @@
         "react-native-gesture-handler": "~1.10.3",
         "react-native-reanimated": "~2.1.0",
         "react-native-svg": "^12.1.1",
-        "react-virtualized-auto-sizer": "^1.0.5"
+        "react-virtualized-auto-sizer": "^1.0.5",
+        "moti": "^0.11.0"
     },
     "peerDependenciesMeta": {
         "@react-native-community/datetimepicker": {
@@ -64,6 +65,9 @@
         },
         "react-virtualized-auto-sizer": {
             "optional": true
+        },
+        "moti": {
+            "optional": true
         }
     },
     "dependencies": {
@@ -98,14 +102,15 @@
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
         "expo-module-scripts": "^2.0.0",
+        "moti": "^0.11.0",
         "prettier": "^2.3.2",
+        "react": "16.13.1",
+        "react-native": "~0.63.4",
+        "react-native-gesture-handler": "~1.10.3",
         "react-native-reanimated": "~2.1.0",
         "react-native-svg": "^12.1.1",
         "typescript": "^4.3.4",
-        "utility-types": "^3.10.0",
-        "react": "16.13.1",
-        "react-native": "~0.63.4",
-        "react-native-gesture-handler": "~1.10.3"
+        "utility-types": "^3.10.0"
     },
     "keywords": [
         "Javascript",

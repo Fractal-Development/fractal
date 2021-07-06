@@ -1,28 +1,29 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, FunctionComponent } from 'react';
 import styled from 'styled-components/native';
-import { LayerProps } from './types';
-import Reanimated from 'react-native-reanimated';
 import {
     extractBackgroundProps,
     extractBorderProps,
     extractDimensionProps,
     extractDisplayProps,
-    extractShadowProps
+    extractShadowProps,
+    WebAnimationProps
 } from '../../../sharedProps';
+import { motify } from '@motify/core';
+import { View } from 'react-native';
+import { LayerProps } from './types';
 
-import { useAnimationStyles } from '../../../animations/native/hooks/useAnimationStyles';
+const MotiView = motify(View)();
 
-const StyledLayer = styled(Reanimated.View)`
+const StyledLayer = styled(MotiView)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
     ${extractBorderProps};
     ${extractShadowProps};
-` as typeof Reanimated.View;
+` as FunctionComponent<WebAnimationProps>;
 
 const Layer = forwardRef(({ style, ...others }: LayerProps, ref: any): JSX.Element => {
-    const animationStyles = useAnimationStyles(others);
-    return <StyledLayer ref={ref} {...others} style={[animationStyles, style]} />;
+    return <StyledLayer ref={ref} {...others} />;
 });
 
 Layer.displayName = 'Layer';

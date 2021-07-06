@@ -1,5 +1,5 @@
 import { AnimationProps } from '../../../sharedProps/AnimationProps';
-import { FractalSharedProps } from '../../../sharedProps/FractalSharedProps';
+import { FractalSharedStyleProps } from '../../../sharedProps/FractalSharedStyleProps';
 import { TextProps as FractalTextProps } from '../../../sharedProps/TextProps';
 import { FractalThemeTextVariants } from '../../../themes/FractalTheme';
 import { RequiredKeys } from 'utility-types';
@@ -28,7 +28,7 @@ interface DefaultTexProps {
     android_hyphenationFrequency?: 'normal' | 'none' | 'full' | 'high' | 'balanced';
 }
 
-export interface TextProps extends FractalSharedProps, AnimationProps, DefaultTexProps, FractalTextProps {
+export interface TextProps extends FractalSharedStyleProps, AnimationProps, DefaultTexProps, FractalTextProps {
     children?: string | number;
     style?: any;
     variant?: RequiredKeys<FractalThemeTextVariants>;

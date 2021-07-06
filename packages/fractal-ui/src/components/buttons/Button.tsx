@@ -1,14 +1,14 @@
 import React, { forwardRef, ReactNode, useState } from 'react';
 import { Text } from '../text';
-import { useTheme } from '../../context/hooks/useTheme';
+import { useTheme } from '../../context';
 import { BaseButton } from './BaseButton';
-import { AnimationProps, FractalSharedProps } from '../../sharedProps';
-import { ButtonVariant } from './types/ButtonVariant';
+import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
+import { ButtonVariant } from './types';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';
 import { useButtonColors } from './hooks/useButtonColors';
 import { ActivityIndicator } from '../ActivityIndicator';
 
-export interface ButtonProps extends FractalSharedProps, AnimationProps {
+export interface ButtonProps extends FractalSharedStyleProps, AnimationProps {
     style?: any;
     variant?: ButtonVariant;
     text?: string;

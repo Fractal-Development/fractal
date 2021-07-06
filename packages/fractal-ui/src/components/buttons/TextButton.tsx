@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react';
 import { Text } from '../text';
-import { AnimationProps, FractalSharedProps } from '../../sharedProps';
+import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
 import { TextProps } from '../text/BaseText/types';
 import { useTheme } from '../../context/hooks/useTheme';
 import { ButtonVariant } from './types/ButtonVariant';
 import { TouchableOpacity } from './TouchableOpacity';
 import { getTextButtonAccessibilityProps } from './accessibility/getTextButtonAccessibilityProps';
 
-export interface TextButtonProps extends FractalSharedProps, AnimationProps {
+export interface TextButtonProps extends FractalSharedStyleProps, AnimationProps {
     variant: ButtonVariant;
     children?: string;
     textProps?: Omit<TextProps, 'children'>;
