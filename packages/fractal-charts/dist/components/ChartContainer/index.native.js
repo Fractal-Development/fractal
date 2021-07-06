@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { useCallback, useEffect } from 'react';
 import { Layer } from '@bma98/fractal-ui';
-import { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
+import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnUI } from 'react-native-reanimated';
 export function ChartContainer(_a) {
     var { style, contentStyle, onChangeDimensions, rotate, children } = _a, layerProps = __rest(_a, ["style", "contentStyle", "onChangeDimensions", "rotate", "children"]);
     const rotation = useSharedValue(0);
@@ -26,10 +26,13 @@ export function ChartContainer(_a) {
     }, [onChangeDimensions]);
     useEffect(() => {
         if (rotate) {
-            rotation.value = withSpring(rotate, { damping: 12, stiffness: 90 });
+            runOnUI(() => {
+                'worklet';
+                rotation.value = withSpring(rotate, { damping: 12, stiffness: 90 });
+            })();
         }
     }, [rotate, rotation]);
     return (React.createElement(Layer, Object.assign({ style: style }, layerProps),
-        React.createElement(Layer, { style: [Object.assign({ flex: 1 }, contentStyle), animatedStyle], onLayout: onLayout }, children)));
+        React.createElement(Animated.View, { style: [Object.assign({ flex: 1 }, contentStyle), animatedStyle], onLayout: onLayout }, children)));
 }
 //# sourceMappingURL=index.native.js.map

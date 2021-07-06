@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { LayoutChangeEvent } from 'react-native';
 import { Layer } from '@bma98/fractal-ui';
-import { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
+import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnUI } from 'react-native-reanimated';
 import { ChartContainerProps } from '../../types';
 
 export function ChartContainer({
@@ -34,15 +34,18 @@ export function ChartContainer({
 
     useEffect(() => {
         if (rotate) {
-            rotation.value = withSpring(rotate, { damping: 12, stiffness: 90 });
+            runOnUI(() => {
+                'worklet';
+                rotation.value = withSpring(rotate, { damping: 12, stiffness: 90 });
+            })();
         }
     }, [rotate, rotation]);
 
     return (
         <Layer style={style} {...layerProps}>
-            <Layer style={[{ flex: 1, ...contentStyle }, animatedStyle]} onLayout={onLayout}>
+            <Animated.View style={[{ flex: 1, ...contentStyle }, animatedStyle]} onLayout={onLayout}>
                 {children}
-            </Layer>
+            </Animated.View>
         </Layer>
     );
 }
