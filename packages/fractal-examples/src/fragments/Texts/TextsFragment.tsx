@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme, Box, Text } from '@bma98/fractal-ui';
+import { getTextAccessibilityProps } from './accessibility/getTextAccessibilityProps';
 
 export function TextsFragment(): JSX.Element {
     const { colors, spacings } = useTheme();
@@ -7,7 +8,7 @@ export function TextsFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'}>Text Example</Text>
-            <Box marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getTextAccessibilityProps()}>
                 <Text variant={'title'} marginBottom={spacings.s}>
                     Title text.
                 </Text>
