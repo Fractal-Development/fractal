@@ -1133,7 +1133,7 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#c06365a4be03701d8aa562612667bee392896c5b"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#1f3933fabf6a60b4afd0c101d4db6e90dc171e45"
   dependencies:
     d3-array "2.3.3"
     d3-scale "3.3.0"
@@ -1141,13 +1141,13 @@
 
 "@bma98/fractal-examples@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#9b17bafe453d27bbce0f128a836d550f74463119"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#71fe2f5d9b89010a7b1fae19624894f1e94e9435"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#f0b2aceff72d6329d217248cc22926a2b6e32c7b"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#921da40016beab40e2bacee572c4175604edeba1"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -1365,7 +1365,7 @@
     lodash.pick "^4.4.0"
     lodash.template "^4.5.0"
 
-"@expo/webpack-config@^0.12.81":
+"@expo/webpack-config@^0.12.82":
   version "0.12.82"
   resolved "https://registry.yarnpkg.com/@expo/webpack-config/-/webpack-config-0.12.82.tgz#76243dfb918651d72074f6557de4fecdd115473f"
   integrity sha512-fQ8efRIbPYOF5ZtofXyxkUPwk8J/k0sPUSCXS/a9ZCYBIWiLbFeKpJTDiZCraZ7lzZQIVwllpNi+LjcqpzEjfA==
@@ -1971,22 +1971,22 @@
   integrity sha512-eNMf5uF67CsiJ9SDzofSWKu9Gh2PDyPbCSXuUJ09tkRgcOefDx6DyQnXCOPCd+8vxC1DzJKVAgLy+s425jUIeA==
 
 "@types/glob@^7.1.1":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.3.tgz#e6ba80f36b7daad2c685acd9266382e68985c183"
-  integrity sha512-SEYeGAIQIQX8NN6LDKprLjbrd5dARM5EXsd8GI/A5l0apYI1fGMWgPHSe4ZKL4eozlAyI+doUE9XbYS4xCkQ1w==
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.4.tgz#ea59e21d2ee5c517914cb4bc8e4153b99e566672"
+  integrity sha512-w+LsMxKyYQm347Otw+IfBXOv9UWVjpHpCDdbBMt8Kz/xbvCYNjP+0qPh91Km3iKfSRLBB0P7fAMf0KHrPu+MyA==
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
 
 "@types/hammerjs@^2.0.36":
-  version "2.0.39"
-  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.39.tgz#4be64bbacf3813c79c0dab895c6b0fdc7d5e513f"
-  integrity sha512-lYR2Y/tV2ujpk/WyUc7S0VLI0a9hrtVIN9EwnrNo5oSEJI2cK2/XrgwOQmXLL3eTulOESvh9qP6si9+DWM9cOA==
+  version "2.0.40"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.40.tgz#ded0240b6ea1ad7afc1e60374c49087aaea5dbd8"
+  integrity sha512-VbjwR1fhsn2h2KXAY4oy1fm7dCxaKy0D+deTb8Ilc3Eo3rc5+5eA4rfYmZaHgNJKxVyI0f6WIXzO2zLkVmQPHA==
 
 "@types/html-minifier-terser@^5.0.0":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-5.1.1.tgz#3c9ee980f1a10d6021ae6632ca3e79ca2ec4fb50"
-  integrity sha512-giAlZwstKbmvMk1OO7WXSj4OZ0keXAcl2TQq4LWHiiPH2ByaH7WeUzng+Qej8UPxxv+8lRTuouo0iaNDBuzIBA==
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-5.1.2.tgz#693b316ad323ea97eed6b38ed1a3cc02b1672b57"
+  integrity sha512-h4lTMgMJctJybDp8CQrxTUiiYmedihHWkjnF/8Pxseu2S6Nlfcy8kwboQ8yejh456rP2yWoEVm1sS/FVsfM48w==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.3"
@@ -2016,9 +2016,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.7":
-  version "7.0.7"
-  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
-  integrity sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
+  integrity sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg==
 
 "@types/minimatch@*":
   version "3.0.4"
@@ -2065,9 +2065,9 @@
     csstype "^3.0.2"
 
 "@types/scheduler@*":
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
-  integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 "@types/source-list-map@*":
   version "0.1.2"
