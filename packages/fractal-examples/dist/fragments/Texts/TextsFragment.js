@@ -1,10 +1,11 @@
 import React from 'react';
 import { useTheme, Box, Text } from '@bma98/fractal-ui';
+import { getTextAccessibilityProps } from './accessibility/getTextAccessibilityProps';
 export function TextsFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title' }, "Text Example"),
-        React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
+        React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl }, getTextAccessibilityProps()),
             React.createElement(Text, { variant: 'title', marginBottom: spacings.s }, "Title text."),
             React.createElement(Text, { variant: 'title2', marginBottom: spacings.s }, "Title2 text."),
             React.createElement(Text, { variant: 'title3', marginBottom: spacings.s }, "Title3 text."),

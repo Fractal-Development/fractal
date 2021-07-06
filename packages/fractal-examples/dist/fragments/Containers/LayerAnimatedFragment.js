@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Layer, Button, Text, blue } from '@bma98/fractal-ui';
+import { getLayerAnimatedAccessibilityProps } from './accessibility/getLayerAnimatedAccessibilityProps';
+import { getLayerAccessibilityProps } from './accessibility/getLayerAccessibilityProps';
 const styleVariants = {
     layerInitial: { scale: 0, opacity: 0, backgroundColor: blue.base100 },
     layerVisible: { scale: 1, opacity: 1, backgroundColor: blue.base },
@@ -12,8 +14,8 @@ export function LayerAnimatedFragment() {
     const toggleVariant = () => setLayerVariant((currentValue) => (currentValue === 'layerVisible' ? 'layerInitial' : 'layerVisible'));
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title' }, "Layer Animated Example"),
-        React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(Layer, { height: 100, width: 100, initial: 'layerInitial', backgroundColor: '#FFF', animate: layerVariant, variants: styleVariants }),
+        React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl }, getLayerAnimatedAccessibilityProps()),
+            React.createElement(Layer, Object.assign({ height: 100, width: 100, initial: 'layerInitial', backgroundColor: '#FFF', animate: layerVariant, variants: styleVariants }, getLayerAccessibilityProps())),
             React.createElement(Button, { width: 268, variant: 'main', alignSelf: 'center', text: 'Toggle animation', onPress: toggleVariant, marginTop: spacings.s }))));
 }
 //# sourceMappingURL=LayerAnimatedFragment.js.map
