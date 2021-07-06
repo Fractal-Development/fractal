@@ -2,11 +2,14 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { LayerProps } from './types';
 import Reanimated from 'react-native-reanimated';
-import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
-import { extractBorderProps } from '../../../sharedProps/BorderProps';
-import { extractDimensionProps } from '../../../sharedProps/DimensionProps';
-import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
-import { extractShadowProps } from '../../../sharedProps/ShadowProps';
+import {
+    extractBackgroundProps,
+    extractBorderProps,
+    extractDimensionProps,
+    extractDisplayProps,
+    extractShadowProps
+} from '../../../sharedProps';
+
 import { useAnimationStyles } from '../../../animations/native/hooks/useAnimationStyles';
 
 const StyledLayer = styled(Reanimated.View)`
