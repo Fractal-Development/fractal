@@ -1,6 +1,7 @@
 import React from 'react';
-import { FractalAppRoot, Background, ScrollView, PaddingLayer } from '@bma98/fractal-ui';
+import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
 import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerFragment, LayerAnimatedFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, BottomCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, RecyclerTable, LoadingBackgroundFragment } from './fragments';
+import { ChartsExamples } from './charts/ChartsExamples';
 function Content() {
     return (React.createElement(PaddingLayer, null,
         React.createElement(ThemeSwapper, null),
@@ -47,12 +48,14 @@ function Content() {
         React.createElement(GridFragment, null),
         React.createElement(SocialMediaButtonsFragment, null),
         React.createElement(RecyclerTable, null),
-        React.createElement(LoadingBackgroundFragment, null)));
+        React.createElement(LoadingBackgroundFragment, null),
+        React.createElement(ChartsExamples, null)));
 }
 export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
         React.createElement(Background, null,
-            React.createElement(ScrollView, null,
-                React.createElement(Content, null)))));
+            React.createElement(SafeAreaLayer, null,
+                React.createElement(ScrollView, null,
+                    React.createElement(Content, null))))));
 }
 //# sourceMappingURL=MainExample.js.map

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FractalAppRoot, Background, ScrollView, PaddingLayer } from '@bma98/fractal-ui';
+import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
 import {
     ThemeSwapper,
     DropZoneFragment,
@@ -47,6 +47,7 @@ import {
     RecyclerTable,
     LoadingBackgroundFragment
 } from './fragments';
+import { ChartsExamples } from './charts/ChartsExamples';
 
 function Content(): JSX.Element {
     return (
@@ -96,6 +97,7 @@ function Content(): JSX.Element {
             <SocialMediaButtonsFragment />
             <RecyclerTable />
             <LoadingBackgroundFragment />
+            <ChartsExamples />
         </PaddingLayer>
     );
 }
@@ -104,9 +106,11 @@ export function MainExample(): JSX.Element {
     return (
         <FractalAppRoot handleThemeManually>
             <Background>
-                <ScrollView>
-                    <Content />
-                </ScrollView>
+                <SafeAreaLayer>
+                    <ScrollView>
+                        <Content />
+                    </ScrollView>
+                </SafeAreaLayer>
             </Background>
         </FractalAppRoot>
     );
