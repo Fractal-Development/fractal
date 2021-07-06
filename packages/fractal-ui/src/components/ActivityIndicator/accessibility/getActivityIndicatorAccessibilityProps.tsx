@@ -1,6 +1,6 @@
-export function getActivityIndicatorAccessibilityProps(): Record<string, any> {
+export function getActivityIndicatorAccessibilityProps(color: string): Record<string, any> {
     return {
         tabIndex: 0,
-        'aria-label': 'Activity Indicator'
+        'aria-label': color + 'Activity Indicator '
     };
 }

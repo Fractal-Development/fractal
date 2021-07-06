@@ -1133,7 +1133,7 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#8ed4f32b3dec3b8121f2d32a7420ae7533e9c723"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#c06365a4be03701d8aa562612667bee392896c5b"
   dependencies:
     d3-array "2.3.3"
     d3-scale "3.3.0"
@@ -1141,13 +1141,13 @@
 
 "@bma98/fractal-examples@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#bee698ec03e735a513bc95356e05492c62455baa"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#9b17bafe453d27bbce0f128a836d550f74463119"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#15246f68ab02b445aec6f86c19cb8d7765f63444"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#f0b2aceff72d6329d217248cc22926a2b6e32c7b"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -1965,10 +1965,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-3.0.3.tgz#830167fd757ba70ac638747ba3169b2dbae60330"
   integrity sha512-8IeHfDwJ9/CTUwFs6x90VlobV3BfuPgNLjTgC6dRZovfCWigaZwVNIFFJnHBakK3pW2xErAPwhdvNR4JeNoYbw==
 
-"@react-native-picker/picker@^1.16.3":
-  version "1.16.3"
-  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.16.3.tgz#22750f8d44465432845fa59ce20e69761029b6ef"
-  integrity sha512-Qt40DBg7IEhBN5x2DYPV3B26j5fNhVZcpCestr1IuirneMNtOaIyA9+nPYniL/OBzd9YbpUKbS7XSy/MM9bP3w==
+"@react-native-picker/picker@1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.9.2.tgz#c5e35f97d7982d2971ee3d74b1ba8ecf4b716627"
+  integrity sha512-eNMf5uF67CsiJ9SDzofSWKu9Gh2PDyPbCSXuUJ09tkRgcOefDx6DyQnXCOPCd+8vxC1DzJKVAgLy+s425jUIeA==
 
 "@types/glob@^7.1.1":
   version "7.1.3"
