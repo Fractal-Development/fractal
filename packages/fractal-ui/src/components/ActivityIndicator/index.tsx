@@ -34,7 +34,7 @@ const ActivityIndicator = forwardRef(({ color, ...others }: ActivityIndicatorPro
                     r='14'
                     strokeWidth='4'
                     color={color}
-                    {...getActivityIndicatorAccessibilityProps(color)}
+                    {...getActivityIndicatorAccessibilityProps()}
                 />
                 <AnimatedSection cx='16' cy='16' fill='none' r='14' strokeWidth='4' color={color} />
             </motion.svg>
