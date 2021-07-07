@@ -22,7 +22,7 @@ const StyledLayer = styled(MotiView)`
     ${extractShadowProps};
 ` as FunctionComponent<WebAnimationProps>;
 
-const Layer = forwardRef(({ style, ...others }: LayerProps, ref: any): JSX.Element => {
+const Layer = forwardRef(({ ...others }: LayerProps, ref: any): JSX.Element => {
     return <StyledLayer ref={ref} {...others} />;
 });
 
