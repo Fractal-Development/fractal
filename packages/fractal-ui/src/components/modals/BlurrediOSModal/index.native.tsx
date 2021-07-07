@@ -36,7 +36,7 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
             <Layer
                 height={'35%'}
                 transition={{ type: 'ease', duration: 350 }}
-                initial={{ translateY: modalContentHeight }}
+                from={{ translateY: modalContentHeight }}
                 animate={{ translateY: 0 }}
                 exit={{ translateY: modalContentHeight }}
             >

@@ -1,4 +1,4 @@
-import { AnimationContent, AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
+import { FractalSharedAnimationProps, AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
 import { ReactNode } from 'react';
 
 export interface TouchableOpacityProps extends FractalSharedStyleProps, AnimationProps {
@@ -6,8 +6,8 @@ export interface TouchableOpacityProps extends FractalSharedStyleProps, Animatio
     style?: any;
     onPress?: () => void;
     onLongPress?: () => void;
-    whileHover?: AnimationContent;
-    whileTap?: AnimationContent;
+    whileHover?: FractalSharedAnimationProps;
+    whileTap?: FractalSharedAnimationProps;
     onPressIn?: () => void;
     onPressOut?: () => void;
 }

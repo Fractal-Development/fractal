@@ -28,7 +28,7 @@ const Popover = forwardRef(
                         <OutsideClickListener onOutsideClick={onRequestClose}>
                             <Layer
                                 ref={popoverRef}
-                                initial={styleVariants.initial}
+                                from={styleVariants.initial}
                                 animate={styleVariants.visible}
                                 exit={styleVariants.initial}
                                 position={'absolute'}

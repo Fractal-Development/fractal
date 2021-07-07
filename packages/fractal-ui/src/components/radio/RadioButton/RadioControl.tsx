@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { Layer } from '../../containers/Layer';
 import { Text } from '../../text';
@@ -26,15 +27,19 @@ export function RadioControl({ active, label }: RadioControlProps): JSX.Element 
                 justifyContent={'center'}
                 borderColor={active ? colors.mainInteractiveColor : colors.placeholder}
             >
-                <Layer
-                    width={10}
-                    height={10}
-                    borderRadius={10}
-                    backgroundColor={colors.mainInteractiveColor}
-                    initial={'inactive'}
-                    animate={active ? 'active' : 'inactive'}
-                    variants={circleVariants}
-                />
+                <AnimatePresence>
+                    {active && (
+                        <Layer
+                            width={10}
+                            height={10}
+                            borderRadius={10}
+                            backgroundColor={colors.mainInteractiveColor}
+                            from={circleVariants.inactive}
+                            animate={circleVariants.active}
+                            exit={circleVariants.inactive}
+                        />
+                    )}
+                </AnimatePresence>
             </Layer>
             {label && (
                 <Text marginLeft={spacings.xs} variant='normal'>

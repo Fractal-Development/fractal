@@ -11,9 +11,9 @@ import {
 import { ImageBackgroundProps } from './types';
 import { motify } from '@motify/core';
 
-const MotiView = motify(RNImageBackground)();
+const MotiImageBackground = motify(RNImageBackground)();
 
-const StyledImageBackground = styled(MotiView)`
+const StyledImageBackground = styled(MotiImageBackground)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
@@ -21,7 +21,7 @@ const StyledImageBackground = styled(MotiView)`
     ${extractShadowProps};
 `;
 
-const ImageBackground = forwardRef(({ source, style, ...others }: ImageBackgroundProps, ref: any): JSX.Element => {
+const ImageBackground = forwardRef(({ source, ...others }: ImageBackgroundProps, ref: any): JSX.Element => {
     return <StyledImageBackground ref={ref} source={typeof source == 'string' ? { uri: source } : source} {...others} />;
 });
 

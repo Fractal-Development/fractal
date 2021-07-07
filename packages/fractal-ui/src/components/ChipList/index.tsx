@@ -22,7 +22,7 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: C
     const renderItem = (item: T): JSX.Element => {
         return (
             <Chip
-                initial={styleVariants.hidden}
+                from={styleVariants.hidden}
                 animate={styleVariants.visible}
                 exit={styleVariants.hidden}
                 margin={spacings.s}

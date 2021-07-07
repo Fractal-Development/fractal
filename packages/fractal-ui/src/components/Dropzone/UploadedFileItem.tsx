@@ -54,7 +54,7 @@ export function UploadedFileItem({ file, onDeletePress }: UploadedFileItemProps)
     }, [file]);
 
     return (
-        <Layer initial={variants.initial} animate={variants.animate} exit={variants.exit}>
+        <Layer from={variants.initial} animate={variants.animate} exit={variants.exit}>
             <Layer height={SEPARATOR_SIZE} />
             <HorizontalLayer height={PREVIEW_SIZE} alignItems={'center'} width={'100%'}>
                 {isImageFile ? (

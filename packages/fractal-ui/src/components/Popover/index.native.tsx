@@ -59,7 +59,7 @@ const Popover = forwardRef(
                     />
                     <Layer
                         onLayout={onPopoverLayout}
-                        initial={styleVariants.initial}
+                        from={styleVariants.initial}
                         animate={styleVariants.visible}
                         exit={styleVariants.initial}
                         position={'absolute'}

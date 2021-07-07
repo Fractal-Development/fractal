@@ -7,11 +7,13 @@ import {
     extractDisplayProps,
     extractShadowProps
 } from '../../sharedProps';
-import Reanimated from 'react-native-reanimated';
+import { Image as RNImage } from 'react-native';
+import { motify } from '@motify/core';
 import { ImageProps } from './types';
-import { useAnimationStyles } from '../../animations/native/hooks/useAnimationStyles';
 
-const StyledImage = styled(Reanimated.Image)`
+const MotiImage = motify(RNImage)();
+
+const StyledImage = styled(MotiImage)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
@@ -19,18 +21,8 @@ const StyledImage = styled(Reanimated.Image)`
     ${extractShadowProps};
 `;
 
-const Image = forwardRef(({ source, resizeMode, style, ...others }: ImageProps, ref: any): JSX.Element => {
-    const animationStyles = useAnimationStyles(others);
-
-    return (
-        <StyledImage
-            ref={ref}
-            source={typeof source == 'string' ? { uri: source } : source}
-            resizeMode={resizeMode}
-            {...others}
-            style={[animationStyles, style]}
-        />
-    );
+const Image = forwardRef(({ source, resizeMode, ...others }: ImageProps, ref: any): JSX.Element => {
+    return <StyledImage ref={ref} source={typeof source == 'string' ? { uri: source } : source} resizeMode={resizeMode} {...others} />;
 });
 
 Image.displayName = 'Image';

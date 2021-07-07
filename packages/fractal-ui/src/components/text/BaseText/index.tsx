@@ -18,10 +18,10 @@ const StyledText = styled(motion.span as any)`
     ${extractShadowProps};
     ${extractWebProps};
     ${extractTextProps};
-` as typeof motion.span;
+`;
 
-const BaseText = forwardRef((props: Omit<TextProps, 'variant'>, ref: any): JSX.Element => {
-    return <StyledText ref={ref} {...props} />;
+const BaseText = forwardRef(({ from, ...others }: Omit<TextProps, 'variant'>, ref: any): JSX.Element => {
+    return <StyledText ref={ref} initial={from} {...others} />;
 });
 
 BaseText.displayName = 'BaseText';

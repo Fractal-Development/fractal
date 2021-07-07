@@ -11,7 +11,7 @@ const middleCellAnimationStyles = {
 function MiddleCellSharedStyles(props: LayerProps): JSX.Element {
     return (
         <ModalCellSharedStyles
-            initial={middleCellAnimationStyles.initial}
+            from={middleCellAnimationStyles.initial}
             animate={middleCellAnimationStyles.animate}
             exit={middleCellAnimationStyles.initial}
             {...props}

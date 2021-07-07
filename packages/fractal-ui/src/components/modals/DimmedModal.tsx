@@ -3,7 +3,7 @@ import { Modal } from './Modal';
 import { ModalProps } from './Modal/types';
 import { Pressable } from '../buttons';
 import { SafeAreaLayer } from '../containers/SafeAreaLayer';
-import { FractalTransition } from '../../sharedProps';
+import { Transition } from 'framer-motion';
 import { canUseDOM } from '../../executionEnvironment/canUseDOM';
 
 const modalAnimationStyles = {
@@ -16,7 +16,7 @@ const pressableAnimationStyles = {
     animate: { opacity: 0.6 }
 };
 
-const transition: FractalTransition = canUseDOM ? { type: 'spring' } : { type: 'ease', duration: 400 };
+const transition: Transition = canUseDOM ? { type: 'spring' } : { type: 'ease', duration: 400 };
 
 const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, ref: any): JSX.Element => {
     return (
@@ -24,7 +24,7 @@ const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, r
             ref={ref}
             visible={visible}
             onDismiss={onDismiss}
-            initial={modalAnimationStyles.initial}
+            from={modalAnimationStyles.initial}
             animate={modalAnimationStyles.animate}
             exit={modalAnimationStyles.initial}
         >
@@ -35,7 +35,7 @@ const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, r
                 width='100%'
                 height='100%'
                 backgroundColor='black'
-                initial={pressableAnimationStyles.initial}
+                from={pressableAnimationStyles.initial}
                 animate={pressableAnimationStyles.animate}
                 exit={pressableAnimationStyles.initial}
                 transition={transition}

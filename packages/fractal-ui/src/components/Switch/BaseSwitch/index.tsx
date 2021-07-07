@@ -34,14 +34,14 @@ export function BaseSwitch({ value, onValueChange }: BaseSwitchProps): JSX.Eleme
             paddingRight={2}
             onPress={onPress}
             alignItems='center'
-            initial={'inactive'}
-            animate={value ? 'active' : 'inactive'}
+            //from={'inactive'}
+            currentVariant={value ? 'active' : 'inactive'}
             variants={backgroundVariants}
             {...getSwitchAccessibilityProps(value)}
         >
             <Layer
-                initial={'start'}
-                animate={value ? 'end' : 'start'}
+                //from={'start'}
+                currentVariant={value ? 'end' : 'start'}
                 variants={styleVariants}
                 height={20}
                 width={20}

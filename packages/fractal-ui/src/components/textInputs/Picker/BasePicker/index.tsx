@@ -19,9 +19,9 @@ const StyledSelect = styled(motion.select as any)`
     ${extractBorderProps};
     ${extractTextProps};
     ${extractWebProps};
-` as typeof motion.select;
+`;
 
-const BasePicker = forwardRef(({ onValueChange, enabled, selectedValue, ...others }: BasePickerProps, ref: any): JSX.Element => {
+const BasePicker = forwardRef(({ from, onValueChange, enabled, selectedValue, ...others }: BasePickerProps, ref: any): JSX.Element => {
     const handleChange = useCallback<any>(
         (e: { target: { selectedIndex: any; value: any } }) => {
             const { selectedIndex, value } = e.target;
@@ -37,6 +37,7 @@ const BasePicker = forwardRef(({ onValueChange, enabled, selectedValue, ...other
             disabled={enabled === false ? true : undefined}
             onChange={handleChange}
             value={selectedValue}
+            initial={from}
             {...getBasePickerAccessibilityProps()}
             {...others}
         />

@@ -66,7 +66,7 @@ export function DropBox({
             alignItems={'center'}
             flexDirection={'row'}
             variants={variants}
-            animate={dragFocused ? 'focus' : 'normal'}
+            currentVariant={dragFocused ? 'focus' : 'normal'}
         >
             <Layer position={'absolute'} top={0} bottom={0} left={0} right={0} overflow='hidden' {...dropContainerProps} />
             <FileInput {...fileInputProps} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { CheckIcon } from '../../assets/CheckIcon';
 import { useTheme } from '../../context/hooks/useTheme';
 import { Layer } from '../containers/Layer';
@@ -23,18 +24,22 @@ export function Check({ value, label }: CheckProps): JSX.Element {
                 overflow={'hidden'}
                 borderStyle={'solid'}
             >
-                <Layer
-                    backgroundColor={colors.mainInteractiveColor}
-                    initial={'hidden'}
-                    animate={value ? 'visible' : 'hidden'}
-                    variants={checkVariants}
-                    width={'100%'}
-                    height={'100%'}
-                    alignItems={'center'}
-                    justifyContent={'center'}
-                >
-                    <CheckIcon width={16} height={16} fill={colors.white} />
-                </Layer>
+                <AnimatePresence>
+                    {value && (
+                        <Layer
+                            backgroundColor={colors.mainInteractiveColor}
+                            from={checkVariants.hidden}
+                            animate={checkVariants.visible}
+                            exit={checkVariants.hidden}
+                            width={'100%'}
+                            height={'100%'}
+                            alignItems={'center'}
+                            justifyContent={'center'}
+                        >
+                            <CheckIcon width={16} height={16} fill={colors.white} />
+                        </Layer>
+                    )}
+                </AnimatePresence>
             </Layer>
             {label && (
                 <Text marginLeft={spacings.xs} variant='normal'>

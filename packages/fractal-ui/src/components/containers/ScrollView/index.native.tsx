@@ -12,9 +12,9 @@ import { motify } from '@motify/core';
 import { ScrollView as RNScrollView } from 'react-native';
 import { ScrollViewProps } from './types';
 
-const MotiView = motify(RNScrollView)();
+const MotiScrollView = motify(RNScrollView)();
 
-const StyledScrollView = styled(MotiView)`
+const StyledScrollView = styled(MotiScrollView)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

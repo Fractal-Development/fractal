@@ -13,7 +13,7 @@ function BottomCellSharedStyles(props: LayerProps): JSX.Element {
 
     return (
         <ModalCellSharedStyles
-            initial={bottomCellAnimationStyles.initial}
+            from={bottomCellAnimationStyles.initial}
             animate={bottomCellAnimationStyles.animate}
             exit={bottomCellAnimationStyles.initial}
             margin={spacings.m}

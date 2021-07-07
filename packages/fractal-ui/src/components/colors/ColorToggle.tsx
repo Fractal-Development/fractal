@@ -59,7 +59,7 @@ const ColorToggle = forwardRef(({ onActiveChange, backgroundColor, active, ...ot
             backgroundColor={backgroundColor}
             {...others}
         >
-            <Layer initial={variant} animate={variant} variants={styleVariants}>
+            <Layer from={variant} animate={variant} variants={styleVariants}>
                 <CheckIcon height={24} width={24} fill={'white'} />
             </Layer>
         </Pressable>
