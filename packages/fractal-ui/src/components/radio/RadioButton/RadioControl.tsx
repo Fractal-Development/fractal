@@ -5,25 +5,16 @@ import { Layer } from '../../containers/Layer';
 import { Text } from '../../text';
 import { RadioControlProps } from '../types';
 import { useMemo } from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
-const circleVariants = {
-    active: { scale: 1 },
-    inactive: { scale: 0 }
-};
+const circleVariants = { from: { scale: 0 }, active: { scale: 1 } };
 
 export function RadioControl({ active, label }: RadioControlProps): JSX.Element {
     const { colors, sizes, spacings } = useTheme();
-    const [currentVariant, setCurrentVariant] = useState('from');
+    const innerSize = sizes.radioButtonSize / 2;
 
     const ringVariants = useMemo(() => {
         return { from: { borderColor: colors.placeholder }, active: { borderColor: colors.mainInteractiveColor } };
     }, [colors]);
-
-    useEffect(() => {
-        setCurrentVariant(active ? 'active' : 'from');
-    }, [active]);
 
     return (
         <>
@@ -38,18 +29,18 @@ export function RadioControl({ active, label }: RadioControlProps): JSX.Element 
                 borderStyle={'solid'}
                 justifyContent={'center'}
                 variants={ringVariants}
-                currentVariant={currentVariant}
+                currentVariant={active ? 'active' : 'from'}
             >
                 <AnimatePresence>
                     {active && (
                         <Layer
-                            width={10}
-                            height={10}
-                            borderRadius={10}
+                            width={innerSize}
+                            height={innerSize}
+                            borderRadius={innerSize / 2}
                             backgroundColor={colors.mainInteractiveColor}
-                            from={circleVariants.inactive}
+                            from={circleVariants.from}
                             animate={circleVariants.active}
-                            exit={circleVariants.inactive}
+                            exit={circleVariants.from}
                         />
                     )}
                 </AnimatePresence>

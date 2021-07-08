@@ -42,7 +42,7 @@ export function DropBox({
     const finalColor = colors[color];
 
     const variants = {
-        normal: {
+        from: {
             scale: 1,
             borderColor: colors.placeholder,
             backgroundColor: 'transparent'
@@ -66,7 +66,7 @@ export function DropBox({
             alignItems={'center'}
             flexDirection={'row'}
             variants={variants}
-            currentVariant={dragFocused ? 'focus' : 'normal'}
+            currentVariant={dragFocused ? 'focus' : 'from'}
         >
             <Layer position={'absolute'} top={0} bottom={0} left={0} right={0} overflow='hidden' {...dropContainerProps} />
             <FileInput {...fileInputProps} />

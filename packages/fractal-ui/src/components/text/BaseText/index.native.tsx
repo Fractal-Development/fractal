@@ -9,6 +9,7 @@ import { extractShadowProps } from '../../../sharedProps/ShadowProps';
 import { extractTextProps } from '../../../sharedProps/TextProps';
 import { Text } from 'react-native';
 import { motify } from '@motify/core';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
 const MotiText = motify(Text)();
 
@@ -19,10 +20,11 @@ const StyledText = styled(MotiText)`
     ${extractBorderProps};
     ${extractShadowProps};
     ${extractTextProps};
-` as typeof Text;
+`;
 
-const BaseText = forwardRef((props: TextProps, ref: any): JSX.Element => {
-    return <StyledText ref={ref} {...props} />;
+const BaseText = forwardRef(({ currentVariant, variants, ...others }: TextProps, ref: any): JSX.Element => {
+    const variantState = useVariantState(currentVariant, variants);
+    return <StyledText ref={ref} state={variantState} {...others} />;
 });
 
 BaseText.displayName = 'BaseText';

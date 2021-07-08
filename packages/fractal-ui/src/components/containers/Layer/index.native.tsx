@@ -10,7 +10,7 @@ import {
 import { motify } from '@motify/core';
 import { View } from 'react-native';
 import { LayerProps } from './types';
-import { useVariantState } from './hooks/useVariantState';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
 const MotiView = motify(View)();
 

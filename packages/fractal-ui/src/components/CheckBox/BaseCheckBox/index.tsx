@@ -31,7 +31,12 @@ export function BaseCheckBox({ value, onValueChange, label }: BaseCheckBoxProps)
 
     return (
         <Wrapper>
-            <CheckBoxInput type='checkbox' checked={value} onChange={handleValueChange} {...getCheckBoxAccessibilityProps(label !== undefined ? label : 'checkbox', value)} />
+            <CheckBoxInput
+                type='checkbox'
+                checked={value}
+                onChange={handleValueChange}
+                {...getCheckBoxAccessibilityProps(label !== undefined ? label : 'checkbox', value)}
+            />
             <Check value={value} label={label} />
         </Wrapper>
     );

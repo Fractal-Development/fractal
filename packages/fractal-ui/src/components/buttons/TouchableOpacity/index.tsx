@@ -27,34 +27,37 @@ const StyledTouchableOpacity = styled(motion.button as any)`
 
 const transition = { type: 'linear', duration: 0.2 };
 
-const TouchableOpacity = forwardRef(({ from, onPress, onLongPress, whileTap, ...others }: TouchableOpacityProps, ref: any): JSX.Element => {
-    const [pressed, setPressed] = useState(false);
+const TouchableOpacity = forwardRef(
+    ({ from, currentVariant, animate, onPress, onLongPress, whileTap, ...others }: TouchableOpacityProps, ref: any): JSX.Element => {
+        const [pressed, setPressed] = useState(false);
 
-    const tapStyles = {
-        opacity: 0.4,
-        ...whileTap
-    };
+        const tapStyles = {
+            opacity: 0.4,
+            ...whileTap
+        };
 
-    const longPressEvent = useLongPress(onLongPress);
+        const longPressEvent = useLongPress(onLongPress);
 
-    const handleButtonPress = (): void => {
-        setPressed(true);
-        onPress?.();
-    };
+        const handleButtonPress = (): void => {
+            setPressed(true);
+            onPress?.();
+        };
 
-    return (
-        <StyledTouchableOpacity
-            ref={ref}
-            transition={transition}
-            whileTap={tapStyles}
-            onClick={handleButtonPress}
-            initial={from}
-            {...longPressEvent}
-            {...getButtonAccessibilityProps(pressed)}
-            {...others}
-        />
-    );
-});
+        return (
+            <StyledTouchableOpacity
+                ref={ref}
+                transition={transition}
+                whileTap={tapStyles}
+                onClick={handleButtonPress}
+                initial={currentVariant ? 'from' : from}
+                animate={currentVariant ?? animate}
+                {...longPressEvent}
+                {...getButtonAccessibilityProps(pressed)}
+                {...others}
+            />
+        );
+    }
+);
 
 TouchableOpacity.displayName = 'TouchableOpacity';
 

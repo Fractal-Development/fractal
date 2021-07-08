@@ -44,18 +44,17 @@ const ToggleButton = forwardRef(
                 justifyContent='center'
                 alignItems='center'
                 onPress={handleButtonPress}
-                initial={{ backgroundColor }}
                 opacity={disabled ? 0.5 : 1}
                 pointerEvents={disabled ? 'none' : undefined}
                 variants={{
                     active: {
                         backgroundColor
                     },
-                    inactive: {
+                    from: {
                         backgroundColor: colors.background
                     }
                 }}
-                animate={active ? 'active' : 'inactive'}
+                currentVariant={active ? 'active' : 'from'}
                 {...getButtonAccessibilityProps(pressed, false, 'Toggle')}
                 {...others}
             >

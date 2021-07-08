@@ -10,6 +10,7 @@ import {
 import { Image as RNImage } from 'react-native';
 import { motify } from '@motify/core';
 import { ImageProps } from './types';
+import { useVariantState } from '../../animations/native/hooks/useVariantState';
 
 const MotiImage = motify(RNImage)();
 
@@ -21,8 +22,17 @@ const StyledImage = styled(MotiImage)`
     ${extractShadowProps};
 `;
 
-const Image = forwardRef(({ source, resizeMode, ...others }: ImageProps, ref: any): JSX.Element => {
-    return <StyledImage ref={ref} source={typeof source == 'string' ? { uri: source } : source} resizeMode={resizeMode} {...others} />;
+const Image = forwardRef(({ source, resizeMode, currentVariant, variants, ...others }: ImageProps, ref: any): JSX.Element => {
+    const variantState = useVariantState(currentVariant, variants);
+    return (
+        <StyledImage
+            ref={ref}
+            state={variantState}
+            source={typeof source == 'string' ? { uri: source } : source}
+            resizeMode={resizeMode}
+            {...others}
+        />
+    );
 });
 
 Image.displayName = 'Image';

@@ -1,6 +1,6 @@
 import { getUserSelectAccessibilityProp } from './utils/getUserSelectAccessibilityProp';
 
-export interface TextProps {
+export interface FractalTextProps {
     fontSize?: number;
     fontWeight?: number | string;
     color?: string;
@@ -9,7 +9,7 @@ export interface TextProps {
     selectable?: boolean;
 }
 
-export function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable }: TextProps): string {
+export function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable }: FractalTextProps): string {
     return `
         ${fontSize != null ? `font-size: ${fontSize}px` : ''};
         ${fontWeight != null ? `font-weight: ${fontWeight}` : ''};

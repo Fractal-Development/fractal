@@ -8,6 +8,7 @@ import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
 import { extractTextProps } from '../../../sharedProps/TextProps';
 import { TextInput } from 'react-native';
 import { motify } from '@motify/core';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
 const MotiTextInput = motify(TextInput)();
 
@@ -19,8 +20,9 @@ const StyledTextInput = styled(MotiTextInput)`
     ${extractTextProps};
 `;
 
-const BaseTextField = forwardRef((props: TextFieldProps, ref: Ref<TextInput>): JSX.Element => {
-    return <StyledTextInput ref={ref} {...props} />;
+const BaseTextField = forwardRef(({ currentVariant, variants, ...others }: TextFieldProps, ref: Ref<TextInput>): JSX.Element => {
+    const variantState = useVariantState(currentVariant, variants);
+    return <StyledTextInput ref={ref} state={variantState} {...others} />;
 });
 
 BaseTextField.displayName = 'BaseTextField';

@@ -57,18 +57,17 @@ const Popover = forwardRef(
                         height='100%'
                         backgroundColor={modalBackgroundColor}
                     />
-                    <Layer
-                        onLayout={onPopoverLayout}
-                        from={styleVariants.initial}
-                        animate={styleVariants.visible}
-                        exit={styleVariants.initial}
-                        position={'absolute'}
-                        zIndex={2}
-                        style={styles}
-                        {...popoverContainerProps}
-                    >
-                        {popoverChildren(anchorViewLayout.width)}
-                    </Layer>
+                    <View style={[{ position: 'absolute', zIndex: 2 }, styles]}>
+                        <Layer
+                            onLayout={onPopoverLayout}
+                            from={styleVariants.initial}
+                            animate={styleVariants.visible}
+                            exit={styleVariants.initial}
+                            {...popoverContainerProps}
+                        >
+                            {popoverChildren(anchorViewLayout.width)}
+                        </Layer>
+                    </View>
                 </Modal>
             </Layer>
         );

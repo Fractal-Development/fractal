@@ -23,30 +23,34 @@ const StyledTextInput = styled(motion.input as any)`
     ${extractWebProps};
 `;
 
-const BaseTextField = forwardRef((props: TextFieldProps, ref: Ref<HTMLInputElement>): JSX.Element => {
-    const { onChangeText, onSubmitEditing, placeholder, from, ...others } = props;
+const BaseTextField = forwardRef(
+    (
+        { onChangeText, onSubmitEditing, placeholder, from, currentVariant, animate, ...others }: TextFieldProps,
+        ref: Ref<HTMLInputElement>
+    ): JSX.Element => {
+        const handleChange = (event: { target: { value: string } }): void => onChangeText && onChangeText(event.target.value);
 
-    const handleChange = (event: { target: { value: string } }): void => onChangeText && onChangeText(event.target.value);
+        const handleKeydown = (keyboardEvent: React.KeyboardEvent<HTMLInputElement>): void => {
+            if (keyboardEvent.key === 'Enter') {
+                onSubmitEditing?.();
+            }
+        };
 
-    const handleKeydown = (keyboardEvent: React.KeyboardEvent<HTMLInputElement>): void => {
-        if (keyboardEvent.key === 'Enter') {
-            onSubmitEditing?.();
-        }
-    };
-
-    return (
-        <StyledTextInput
-            ref={ref}
-            placeholder={placeholder}
-            selectable
-            onChange={handleChange}
-            onKeyDown={handleKeydown}
-            initial={from}
-            {...getBaseTextFieldAccessibilityProps(placeholder)}
-            {...others}
-        />
-    );
-});
+        return (
+            <StyledTextInput
+                ref={ref}
+                placeholder={placeholder}
+                selectable
+                onChange={handleChange}
+                onKeyDown={handleKeydown}
+                initial={currentVariant ? 'from' : from}
+                animate={currentVariant ?? animate}
+                {...getBaseTextFieldAccessibilityProps(placeholder)}
+                {...others}
+            />
+        );
+    }
+);
 
 BaseTextField.displayName = 'BaseTextField';
 

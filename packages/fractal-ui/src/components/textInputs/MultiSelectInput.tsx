@@ -2,10 +2,11 @@ import React from 'react';
 import { IDEnabled } from './AutoComplete/types';
 import { AutoComplete } from './AutoComplete';
 import { Button } from '../buttons/Button';
-import { Layer } from '../containers';
+import { Layer } from '../containers/Layer';
 import { ChipList } from '../ChipList';
+import { LayerProps } from '../containers/Layer/types';
 
-interface MultiSelectInputProps<T> {
+interface MultiSelectInputProps<T> extends Omit<LayerProps, 'children'> {
     options: Array<T>;
     getOptionLabel: (option: T) => string;
     onSelect: (values: Array<T>) => void;
@@ -30,10 +31,11 @@ export function MultiSelectInput<T extends IDEnabled>({
     controllableSelectedOptions,
     onChangeText,
     placeholder,
-    onSubmitEditing
+    onSubmitEditing,
+    ...layerProps
 }: MultiSelectInputProps<T>): JSX.Element {
     return (
-        <Layer>
+        <Layer {...layerProps}>
             <AutoComplete
                 value={inputValue}
                 multiple

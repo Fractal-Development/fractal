@@ -8,6 +8,7 @@ import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
 import { extractShadowProps } from '../../../sharedProps/ShadowProps';
 import { TouchableOpacity as RNTouchableOpacity } from 'react-native';
 import { TouchableOpacityProps } from './types';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
 const MotiTouchableOpacity = motify(RNTouchableOpacity)();
 
@@ -19,8 +20,9 @@ const StyledTouchableOpacity = styled(MotiTouchableOpacity)`
     ${extractShadowProps};
 `;
 
-const TouchableOpacity = forwardRef((props: TouchableOpacityProps, ref: any): JSX.Element => {
-    return <StyledTouchableOpacity ref={ref} {...props} />;
+const TouchableOpacity = forwardRef(({ currentVariant, variants, ...others }: TouchableOpacityProps, ref: any): JSX.Element => {
+    const variantState = useVariantState(currentVariant, variants);
+    return <StyledTouchableOpacity ref={ref} state={variantState} {...others} />;
 });
 
 TouchableOpacity.displayName = 'TouchableOpacity';

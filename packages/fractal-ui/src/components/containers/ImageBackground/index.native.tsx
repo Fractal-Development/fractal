@@ -10,6 +10,7 @@ import {
 } from '../../../sharedProps';
 import { ImageBackgroundProps } from './types';
 import { motify } from '@motify/core';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
 const MotiImageBackground = motify(RNImageBackground)();
 
@@ -21,8 +22,11 @@ const StyledImageBackground = styled(MotiImageBackground)`
     ${extractShadowProps};
 `;
 
-const ImageBackground = forwardRef(({ source, ...others }: ImageBackgroundProps, ref: any): JSX.Element => {
-    return <StyledImageBackground ref={ref} source={typeof source == 'string' ? { uri: source } : source} {...others} />;
+const ImageBackground = forwardRef(({ source, currentVariant, variants, ...others }: ImageBackgroundProps, ref: any): JSX.Element => {
+    const variantState = useVariantState(currentVariant, variants);
+    return (
+        <StyledImageBackground ref={ref} state={variantState} source={typeof source == 'string' ? { uri: source } : source} {...others} />
+    );
 });
 
 ImageBackground.displayName = 'ImageBackground';

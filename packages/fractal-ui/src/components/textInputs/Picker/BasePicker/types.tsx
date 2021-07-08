@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { LayerProps } from '../../../containers/Layer/types';
-import { TextProps as FractalTextProps } from '../../../../sharedProps/TextProps';
+import { FractalTextProps } from '../../../../sharedProps/TextProps';
 
 type ItemValue = number | string;
 

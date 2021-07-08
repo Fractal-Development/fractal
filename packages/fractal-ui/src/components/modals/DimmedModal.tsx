@@ -3,8 +3,6 @@ import { Modal } from './Modal';
 import { ModalProps } from './Modal/types';
 import { Pressable } from '../buttons';
 import { SafeAreaLayer } from '../containers/SafeAreaLayer';
-import { Transition } from 'framer-motion';
-import { canUseDOM } from '../../executionEnvironment/canUseDOM';
 
 const modalAnimationStyles = {
     initial: { opacity: 0 },
@@ -15,8 +13,6 @@ const pressableAnimationStyles = {
     initial: { opacity: 0 },
     animate: { opacity: 0.6 }
 };
-
-const transition: Transition = canUseDOM ? { type: 'spring' } : { type: 'ease', duration: 400 };
 
 const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, ref: any): JSX.Element => {
     return (
@@ -38,7 +34,7 @@ const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, r
                 from={pressableAnimationStyles.initial}
                 animate={pressableAnimationStyles.animate}
                 exit={pressableAnimationStyles.initial}
-                transition={transition}
+                transition={{ type: 'spring' }}
             />
             <SafeAreaLayer zIndex={1000} {...others} />
         </Modal>

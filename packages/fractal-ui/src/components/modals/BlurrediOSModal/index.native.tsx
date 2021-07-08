@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { BlurView } from 'expo-blur';
+import { View } from 'react-native';
 import { TextButton } from '../../buttons/TextButton';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { Layer } from '../../containers/Layer';
@@ -10,6 +11,9 @@ import { Modal } from '../Modal';
 import styled from 'styled-components/native';
 import { BlurredModalProps } from './types';
 import { Dimensions } from 'react-native';
+import { motify } from '@motify/core';
+
+const MotiView = motify(View)();
 
 const StyledBlurView = styled(BlurView)`
     height: 100%;
@@ -33,9 +37,12 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
             {...others}
         >
             <Pressable flex={1} onPress={onDismiss} />
-            <Layer
-                height={'35%'}
-                transition={{ type: 'ease', duration: 350 }}
+            <MotiView
+                style={{ height: '35%' }}
+                transition={{
+                    type: 'timing',
+                    duration: 330
+                }}
                 from={{ translateY: modalContentHeight }}
                 animate={{ translateY: 0 }}
                 exit={{ translateY: modalContentHeight }}
@@ -65,7 +72,7 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
                     </Layer>
                     <SafeAreaLayer justifyContent='center'>{children}</SafeAreaLayer>
                 </StyledBlurView>
-            </Layer>
+            </MotiView>
         </Modal>
     );
 });
