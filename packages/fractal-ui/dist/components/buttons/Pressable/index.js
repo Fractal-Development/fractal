@@ -12,12 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
-import { extractBorderProps } from '../../../sharedProps/BorderProps';
-import { extractDimensionProps } from '../../../sharedProps/DimensionProps';
-import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
-import { extractShadowProps } from '../../../sharedProps/ShadowProps';
-import { extractWebProps } from '../../../sharedProps/WebProps';
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps, extractWebProps } from '../../../sharedProps';
 const StyledPressable = styled(motion.button) `
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -32,8 +27,8 @@ const StyledPressable = styled(motion.button) `
     ${extractWebProps};
 `;
 const Pressable = forwardRef((_a, ref) => {
-    var { onPress, transition = { type: 'spring' } } = _a, others = __rest(_a, ["onPress", "transition"]);
-    return React.createElement(StyledPressable, Object.assign({ ref: ref, transition: transition, onClick: onPress }, others));
+    var { from, onPress, transition = { type: 'spring' } } = _a, others = __rest(_a, ["from", "onPress", "transition"]);
+    return React.createElement(StyledPressable, Object.assign({ ref: ref, initial: from, transition: transition, onClick: onPress }, others));
 });
 Pressable.displayName = 'Pressable';
 export { Pressable };

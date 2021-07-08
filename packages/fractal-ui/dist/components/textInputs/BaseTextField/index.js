@@ -32,14 +32,14 @@ const StyledTextInput = styled(motion.input) `
     ${extractWebProps};
 `;
 const BaseTextField = forwardRef((props, ref) => {
-    const { onChangeText, onSubmitEditing, placeholder } = props, others = __rest(props, ["onChangeText", "onSubmitEditing", "placeholder"]);
+    const { onChangeText, onSubmitEditing, placeholder, from } = props, others = __rest(props, ["onChangeText", "onSubmitEditing", "placeholder", "from"]);
     const handleChange = (event) => onChangeText && onChangeText(event.target.value);
     const handleKeydown = (keyboardEvent) => {
         if (keyboardEvent.key === 'Enter') {
             onSubmitEditing === null || onSubmitEditing === void 0 ? void 0 : onSubmitEditing();
         }
     };
-    return (React.createElement(StyledTextInput, Object.assign({ ref: ref, placeholder: placeholder, selectable: true, onChange: handleChange, onKeyDown: handleKeydown }, getBaseTextFieldAccessibilityProps(placeholder), others)));
+    return (React.createElement(StyledTextInput, Object.assign({ ref: ref, placeholder: placeholder, selectable: true, onChange: handleChange, onKeyDown: handleKeydown, initial: from }, getBaseTextFieldAccessibilityProps(placeholder), others)));
 });
 BaseTextField.displayName = 'BaseTextField';
 export { BaseTextField };

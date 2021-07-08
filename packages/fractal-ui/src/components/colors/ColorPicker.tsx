@@ -28,7 +28,7 @@ const ColorPicker = forwardRef(({ colors, onColorChange, defaultValue, value, ..
                 onActiveChange={handleColorChange}
                 active={activeColor === color}
                 margin={spacings.xs}
-                {...getColorAccessibilityProps(activeColor === color, activeColor)}
+                {...getColorAccessibilityProps(activeColor === color)}
             />
         );
     };

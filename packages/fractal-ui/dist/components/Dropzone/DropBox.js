@@ -40,7 +40,7 @@ export function DropBox({ dropContainerProps, dragFocused, fileInputProps, onBut
             backgroundColor: colors.background
         }
     };
-    return (React.createElement(Layer, { position: 'relative', minHeight: sizes.interactiveItemHeight, padding: spacings.xs, borderStyle: 'dashed', borderRadius: borderRadius.m, borderWidth: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row', variants: variants, animate: dragFocused ? 'focus' : 'normal' },
+    return (React.createElement(Layer, { position: 'relative', minHeight: sizes.interactiveItemHeight, padding: spacings.xs, borderStyle: 'dashed', borderRadius: borderRadius.m, borderWidth: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row', variants: variants, currentVariant: dragFocused ? 'focus' : 'normal' },
         React.createElement(Layer, Object.assign({ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, overflow: 'hidden' }, dropContainerProps)),
         React.createElement(FileInput, Object.assign({}, fileInputProps)),
         React.createElement(UploadIcon, { width: 24, height: 24, fill: colors.text }),

@@ -41,7 +41,7 @@ const Popover = forwardRef((_a, ref) => {
         children(anchorRef),
         React.createElement(Modal, { visible: active },
             React.createElement(Pressable, { zIndex: 0, onPress: onRequestClose, position: 'absolute', width: '100%', height: '100%', backgroundColor: modalBackgroundColor }),
-            React.createElement(Layer, Object.assign({ onLayout: onPopoverLayout, initial: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: 'absolute', zIndex: 2, style: styles }, popoverContainerProps), popoverChildren(anchorViewLayout.width)))));
+            React.createElement(Layer, Object.assign({ onLayout: onPopoverLayout, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: 'absolute', zIndex: 2, style: styles }, popoverContainerProps), popoverChildren(anchorViewLayout.width)))));
 });
 Popover.displayName = 'Popover';
 export { Popover };

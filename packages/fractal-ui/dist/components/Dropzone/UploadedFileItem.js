@@ -44,7 +44,7 @@ export function UploadedFileItem({ file, onDeletePress }) {
             };
         }
     }, [file]);
-    return (React.createElement(Layer, { initial: variants.initial, animate: variants.animate, exit: variants.exit },
+    return (React.createElement(Layer, { from: variants.initial, animate: variants.animate, exit: variants.exit },
         React.createElement(Layer, { height: SEPARATOR_SIZE }),
         React.createElement(HorizontalLayer, { height: PREVIEW_SIZE, alignItems: 'center', width: '100%' },
             isImageFile ? (React.createElement(Image, { width: PREVIEW_SIZE, height: PREVIEW_SIZE, source: imageSource })) : (React.createElement(FileIcon, { width: PREVIEW_SIZE, height: PREVIEW_SIZE, fill: colors.text })),

@@ -6,7 +6,7 @@ const middleCellAnimationStyles = {
     animate: { scale: 1 }
 };
 function MiddleCellSharedStyles(props) {
-    return (React.createElement(ModalCellSharedStyles, Object.assign({ initial: middleCellAnimationStyles.initial, animate: middleCellAnimationStyles.animate, exit: middleCellAnimationStyles.initial }, props)));
+    return (React.createElement(ModalCellSharedStyles, Object.assign({ from: middleCellAnimationStyles.initial, animate: middleCellAnimationStyles.animate, exit: middleCellAnimationStyles.initial }, props)));
 }
 export function MiddleCellDesktop(props) {
     return React.createElement(MiddleCellSharedStyles, Object.assign({ maxWidth: 550, maxHeight: 550, width: '60%', height: '60%' }, props));

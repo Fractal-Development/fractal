@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import { AnimationProps, FractalSharedProps } from '../../sharedProps';
+import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
 import { ButtonVariant } from './types/ButtonVariant';
-export interface ToggleButtonProps extends FractalSharedProps, AnimationProps {
+export interface ToggleButtonProps extends FractalSharedStyleProps, AnimationProps {
     variant: ButtonVariant;
     active?: boolean;
     useGrayVariant?: boolean;

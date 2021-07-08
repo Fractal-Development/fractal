@@ -11,16 +11,16 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
-import Reanimated from 'react-native-reanimated';
+import { motify } from '@motify/core';
 import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
 import { extractBorderProps } from '../../../sharedProps/BorderProps';
 import { extractDimensionProps } from '../../../sharedProps/DimensionProps';
 import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
 import { extractShadowProps } from '../../../sharedProps/ShadowProps';
 import { Pressable as RNPressable } from 'react-native';
-import { useAnimationStyles } from '../../../animations/native/hooks/useAnimationStyles';
 import { usePressableAnimationStyles } from '../../../animations/native/hooks/usePressableAnimationStyles';
-const StyledPressable = styled(Reanimated.createAnimatedComponent(RNPressable)) `
+const MotiPressable = motify(RNPressable)();
+const StyledPressable = styled(MotiPressable) `
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
@@ -29,9 +29,8 @@ const StyledPressable = styled(Reanimated.createAnimatedComponent(RNPressable)) 
 `;
 const Pressable = forwardRef((_a, ref) => {
     var { style } = _a, others = __rest(_a, ["style"]);
-    const animationStyles = useAnimationStyles(others);
     const [tapStyles, handlePressIn, handlePressOut] = usePressableAnimationStyles(others);
-    return (React.createElement(StyledPressable, Object.assign({ ref: ref, onPressIn: handlePressIn, onPressOut: handlePressOut, style: [animationStyles, tapStyles, style] }, others)));
+    return React.createElement(StyledPressable, Object.assign({ ref: ref, onPressIn: handlePressIn, onPressOut: handlePressOut, style: [tapStyles, style] }, others));
 });
 Pressable.displayName = 'Pressable';
 export { Pressable };

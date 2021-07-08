@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '../../context/hooks/useTheme';
+import { useTheme } from '../../context';
 import { Layer } from './Layer';
 const Background = forwardRef((props, ref) => {
     const { colors } = useTheme();

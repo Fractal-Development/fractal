@@ -7,7 +7,9 @@ import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
 import { extractShadowProps } from '../../../sharedProps/ShadowProps';
 import { extractTextProps } from '../../../sharedProps/TextProps';
 import { Text } from 'react-native';
-const StyledText = styled(Text) `
+import { motify } from '@motify/core';
+const MotiText = motify(Text)();
+const StyledText = styled(MotiText) `
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

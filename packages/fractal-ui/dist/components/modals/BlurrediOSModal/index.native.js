@@ -31,7 +31,7 @@ const BlurrediOSModal = forwardRef((_a, ref) => {
     const modalContentHeight = (window.height * 35) / 100;
     return (React.createElement(Modal, Object.assign({ ref: ref, visible: visible, onDismiss: onDismiss, pointerEvents: 'box-none', height: '100%', width: '100%', justifyContent: 'flex-end' }, others),
         React.createElement(Pressable, { flex: 1, onPress: onDismiss }),
-        React.createElement(Layer, { height: '35%', transition: { type: 'ease', duration: 350 }, initial: { translateY: modalContentHeight }, animate: { translateY: 0 }, exit: { translateY: modalContentHeight } },
+        React.createElement(Layer, { height: '35%', transition: { type: 'ease', duration: 350 }, from: { translateY: modalContentHeight }, animate: { translateY: 0 }, exit: { translateY: modalContentHeight } },
             React.createElement(StyledBlurView, { intensity: 100, tint: themeIdentifier },
                 React.createElement(Layer, { top: 0, bottom: 0, left: 0, right: 0, position: 'absolute', style: { opacity: 0.1 }, backgroundColor: themeIdentifier === 'light' ? 'black' : 'white' }),
                 React.createElement(Layer, { justifyContent: 'center', alignItems: 'flex-end', borderTopWidth: 0.5, borderColor: colors.placeholder, backgroundColor: colors.background, height: 48, paddingRight: spacings.m },

@@ -1,8 +1,8 @@
 import React from 'react';
-import { AnimationProps, FractalSharedProps } from '../../sharedProps';
+import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
 import { TextProps } from '../text/BaseText/types';
 import { ButtonVariant } from './types/ButtonVariant';
-export interface TextButtonProps extends FractalSharedProps, AnimationProps {
+export interface TextButtonProps extends FractalSharedStyleProps, AnimationProps {
     variant: ButtonVariant;
     children?: string;
     textProps?: Omit<TextProps, 'children'>;

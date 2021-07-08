@@ -1,1 +1,1 @@
-export declare function getActivityIndicatorAccessibilityProps(color: string): Record<string, any>;
+export declare function getActivityIndicatorAccessibilityProps(): Record<string, any>;

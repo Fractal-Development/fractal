@@ -12,14 +12,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { ImageBackground as RNImageBackground } from 'react-native';
-import Reanimated from 'react-native-reanimated';
-import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
-import { extractDimensionProps } from '../../../sharedProps/DimensionProps';
-import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
-import { extractBorderProps } from '../../../sharedProps/BorderProps';
-import { extractShadowProps } from '../../../sharedProps/ShadowProps';
-import { useAnimationStyles } from '../../../animations/native/hooks/useAnimationStyles';
-const StyledImageBackground = styled(Reanimated.createAnimatedComponent(RNImageBackground)) `
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
+import { motify } from '@motify/core';
+const MotiImageBackground = motify(RNImageBackground)();
+const StyledImageBackground = styled(MotiImageBackground) `
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
@@ -27,9 +23,8 @@ const StyledImageBackground = styled(Reanimated.createAnimatedComponent(RNImageB
     ${extractShadowProps};
 `;
 const ImageBackground = forwardRef((_a, ref) => {
-    var { source, resizeMode, style } = _a, others = __rest(_a, ["source", "resizeMode", "style"]);
-    const animationStyles = useAnimationStyles(others);
-    return (React.createElement(StyledImageBackground, Object.assign({ ref: ref, resizeMode: resizeMode, source: typeof source == 'string' ? { uri: source } : source }, others, { style: [animationStyles, style] })));
+    var { source } = _a, others = __rest(_a, ["source"]);
+    return React.createElement(StyledImageBackground, Object.assign({ ref: ref, source: typeof source == 'string' ? { uri: source } : source }, others));
 });
 ImageBackground.displayName = 'ImageBackground';
 export { ImageBackground };

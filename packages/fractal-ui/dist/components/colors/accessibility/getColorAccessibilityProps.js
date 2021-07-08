@@ -1,7 +1,7 @@
-export function getColorAccessibilityProps(checked, color) {
+export function getColorAccessibilityProps(checked) {
     return {
         'aria-pressed': checked,
-        'aria-label': 'Color Picker ' + color
+        'aria-label': 'Color Picker'
     };
 }
 //# sourceMappingURL=getColorAccessibilityProps.js.map
