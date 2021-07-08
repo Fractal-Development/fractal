@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme, Box, Layer, Text, PaddingLayer, MarginLayer, HorizontalLayer } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getHorizontalLayerAccessibilityProps } from './accessibility/getHorizontalLayerAccessibilityProps';
 import { getMarginLayerAccessibilityProps } from './accessibility/getMarginLayerAccessibilityProps';
 import { getPaddingLayerAccessibilityProps } from './accessibility/getPaddingLayerAccessibilityProps';
@@ -9,7 +10,7 @@ export function LayerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Layer Examples</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Layer Examples</Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <HorizontalLayer height={150} borderStyle={'solid'} borderWidth={2} borderColor={colors.black} {...getHorizontalLayerAccessibilityProps()}>
                     <Box alignItems={'center'} justifyContent={'center'} width={'50%'}>

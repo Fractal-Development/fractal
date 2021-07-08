@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, BlurrediOSModal } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function BlurredModalFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -9,7 +10,7 @@ export function BlurredModalFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Blurred Modal Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Blurred Modal Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Button variant='main' text='Show Blurred Modal' onPress={toggleBlurredModal} />
                 <BlurrediOSModal visible={blurredModalVisible} dismissText={'Done'} onDismiss={toggleBlurredModal}>

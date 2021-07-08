@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Layer, Button, Text, blue } from '@bma98/fractal-ui';
-import { getLayerAnimatedAccessibilityProps } from './accessibility/getLayerAnimatedAccessibilityProps';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getLayerAccessibilityProps } from './accessibility/getLayerAccessibilityProps';
 
 const styleVariants = {
@@ -18,8 +18,8 @@ export function LayerAnimatedFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Layer Animated Example</Text>
-            <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getLayerAnimatedAccessibilityProps()}>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Layer Animated Example</Text>
+            <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Layer
                     height={100}
                     width={100}

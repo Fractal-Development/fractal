@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, Popover } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 function PopoverContent(): JSX.Element {
     return (
@@ -26,7 +27,7 @@ export function PopoverFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>PopoverView Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>PopoverView Example</Text>
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover
                     placement={'bottom'}

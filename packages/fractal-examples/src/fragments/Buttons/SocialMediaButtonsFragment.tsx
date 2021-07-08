@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTheme, Layer, SocialMediaButtons, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SocialMediaButtonsFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
-            <Text variant={'title'}>Social Media Buttons</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Social Media Buttons</Text>
             <Layer alignItems={'center'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SocialMediaButtons
                     width={'100%'}
@@ -16,7 +17,7 @@ export function SocialMediaButtonsFragment(): JSX.Element {
                     onFacebookPress={() => console.log('Facebook button pressed')}
                     onApplePress={() => console.log('Apple button pressed')}
                 />
-                <Text variant={'normal'} alignItems={'center'}>
+                <Text variant={'normal'} alignItems={'center'} {...getTitleTextAccessibilityProps(2)}>
                     Social Media Buttons without Apple button
                 </Text>
                 <SocialMediaButtons

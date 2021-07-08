@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Slider, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SliderFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -9,7 +10,7 @@ export function SliderFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Slider Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Slider Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Slider
                     step={1}

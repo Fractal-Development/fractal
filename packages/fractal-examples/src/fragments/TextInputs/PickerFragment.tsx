@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTheme, Box, Picker, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function PickerFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
-            <Text variant={'title'}>Picker Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Picker Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Picker
                     onChange={(value) => console.log(value)}

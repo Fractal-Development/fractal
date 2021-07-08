@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTheme, Box, Layer, Text, PaddingLayer, MarginLayer, HorizontalLayer } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getHorizontalLayerAccessibilityProps } from './accessibility/getHorizontalLayerAccessibilityProps';
 import { getMarginLayerAccessibilityProps } from './accessibility/getMarginLayerAccessibilityProps';
 import { getPaddingLayerAccessibilityProps } from './accessibility/getPaddingLayerAccessibilityProps';
 export function LayerFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, { variant: 'title' }, "Layer Examples"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Layer Examples"),
         React.createElement(Layer, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(HorizontalLayer, Object.assign({ height: 150, borderStyle: 'solid', borderWidth: 2, borderColor: colors.black }, getHorizontalLayerAccessibilityProps()),
                 React.createElement(Box, { alignItems: 'center', justifyContent: 'center', width: '50%' },

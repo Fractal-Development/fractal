@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme, Box, Separator, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getSeparatorExampleAccessibilityProps } from './accessibility/getSeparatorExampleAccessibilityProps';
 import { getTextAccessibilityProps } from './accessibility/getTextAccessibilityProps';
 
@@ -8,7 +9,7 @@ export function SeparatorsFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Separator Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Separator Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getSeparatorExampleAccessibilityProps()}>
                 <Text variant={'normal'} marginBottom={spacings.s} {...getTextAccessibilityProps()}>
                     Below is the separator that is more visible with the isAtBackgroundLevel variable

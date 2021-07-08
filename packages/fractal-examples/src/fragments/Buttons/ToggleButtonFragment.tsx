@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Text, ToggleButton, LoadIcon } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function ToggleButtonFragment(): JSX.Element {
     const { colors, spacings } = useTheme();
@@ -13,7 +14,7 @@ export function ToggleButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>ToggleButton Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>ToggleButton Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
                     {() => (
@@ -29,7 +30,7 @@ export function ToggleButtonFragment(): JSX.Element {
                         </Text>
                     )}
                 </ToggleButton>
-                <Text variant={'subtitle'} alignItems={'center'} marginTop={spacings.lg}>
+                <Text variant={'subtitle'} alignItems={'center'} marginTop={spacings.lg} {...getTitleTextAccessibilityProps(2)}>
                     Toggle Button with icon
                 </Text>
                 <ToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
@@ -38,7 +39,7 @@ export function ToggleButtonFragment(): JSX.Element {
                 <ToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s} disabled>
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </ToggleButton>
-                <Text variant={'subtitle'} alignItems={'center'} marginTop={spacings.lg}>
+                <Text variant={'subtitle'} alignItems={'center'} marginTop={spacings.lg} {...getTitleTextAccessibilityProps(2)}>
                     Toggle Button with icon and useGrayVariant
                 </Text>
                 <ToggleButton variant={'main'} active={active} onActiveChange={toggleActive} useGrayVariant>

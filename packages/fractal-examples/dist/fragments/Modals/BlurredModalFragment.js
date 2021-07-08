@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, BlurrediOSModal } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 export function BlurredModalFragment() {
     const { spacings } = useTheme();
     const [blurredModalVisible, setBlurredModalVisible] = useState(false);
     const toggleBlurredModal = () => setBlurredModalVisible((currentValue) => !currentValue);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, { variant: 'title' }, "Blurred Modal Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Blurred Modal Example"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Button, { variant: 'main', text: 'Show Blurred Modal', onPress: toggleBlurredModal }),
             React.createElement(BlurrediOSModal, { visible: blurredModalVisible, dismissText: 'Done', onDismiss: toggleBlurredModal },
