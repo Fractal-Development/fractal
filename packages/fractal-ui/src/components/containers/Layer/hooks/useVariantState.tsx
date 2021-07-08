@@ -7,10 +7,9 @@ export function useVariantState(
     variants: FractalVariants | undefined = { from: {} }
 ): UseAnimationState<any> | undefined {
     const animationState = useAnimationState<FractalVariants>(variants);
-    console.log({ variants, animationState: JSON.stringify(animationState) });
+
     useEffect(() => {
         if (currentVariant && variants) {
-            console.log({ currentVariant });
             animationState.transitionTo(currentVariant);
         }
     }, [animationState, currentVariant, variants]);
