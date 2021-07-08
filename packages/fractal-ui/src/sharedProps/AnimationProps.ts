@@ -19,5 +19,5 @@ export interface AnimationProps extends Omit<AnimatePresenceProps, 'initial'> {
 
 export interface WebAnimationProps extends Omit<LayerProps, 'animate'> {
     animate?: FractalSharedAnimationProps | string;
-    initial?: FractalSharedAnimationProps | boolean;
+    initial?: FractalSharedAnimationProps | string | boolean;
 }
