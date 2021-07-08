@@ -23,15 +23,7 @@ const StyledLayer = styled(motion.div as any)`
 
 const Layer = forwardRef(
     ({ from, currentVariant, animate, transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => {
-        return (
-            <StyledLayer
-                ref={ref}
-                initial={currentVariant ? 'from' : from}
-                animate={currentVariant ?? animate}
-                transition={transition}
-                {...others}
-            />
-        );
+        return <StyledLayer ref={ref} initial={from} animate={currentVariant ?? animate} transition={transition} {...others} />;
     }
 );
 

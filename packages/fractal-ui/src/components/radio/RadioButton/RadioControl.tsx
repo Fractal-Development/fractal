@@ -1,31 +1,64 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { Layer } from '../../containers/Layer';
 import { Text } from '../../text';
 import { RadioControlProps } from '../types';
 import { useMemo } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const circleVariants = {
-    active: { backgroundColor: '#8b0000' },
-    from: { backgroundColor: '#a9a9a9' }
+    active: { scale: 1 },
+    inactive: { scale: 0 }
 };
-
-function Circle({ active, ringVariants }: { active: boolean; ringVariants: any }): JSX.Element {
-    return <Layer width={10} height={10} borderRadius={10} variants={ringVariants} currentVariant={active ? 'active' : 'from'} />;
-}
 
 export function RadioControl({ active, label }: RadioControlProps): JSX.Element {
     const { colors, sizes, spacings } = useTheme();
+    const [currentVariant, setCurrentVariant] = useState('from');
 
     const ringVariants = useMemo(() => {
-        return { from: { backgroundColor: colors.placeholder }, active: { backgroundColor: colors.mainInteractiveColor } };
+        return { from: { borderColor: colors.placeholder }, active: { borderColor: colors.mainInteractiveColor } };
     }, [colors]);
 
+    useEffect(() => {
+        setCurrentVariant(active ? 'active' : 'from');
+    }, [active]);
+
     return (
-        <Fragment>
-            <Layer width={10} height={10} borderRadius={10} variants={ringVariants} currentVariant={active ? 'active' : 'from'} />
-            <Layer width={10} height={10} borderRadius={10} variants={ringVariants} currentVariant={active ? 'active' : 'from'} />
-        </Fragment>
+        <>
+            <Layer
+                width={sizes.radioButtonSize}
+                height={sizes.radioButtonSize}
+                display={'flex'}
+                flexShrink={0}
+                borderRadius={sizes.radioButtonSize / 2}
+                borderWidth={2}
+                alignItems={'center'}
+                borderStyle={'solid'}
+                justifyContent={'center'}
+                variants={ringVariants}
+                currentVariant={currentVariant}
+            >
+                <AnimatePresence>
+                    {active && (
+                        <Layer
+                            width={10}
+                            height={10}
+                            borderRadius={10}
+                            backgroundColor={colors.mainInteractiveColor}
+                            from={circleVariants.inactive}
+                            animate={circleVariants.active}
+                            exit={circleVariants.inactive}
+                        />
+                    )}
+                </AnimatePresence>
+            </Layer>
+            {label && (
+                <Text marginLeft={spacings.xs} variant='normal'>
+                    {label}
+                </Text>
+            )}
+        </>
     );
 }
