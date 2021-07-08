@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import { AnimationProps, FractalSharedProps } from '../../sharedProps';
-import { ButtonVariant } from './types/ButtonVariant';
-export interface ButtonProps extends FractalSharedProps, AnimationProps {
+import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
+import { ButtonVariant } from './types';
+export interface ButtonProps extends FractalSharedStyleProps, AnimationProps {
     style?: any;
     variant?: ButtonVariant;
     text?: string;

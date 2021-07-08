@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef, useState } from 'react';
 import { Text } from '../text';
-import { useTheme } from '../../context/hooks/useTheme';
+import { useTheme } from '../../context';
 import { BaseButton } from './BaseButton';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';
 import { useButtonColors } from './hooks/useButtonColors';

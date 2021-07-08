@@ -1,33 +1,20 @@
-import { Transition } from 'framer-motion';
-interface BasicAnimationContent {
-    opacity?: number;
-    width?: number;
-    height?: number;
-    backgroundColor?: string;
-}
-interface TransformAnimationContent {
-    scale?: number;
-    rotate?: number;
-    translateY?: number;
-    translateX?: number;
-}
-export interface AnimationContent extends TransformAnimationContent, BasicAnimationContent {
-    backdropFilter?: string;
-    '-webkit-backdrop-filter'?: string;
-}
-export declare function isAnimationContent(value: unknown): value is AnimationContent;
-export declare type Variants = {
-    [key: string]: AnimationContent;
+import { AnimatePresenceProps, Transition } from 'framer-motion';
+import { LayerProps } from '../components';
+import { FractalSharedAnimationProps } from './FractalSharedAnimationProps';
+export declare type FractalVariants = {
+    [key: string]: FractalSharedAnimationProps;
 };
-export declare type FractalTransition = Omit<Transition, 'type'> & {
-    duration?: number;
-    type?: 'ease' | 'spring';
-};
-export interface AnimationProps {
-    initial?: AnimationContent | string;
-    animate?: AnimationContent | string;
-    variants?: Variants;
-    transition?: FractalTransition;
-    exit?: AnimationContent;
+declare type VariantLabel = string;
+export interface AnimationProps extends Omit<AnimatePresenceProps, 'initial'> {
+    from?: FractalSharedAnimationProps | boolean;
+    animate?: FractalSharedAnimationProps;
+    exit?: FractalSharedAnimationProps | boolean;
+    transition?: Transition;
+    variants?: FractalVariants;
+    currentVariant?: VariantLabel;
+}
+export interface WebAnimationProps extends Omit<LayerProps, 'animate'> {
+    animate?: FractalSharedAnimationProps | string;
+    initial?: FractalSharedAnimationProps | boolean;
 }
 export {};

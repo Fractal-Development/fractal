@@ -1,1 +1,1 @@
-{"version":3,"file":"BackgroundProps.js","sourceRoot":"","sources":["../../src/sharedProps/BackgroundProps.ts"],"names":[],"mappings":"AAKA,MAAM,UAAU,sBAAsB,CAAC,EAAE,eAAe,EAAE,EAAE,EAAmB;IAC3E,OAAO;4BACiB,EAAE,aAAF,EAAE,cAAF,EAAE,GAAI,aAAa;4BACnB,eAAe,aAAf,eAAe,cAAf,eAAe,GAAI,aAAa;KACvD,CAAC;AACN,CAAC"}
+{"version":3,"file":"BackgroundProps.js","sourceRoot":"","sources":["../../src/sharedProps/BackgroundProps.ts"],"names":[],"mappings":"AAIA,MAAM,UAAU,sBAAsB,CAAC,EAAE,eAAe,EAAmB;IACvE,OAAO;4BACiB,eAAe,aAAf,eAAe,cAAf,eAAe,GAAI,aAAa;KACvD,CAAC;AACN,CAAC"}

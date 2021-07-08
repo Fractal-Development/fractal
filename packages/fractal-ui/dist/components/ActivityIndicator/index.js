@@ -12,7 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { Layer } from '../containers/Layer';
+import { Layer } from '../containers';
 import { getActivityIndicatorAccessibilityProps } from './accessibility/getActivityIndicatorAccessibilityProps';
 const BackgroundCircle = styled(motion.circle) `
     stroke: ${({ color }) => color};
@@ -31,7 +31,7 @@ const ActivityIndicator = forwardRef((_a, ref) => {
     var { color } = _a, others = __rest(_a, ["color"]);
     return (React.createElement(Layer, Object.assign({ ref: ref, animate: animate, transition: transition }, others),
         React.createElement(motion.svg, { height: '100%', width: '100%', viewBox: '0 0 32 32' },
-            React.createElement(BackgroundCircle, Object.assign({ cx: '16', cy: '16', fill: 'none', r: '14', strokeWidth: '4', color: color }, getActivityIndicatorAccessibilityProps(color))),
+            React.createElement(BackgroundCircle, Object.assign({ cx: '16', cy: '16', fill: 'none', r: '14', strokeWidth: '4', color: color }, getActivityIndicatorAccessibilityProps())),
             React.createElement(AnimatedSection, { cx: '16', cy: '16', fill: 'none', r: '14', strokeWidth: '4', color: color }))));
 });
 ActivityIndicator.displayName = 'ActivityIndicator';

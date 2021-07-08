@@ -35,7 +35,7 @@ const StyledTouchableOpacity = styled(motion.button) `
 `;
 const transition = { type: 'linear', duration: 0.2 };
 const TouchableOpacity = forwardRef((_a, ref) => {
-    var { onPress, onLongPress, whileTap } = _a, others = __rest(_a, ["onPress", "onLongPress", "whileTap"]);
+    var { from, onPress, onLongPress, whileTap } = _a, others = __rest(_a, ["from", "onPress", "onLongPress", "whileTap"]);
     const [pressed, setPressed] = useState(false);
     const tapStyles = Object.assign({ opacity: 0.4 }, whileTap);
     const longPressEvent = useLongPress(onLongPress);
@@ -43,7 +43,7 @@ const TouchableOpacity = forwardRef((_a, ref) => {
         setPressed(true);
         onPress === null || onPress === void 0 ? void 0 : onPress();
     };
-    return (React.createElement(StyledTouchableOpacity, Object.assign({ ref: ref, transition: transition, whileTap: tapStyles, onClick: handleButtonPress }, longPressEvent, getButtonAccessibilityProps(pressed), others)));
+    return (React.createElement(StyledTouchableOpacity, Object.assign({ ref: ref, transition: transition, whileTap: tapStyles, onClick: handleButtonPress, initial: from }, longPressEvent, getButtonAccessibilityProps(pressed), others)));
 });
 TouchableOpacity.displayName = 'TouchableOpacity';
 export { TouchableOpacity };

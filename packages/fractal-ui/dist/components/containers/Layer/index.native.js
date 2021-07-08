@@ -11,14 +11,12 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
-import Reanimated from 'react-native-reanimated';
-import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
-import { extractBorderProps } from '../../../sharedProps/BorderProps';
-import { extractDimensionProps } from '../../../sharedProps/DimensionProps';
-import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
-import { extractShadowProps } from '../../../sharedProps/ShadowProps';
-import { useAnimationStyles } from '../../../animations/native/hooks/useAnimationStyles';
-const StyledLayer = styled(Reanimated.View) `
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
+import { motify } from '@motify/core';
+import { View } from 'react-native';
+import { useVariantState } from './hooks/useVariantState';
+const MotiView = motify(View)();
+const StyledLayer = styled(MotiView) `
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
@@ -26,9 +24,9 @@ const StyledLayer = styled(Reanimated.View) `
     ${extractShadowProps};
 `;
 const Layer = forwardRef((_a, ref) => {
-    var { style } = _a, others = __rest(_a, ["style"]);
-    const animationStyles = useAnimationStyles(others);
-    return React.createElement(StyledLayer, Object.assign({ ref: ref }, others, { style: [animationStyles, style] }));
+    var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);
+    const variantState = useVariantState(currentVariant, variants);
+    return React.createElement(StyledLayer, Object.assign({ ref: ref, state: variantState }, others));
 });
 Layer.displayName = 'Layer';
 export { Layer };

@@ -1,1 +1,1 @@
-export declare function getColorAccessibilityProps(checked: boolean, color: string): Record<string, any>;
+export declare function getColorAccessibilityProps(checked: boolean): Record<string, any>;

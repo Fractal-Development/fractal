@@ -1,3 +1,14 @@
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -17,8 +28,9 @@ const StyledText = styled(motion.span) `
     ${extractWebProps};
     ${extractTextProps};
 `;
-const BaseText = forwardRef((props, ref) => {
-    return React.createElement(StyledText, Object.assign({ ref: ref }, props));
+const BaseText = forwardRef((_a, ref) => {
+    var { from } = _a, others = __rest(_a, ["from"]);
+    return React.createElement(StyledText, Object.assign({ ref: ref, initial: from }, others));
 });
 BaseText.displayName = 'BaseText';
 export { BaseText };

@@ -22,7 +22,7 @@ const ColorPicker = forwardRef((_a, ref) => {
     const { spacings } = useTheme();
     const handleColorChange = (_active, color) => setActiveColor(color);
     const renderColorToggle = (color) => {
-        return (React.createElement(ColorToggle, Object.assign({ backgroundColor: color, key: color, onActiveChange: handleColorChange, active: activeColor === color, margin: spacings.xs }, getColorAccessibilityProps(activeColor === color, activeColor))));
+        return (React.createElement(ColorToggle, Object.assign({ backgroundColor: color, key: color, onActiveChange: handleColorChange, active: activeColor === color, margin: spacings.xs }, getColorAccessibilityProps(activeColor === color))));
     };
     return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, justifyContent: 'space-around', flexWrap: 'wrap' }, others), colors.map(renderColorToggle)));
 });

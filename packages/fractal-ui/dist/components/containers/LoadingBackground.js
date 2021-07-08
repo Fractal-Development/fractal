@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Background } from './Background';
 import { ActivityIndicator } from '../ActivityIndicator';
-import { useTheme } from '../../context/hooks/useTheme';
+import { useTheme } from '../../context';
 const LoadingBackground = forwardRef((props, ref) => {
     const { colors } = useTheme();
     return (React.createElement(Background, Object.assign({ ref: ref }, props),
