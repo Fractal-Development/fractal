@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, Popover } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 function PopoverContent() {
     return (React.createElement(Box, { width: 120 },
         React.createElement(Button, { variant: 'alternative', text: 'Pasion' })));
@@ -15,7 +16,7 @@ export function PopoverFragment() {
     const [isLeftPopoverVisible, setLeftPopoverVisible] = useState(false);
     const toggleLeftPopover = () => setLeftPopoverVisible((current) => !current);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, { variant: 'title' }, "PopoverView Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "PopoverView Example"),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },
             React.createElement(Popover, { placement: 'bottom', active: isBottomPopoverVisible, onRequestClose: toggleBottomPopover, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: toggleBottomPopover, text: 'Bottom' }))),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },

@@ -6,6 +6,7 @@ import {
   Text,
   MiddleCellModal,
 } from "@bma98/fractal-ui";
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function MiddleCellModalFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -15,24 +16,24 @@ export function MiddleCellModalFragment(): JSX.Element {
       setMiddleCellVisible((currentValue) => !currentValue);
   
     return (
-        <>
-      <Text variant={"title"}>Middle Cell Modal Example</Text>
-      <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-        <Button
-          variant="main"
-          text="Show Middle Cell Modal"
-          onPress={toggleMiddleCell}
-        />
-        <MiddleCellModal visible={middleCellVisible} onDismiss={toggleMiddleCell}>
-          <Box>
-            <Button
-              variant="warning"
-              text="Dismiss Cell Modal"
-              onPress={toggleMiddleCell}
-            />
-          </Box>
-        </MiddleCellModal>
-      </Box>
+      <>
+        <Text variant={"title"} {...getTitleTextAccessibilityProps(1)}>Middle Cell Modal Example</Text>
+        <Box marginTop={spacings.s} marginBottom={spacings.xl}>
+          <Button
+            variant="main"
+            text="Show Middle Cell Modal"
+            onPress={toggleMiddleCell}
+          />
+          <MiddleCellModal visible={middleCellVisible} onDismiss={toggleMiddleCell}>
+            <Box>
+              <Button
+                variant="warning"
+                text="Dismiss Cell Modal"
+                onPress={toggleMiddleCell}
+              />
+            </Box>
+          </MiddleCellModal>
+        </Box>
       </>
     );
   }

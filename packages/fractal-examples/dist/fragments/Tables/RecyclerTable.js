@@ -12,6 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { useEffect, useMemo, useState } from 'react';
 import { SearchBar, TableContainer, useTheme, MemoizedBaseRow, HorizontalLayer, CheckBox, Layer, Text, OptionsButton, LayoutProvider, RecyclerView, DataProvider } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 // Performance is incredible when all rows have the same size(recycling is 100% effective).
 // Performance is good when all rows have different sizes.
 const data = Array();
@@ -86,7 +87,7 @@ export function TableTwo() {
 export function RecyclerTable() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, { variant: 'title' }, "Table Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Table Example"),
         React.createElement(Layer, { height: 500, marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Layer, { flex: 1 },
                 React.createElement(TableTwo, null)))));

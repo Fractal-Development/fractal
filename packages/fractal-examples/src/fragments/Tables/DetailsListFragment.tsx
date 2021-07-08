@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme, Text, TableContainer, DetailsRow, SimpleRow } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 const detailsCardContent: Array<[string, string]> = [
     ['Title 1', 'Details 1'],
@@ -11,7 +12,7 @@ export function DetailsListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Details List Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Details List Example</Text>
             <TableContainer
                 label='2'
                 title='Title'

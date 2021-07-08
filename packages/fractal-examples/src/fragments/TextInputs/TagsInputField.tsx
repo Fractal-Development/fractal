@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme, Box, MultiSelectInput, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
+import { getMultiSelectInputAccessibilityProps } from './accessibility/getMultiSelectInputAccessibilityProps';
 
 interface Tag {
     id: string;
@@ -48,8 +50,8 @@ export function TagsInputField(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Multi Select Input Example</Text>
-            <Box marginTop={spacings.s} marginBottom={spacings.xl} maxHeight={320}>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Multi Select Input Example</Text>
+            <Box marginTop={spacings.s} marginBottom={spacings.xl} maxHeight={320} {...getMultiSelectInputAccessibilityProps()}>
                 <MultiSelectInput
                     placeholder={'Escribe y da enter'}
                     options={tags}

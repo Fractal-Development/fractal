@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTheme, Box, TextButton, Text, SearchIcon } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 export function TextButtonFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, { variant: 'title' }, "Text Button Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Text Button Example"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(TextButton, { variant: 'main', marginBottom: spacings.s }, "Main"),
             React.createElement(TextButton, { variant: 'main', marginBottom: spacings.s, disabled: true }, "Main disabled"),

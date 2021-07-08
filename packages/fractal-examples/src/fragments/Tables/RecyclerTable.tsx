@@ -14,6 +14,7 @@ import {
     DataProvider
 } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 // Performance is incredible when all rows have the same size(recycling is 100% effective).
 // Performance is good when all rows have different sizes.
@@ -141,7 +142,7 @@ export function RecyclerTable(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Table Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Table Example</Text>
             <Layer height={500} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Layer flex={1}>
                     <TableTwo />

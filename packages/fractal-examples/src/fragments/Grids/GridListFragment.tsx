@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTheme, Box, Text, GridList } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function GridListFragment(): JSX.Element {
     const { colors, spacings } = useTheme();
 
     return (
         <>
-            <Text variant={'title'}>Grid List Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Grid List Example</Text>
             <GridList
                 data={['One', 'Two', 'Three', 'Four']}
                 numColumns={2}

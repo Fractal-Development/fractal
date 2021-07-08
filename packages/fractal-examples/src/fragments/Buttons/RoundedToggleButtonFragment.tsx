@@ -11,6 +11,7 @@ import {
     FacebookIcon,
     GoogleIcon
 } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function RoundedToggleButtonFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -20,7 +21,7 @@ export function RoundedToggleButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>RoundedToggleButton Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>RoundedToggleButton Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <RoundedToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
                     {(color) => <FacebookIcon height={24} width={24} fill={color} />}

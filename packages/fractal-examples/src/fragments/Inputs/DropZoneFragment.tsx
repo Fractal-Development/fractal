@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTheme, Box, Dropzone, Layer, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function DropZoneFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
-            <Text variant={'title'}>Dropzone Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Dropzone Example</Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Box marginBottom={spacings.s}>
                     <Dropzone onChangeAcceptedFiles={(files) => console.log('Accepted files: ', files)} />

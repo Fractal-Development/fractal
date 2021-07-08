@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 function PopoverContent(): JSX.Element {
     return (
@@ -18,7 +19,7 @@ export function SearchBarFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Search Bar Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Search Bar Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SearchBar
                     placeholder={'Search Bar'}

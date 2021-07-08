@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme, Box, SegmentedControl, Text } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SegmentedControlFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -7,7 +8,7 @@ export function SegmentedControlFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Segmented Control Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Segmented Control Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SegmentedControl
                     selectedIndex={selectedIndex}

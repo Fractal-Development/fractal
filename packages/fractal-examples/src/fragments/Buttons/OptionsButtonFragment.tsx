@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme, Box, Text, OptionsMenuButton, ChevronDownIcon } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function OptionsButtonFragment(): JSX.Element {
     const { spacings } = useTheme();
@@ -8,7 +9,7 @@ export function OptionsButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'}>Options Button Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Options Button Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <OptionsMenuButton
                     options={optionsValue}

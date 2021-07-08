@@ -10,13 +10,14 @@ import {
     ThreeDotsHorizontalIcon,
     SearchIcon
 } from '@bma98/fractal-ui';
+import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function CircularIconButtonFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
-            <Text variant={'title'}>Circular Icon Button Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Circular Icon Button Example</Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <CircularIconButton variant={'main'} marginBottom={spacings.s}>
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
