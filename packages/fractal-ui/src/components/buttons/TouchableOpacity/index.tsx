@@ -11,7 +11,7 @@ import { TouchableOpacityProps } from './types';
 import { useLongPress } from '../hooks/useLongPress';
 import { getButtonAccessibilityProps } from '../accessibility/getButtonAccessibilityProps';
 
-const StyledTouchableOpacity = styled(motion.button as any)`
+const StyledTouchableOpacity = styled(motion.div as any)`
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
