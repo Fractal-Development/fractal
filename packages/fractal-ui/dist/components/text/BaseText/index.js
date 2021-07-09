@@ -29,8 +29,8 @@ const StyledText = styled(motion.span) `
     ${extractTextProps};
 `;
 const BaseText = forwardRef((_a, ref) => {
-    var { from } = _a, others = __rest(_a, ["from"]);
-    return React.createElement(StyledText, Object.assign({ ref: ref, initial: from }, others));
+    var { from, currentVariant, animate } = _a, others = __rest(_a, ["from", "currentVariant", "animate"]);
+    return React.createElement(StyledText, Object.assign({ ref: ref, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate }, others));
 });
 BaseText.displayName = 'BaseText';
 export { BaseText };

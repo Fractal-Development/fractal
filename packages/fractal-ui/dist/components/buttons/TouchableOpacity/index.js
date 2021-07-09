@@ -20,7 +20,7 @@ import { extractShadowProps } from '../../../sharedProps/ShadowProps';
 import { extractWebProps } from '../../../sharedProps/WebProps';
 import { useLongPress } from '../hooks/useLongPress';
 import { getButtonAccessibilityProps } from '../accessibility/getButtonAccessibilityProps';
-const StyledTouchableOpacity = styled(motion.button) `
+const StyledTouchableOpacity = styled(motion.div) `
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -35,7 +35,7 @@ const StyledTouchableOpacity = styled(motion.button) `
 `;
 const transition = { type: 'linear', duration: 0.2 };
 const TouchableOpacity = forwardRef((_a, ref) => {
-    var { from, onPress, onLongPress, whileTap } = _a, others = __rest(_a, ["from", "onPress", "onLongPress", "whileTap"]);
+    var { from, currentVariant, animate, onPress, onLongPress, whileTap } = _a, others = __rest(_a, ["from", "currentVariant", "animate", "onPress", "onLongPress", "whileTap"]);
     const [pressed, setPressed] = useState(false);
     const tapStyles = Object.assign({ opacity: 0.4 }, whileTap);
     const longPressEvent = useLongPress(onLongPress);
@@ -43,7 +43,7 @@ const TouchableOpacity = forwardRef((_a, ref) => {
         setPressed(true);
         onPress === null || onPress === void 0 ? void 0 : onPress();
     };
-    return (React.createElement(StyledTouchableOpacity, Object.assign({ ref: ref, transition: transition, whileTap: tapStyles, onClick: handleButtonPress, initial: from }, longPressEvent, getButtonAccessibilityProps(pressed), others)));
+    return (React.createElement(StyledTouchableOpacity, Object.assign({ ref: ref, transition: transition, whileTap: tapStyles, onClick: handleButtonPress, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate }, longPressEvent, getButtonAccessibilityProps(pressed), others)));
 });
 TouchableOpacity.displayName = 'TouchableOpacity';
 export { TouchableOpacity };

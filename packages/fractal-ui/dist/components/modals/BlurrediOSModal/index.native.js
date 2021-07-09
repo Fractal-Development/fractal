@@ -11,6 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import { BlurView } from 'expo-blur';
+import { View } from 'react-native';
 import { TextButton } from '../../buttons/TextButton';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { Layer } from '../../containers/Layer';
@@ -20,6 +21,8 @@ import { useThemeIdentifier } from '../../../context/hooks/useThemeIdentifier';
 import { Modal } from '../Modal';
 import styled from 'styled-components/native';
 import { Dimensions } from 'react-native';
+import { motify } from '@motify/core';
+const MotiView = motify(View)();
 const StyledBlurView = styled(BlurView) `
     height: 100%;
 `;
@@ -31,7 +34,10 @@ const BlurrediOSModal = forwardRef((_a, ref) => {
     const modalContentHeight = (window.height * 35) / 100;
     return (React.createElement(Modal, Object.assign({ ref: ref, visible: visible, onDismiss: onDismiss, pointerEvents: 'box-none', height: '100%', width: '100%', justifyContent: 'flex-end' }, others),
         React.createElement(Pressable, { flex: 1, onPress: onDismiss }),
-        React.createElement(Layer, { height: '35%', transition: { type: 'ease', duration: 350 }, from: { translateY: modalContentHeight }, animate: { translateY: 0 }, exit: { translateY: modalContentHeight } },
+        React.createElement(MotiView, { style: { height: '35%' }, transition: {
+                type: 'timing',
+                duration: 330
+            }, from: { translateY: modalContentHeight }, animate: { translateY: 0 }, exit: { translateY: modalContentHeight }, exitTransition: { type: 'timing', duration: 360 } },
             React.createElement(StyledBlurView, { intensity: 100, tint: themeIdentifier },
                 React.createElement(Layer, { top: 0, bottom: 0, left: 0, right: 0, position: 'absolute', style: { opacity: 0.1 }, backgroundColor: themeIdentifier === 'light' ? 'black' : 'white' }),
                 React.createElement(Layer, { justifyContent: 'center', alignItems: 'flex-end', borderTopWidth: 0.5, borderColor: colors.placeholder, backgroundColor: colors.background, height: 48, paddingRight: spacings.m },

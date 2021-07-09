@@ -1,4 +1,4 @@
-export interface TextProps {
+export interface FractalTextProps {
     fontSize?: number;
     fontWeight?: number | string;
     color?: string;
@@ -6,4 +6,4 @@ export interface TextProps {
     fontStyle?: 'italic' | 'normal';
     selectable?: boolean;
 }
-export declare function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable }: TextProps): string;
+export declare function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable }: FractalTextProps): string;

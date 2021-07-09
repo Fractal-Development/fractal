@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { LayerProps } from '../../../containers/Layer/types';
-import { TextProps as FractalTextProps } from '../../../../sharedProps/TextProps';
+import { FractalTextProps } from '../../../../sharedProps/TextProps';
 declare type ItemValue = number | string;
 interface BasicPickerProps {
     selectedValue?: ItemValue;

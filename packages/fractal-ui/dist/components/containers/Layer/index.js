@@ -23,7 +23,7 @@ const StyledLayer = styled(motion.div) `
 `;
 const Layer = forwardRef((_a, ref) => {
     var { from, currentVariant, animate, transition = { type: 'spring' } } = _a, others = __rest(_a, ["from", "currentVariant", "animate", "transition"]);
-    return React.createElement(StyledLayer, Object.assign({ ref: ref, initial: from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate, transition: transition }, others));
+    return (React.createElement(StyledLayer, Object.assign({ ref: ref, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate, transition: transition }, others)));
 });
 Layer.displayName = 'Layer';
 export { Layer };

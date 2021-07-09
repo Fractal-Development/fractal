@@ -10,6 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useCallback, useEffect, useMemo, useState, forwardRef, useRef } from 'react';
+import { View } from 'react-native';
 import { Pressable } from '../buttons/Pressable';
 import { Layer } from '../containers/Layer';
 import { Modal } from '../modals/Modal';
@@ -41,7 +42,8 @@ const Popover = forwardRef((_a, ref) => {
         children(anchorRef),
         React.createElement(Modal, { visible: active },
             React.createElement(Pressable, { zIndex: 0, onPress: onRequestClose, position: 'absolute', width: '100%', height: '100%', backgroundColor: modalBackgroundColor }),
-            React.createElement(Layer, Object.assign({ onLayout: onPopoverLayout, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: 'absolute', zIndex: 2, style: styles }, popoverContainerProps), popoverChildren(anchorViewLayout.width)))));
+            React.createElement(View, { style: [{ position: 'absolute', zIndex: 2 }, styles] },
+                React.createElement(Layer, Object.assign({ onLayout: onPopoverLayout, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial }, popoverContainerProps), popoverChildren(anchorViewLayout.width))))));
 });
 Popover.displayName = 'Popover';
 export { Popover };

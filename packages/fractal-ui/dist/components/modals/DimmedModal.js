@@ -13,7 +13,6 @@ import React, { forwardRef } from 'react';
 import { Modal } from './Modal';
 import { Pressable } from '../buttons';
 import { SafeAreaLayer } from '../containers/SafeAreaLayer';
-import { canUseDOM } from '../../executionEnvironment/canUseDOM';
 const modalAnimationStyles = {
     initial: { opacity: 0 },
     animate: { opacity: 1 }
@@ -22,11 +21,10 @@ const pressableAnimationStyles = {
     initial: { opacity: 0 },
     animate: { opacity: 0.6 }
 };
-const transition = canUseDOM ? { type: 'spring' } : { type: 'ease', duration: 400 };
 const DimmedModal = forwardRef((_a, ref) => {
     var { visible, onDismiss } = _a, others = __rest(_a, ["visible", "onDismiss"]);
     return (React.createElement(Modal, { ref: ref, visible: visible, onDismiss: onDismiss, from: modalAnimationStyles.initial, animate: modalAnimationStyles.animate, exit: modalAnimationStyles.initial },
-        React.createElement(Pressable, { zIndex: 999, onPress: onDismiss, position: 'absolute', width: '100%', height: '100%', backgroundColor: 'black', from: pressableAnimationStyles.initial, animate: pressableAnimationStyles.animate, exit: pressableAnimationStyles.initial, transition: transition }),
+        React.createElement(Pressable, { zIndex: 999, onPress: onDismiss, position: 'absolute', width: '100%', height: '100%', backgroundColor: '#000000', from: pressableAnimationStyles.initial, animate: pressableAnimationStyles.animate, exit: pressableAnimationStyles.initial, transition: { type: 'spring' } }),
         React.createElement(SafeAreaLayer, Object.assign({ zIndex: 1000 }, others))));
 });
 DimmedModal.displayName = 'DimmedModal';

@@ -14,7 +14,7 @@ import styled from 'styled-components/native';
 import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { motify } from '@motify/core';
 import { View } from 'react-native';
-import { useVariantState } from './hooks/useVariantState';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 const MotiView = motify(View)();
 const StyledLayer = styled(MotiView) `
     ${extractBackgroundProps};

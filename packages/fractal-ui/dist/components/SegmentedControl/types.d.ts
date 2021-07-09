@@ -1,6 +1,6 @@
-import { TextProps } from '../../sharedProps/TextProps';
+import { FractalTextProps } from '../../sharedProps/TextProps';
 import { LayerProps } from '../containers/Layer/types';
-declare type TextStyle = Omit<TextProps, 'selectable'>;
+declare type TextStyle = Omit<FractalTextProps, 'selectable'>;
 interface TextStyleProps {
     textStyle?: TextStyle;
     activeTextStyle?: TextStyle;

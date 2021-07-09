@@ -11,11 +11,11 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import { Modal as RNModal } from 'react-native';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from '@motify/core';
 import { Layer } from '../../containers';
 const Modal = forwardRef((_a, ref) => {
     var { visible } = _a, others = __rest(_a, ["visible"]);
-    return (React.createElement(AnimatePresence, null, visible ? (React.createElement(RNModal, { ref: ref, animationType: 'none', transparent: true },
+    return (React.createElement(AnimatePresence, null, visible ? (React.createElement(RNModal, { ref: ref, visible: true, animationType: 'none', transparent: true },
         React.createElement(Layer, Object.assign({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0 }, others)))) : null));
 });
 Modal.displayName = 'Modal';

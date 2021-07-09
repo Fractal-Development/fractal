@@ -27,8 +27,8 @@ const StyledPressable = styled(motion.button) `
     ${extractWebProps};
 `;
 const Pressable = forwardRef((_a, ref) => {
-    var { from, onPress, transition = { type: 'spring' } } = _a, others = __rest(_a, ["from", "onPress", "transition"]);
-    return React.createElement(StyledPressable, Object.assign({ ref: ref, initial: from, transition: transition, onClick: onPress }, others));
+    var { from, currentVariant, animate, onPress, transition = { type: 'spring' } } = _a, others = __rest(_a, ["from", "currentVariant", "animate", "onPress", "transition"]);
+    return (React.createElement(StyledPressable, Object.assign({ ref: ref, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate, transition: transition, onClick: onPress }, others)));
 });
 Pressable.displayName = 'Pressable';
 export { Pressable };

@@ -14,8 +14,9 @@ import styled from 'styled-components/native';
 import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { motify } from '@motify/core';
 import { SafeAreaView } from 'react-native';
-const MotiView = motify(SafeAreaView)();
-const StyledSafeAreaLayer = styled(MotiView) `
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
+const MotiSafeAreaView = motify(SafeAreaView)();
+const StyledSafeAreaLayer = styled(MotiSafeAreaView) `
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};
@@ -23,8 +24,9 @@ const StyledSafeAreaLayer = styled(MotiView) `
     ${extractShadowProps};
 `;
 const SafeAreaLayer = forwardRef((_a, ref) => {
-    var { style } = _a, others = __rest(_a, ["style"]);
-    return React.createElement(StyledSafeAreaLayer, Object.assign({ ref: ref }, others, { style: [style] }));
+    var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);
+    const variantState = useVariantState(currentVariant, variants);
+    return React.createElement(StyledSafeAreaLayer, Object.assign({ ref: ref, state: variantState }, others));
 });
 SafeAreaLayer.displayName = 'Layer';
 export { SafeAreaLayer };

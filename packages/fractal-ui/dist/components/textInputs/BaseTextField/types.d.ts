@@ -1,7 +1,7 @@
 import { AnimationProps } from '../../../sharedProps/AnimationProps';
 import { FractalSharedStyleProps } from '../../../sharedProps/FractalSharedStyleProps';
 import { PlaceholderProps } from '../../../sharedProps/PlaceholderProps';
-import { TextProps as FractalTextProps } from '../../../sharedProps/TextProps';
+import { FractalTextProps } from '../../../sharedProps/TextProps';
 interface BaseTextInputProps {
     value?: string;
     placeholder?: string;

@@ -14,6 +14,7 @@ import styled from 'styled-components/native';
 import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../sharedProps';
 import { Image as RNImage } from 'react-native';
 import { motify } from '@motify/core';
+import { useVariantState } from '../../animations/native/hooks/useVariantState';
 const MotiImage = motify(RNImage)();
 const StyledImage = styled(MotiImage) `
     ${extractBackgroundProps};
@@ -23,8 +24,9 @@ const StyledImage = styled(MotiImage) `
     ${extractShadowProps};
 `;
 const Image = forwardRef((_a, ref) => {
-    var { source, resizeMode } = _a, others = __rest(_a, ["source", "resizeMode"]);
-    return React.createElement(StyledImage, Object.assign({ ref: ref, source: typeof source == 'string' ? { uri: source } : source, resizeMode: resizeMode }, others));
+    var { source, resizeMode, currentVariant, variants } = _a, others = __rest(_a, ["source", "resizeMode", "currentVariant", "variants"]);
+    const variantState = useVariantState(currentVariant, variants);
+    return (React.createElement(StyledImage, Object.assign({ ref: ref, state: variantState, source: typeof source == 'string' ? { uri: source } : source, resizeMode: resizeMode }, others)));
 });
 Image.displayName = 'Image';
 export { Image };

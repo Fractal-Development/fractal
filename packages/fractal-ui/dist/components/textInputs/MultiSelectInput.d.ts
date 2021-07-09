@@ -1,5 +1,6 @@
 import { IDEnabled } from './AutoComplete/types';
-interface MultiSelectInputProps<T> {
+import { LayerProps } from '../containers/Layer/types';
+interface MultiSelectInputProps<T> extends Omit<LayerProps, 'children'> {
     options: Array<T>;
     getOptionLabel: (option: T) => string;
     onSelect: (values: Array<T>) => void;
@@ -12,5 +13,5 @@ interface MultiSelectInputProps<T> {
     controllableSelectedOptions: Array<T>;
     placeholder?: string;
 }
-export declare function MultiSelectInput<T extends IDEnabled>({ options, getOptionLabel, clearButtonText, onSelect, onClearPress, onDeletePress, inputValue, controllableSelectedOptions, onChangeText, placeholder, onSubmitEditing }: MultiSelectInputProps<T>): JSX.Element;
+export declare function MultiSelectInput<T extends IDEnabled>({ options, getOptionLabel, clearButtonText, onSelect, onClearPress, onDeletePress, inputValue, controllableSelectedOptions, onChangeText, placeholder, onSubmitEditing, ...layerProps }: MultiSelectInputProps<T>): JSX.Element;
 export {};

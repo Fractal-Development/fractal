@@ -14,6 +14,7 @@ import styled from 'styled-components/native';
 import { ImageBackground as RNImageBackground } from 'react-native';
 import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { motify } from '@motify/core';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 const MotiImageBackground = motify(RNImageBackground)();
 const StyledImageBackground = styled(MotiImageBackground) `
     ${extractBackgroundProps};
@@ -23,8 +24,9 @@ const StyledImageBackground = styled(MotiImageBackground) `
     ${extractShadowProps};
 `;
 const ImageBackground = forwardRef((_a, ref) => {
-    var { source } = _a, others = __rest(_a, ["source"]);
-    return React.createElement(StyledImageBackground, Object.assign({ ref: ref, source: typeof source == 'string' ? { uri: source } : source }, others));
+    var { source, currentVariant, variants } = _a, others = __rest(_a, ["source", "currentVariant", "variants"]);
+    const variantState = useVariantState(currentVariant, variants);
+    return (React.createElement(StyledImageBackground, Object.assign({ ref: ref, state: variantState, source: typeof source == 'string' ? { uri: source } : source }, others)));
 });
 ImageBackground.displayName = 'ImageBackground';
 export { ImageBackground };

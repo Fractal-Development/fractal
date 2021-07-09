@@ -1,4 +1,5 @@
 export * from './Avatar';
+export * from './AnimatePresence';
 export * from './containers';
 export * from './CheckBox';
 export * from './Dropzone';

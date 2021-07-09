@@ -14,6 +14,7 @@ import styled from 'styled-components/native';
 import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { motify } from '@motify/core';
 import { ScrollView as RNScrollView } from 'react-native';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 const MotiScrollView = motify(RNScrollView)();
 const StyledScrollView = styled(MotiScrollView) `
     ${extractBackgroundProps};
@@ -23,8 +24,9 @@ const StyledScrollView = styled(MotiScrollView) `
     ${extractShadowProps};
 `;
 const ScrollView = forwardRef((_a, ref) => {
-    var { style } = _a, others = __rest(_a, ["style"]);
-    return React.createElement(StyledScrollView, Object.assign({ ref: ref }, others, { style: [style] }));
+    var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);
+    const variantState = useVariantState(currentVariant, variants);
+    return React.createElement(StyledScrollView, Object.assign({ ref: ref, state: variantState }, others));
 });
 ScrollView.displayName = 'Layer';
 export { ScrollView };
