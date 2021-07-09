@@ -46,6 +46,7 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
                 from={{ translateY: modalContentHeight }}
                 animate={{ translateY: 0 }}
                 exit={{ translateY: modalContentHeight }}
+                exitTransition={{ type: 'timing', duration: 360 }}
             >
                 <StyledBlurView intensity={100} tint={themeIdentifier}>
                     <Layer

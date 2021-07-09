@@ -15,7 +15,7 @@ export function SuggestionItem({ label, isSelected, isMultiple, addSeparator, on
     return (
         <TouchableOpacity width={'100%'} onPress={onPress}>
             {isMultiple ? (
-                <CheckMarkRow title={label} isSelected={isSelected} addSeparator={addSeparator} />
+                <CheckMarkRow title={label} isSelected={isSelected} addSeparator={addSeparator} minHeight={46} />
             ) : (
                 <SimpleRow title={label} addSeparator={addSeparator} />
             )}

@@ -1,10 +1,10 @@
 import { ViewStyle } from 'react-native';
 import { OptionalKeys } from 'utility-types';
-import { AnimationContent } from '../../../sharedProps';
+import { FractalSharedAnimationProps } from '../../../sharedProps';
 
 export function insertTransformTransitionValue(
     animatedStyles: ViewStyle,
-    propertyName: OptionalKeys<AnimationContent>,
+    propertyName: OptionalKeys<FractalSharedAnimationProps>,
     value?: number | string
 ): void {
     'worklet';
