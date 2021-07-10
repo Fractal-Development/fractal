@@ -1,8 +1,7 @@
 import React from 'react';
 import { RoundedToggleButton, useTheme } from '@bma98/fractal-ui';
-import { RepeatIcon } from '../../../assets/RepeatIcon';
+import { RepeatIcon, ShuffleIcon } from '../../../assets';
 import { ControlToggleButtonProps } from './types';
-import { ShuffleIcon } from '../../../assets/ShuffleIcon';
 import { getControlToggleButtonAccessibilityProps } from '../accessibility/getControlToggleButtonAccessibilityProps';
 
 export function AudioControlToggleButton({ active, onPress, variant }: ControlToggleButtonProps): JSX.Element {

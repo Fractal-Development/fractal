@@ -1,9 +1,7 @@
 import React, { forwardRef } from 'react';
 import { TextFieldProps } from './BaseTextField/types';
-import { HorizontalLayer } from '../containers/HorizontalLayer';
-import { LayerProps } from '../containers/Layer/types';
-import { useTheme } from '../../context/hooks/useTheme';
-import { Layer } from '../containers/Layer';
+import { HorizontalLayer, LayerProps, Layer } from '../containers';
+import { useTheme } from '../../context';
 import { BaseTextField } from './BaseTextField';
 import { getIconTextFieldAccessibilityProps } from './accessibility/getIconTextFieldAccessibilityProps';
 

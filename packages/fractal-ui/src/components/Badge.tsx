@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '../context/hooks/useTheme';
-import { ButtonVariant } from './buttons/types/ButtonVariant';
+import { useTheme } from '../context';
+import { ButtonVariant } from './buttons';
 import { Layer } from './containers';
 import { Text } from './text';
 

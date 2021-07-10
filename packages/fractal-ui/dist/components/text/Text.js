@@ -10,14 +10,14 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { forwardRef } from 'react';
-import { useTheme } from '../../context/hooks/useTheme';
+import { useTheme } from '../../context';
 import { BaseText } from './BaseText';
 const Text = forwardRef((_a, ref) => {
     var { variant = 'normal' } = _a, others = __rest(_a, ["variant"]);
     const { textVariants, colors } = useTheme();
     const { fontSize, fontWeight, color, fontFamily } = textVariants[variant];
     const finalColor = colors[color];
-    return (React.createElement(BaseText, Object.assign({ ref: ref, selectable: false, fontFamily: fontFamily, fontSize: fontSize, fontWeight: fontWeight, color: finalColor }, others)));
+    return (React.createElement(BaseText, Object.assign({ ref: ref, selectable: false, focusable: false, fontFamily: fontFamily, fontSize: fontSize, fontWeight: fontWeight, color: finalColor }, others)));
 });
 Text.displayName = 'Text';
 export { Text };

@@ -32,7 +32,7 @@ const Pressable = forwardRef((_a, ref) => {
     var { style, currentVariant, variants } = _a, others = __rest(_a, ["style", "currentVariant", "variants"]);
     const [tapStyles, handlePressIn, handlePressOut] = usePressableAnimationStyles(others);
     const variantState = useVariantState(currentVariant, variants);
-    return (React.createElement(StyledPressable, Object.assign({ ref: ref, state: variantState, onPressIn: handlePressIn, onPressOut: handlePressOut, style: [tapStyles, style] }, others)));
+    return (React.createElement(StyledPressable, Object.assign({ ref: ref, padding: 0, state: variantState, onPressIn: handlePressIn, onPressOut: handlePressOut, style: [tapStyles, style] }, others)));
 });
 Pressable.displayName = 'Pressable';
 export { Pressable };

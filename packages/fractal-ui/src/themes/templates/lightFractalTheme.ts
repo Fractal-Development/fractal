@@ -109,7 +109,9 @@ export const sizes: FractalThemeSizes = {
     segmentedControlSize: 32,
     audioControlToggleButtonSize: 32,
     audioControlToggleButtonIconSize: 16,
-    baseRowHeight: 45
+    baseRowHeight: 45,
+    tabListItemHeight: 44,
+    tabListItemWidth: 130
 };
 
 export const shadows: FractalThemeShadows = {

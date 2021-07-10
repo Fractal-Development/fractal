@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '../../context/hooks/useTheme';
+import { useTheme } from '../../context';
 import { BaseText } from './BaseText';
 import { TextProps } from './BaseText/types';
 
@@ -12,6 +12,7 @@ const Text = forwardRef(({ variant = 'normal', ...others }: TextProps, ref: any)
         <BaseText
             ref={ref}
             selectable={false}
+            focusable={false}
             fontFamily={fontFamily}
             fontSize={fontSize}
             fontWeight={fontWeight}

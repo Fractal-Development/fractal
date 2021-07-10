@@ -2,7 +2,7 @@ export function extractDisplayProps({ flex, display, justifyContent, alignItems,
     return `
         ${flex != null ? `flex: ${flex}` : ''};
         display: ${display !== null && display !== void 0 ? display : 'flex'};
-        flex-direction: ${flexDirection !== null && flexDirection !== void 0 ? flexDirection : 'column'};
+        ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};
         ${justifyContent != null ? `justify-content: ${justifyContent}` : ''};
         ${alignItems != null ? `align-items: ${alignItems}` : ''};
         ${alignSelf != null ? `align-self: ${alignSelf}` : ''};

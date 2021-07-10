@@ -34,12 +34,14 @@ export interface WebProps {
         | 'sw-resize'
         | 'w-resize';
     boxSizing?: 'border-box' | 'content-box';
+    focusable?: boolean;
 }
 
-export function extractWebProps({ cursor, pointerEvents, boxSizing = 'border-box' }: WebProps): string {
+export function extractWebProps({ cursor, pointerEvents, focusable, boxSizing = 'border-box' }: WebProps): string {
     return `
         ${cursor ? `cursor: ${cursor}` : ''};
         ${pointerEvents ? `pointer-events: ${pointerEvents === 'box-none' ? 'none' : pointerEvents}` : ''};
         ${boxSizing ? `box-sizing: ${boxSizing}` : ''};
+        ${focusable ? `user-focus: ${focusable ? 'text' : 'none'}` : ''};
     `;
 }

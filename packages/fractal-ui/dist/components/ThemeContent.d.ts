@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { FractalTheme } from '../themes/FractalTheme';
+import { FractalTheme } from '../themes';
 export interface ThemeContentProps {
     children: ReactNode;
     handleThemeManually?: boolean;

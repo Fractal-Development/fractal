@@ -6,7 +6,7 @@ import { AnimationProps, FractalSharedStyleProps } from '../../sharedProps';
 import { ButtonVariant } from './types';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';
 import { useButtonColors } from './hooks/useButtonColors';
-import { ActivityIndicator } from '../ActivityIndicator';
+import { ActivityIndicator } from '../feedback/ActivityIndicator';
 
 export interface ButtonProps extends FractalSharedStyleProps, AnimationProps {
     style?: any;

@@ -26,7 +26,7 @@ const StyledLayer = styled(MotiView) `
 const Layer = forwardRef((_a, ref) => {
     var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);
     const variantState = useVariantState(currentVariant, variants);
-    return React.createElement(StyledLayer, Object.assign({ ref: ref, state: variantState }, others));
+    return React.createElement(StyledLayer, Object.assign({ flexDirection: 'column', ref: ref, state: variantState }, others));
 });
 Layer.displayName = 'Layer';
 export { Layer };

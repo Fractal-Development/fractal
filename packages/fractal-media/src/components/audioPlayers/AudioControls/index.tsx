@@ -17,14 +17,12 @@ const AudioControls = memo(
         onRepeatPress
     }: AudioControlsProps): JSX.Element => {
         return (
-            <Layer>
-                <Layer flexDirection='row' alignItems={'center'} justifyContent={'space-between'}>
-                    <AudioControlToggleButton variant={'shuffle'} active={isEnableShuffle} onPress={onShufflePress} />
-                    <AudioControlButton variant={'previous'} onPress={onPreviousPress} />
-                    <PlayPauseToggleButton active={!isPlaying} onPress={onPlayPausePress} />
-                    <AudioControlButton variant={'next'} onPress={onNextPress} />
-                    <AudioControlToggleButton variant={'repeat'} active={isEnableRepeat} onPress={onRepeatPress} />
-                </Layer>
+            <Layer flexDirection='row' alignItems={'center'} justifyContent={'space-between'}>
+                <AudioControlToggleButton variant={'shuffle'} active={isEnableShuffle} onPress={onShufflePress} />
+                <AudioControlButton variant={'previous'} onPress={onPreviousPress} />
+                <PlayPauseToggleButton active={!isPlaying} onPress={onPlayPausePress} />
+                <AudioControlButton variant={'next'} onPress={onNextPress} />
+                <AudioControlToggleButton variant={'repeat'} active={isEnableRepeat} onPress={onRepeatPress} />
             </Layer>
         );
     }

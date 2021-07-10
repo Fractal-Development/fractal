@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '../context/hooks/useTheme';
+import { useTheme } from '../context';
 import { Layer } from './containers';
 import { Text } from './text';
 const Badge = forwardRef(({ children, variant }, ref) => {

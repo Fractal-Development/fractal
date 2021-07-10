@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Message } from './Message';
-import { BugIcon } from '../../assets/BugIcon';
-import { Layer } from '../containers/Layer';
+import { BugIcon } from '../../assets';
+import { Layer } from '../containers';
 export class ErrorMessage extends React.Component {
     constructor(props) {
         super(props);

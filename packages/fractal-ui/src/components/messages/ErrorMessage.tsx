@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Message } from './Message';
-import { BugIcon } from '../../assets/BugIcon';
-import { Layer } from '../containers/Layer';
-import { LayerProps } from '../containers/Layer/types';
+import { BugIcon } from '../../assets';
+import { Layer, LayerProps } from '../containers';
 
 interface State {
     hasError: boolean;

@@ -28,6 +28,7 @@ const Pressable = forwardRef(({ style, currentVariant, variants, ...others }: Pr
     return (
         <StyledPressable
             ref={ref}
+            padding={0}
             state={variantState}
             onPressIn={handlePressIn}
             onPressOut={handlePressOut}

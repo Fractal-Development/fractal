@@ -1,12 +1,15 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { TextProps } from './types';
-import { extractBackgroundProps } from '../../../sharedProps/BackgroundProps';
-import { extractBorderProps } from '../../../sharedProps/BorderProps';
-import { extractDimensionProps } from '../../../sharedProps/DimensionProps';
-import { extractDisplayProps } from '../../../sharedProps/DisplayProps';
-import { extractShadowProps } from '../../../sharedProps/ShadowProps';
-import { extractTextProps } from '../../../sharedProps/TextProps';
+import {
+    extractBackgroundProps,
+    extractBorderProps,
+    extractDimensionProps,
+    extractDisplayProps,
+    extractShadowProps,
+    extractTextProps
+} from '../../../sharedProps';
+
 import { Text } from 'react-native';
 import { motify } from '@motify/core';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';

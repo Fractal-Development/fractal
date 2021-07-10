@@ -1,4 +1,4 @@
-import { DimensionProps } from '../../sharedProps/DimensionProps';
+import { DimensionProps } from '../../../sharedProps';
 
 export interface ActivityIndicatorCircleProps {
     color: string;

@@ -47,7 +47,3 @@ export function AudioMessagePlayer({ audioSrc, ...layerProps }: AudioMessagePlay
         </Layer>
     );
 }
-
-/* <Layer position={'absolute'} bottom={0}>
-                        <Text variant='smallLabel' fontSize={12}>{`${formatNumberToTime(trackProgress)}`}</Text>
-                    </Layer> */

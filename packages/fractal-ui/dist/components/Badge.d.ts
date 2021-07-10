@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonVariant } from './buttons/types/ButtonVariant';
+import { ButtonVariant } from './buttons';
 interface BadgeProps {
     children?: string;
     variant: ButtonVariant;

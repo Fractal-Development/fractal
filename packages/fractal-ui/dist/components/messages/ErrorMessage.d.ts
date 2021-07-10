@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { LayerProps } from '../containers/Layer/types';
+import { LayerProps } from '../containers';
 interface State {
     hasError: boolean;
     errorMessage: string;

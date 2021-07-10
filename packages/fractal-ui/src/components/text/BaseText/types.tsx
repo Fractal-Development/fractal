@@ -1,7 +1,5 @@
-import { AnimationProps } from '../../../sharedProps/AnimationProps';
-import { FractalSharedStyleProps } from '../../../sharedProps/FractalSharedStyleProps';
-import { FractalTextProps } from '../../../sharedProps/TextProps';
-import { FractalThemeTextVariants } from '../../../themes/FractalTheme';
+import { AnimationProps, FractalSharedStyleProps, FractalTextProps } from '../../../sharedProps';
+import { FractalThemeTextVariants } from '../../../themes';
 import { RequiredKeys } from 'utility-types';
 
 interface DefaultTexProps {

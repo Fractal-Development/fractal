@@ -1,8 +1,6 @@
 import React from 'react';
-import { lightFractalTheme } from '../themes/templates/lightFractalTheme';
-import { darkFractalTheme } from '../themes/templates/darkFractalTheme';
-import { useThemeIdentifier } from '../context/hooks/useThemeIdentifier';
-import { ThemeProvider } from '../context/ThemeContext';
+import { lightFractalTheme, darkFractalTheme } from '../themes';
+import { useThemeIdentifier, ThemeProvider } from '../context';
 import { PlatformAppearanceDetails } from './PlatformAppearanceDetails';
 export function ThemeContent({ children, lightTheme, darkTheme }) {
     const themeIdentifier = useThemeIdentifier();

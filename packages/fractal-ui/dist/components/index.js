@@ -17,7 +17,7 @@ export * from './Switch';
 export * from './tables';
 export * from './text';
 export * from './textInputs';
-export * from './ActivityIndicator';
+export * from './feedback/ActivityIndicator';
 export * from './Badge';
 export * from './Separator';
 export * from './colors';

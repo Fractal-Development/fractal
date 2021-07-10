@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { ActivityIndicatorProps } from './types';
-import { Layer } from '../containers/Layer';
+import { Layer } from '../../containers';
 import { ActivityIndicator as RNActivityIndicator } from 'react-native';
 
 const StyledRNActivityIndicator = styled(RNActivityIndicator)`

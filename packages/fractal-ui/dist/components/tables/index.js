@@ -1,5 +1,5 @@
 export * from './rows';
 export * from './TableContainer';
 export * from './RecyclerView';
-export * from './FlatList';
+export * from './VerticalFlatList';
 //# sourceMappingURL=index.js.map

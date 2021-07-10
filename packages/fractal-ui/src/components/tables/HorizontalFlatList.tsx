@@ -1,14 +1,12 @@
 import React, { ReactElement, useMemo } from 'react';
-import { useSizeValue } from '@bma98/size-class';
 import { RecyclerView, RecyclerViewProps, LayoutProvider } from './RecyclerView';
 
-export interface FlatListProps extends Omit<RecyclerViewProps, 'layoutProvider'> {
+export interface HorizontalFlatListProps extends Omit<RecyclerViewProps, 'layoutProvider' | 'isHorizontal'> {
     rowHeight: number;
+    rowWidth: number;
 }
 
-export function FlatList({ rowHeight, ...others }: FlatListProps): ReactElement {
-    const width = useSizeValue('width');
-
+export function HorizontalFlatList({ rowHeight, rowWidth, ...others }: HorizontalFlatListProps): ReactElement {
     const layoutProvider = useMemo(() => {
         return new LayoutProvider(
             () => {
@@ -16,11 +14,11 @@ export function FlatList({ rowHeight, ...others }: FlatListProps): ReactElement 
             },
             (_, dim) => {
                 dim.height = rowHeight;
-                dim.width = width;
+                dim.width = rowWidth;
                 return;
             }
         );
-    }, [width, rowHeight]);
+    }, [rowWidth, rowHeight]);
 
-    return <RecyclerView layoutProvider={layoutProvider} {...others} />;
+    return <RecyclerView isHorizontal layoutProvider={layoutProvider} {...others} />;
 }

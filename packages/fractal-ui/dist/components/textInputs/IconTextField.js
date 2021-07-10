@@ -10,9 +10,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { forwardRef } from 'react';
-import { HorizontalLayer } from '../containers/HorizontalLayer';
-import { useTheme } from '../../context/hooks/useTheme';
-import { Layer } from '../containers/Layer';
+import { HorizontalLayer, Layer } from '../containers';
+import { useTheme } from '../../context';
 import { BaseTextField } from './BaseTextField';
 import { getIconTextFieldAccessibilityProps } from './accessibility/getIconTextFieldAccessibilityProps';
 const IconTextField = forwardRef((_a, ref) => {

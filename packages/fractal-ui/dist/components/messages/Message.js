@@ -11,9 +11,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import { Text } from '../text';
-import { useTheme } from '../../context/hooks/useTheme';
-import { Layer } from '../containers/Layer';
-import { HorizontalLayer } from '../containers/HorizontalLayer';
+import { Layer, HorizontalLayer } from '../containers';
+import { useTheme } from '../../context';
 const Message = forwardRef((_a, ref) => {
     var { messageType = 'main', title, icon, description } = _a, others = __rest(_a, ["messageType", "title", "icon", "description"]);
     const { colors, spacings, borderRadius } = useTheme();

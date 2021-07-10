@@ -44,7 +44,7 @@ export function extractDisplayProps({
     return `
         ${flex != null ? `flex: ${flex}` : ''};
         display: ${display ?? 'flex'};
-        flex-direction: ${flexDirection ?? 'column'};
+        ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};
         ${justifyContent != null ? `justify-content: ${justifyContent}` : ''};
         ${alignItems != null ? `align-items: ${alignItems}` : ''};
         ${alignSelf != null ? `align-self: ${alignSelf}` : ''};

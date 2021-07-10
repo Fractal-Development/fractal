@@ -15,7 +15,7 @@ import { useTheme } from '../../context';
 import { BaseButton } from './BaseButton';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';
 import { useButtonColors } from './hooks/useButtonColors';
-import { ActivityIndicator } from '../ActivityIndicator';
+import { ActivityIndicator } from '../feedback/ActivityIndicator';
 const Button = forwardRef((_a, ref) => {
     var { variant = 'main', disabled, loading, ariaLabel, children, text, addShadow, onPress, reduceColor } = _a, others = __rest(_a, ["variant", "disabled", "loading", "ariaLabel", "children", "text", "addShadow", "onPress", "reduceColor"]);
     const { borderRadius, sizes, shadows, spacings, colors } = useTheme();

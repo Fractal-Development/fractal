@@ -12,7 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { useMemo } from 'react';
 import { useSizeValue } from '@bma98/size-class';
 import { RecyclerView, LayoutProvider } from './RecyclerView';
-export function FlatList(_a) {
+export function VerticalFlatList(_a) {
     var { rowHeight } = _a, others = __rest(_a, ["rowHeight"]);
     const width = useSizeValue('width');
     const layoutProvider = useMemo(() => {
@@ -26,4 +26,4 @@ export function FlatList(_a) {
     }, [width, rowHeight]);
     return React.createElement(RecyclerView, Object.assign({ layoutProvider: layoutProvider }, others));
 }
-//# sourceMappingURL=FlatList.js.map
+//# sourceMappingURL=VerticalFlatList.js.map
