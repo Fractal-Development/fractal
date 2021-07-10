@@ -1,2 +1,2 @@
 export * from './DetailsListFragment';
-export * from './RecyclerTable';
+export * from './RecyclerTableWithSearchBar';

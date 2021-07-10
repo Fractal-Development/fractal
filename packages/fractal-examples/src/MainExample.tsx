@@ -44,8 +44,7 @@ import {
     GridListFragment,
     GridFragment,
     SocialMediaButtonsFragment,
-    RecyclerTable,
-    LoadingBackgroundFragment
+    RecyclerTableWithSearchBar
 } from './fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
 
@@ -95,8 +94,7 @@ function Content(): JSX.Element {
             <GridListFragment />
             <GridFragment />
             <SocialMediaButtonsFragment />
-            <RecyclerTable />
-            <LoadingBackgroundFragment />
+            <RecyclerTableWithSearchBar />
             <ChartsExamples />
         </PaddingLayer>
     );
