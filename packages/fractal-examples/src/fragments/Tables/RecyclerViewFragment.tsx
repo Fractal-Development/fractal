@@ -6,7 +6,7 @@ import { dataProvider, itemHeightCalulator, rowRenderer, tableDummyData } from '
 
 const heights: Array<number | undefined> = tableDummyData.map(() => undefined);
 
-export function TitleRow(): JSX.Element {
+function TitleRow(): JSX.Element {
     const { colors } = useTheme();
     return (
         <MemoizedBaseRow addSeparator>
@@ -17,7 +17,7 @@ export function TitleRow(): JSX.Element {
     );
 }
 
-export function Table(): JSX.Element {
+function Table(): JSX.Element {
     const { spacings } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
@@ -63,13 +63,13 @@ export function Table(): JSX.Element {
     );
 }
 
-export function RecyclerTableWithSearchBar(): JSX.Element {
+export function RecyclerViewFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Recycler Table With SearchBar
+                RecyclerView Fragment
             </Text>
             <Layer height={500} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Layer flex={1}>

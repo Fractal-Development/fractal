@@ -24,7 +24,6 @@ import {
     CircularIconButtonFragment,
     ColorPickerFragment,
     LayerFragment,
-    LayerAnimatedFragment,
     BoxContentFragment,
     SeparatorsFragment,
     SearchBarFragment,
@@ -44,7 +43,8 @@ import {
     GridListFragment,
     GridFragment,
     SocialMediaButtonsFragment,
-    RecyclerTableWithSearchBar
+    FlatListFragment,
+    RecyclerViewFragment
 } from './fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
 
@@ -65,7 +65,6 @@ function Content(): JSX.Element {
             <RadioFragment />
             <TextsFragment />
             <LayerFragment />
-            <LayerAnimatedFragment />
             <BoxContentFragment />
             <SeparatorsFragment />
             <CrossButtonFragment />
@@ -94,7 +93,8 @@ function Content(): JSX.Element {
             <GridListFragment />
             <GridFragment />
             <SocialMediaButtonsFragment />
-            <RecyclerTableWithSearchBar />
+            <RecyclerViewFragment />
+            <FlatListFragment />
             <ChartsExamples />
         </PaddingLayer>
     );

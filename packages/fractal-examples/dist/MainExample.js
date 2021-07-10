@@ -1,6 +1,6 @@
 import React from 'react';
 import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
-import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerFragment, LayerAnimatedFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, BottomCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, RecyclerTable, LoadingBackgroundFragment } from './fragments';
+import { ThemeSwapper, DropZoneFragment, ChipFragment, TagsInputField, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, LayerFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, BottomCellModalFragment, ErrorMessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, FlatListFragment, RecyclerViewFragment } from './fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
 function Content() {
     return (React.createElement(PaddingLayer, null,
@@ -18,7 +18,6 @@ function Content() {
         React.createElement(RadioFragment, null),
         React.createElement(TextsFragment, null),
         React.createElement(LayerFragment, null),
-        React.createElement(LayerAnimatedFragment, null),
         React.createElement(BoxContentFragment, null),
         React.createElement(SeparatorsFragment, null),
         React.createElement(CrossButtonFragment, null),
@@ -47,8 +46,8 @@ function Content() {
         React.createElement(GridListFragment, null),
         React.createElement(GridFragment, null),
         React.createElement(SocialMediaButtonsFragment, null),
-        React.createElement(RecyclerTable, null),
-        React.createElement(LoadingBackgroundFragment, null),
+        React.createElement(RecyclerViewFragment, null),
+        React.createElement(FlatListFragment, null),
         React.createElement(ChartsExamples, null)));
 }
 export function MainExample() {

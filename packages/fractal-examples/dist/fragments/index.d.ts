@@ -12,5 +12,4 @@ export * from './Spinners';
 export * from './Tables';
 export * from './TextInputs';
 export * from './Texts';
-export * from './LoadingBackgroundFragment';
 export * from './ThemeSwapper';

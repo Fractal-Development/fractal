@@ -1,2 +1,3 @@
 export * from './DetailsListFragment';
-export * from './RecyclerTableWithSearchBar';
+export * from './RecyclerViewFragment';
+export * from './FlatListFragment';
