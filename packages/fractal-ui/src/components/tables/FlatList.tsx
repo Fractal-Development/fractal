@@ -1,7 +1,6 @@
 import React, { ReactElement, useMemo } from 'react';
-import { LayoutProvider } from 'recyclerlistview';
 import { useSizeValue } from '@bma98/size-class';
-import { RecyclerView, RecyclerViewProps } from './RecyclerView';
+import { RecyclerView, RecyclerViewProps, LayoutProvider } from './RecyclerView';
 
 export interface FlatListProps extends Omit<RecyclerViewProps, 'layoutProvider'> {
     rowHeight: number;

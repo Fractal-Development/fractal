@@ -14,10 +14,10 @@ function Table(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={'Table Two'} flex={1}>
+        <TableContainer title={'Fixed Row Height'} flex={1}>
             <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
             <Layer flex={1}>
-                <FlatList key={width} rowHeight={64} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
+                <FlatList key={width} rowHeight={65} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
             </Layer>
         </TableContainer>
     );

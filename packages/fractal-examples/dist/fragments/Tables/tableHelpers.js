@@ -6,7 +6,7 @@ for (let i = 0; i < 1001; i++) {
 }
 const rowRenderer = (_, __, index) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
-    return React.createElement(DetailsRow, { title: text, details: text });
+    return React.createElement(DetailsRow, { title: text, details: text, addSeparator: index !== tableDummyData.length - 1 });
 };
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne !== rowTwo;

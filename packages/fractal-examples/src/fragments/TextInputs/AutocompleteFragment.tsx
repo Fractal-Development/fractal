@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
 
 function PopoverContent(): JSX.Element {
+    const { spacings } = useTheme();
     return (
-        <Box width={110}>
+        <Box marginTop={spacings.m}>
             <Button variant={'alternative'} text={'Pasion'} />
         </Box>
     );

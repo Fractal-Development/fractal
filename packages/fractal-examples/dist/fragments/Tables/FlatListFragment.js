@@ -10,10 +10,10 @@ function Table() {
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
     }, [width]);
-    return (React.createElement(TableContainer, { title: 'Table Two', flex: 1 },
+    return (React.createElement(TableContainer, { title: 'Fixed Row Height', flex: 1 },
         React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(Layer, { flex: 1 },
-            React.createElement(FlatList, { key: width, rowHeight: 64, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
+            React.createElement(FlatList, { key: width, rowHeight: 65, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
 }
 export function FlatListFragment() {
     const { spacings } = useTheme();

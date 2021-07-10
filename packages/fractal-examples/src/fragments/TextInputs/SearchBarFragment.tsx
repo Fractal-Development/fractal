@@ -3,8 +3,9 @@ import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, Circu
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 function PopoverContent(): JSX.Element {
+    const { spacings } = useTheme();
     return (
-        <Box>
+        <Box marginTop={spacings.m}>
             <Button variant={'alternative'} text={'Pasion'} />
         </Box>
     );
@@ -13,13 +14,13 @@ function PopoverContent(): JSX.Element {
 export function SearchBarFragment(): JSX.Element {
     const { spacings } = useTheme();
     const [active, setActive] = useState(false);
-
-    const deactivate = () => setActive(false);
     const toggleActive = () => setActive((active) => !active);
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Search Bar Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Search Bar Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SearchBar
                     placeholder={'Search Bar'}
@@ -45,7 +46,7 @@ export function SearchBarFragment(): JSX.Element {
                         onChangeText={(text) => console.log(`New text ${text}`)}
                         onSearch={(query: string) => console.log('Query: ', query)}
                     />
-                    <Popover active={active} onRequestClose={deactivate} popoverChildren={() => <PopoverContent />}>
+                    <Popover active={active} onRequestClose={toggleActive} popoverChildren={() => <PopoverContent />}>
                         {(ref) => (
                             <CircularIconButton ref={ref} onPress={toggleActive} variant={'success'} marginLeft={spacings.s}>
                                 {(color) => <LoadIcon height={24} width={24} fill={color} />}

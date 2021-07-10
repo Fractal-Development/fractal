@@ -10,9 +10,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useMemo } from 'react';
-import { LayoutProvider } from 'recyclerlistview';
 import { useSizeValue } from '@bma98/size-class';
-import { RecyclerView } from './RecyclerView';
+import { RecyclerView, LayoutProvider } from './RecyclerView';
 export function FlatList(_a) {
     var { rowHeight } = _a, others = __rest(_a, ["rowHeight"]);
     const width = useSizeValue('width');

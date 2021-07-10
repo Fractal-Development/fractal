@@ -9,7 +9,7 @@ for (let i = 0; i < 1001; i++) {
 
 const rowRenderer = (_: any, __: any, index: number | undefined) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
-    return <DetailsRow title={text} details={text} />;
+    return <DetailsRow title={text} details={text} addSeparator={index !== tableDummyData.length - 1} />;
 };
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne !== rowTwo;

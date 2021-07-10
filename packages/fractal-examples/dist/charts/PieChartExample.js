@@ -8,14 +8,15 @@ export function PieChartExample({ data }) {
     const { spacings } = useTheme();
     const flexDirection = getValueForLargeSizeType(type, 'row', 'column');
     const marginBottom = getValueForLargeSizeType(type, 0, spacings.m);
+    const marginRight = getValueForLargeSizeType(type, spacings.m, 0);
     const handleIndex = (index) => {
         setSelectedIndex(index);
     };
     return (React.createElement(Box, { marginBottom: spacings.m },
         React.createElement(PieChart, { height: 200, data: data, selectedSliceIndex: selectedIndex, flexDirection: flexDirection }),
-        React.createElement(Layer, { flexDirection: getValueForLargeSizeType(type, 'row', 'column'), marginTop: spacings.m },
-            React.createElement(Button, { variant: 'main', minWidth: 120, marginBottom: marginBottom, text: 'One', onPress: () => handleIndex(0) }),
-            React.createElement(Button, { variant: 'alternative', minWidth: 120, marginBottom: marginBottom, text: 'Two', onPress: () => handleIndex(1) }),
-            React.createElement(Button, { variant: 'success', minWidth: 120, marginBottom: marginBottom, text: 'Three', onPress: () => handleIndex(2) }))));
+        React.createElement(Layer, { flexDirection: getValueForLargeSizeType(type, 'row', 'column'), marginTop: spacings.m, marginBottom: spacings.m },
+            React.createElement(Button, { variant: 'main', minWidth: 120, marginBottom: marginBottom, marginRight: marginRight, text: 'One', onPress: () => handleIndex(0) }),
+            React.createElement(Button, { variant: 'alternative', minWidth: 120, marginBottom: marginBottom, marginRight: marginRight, text: 'Two', onPress: () => handleIndex(1) }),
+            React.createElement(Button, { variant: 'success', minWidth: 120, text: 'Three', onPress: () => handleIndex(2) }))));
 }
 //# sourceMappingURL=PieChartExample.js.map

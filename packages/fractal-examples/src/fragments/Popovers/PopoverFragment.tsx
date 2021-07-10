@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Button, Text, Popover } from '@bma98/fractal-ui';
+import { useTheme, Box, Button, Text, Popover, LayerProps } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
-function PopoverContent(): JSX.Element {
+function PopoverContent(props: LayerProps): JSX.Element {
     return (
-        <Box width={120}>
+        <Box {...props}>
             <Button variant='alternative' text='Pasion' />
         </Box>
     );
@@ -27,10 +27,13 @@ export function PopoverFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>PopoverView Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                PopoverView Example
+            </Text>
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover
                     placement={'bottom'}
+                    marginTop={spacings.m}
                     active={isBottomPopoverVisible}
                     onRequestClose={toggleBottomPopover}
                     popoverChildren={() => <PopoverContent />}
@@ -41,6 +44,7 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover
                     placement={'top'}
+                    marginBottom={spacings.m}
                     active={isTopPopoverVisible}
                     onRequestClose={toggleTopPopover}
                     popoverChildren={() => <PopoverContent />}
@@ -51,6 +55,7 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m}>
                 <Popover
                     placement={'right'}
+                    marginLeft={spacings.m}
                     active={isRightPopoverVisible}
                     onRequestClose={toggleRightPopover}
                     popoverChildren={() => <PopoverContent />}
@@ -61,6 +66,7 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m} marginBottom={spacings.m} alignItems={'flex-end'}>
                 <Popover
                     placement={'left'}
+                    marginRight={spacings.m}
                     active={isLeftPopoverVisible}
                     onRequestClose={toggleLeftPopover}
                     popoverChildren={() => <PopoverContent />}

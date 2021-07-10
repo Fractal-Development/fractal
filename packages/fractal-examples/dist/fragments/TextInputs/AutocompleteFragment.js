@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
 function PopoverContent() {
-    return (React.createElement(Box, { width: 110 },
+    const { spacings } = useTheme();
+    return (React.createElement(Box, { marginTop: spacings.m },
         React.createElement(Button, { variant: 'alternative', text: 'Pasion' })));
 }
 export function AutocompleteFragment() {

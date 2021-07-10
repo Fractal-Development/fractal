@@ -36,7 +36,7 @@ function Table(): JSX.Element {
                     heights[index] = height;
                     dim.height = height;
                 }
-                dim.width = width - 64;
+                dim.width = width;
                 return;
             }
         );
@@ -47,7 +47,7 @@ function Table(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={'Table Two'} flex={1}>
+        <TableContainer title={''} flex={1}>
             <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
             <TitleRow />
             <Layer flex={1}>

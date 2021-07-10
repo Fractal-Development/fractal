@@ -26,14 +26,14 @@ function Table() {
                 heights[index] = height;
                 dim.height = height;
             }
-            dim.width = width - 64;
+            dim.width = width;
             return;
         });
     }, [width]);
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
     }, [width]);
-    return (React.createElement(TableContainer, { title: 'Table Two', flex: 1 },
+    return (React.createElement(TableContainer, { title: '', flex: 1 },
         React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(TitleRow, null),
         React.createElement(Layer, { flex: 1 },
