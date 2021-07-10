@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Layer, LayoutProvider, MemoizedBaseRow, RecyclerView, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, itemHeightCalulator, rowRenderer, tableDummyData } from './tableHelpers';
+import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './tableHelpers';
 
 const heights: Array<number | undefined> = tableDummyData.map(() => undefined);
 
@@ -32,7 +32,7 @@ function Table(): JSX.Element {
                 if (height != null) {
                     dim.height = height;
                 } else {
-                    height = itemHeightCalulator();
+                    height = itemHeightCalculator();
                     heights[index] = height;
                     dim.height = height;
                 }

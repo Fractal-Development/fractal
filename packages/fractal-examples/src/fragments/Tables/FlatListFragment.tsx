@@ -5,7 +5,7 @@ import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAcc
 import { dataProvider, rowRenderer, tableDummyData } from './tableHelpers';
 
 function Table(): JSX.Element {
-    const { spacings } = useTheme();
+    const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
 
@@ -17,7 +17,7 @@ function Table(): JSX.Element {
         <TableContainer title={'Fixed Row Height'} flex={1}>
             <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
             <Layer flex={1}>
-                <FlatList key={width} rowHeight={45} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
+                <FlatList key={width} rowHeight={sizes.baseRowHeight} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
             </Layer>
         </TableContainer>
     );
