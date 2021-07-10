@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Layer } from '../../containers/Layer';
+import { Layer } from '../../containers';
 import { Text } from '../../text';
 import { BaseRow, BaseRowProps } from './BaseRow';
 import { HorizontalLayer } from '../../containers';

@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { HorizontalLayer } from '../../containers/HorizontalLayer';
+import { HorizontalLayer } from '../../containers';
 import { BaseRow, BaseRowProps } from './BaseRow';
 import { useTheme } from '../../../context';
 import { Check } from '../../CheckBox/Check';

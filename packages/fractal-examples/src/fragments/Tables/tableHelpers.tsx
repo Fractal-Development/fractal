@@ -20,7 +20,7 @@ function randomIntFromInterval(min: number, max: number) {
 }
 
 function itemHeightCalulator(): number {
-    return randomIntFromInterval(65, 200);
+    return randomIntFromInterval(45, 200);
 }
 
 export { tableDummyData, rowRenderer, dataProvider, itemHeightCalulator };

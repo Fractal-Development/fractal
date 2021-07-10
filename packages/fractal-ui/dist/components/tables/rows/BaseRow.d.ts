@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayerProps } from '../../containers/Layer/types';
+import { LayerProps } from '../../containers';
 export interface BaseRowProps extends LayerProps {
     addSeparator?: boolean;
 }

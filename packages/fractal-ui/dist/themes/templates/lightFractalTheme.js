@@ -95,7 +95,8 @@ export const sizes = {
     radioButtonSize: 20,
     segmentedControlSize: 32,
     audioControlToggleButtonSize: 32,
-    audioControlToggleButtonIconSize: 16
+    audioControlToggleButtonIconSize: 16,
+    baseRowHeight: 45
 };
 export const shadows = {
     mainShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',

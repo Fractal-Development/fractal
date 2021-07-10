@@ -1,5 +1,5 @@
 import React, { forwardRef, memo } from 'react';
-import { LayerProps } from '../../containers/Layer/types';
+import { LayerProps } from '../../containers';
 import { Separator } from '../../Separator';
 import { useTheme } from '../../../context';
 import { Layer } from '../../containers';

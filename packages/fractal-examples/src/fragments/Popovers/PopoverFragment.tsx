@@ -33,10 +33,9 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover
                     placement={'bottom'}
-                    marginTop={spacings.m}
                     active={isBottomPopoverVisible}
                     onRequestClose={toggleBottomPopover}
-                    popoverChildren={() => <PopoverContent />}
+                    popoverChildren={() => <PopoverContent marginTop={spacings.m} />}
                 >
                     {(ref) => <Button ref={ref} variant={'main'} width={220} onPress={toggleBottomPopover} text={'Bottom'} />}
                 </Popover>
@@ -44,10 +43,9 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover
                     placement={'top'}
-                    marginBottom={spacings.m}
                     active={isTopPopoverVisible}
                     onRequestClose={toggleTopPopover}
-                    popoverChildren={() => <PopoverContent />}
+                    popoverChildren={() => <PopoverContent marginBottom={spacings.m} />}
                 >
                     {(ref) => <Button ref={ref} variant={'main'} width={220} onPress={toggleTopPopover} text={'Top'} />}
                 </Popover>
@@ -55,10 +53,9 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m}>
                 <Popover
                     placement={'right'}
-                    marginLeft={spacings.m}
                     active={isRightPopoverVisible}
                     onRequestClose={toggleRightPopover}
-                    popoverChildren={() => <PopoverContent />}
+                    popoverChildren={() => <PopoverContent marginLeft={spacings.m} />}
                 >
                     {(ref) => <Button ref={ref} variant={'main'} width={120} onPress={toggleRightPopover} text={'Right'} />}
                 </Popover>
@@ -66,10 +63,9 @@ export function PopoverFragment(): JSX.Element {
             <Box marginTop={spacings.m} marginBottom={spacings.m} alignItems={'flex-end'}>
                 <Popover
                     placement={'left'}
-                    marginRight={spacings.m}
                     active={isLeftPopoverVisible}
                     onRequestClose={toggleLeftPopover}
-                    popoverChildren={() => <PopoverContent />}
+                    popoverChildren={() => <PopoverContent marginRight={spacings.m} />}
                 >
                     {(ref) => <Button ref={ref} variant={'main'} width={120} onPress={toggleLeftPopover} text={'Left'} />}
                 </Popover>

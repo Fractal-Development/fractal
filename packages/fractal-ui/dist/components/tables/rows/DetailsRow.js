@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { forwardRef } from 'react';
-import { Layer } from '../../containers/Layer';
+import { Layer } from '../../containers';
 import { Text } from '../../text';
 import { BaseRow } from './BaseRow';
 import { HorizontalLayer } from '../../containers';
