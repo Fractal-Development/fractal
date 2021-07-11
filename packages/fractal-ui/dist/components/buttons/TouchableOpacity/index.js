@@ -43,7 +43,7 @@ const TouchableOpacity = forwardRef((_a, ref) => {
         setPressed(true);
         onPress === null || onPress === void 0 ? void 0 : onPress();
     };
-    return (React.createElement(StyledTouchableOpacity, Object.assign({ ref: ref, transition: transition, whileTap: tapStyles, onClick: handleButtonPress, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate }, longPressEvent, getButtonAccessibilityProps(pressed), others)));
+    return (React.createElement(StyledTouchableOpacity, Object.assign({ ref: ref, transition: transition, whileTap: tapStyles, flexDirection: 'column', onClick: handleButtonPress, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate }, longPressEvent, getButtonAccessibilityProps(pressed), others)));
 });
 TouchableOpacity.displayName = 'TouchableOpacity';
 export { TouchableOpacity };

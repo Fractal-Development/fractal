@@ -48,6 +48,7 @@ const TouchableOpacity = forwardRef(
                 ref={ref}
                 transition={transition}
                 whileTap={tapStyles}
+                flexDirection={'column'}
                 onClick={handleButtonPress}
                 initial={currentVariant ? 'from' : from}
                 animate={currentVariant ?? animate}
