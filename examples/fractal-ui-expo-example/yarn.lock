@@ -1133,7 +1133,7 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#cecbe1e4918e24386e5a89c1ea4d11e00f458a59"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#63299a28c4f9dfc99715c5d06fbb9f08ec68a740"
   dependencies:
     d3-array "2.3.3"
     d3-scale "3.3.0"
@@ -1141,13 +1141,13 @@
 
 "@bma98/fractal-examples@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#8757103a6094426c8068afe46ce79a13bffd28fe"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#9660290e14bbf23369db0a50ccaa2ca83c854391"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#addf349426a56d98b015523eacb320225bdab229"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#ba94b749cd4cd01674186aed5a544d1048d78627"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"

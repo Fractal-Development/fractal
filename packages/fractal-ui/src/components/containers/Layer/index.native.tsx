@@ -24,7 +24,7 @@ const StyledLayer = styled(MotiView)`
 
 const Layer = forwardRef(({ currentVariant, variants, ...others }: LayerProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);
-    return <StyledLayer flexDirection={'column'} ref={ref} state={variantState} {...others} />;
+    return <StyledLayer ref={ref} state={variantState} {...others} />;
 });
 
 Layer.displayName = 'Layer';
