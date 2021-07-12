@@ -45,7 +45,7 @@ import {
     SocialMediaButtonsFragment,
     FlatListFragment,
     RecyclerViewFragment
-} from './fragments';
+} from './ui-fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
 
 function Content(): JSX.Element {
