@@ -7,4 +7,4 @@ const ExcitedFaceIcon = memo((props) => {
 });
 ExcitedFaceIcon.displayName = 'ExcitedFaceIcon';
 export { ExcitedFaceIcon };
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map
