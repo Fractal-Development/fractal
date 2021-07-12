@@ -8,7 +8,7 @@ export function CrossButtonFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Cross Button Example
+                Cross Button Fragment
             </Text>
             <Box alignContent={'center'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <CrossButton onPress={() => console.log('Cross button pressed')} />

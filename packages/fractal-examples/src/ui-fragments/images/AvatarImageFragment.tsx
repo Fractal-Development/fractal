@@ -41,7 +41,7 @@ export function AvatarImageFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Avatar and Image Example
+                Avatar and Image Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Box marginBottom={spacings.s} flexDirection={'row'}>

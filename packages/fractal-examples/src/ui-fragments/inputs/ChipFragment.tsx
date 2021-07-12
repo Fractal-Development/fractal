@@ -8,7 +8,7 @@ export function ChipFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Chip Example
+                Chip Fragment
             </Text>
             <Layer flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Chip text={'Ver reportes'} marginRight={spacings.s} onCrossButtonPress={() => console.log('Cross button pressed')} />

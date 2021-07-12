@@ -10,7 +10,7 @@ export function IconTextFieldFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Icon Text Field Example
+                Icon Text Field Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <IconTextField leftImage={renderSearchIcon} placeholder='Escribe aquí' marginBottom={spacings.s} />

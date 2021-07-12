@@ -29,7 +29,7 @@ export function FlatListFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                VerticalFlatList Fragment
+                Vertical FlatList Fragment
             </Text>
             <Layer height={500} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Layer flex={1}>

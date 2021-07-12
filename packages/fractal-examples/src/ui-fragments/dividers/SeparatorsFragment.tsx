@@ -10,7 +10,7 @@ export function SeparatorsFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Separator Example
+                Separator Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getSeparatorExampleAccessibilityProps()}>
                 <Text variant={'normal'} marginBottom={spacings.s} {...getTextAccessibilityProps()}>

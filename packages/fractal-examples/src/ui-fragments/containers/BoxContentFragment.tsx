@@ -10,7 +10,7 @@ export function BoxContentFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Box Example
+                Box Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getBoxAccessibilityProps()}>
                 <Text variant={'normal'} marginBottom={spacings.m} {...getTextAccessibilityProps()}>

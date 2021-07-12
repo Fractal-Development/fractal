@@ -8,7 +8,7 @@ export function PickerFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Picker Example
+                Picker Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Picker

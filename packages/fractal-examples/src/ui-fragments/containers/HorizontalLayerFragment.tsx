@@ -9,7 +9,7 @@ export function HorizontalLayerFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Horizontal Layer Example
+                Horizontal Layer Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <HorizontalLayer

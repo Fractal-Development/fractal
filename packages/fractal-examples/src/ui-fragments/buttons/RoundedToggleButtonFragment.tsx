@@ -22,7 +22,7 @@ export function RoundedToggleButtonFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Rounded Toggle Button Example
+                Rounded Toggle Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <RoundedToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>

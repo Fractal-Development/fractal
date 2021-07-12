@@ -11,7 +11,7 @@ export function SliderFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Slider Example
+                Slider Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Slider

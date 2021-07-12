@@ -10,7 +10,7 @@ export function ThemeSwapperFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Swap Theme
+                Theme Swapper Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Button onPress={handlePress} variant='alternative' text='Swap Theme' />

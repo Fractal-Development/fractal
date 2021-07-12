@@ -19,7 +19,7 @@ export function SearchBarFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Search Bar Example
+                Search Bar Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SearchBar

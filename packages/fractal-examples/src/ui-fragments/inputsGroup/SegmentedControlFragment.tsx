@@ -9,7 +9,7 @@ export function SegmentedControlFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Segmented Control Example
+                Segmented Control Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SegmentedControl

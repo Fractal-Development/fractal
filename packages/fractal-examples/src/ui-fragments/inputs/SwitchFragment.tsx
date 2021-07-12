@@ -9,7 +9,7 @@ export function SwitchFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Switch Example
+                Switch Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Switch value={isEnabled} onValueChange={(value) => setIsEnabled(value)} />

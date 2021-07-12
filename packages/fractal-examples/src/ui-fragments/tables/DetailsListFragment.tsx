@@ -13,7 +13,7 @@ export function DetailsListFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Details List Example
+                Details List Fragment
             </Text>
             <TableContainer
                 label='2'

@@ -9,7 +9,7 @@ export function MarginLayerFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Margin Layer Example
+                Margin Layer Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <MarginLayer

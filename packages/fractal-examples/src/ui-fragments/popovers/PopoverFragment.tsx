@@ -28,7 +28,7 @@ export function PopoverFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                PopoverView Example
+                PopoverView Fragment
             </Text>
             <Box marginTop={spacings.m} alignItems={'center'}>
                 <Popover

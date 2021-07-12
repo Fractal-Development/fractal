@@ -8,7 +8,7 @@ export function DatePickerFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Date Picker Example
+                Date Picker Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <DatePicker iosDoneText='Done' onChange={(date) => console.log('Local Date: ', date.toLocaleDateString())} />

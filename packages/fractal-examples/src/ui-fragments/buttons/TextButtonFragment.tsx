@@ -8,7 +8,7 @@ export function TextButtonFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Text Button Example
+                Text Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <TextButton variant={'main'} marginBottom={spacings.s}>

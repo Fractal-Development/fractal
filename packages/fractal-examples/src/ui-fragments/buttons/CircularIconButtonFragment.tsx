@@ -18,7 +18,7 @@ export function CircularIconButtonFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Circular Icon Button Example
+                Circular Icon Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <CircularIconButton variant={'main'} marginBottom={spacings.s}>

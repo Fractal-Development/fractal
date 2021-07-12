@@ -9,7 +9,7 @@ export function PaddingLayerFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Padding Layer Example
+                Padding Layer Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <PaddingLayer

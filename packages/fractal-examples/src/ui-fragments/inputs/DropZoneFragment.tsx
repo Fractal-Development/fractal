@@ -8,7 +8,7 @@ export function DropZoneFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Dropzone Example
+                Dropzone Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Box marginBottom={spacings.s}>

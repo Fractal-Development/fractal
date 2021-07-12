@@ -8,7 +8,7 @@ export function SocialMediaButtonsFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Social Media Buttons
+                Social Media Buttons Fragment
             </Text>
             <Layer alignItems={'center'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SocialMediaButtons

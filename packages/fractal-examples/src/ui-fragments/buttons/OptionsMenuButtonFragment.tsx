@@ -9,7 +9,7 @@ export function OptionsMenuButtonFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Options Menu Button Example
+                Options Menu Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <OptionsMenuButton

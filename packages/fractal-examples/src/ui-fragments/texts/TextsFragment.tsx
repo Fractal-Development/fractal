@@ -9,7 +9,7 @@ export function TextsFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Text Example
+                Texts Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getTextExampleAccessibilityProps()}>
                 <Text variant={'title'} marginBottom={spacings.s}>
