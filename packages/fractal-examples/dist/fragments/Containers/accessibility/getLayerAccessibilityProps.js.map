@@ -1,1 +1,1 @@
-{"version":3,"file":"getLayerAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/fragments/Containers/accessibility/getLayerAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,0BAA0B;IACtC,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,OAAO;KACxB,CAAC;AACN,CAAC"}
+{"version":3,"file":"getLayerAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/fragments/containers/accessibility/getLayerAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,0BAA0B;IACtC,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,OAAO;KACxB,CAAC;AACN,CAAC"}
