@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import { Layer } from '../Layer';
-import { useTheme } from "../../../context";
+import { useTheme } from '../../../context';
 import { getSeparatorAccessibilityProps } from './accessibility/getSeparatorAccessibilityProps';
 const Separator = forwardRef((_a, ref) => {
     var { isAtBackgroundLevel } = _a, others = __rest(_a, ["isAtBackgroundLevel"]);

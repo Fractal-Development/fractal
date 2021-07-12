@@ -11,4 +11,5 @@ export * from './CircularIconButton';
 export * from './OptionsButton';
 export * from './types';
 export * from './OptionsMenuButton';
+export * from './socialButtons';
 //# sourceMappingURL=index.js.map

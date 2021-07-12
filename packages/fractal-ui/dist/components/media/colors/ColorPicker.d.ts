@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayerProps } from "../../layout";
+import { LayerProps } from '../../layout';
 export interface ColorPickerProps extends Partial<Omit<LayerProps, 'children'>> {
     colors: Array<string>;
     onColorChange: (color: string) => void;

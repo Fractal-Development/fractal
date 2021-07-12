@@ -10,8 +10,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { forwardRef } from 'react';
-import { useTheme } from "../../../context";
-import { HorizontalLayer } from "../../layout";
+import { useTheme } from '../../../context';
+import { HorizontalLayer } from '../../layout';
 import { ColorToggle } from './ColorToggle';
 import { useControllableState } from '../../../hooks/useControllableState';
 import { getColorAccessibilityProps } from './accessibility/getColorAccessibilityProps';
