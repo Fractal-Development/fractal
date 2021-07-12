@@ -68,8 +68,8 @@ function Content(): JSX.Element {
             <BoxContentFragment />
             <SeparatorsFragment />
             <CrossButtonFragment />
-            <OptionsMenuButtonFragment />
             <OptionsButtonFragment />
+            <OptionsMenuButtonFragment />
             <TextButtonFragment />
             <ButtonFragment />
             <ToggleButtonFragment />

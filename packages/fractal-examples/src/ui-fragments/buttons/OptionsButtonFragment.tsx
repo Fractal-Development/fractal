@@ -1,23 +1,17 @@
 import React from 'react';
-import { useTheme, Box, Text, OptionsMenuButton, ChevronDownIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, OptionsButton } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function OptionsButtonFragment(): JSX.Element {
     const { spacings } = useTheme();
 
-    const optionsValue = ['Option 1', 'Option 2', 'Option 3'];
-
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Options Button Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Options Button Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <OptionsMenuButton
-                    options={optionsValue}
-                    onOptionPress={(value) => {
-                        console.log(value);
-                    }}
-                    customIcon={(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
-                />
+                <OptionsButton />
             </Box>
         </>
     );

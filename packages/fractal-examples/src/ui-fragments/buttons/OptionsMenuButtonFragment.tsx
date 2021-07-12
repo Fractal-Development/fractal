@@ -1,9 +1,10 @@
 import React from 'react';
-import { useTheme, Box, OptionsButton, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, OptionsMenuButton, ChevronDownIcon } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function OptionsMenuButtonFragment(): JSX.Element {
     const { spacings } = useTheme();
+    const optionsValue = ['Option 1', 'Option 2', 'Option 3'];
 
     return (
         <>
@@ -11,7 +12,13 @@ export function OptionsMenuButtonFragment(): JSX.Element {
                 Options Menu Button Example
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <OptionsButton />
+                <OptionsMenuButton
+                    options={optionsValue}
+                    onOptionPress={(value) => {
+                        console.log(value);
+                    }}
+                    customIcon={(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
+                />
             </Box>
         </>
     );
