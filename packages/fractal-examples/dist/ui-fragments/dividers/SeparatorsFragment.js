@@ -6,7 +6,7 @@ import { getTextAccessibilityProps } from './accessibility/getTextAccessibilityP
 export function SeparatorsFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Separator Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Separator Fragment"),
         React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl }, getSeparatorExampleAccessibilityProps()),
             React.createElement(Text, Object.assign({ variant: 'normal', marginBottom: spacings.s }, getTextAccessibilityProps()), "Below is the separator that is more visible with the isAtBackgroundLevel variable"),
             React.createElement(Separator, { isAtBackgroundLevel: true, marginBottom: spacings.s }),

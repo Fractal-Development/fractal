@@ -5,7 +5,7 @@ import { getTextExampleAccessibilityProps } from './accessibility/getTextExample
 export function TextsFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Text Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Texts Fragment"),
         React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl }, getTextExampleAccessibilityProps()),
             React.createElement(Text, { variant: 'title', marginBottom: spacings.s }, "Title text."),
             React.createElement(Text, { variant: 'title2', marginBottom: spacings.s }, "Title2 text."),

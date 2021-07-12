@@ -16,7 +16,7 @@ export function PopoverFragment() {
     const [isLeftPopoverVisible, setLeftPopoverVisible] = useState(false);
     const toggleLeftPopover = () => setLeftPopoverVisible((current) => !current);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "PopoverView Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "PopoverView Fragment"),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },
             React.createElement(Popover, { placement: 'bottom', active: isBottomPopoverVisible, onRequestClose: toggleBottomPopover, popoverChildren: () => React.createElement(PopoverContent, { marginTop: spacings.m }) }, (ref) => React.createElement(Button, { ref: ref, variant: 'main', width: 220, onPress: toggleBottomPopover, text: 'Bottom' }))),
         React.createElement(Box, { marginTop: spacings.m, alignItems: 'center' },

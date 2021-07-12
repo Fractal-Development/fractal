@@ -6,7 +6,7 @@ export function RoundedToggleButtonFragment() {
     const [active, setActive] = useState(false);
     const toggleActive = (active) => setActive(active);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Rounded Toggle Button Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Rounded Toggle Button Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(RoundedToggleButton, { variant: 'main', active: active, onActiveChange: toggleActive, marginBottom: spacings.s }, (color) => React.createElement(FacebookIcon, { height: 24, width: 24, fill: color })),
             React.createElement(RoundedToggleButton, { variant: 'main', active: active, onActiveChange: toggleActive, marginBottom: spacings.s, disabled: true }, (color) => React.createElement(FacebookIcon, { height: 24, width: 24, fill: color })),

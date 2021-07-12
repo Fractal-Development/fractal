@@ -4,7 +4,7 @@ import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAcc
 export function GridFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Grid Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Grid Fragment"),
         React.createElement(Box, { height: 300, marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Grid, null,
                 React.createElement(GridColumn, { backgroundColor: colors.dangerInteractiveColor300 }),

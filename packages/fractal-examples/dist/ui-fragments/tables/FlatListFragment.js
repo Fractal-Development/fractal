@@ -18,7 +18,7 @@ function Table() {
 export function FlatListFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "VerticalFlatList Fragment"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Vertical FlatList Fragment"),
         React.createElement(Layer, { height: 500, marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Layer, { flex: 1 },
                 React.createElement(Table, null)))));

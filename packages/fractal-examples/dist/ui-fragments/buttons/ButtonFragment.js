@@ -4,7 +4,7 @@ import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAcc
 export function ButtonFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Button Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Button Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Button, { variant: 'main', text: 'Main', marginBottom: spacings.s }),
             React.createElement(Button, { variant: 'main', text: 'Main disabled', marginBottom: spacings.s, disabled: true }),

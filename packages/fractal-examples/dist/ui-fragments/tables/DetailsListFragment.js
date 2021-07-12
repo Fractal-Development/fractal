@@ -8,7 +8,7 @@ const detailsCardContent = [
 export function DetailsListFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Details List Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Details List Fragment"),
         React.createElement(TableContainer, { label: '2', title: 'Title', titleColorVariant: 'warning', labelColorVariant: 'warning', marginTop: spacings.s, marginBottom: spacings.xl },
             detailsCardContent.map((item) => {
                 return React.createElement(DetailsRow, { key: item[0], title: item[0], details: item[1], addSeparator: true });

@@ -12,7 +12,7 @@ export function AvatarImageFragment() {
                 React.createElement(Image, { source: 'https://picsum.photos/id/870/200/300', label: 'Asset', resizeMode: resizeMode, height: '100%', borderRadius: 16, marginTop: spacings.s }))));
     }, [spacings.m, spacings.s, spacings.xs]);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Avatar and Image Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Avatar and Image Fragment"),
         React.createElement(Layer, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Box, { marginBottom: spacings.s, flexDirection: 'row' },
                 React.createElement(Avatar, { source: 'https://picsum.photos/id/370/200', label: 'Avatar' }),

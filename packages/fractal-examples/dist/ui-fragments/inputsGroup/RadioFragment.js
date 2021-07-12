@@ -4,7 +4,7 @@ import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAcc
 export function RadioFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Radio Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Radio Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(RadioGroup, { radioButtons: [
                     { value: '1', label: 'Option One' },

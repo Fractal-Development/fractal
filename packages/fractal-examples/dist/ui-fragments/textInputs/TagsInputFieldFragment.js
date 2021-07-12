@@ -36,7 +36,7 @@ export function TagsInputFieldFragment() {
         setSelectedTags((currentTags) => currentTags.filter((item) => item.id !== tag.id));
     };
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Multi Select Input Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Multi Select Input Fragment"),
         React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl, maxHeight: 320 }, getMultiSelectInputAccessibilityProps()),
             React.createElement(MultiSelectInput, { placeholder: 'Escribe y da enter', options: tags, getOptionLabel: (tag) => tag.value, onSelect: handleSelect, onDeletePress: removeTag, onClearPress: clearTags, clearButtonText: 'Limpiar', inputValue: tag, controllableSelectedOptions: selectedTags, onChangeText: setTag, onSubmitEditing: handleSubmitEditing }))));
 }

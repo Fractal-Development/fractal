@@ -4,7 +4,7 @@ import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAcc
 export function CrossButtonFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Cross Button Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Cross Button Fragment"),
         React.createElement(Box, { alignContent: 'center', marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(CrossButton, { onPress: () => console.log('Cross button pressed') }))));
 }

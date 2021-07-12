@@ -5,7 +5,7 @@ import { getMarginLayerAccessibilityProps } from './accessibility/getMarginLayer
 export function MarginLayerFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Margin Layer Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Margin Layer Fragment"),
         React.createElement(Layer, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(MarginLayer, Object.assign({ height: 150, borderStyle: 'solid', borderWidth: 2, borderColor: colors.black }, getMarginLayerAccessibilityProps()),
                 React.createElement(Box, { alignItems: 'center', justifyContent: 'center', width: '100%', height: '50%' },

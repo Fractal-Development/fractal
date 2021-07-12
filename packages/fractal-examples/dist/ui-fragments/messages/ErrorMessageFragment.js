@@ -8,7 +8,7 @@ function logErrorToService(error, componentStack) {
 export function ErrorMessageFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Error Message Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Error Message Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(ErrorMessage, { onError: logErrorToService },
                 React.createElement(BuggyComponentFragment, null)))));
