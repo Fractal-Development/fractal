@@ -6,4 +6,4 @@ const StarIcon = memo((props) => {
 });
 StarIcon.displayName = 'StarIcon';
 export { StarIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

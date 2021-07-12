@@ -6,4 +6,4 @@ const HeartIcon = memo((props) => {
 });
 HeartIcon.displayName = 'HeartIcon';
 export { HeartIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

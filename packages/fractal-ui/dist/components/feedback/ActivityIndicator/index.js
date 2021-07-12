@@ -12,7 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { Layer } from '../../containers';
+import { Layer } from '../../layout';
 import { getActivityIndicatorAccessibilityProps } from './accessibility/getActivityIndicatorAccessibilityProps';
 const BackgroundCircle = styled(motion.circle) `
     stroke: ${({ color }) => color};

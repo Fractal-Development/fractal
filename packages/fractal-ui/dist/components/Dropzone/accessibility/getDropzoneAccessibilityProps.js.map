@@ -1,1 +1,0 @@
-{"version":3,"file":"getDropzoneAccessibilityProps.js","sourceRoot":"","sources":["../../../../src/components/Dropzone/accessibility/getDropzoneAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,6BAA6B;IACzC,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,UAAU;KAC3B,CAAC;AACN,CAAC"}

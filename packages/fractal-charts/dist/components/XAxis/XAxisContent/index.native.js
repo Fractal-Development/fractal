@@ -23,9 +23,9 @@ export function XAxisContent({ width, height, textProps, ticks, formatLabel, x, 
                 height,
                 width
             } },
-            React.createElement(G, null, 
+            React.createElement(G, null,
             // don't render labels if width isn't measured yet,
             // causes rendering issues
             width > 0 && ticks.map(renderLabelText))))));
 }
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

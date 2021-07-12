@@ -6,4 +6,4 @@ const ShuffleIcon = memo((props) => {
 });
 ShuffleIcon.displayName = 'ShuffleIcon';
 export { ShuffleIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

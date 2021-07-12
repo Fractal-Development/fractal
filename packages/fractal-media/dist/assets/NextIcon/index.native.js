@@ -6,4 +6,4 @@ const NextIcon = memo((props) => {
 });
 NextIcon.displayName = 'NextIcon';
 export { NextIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

@@ -6,4 +6,4 @@ const PlayIcon = memo((props) => {
 });
 PlayIcon.displayName = 'PlayIcon';
 export { PlayIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

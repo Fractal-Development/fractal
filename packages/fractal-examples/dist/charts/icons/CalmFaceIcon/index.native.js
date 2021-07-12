@@ -9,4 +9,4 @@ const CalmFaceIcon = memo((props) => {
 });
 CalmFaceIcon.displayName = 'CalmFaceIcon';
 export { CalmFaceIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

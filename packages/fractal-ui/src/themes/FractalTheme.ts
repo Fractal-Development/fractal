@@ -100,8 +100,7 @@ export interface FractalThemeSizes {
     audioControlToggleButtonSize: number;
     audioControlToggleButtonIconSize: number;
     baseRowHeight: number;
-    tabListItemHeight: number;
-    tabListItemWidth: number;
+    colorTabListItemHeight: number;
 }
 
 export interface FractalThemeShadows {

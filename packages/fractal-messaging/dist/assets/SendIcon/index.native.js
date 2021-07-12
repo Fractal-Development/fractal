@@ -6,4 +6,4 @@ const SendIcon = memo((props) => {
 });
 SendIcon.displayName = 'SendIcon';
 export { SendIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

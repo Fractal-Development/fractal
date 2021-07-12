@@ -6,4 +6,4 @@ const PlayCircleIcon = memo((props) => {
 });
 PlayCircleIcon.displayName = 'PlayCircleIcon';
 export { PlayCircleIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

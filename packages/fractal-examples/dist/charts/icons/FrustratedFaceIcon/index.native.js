@@ -7,4 +7,4 @@ const FrustratedFaceIcon = memo((props) => {
 });
 FrustratedFaceIcon.displayName = 'FrustratedFaceIcon';
 export { FrustratedFaceIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

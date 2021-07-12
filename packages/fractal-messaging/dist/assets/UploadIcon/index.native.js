@@ -7,4 +7,4 @@ const UploadIcon = memo((props) => {
 });
 UploadIcon.displayName = 'UploadIcon';
 export { UploadIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

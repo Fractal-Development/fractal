@@ -13,4 +13,4 @@ export function AreaChartContent({ width, height, ticks, x, y, coordinates, path
         })),
         gradientConfig && (React.createElement(LinearGradient, { startColor: gradientConfig.startColor, startOpacity: gradientConfig.startOpacity, endColor: gradientConfig.endColor, endOpacity: gradientConfig.endOpacity }))));
 }
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

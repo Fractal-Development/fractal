@@ -6,4 +6,4 @@ const RepeatIcon = memo((props) => {
 });
 RepeatIcon.displayName = 'RepeatIcon';
 export { RepeatIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

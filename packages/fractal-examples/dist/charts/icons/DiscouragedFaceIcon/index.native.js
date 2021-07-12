@@ -7,4 +7,4 @@ const DiscouragedFaceIcon = memo((props) => {
 });
 DiscouragedFaceIcon.displayName = 'DiscouragedFaceIcon';
 export { DiscouragedFaceIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

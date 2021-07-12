@@ -97,8 +97,7 @@ export const sizes = {
     audioControlToggleButtonSize: 32,
     audioControlToggleButtonIconSize: 16,
     baseRowHeight: 45,
-    tabListItemHeight: 44,
-    tabListItemWidth: 130
+    colorTabListItemHeight: 44
 };
 export const shadows = {
     mainShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',

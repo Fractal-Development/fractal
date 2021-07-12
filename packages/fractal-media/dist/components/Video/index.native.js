@@ -17,4 +17,4 @@ const Video = forwardRef((_a, ref) => {
 });
 Video.displayName = 'Video';
 export { Video };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

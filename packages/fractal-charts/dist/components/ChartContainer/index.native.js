@@ -35,4 +35,4 @@ export function ChartContainer(_a) {
     return (React.createElement(Layer, Object.assign({ style: style }, layerProps),
         React.createElement(Animated.View, { style: [Object.assign({ flex: 1 }, contentStyle), animatedStyle], onLayout: onLayout }, children)));
 }
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map

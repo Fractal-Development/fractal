@@ -1,7 +1,7 @@
 import React from 'react';
 import { lightFractalTheme, darkFractalTheme } from '../themes';
 import { useThemeIdentifier, ThemeProvider } from '../context';
-import { PlatformAppearanceDetails } from './PlatformAppearanceDetails';
+import { PlatformAppearanceDetails } from './platform';
 export function ThemeContent({ children, lightTheme, darkTheme }) {
     const themeIdentifier = useThemeIdentifier();
     const finalLightTheme = lightTheme !== null && lightTheme !== void 0 ? lightTheme : lightFractalTheme;

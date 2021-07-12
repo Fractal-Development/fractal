@@ -1,4 +1,4 @@
-import { PressableProps } from '../../../components/buttons/Pressable/types';
+import { PressableProps } from '../../../components/interactive/buttons/Pressable/types';
 import { ViewStyle } from 'react-native';
 import { useSharedValueCallbacks } from './useSharedValueCallbacks';
 import { interpolateColor, useAnimatedStyle } from 'react-native-reanimated';

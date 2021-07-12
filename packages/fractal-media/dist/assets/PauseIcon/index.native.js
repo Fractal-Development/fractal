@@ -6,4 +6,4 @@ const PauseIcon = memo((props) => {
 });
 PauseIcon.displayName = 'PauseIcon';
 export { PauseIcon };
-//# sourceMappingURL=index.native.js.map
+//# sourceMappingURL=index.platform.js.map
