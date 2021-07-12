@@ -10,7 +10,9 @@ export function BottomCellModalFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Bottom Cell Modal Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Bottom Cell Modal Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Button variant='main' text='Show Bottom Cell Modal' onPress={toggleBottomCell} />
                 <BottomCellModal visible={bottomCellVisible} onDismiss={toggleBottomCell}>

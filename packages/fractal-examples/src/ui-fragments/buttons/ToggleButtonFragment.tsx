@@ -14,7 +14,9 @@ export function ToggleButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>ToggleButton Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Toggle Button Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
                     {() => (

@@ -1,10 +1,10 @@
 import React from 'react';
 import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
 import {
-    ThemeSwapper,
+    ThemeSwapperFragment,
     DropZoneFragment,
     ChipFragment,
-    TagsInputField,
+    TagsInputFieldFragment,
     ActivityIndicatorFragment,
     AvatarImageFragment,
     ImageBackgroundFragment,
@@ -53,10 +53,10 @@ import { ChartsExamples } from './charts/ChartsExamples';
 function Content(): JSX.Element {
     return (
         <PaddingLayer>
-            <ThemeSwapper />
+            <ThemeSwapperFragment />
             <DropZoneFragment />
             <ChipFragment />
-            <TagsInputField />
+            <TagsInputFieldFragment />
             <ActivityIndicatorFragment />
             <AvatarImageFragment />
             <ImageBackgroundFragment />

@@ -12,7 +12,9 @@ export function DetailsListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Details List Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Details List Example
+            </Text>
             <TableContainer
                 label='2'
                 title='Title'

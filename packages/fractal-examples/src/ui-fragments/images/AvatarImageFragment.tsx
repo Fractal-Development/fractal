@@ -13,7 +13,13 @@ export function AvatarImageFragment(): JSX.Element {
 
             return (
                 <React.Fragment key={resizeMode}>
-                    <Text variant={'subtitle'} alignItems={'center'} marginTop={spacings.m} marginBottom={spacings.xs} {...getTitleTextAccessibilityProps(2)}>
+                    <Text
+                        variant={'subtitle'}
+                        alignItems={'center'}
+                        marginTop={spacings.m}
+                        marginBottom={spacings.xs}
+                        {...getTitleTextAccessibilityProps(2)}
+                    >
                         {text}
                     </Text>
                     <Box marginBottom={spacings.s} height={500}>
@@ -34,7 +40,9 @@ export function AvatarImageFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Avatar and Image Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Avatar and Image Example
+            </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Box marginBottom={spacings.s} flexDirection={'row'}>
                     <Avatar source={'https://picsum.photos/id/370/200'} label={'Avatar'} />

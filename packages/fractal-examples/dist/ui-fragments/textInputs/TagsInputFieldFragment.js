@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTheme, Box, MultiSelectInput, Text } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getMultiSelectInputAccessibilityProps } from './accessibility/getMultiSelectInputAccessibilityProps';
-export function TagsInputField() {
+export function TagsInputFieldFragment() {
     const { spacings } = useTheme();
     const [tag, setTag] = useState('');
     const [tags, setTags] = useState([
@@ -40,4 +40,4 @@ export function TagsInputField() {
         React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl, maxHeight: 320 }, getMultiSelectInputAccessibilityProps()),
             React.createElement(MultiSelectInput, { placeholder: 'Escribe y da enter', options: tags, getOptionLabel: (tag) => tag.value, onSelect: handleSelect, onDeletePress: removeTag, onClearPress: clearTags, clearButtonText: 'Limpiar', inputValue: tag, controllableSelectedOptions: selectedTags, onChangeText: setTag, onSubmitEditing: handleSubmitEditing }))));
 }
-//# sourceMappingURL=TagsInputField.js.map
+//# sourceMappingURL=TagsInputFieldFragment.js.map

@@ -7,7 +7,9 @@ export function GridListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Grid List Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Grid List Example
+            </Text>
             <GridList
                 data={['One', 'Two', 'Three', 'Four']}
                 numColumns={2}

@@ -7,7 +7,9 @@ export function MessageInputFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Message Input Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Message Input Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 {/*<MessageInput onSend={(message: string) => console.log('Message: ', message)} placeholder='Escribe aquí' />*/}
             </Box>

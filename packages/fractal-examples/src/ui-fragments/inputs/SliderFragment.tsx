@@ -10,7 +10,9 @@ export function SliderFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Slider Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Slider Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Slider
                     step={1}

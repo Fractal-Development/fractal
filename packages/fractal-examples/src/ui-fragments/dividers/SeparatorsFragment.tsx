@@ -9,7 +9,9 @@ export function SeparatorsFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Separator Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Separator Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getSeparatorExampleAccessibilityProps()}>
                 <Text variant={'normal'} marginBottom={spacings.s} {...getTextAccessibilityProps()}>
                     Below is the separator that is more visible with the isAtBackgroundLevel variable
@@ -19,7 +21,9 @@ export function SeparatorsFragment(): JSX.Element {
                     Below is the separator that is less visible without the isAtBackgroundLevel variable
                 </Text>
                 <Separator marginBottom={spacings.s} />
-                <Text variant={'normal'} {...getTextAccessibilityProps()}>Some text.</Text>
+                <Text variant={'normal'} {...getTextAccessibilityProps()}>
+                    Some text.
+                </Text>
             </Box>
         </>
     );

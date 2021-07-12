@@ -10,7 +10,7 @@ export function ToggleButtonFragment() {
         setText(active ? 'Toggle Button activated' : 'Toggle Button');
     };
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "ToggleButton Example"),
+        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Toggle Button Example"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(ToggleButton, { variant: 'main', active: active, onActiveChange: toggleActive, marginBottom: spacings.s }, () => (React.createElement(Text, { variant: 'button', color: colors.text }, text))),
             React.createElement(ToggleButton, { variant: 'main', active: false, marginBottom: spacings.s, disabled: true }, () => (React.createElement(Text, { variant: 'button', color: colors.text }, 'Toggle Button disabled'))),

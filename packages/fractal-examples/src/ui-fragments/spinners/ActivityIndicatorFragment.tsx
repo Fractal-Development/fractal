@@ -10,7 +10,9 @@ export function ActivityIndicatorFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Activity Indicator Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Activity Indicator Example
+            </Text>
             <Box alignContent={'center'} flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ActivityIndicator width={width} height={height} color={colors.mainInteractiveColor} marginRight={spacings.m} />
                 <ActivityIndicator width={width} height={height} color={colors.alternativeInteractiveColor} marginRight={spacings.m} />

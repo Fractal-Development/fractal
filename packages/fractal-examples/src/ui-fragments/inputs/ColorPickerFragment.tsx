@@ -8,7 +8,9 @@ export function ColorPickerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Color Picker Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Color Picker Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ColorPicker
                     value={selectedColor}

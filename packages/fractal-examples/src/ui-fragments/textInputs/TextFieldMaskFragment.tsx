@@ -7,7 +7,9 @@ export function TextFieldMaskFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Text Field Mask Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Text Field Mask Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <TextFieldMask
                     type={'money'}

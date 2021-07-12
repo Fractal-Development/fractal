@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Button } from '@bma98/fractal-ui';
-export function BuggyComponent() {
+export function BuggyComponentFragment() {
     const [showError, setShowError] = useState(false);
     const triggerError = useCallback(() => {
         setShowError(true);
@@ -12,4 +12,4 @@ export function BuggyComponent() {
     }, [showError]);
     return React.createElement(Button, { variant: 'danger', text: 'Trigger Error', onPress: triggerError });
 }
-//# sourceMappingURL=BuggyComponent.js.map
+//# sourceMappingURL=BuggyComponentFragment.js.map

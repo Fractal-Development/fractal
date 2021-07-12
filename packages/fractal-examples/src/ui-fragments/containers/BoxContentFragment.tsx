@@ -9,13 +9,17 @@ export function BoxContentFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Box Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Box Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getBoxAccessibilityProps()}>
                 <Text variant={'normal'} marginBottom={spacings.m} {...getTextAccessibilityProps()}>
                     Use it to separate your components into blocks.
                 </Text>
                 <Separator marginBottom={spacings.m} />
-                <Text variant={'normal'} {...getTextAccessibilityProps()}>Like this.</Text>
+                <Text variant={'normal'} {...getTextAccessibilityProps()}>
+                    Like this.
+                </Text>
             </Box>
         </>
     );

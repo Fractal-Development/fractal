@@ -7,7 +7,9 @@ export function ImageBackgroundFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>ImageBackground Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                ImageBackground Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ImageBackground
                     source={'https://picsum.photos/id/870/200/300'}

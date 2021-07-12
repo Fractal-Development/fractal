@@ -8,7 +8,9 @@ export function CheckBoxFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Check Box Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Check Box Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <CheckBox value={isChecked} onValueChange={(value) => setIsChecked(value)} label={'Selectable'} />
             </Box>

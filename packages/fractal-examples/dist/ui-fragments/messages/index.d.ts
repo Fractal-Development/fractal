@@ -1,2 +1,2 @@
-export * from './BuggyComponent';
+export * from './BuggyComponentFragment';
 export * from './ErrorMessageFragment';

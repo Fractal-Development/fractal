@@ -12,5 +12,5 @@ export * from './spinners';
 export * from './tables';
 export * from './textInputs';
 export * from './texts';
-export * from './ThemeSwapper';
+export * from './ThemeSwapperFragment';
 //# sourceMappingURL=index.js.map

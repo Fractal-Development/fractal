@@ -1,1 +1,1 @@
-export * from './SeparatorsFragment'
+export * from './SeparatorsFragment';

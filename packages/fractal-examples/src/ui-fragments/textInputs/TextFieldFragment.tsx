@@ -7,7 +7,9 @@ export function TextFieldFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Text Field Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Text Field Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <TextField placeholder='Escribe aquí' />
             </Box>

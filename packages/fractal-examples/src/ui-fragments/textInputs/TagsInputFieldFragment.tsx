@@ -8,7 +8,7 @@ interface Tag {
     value: string;
 }
 
-export function TagsInputField(): JSX.Element {
+export function TagsInputFieldFragment(): JSX.Element {
     const { spacings } = useTheme();
     const [tag, setTag] = useState('');
     const [tags, setTags] = useState<Array<Tag>>([
@@ -50,7 +50,9 @@ export function TagsInputField(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Multi Select Input Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Multi Select Input Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} maxHeight={320} {...getMultiSelectInputAccessibilityProps()}>
                 <MultiSelectInput
                     placeholder={'Escribe y da enter'}

@@ -7,7 +7,9 @@ export function DropZoneFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Dropzone Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Dropzone Example
+            </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Box marginBottom={spacings.s}>
                     <Dropzone onChangeAcceptedFiles={(files) => console.log('Accepted files: ', files)} />

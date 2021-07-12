@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme, Box, Text, ErrorMessage } from '@bma98/fractal-ui';
-import { BuggyComponent } from './BuggyComponent';
+import { BuggyComponentFragment } from './BuggyComponentFragment';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 function logErrorToService(error: Error, componentStack: string) {
@@ -12,10 +12,12 @@ export function ErrorMessageFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>Error Message Example</Text>
+            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+                Error Message Example
+            </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ErrorMessage onError={logErrorToService}>
-                    <BuggyComponent />
+                    <BuggyComponentFragment />
                 </ErrorMessage>
             </Box>
         </>
