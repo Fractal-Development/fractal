@@ -4,6 +4,7 @@ import {
     ThemeSwapperFragment,
     DropZoneFragment,
     ChipFragment,
+    ChipListFragment,
     TagsInputFieldFragment,
     ActivityIndicatorFragment,
     AvatarImageFragment,
@@ -56,6 +57,7 @@ function Content(): JSX.Element {
             <ThemeSwapperFragment />
             <DropZoneFragment />
             <ChipFragment />
+            <ChipListFragment />
             <TagsInputFieldFragment />
             <ActivityIndicatorFragment />
             <AvatarImageFragment />
