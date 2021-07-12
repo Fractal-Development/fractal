@@ -23,7 +23,9 @@ import {
     RoundedToggleButtonFragment,
     CircularIconButtonFragment,
     ColorPickerFragment,
-    LayerFragment,
+    HorizontalLayerFragment,
+    MarginLayerFragment,
+    PaddingLayerFragment,
     BoxContentFragment,
     SeparatorsFragment,
     SearchBarFragment,
@@ -64,7 +66,9 @@ function Content(): JSX.Element {
             <CheckBoxFragment />
             <RadioFragment />
             <TextsFragment />
-            <LayerFragment />
+            <HorizontalLayerFragment />
+            <MarginLayerFragment />
+            <PaddingLayerFragment />
             <BoxContentFragment />
             <SeparatorsFragment />
             <CrossButtonFragment />
