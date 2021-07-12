@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from "../../../context";
-import { HorizontalLayer, LayerProps } from "../../layout";
+import { useTheme } from '../../../context';
+import { HorizontalLayer, LayerProps } from '../../layout';
 import { ColorToggle } from './ColorToggle';
 import { useControllableState } from '../../../hooks/useControllableState';
 import { getColorAccessibilityProps } from './accessibility/getColorAccessibilityProps';
