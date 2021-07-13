@@ -9,8 +9,8 @@ import {
     TagsInputFieldFragment,
     ActivityIndicatorFragment,
     AvatarFragment,
-    ImageBackgroundFragment,
     ImageFragment,
+    ImageBackgroundFragment,
     SegmentedControlFragment,
     SliderFragment,
     SwitchFragment,
@@ -68,8 +68,8 @@ function Content(): JSX.Element {
             <TagsInputFieldFragment />
             <ActivityIndicatorFragment />
             <AvatarFragment />
-            <ImageBackgroundFragment />
             <ImageFragment />
+            <ImageBackgroundFragment />
             <SegmentedControlFragment />
             <SliderFragment />
             <SwitchFragment />
