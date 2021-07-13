@@ -30,7 +30,7 @@ import {
     MarginLayerFragment,
     PaddingLayerFragment,
     BoxContentFragment,
-    SeparatorsFragment,
+    SeparatorFragment,
     SearchBarFragment,
     AutocompleteFragment,
     TextFieldFragment,
@@ -78,7 +78,7 @@ function Content(): JSX.Element {
             <MarginLayerFragment />
             <PaddingLayerFragment />
             <BoxContentFragment />
-            <SeparatorsFragment />
+            <SeparatorFragment />
             <CrossButtonFragment />
             <OptionsButtonFragment />
             <OptionsMenuButtonFragment />
