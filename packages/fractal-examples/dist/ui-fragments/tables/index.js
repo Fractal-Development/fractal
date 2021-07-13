@@ -1,4 +1,5 @@
 export * from './DetailsListFragment';
 export * from './RecyclerViewFragment';
-export * from './FlatListFragment';
+export * from './HorizontalFlatListFragment';
+export * from './VerticalFlatListFragment';
 //# sourceMappingURL=index.js.map

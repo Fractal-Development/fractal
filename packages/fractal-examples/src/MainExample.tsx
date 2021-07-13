@@ -50,7 +50,8 @@ import {
     GridListFragment,
     GridFragment,
     SocialMediaButtonsFragment,
-    FlatListFragment,
+    VerticalFlatListFragment,
+    HorizontalFlatListFragment,
     RecyclerViewFragment
 } from './ui-fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
@@ -108,7 +109,8 @@ function Content(): JSX.Element {
             <GridFragment />
             <SocialMediaButtonsFragment />
             <RecyclerViewFragment />
-            <FlatListFragment />
+            <VerticalFlatListFragment />
+            <HorizontalFlatListFragment />
             <ChartsExamples />
         </PaddingLayer>
     );

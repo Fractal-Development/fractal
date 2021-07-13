@@ -23,7 +23,7 @@ function Table(): JSX.Element {
     );
 }
 
-export function FlatListFragment(): JSX.Element {
+export function VerticalFlatListFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
