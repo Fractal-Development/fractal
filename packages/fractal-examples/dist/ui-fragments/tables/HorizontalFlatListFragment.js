@@ -13,7 +13,7 @@ function Table() {
     return (React.createElement(TableContainer, { title: 'Fixed Row Width', flex: 1 },
         React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(Layer, { flex: 1 },
-            React.createElement(HorizontalFlatList, { key: width, rowWidth: 200, rowHeight: sizes.baseRowHeight, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
+            React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: sizes.baseRowHeight, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
 }
 export function HorizontalFlatListFragment() {
     const { spacings } = useTheme();

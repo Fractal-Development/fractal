@@ -19,7 +19,7 @@ function Table(): JSX.Element {
             <Layer flex={1}>
                 <HorizontalFlatList
                     key={width}
-                    rowWidth={200}
+                    rowWidth={100}
                     rowHeight={sizes.baseRowHeight}
                     dataProvider={dataProviderState}
                     rowRenderer={rowRenderer}
