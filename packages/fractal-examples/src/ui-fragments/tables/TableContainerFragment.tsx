@@ -7,13 +7,13 @@ const detailsCardContent: Array<[string, string]> = [
     ['Title 2', 'Details 2']
 ];
 
-export function DetailsListFragment(): JSX.Element {
+export function TableContainerFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Details List Fragment
+                Table Container Fragment
             </Text>
             <TableContainer
                 label='2'

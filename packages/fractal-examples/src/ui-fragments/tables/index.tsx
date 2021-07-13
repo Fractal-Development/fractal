@@ -1,4 +1,3 @@
-export * from './DetailsListFragment';
+export * from './TableContainerFragment';
 export * from './RecyclerViewFragment';
-export * from './HorizontalFlatListFragment';
 export * from './VerticalFlatListFragment';

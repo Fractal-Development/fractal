@@ -46,12 +46,11 @@ import {
     BadgeFragment,
     MessageFragment,
     PopoverFragment,
-    DetailsListFragment,
+    TableContainerFragment,
     GridListFragment,
     GridFragment,
     SocialMediaButtonsFragment,
     VerticalFlatListFragment,
-    HorizontalFlatListFragment,
     RecyclerViewFragment
 } from './ui-fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
@@ -104,13 +103,12 @@ function Content(): JSX.Element {
             <BadgeFragment />
             <MessageFragment />
             <PopoverFragment />
-            <DetailsListFragment />
+            <TableContainerFragment />
             <GridListFragment />
             <GridFragment />
             <SocialMediaButtonsFragment />
             <RecyclerViewFragment />
             <VerticalFlatListFragment />
-            <HorizontalFlatListFragment />
             <ChartsExamples />
         </PaddingLayer>
     );
