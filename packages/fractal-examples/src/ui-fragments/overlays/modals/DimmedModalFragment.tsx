@@ -15,7 +15,11 @@ export function DimmedModalFragment(): JSX.Element {
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Button variant='main' text='Show Dimmed Modal' onPress={toggleDimmedModal} />
-                <DimmedModal visible={dimmedModalVisible} onDismiss={toggleDimmedModal} />
+                <DimmedModal visible={dimmedModalVisible} onDismiss={toggleDimmedModal}>
+                    <Box>
+                        <Button variant='warning' text='Dismiss Dimmed Modal' onPress={toggleDimmedModal} />
+                    </Box>
+                </DimmedModal>
             </Box>
         </>
     );

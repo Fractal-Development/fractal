@@ -9,6 +9,8 @@ export function DimmedModalFragment() {
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Dimmed Modal Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Button, { variant: 'main', text: 'Show Dimmed Modal', onPress: toggleDimmedModal }),
-            React.createElement(DimmedModal, { visible: dimmedModalVisible, onDismiss: toggleDimmedModal }))));
+            React.createElement(DimmedModal, { visible: dimmedModalVisible, onDismiss: toggleDimmedModal },
+                React.createElement(Box, null,
+                    React.createElement(Button, { variant: 'warning', text: 'Dismiss Dimmed Modal', onPress: toggleDimmedModal }))))));
 }
 //# sourceMappingURL=DimmedModalFragment.js.map
