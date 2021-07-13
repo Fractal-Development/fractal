@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, ColorTabList, Layer, Text, FileIcon } from '@bma98/fractal-ui';
+import { useTheme, ColorTabList, Layer, Text } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function ColorTabListFragment(): JSX.Element {
@@ -13,12 +13,12 @@ export function ColorTabListFragment(): JSX.Element {
             <Layer flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ColorTabList
                     tabs={[
-                        { tabColor: colors.alternativeInteractiveColor, text: 'Tab 1' },
-                        { tabColor: colors.contentInteractiveColor, text: 'Tab 2' },
-                        { tabColor: colors.dangerInteractiveColor, text: 'Tab 3' }
+                        { tabColor: colors.contentInteractiveColor, text: 'Tab 1' },
+                        { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
+                        { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
                     ]}
                 >
-                    {() => <FileIcon height={24} width={24} fill={colors.text} />}
+                    {() => <Text variant={'normal'}>Tab Content</Text>}
                 </ColorTabList>
             </Layer>
         </>
