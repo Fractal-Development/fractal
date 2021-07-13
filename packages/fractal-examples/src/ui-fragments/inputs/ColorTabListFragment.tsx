@@ -13,7 +13,7 @@ export function ColorTabListFragment(): JSX.Element {
             <Layer flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ColorTabList
                     tabs={[
-                        { tabColor: colors.contentInteractiveColor, text: 'Tab 1' },
+                        { tabColor: colors.white, text: 'Tab 1' },
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
                     ]}

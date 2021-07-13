@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTheme, Box, Text, Badge } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, Message, LoadIcon } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
-export function BadgeFragment(): JSX.Element {
+export function MessageFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
@@ -11,7 +11,12 @@ export function BadgeFragment(): JSX.Element {
                 Bagde Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Badge variant={'success'}>Some message</Badge>
+                <Message
+                    title={'Some message'}
+                    messageType={'alternative'}
+                    description={'You can use it to show any message'}
+                    icon={() => <LoadIcon />}
+                />
             </Box>
         </>
     );

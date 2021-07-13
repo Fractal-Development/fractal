@@ -1,1 +1,1 @@
-export declare function BadgeeFragment(): JSX.Element;
+export declare function BadgeFragment(): JSX.Element;

@@ -7,7 +7,7 @@ export function ColorTabListFragment() {
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Color Tab List Fragment"),
         React.createElement(Layer, { flexDirection: 'row', marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(ColorTabList, { tabs: [
-                    { tabColor: colors.contentInteractiveColor, text: 'Tab 1' },
+                    { tabColor: colors.white, text: 'Tab 1' },
                     { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
                     { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
                 ] }, () => React.createElement(Text, { variant: 'normal' }, "Tab Content")))));
