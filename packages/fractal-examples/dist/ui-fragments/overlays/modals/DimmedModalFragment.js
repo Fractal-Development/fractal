@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Button, Text, DimmedModal } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-export function MiddleCellModalFragment() {
+export function DimmedModalFragment() {
     const { spacings } = useTheme();
     const [dimmedModalVisible, setDimmedModalVisible] = useState(false);
     const toggleDimmedModal = () => setDimmedModalVisible((currentValue) => !currentValue);

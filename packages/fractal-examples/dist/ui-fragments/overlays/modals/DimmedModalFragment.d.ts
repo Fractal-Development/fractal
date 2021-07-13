@@ -1,1 +1,1 @@
-export declare function MiddleCellModalFragment(): JSX.Element;
+export declare function DimmedModalFragment(): JSX.Element;
