@@ -41,6 +41,7 @@ import {
     BlurredModalFragment,
     MiddleCellModalFragment,
     BottomCellModalFragment,
+    BadgeeFragment,
     ErrorMessageFragment,
     PopoverFragment,
     DetailsListFragment,
@@ -95,6 +96,7 @@ function Content(): JSX.Element {
             <BlurredModalFragment />
             <MiddleCellModalFragment />
             <BottomCellModalFragment />
+            <BadgeeFragment />
             <ErrorMessageFragment />
             <PopoverFragment />
             <DetailsListFragment />
