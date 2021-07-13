@@ -8,8 +8,9 @@ import {
     ColorTabListFragment,
     TagsInputFieldFragment,
     ActivityIndicatorFragment,
-    AvatarImageFragment,
+    AvatarFragment,
     ImageBackgroundFragment,
+    ImageFragment,
     SegmentedControlFragment,
     SliderFragment,
     SwitchFragment,
@@ -41,8 +42,8 @@ import {
     TimePickerFragment,
     BlurredModalFragment,
     MiddleCellModalFragment,
-    BottomCellModalFragment,
     DimmedModalFragment,
+    BottomCellModalFragment,
     ErrorMessageFragment,
     BadgeFragment,
     MessageFragment,
@@ -66,8 +67,9 @@ function Content(): JSX.Element {
             <ColorTabListFragment />
             <TagsInputFieldFragment />
             <ActivityIndicatorFragment />
-            <AvatarImageFragment />
+            <AvatarFragment />
             <ImageBackgroundFragment />
+            <ImageFragment />
             <SegmentedControlFragment />
             <SliderFragment />
             <SwitchFragment />
@@ -99,8 +101,8 @@ function Content(): JSX.Element {
             <TimePickerFragment />
             <BlurredModalFragment />
             <MiddleCellModalFragment />
-            <BottomCellModalFragment />
             <DimmedModalFragment />
+            <BottomCellModalFragment />
             <ErrorMessageFragment />
             <BadgeFragment />
             <MessageFragment />

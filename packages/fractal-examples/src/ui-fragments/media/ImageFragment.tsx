@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import { useTheme, Box, Layer, Avatar, Image, Text, ResizeModeType } from '@bma98/fractal-ui';
+import { useTheme, Box, Layer, Image, Text, ResizeModeType } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
-export function AvatarImageFragment(): JSX.Element {
+export function ImageFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     const resizeModes: Array<ResizeModeType> = ['contain', 'center', 'repeat', 'cover', 'stretch'];
@@ -41,11 +41,10 @@ export function AvatarImageFragment(): JSX.Element {
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Avatar and Image Fragment
+                Image Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Box marginBottom={spacings.s} flexDirection={'row'}>
-                    <Avatar source={'https://picsum.photos/id/370/200'} label={'Avatar'} />
                     <Image
                         source={'https://picsum.photos/id/870/200/300'}
                         label='Asset'
