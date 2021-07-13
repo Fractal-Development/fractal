@@ -1,6 +1,6 @@
 import React from 'react';
 import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
-import { ThemeSwapperFragment, DropZoneFragment, ChipFragment, ChipListFragment, ColorTabListFragment, TagsInputFieldFragment, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, HorizontalLayerFragment, MarginLayerFragment, PaddingLayerFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, BottomCellModalFragment, BadgeFragment, ErrorMessageFragment, MessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, FlatListFragment, RecyclerViewFragment } from './ui-fragments';
+import { ThemeSwapperFragment, DropZoneFragment, ChipFragment, ChipListFragment, ColorTabListFragment, TagsInputFieldFragment, ActivityIndicatorFragment, AvatarImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioButtonFragment, RadioGroupFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, HorizontalLayerFragment, MarginLayerFragment, PaddingLayerFragment, BoxContentFragment, SeparatorsFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, BottomCellModalFragment, ErrorMessageFragment, BadgeFragment, MessageFragment, PopoverFragment, DetailsListFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, FlatListFragment, RecyclerViewFragment } from './ui-fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
 function Content() {
     return (React.createElement(PaddingLayer, null,
@@ -17,7 +17,8 @@ function Content() {
         React.createElement(SliderFragment, null),
         React.createElement(SwitchFragment, null),
         React.createElement(CheckBoxFragment, null),
-        React.createElement(RadioFragment, null),
+        React.createElement(RadioButtonFragment, null),
+        React.createElement(RadioGroupFragment, null),
         React.createElement(TextsFragment, null),
         React.createElement(HorizontalLayerFragment, null),
         React.createElement(MarginLayerFragment, null),
@@ -44,8 +45,8 @@ function Content() {
         React.createElement(BlurredModalFragment, null),
         React.createElement(MiddleCellModalFragment, null),
         React.createElement(BottomCellModalFragment, null),
-        React.createElement(BadgeFragment, null),
         React.createElement(ErrorMessageFragment, null),
+        React.createElement(BadgeFragment, null),
         React.createElement(MessageFragment, null),
         React.createElement(PopoverFragment, null),
         React.createElement(DetailsListFragment, null),

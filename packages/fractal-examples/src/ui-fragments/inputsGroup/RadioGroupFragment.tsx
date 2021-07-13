@@ -2,13 +2,13 @@ import React from 'react';
 import { useTheme, Box, Text, RadioGroup } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
-export function RadioFragment(): JSX.Element {
+export function RadioGroupFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
         <>
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                Radio Fragment
+                Radio Group Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <RadioGroup

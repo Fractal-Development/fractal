@@ -1,2 +1,3 @@
-export * from './RadioFragment';
+export * from './RadioButtonFragment';
+export * from './RadioGroupFragment';
 export * from './SegmentedControlFragment';

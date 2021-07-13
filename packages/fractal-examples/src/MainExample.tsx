@@ -14,7 +14,8 @@ import {
     SliderFragment,
     SwitchFragment,
     CheckBoxFragment,
-    RadioFragment,
+    RadioButtonFragment,
+    RadioGroupFragment,
     TextsFragment,
     CrossButtonFragment,
     OptionsMenuButtonFragment,
@@ -41,8 +42,8 @@ import {
     BlurredModalFragment,
     MiddleCellModalFragment,
     BottomCellModalFragment,
-    BadgeFragment,
     ErrorMessageFragment,
+    BadgeFragment,
     MessageFragment,
     PopoverFragment,
     DetailsListFragment,
@@ -70,7 +71,8 @@ function Content(): JSX.Element {
             <SliderFragment />
             <SwitchFragment />
             <CheckBoxFragment />
-            <RadioFragment />
+            <RadioButtonFragment />
+            <RadioGroupFragment />
             <TextsFragment />
             <HorizontalLayerFragment />
             <MarginLayerFragment />
@@ -97,8 +99,8 @@ function Content(): JSX.Element {
             <BlurredModalFragment />
             <MiddleCellModalFragment />
             <BottomCellModalFragment />
-            <BadgeFragment />
             <ErrorMessageFragment />
+            <BadgeFragment />
             <MessageFragment />
             <PopoverFragment />
             <DetailsListFragment />
