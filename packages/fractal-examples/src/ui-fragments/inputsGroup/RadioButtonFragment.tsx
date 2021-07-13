@@ -12,7 +12,12 @@ export function RadioButtonFragment(): JSX.Element {
                 Radio Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <RadioButton label={'Radio Button'} value={'Button 1'} active={activeButton} onPress={() => setActiveButton} />
+                <RadioButton
+                    label={'Radio Button'}
+                    value={'Button 1'}
+                    active={activeButton}
+                    onPress={() => setActiveButton((active) => !active)}
+                />
             </Box>
         </>
     );

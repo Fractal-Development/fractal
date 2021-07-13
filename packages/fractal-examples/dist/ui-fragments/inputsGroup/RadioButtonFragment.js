@@ -7,6 +7,6 @@ export function RadioButtonFragment() {
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Radio Button Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(RadioButton, { label: 'Radio Button', value: 'Button 1', active: activeButton, onPress: () => setActiveButton }))));
+            React.createElement(RadioButton, { label: 'Radio Button', value: 'Button 1', active: activeButton, onPress: () => setActiveButton((active) => !active) }))));
 }
 //# sourceMappingURL=RadioButtonFragment.js.map
