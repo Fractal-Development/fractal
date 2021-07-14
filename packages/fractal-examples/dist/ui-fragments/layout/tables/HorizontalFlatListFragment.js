@@ -9,7 +9,7 @@ function Table() {
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
     }, [width]);
-    return (React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: 90, dataProvider: dataProviderState, rowRenderer: rowRendererHorizontalTable }));
+    return (React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: 100, dataProvider: dataProviderState, rowRenderer: rowRendererHorizontalTable }));
 }
 export function HorizontalFlatListFragment() {
     const { spacings } = useTheme();
