@@ -5,7 +5,6 @@ import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleText
 import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
 
 function Table(): JSX.Element {
-    const { sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
 
@@ -17,7 +16,7 @@ function Table(): JSX.Element {
         <HorizontalFlatList
             key={width}
             rowWidth={100}
-            rowHeight={sizes.baseRowHeight}
+            rowHeight={80}
             dataProvider={dataProviderState}
             rowRenderer={rowRendererHorizontalTable}
         />

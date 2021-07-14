@@ -4,13 +4,12 @@ import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
 function Table() {
-    const { sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
     }, [width]);
-    return (React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: sizes.baseRowHeight, dataProvider: dataProviderState, rowRenderer: rowRendererHorizontalTable }));
+    return (React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: 80, dataProvider: dataProviderState, rowRenderer: rowRendererHorizontalTable }));
 }
 export function HorizontalFlatListFragment() {
     const { spacings } = useTheme();
