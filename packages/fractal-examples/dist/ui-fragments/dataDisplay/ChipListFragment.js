@@ -8,7 +8,7 @@ export function ChipListFragment() {
         { id: '1', value: 'tag 2' },
         { id: '2', value: 'tag 3' },
         { id: '3', value: 'tag 4' },
-        { id: '3', value: 'tag 5' }
+        { id: '4', value: 'tag 5' }
     ];
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Chip List Fragment"),
