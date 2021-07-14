@@ -10,6 +10,6 @@ export function ColorTabListFragment() {
                     { tabColor: colors.white, text: 'Tab 1' },
                     { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
                     { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
-                ] }, () => React.createElement(Text, { variant: 'normal' }, "Tab Content")))));
+                ], onItemPress: (index) => console.log(index) }, () => React.createElement(Text, { variant: 'normal' }, "Tab Content")))));
 }
 //# sourceMappingURL=ColorTabListFragment.js.map

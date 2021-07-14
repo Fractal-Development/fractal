@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, OptionsMenuButton, ChevronDownIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, PopoverOptionsMenuButton, ChevronDownIcon } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function OptionsMenuButtonFragment(): JSX.Element {
@@ -12,7 +12,7 @@ export function OptionsMenuButtonFragment(): JSX.Element {
                 Options Menu Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <OptionsMenuButton
+                <PopoverOptionsMenuButton
                     options={optionsValue}
                     onOptionPress={(value) => {
                         console.log(value);

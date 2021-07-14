@@ -17,6 +17,7 @@ export function ColorTabListFragment(): JSX.Element {
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
                     ]}
+                    onItemPress={(index) => console.log(index)}
                 >
                     {() => <Text variant={'normal'}>Tab Content</Text>}
                 </ColorTabList>
