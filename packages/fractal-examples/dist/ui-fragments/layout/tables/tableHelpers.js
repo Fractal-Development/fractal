@@ -11,7 +11,7 @@ const rowRenderer = (_, __, index) => {
 const rowRendererHorizontalTable = (_, __, index) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
     return (React.createElement(PaddingLayer, { backgroundColor: colors.contentInteractiveColor },
-        React.createElement(Box, null,
+        React.createElement(Box, { alignItems: 'center', justifyContent: 'center' },
             React.createElement(Text, { variant: 'normal' }, text))));
 };
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
