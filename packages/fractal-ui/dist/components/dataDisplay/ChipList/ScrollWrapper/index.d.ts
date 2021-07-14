@@ -1,2 +1,2 @@
-import { LayerProps } from '../../../layout/Layer/types';
+import { LayerProps } from '../../../layout';
 export declare function ScrollWrapper(props: LayerProps): JSX.Element;

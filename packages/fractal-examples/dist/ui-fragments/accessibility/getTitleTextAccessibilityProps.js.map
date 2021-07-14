@@ -1,0 +1,1 @@
+{"version":3,"file":"getTitleTextAccessibilityProps.js","sourceRoot":"","sources":["../../../src/ui-fragments/accessibility/getTitleTextAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,8BAA8B,CAAC,UAAkB;IAC7D,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,IAAI,EAAE,SAAS;QACf,YAAY,EAAE,UAAU;KAC3B,CAAC;AACN,CAAC"}

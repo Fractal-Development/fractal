@@ -1,18 +1,22 @@
 import React from 'react';
 import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
 import {
-    ThemeSwapper,
+    ThemeSwapperFragment,
     DropZoneFragment,
     ChipFragment,
-    TagsInputField,
+    ChipListFragment,
+    ColorTabListFragment,
+    TagsInputFieldFragment,
     ActivityIndicatorFragment,
-    AvatarImageFragment,
+    AvatarFragment,
+    ImageFragment,
     ImageBackgroundFragment,
     SegmentedControlFragment,
     SliderFragment,
     SwitchFragment,
     CheckBoxFragment,
-    RadioFragment,
+    RadioButtonFragment,
+    RadioGroupFragment,
     TextsFragment,
     CrossButtonFragment,
     OptionsMenuButtonFragment,
@@ -23,9 +27,11 @@ import {
     RoundedToggleButtonFragment,
     CircularIconButtonFragment,
     ColorPickerFragment,
-    LayerFragment,
+    HorizontalLayerFragment,
+    MarginLayerFragment,
+    PaddingLayerFragment,
     BoxContentFragment,
-    SeparatorsFragment,
+    SeparatorFragment,
     SearchBarFragment,
     AutocompleteFragment,
     TextFieldFragment,
@@ -36,40 +42,50 @@ import {
     TimePickerFragment,
     BlurredModalFragment,
     MiddleCellModalFragment,
+    DimmedModalFragment,
     BottomCellModalFragment,
     ErrorMessageFragment,
+    BadgeFragment,
+    MessageFragment,
     PopoverFragment,
-    DetailsListFragment,
+    TableContainerFragment,
     GridListFragment,
     GridFragment,
     SocialMediaButtonsFragment,
-    FlatListFragment,
+    VerticalFlatListFragment,
+    HorizontalFlatListFragment,
     RecyclerViewFragment
-} from './fragments';
+} from './ui-fragments';
 import { ChartsExamples } from './charts/ChartsExamples';
 
 function Content(): JSX.Element {
     return (
         <PaddingLayer>
-            <ThemeSwapper />
+            <ThemeSwapperFragment />
             <DropZoneFragment />
             <ChipFragment />
-            <TagsInputField />
+            <ChipListFragment />
+            <ColorTabListFragment />
+            <TagsInputFieldFragment />
             <ActivityIndicatorFragment />
-            <AvatarImageFragment />
+            <AvatarFragment />
+            <ImageFragment />
             <ImageBackgroundFragment />
             <SegmentedControlFragment />
             <SliderFragment />
             <SwitchFragment />
             <CheckBoxFragment />
-            <RadioFragment />
+            <RadioButtonFragment />
+            <RadioGroupFragment />
             <TextsFragment />
-            <LayerFragment />
+            <HorizontalLayerFragment />
+            <MarginLayerFragment />
+            <PaddingLayerFragment />
             <BoxContentFragment />
-            <SeparatorsFragment />
+            <SeparatorFragment />
             <CrossButtonFragment />
-            <OptionsMenuButtonFragment />
             <OptionsButtonFragment />
+            <OptionsMenuButtonFragment />
             <TextButtonFragment />
             <ButtonFragment />
             <ToggleButtonFragment />
@@ -86,15 +102,19 @@ function Content(): JSX.Element {
             <TimePickerFragment />
             <BlurredModalFragment />
             <MiddleCellModalFragment />
+            <DimmedModalFragment />
             <BottomCellModalFragment />
             <ErrorMessageFragment />
+            <BadgeFragment />
+            <MessageFragment />
             <PopoverFragment />
-            <DetailsListFragment />
+            <TableContainerFragment />
             <GridListFragment />
             <GridFragment />
             <SocialMediaButtonsFragment />
             <RecyclerViewFragment />
-            <FlatListFragment />
+            <VerticalFlatListFragment />
+            <HorizontalFlatListFragment />
             <ChartsExamples />
         </PaddingLayer>
     );

@@ -15,15 +15,15 @@ import { useTheme } from '../../../context';
 import { useValueForLargeSizeType } from '@bma98/size-class';
 import { ColorTab } from './ColorTab';
 export function ColorTabList(_a) {
-    var { children, tabs, onPress } = _a, others = __rest(_a, ["children", "tabs", "onPress"]);
+    var { children, tabs, onItemPress } = _a, others = __rest(_a, ["children", "tabs", "onItemPress"]);
     const { borderRadius, sizes } = useTheme();
     const [activeIndex, setActiveIndex] = useState(0);
     const { tabColor } = tabs[activeIndex];
     const borderTopRightRadius = useValueForLargeSizeType('width', borderRadius.m, 0);
     const handlePress = useCallback((index) => {
         setActiveIndex(index);
-        onPress === null || onPress === void 0 ? void 0 : onPress(index);
-    }, [onPress]);
+        onItemPress === null || onItemPress === void 0 ? void 0 : onItemPress(index);
+    }, [onItemPress]);
     return (React.createElement(Layer, Object.assign({}, others),
         React.createElement(HorizontalLayer, { height: sizes.colorTabListItemHeight },
             React.createElement(ScrollView, { showsHorizontalScrollIndicator: false, horizontal: true }, tabs.map((props, index) => (React.createElement(ColorTab, Object.assign({ key: index }, props, { onPress: handlePress, index: index, active: index === activeIndex })))))),

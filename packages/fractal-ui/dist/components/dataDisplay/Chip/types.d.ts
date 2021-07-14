@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { LayerProps } from '../../layout/Layer/types';
+import { LayerProps } from '../../layout';
 export interface ChipProps extends LayerProps {
     text?: string;
     children?: ReactNode;
