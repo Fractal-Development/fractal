@@ -1,5 +1,5 @@
 import React from 'react';
-import { lightFractalTheme, DataProvider, DetailsRow, PaddingLayer, Box, Text } from '@bma98/fractal-ui';
+import { lightFractalTheme, DataProvider, DetailsRow, PaddingLayer, Box, Text, colors } from '@bma98/fractal-ui';
 const tableDummyData = Array();
 for (let i = 0; i < 1001; i++) {
     tableDummyData.push(i);
@@ -10,7 +10,7 @@ const rowRenderer = (_, __, index) => {
 };
 const rowRendererHorizontalTable = (_, __, index) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
-    return (React.createElement(PaddingLayer, null,
+    return (React.createElement(PaddingLayer, { backgroundColor: colors.contentInteractiveColor },
         React.createElement(Box, null,
             React.createElement(Text, { variant: 'normal' }, text))));
 };
