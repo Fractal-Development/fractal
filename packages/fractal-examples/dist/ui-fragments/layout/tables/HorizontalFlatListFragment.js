@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Layer, HorizontalFlatList, Text, useTheme } from '@bma98/fractal-ui';
+import { Box, Layer, HorizontalFlatList, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
@@ -17,8 +17,7 @@ export function HorizontalFlatListFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Horizontal FlatList Fragment"),
-        React.createElement(Layer, { height: 200, marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(Layer, { flex: 1 },
-                React.createElement(Table, null)))));
+        React.createElement(Box, { height: 200, marginTop: spacings.s, marginBottom: spacings.xl },
+            React.createElement(Table, null))));
 }
 //# sourceMappingURL=HorizontalFlatListFragment.js.map

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Layer, HorizontalFlatList, Text, useTheme } from '@bma98/fractal-ui';
+import { Box, Layer, HorizontalFlatList, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
@@ -34,11 +34,9 @@ export function HorizontalFlatListFragment(): JSX.Element {
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 Horizontal FlatList Fragment
             </Text>
-            <Layer height={200} marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Layer flex={1}>
-                    <Table />
-                </Layer>
-            </Layer>
+            <Box height={200} marginTop={spacings.s} marginBottom={spacings.xl}>
+                <Table />
+            </Box>
         </>
     );
 }
