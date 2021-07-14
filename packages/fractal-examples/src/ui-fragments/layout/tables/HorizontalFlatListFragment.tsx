@@ -14,7 +14,7 @@ function Table(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={'Fixed Row Height'} flex={1}>
+        <TableContainer title={'Horizontal FlatList'} flex={1}>
             <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
             <Layer flex={1}>
                 <HorizontalFlatList
