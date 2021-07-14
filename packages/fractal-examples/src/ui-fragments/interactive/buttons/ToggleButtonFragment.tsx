@@ -17,7 +17,7 @@ export function ToggleButtonFragment(): JSX.Element {
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 Toggle Button Fragment
             </Text>
-            <Box marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Box marginTop={spacings.s} marginBottom={spacings.xl} alignItems={'center'}>
                 <ToggleButton variant={'main'} active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
                     {() => (
                         <Text variant={'button'} color={colors.text}>

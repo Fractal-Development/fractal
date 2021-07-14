@@ -12,7 +12,7 @@ export function ImageFragment(): JSX.Element {
             const text = 'Image with ' + resizeMode + ' resize mode';
 
             return (
-                <React.Fragment key={resizeMode}>
+                <Layer key={resizeMode} alignItems={'center'}>
                     <Text
                         variant={'subtitle'}
                         alignItems={'center'}
@@ -32,7 +32,7 @@ export function ImageFragment(): JSX.Element {
                             marginTop={spacings.s}
                         />
                     </Box>
-                </React.Fragment>
+                </Layer>
             );
         },
         [spacings.m, spacings.s, spacings.xs]

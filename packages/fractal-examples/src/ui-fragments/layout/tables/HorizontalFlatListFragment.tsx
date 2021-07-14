@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Layer, HorizontalFlatList, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, rowRenderer, horizontalTableDummyData } from './tableHelpers';
+import { dataProvider, rowRenderer, tableDummyData } from './tableHelpers';
 
 function Table(): JSX.Element {
     const { spacings, sizes } = useTheme();
-    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(horizontalTableDummyData));
+    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
 
     useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows(horizontalTableDummyData));
+        setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
     }, [width]);
 
     return (
