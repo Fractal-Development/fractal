@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Layer, HorizontalFlatList, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, rowRenderer, tableDummyData } from './tableHelpers';
+import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
 
 function Table(): JSX.Element {
     const { spacings, sizes } = useTheme();
@@ -22,7 +22,7 @@ function Table(): JSX.Element {
                     rowWidth={100}
                     rowHeight={sizes.baseRowHeight}
                     dataProvider={dataProviderState}
-                    rowRenderer={rowRenderer}
+                    rowRenderer={rowRendererHorizontalTable}
                 />
             </Layer>
         </TableContainer>

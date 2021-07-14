@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Layer, HorizontalFlatList, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, rowRenderer, tableDummyData } from './tableHelpers';
+import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
 function Table() {
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
@@ -13,7 +13,7 @@ function Table() {
     return (React.createElement(TableContainer, { title: 'Horizontal FlatList', flex: 1 },
         React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(Layer, { flex: 1 },
-            React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: sizes.baseRowHeight, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
+            React.createElement(HorizontalFlatList, { key: width, rowWidth: 100, rowHeight: sizes.baseRowHeight, dataProvider: dataProviderState, rowRenderer: rowRendererHorizontalTable }))));
 }
 export function HorizontalFlatListFragment() {
     const { spacings } = useTheme();
