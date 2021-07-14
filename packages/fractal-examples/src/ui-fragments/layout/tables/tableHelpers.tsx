@@ -2,9 +2,14 @@ import React from 'react';
 import { DataProvider, DetailsRow, lightFractalTheme } from '@bma98/fractal-ui';
 
 const tableDummyData = Array<number>();
+const horizontalTableDummyData = Array<number>();
 
 for (let i = 0; i < 1001; i++) {
     tableDummyData.push(i);
+}
+
+for (let i = 0; i < 10; i++) {
+    horizontalTableDummyData.push(i);
 }
 
 const rowRenderer = (_: any, __: any, index: number | undefined) => {
@@ -24,4 +29,4 @@ function itemHeightCalculator(): number {
     return randomIntFromInterval(lightFractalTheme.sizes.baseRowHeight, 200);
 }
 
-export { tableDummyData, rowRenderer, dataProvider, itemHeightCalculator };
+export { tableDummyData, horizontalTableDummyData, rowRenderer, dataProvider, itemHeightCalculator };

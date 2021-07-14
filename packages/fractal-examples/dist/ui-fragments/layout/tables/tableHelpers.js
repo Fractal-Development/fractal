@@ -1,8 +1,12 @@
 import React from 'react';
 import { DataProvider, DetailsRow, lightFractalTheme } from '@bma98/fractal-ui';
 const tableDummyData = Array();
+const horizontalTableDummyData = Array();
 for (let i = 0; i < 1001; i++) {
     tableDummyData.push(i);
+}
+for (let i = 0; i < 10; i++) {
+    horizontalTableDummyData.push(i);
 }
 const rowRenderer = (_, __, index) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
@@ -17,5 +21,5 @@ function randomIntFromInterval(min, max) {
 function itemHeightCalculator() {
     return randomIntFromInterval(lightFractalTheme.sizes.baseRowHeight, 200);
 }
-export { tableDummyData, rowRenderer, dataProvider, itemHeightCalculator };
+export { tableDummyData, horizontalTableDummyData, rowRenderer, dataProvider, itemHeightCalculator };
 //# sourceMappingURL=tableHelpers.js.map
