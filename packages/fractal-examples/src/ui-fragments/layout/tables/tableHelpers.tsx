@@ -16,7 +16,7 @@ const rowRendererHorizontalTable = (_: any, __: any, index: number | undefined) 
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
     return (
         <PaddingLayer backgroundColor={colors.contentInteractiveColor}>
-            <Box>
+            <Box alignItems={'center'} justifyContent={'center'}>
                 <Text variant={'normal'}>{text}</Text>
             </Box>
         </PaddingLayer>
