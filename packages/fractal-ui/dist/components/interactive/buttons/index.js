@@ -10,6 +10,6 @@ export * from './RoundedToggleButton';
 export * from './CrossButton';
 export * from './CircularIconButton';
 export * from './OptionsButton';
-export * from './OptionsMenuButton';
+export * from './PopoverOptionsMenuButton';
 export * from './types';
 //# sourceMappingURL=index.js.map

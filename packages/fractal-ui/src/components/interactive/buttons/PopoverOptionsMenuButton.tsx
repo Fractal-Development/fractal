@@ -13,7 +13,7 @@ interface OptionsMenuButtonProps {
     onOptionPress: (option: string) => void;
 }
 
-export function OptionsMenuButton({ options, onOptionPress, customIcon }: OptionsMenuButtonProps): JSX.Element {
+export function PopoverOptionsMenuButton({ options, onOptionPress, customIcon }: OptionsMenuButtonProps): JSX.Element {
     const { sizes, spacings } = useTheme();
     const [optionsVisible, setOptionsVisible] = useState(false);
 

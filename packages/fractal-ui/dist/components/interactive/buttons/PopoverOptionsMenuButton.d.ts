@@ -4,5 +4,5 @@ interface OptionsMenuButtonProps {
     options: Array<string>;
     onOptionPress: (option: string) => void;
 }
-export declare function OptionsMenuButton({ options, onOptionPress, customIcon }: OptionsMenuButtonProps): JSX.Element;
+export declare function PopoverOptionsMenuButton({ options, onOptionPress, customIcon }: OptionsMenuButtonProps): JSX.Element;
 export {};

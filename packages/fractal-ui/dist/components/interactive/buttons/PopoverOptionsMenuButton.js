@@ -6,7 +6,7 @@ import { TouchableOpacity } from './TouchableOpacity';
 import { Box } from '../../layout';
 import { Popover } from '../../overlays';
 import { Text } from '../../text';
-export function OptionsMenuButton({ options, onOptionPress, customIcon }) {
+export function PopoverOptionsMenuButton({ options, onOptionPress, customIcon }) {
     const { sizes, spacings } = useTheme();
     const [optionsVisible, setOptionsVisible] = useState(false);
     const hideOptions = () => setOptionsVisible(false);
@@ -21,4 +21,4 @@ export function OptionsMenuButton({ options, onOptionPress, customIcon }) {
         ? customIcon
         : (color) => (React.createElement(ThreeDotsHorizontalIcon, { height: sizes.textFieldIconSize, width: sizes.textFieldIconSize, fill: color }))))));
 }
-//# sourceMappingURL=OptionsMenuButton.js.map
+//# sourceMappingURL=PopoverOptionsMenuButton.js.map
