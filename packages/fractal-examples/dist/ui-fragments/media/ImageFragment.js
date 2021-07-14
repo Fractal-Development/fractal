@@ -8,7 +8,7 @@ export function ImageFragment() {
         const text = 'Image with ' + resizeMode + ' resize mode';
         return (React.createElement(Layer, { key: resizeMode, alignItems: 'center' },
             React.createElement(Text, Object.assign({ variant: 'subtitle', alignItems: 'center', marginTop: spacings.m, marginBottom: spacings.xs }, getTitleTextAccessibilityProps(2)), text),
-            React.createElement(Box, { marginBottom: spacings.s, height: 500 },
+            React.createElement(Box, { marginBottom: spacings.s, height: 500, width: '100%' },
                 React.createElement(Image, { source: 'https://picsum.photos/id/870/200/300', label: 'Asset', resizeMode: resizeMode, height: '100%', borderRadius: 16, marginTop: spacings.s }))));
     }, [spacings.m, spacings.s, spacings.xs]);
     return (React.createElement(React.Fragment, null,

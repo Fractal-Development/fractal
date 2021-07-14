@@ -22,7 +22,7 @@ export function ImageFragment(): JSX.Element {
                     >
                         {text}
                     </Text>
-                    <Box marginBottom={spacings.s} height={500}>
+                    <Box marginBottom={spacings.s} height={500} width={'100%'}>
                         <Image
                             source={'https://picsum.photos/id/870/200/300'}
                             label={'Asset'}
