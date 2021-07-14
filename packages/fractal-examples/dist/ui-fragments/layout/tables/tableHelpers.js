@@ -10,7 +10,7 @@ const rowRenderer = (_, __, index) => {
 };
 const rowRendererHorizontalTable = (_, __, index) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
-    return (React.createElement(PaddingLayer, { backgroundColor: colors.contentInteractiveColor },
+    return (React.createElement(PaddingLayer, { backgroundColor: colors.contentInteractiveColor, alignItems: 'center', justifyContent: 'center' },
         React.createElement(Box, null,
             React.createElement(Text, { variant: 'normal' }, text))));
 };
