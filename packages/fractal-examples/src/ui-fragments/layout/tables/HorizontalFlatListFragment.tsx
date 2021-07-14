@@ -34,7 +34,7 @@ export function HorizontalFlatListFragment(): JSX.Element {
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 Horizontal FlatList Fragment
             </Text>
-            <Box height={200} marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Box height={100} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Table />
             </Box>
         </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataProvider, DetailsRow, lightFractalTheme, Text } from '@bma98/fractal-ui';
+import { lightFractalTheme, DataProvider, DetailsRow, PaddingLayer, Box, Text } from '@bma98/fractal-ui';
 const tableDummyData = Array();
 for (let i = 0; i < 1001; i++) {
     tableDummyData.push(i);
@@ -10,7 +10,9 @@ const rowRenderer = (_, __, index) => {
 };
 const rowRendererHorizontalTable = (_, __, index) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
-    return React.createElement(Text, { variant: 'normal' }, text);
+    return (React.createElement(PaddingLayer, null,
+        React.createElement(Box, null,
+            React.createElement(Text, { variant: 'normal' }, text))));
 };
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne !== rowTwo;
