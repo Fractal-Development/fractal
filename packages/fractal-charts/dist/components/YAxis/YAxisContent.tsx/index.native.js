@@ -16,7 +16,7 @@ export function YAxisContent({ width, height, ticks, textProps, formatLabel, y, 
                 height,
                 width
             } },
-            React.createElement(G, null,
+            React.createElement(G, null, 
             // don't render labels if width isn't measured yet,
             // causes rendering issues
             height > 0 &&
@@ -24,4 +24,4 @@ export function YAxisContent({ width, height, ticks, textProps, formatLabel, y, 
                     return (React.createElement(SVGText, Object.assign({ originY: y(value), textAnchor: 'middle', x: '50%', alignmentBaseline: 'middle', fill: color }, textProps, { key: y(value), y: y(value) }), formatLabel(value, index)));
                 }))))));
 }
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map

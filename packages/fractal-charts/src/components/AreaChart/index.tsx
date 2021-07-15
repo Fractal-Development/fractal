@@ -1,5 +1,5 @@
 import React from 'react';
-import * as shape from 'd3-shape';
+import * as shape from 'https://unpkg.com/d3-shape?module';
 import * as scale from 'd3-scale';
 import * as array from 'd3-array';
 import { AreaChartProps } from '../../types';

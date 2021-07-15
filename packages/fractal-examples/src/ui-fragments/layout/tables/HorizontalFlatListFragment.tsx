@@ -16,7 +16,7 @@ function Table(): JSX.Element {
         <HorizontalFlatList
             key={width}
             rowWidth={100}
-            rowHeight={100}
+            rowHeight={100} //150
             dataProvider={dataProviderState}
             rowRenderer={rowRendererHorizontalTable}
         />

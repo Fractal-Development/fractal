@@ -6,4 +6,4 @@ export function LinearGradient({ startColor, startOpacity, endColor, endOpacity 
             React.createElement(Stop, { offset: '0%', stopColor: startColor, stopOpacity: startOpacity }),
             React.createElement(Stop, { offset: '100%', stopColor: endColor, stopOpacity: endOpacity }))));
 }
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map

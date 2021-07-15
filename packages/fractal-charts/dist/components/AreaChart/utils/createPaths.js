@@ -1,4 +1,4 @@
-import * as shape from 'd3-shape';
+import * as shape from 'https://unpkg.com/d3-shape?module';
 export function createPaths(data, x, y, start, curve) {
     const area = shape
         .area()

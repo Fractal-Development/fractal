@@ -35,4 +35,4 @@ export function Grid(_a) {
     }
     return null;
 }
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map

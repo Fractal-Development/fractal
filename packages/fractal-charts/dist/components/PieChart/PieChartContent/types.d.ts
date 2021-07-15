@@ -1,10 +1,10 @@
-import { PieArcDatum, Arc } from 'd3-shape';
+import * as shape from 'https://unpkg.com/d3-shape?module';
 import { PieChartData } from '../../../types';
 export interface PieChartContentProps {
     width: number;
     height: number;
     data: Array<PieChartData>;
-    pieSlices: Array<PieArcDatum<PieChartData>>;
-    createArc: Arc<any, PieChartData>;
+    pieSlices: Array<shape.PieArcDatum<PieChartData>>;
+    createArc: shape.Arc<any, PieChartData>;
     onPress?: (index: number) => void;
 }
