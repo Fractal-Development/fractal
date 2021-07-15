@@ -1,4 +1,4 @@
-import * as shape from '../node_modules/d3-shape/dist/d3-shape.js';
+import { CurveFactory } from 'd3-shape';
 import { ScaleBand, ScaleLinear, ScaleLogarithmic, ScalePower, ScaleTime, scaleLinear } from 'd3-scale';
 import { LayerProps } from '@bma98/fractal-ui';
 export declare type DimensionsType = {
@@ -60,7 +60,7 @@ export interface AreaChartProps extends Omit<LayerProps, 'children'> {
     lineWidth?: number;
     dotRadius?: number;
     gradientConfig?: GradientConfig;
-    curve?: shape.CurveFactory;
+    curve?: CurveFactory;
     start?: number;
     contentInset?: {
         top?: number;

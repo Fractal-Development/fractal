@@ -1,11 +1,11 @@
-import * as shape from '../../../../node_modules/d3-shape/dist/d3-shape.js';
+import { PieArcDatum, Arc } from 'd3-shape';
 import { PieChartData } from '../../../types';
 
 export interface PieChartContentProps {
     width: number;
     height: number;
     data: Array<PieChartData>;
-    pieSlices: Array<shape.PieArcDatum<PieChartData>>;
-    createArc: shape.Arc<any, PieChartData>;
+    pieSlices: Array<PieArcDatum<PieChartData>>;
+    createArc: Arc<any, PieChartData>;
     onPress?: (index: number) => void;
 }
