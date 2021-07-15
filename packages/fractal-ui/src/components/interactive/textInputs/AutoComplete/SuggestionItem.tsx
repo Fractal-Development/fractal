@@ -11,11 +11,13 @@ interface SuggestionItemProps {
     addSeparator?: boolean;
 }
 
+export const SUGGESTION_ITEM_HEIGHT = 46;
+
 export function SuggestionItem({ label, isSelected, isMultiple, addSeparator, onPress }: SuggestionItemProps): JSX.Element {
     return (
         <TouchableOpacity width={'100%'} onPress={onPress}>
             {isMultiple ? (
-                <CheckMarkRow title={label} isSelected={isSelected} addSeparator={addSeparator} minHeight={46} />
+                <CheckMarkRow title={label} isSelected={isSelected} addSeparator={addSeparator} minHeight={SUGGESTION_ITEM_HEIGHT} />
             ) : (
                 <SimpleRow title={label} addSeparator={addSeparator} />
             )}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ScrollView, TextInput } from 'react-native';
+import { TextInput } from 'react-native';
 import { Button } from '../../../buttons';
 import { PaddingLayer, Box } from '../../../../layout';
 import { MiddleCellModal } from '../../../../overlays/modals';
@@ -41,15 +41,13 @@ export function AutoCompleteModal<T extends IDEnabled>({
                         {...searchBarProps}
                     />
                 </PaddingLayer>
-                <ScrollView>
-                    <SuggestionsList
-                        multiple={multiple}
-                        filteredData={filteredData}
-                        getLabel={getLabel}
-                        onItemPress={onItemPress}
-                        selectedIds={selectedIds}
-                    />
-                </ScrollView>
+                <SuggestionsList
+                    multiple={multiple}
+                    filteredData={filteredData}
+                    getLabel={getLabel}
+                    onItemPress={onItemPress}
+                    selectedIds={selectedIds}
+                />
                 <PaddingLayer>
                     <Button variant={'main'} text={doneText} onPress={hideModal} />
                 </PaddingLayer>

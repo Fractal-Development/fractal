@@ -1,8 +1,8 @@
 import React from 'react';
-import { SuggestionItem } from './SuggestionItem';
-import { IDEnabled, SuggestionsListProps } from './types';
-import { Layer } from '../../../layout';
-import { useTheme } from '../../../../context';
+import { SuggestionItem } from '../SuggestionItem';
+import { IDEnabled, SuggestionsListProps } from '../types';
+import { Layer } from '../../../../layout';
+import { useTheme } from '../../../../../context';
 
 export function SuggestionsList<T extends IDEnabled>({
     filteredData,
@@ -14,7 +14,7 @@ export function SuggestionsList<T extends IDEnabled>({
     const { spacings } = useTheme();
     return (
         <Layer padding={spacings.m}>
-            {filteredData.map((item, index) => {
+            {filteredData.map((item: T, index: number) => {
                 const label = getLabel(item);
                 const isSelected = selectedIds.indexOf(item.id) > -1;
 
