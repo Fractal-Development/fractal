@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import * as shape from 'https://unpkg.com/d3-shape?module';
+import * as shape from 'd3-shape';
 import { useDimensions } from '../../hooks/useDimensions';
 import { PieChartData, PieChartProps } from '../../types';
 import { ChartContainer } from '../ChartContainer';

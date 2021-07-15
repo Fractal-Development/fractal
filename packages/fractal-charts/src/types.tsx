@@ -1,4 +1,4 @@
-import * as shape from 'https://unpkg.com/d3-shape?module';
+import { CurveFactory } from 'd3-shape';
 import { ScaleBand, ScaleLinear, ScaleLogarithmic, ScalePower, ScaleTime, scaleLinear } from 'd3-scale';
 import { LayerProps } from '@bma98/fractal-ui';
 
@@ -76,7 +76,7 @@ export interface AreaChartProps extends Omit<LayerProps, 'children'> {
     lineWidth?: number;
     dotRadius?: number;
     gradientConfig?: GradientConfig;
-    curve?: shape.CurveFactory;
+    curve?: CurveFactory;
     start?: number;
     contentInset?: {
         top?: number;
