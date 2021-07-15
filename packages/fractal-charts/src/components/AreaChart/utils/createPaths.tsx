@@ -1,4 +1,4 @@
-import * as shape from 'd3-shape';
+import * as shape from '../../../../node_modules/d3-shape/dist/d3-shape.js';
 import { ScaleLinear } from 'd3-scale';
 import { CurveFactory } from 'd3-shape';
 import { Coordinates, XYPair } from '../../../types';
