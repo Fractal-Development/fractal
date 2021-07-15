@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import * as shape from 'd3-shape';
+import * as shape from '../../../node_modules/d3-shape/src/index.js';
 import * as scale from 'd3-scale';
 import * as array from 'd3-array';
 import { createPaths } from './utils/createPaths';

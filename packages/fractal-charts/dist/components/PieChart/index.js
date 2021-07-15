@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useEffect, useState } from 'react';
-import * as shape from 'd3-shape';
+import * as shape from '../../../node_modules/d3-shape/src/index.js';
 import { useDimensions } from '../../hooks/useDimensions';
 import { ChartContainer } from '../ChartContainer';
 import { calculateRadius } from './utils/calculateRadius';
