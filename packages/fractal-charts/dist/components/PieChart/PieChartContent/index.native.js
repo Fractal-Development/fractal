@@ -8,4 +8,4 @@ export function PieChartContent({ width, height, data, pieSlices, createArc, onP
             return React.createElement(Path, { key: `pie-${index}`, fill: color, onPress: () => onPress === null || onPress === void 0 ? void 0 : onPress(index), d: (_a = createArc(slice)) !== null && _a !== void 0 ? _a : undefined });
         }))));
 }
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map
