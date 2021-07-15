@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Modal } from './Modal';
 import { ModalProps } from './Modal/types';
-import { Pressable } from '../../interactive';
+import { Pressable } from '../../interactive/buttons/Pressable';
 import { SafeAreaLayer } from '../../layout';
 
 const modalAnimationStyles = {

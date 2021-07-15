@@ -28,7 +28,7 @@ const TextButton = forwardRef(
             <TouchableOpacity
                 ref={ref}
                 opacity={disabled ? 0.5 : 1}
-                pointerEvents={disabled ? 'none' : undefined}
+                disabled={disabled}
                 {...others}
                 {...getTextButtonAccessibilityProps(children)}
             >

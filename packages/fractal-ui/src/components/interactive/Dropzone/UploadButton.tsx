@@ -2,7 +2,7 @@ import React from 'react';
 import * as DocumentPicker from 'expo-document-picker';
 import { UploadIcon } from '../../../assets';
 import { useTheme } from '../../../context';
-import { Button } from '../buttons';
+import { Button } from '../buttons/Button';
 import { HorizontalLayer } from '../../layout';
 import { Text } from '../../text';
 import { NativeFileInfo } from './types';

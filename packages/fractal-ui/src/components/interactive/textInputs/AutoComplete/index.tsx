@@ -15,7 +15,7 @@ export function AutoComplete<T extends IDEnabled>({
 }: AutoCompleteProps<T>): JSX.Element {
     const [suggestionsVisible, setSuggestionsVisible] = useState(false);
     const [userInput, setUserInput] = useControllableState(value, '', onChangeText);
-    const [filteredOptions, setFilteredOptions] = useState<Array<T>>([]);
+    const [filteredOptions, setFilteredOptions] = useState<Array<T>>(options);
 
     const handleSelect = (selectedOptions: Array<T>) => {
         if (multiple) {

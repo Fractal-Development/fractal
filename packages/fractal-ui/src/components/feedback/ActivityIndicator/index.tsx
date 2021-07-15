@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { motion, Transition } from 'framer-motion';
 import styled from 'styled-components';
 import { ActivityIndicatorCircleProps, ActivityIndicatorProps } from './types';
-import { Layer } from '../../layout';
+import { Layer } from '../../layout/Layer';
 import { getActivityIndicatorAccessibilityProps } from './accessibility/getActivityIndicatorAccessibilityProps';
 
 const BackgroundCircle = styled(motion.circle)`

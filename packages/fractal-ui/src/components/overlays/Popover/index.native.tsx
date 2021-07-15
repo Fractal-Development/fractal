@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState, forwardRef, useRef } from 'react';
 import { LayoutChangeEvent, View } from 'react-native';
-import { Pressable } from '../../interactive';
+import { Pressable } from '../../interactive/buttons/Pressable';
 import { Layer } from '../../layout';
 import { Modal } from '../modals';
 import { styleVariants } from './utils/styleVariants';

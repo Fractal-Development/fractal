@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
 import { BlurView } from 'expo-blur';
 import { View } from 'react-native';
-import { TextButton, Pressable } from '../../../interactive';
+import { TextButton } from '../../../interactive/buttons/TextButton';
+import { Pressable } from '../../../interactive/buttons/Pressable';
 import { useTheme, useThemeIdentifier } from '../../../../context';
 import { Layer, SafeAreaLayer } from '../../../layout';
 import { Modal } from '../Modal';

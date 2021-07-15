@@ -1,6 +1,6 @@
 import React, { ReactElement, useCallback } from 'react';
 import { useTheme } from '../../../context';
-import { Pressable } from '../../interactive';
+import { Pressable } from '../../interactive/buttons/Pressable';
 import { Text } from '../../text';
 import { Layer } from '../../layout';
 

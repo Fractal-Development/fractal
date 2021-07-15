@@ -30,7 +30,10 @@ const StyledTouchableOpacity = styled(motion.div as any)`
 const transition = { type: 'linear', duration: 0.2 };
 
 const TouchableOpacity = forwardRef(
-    ({ from, currentVariant, animate, onPress, onLongPress, whileTap, ...others }: TouchableOpacityProps, ref: any): JSX.Element => {
+    (
+        { from, currentVariant, animate, onPress, onLongPress, whileTap, disabled, ...others }: TouchableOpacityProps,
+        ref: any
+    ): JSX.Element => {
         const [pressed, setPressed] = useState(false);
 
         const tapStyles = {
@@ -54,6 +57,7 @@ const TouchableOpacity = forwardRef(
                 onClick={handleButtonPress}
                 initial={currentVariant ? 'from' : from}
                 animate={currentVariant ?? animate}
+                pointerEvents={disabled ? 'none' : undefined}
                 {...longPressEvent}
                 {...getButtonAccessibilityProps(pressed)}
                 {...others}

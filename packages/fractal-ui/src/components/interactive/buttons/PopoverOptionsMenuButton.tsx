@@ -4,7 +4,7 @@ import { useTheme } from '../../../context';
 import { CircularIconButton } from './CircularIconButton';
 import { TouchableOpacity } from './TouchableOpacity';
 import { Box } from '../../layout';
-import { Popover } from '../../overlays';
+import { Popover } from '../../overlays/Popover';
 import { Text } from '../../text';
 
 interface OptionsMenuButtonProps {
