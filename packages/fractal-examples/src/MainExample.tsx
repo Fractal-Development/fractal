@@ -56,7 +56,6 @@ import {
     HorizontalFlatListFragment,
     RecyclerViewFragment
 } from './ui-fragments';
-import { ChartsExamples } from './charts-fragments/ChartsExamples';
 
 function Content(): JSX.Element {
     return (
@@ -115,7 +114,6 @@ function Content(): JSX.Element {
             <RecyclerViewFragment />
             <VerticalFlatListFragment />
             <HorizontalFlatListFragment />
-            <ChartsExamples />
         </PaddingLayer>
     );
 }

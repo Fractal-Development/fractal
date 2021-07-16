@@ -1,3 +1,3 @@
 export * from './MainExample';
-export * from './charts/ChartsExamples';
+export * from './charts-fragments/ChartsExamples';
 //# sourceMappingURL=index.js.map
