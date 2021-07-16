@@ -24,7 +24,8 @@
     "dependencies": {
         "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
         "@bma98/size-class": "^2.2.4",
-        "styled-components": "^5.3.0"
+        "styled-components": "^5.3.0",
+        "text-metrics": "^2.0.9"
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
