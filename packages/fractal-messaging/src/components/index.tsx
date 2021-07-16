@@ -9,3 +9,4 @@ export * from './MessageList';
 export * from './MessageText';
 export * from './MessageVideo';
 export * from './RoundedIconButton';
+export * from './types';

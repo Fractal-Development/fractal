@@ -27,3 +27,8 @@ export interface ChatMessageProps<T> {
 export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {
     messages: Array<T>;
 }
+export interface ChatContentProps<T extends MinimalMessageData> extends MessageListProps<T> {
+    onSend: (message: string) => void;
+    placeholder?: string;
+    isLoading?: boolean;
+}
