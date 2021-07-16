@@ -56,7 +56,8 @@ import {
     HorizontalFlatListFragment,
     RecyclerViewFragment
 } from './ui-fragments';
-import { ChartsExamples } from './charts-fragments/ChartsExamples';
+import { ChartsExamples } from './charts-fragments';
+import { MediaExamples } from './media-fragments';
 
 function Content(): JSX.Element {
     return (
@@ -116,6 +117,7 @@ function Content(): JSX.Element {
             <VerticalFlatListFragment />
             <HorizontalFlatListFragment />
             <ChartsExamples />
+            <MediaExamples />
         </PaddingLayer>
     );
 }
