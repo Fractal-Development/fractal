@@ -1,6 +1,7 @@
 import React from 'react';
 import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
 import { ThemeSwapperFragment, DropZoneFragment, ChipFragment, ChipListFragment, ColorTabListFragment, TagsInputFieldFragment, ActivityIndicatorFragment, AvatarFragment, ImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioButtonFragment, RadioGroupFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, HorizontalLayerFragment, MarginLayerFragment, PaddingLayerFragment, BoxContentFragment, SeparatorFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, DimmedModalFragment, BottomCellModalFragment, ErrorMessageFragment, BadgeFragment, MessageFragment, PopoverFragment, TableContainerFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, VerticalFlatListFragment, HorizontalFlatListFragment, RecyclerViewFragment } from './ui-fragments';
+import { ChartsExamples } from './charts-fragments/ChartsExamples';
 function Content() {
     return (React.createElement(PaddingLayer, null,
         React.createElement(ThemeSwapperFragment, null),
@@ -56,7 +57,8 @@ function Content() {
         React.createElement(SocialMediaButtonsFragment, null),
         React.createElement(RecyclerViewFragment, null),
         React.createElement(VerticalFlatListFragment, null),
-        React.createElement(HorizontalFlatListFragment, null)));
+        React.createElement(HorizontalFlatListFragment, null),
+        React.createElement(ChartsExamples, null)));
 }
 export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
