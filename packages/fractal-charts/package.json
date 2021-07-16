@@ -79,9 +79,6 @@
         "typescript": "^4.3.4",
         "utility-types": "^3.10.0"
     },
-    "resolutions": {
-        "d3-array": "2.3.3"
-    },
     "keywords": [
         "Javascript",
         "React",
