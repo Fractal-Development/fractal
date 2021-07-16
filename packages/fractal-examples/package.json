@@ -16,6 +16,7 @@
     "peerDependencies": {
         "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
         "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
+        "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "react": "*",
         "react-dom": "*",
@@ -44,6 +45,7 @@
         "@babel/core": "^7.9.0",
         "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
         "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
+        "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
@@ -75,3 +77,4 @@
         "UI Library"
     ]
 }
+
