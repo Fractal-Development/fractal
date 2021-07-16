@@ -1,29 +1,42 @@
-import React, { forwardRef, useCallback } from 'react';
-import { ButtonTextField, LayerProps } from '@bma98/fractal-ui';
+import React, { forwardRef, useCallback, useState } from 'react';
+import { ButtonTextField, ButtonVariant, LayerProps } from '@bma98/fractal-ui';
 import { SendIcon } from '../assets/SendIcon';
 
 interface MessageInputProps extends Partial<Omit<LayerProps, 'children'>> {
     onSend: (message: string) => void;
+    buttonVariant?: ButtonVariant;
     onChangeText?: (text: string) => void;
     placeholder?: string;
     useForegroundVariant?: boolean;
 }
 
-const MessageInput = forwardRef(({ onSend, useForegroundVariant, ...others }: MessageInputProps, ref: any): JSX.Element => {
-    const renderIcon = useCallback((color: string, size: number) => <SendIcon height={size} width={size} fill={color} />, []);
+const MessageInput = forwardRef(
+    ({ onSend, useForegroundVariant, buttonVariant = 'success', ...others }: MessageInputProps, ref: any): JSX.Element => {
+        const renderIcon = useCallback((color: string, size: number) => <SendIcon height={size} width={size} fill={color} />, []);
+        const [message, setMessage] = useState('');
 
-    return (
-        <ButtonTextField
-            ref={ref}
-            buttonVariant={'success'}
-            buttonImage={renderIcon}
-            onButtonPress={onSend}
-            onSubmitEditing={onSend}
-            useForegroundVariant={useForegroundVariant}
-            {...others}
-        />
-    );
-});
+        const handleSendMessage = useCallback(() => {
+            if (message != '') {
+                onSend(message);
+                setMessage('');
+            }
+        }, [message, onSend]);
+
+        return (
+            <ButtonTextField
+                ref={ref}
+                value={message}
+                buttonVariant={buttonVariant}
+                buttonImage={renderIcon}
+                onButtonPress={handleSendMessage}
+                onSubmitEditing={handleSendMessage}
+                onChangeText={setMessage}
+                useForegroundVariant={useForegroundVariant}
+                {...others}
+            />
+        );
+    }
+);
 
 MessageInput.displayName = 'MessageInput';
 

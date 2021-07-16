@@ -30,11 +30,11 @@ export function ChatContent<T extends MinimalMessageData>({
                         <ChatLoadingIndicator show />
                     ) : (
                         <MessageInput
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0 }}
                             placeholder={placeholder}
                             useForegroundVariant
                             onSend={onSend}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0 }}
                         />
                     )}
                 </AnimatePresence>

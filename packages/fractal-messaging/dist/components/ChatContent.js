@@ -20,6 +20,6 @@ export function ChatContent(_a) {
     return (React.createElement(KeyboardAvoidingView, null,
         React.createElement(PaddingLayer, Object.assign({ flex: 1 }, layerProps),
             React.createElement(MessageList, { messages: messages, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions }),
-            React.createElement(AnimatePresence, null, isLoading ? (React.createElement(ChatLoadingIndicator, { show: true })) : (React.createElement(MessageInput, { animate: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0 }, placeholder: placeholder, useForegroundVariant: true, onSend: onSend }))))));
+            React.createElement(AnimatePresence, null, isLoading ? (React.createElement(ChatLoadingIndicator, { show: true })) : (React.createElement(MessageInput, { placeholder: placeholder, useForegroundVariant: true, onSend: onSend, animate: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0 } }))))));
 }
 //# sourceMappingURL=ChatContent.js.map
