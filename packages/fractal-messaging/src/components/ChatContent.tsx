@@ -14,10 +14,11 @@ export function ChatContent<T extends MinimalMessageData>({
     onSend,
     placeholder = 'Escribe aquí...',
     isLoading,
+    keyboardAvoidingViewProps,
     ...layerProps
 }: ChatContentProps<T>): JSX.Element {
     return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView {...keyboardAvoidingViewProps}>
             <PaddingLayer flex={1} {...layerProps}>
                 <MessageList
                     messages={messages}
@@ -33,6 +34,7 @@ export function ChatContent<T extends MinimalMessageData>({
                             placeholder={placeholder}
                             useForegroundVariant
                             onSend={onSend}
+                            from={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0 }}
                         />

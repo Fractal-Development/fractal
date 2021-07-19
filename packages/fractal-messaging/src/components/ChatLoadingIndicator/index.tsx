@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer } from '@bma98/fractal-ui';
+import { Layer, LayerProps } from '@bma98/fractal-ui';
 import { loadingCircleTransition, loadingCircleVariants } from './config';
 
 const bulletStyle = {
@@ -11,13 +11,13 @@ const bulletStyle = {
     marginRight: 2
 };
 
-interface Props {
+interface ChatLoadingIndicatorProps extends LayerProps {
     show: boolean;
 }
 
-export function ChatLoadingIndicator({ show }: Props): JSX.Element | null {
+export function ChatLoadingIndicator({ show, ...layerProps }: ChatLoadingIndicatorProps): JSX.Element | null {
     return show ? (
-        <Layer height={40} width={60} justifyContent={'center'}>
+        <Layer height={40} width={60} justifyContent={'center'} {...layerProps}>
             <Layer
                 backgroundColor={'#ffffff'}
                 padding={8}
