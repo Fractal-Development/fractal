@@ -19,13 +19,26 @@
         "react-dom": "*",
         "react-is": "*",
         "react-native": "~0.63.4",
-        "react-native-gesture-handler": "~1.10.3"
+        "expo-av": "^9.1.2",
+        "react-native-webview": "^11.6.4",
+        "react-native-youtube-iframe": "^2.1.0"
+    },
+    "peerDependenciesMeta": {
+        "react-native": {
+            "optional": true
+        },
+        "expo-av": {
+            "optional": true
+        },
+        "react-native-webview": {
+            "optional": true
+        },
+        "react-native-youtube-iframe": {
+            "optional": true
+        }
     },
     "dependencies": {
         "@bma98/size-class": "^2.2.4",
-        "expo-av": "^9.1.2",
-        "react-native-webview": "^11.6.4",
-        "react-native-youtube-iframe": "^2.1.0",
         "styled-components": "^5.3.0"
     },
     "devDependencies": {
