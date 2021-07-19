@@ -9,27 +9,28 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useEffect } from 'react';
 import { Layer } from '@bma98/fractal-ui';
 export function ChartContainer(_a) {
     var { style, contentStyle, onChangeDimensions, rotate, children } = _a, layerProps = __rest(_a, ["style", "contentStyle", "onChangeDimensions", "rotate", "children"]);
     const handleDimensions = useCallback((dimensions) => {
         onChangeDimensions(dimensions);
     }, [onChangeDimensions]);
-    const observerRef = useRef(new ResizeObserver((entries) => {
-        const { width, height } = entries[0].contentRect;
-        handleDimensions({ width, height });
-    }));
-    const resizedContainerRef = useCallback((container) => {
-        if (container !== null) {
-            observerRef.current.observe(container);
+    const observerRef = useRef(null);
+    const resizedContainerRef = useRef(null);
+    useEffect(() => {
+        if (resizedContainerRef.current) {
+            observerRef.current = new ResizeObserver((entries) => {
+                // Only care about the first element, we expect one element ot be watched
+                const { width, height } = entries[0].contentRect;
+                handleDimensions({ width, height });
+            });
+            observerRef.current.observe(resizedContainerRef.current);
         }
-        // When element is unmounted, ref callback is called with a null argument
-        // => best time to cleanup the observer
-        else {
+        return () => {
             if (observerRef.current)
                 observerRef.current.disconnect();
-        }
+        };
     }, []);
     return (React.createElement(Layer, Object.assign({ position: 'relative', zIndex: 0, ref: resizedContainerRef, style: style }, layerProps),
         React.createElement(Layer, { position: 'relative', zIndex: 0, animate: { rotate: rotate }, style: Object.assign({ flex: 1 }, contentStyle) }, children)));
