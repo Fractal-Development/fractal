@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useEffect } from 'react';
 import { Layer } from '@bma98/fractal-ui';
 import { ChartContainerProps } from '../../types';
 
@@ -17,22 +17,23 @@ export function ChartContainer({
         [onChangeDimensions]
     );
 
-    const observerRef = useRef(
-        new ResizeObserver((entries) => {
-            const { width, height } = entries[0].contentRect;
-            handleDimensions({ width, height });
-        })
-    );
+    const observerRef = useRef<ResizeObserver | null>(null);
+    const resizedContainerRef = useRef<HTMLDivElement>(null);
 
-    const resizedContainerRef = useCallback((container: HTMLDivElement) => {
-        if (container !== null) {
-            observerRef.current.observe(container);
+    useEffect(() => {
+        if (resizedContainerRef.current) {
+            observerRef.current = new ResizeObserver((entries) => {
+                // Only care about the first element, we expect one element ot be watched
+                const { width, height } = entries[0].contentRect;
+                handleDimensions({ width, height });
+            });
+
+            observerRef.current.observe(resizedContainerRef.current);
         }
-        // When element is unmounted, ref callback is called with a null argument
-        // => best time to cleanup the observer
-        else {
+
+        return () => {
             if (observerRef.current) observerRef.current.disconnect();
-        }
+        };
     }, []);
 
     return (
