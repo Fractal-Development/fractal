@@ -5,7 +5,10 @@
     "dependencies": {
         "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
         "@bma98/fractal-examples": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master",
+        "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
+        "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/size-class": "^2.2.4",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
