@@ -21,11 +21,11 @@ const PlayPauseIcon = memo(({ tintColor, isPlaying }: PlayPauseIconProps): JSX.E
     return (
         <AnimatePresence>
             {isPlaying ? (
-                <Layer initial={variants.initial} animate={variants.animate} exit={variants.exit}>
+                <Layer from={variants.initial} animate={variants.animate} exit={variants.exit}>
                     <PauseIcon fill={tintColor} width={ICON_SIZE} height={ICON_SIZE} />
                 </Layer>
             ) : (
-                <Layer paddingLeft={2} initial={variants.initial} animate={variants.animate} exit={variants.exit}>
+                <Layer paddingLeft={2} from={variants.initial} animate={variants.animate} exit={variants.exit}>
                     <PlayIcon fill={tintColor} width={ICON_SIZE} height={ICON_SIZE} />
                 </Layer>
             )}

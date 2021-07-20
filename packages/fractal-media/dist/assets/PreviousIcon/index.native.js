@@ -6,4 +6,4 @@ const PreviousIcon = memo((props) => {
 });
 PreviousIcon.displayName = 'PreviousIcon';
 export { PreviousIcon };
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map

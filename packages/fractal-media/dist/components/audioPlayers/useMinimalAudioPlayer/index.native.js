@@ -91,4 +91,4 @@ export function useMinimalAudioPlayer(audioSrc) {
         setRateManually
     };
 }
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map

@@ -18,7 +18,7 @@ export function LoveToggleButton({
     uncheckedColor: uncheckedColorProp
 }: LoveToggleButtonProps): JSX.Element {
     const { colors } = useTheme();
-    const checkedColor = checkedColorProp ?? colors.alternativeInteractiveColor;
+    const checkedColor = checkedColorProp ?? colors.mainInteractiveColor;
     const uncheckedColor = uncheckedColorProp ?? colors.placeholder;
 
     return (

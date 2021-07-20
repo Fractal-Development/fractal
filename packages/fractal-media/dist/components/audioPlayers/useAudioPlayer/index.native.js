@@ -108,4 +108,4 @@ export function useAudioPlayer(tracks, shufflePlayback, repeatPlayback) {
         toggleRepeatPlayback
     };
 }
-//# sourceMappingURL=index.platform.js.map
+//# sourceMappingURL=index.native.js.map

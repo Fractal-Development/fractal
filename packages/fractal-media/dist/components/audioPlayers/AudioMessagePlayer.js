@@ -40,7 +40,4 @@ export function AudioMessagePlayer(_a) {
             React.createElement(AudioProgressBar, { duration: duration, currentTime: currentTime, isPlaying: isPlaying, onTimeUpdate: handleUpdateTime, timeLabelsSpacing: spacings.xs, flex: 1, marginLeft: spacings.s, marginRight: spacings.s }),
             React.createElement(RateToggleButton, { onChangeRate: handleUpdateRate }))));
 }
-/* <Layer position={'absolute'} bottom={0}>
-                        <Text variant='smallLabel' fontSize={12}>{`${formatNumberToTime(trackProgress)}`}</Text>
-                    </Layer> */
 //# sourceMappingURL=AudioMessagePlayer.js.map

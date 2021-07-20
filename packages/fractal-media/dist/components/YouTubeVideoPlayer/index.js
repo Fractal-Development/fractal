@@ -28,7 +28,7 @@ export function YouTubeVideoPlayer(_a) {
         setIsLoadingIFrame(false);
     }, []);
     return (React.createElement(Layer, Object.assign({ overflow: 'hidden', position: 'relative', backgroundColor: 'black', width: width, height: height }, layerProps),
-        React.createElement(AnimatePresence, null, enabledIFrame ? (React.createElement(IframePlayer, { videoID: videoID !== null && videoID !== void 0 ? videoID : '', width: width, height: height, onReady: handleReady })) : (React.createElement(MediaPlayerPoster, { width: width, height: height, source: `http://img.youtube.com/vi/${videoID}/0.jpg`, onPlayPress: handlePlay, initial: { opacity: 1 }, animate: { opacity: 1 }, exit: { opacity: 0 } }))),
+        React.createElement(AnimatePresence, null, enabledIFrame ? (React.createElement(IframePlayer, { videoID: videoID !== null && videoID !== void 0 ? videoID : '', width: width, height: height, onReady: handleReady })) : (React.createElement(MediaPlayerPoster, { width: width, height: height, source: `http://img.youtube.com/vi/${videoID}/0.jpg`, onPlayPress: handlePlay, from: { opacity: 1 }, animate: { opacity: 1 }, exit: { opacity: 0 } }))),
         enabledIFrame && isLoadingIFrame && React.createElement(Loader, null)));
 }
 //# sourceMappingURL=index.js.map

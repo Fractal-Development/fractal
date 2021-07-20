@@ -36,7 +36,7 @@ export function YouTubeVideoPlayer({ source, width, height, ...layerProps }: You
                         height={height}
                         source={`http://img.youtube.com/vi/${videoID}/0.jpg`}
                         onPlayPress={handlePlay}
-                        initial={{ opacity: 1 }}
+                        from={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     />
