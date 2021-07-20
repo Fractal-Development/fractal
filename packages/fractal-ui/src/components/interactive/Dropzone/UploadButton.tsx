@@ -1,6 +1,6 @@
 import React from 'react';
 import * as DocumentPicker from 'expo-document-picker';
-import { UploadIcon } from '../../../assets';
+import { LoadIcon } from '../../../assets';
 import { useTheme } from '../../../context';
 import { Button } from '../buttons/Button';
 import { HorizontalLayer } from '../../layout';
@@ -25,7 +25,7 @@ export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', accep
     return (
         <Button variant={'main'} onPress={pickFile}>
             <HorizontalLayer justifyContent={'center'} alignItems={'center'} padding={spacings.s}>
-                <UploadIcon width={24} height={24} fill={'white'} />
+                <LoadIcon width={24} height={24} fill={'white'} />
                 <Text variant={'button'} marginLeft={spacings.xs}>
                     {text}
                 </Text>

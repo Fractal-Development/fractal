@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
-import { UploadIcon } from '../../../assets/UploadIcon';
+import { LoadIcon } from '../../../assets/LoadIcon';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { extractTextProps } from '../../../sharedProps/TextProps';
 import { Layer } from '../../layout/Layer';
@@ -70,7 +70,7 @@ export function DropBox({
         >
             <Layer position={'absolute'} top={0} bottom={0} left={0} right={0} overflow='hidden' {...dropContainerProps} />
             <FileInput {...fileInputProps} />
-            <UploadIcon width={24} height={24} fill={colors.text} />
+            <LoadIcon width={24} height={24} fill={colors.text} />
             <Layer width={spacings.xs} />
             <StyledText
                 tabIndex={0}

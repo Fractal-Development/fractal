@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-    useTheme,
-    Box,
-    CircularIconButton,
-    Text,
-    LoadIcon,
-    UploadIcon,
-    ChevronDownIcon,
-    ThreeDotsHorizontalIcon,
-    SearchIcon
-} from '@bma98/fractal-ui';
+import { useTheme, Box, CircularIconButton, Text, LoadIcon, ChevronDownIcon, ThreeDotsHorizontalIcon, SearchIcon } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function CircularIconButtonFragment(): JSX.Element {
@@ -34,16 +24,16 @@ export function CircularIconButtonFragment(): JSX.Element {
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s}>
-                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
+                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s} disabled>
-                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
+                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s} reduceColor>
-                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
+                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'alternative'} marginBottom={spacings.s} reduceColor disabled>
-                    {(color) => <UploadIcon height={24} width={24} fill={color} />}
+                    {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </CircularIconButton>
                 <CircularIconButton variant={'danger'} marginBottom={spacings.s}>
                     {(color) => <ChevronDownIcon height={24} width={24} fill={color} />}
