@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, CircularIconButton, Text, LoadIcon, UploadIcon, ChevronDownIcon, ThreeDotsHorizontalIcon, SearchIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, CircularIconButton, Text, LoadIcon, ChevronDownIcon, ThreeDotsHorizontalIcon, SearchIcon } from '@bma98/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 export function CircularIconButtonFragment() {
     const { spacings } = useTheme();
@@ -10,10 +10,10 @@ export function CircularIconButtonFragment() {
             React.createElement(CircularIconButton, { variant: 'main', marginBottom: spacings.s, disabled: true }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
             React.createElement(CircularIconButton, { variant: 'main', marginBottom: spacings.s, reduceColor: true }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
             React.createElement(CircularIconButton, { variant: 'main', marginBottom: spacings.s, reduceColor: true, disabled: true }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
-            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s }, (color) => React.createElement(UploadIcon, { height: 24, width: 24, fill: color })),
-            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s, disabled: true }, (color) => React.createElement(UploadIcon, { height: 24, width: 24, fill: color })),
-            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s, reduceColor: true }, (color) => React.createElement(UploadIcon, { height: 24, width: 24, fill: color })),
-            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s, reduceColor: true, disabled: true }, (color) => React.createElement(UploadIcon, { height: 24, width: 24, fill: color })),
+            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
+            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s, disabled: true }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
+            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s, reduceColor: true }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
+            React.createElement(CircularIconButton, { variant: 'alternative', marginBottom: spacings.s, reduceColor: true, disabled: true }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color })),
             React.createElement(CircularIconButton, { variant: 'danger', marginBottom: spacings.s }, (color) => React.createElement(ChevronDownIcon, { height: 24, width: 24, fill: color })),
             React.createElement(CircularIconButton, { variant: 'danger', marginBottom: spacings.s, disabled: true }, (color) => React.createElement(ChevronDownIcon, { height: 24, width: 24, fill: color })),
             React.createElement(CircularIconButton, { variant: 'danger', marginBottom: spacings.s, reduceColor: true }, (color) => React.createElement(ChevronDownIcon, { height: 24, width: 24, fill: color })),

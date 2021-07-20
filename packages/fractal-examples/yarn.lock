@@ -1166,15 +1166,32 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#ceaed3acdebf41276d8794a1c3ba125eb4fd8615"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#c72d13ddad8a7953ecffae3bd57c5ed667aed50f"
   dependencies:
+    "@types/node" "^16.3.2"
     d3-array "2.3.3"
     d3-scale "3.3.0"
     d3-shape "^3.0.1"
 
+"@bma98/fractal-media@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master":
+  version "2.0.0"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#beca9668d337dc3542d483ff2930aa8a310ffd8c"
+  dependencies:
+    "@bma98/size-class" "^2.2.4"
+    styled-components "^5.3.0"
+
+"@bma98/fractal-messaging@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master":
+  version "2.0.0"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master#1d12d187e59e1b800dc8bdae20fda3fdc562adcb"
+  dependencies:
+    "@bma98/fractal-media" "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master"
+    "@bma98/size-class" "^2.2.4"
+    styled-components "^5.3.0"
+    text-metrics "^2.0.9"
+
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#b737844ca7daed45c97af08702e4773de96529ce"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#af4cb8ae700fd328184d9083a008fb1b7729de24"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -2124,6 +2141,11 @@
   version "16.3.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.3.1.tgz#24691fa2b0c3ec8c0d34bfcfd495edac5593ebb4"
   integrity sha512-N87VuQi7HEeRJkhzovao/JviiqKjDKMVKxKMfUvSKw+MbkbW8R0nA3fi/MQhhlxV2fQ+2ReM+/Nt4efdrJx3zA==
+
+"@types/node@^16.3.2":
+  version "16.3.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.3.3.tgz#0c30adff37bbbc7a50eb9b58fae2a504d0d88038"
+  integrity sha512-8h7k1YgQKxKXWckzFCMfsIwn0Y61UK6tlD6y2lOb3hTOIMlK3t9/QwHOhc81TwU+RMf0As5fj7NPjroERCnejQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -8002,6 +8024,11 @@ test-exclude@^6.0.0:
     "@istanbuljs/schema" "^0.1.2"
     glob "^7.1.4"
     minimatch "^3.0.4"
+
+text-metrics@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/text-metrics/-/text-metrics-2.0.9.tgz#1d94ed195cd9b1264745ced26f0b49d802f1b482"
+  integrity sha512-u+8E0nXisLFS5s+aPPlRv8QRU5OfND9JXFt16BEa5BQPVP3R/oP2gcjTzczlw3xOyvRQtdZDg7jwNbB0seNS5Q==
 
 text-table@^0.2.0:
   version "0.2.0"
