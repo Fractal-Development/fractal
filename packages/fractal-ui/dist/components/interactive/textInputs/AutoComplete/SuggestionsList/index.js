@@ -1,7 +1,7 @@
 import React from 'react';
-import { SuggestionItem } from './SuggestionItem';
-import { Layer } from '../../../layout';
-import { useTheme } from '../../../../context';
+import { SuggestionItem } from '../SuggestionItem';
+import { Layer } from '../../../../layout';
+import { useTheme } from '../../../../../context';
 export function SuggestionsList({ filteredData, getLabel, onItemPress, selectedIds, multiple }) {
     const { spacings } = useTheme();
     return (React.createElement(Layer, { padding: spacings.m }, filteredData.map((item, index) => {
@@ -13,4 +13,4 @@ export function SuggestionsList({ filteredData, getLabel, onItemPress, selectedI
         return (React.createElement(SuggestionItem, { key: `${item.id}`, label: label, isSelected: isSelected, isMultiple: multiple, onPress: handleItemPress, addSeparator: index !== filteredData.length - 1 }));
     })));
 }
-//# sourceMappingURL=SuggestionsList.js.map
+//# sourceMappingURL=index.js.map

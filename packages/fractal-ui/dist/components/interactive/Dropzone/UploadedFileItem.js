@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { HorizontalLayer, Layer } from '../../layout';
-import { Image } from '../../media';
+import { Image } from '../../media/Image';
 import { useValidateFileType } from './hooks/useValidateFileType';
 import { isNativeFileInfo } from './types';
 import { Text } from '../../text';
 import { useTheme } from '../../../context';
-import { CrossButton } from '../buttons';
+import { CrossButton } from '../buttons/CrossButton';
 import { FileIcon } from '../../../assets';
 import { fileTypes } from './fileTypes';
 const PREVIEW_SIZE = 44;

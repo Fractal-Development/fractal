@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
-import { UploadIcon } from '../../../assets/UploadIcon';
+import { LoadIcon } from '../../../assets/LoadIcon';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { extractTextProps } from '../../../sharedProps/TextProps';
 import { Layer } from '../../layout/Layer';
@@ -43,7 +43,7 @@ export function DropBox({ dropContainerProps, dragFocused, fileInputProps, onBut
     return (React.createElement(Layer, { position: 'relative', minHeight: sizes.interactiveItemHeight, padding: spacings.xs, borderStyle: 'dashed', borderRadius: borderRadius.m, borderWidth: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row', variants: variants, currentVariant: dragFocused ? 'focus' : 'from' },
         React.createElement(Layer, Object.assign({ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, overflow: 'hidden' }, dropContainerProps)),
         React.createElement(FileInput, Object.assign({}, fileInputProps)),
-        React.createElement(UploadIcon, { width: 24, height: 24, fill: colors.text }),
+        React.createElement(LoadIcon, { width: 24, height: 24, fill: colors.text }),
         React.createElement(Layer, { width: spacings.xs }),
         React.createElement(StyledText, { tabIndex: 0, selectable: false, fontFamily: fontFamily, fontSize: fontSize, fontWeight: fontWeight, color: finalColor },
             text,

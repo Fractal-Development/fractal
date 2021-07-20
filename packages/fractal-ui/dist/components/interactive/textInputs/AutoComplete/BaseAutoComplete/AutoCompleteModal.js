@@ -10,7 +10,6 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useEffect, useRef } from 'react';
-import { ScrollView } from 'react-native';
 import { Button } from '../../../buttons';
 import { PaddingLayer, Box } from '../../../../layout';
 import { MiddleCellModal } from '../../../../overlays/modals';
@@ -28,8 +27,7 @@ export function AutoCompleteModal(_a) {
         React.createElement(Box, { flex: 1, padding: 0 },
             React.createElement(PaddingLayer, null,
                 React.createElement(SearchBar, Object.assign({ inputRef: searchInputRef, value: value, onSearch: onSearch, onChangeText: onChangeText }, searchBarProps))),
-            React.createElement(ScrollView, null,
-                React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress, selectedIds: selectedIds })),
+            React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress, selectedIds: selectedIds }),
             React.createElement(PaddingLayer, null,
                 React.createElement(Button, { variant: 'main', text: doneText, onPress: hideModal })))));
 }

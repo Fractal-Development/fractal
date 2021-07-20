@@ -9,4 +9,3 @@ export * from './GoogleIcon';
 export * from './LoadIcon';
 export * from './ThreeDotsHorizontalIcon';
 export * from './SearchIcon';
-export * from './UploadIcon';

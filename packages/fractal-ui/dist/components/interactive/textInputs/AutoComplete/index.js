@@ -16,7 +16,7 @@ export function AutoComplete(_a) {
     var { options, getOptionLabel, onSelect, controllableSelectedOptions, multiple, onChangeText, value } = _a, searchBarProps = __rest(_a, ["options", "getOptionLabel", "onSelect", "controllableSelectedOptions", "multiple", "onChangeText", "value"]);
     const [suggestionsVisible, setSuggestionsVisible] = useState(false);
     const [userInput, setUserInput] = useControllableState(value, '', onChangeText);
-    const [filteredOptions, setFilteredOptions] = useState([]);
+    const [filteredOptions, setFilteredOptions] = useState(options);
     const handleSelect = (selectedOptions) => {
         if (multiple) {
             onSelect(selectedOptions);

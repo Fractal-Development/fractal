@@ -9,4 +9,5 @@ export interface TouchableOpacityProps extends FractalSharedStyleProps, Animatio
     whileTap?: FractalSharedAnimationProps;
     onPressIn?: () => void;
     onPressOut?: () => void;
+    disabled?: boolean;
 }

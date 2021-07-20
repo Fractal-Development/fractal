@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import React from 'react';
 import * as DocumentPicker from 'expo-document-picker';
-import { UploadIcon } from '../../../assets';
+import { LoadIcon } from '../../../assets';
 import { useTheme } from '../../../context';
-import { Button } from '../buttons';
+import { Button } from '../buttons/Button';
 import { HorizontalLayer } from '../../layout';
 import { Text } from '../../text';
 export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', acceptedTypes }) {
@@ -24,7 +24,7 @@ export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', accep
     });
     return (React.createElement(Button, { variant: 'main', onPress: pickFile },
         React.createElement(HorizontalLayer, { justifyContent: 'center', alignItems: 'center', padding: spacings.s },
-            React.createElement(UploadIcon, { width: 24, height: 24, fill: 'white' }),
+            React.createElement(LoadIcon, { width: 24, height: 24, fill: 'white' }),
             React.createElement(Text, { variant: 'button', marginLeft: spacings.xs }, text))));
 }
 //# sourceMappingURL=UploadButton.js.map

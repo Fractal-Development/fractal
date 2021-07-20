@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import { Modal } from './Modal';
-import { Pressable } from '../../interactive';
+import { Pressable } from '../../interactive/buttons/Pressable';
 import { SafeAreaLayer } from '../../layout';
 const modalAnimationStyles = {
     initial: { opacity: 0 },

@@ -19,7 +19,7 @@ const TextButton = forwardRef((_a, ref) => {
     const { colors } = useTheme();
     const colorName = `${variant}InteractiveColor`;
     const color = colors[colorName];
-    return (React.createElement(TouchableOpacity, Object.assign({ ref: ref, opacity: disabled ? 0.5 : 1, pointerEvents: disabled ? 'none' : undefined }, others, getTextButtonAccessibilityProps(children)),
+    return (React.createElement(TouchableOpacity, Object.assign({ ref: ref, opacity: disabled ? 0.5 : 1, disabled: disabled }, others, getTextButtonAccessibilityProps(children)),
         leftIcon && leftIcon(color),
         children && (React.createElement(Text, Object.assign({ fontWeight: 500, variant: 'textButton', color: color }, textProps), children)),
         rightIcon && rightIcon(color)));
