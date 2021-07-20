@@ -47,15 +47,7 @@ export function ChartContainer({
     }, [handleDimensions, height]);
 
     return (
-        <Layer
-            position={'relative'}
-            zIndex={0}
-            ref={resizedContainerRef}
-            style={style}
-            backgroundColor={'tomato'}
-            height={height}
-            {...layerProps}
-        >
+        <Layer position={'relative'} zIndex={0} ref={resizedContainerRef} style={style} height={height} {...layerProps}>
             <Layer position={'relative'} zIndex={0} animate={{ rotate: rotate }} style={{ flex: 1, ...contentStyle }}>
                 {children}
             </Layer>
