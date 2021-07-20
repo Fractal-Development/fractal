@@ -8,6 +8,7 @@ export function ChartContainer({
     onChangeDimensions,
     rotate,
     children,
+    height,
     ...layerProps
 }: ChartContainerProps): JSX.Element {
     const handleDimensions = useCallback(
@@ -25,7 +26,9 @@ export function ChartContainer({
             observerRef.current = new ResizeObserver((entries) => {
                 // Only care about the first element, we expect one element ot be watched
                 const { width, height } = entries[0].contentRect;
-                handleDimensions({ width, height });
+                if (height > 0) {
+                    handleDimensions({ width, height });
+                }
             });
 
             observerRef.current.observe(resizedContainerRef.current);
@@ -34,10 +37,25 @@ export function ChartContainer({
         return () => {
             if (observerRef.current) observerRef.current.disconnect();
         };
-    }, []);
+    }, [handleDimensions]);
+
+    useEffect(() => {
+        if (resizedContainerRef.current) {
+            const width = resizedContainerRef.current.offsetWidth;
+            handleDimensions({ width, height });
+        }
+    }, [handleDimensions, height]);
 
     return (
-        <Layer position={'relative'} zIndex={0} ref={resizedContainerRef} style={style} {...layerProps}>
+        <Layer
+            position={'relative'}
+            zIndex={0}
+            ref={resizedContainerRef}
+            style={style}
+            backgroundColor={'tomato'}
+            height={height}
+            {...layerProps}
+        >
             <Layer position={'relative'} zIndex={0} animate={{ rotate: rotate }} style={{ flex: 1, ...contentStyle }}>
                 {children}
             </Layer>

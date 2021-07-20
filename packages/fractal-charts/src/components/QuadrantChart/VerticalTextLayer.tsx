@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layer } from '@bma98/fractal-ui';
 import { CenteredText } from './CenteredText';
-import { useVerticalTransform } from './useVerticalTransform';
+import { VerticalLayer } from './VerticalLayer';
 
 interface VerticalTextLayerProps {
     text: string;
@@ -9,12 +9,13 @@ interface VerticalTextLayerProps {
 }
 
 export function VerticalTextLayer({ text, textColor }: VerticalTextLayerProps): JSX.Element {
-    const verticalTransform = useVerticalTransform();
     return (
         <Layer height={130} width={24} position={'relative'}>
-            <CenteredText width={130} height={24} position={'absolute'} color={textColor} style={{ ...verticalTransform }}>
-                {text}
-            </CenteredText>
+            <VerticalLayer>
+                <Layer flex={1} alignItems={'center'}>
+                    <CenteredText color={textColor}>{text}</CenteredText>
+                </Layer>
+            </VerticalLayer>
         </Layer>
     );
 }
