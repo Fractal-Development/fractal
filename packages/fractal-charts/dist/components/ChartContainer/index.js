@@ -12,7 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { useRef, useCallback, useEffect } from 'react';
 import { Layer } from '@bma98/fractal-ui';
 export function ChartContainer(_a) {
-    var { style, contentStyle, onChangeDimensions, rotate, children } = _a, layerProps = __rest(_a, ["style", "contentStyle", "onChangeDimensions", "rotate", "children"]);
+    var { style, contentStyle, onChangeDimensions, rotate, children, height } = _a, layerProps = __rest(_a, ["style", "contentStyle", "onChangeDimensions", "rotate", "children", "height"]);
     const handleDimensions = useCallback((dimensions) => {
         onChangeDimensions(dimensions);
     }, [onChangeDimensions]);
@@ -23,7 +23,9 @@ export function ChartContainer(_a) {
             observerRef.current = new ResizeObserver((entries) => {
                 // Only care about the first element, we expect one element ot be watched
                 const { width, height } = entries[0].contentRect;
-                handleDimensions({ width, height });
+                if (height > 0) {
+                    handleDimensions({ width, height });
+                }
             });
             observerRef.current.observe(resizedContainerRef.current);
         }
@@ -31,8 +33,14 @@ export function ChartContainer(_a) {
             if (observerRef.current)
                 observerRef.current.disconnect();
         };
-    }, []);
-    return (React.createElement(Layer, Object.assign({ position: 'relative', zIndex: 0, ref: resizedContainerRef, style: style }, layerProps),
+    }, [handleDimensions]);
+    useEffect(() => {
+        if (resizedContainerRef.current) {
+            const width = resizedContainerRef.current.offsetWidth;
+            handleDimensions({ width, height });
+        }
+    }, [handleDimensions, height]);
+    return (React.createElement(Layer, Object.assign({ position: 'relative', zIndex: 0, ref: resizedContainerRef, style: style, backgroundColor: 'tomato', height: height }, layerProps),
         React.createElement(Layer, { position: 'relative', zIndex: 0, animate: { rotate: rotate }, style: Object.assign({ flex: 1 }, contentStyle) }, children)));
 }
 //# sourceMappingURL=index.js.map
