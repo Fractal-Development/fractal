@@ -2,6 +2,7 @@ import React from 'react';
 import {
     useTheme,
     Box,
+    Layer,
     Text,
     AppleIcon,
     BugIcon,
@@ -26,17 +27,39 @@ export function IconsFragment(): JSX.Element {
                 Icons Fragment
             </Text>
             <Box flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
-                <AppleIcon height={24} width={24} fill={colors.black} />
-                <BugIcon height={24} width={24} fill={colors.black} />
-                <CheckIcon height={24} width={24} fill={colors.black} />
-                <ChevronDownIcon height={24} width={24} fill={colors.black} />
-                <CloseIcon height={24} width={24} fill={colors.black} />
-                <FacebookIcon height={24} width={24} fill={colors.black} />
-                <FileIcon height={24} width={24} fill={colors.black} />
-                <GoogleIcon height={24} width={24} fill={colors.black} />
-                <LoadIcon height={24} width={24} fill={colors.black} />
-                <SearchIcon height={24} width={24} fill={colors.black} />
-                <ThreeDotsHorizontalIcon height={24} width={24} fill={colors.black} />
+                <Layer marginRight={spacings.xs}>
+                    <AppleIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <BugIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <CheckIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <ChevronDownIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <CloseIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <FacebookIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <FileIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <GoogleIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <LoadIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <SearchIcon height={24} width={24} fill={colors.black} />
+                </Layer>
+                <Layer marginRight={spacings.xs}>
+                    <ThreeDotsHorizontalIcon height={24} width={24} fill={colors.black} />
+                </Layer>
             </Box>
         </>
     );
