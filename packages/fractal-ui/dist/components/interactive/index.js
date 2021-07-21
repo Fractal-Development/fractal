@@ -1,5 +1,6 @@
 export * from './buttons';
 export * from './CheckBox';
+export * from './CheckBox/Check';
 export * from './radio';
 export * from './SegmentedControl';
 export * from './Slider';
