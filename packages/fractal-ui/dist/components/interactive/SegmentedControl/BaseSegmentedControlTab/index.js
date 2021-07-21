@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { extractDimensionProps, extractBackgroundProps, extractShadowProps, extractBorderProps } from '../../../../sharedProps';
 import { motion } from 'framer-motion';
 import { getSegmentedControlButtonAccessibilityProps } from '../accessibility/getSegmentedControlButtonAccessibilityProps';
+import { Layer } from '../../../layout/Layer';
 const Button = styled.button `
     position: relative;
     ${extractDimensionProps};
@@ -63,6 +64,7 @@ export function BaseSegmentedControlTab({ onSelect, selected, value, hideDivider
     return (React.createElement(Tap, { noDivider: hideDivider !== null && hideDivider !== void 0 ? hideDivider : selected, whileTap: selected ? { scale: 0.95 } : { opacity: 0.6 } },
         React.createElement(Button, Object.assign({ margin: 0, width: '100%', height: '100%', type: 'button', onClick: onSelect }, getSegmentedControlButtonAccessibilityProps(selected)),
             selected && (React.createElement(Slider, { layoutId: 'SegmentedControlActive', backgroundColor: tintColor !== null && tintColor !== void 0 ? tintColor : colors.foreground, boxShadow: shadows.mainShadow, borderRadius: borderRadius.s })),
-            React.createElement(Text, { variant: 'normal', position: 'relative', zIndex: 2, fontFamily: fontFamily, fontSize: fontSize, color: color, fontWeight: fontWeight, fontStyle: fontStyle }, value))));
+            React.createElement(Layer, { position: 'relative', zIndex: 2, alignItems: 'center' },
+                React.createElement(Text, { fontFamily: fontFamily, fontSize: fontSize, color: color, fontWeight: fontWeight, fontStyle: fontStyle }, value)))));
 }
 //# sourceMappingURL=index.js.map

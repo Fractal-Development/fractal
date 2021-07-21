@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { extractDimensionProps, extractBackgroundProps, extractShadowProps, extractBorderProps } from '../../../../sharedProps';
 import { motion } from 'framer-motion';
 import { getSegmentedControlButtonAccessibilityProps } from '../accessibility/getSegmentedControlButtonAccessibilityProps';
+import { Layer } from '../../../layout/Layer';
 
 const Button = styled.button`
     position: relative;
@@ -100,18 +101,11 @@ export function BaseSegmentedControlTab({
                         borderRadius={borderRadius.s}
                     />
                 )}
-                <Text
-                    variant={'normal'}
-                    position={'relative'}
-                    zIndex={2}
-                    fontFamily={fontFamily}
-                    fontSize={fontSize}
-                    color={color}
-                    fontWeight={fontWeight}
-                    fontStyle={fontStyle}
-                >
-                    {value}
-                </Text>
+                <Layer position={'relative'} zIndex={2} alignItems={'center'}>
+                    <Text fontFamily={fontFamily} fontSize={fontSize} color={color} fontWeight={fontWeight} fontStyle={fontStyle}>
+                        {value}
+                    </Text>
+                </Layer>
             </Button>
         </Tap>
     );
