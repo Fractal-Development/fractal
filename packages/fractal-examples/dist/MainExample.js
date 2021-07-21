@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } from '@bma98/fractal-ui';
-import { ThemeSwapperFragment, DropZoneFragment, ChipFragment, ChipListFragment, ColorTabListFragment, TagsInputFieldFragment, ActivityIndicatorFragment, AvatarFragment, ImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioButtonFragment, RadioGroupFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, HorizontalLayerFragment, MarginLayerFragment, PaddingLayerFragment, BoxContentFragment, SeparatorFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, DimmedModalFragment, BottomCellModalFragment, ErrorMessageFragment, BadgeFragment, MessageFragment, PopoverFragment, TableContainerFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, VerticalFlatListFragment, HorizontalFlatListFragment, RecyclerViewFragment } from './ui-fragments';
+import { ThemeSwapperFragment, DropZoneFragment, IconsFragment, ChipFragment, ChipListFragment, ColorTabListFragment, TagsInputFieldFragment, ActivityIndicatorFragment, AvatarFragment, ImageFragment, ImageBackgroundFragment, SegmentedControlFragment, SliderFragment, SwitchFragment, CheckBoxFragment, RadioButtonFragment, RadioGroupFragment, TextsFragment, CrossButtonFragment, OptionsMenuButtonFragment, OptionsButtonFragment, TextButtonFragment, ButtonFragment, ToggleButtonFragment, RoundedToggleButtonFragment, CircularIconButtonFragment, ColorPickerFragment, HorizontalLayerFragment, MarginLayerFragment, PaddingLayerFragment, BoxContentFragment, SeparatorFragment, SearchBarFragment, AutocompleteFragment, TextFieldFragment, TextFieldMaskFragment, IconTextFieldFragment, PickerFragment, DatePickerFragment, TimePickerFragment, BlurredModalFragment, MiddleCellModalFragment, DimmedModalFragment, BottomCellModalFragment, ErrorMessageFragment, BadgeFragment, MessageFragment, PopoverFragment, TableContainerFragment, GridListFragment, GridFragment, SocialMediaButtonsFragment, VerticalFlatListFragment, HorizontalFlatListFragment, RecyclerViewFragment } from './ui-fragments';
 import { ChartsExamples } from './charts-fragments';
 import { MediaExamples } from './media-fragments';
 import { ChatContentExample } from './messaging-fragments';
@@ -9,6 +9,7 @@ function Content() {
         React.createElement(PaddingLayer, null,
             React.createElement(ThemeSwapperFragment, null),
             React.createElement(DropZoneFragment, null),
+            React.createElement(IconsFragment, null),
             React.createElement(ChipFragment, null),
             React.createElement(ChipListFragment, null),
             React.createElement(ColorTabListFragment, null),

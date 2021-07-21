@@ -3,6 +3,7 @@ import { FractalAppRoot, Background, ScrollView, PaddingLayer, SafeAreaLayer } f
 import {
     ThemeSwapperFragment,
     DropZoneFragment,
+    IconsFragment,
     ChipFragment,
     ChipListFragment,
     ColorTabListFragment,
@@ -66,6 +67,7 @@ function Content(): JSX.Element {
             <PaddingLayer>
                 <ThemeSwapperFragment />
                 <DropZoneFragment />
+                <IconsFragment />
                 <ChipFragment />
                 <ChipListFragment />
                 <ColorTabListFragment />
