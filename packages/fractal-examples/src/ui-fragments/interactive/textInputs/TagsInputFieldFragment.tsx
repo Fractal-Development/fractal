@@ -55,15 +55,16 @@ export function TagsInputFieldFragment(): JSX.Element {
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} maxHeight={320} {...getMultiSelectInputAccessibilityProps()}>
                 <MultiSelectInput
+                    enableClearButton
                     placeholder={'Escribe y da enter'}
+                    clearButtonText={'Limpiar'}
                     options={tags}
+                    inputValue={tag}
+                    controllableSelectedOptions={selectedTags}
                     getOptionLabel={(tag: Tag) => tag.value}
                     onSelect={handleSelect}
                     onDeletePress={removeTag}
                     onClearPress={clearTags}
-                    clearButtonText='Limpiar'
-                    inputValue={tag}
-                    controllableSelectedOptions={selectedTags}
                     onChangeText={setTag}
                     onSubmitEditing={handleSubmitEditing}
                 />

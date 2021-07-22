@@ -38,6 +38,6 @@ export function TagsInputFieldFragment() {
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Multi Select Input Fragment"),
         React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl, maxHeight: 320 }, getMultiSelectInputAccessibilityProps()),
-            React.createElement(MultiSelectInput, { placeholder: 'Escribe y da enter', options: tags, getOptionLabel: (tag) => tag.value, onSelect: handleSelect, onDeletePress: removeTag, onClearPress: clearTags, clearButtonText: 'Limpiar', inputValue: tag, controllableSelectedOptions: selectedTags, onChangeText: setTag, onSubmitEditing: handleSubmitEditing }))));
+            React.createElement(MultiSelectInput, { enableClearButton: true, placeholder: 'Escribe y da enter', clearButtonText: 'Limpiar', options: tags, inputValue: tag, controllableSelectedOptions: selectedTags, getOptionLabel: (tag) => tag.value, onSelect: handleSelect, onDeletePress: removeTag, onClearPress: clearTags, onChangeText: setTag, onSubmitEditing: handleSubmitEditing }))));
 }
 //# sourceMappingURL=TagsInputFieldFragment.js.map
