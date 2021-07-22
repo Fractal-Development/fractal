@@ -15,10 +15,10 @@ import { Button } from '../buttons';
 import { Layer } from '../../layout';
 import { ChipList } from '../../dataDisplay';
 export function MultiSelectInput(_a) {
-    var { options, getOptionLabel, clearButtonText = 'Limpiar', onSelect, onClearPress, onDeletePress, inputValue, controllableSelectedOptions, onChangeText, placeholder, onSubmitEditing } = _a, layerProps = __rest(_a, ["options", "getOptionLabel", "clearButtonText", "onSelect", "onClearPress", "onDeletePress", "inputValue", "controllableSelectedOptions", "onChangeText", "placeholder", "onSubmitEditing"]);
+    var { options, getOptionLabel, clearButtonText = 'Limpiar', onSelect, onClearPress, onDeletePress, inputValue, controllableSelectedOptions, onChangeText, placeholder, onSubmitEditing, enableClearButton = false } = _a, layerProps = __rest(_a, ["options", "getOptionLabel", "clearButtonText", "onSelect", "onClearPress", "onDeletePress", "inputValue", "controllableSelectedOptions", "onChangeText", "placeholder", "onSubmitEditing", "enableClearButton"]);
     return (React.createElement(Layer, Object.assign({}, layerProps),
         React.createElement(AutoComplete, { value: inputValue, multiple: true, options: options, getOptionLabel: getOptionLabel, placeholder: placeholder, onSelect: onSelect, controllableSelectedOptions: controllableSelectedOptions, onChangeText: onChangeText, onSubmitEditing: onSubmitEditing }),
         React.createElement(ChipList, { data: controllableSelectedOptions, getLabel: getOptionLabel, onItemPress: onDeletePress }),
-        React.createElement(Button, { variant: 'warning', onPress: onClearPress, text: clearButtonText })));
+        enableClearButton ? React.createElement(Button, { variant: 'warning', onPress: onClearPress, text: clearButtonText }) : null));
 }
 //# sourceMappingURL=MultiSelectInput.js.map

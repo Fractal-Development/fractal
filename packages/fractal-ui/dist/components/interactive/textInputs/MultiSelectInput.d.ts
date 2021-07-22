@@ -12,6 +12,7 @@ interface MultiSelectInputProps<T> extends Omit<LayerProps, 'children'> {
     inputValue?: string;
     controllableSelectedOptions: Array<T>;
     placeholder?: string;
+    enableClearButton?: boolean;
 }
-export declare function MultiSelectInput<T extends IDEnabled>({ options, getOptionLabel, clearButtonText, onSelect, onClearPress, onDeletePress, inputValue, controllableSelectedOptions, onChangeText, placeholder, onSubmitEditing, ...layerProps }: MultiSelectInputProps<T>): JSX.Element;
+export declare function MultiSelectInput<T extends IDEnabled>({ options, getOptionLabel, clearButtonText, onSelect, onClearPress, onDeletePress, inputValue, controllableSelectedOptions, onChangeText, placeholder, onSubmitEditing, enableClearButton, ...layerProps }: MultiSelectInputProps<T>): JSX.Element;
 export {};
