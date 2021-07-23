@@ -2,6 +2,7 @@ export * from './AutoComplete';
 export * from './BaseTextField';
 export * from './DatePicker';
 export * from './Picker';
+export * from './Picker/types/PickerProps';
 export * from './TextFieldMask';
 export * from './TimePicker';
 export * from './IconTextField';
