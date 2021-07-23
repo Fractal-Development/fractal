@@ -1,4 +1,7 @@
 import React from 'react';
 import { TextFieldButtonProps } from './TextFieldButton';
-declare const PickerButton: React.ForwardRefExoticComponent<Omit<TextFieldButtonProps, "rightImage"> & React.RefAttributes<unknown>>;
+export interface PickerButtonProps extends Omit<TextFieldButtonProps, 'rightImage'> {
+    rightImage?: (color: string, size: number) => JSX.Element;
+}
+declare const PickerButton: React.ForwardRefExoticComponent<PickerButtonProps & React.RefAttributes<unknown>>;
 export { PickerButton };
