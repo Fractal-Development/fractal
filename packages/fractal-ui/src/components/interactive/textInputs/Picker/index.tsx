@@ -8,7 +8,7 @@ import { PickerItem } from './PickerItem';
 import { PickerProps } from './types/PickerProps';
 import { getPickerAccessibilityProps } from '../accessibility/getPickerAccessibilityProps';
 
-export function Picker({ items, onChange, value, defaultValue, disabled, ...others }: PickerProps): JSX.Element {
+export function Picker({ items, onChange, value, defaultValue, disabled, rightImage, ...others }: PickerProps): JSX.Element {
     const [currentValue, handleValueChange] = usePickerState(defaultValue, items, value, onChange);
     const { colors, sizes, borderRadius, spacings } = useTheme();
 
@@ -49,7 +49,7 @@ export function Picker({ items, onChange, value, defaultValue, disabled, ...othe
                 {items.map(renderItem)}
             </BasePicker>
             <Layer alignSelf='center' position='absolute' right={0} marginRight={spacings.s}>
-                <ChevronDownIcon width={21} fill={colors.placeholder} />
+                {rightImage ? rightImage(colors.placeholder, 21) : <ChevronDownIcon width={21} fill={colors.placeholder} />}
             </Layer>
         </HorizontalLayer>
     );

@@ -18,7 +18,7 @@ import { ChevronDownIcon } from '../../../../assets';
 import { PickerItem } from './PickerItem';
 import { getPickerAccessibilityProps } from '../accessibility/getPickerAccessibilityProps';
 export function Picker(_a) {
-    var { items, onChange, value, defaultValue, disabled } = _a, others = __rest(_a, ["items", "onChange", "value", "defaultValue", "disabled"]);
+    var { items, onChange, value, defaultValue, disabled, rightImage } = _a, others = __rest(_a, ["items", "onChange", "value", "defaultValue", "disabled", "rightImage"]);
     const [currentValue, handleValueChange] = usePickerState(defaultValue, items, value, onChange);
     const { colors, sizes, borderRadius, spacings } = useTheme();
     const renderItem = useCallback((item) => {
@@ -28,7 +28,6 @@ export function Picker(_a) {
     }, [colors.black]);
     return (React.createElement(HorizontalLayer, Object.assign({ justifyContent: 'space-between', alignItems: 'center', position: 'relative', borderRadius: borderRadius.s, height: sizes.textFieldHeight, backgroundColor: colors.textField, pointerEvents: disabled ? 'none' : 'auto', paddingLeft: spacings.s, paddingRight: spacings.s }, others),
         React.createElement(BasePicker, Object.assign({ borderWidth: 0, backgroundColor: 'transparent', color: colors.text, selectedValue: currentValue, dropdownIconColor: colors.placeholder, onValueChange: handleValueChange, mode: 'dropdown', fontSize: 14, flex: 1 }, getPickerAccessibilityProps()), items.map(renderItem)),
-        React.createElement(Layer, { alignSelf: 'center', position: 'absolute', right: 0, marginRight: spacings.s },
-            React.createElement(ChevronDownIcon, { width: 21, fill: colors.placeholder }))));
+        React.createElement(Layer, { alignSelf: 'center', position: 'absolute', right: 0, marginRight: spacings.s }, rightImage ? rightImage(colors.placeholder, 21) : React.createElement(ChevronDownIcon, { width: 21, fill: colors.placeholder }))));
 }
 //# sourceMappingURL=index.js.map
