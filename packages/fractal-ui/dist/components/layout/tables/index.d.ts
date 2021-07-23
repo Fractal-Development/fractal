@@ -3,3 +3,4 @@ export * from './TableContainer';
 export * from './RecyclerView';
 export * from './VerticalFlatList';
 export * from './HorizontalFlatList';
+export * from './types';
