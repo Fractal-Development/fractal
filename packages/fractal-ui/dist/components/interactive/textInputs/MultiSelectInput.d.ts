@@ -5,7 +5,7 @@ interface MultiSelectInputProps<T> extends Omit<LayerProps, 'children'> {
     getOptionLabel: (option: T) => string;
     onSelect: (values: Array<T>) => void;
     onDeletePress: (item: T) => void;
-    onClearPress: () => void;
+    onClearPress?: () => void;
     onChangeText: (text: string) => void;
     onSubmitEditing: () => void;
     clearButtonText?: string;
