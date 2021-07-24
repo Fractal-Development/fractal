@@ -1,6 +1,7 @@
 import { AnimationProps, FractalSharedStyleProps, FractalTextProps } from '../../../sharedProps';
 import { FractalThemeTextVariants } from '../../../themes';
 import { RequiredKeys } from 'utility-types';
+import { ReactElement } from 'react';
 
 interface DefaultTexProps {
     allowFontScaling?: boolean;
@@ -27,7 +28,7 @@ interface DefaultTexProps {
 }
 
 export interface TextProps extends FractalSharedStyleProps, AnimationProps, DefaultTexProps, FractalTextProps {
-    children?: string | number;
+    children?: string | number | ReactElement | Array<ReactElement>;
     style?: any;
     variant?: RequiredKeys<FractalThemeTextVariants>;
 }

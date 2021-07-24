@@ -27,7 +27,7 @@ const StyledTextInput = styled(motion.input as any)`
 
 const BaseTextField = forwardRef(
     (
-        { onChangeText, onSubmitEditing, placeholder, from, currentVariant, animate, ...others }: TextFieldProps,
+        { onChangeText, onSubmitEditing, placeholder, secureTextEntry, from, currentVariant, animate, ...others }: TextFieldProps,
         ref: Ref<HTMLInputElement>
     ): JSX.Element => {
         const handleChange = (event: { target: { value: string } }): void => onChangeText && onChangeText(event.target.value);
@@ -45,6 +45,7 @@ const BaseTextField = forwardRef(
                 selectable
                 onChange={handleChange}
                 onKeyDown={handleKeydown}
+                type={secureTextEntry ? 'password' : undefined}
                 initial={currentVariant ? 'from' : from}
                 animate={currentVariant ?? animate}
                 {...getBaseTextFieldAccessibilityProps(placeholder)}

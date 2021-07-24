@@ -26,14 +26,14 @@ const StyledTextInput = styled(motion.input) `
     ${extractWebProps};
 `;
 const BaseTextField = forwardRef((_a, ref) => {
-    var { onChangeText, onSubmitEditing, placeholder, from, currentVariant, animate } = _a, others = __rest(_a, ["onChangeText", "onSubmitEditing", "placeholder", "from", "currentVariant", "animate"]);
+    var { onChangeText, onSubmitEditing, placeholder, secureTextEntry, from, currentVariant, animate } = _a, others = __rest(_a, ["onChangeText", "onSubmitEditing", "placeholder", "secureTextEntry", "from", "currentVariant", "animate"]);
     const handleChange = (event) => onChangeText && onChangeText(event.target.value);
     const handleKeydown = (keyboardEvent) => {
         if (keyboardEvent.key === 'Enter') {
             onSubmitEditing === null || onSubmitEditing === void 0 ? void 0 : onSubmitEditing();
         }
     };
-    return (React.createElement(StyledTextInput, Object.assign({ ref: ref, placeholder: placeholder, selectable: true, onChange: handleChange, onKeyDown: handleKeydown, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate }, getBaseTextFieldAccessibilityProps(placeholder), others)));
+    return (React.createElement(StyledTextInput, Object.assign({ ref: ref, placeholder: placeholder, selectable: true, onChange: handleChange, onKeyDown: handleKeydown, type: secureTextEntry ? 'password' : undefined, initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate }, getBaseTextFieldAccessibilityProps(placeholder), others)));
 });
 BaseTextField.displayName = 'BaseTextField';
 export { BaseTextField };
