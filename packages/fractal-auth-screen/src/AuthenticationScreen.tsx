@@ -10,11 +10,7 @@ import {
     SafeAreaLayer,
     useTheme
 } from '@bma98/fractal-ui';
-import { AuthenticationScreenProps } from './components/types/AuthenticationScreenProps';
-import { SignIn } from './components/SignIn';
-import { SignUp } from './components/SignUp';
-import { PasswordReset } from './components/PasswordReset';
-import { scheduleAnimation } from './components/util/scheduleAnimation';
+import { SignUp, SignIn, PasswordReset, scheduleAnimation, AuthenticationScreenProps } from './components';
 
 type AuthenticationScreenState = 'signIn' | 'signUp' | 'passwordReset';
 

@@ -20,10 +20,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { useCallback, useState } from 'react';
 import { Background, Box, ErrorMessage, Layer, PaddingLayer, SocialMediaButtons, ScrollView, SafeAreaLayer, useTheme } from '@bma98/fractal-ui';
-import { SignIn } from './components/SignIn';
-import { SignUp } from './components/SignUp';
-import { PasswordReset } from './components/PasswordReset';
-import { scheduleAnimation } from './components/util/scheduleAnimation';
+import { SignUp, SignIn, PasswordReset, scheduleAnimation } from './components';
 export function AuthenticationScreen(_a) {
     var { logo, background, removeAppleButton = true, handleGoogleSignIn, handleFacebookSignIn, handleAppleSignIn } = _a, others = __rest(_a, ["logo", "background", "removeAppleButton", "handleGoogleSignIn", "handleFacebookSignIn", "handleAppleSignIn"]);
     const [state, setState] = useState('signIn');
