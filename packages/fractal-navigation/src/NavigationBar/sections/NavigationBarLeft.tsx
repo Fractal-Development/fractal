@@ -1,7 +1,7 @@
 import React, { memo, ReactNode, useCallback } from 'react';
 import { Layer } from '@bma98/fractal-ui';
-import { ChevronLeft } from '../assets/ChevronLeft';
-import { NavigationBarButton } from '../buttons/NavigationBarButton';
+import { ChevronLeft } from '../assets';
+import { NavigationBarButton } from '../buttons';
 
 interface NavigationBarLeftProps {
     children?: ReactNode;

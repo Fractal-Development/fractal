@@ -13,10 +13,12 @@ export const NavigationBarCenter = memo(({ children, title }: NavigationBarCente
             {children ? (
                 children
             ) : title ? (
-                <Text fontWeight={600} fontSize={16} numberOfLines={1} style={titleStyle}>
+                <Text textAlign={'center'} fontWeight={600} fontSize={16} numberOfLines={1} style={titleStyle}>
                     {title}
                 </Text>
             ) : null}
         </Layer>
     );
 });
+
+NavigationBarCenter.displayName = 'NavigationBarCenter';

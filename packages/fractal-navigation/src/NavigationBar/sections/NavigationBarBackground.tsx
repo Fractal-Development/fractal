@@ -6,11 +6,11 @@ interface NavigationBarBackgroundProps {
 }
 
 export const NavigationBarBackground = memo(({ children }: NavigationBarBackgroundProps): ReactElement => {
-    const { spacings, shadows } = useTheme();
+    const { spacings, shadows, colors } = useTheme();
 
     return (
         <Layer
-            backgroundColor='navigationBarBackground'
+            backgroundColor={colors.foreground}
             flexDirection='row'
             height={50}
             boxShadow={shadows.mainShadow}

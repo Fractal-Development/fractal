@@ -1,1 +1,1 @@
-export const titleStyle = { textAlign: 'center', display: 'block' };
+export const titleStyle = { display: 'block' };
