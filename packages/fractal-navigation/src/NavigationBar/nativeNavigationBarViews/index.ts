@@ -1,4 +1,4 @@
-import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../NavigationBarViews';
+import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../navigationBarViews';
 
 export const NativeNavigationBarLeftView = NavigationBarLeftView;
 export const NativeNavigationBarCenterView = NavigationBarCenterView;
