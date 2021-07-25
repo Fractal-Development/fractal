@@ -1,0 +1,1 @@
+{"version":3,"file":"renderEmailIcon.js","sourceRoot":"","sources":["../../../src/components/util/renderEmailIcon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,SAAS,EAAE,MAAM,wBAAwB,CAAC;AAEnD,MAAM,UAAU,eAAe,CAAC,KAAa,EAAE,IAAY;IACvD,OAAO,oBAAC,SAAS,IAAC,KAAK,EAAE,IAAI,EAAE,MAAM,EAAE,IAAI,EAAE,IAAI,EAAE,KAAK,GAAI,CAAC;AACjE,CAAC"}
