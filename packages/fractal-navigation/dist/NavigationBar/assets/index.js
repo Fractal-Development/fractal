@@ -1,2 +1,2 @@
-export * from './NavigationBar';
+export * from './ChevronLeft';
 //# sourceMappingURL=index.js.map
