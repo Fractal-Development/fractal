@@ -1,23 +1,17 @@
-import React from 'react';
-import { Layer, useTheme } from '@bma98/fractal-ui';
+import React, { useContext, useLayoutEffect } from 'react';
 import { TabBarProps } from './types';
-import { useTabBarPositionValues, useTabBarSafeAreaPadding } from './hooks';
+import { useSetTabBarInsets } from './hooks/useSetTabBarInsets';
+import { TabBarPositionContext } from './context/TabBarPositionProvider';
+import { TabBarBackground } from './TabBarBackground';
 
-export function TabBar(props: TabBarProps): JSX.Element {
-    const { tabBarPosition } = props;
-    const positionValues = useTabBarPositionValues(tabBarPosition);
-    const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
-    const { colors, shadows } = useTheme();
+export function TabBar({ style, tabBarPosition, ...others }: TabBarProps): JSX.Element {
+    const [, setTabBarPosition] = useContext(TabBarPositionContext);
 
-    return (
-        <Layer
-            style={tabBarSafeAreaPadding}
-            backgroundColor={colors.foreground}
-            boxShadow={shadows.mainShadow}
-            justifyContent={'center'}
-            position={'absolute'}
-            {...props}
-            {...positionValues}
-        />
-    );
+    useLayoutEffect(() => {
+        setTabBarPosition(tabBarPosition);
+    }, [tabBarPosition, setTabBarPosition]);
+
+    useSetTabBarInsets();
+
+    return <TabBarBackground {...others} tabBarPosition={tabBarPosition} />;
 }

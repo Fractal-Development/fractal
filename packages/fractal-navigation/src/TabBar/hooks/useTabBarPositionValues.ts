@@ -1,4 +1,4 @@
-import { getValueForTabBarPosition } from '../util/getValueForTabBarPosition';
+import { getValueForTabBarPosition } from '../util';
 import { useMemo } from 'react';
 import { useTabBarSafeAreaSizeForPosition } from './useTabBarSafeAreaSizeForPosition';
 import { TabBarPosition } from '../types';

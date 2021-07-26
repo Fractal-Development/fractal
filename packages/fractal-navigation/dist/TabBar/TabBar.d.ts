@@ -1,2 +1,2 @@
 import { TabBarProps } from './types';
-export declare function TabBar(props: TabBarProps): JSX.Element;
+export declare function TabBar({ style, tabBarPosition, ...others }: TabBarProps): JSX.Element;
