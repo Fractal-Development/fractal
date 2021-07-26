@@ -1,7 +1,5 @@
 import React, { ReactElement } from 'react';
-import { TabBarPositionProvider } from './context/TabBarPositionProvider';
-import { TabBarIsHiddenProvider } from './context/TabBarIsHiddenProvider';
-import { TabBarInsetsProvider } from './context/TabBarInsetsProvider';
+import { TabBarInsetsProvider, SafeAreaProvider, TabBarIsHiddenProvider, TabBarPositionProvider } from './context';
 
 export interface TabBarContextProviderProps {
     children: ReactElement | Array<ReactElement>;
@@ -9,10 +7,12 @@ export interface TabBarContextProviderProps {
 
 export function TabBarContextProvider({ children }: TabBarContextProviderProps): ReactElement {
     return (
-        <TabBarPositionProvider>
-            <TabBarIsHiddenProvider>
-                <TabBarInsetsProvider>{children}</TabBarInsetsProvider>
-            </TabBarIsHiddenProvider>
-        </TabBarPositionProvider>
+        <SafeAreaProvider>
+            <TabBarPositionProvider>
+                <TabBarIsHiddenProvider>
+                    <TabBarInsetsProvider>{children}</TabBarInsetsProvider>
+                </TabBarIsHiddenProvider>
+            </TabBarPositionProvider>
+        </SafeAreaProvider>
     );
 }

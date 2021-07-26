@@ -17,9 +17,9 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
             justifyContent={'center'}
             position={cssPosition}
             zIndex={3000}
-            {...props}
             {...positionValues}
             {...tabBarSafeAreaPadding}
+            {...props}
         />
     );
 }

@@ -14,12 +14,12 @@ import { useSetTabBarInsets } from './hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from './context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
 export function TabBar(_a) {
-    var { style, tabBarPosition } = _a, others = __rest(_a, ["style", "tabBarPosition"]);
+    var { tabBarPosition } = _a, others = __rest(_a, ["tabBarPosition"]);
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
     useLayoutEffect(() => {
         setTabBarPosition(tabBarPosition);
     }, [tabBarPosition, setTabBarPosition]);
     useSetTabBarInsets();
-    return React.createElement(TabBarBackground, Object.assign({}, others, { tabBarPosition: tabBarPosition }));
+    return React.createElement(TabBarBackground, Object.assign({ tabBarPosition: tabBarPosition }, others));
 }
 //# sourceMappingURL=TabBar.js.map

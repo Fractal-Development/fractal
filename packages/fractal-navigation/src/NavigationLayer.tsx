@@ -9,11 +9,12 @@ export function NavigationLayer(props: LayerProps): ReactElement {
 
     return (
         <SafeAreaLayer
+            marginTop={navigationBarInsets.top}
+            marginRight={tabBarInsets.right}
+            marginLeft={tabBarInsets.left}
+            marginBottom={tabBarInsets.bottom}
+            flex={1}
             {...props}
-            paddingTop={navigationBarInsets.top}
-            paddingRight={tabBarInsets.right}
-            paddingLeft={tabBarInsets.left}
-            paddingBottom={tabBarInsets.bottom}
         />
     );
 }

@@ -4,7 +4,7 @@ import { useSetTabBarInsets } from './hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from './context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
 
-export function TabBar({ style, tabBarPosition, ...others }: TabBarProps): JSX.Element {
+export function TabBar({ tabBarPosition, ...others }: TabBarProps): JSX.Element {
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
 
     useLayoutEffect(() => {
@@ -13,5 +13,5 @@ export function TabBar({ style, tabBarPosition, ...others }: TabBarProps): JSX.E
 
     useSetTabBarInsets();
 
-    return <TabBarBackground {...others} tabBarPosition={tabBarPosition} />;
+    return <TabBarBackground tabBarPosition={tabBarPosition} {...others} />;
 }
