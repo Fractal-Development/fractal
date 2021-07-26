@@ -26,38 +26,38 @@ export function IconsFragment(): JSX.Element {
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 Icons Fragment
             </Text>
-            <Box flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Layer marginRight={spacings.xs}>
+            <Box flexDirection={'row'} flexWrap={'wrap'} marginTop={spacings.s} marginBottom={spacings.xl}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <AppleIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <BugIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <CheckIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <ChevronDownIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <CloseIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <FacebookIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <FileIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <GoogleIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <LoadIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <SearchIcon height={24} width={24} fill={colors.black} />
                 </Layer>
-                <Layer marginRight={spacings.xs}>
+                <Layer marginRight={spacings.xs} marginBottom={spacings.xs}>
                     <ThreeDotsHorizontalIcon height={24} width={24} fill={colors.black} />
                 </Layer>
             </Box>

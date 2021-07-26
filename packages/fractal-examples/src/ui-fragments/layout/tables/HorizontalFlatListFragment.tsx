@@ -16,7 +16,7 @@ function Table(): JSX.Element {
         <HorizontalFlatList
             key={width}
             rowWidth={100}
-            rowHeight={100} //150
+            rowHeight={100}
             dataProvider={dataProviderState}
             rowRenderer={rowRendererHorizontalTable}
         />
@@ -31,7 +31,7 @@ export function HorizontalFlatListFragment(): JSX.Element {
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 Horizontal FlatList Fragment
             </Text>
-            <Box height={150} marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Box height={100} marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Table />
             </Box>
         </>
