@@ -12,3 +12,5 @@ export const NavigationBarRight = memo(({ children }: NavigationBarRightProps): 
         </Layer>
     );
 });
+
+NavigationBarRight.displayName = 'NavigationBarRight';

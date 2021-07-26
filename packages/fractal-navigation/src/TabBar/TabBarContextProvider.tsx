@@ -4,7 +4,7 @@ import { TabBarIsHiddenProvider } from './context/TabBarIsHiddenProvider';
 import { TabBarInsetsProvider } from './context/TabBarInsetsProvider';
 
 export interface TabBarContextProviderProps {
-    children: ReactElement;
+    children: ReactElement | Array<ReactElement>;
 }
 
 export function TabBarContextProvider({ children }: TabBarContextProviderProps): ReactElement {

@@ -30,3 +30,5 @@ export const NavigationBarBackground = memo(({ children }: NavigationBarBackgrou
         </Layer>
     );
 });
+
+NavigationBarBackground.displayName = 'NavigationBarBackground';

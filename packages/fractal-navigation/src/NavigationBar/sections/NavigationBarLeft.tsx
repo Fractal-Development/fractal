@@ -31,3 +31,5 @@ export const NavigationBarLeft = memo(({ children, showBackButton, backTitle, go
         </Layer>
     );
 });
+
+NavigationBarLeft.displayName = 'NavigationBarLeft';
