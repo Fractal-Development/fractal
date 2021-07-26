@@ -14,11 +14,11 @@ import { Separator } from '../../Separator';
 import { useTheme } from '../../../../context';
 import { Layer } from '../../Layer';
 const BaseRow = forwardRef((_a, ref) => {
-    var { addSeparator = false, children } = _a, others = __rest(_a, ["addSeparator", "children"]);
+    var { addSeparator = false, disablePadding = false, children } = _a, others = __rest(_a, ["addSeparator", "disablePadding", "children"]);
     const { spacings } = useTheme();
-    return (React.createElement(Layer, Object.assign({ paddingTop: spacings.s, ref: ref }, others),
+    return (React.createElement(Layer, Object.assign({ paddingTop: disablePadding ? undefined : spacings.s, ref: ref }, others),
         children,
-        addSeparator ? React.createElement(Separator, { marginTop: spacings.s }) : null));
+        addSeparator ? React.createElement(Separator, { marginTop: disablePadding ? undefined : spacings.s }) : null));
 });
 BaseRow.displayName = 'BaseRow';
 const MemoizedBaseRow = memo(BaseRow);

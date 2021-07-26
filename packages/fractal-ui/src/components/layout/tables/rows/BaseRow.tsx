@@ -6,14 +6,15 @@ import { Layer } from '../../Layer';
 
 export interface BaseRowProps extends LayerProps {
     addSeparator?: boolean;
+    disablePadding?: boolean;
 }
 
-const BaseRow = forwardRef(({ addSeparator = false, children, ...others }: BaseRowProps, ref: any): JSX.Element => {
+const BaseRow = forwardRef(({ addSeparator = false, disablePadding = false, children, ...others }: BaseRowProps, ref: any): JSX.Element => {
     const { spacings } = useTheme();
     return (
-        <Layer paddingTop={spacings.s} ref={ref} {...others}>
+        <Layer paddingTop={disablePadding ? undefined : spacings.s} ref={ref} {...others}>
             {children}
-            {addSeparator ? <Separator marginTop={spacings.s} /> : null}
+            {addSeparator ? <Separator marginTop={disablePadding ? undefined : spacings.s} /> : null}
         </Layer>
     );
 });

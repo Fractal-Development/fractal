@@ -19,7 +19,7 @@ export function PopoverOptionsMenuButton({ options, onOptionPress, customIcon }:
 
     const hideOptions = () => setOptionsVisible(false);
 
-    const toggleOptions = () => setOptionsVisible((currentValue) => !currentValue);
+    const showOptions = () => setOptionsVisible(true);
 
     const handleOptionPress = (option: string) => {
         onOptionPress(option);
@@ -41,7 +41,7 @@ export function PopoverOptionsMenuButton({ options, onOptionPress, customIcon }:
     return (
         <Popover placement={'bottom'} active={optionsVisible} onRequestClose={hideOptions} popoverChildren={renderMenu}>
             {(ref) => (
-                <CircularIconButton ref={ref} variant={'content'} reduceColor onPress={toggleOptions}>
+                <CircularIconButton ref={ref} variant={'content'} reduceColor onPress={showOptions}>
                     {customIcon
                         ? customIcon
                         : (color) => (
