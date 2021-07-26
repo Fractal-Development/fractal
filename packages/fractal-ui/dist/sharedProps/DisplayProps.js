@@ -12,10 +12,10 @@ export function extractDisplayProps({ flex, display, justifyContent, alignItems,
         ${flexGrow != null ? `flex-grow: ${flexGrow}` : ''};
         ${flexShrink != null ? `flex-shrink: ${flexShrink}` : ''};
         ${position != null ? `position: ${position}` : ''};
-        ${top != null ? `top: ${top}` : ''};
-        ${right != null ? `right: ${right}` : ''};
-        ${bottom != null ? `bottom: ${bottom}` : ''};
-        ${left != null ? `left: ${left}` : ''};
+        ${top != null ? `top: ${top}px` : ''};
+        ${right != null ? `right: ${right}px` : ''};
+        ${bottom != null ? `bottom: ${bottom}px` : ''};
+        ${left != null ? `left: ${left}px` : ''};
         ${zIndex != null ? `z-index: ${zIndex}` : ''};
         ${opacity != null ? `opacity: ${opacity}` : ''};
         ${overflow != null ? `overflow: ${overflow}` : ''};
