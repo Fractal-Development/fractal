@@ -63,7 +63,7 @@ const defaultMessages: Array<MinimalMessageData> = [
 ];
 
 export function ChatContentExample(): JSX.Element {
-    const { colors, spacings } = useTheme();
+    const { spacings } = useTheme();
     const [messages, setMessages] = useState(defaultMessages);
 
     const handleFavoriteMessage = (message: MinimalMessageData) => {
@@ -86,7 +86,7 @@ export function ChatContentExample(): JSX.Element {
             <Text variant={'title'} marginBottom={spacings.m}>
                 Chat Content Example
             </Text>
-            <Layer height={600} backgroundColor={colors.placeholder}>
+            <Layer height={600}>
                 <ChatContent
                     messages={messages}
                     onFavoritePress={handleFavoriteMessage}

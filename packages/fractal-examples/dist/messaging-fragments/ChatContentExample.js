@@ -61,7 +61,7 @@ const defaultMessages = [
     }
 ];
 export function ChatContentExample() {
-    const { colors, spacings } = useTheme();
+    const { spacings } = useTheme();
     const [messages, setMessages] = useState(defaultMessages);
     const handleFavoriteMessage = (message) => {
         const newMessage = Object.assign(Object.assign({}, message), { favorite: message.favorite ? false : true });
@@ -77,7 +77,7 @@ export function ChatContentExample() {
     };
     return (React.createElement(Fragment, null,
         React.createElement(Text, { variant: 'title', marginBottom: spacings.m }, "Chat Content Example"),
-        React.createElement(Layer, { height: 600, backgroundColor: colors.placeholder },
+        React.createElement(Layer, { height: 600 },
             React.createElement(ChatContent, { messages: messages, onFavoritePress: handleFavoriteMessage, onSharePress: (message) => console.log('sharePress: ', message), onSend: handleSendMessage }))));
 }
 //# sourceMappingURL=ChatContentExample.js.map
