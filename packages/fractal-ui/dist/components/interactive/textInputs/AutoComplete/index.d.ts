@@ -1,2 +1,2 @@
 import { AutoCompleteProps, IDEnabled } from './types';
-export declare function AutoComplete<T extends IDEnabled>({ options, getOptionLabel, onSelect, controllableSelectedOptions, multiple, onChangeText, value, ...searchBarProps }: AutoCompleteProps<T>): JSX.Element;
+export declare function AutoComplete<T extends IDEnabled>({ controllableSelectedOptions, onSelect, multiple, ...others }: AutoCompleteProps<T>): JSX.Element;

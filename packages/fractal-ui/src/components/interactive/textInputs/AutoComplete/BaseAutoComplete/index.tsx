@@ -12,7 +12,6 @@ export function BaseAutoComplete<T extends IDEnabled>({
     filteredData,
     getLabel,
     onItemPress,
-    selectedIds,
     multiple,
     value,
     onChangeText,
@@ -42,13 +41,7 @@ export function BaseAutoComplete<T extends IDEnabled>({
                     maxHeight={240}
                     overflow={'scroll'}
                 >
-                    <SuggestionsList
-                        multiple={multiple}
-                        filteredData={filteredData}
-                        getLabel={getLabel}
-                        onItemPress={onItemPress}
-                        selectedIds={selectedIds}
-                    />
+                    <SuggestionsList multiple={multiple} filteredData={filteredData} getLabel={getLabel} onItemPress={onItemPress} />
                 </Box>
             )}
         >

@@ -16,7 +16,7 @@ import { Popover } from '../../../../overlays/Popover';
 import { SearchBar } from '../../SearchBar';
 import { SuggestionsList } from '../SuggestionsList';
 export function BaseAutoComplete(_a) {
-    var { suggestionsVisible, hideSuggestions, filteredData, getLabel, onItemPress, selectedIds, multiple, value, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["suggestionsVisible", "hideSuggestions", "filteredData", "getLabel", "onItemPress", "selectedIds", "multiple", "value", "onChangeText", "onSearch"]);
+    var { suggestionsVisible, hideSuggestions, filteredData, getLabel, onItemPress, multiple, value, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["suggestionsVisible", "hideSuggestions", "filteredData", "getLabel", "onItemPress", "multiple", "value", "onChangeText", "onSearch"]);
     const { spacings } = useTheme();
     useEffect(() => {
         if (filteredData.length == 0) {
@@ -24,6 +24,6 @@ export function BaseAutoComplete(_a) {
         }
     }, [filteredData.length, hideSuggestions]);
     return (React.createElement(Popover, { placement: 'bottom', active: suggestionsVisible, onRequestClose: hideSuggestions, popoverChildren: (anchorWidth) => (React.createElement(Box, { width: anchorWidth, marginTop: spacings.s, padding: 0, paddingTop: spacings.xs, paddingBottom: spacings.xs, maxHeight: 240, overflow: 'scroll' },
-            React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress, selectedIds: selectedIds }))) }, (ref) => (React.createElement(SearchBar, Object.assign({ ref: ref, value: value, ariaLabel: 'Autocomplete', onSearch: onSearch, onChangeText: onChangeText }, searchBarProps)))));
+            React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress }))) }, (ref) => (React.createElement(SearchBar, Object.assign({ ref: ref, value: value, ariaLabel: 'Autocomplete', onSearch: onSearch, onChangeText: onChangeText }, searchBarProps)))));
 }
 //# sourceMappingURL=index.js.map

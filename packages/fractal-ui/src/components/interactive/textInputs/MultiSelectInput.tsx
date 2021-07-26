@@ -49,7 +49,7 @@ export function MultiSelectInput<T extends IDEnabled>({
                 onSubmitEditing={onSubmitEditing}
             />
             <ChipList data={controllableSelectedOptions} getLabel={getOptionLabel} onItemPress={onDeletePress} />
-            { enableClearButton ? <Button variant={'warning'} onPress={onClearPress} text={clearButtonText} /> : null } 
+            {enableClearButton ? <Button variant={'warning'} onPress={onClearPress} text={clearButtonText} /> : null}
         </Layer>
     );
 }

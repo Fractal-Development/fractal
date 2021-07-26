@@ -13,7 +13,6 @@ export function SuggestionsList<T extends IDEnabled>({
     filteredData,
     getLabel,
     onItemPress,
-    selectedIds,
     multiple
 }: SuggestionsListProps<T>): JSX.Element | null {
     const { spacings } = useTheme();
@@ -27,17 +26,16 @@ export function SuggestionsList<T extends IDEnabled>({
 
     const renderItem = (_: string | number, item: T, index: number) => {
         const label = getLabel(item);
-        const isSelected = selectedIds.indexOf(item.id) > -1;
 
         const handleItemPress = () => {
-            onItemPress(item, isSelected);
+            onItemPress(item);
         };
 
         return (
             <SuggestionItem
                 key={`${item.id}`}
                 label={label}
-                isSelected={isSelected}
+                itemData={item}
                 isMultiple={multiple}
                 onPress={handleItemPress}
                 addSeparator={index !== filteredData.length - 1}

@@ -16,7 +16,7 @@ import { MiddleCellModal } from '../../../../overlays/modals';
 import { SearchBar } from '../../SearchBar';
 import { SuggestionsList } from '../SuggestionsList';
 export function AutoCompleteModal(_a) {
-    var { visible, hideModal, doneText = 'Done', filteredData, getLabel, onItemPress, selectedIds, multiple, value, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["visible", "hideModal", "doneText", "filteredData", "getLabel", "onItemPress", "selectedIds", "multiple", "value", "onChangeText", "onSearch"]);
+    var { visible, hideModal, doneText = 'Done', filteredData, getLabel, onItemPress, multiple, value, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["visible", "hideModal", "doneText", "filteredData", "getLabel", "onItemPress", "multiple", "value", "onChangeText", "onSearch"]);
     const searchInputRef = useRef();
     useEffect(() => {
         if (searchInputRef.current && visible) {
@@ -27,7 +27,7 @@ export function AutoCompleteModal(_a) {
         React.createElement(Box, { flex: 1, padding: 0 },
             React.createElement(PaddingLayer, null,
                 React.createElement(SearchBar, Object.assign({ inputRef: searchInputRef, value: value, onSearch: onSearch, onChangeText: onChangeText }, searchBarProps))),
-            React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress, selectedIds: selectedIds }),
+            React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress }),
             React.createElement(PaddingLayer, null,
                 React.createElement(Button, { variant: 'main', text: doneText, onPress: hideModal })))));
 }

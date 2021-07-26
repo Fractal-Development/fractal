@@ -2,7 +2,7 @@ import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { CheckIcon } from '../../../assets';
 import { useTheme } from '../../../context';
-import { Layer } from '../../layout';
+import { Layer } from '../../layout/Layer';
 import { Text } from '../../text';
 import { CheckProps } from './types';
 

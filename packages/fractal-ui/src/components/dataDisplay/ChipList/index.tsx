@@ -19,6 +19,8 @@ interface ChipListProps<T> {
 export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: ChipListProps<T>): JSX.Element {
     const { spacings, colors, borderRadius } = useTheme();
 
+    console.log('ChipList: ', data);
+
     const renderItem = (item: T): JSX.Element => {
         return (
             <Chip

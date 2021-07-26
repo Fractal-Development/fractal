@@ -9,64 +9,12 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useState } from 'react';
-import { useControllableState } from '../../../../hooks/useControllableState';
-import { BaseAutoComplete } from './BaseAutoComplete';
+import React from 'react';
+import { AutoCompleteConsumer } from './AutoCompleteConsumer';
+import { SelectedOptionsProvider } from './context/SelectedOptionsContext';
 export function AutoComplete(_a) {
-    var { options, getOptionLabel, onSelect, controllableSelectedOptions, multiple, onChangeText, value } = _a, searchBarProps = __rest(_a, ["options", "getOptionLabel", "onSelect", "controllableSelectedOptions", "multiple", "onChangeText", "value"]);
-    const [suggestionsVisible, setSuggestionsVisible] = useState(false);
-    const [userInput, setUserInput] = useControllableState(value, '', onChangeText);
-    const [filteredOptions, setFilteredOptions] = useState(options);
-    const handleSelect = (selectedOptions) => {
-        if (multiple) {
-            onSelect(selectedOptions);
-        }
-        else {
-            onSelect(selectedOptions[0]);
-        }
-    };
-    const [selectedOptions, setSelectedOptions] = useControllableState(controllableSelectedOptions, [], handleSelect);
-    const selectedOptionsIds = selectedOptions.map((selectedOption) => selectedOption.id);
-    const addSelectedOption = (option) => {
-        if (multiple) {
-            setSelectedOptions([...selectedOptions, option]);
-        }
-        else {
-            setSelectedOptions([option]);
-        }
-    };
-    const removeSelectedOption = (option) => {
-        setSelectedOptions(selectedOptions.filter((item) => item.id != option.id));
-    };
-    const onOptionPress = (option, isSelected, keepInput) => {
-        if (!keepInput && multiple) {
-            setUserInput('');
-        }
-        if (!multiple) {
-            setUserInput(getOptionLabel(option));
-        }
-        setSuggestionsVisible(false);
-        if (!isSelected) {
-            addSelectedOption(option);
-        }
-        else {
-            removeSelectedOption(option);
-        }
-    };
-    const showSuggestions = () => setSuggestionsVisible(true);
-    const hideSuggestions = () => setSuggestionsVisible(false);
-    const handleChangeText = (query) => {
-        const newFilteredOptions = options.filter((option) => {
-            const candidate = getOptionLabel(option);
-            const clearUserInput = query.trim();
-            return candidate.toLowerCase().indexOf(clearUserInput.toLowerCase()) > -1;
-        });
-        setSuggestionsVisible(true);
-        setFilteredOptions(newFilteredOptions);
-        setUserInput(query);
-    };
-    return (React.createElement(BaseAutoComplete, Object.assign({ value: userInput, onChangeText: handleChangeText, suggestionsVisible: suggestionsVisible, hideSuggestions: hideSuggestions, filteredData: filteredOptions, getLabel: getOptionLabel, onItemPress: onOptionPress, selectedIds: selectedOptionsIds, multiple: multiple, textFieldProps: {
-            onFocus: showSuggestions
-        } }, searchBarProps)));
+    var { controllableSelectedOptions, onSelect, multiple } = _a, others = __rest(_a, ["controllableSelectedOptions", "onSelect", "multiple"]);
+    return (React.createElement(SelectedOptionsProvider, { controllableSelectedOptions: controllableSelectedOptions, onSelect: onSelect, multiple: multiple },
+        React.createElement(AutoCompleteConsumer, Object.assign({ multiple: multiple }, others))));
 }
 //# sourceMappingURL=index.js.map

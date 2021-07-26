@@ -9,7 +9,6 @@ export function BaseAutoComplete<T extends IDEnabled>({
     filteredData,
     getLabel,
     onItemPress,
-    selectedIds,
     multiple,
     value,
     placeholder,
@@ -22,8 +21,8 @@ export function BaseAutoComplete<T extends IDEnabled>({
     const hideModal = useCallback(() => setModalVisible(false), []);
     const showModal = useCallback(() => setModalVisible(true), []);
 
-    const handleItemPress = (option: T, isSelected: boolean) => {
-        onItemPress(option, isSelected, true);
+    const handleItemPress = (option: T) => {
+        onItemPress(option, true);
     };
 
     return (
@@ -37,7 +36,6 @@ export function BaseAutoComplete<T extends IDEnabled>({
                 filteredData={filteredData}
                 getLabel={getLabel}
                 onItemPress={handleItemPress}
-                selectedIds={selectedIds}
                 multiple={multiple}
                 value={value}
                 onChangeText={onChangeText}

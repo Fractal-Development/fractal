@@ -14,7 +14,6 @@ export function AutoCompleteModal<T extends IDEnabled>({
     filteredData,
     getLabel,
     onItemPress,
-    selectedIds,
     multiple,
     value,
     onChangeText,
@@ -41,13 +40,7 @@ export function AutoCompleteModal<T extends IDEnabled>({
                         {...searchBarProps}
                     />
                 </PaddingLayer>
-                <SuggestionsList
-                    multiple={multiple}
-                    filteredData={filteredData}
-                    getLabel={getLabel}
-                    onItemPress={onItemPress}
-                    selectedIds={selectedIds}
-                />
+                <SuggestionsList multiple={multiple} filteredData={filteredData} getLabel={getLabel} onItemPress={onItemPress} />
                 <PaddingLayer>
                     <Button variant={'main'} text={doneText} onPress={hideModal} />
                 </PaddingLayer>

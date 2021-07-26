@@ -5,8 +5,7 @@ export interface IDEnabled {
 export interface SuggestionsListProps<T> {
     filteredData: Array<T>;
     getLabel: (item: T) => string;
-    onItemPress: (item: T, isSelected: boolean) => void;
-    selectedIds: Array<string>;
+    onItemPress: (item: T) => void;
     multiple?: boolean;
 }
 export interface AutoCompleteProps<T> extends SearchBarProps {
@@ -17,7 +16,7 @@ export interface AutoCompleteProps<T> extends SearchBarProps {
     controllableSelectedOptions?: Array<T>;
 }
 export interface BaseAutoCompleteProps<T> extends Omit<SuggestionsListProps<T>, 'onItemPress'>, SearchBarProps {
-    onItemPress: (item: T, isSelected: boolean, keepInput?: boolean) => void;
+    onItemPress: (item: T, keepInput?: boolean) => void;
     suggestionsVisible: boolean;
     hideSuggestions: () => void;
     doneText?: string;

@@ -14,15 +14,15 @@ import { Layer } from '../../../../layout/Layer';
 import { TextFieldButton } from '../../TextFieldButton';
 import { AutoCompleteModal } from './AutoCompleteModal';
 export function BaseAutoComplete(_a) {
-    var { doneText = 'Done', filteredData, getLabel, onItemPress, selectedIds, multiple, value, placeholder, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["doneText", "filteredData", "getLabel", "onItemPress", "selectedIds", "multiple", "value", "placeholder", "onChangeText", "onSearch"]);
+    var { doneText = 'Done', filteredData, getLabel, onItemPress, multiple, value, placeholder, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["doneText", "filteredData", "getLabel", "onItemPress", "multiple", "value", "placeholder", "onChangeText", "onSearch"]);
     const [modalVisible, setModalVisible] = useState(false);
     const hideModal = useCallback(() => setModalVisible(false), []);
     const showModal = useCallback(() => setModalVisible(true), []);
-    const handleItemPress = (option, isSelected) => {
-        onItemPress(option, isSelected, true);
+    const handleItemPress = (option) => {
+        onItemPress(option, true);
     };
     return (React.createElement(Layer, null,
         React.createElement(TextFieldButton, { onPress: showModal, value: value, placeholder: placeholder }),
-        React.createElement(AutoCompleteModal, Object.assign({ placeholder: placeholder, visible: modalVisible, hideModal: hideModal, doneText: doneText, filteredData: filteredData, getLabel: getLabel, onItemPress: handleItemPress, selectedIds: selectedIds, multiple: multiple, value: value, onChangeText: onChangeText, onSearch: onSearch }, searchBarProps))));
+        React.createElement(AutoCompleteModal, Object.assign({ placeholder: placeholder, visible: modalVisible, hideModal: hideModal, doneText: doneText, filteredData: filteredData, getLabel: getLabel, onItemPress: handleItemPress, multiple: multiple, value: value, onChangeText: onChangeText, onSearch: onSearch }, searchBarProps))));
 }
 //# sourceMappingURL=index.native.js.map
