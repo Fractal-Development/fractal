@@ -12,7 +12,6 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
 
     return (
         <Layer
-            style={tabBarSafeAreaPadding}
             backgroundColor={colors.foreground}
             boxShadow={shadows.mainShadow}
             justifyContent={'center'}
@@ -20,6 +19,7 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
             zIndex={3000}
             {...props}
             {...positionValues}
+            {...tabBarSafeAreaPadding}
         />
     );
 }

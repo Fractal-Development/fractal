@@ -1,5 +1,5 @@
 import React, { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
-import { EdgeInsets } from 'react-native-safe-area-context';
+import { EdgeInsets } from '../../types';
 
 export type TabBarInsetsContextType = [EdgeInsets, Dispatch<SetStateAction<EdgeInsets>>];
 

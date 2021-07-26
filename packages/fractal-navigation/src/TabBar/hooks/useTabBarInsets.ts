@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { EdgeInsets } from '../types';
 import { TabBarInsetsContext } from '../context/TabBarInsetsProvider';
+import { EdgeInsets } from '../../types';
 
 export function useTabBarInsets(): EdgeInsets {
     const [insets] = useContext(TabBarInsetsContext);

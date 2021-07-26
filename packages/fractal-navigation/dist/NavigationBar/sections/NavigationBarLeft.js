@@ -9,4 +9,5 @@ export const NavigationBarLeft = memo(({ children, showBackButton, backTitle, go
         showBackButton ? (React.createElement(NavigationBarButton, { leftIcon: renderChevronLeft, onPress: goBack }, backTitle)) : null,
         children));
 });
+NavigationBarLeft.displayName = 'NavigationBarLeft';
 //# sourceMappingURL=NavigationBarLeft.js.map

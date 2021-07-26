@@ -1,4 +1,4 @@
-import { EdgeInsets } from '../../types/EdgeInsets';
+import { EdgeInsets } from '../../../types/EdgeInsets';
 
 const emptyInsets: EdgeInsets = {
     bottom: 0,

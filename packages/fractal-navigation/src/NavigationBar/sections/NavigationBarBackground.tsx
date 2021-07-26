@@ -23,8 +23,8 @@ export const NavigationBarBackground = memo(({ children }: NavigationBarBackgrou
             paddingRight={spacings.m}
             position={cssPosition}
             top={0}
-            left={left}
-            right={right}
+            left={left !== 0 ? left : undefined}
+            right={right !== 0 ? right : undefined}
         >
             {children}
         </Layer>
