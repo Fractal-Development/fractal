@@ -27,7 +27,6 @@ export function ChipListFragment(): JSX.Element {
                 <ChipList
                     data={tags}
                     getLabel={(item) => {
-                        console.log(item);
                         return item.value;
                     }}
                     onItemPress={(item) => {

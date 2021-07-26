@@ -14,7 +14,6 @@ export function ChipListFragment() {
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Chip List Fragment"),
         React.createElement(Layer, { flexDirection: 'row', marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(ChipList, { data: tags, getLabel: (item) => {
-                    console.log(item);
                     return item.value;
                 }, onItemPress: (item) => {
                     console.log(item);
