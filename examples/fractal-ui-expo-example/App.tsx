@@ -13,7 +13,7 @@ import { Layer } from '@bma98/fractal-ui';
 
 export default function App() {
     return (
-        <Layer height={'100vh'}>
+        <Layer flex={1}>
             <TabBarContextProvider>
                 <ScreenStack style={{ flex: 1 }}>
                     <Screen>

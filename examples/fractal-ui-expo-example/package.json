@@ -13,8 +13,8 @@
         "@bma98/fractal-examples": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master",
         "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
         "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
+        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "@bma98/size-class": "^2.2.4",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",
@@ -32,12 +32,13 @@
         "react-native": "~0.63.4",
         "react-native-gesture-handler": "~1.10.3",
         "react-native-reanimated": "~2.1.0",
+        "react-native-safe-area-context": "^3.2.0",
+        "react-native-screens": "^3.4.0",
         "react-native-svg": "^12.1.1",
         "react-native-web": "~0.13.12",
         "react-native-webview": "^11.6.4",
         "react-native-youtube-iframe": "^2.1.0",
-        "react-virtualized-auto-sizer": "^1.0.5",
-        "react-native-screens": "^3.4.0"
+        "react-virtualized-auto-sizer": "^1.0.5"
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
