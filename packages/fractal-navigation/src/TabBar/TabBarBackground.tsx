@@ -2,7 +2,7 @@ import React from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
 import { TabBarProps } from './types';
 import { useTabBarPositionValues, useTabBarSafeAreaPadding } from './hooks';
-import { cssPosition } from './cssPosition';
+import { tabBarCSSPosition } from './tabBarCSSPosition';
 
 export function TabBarBackground(props: TabBarProps): JSX.Element {
     const { tabBarPosition } = props;
@@ -15,7 +15,7 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
             backgroundColor={colors.foreground}
             boxShadow={shadows.mainShadow}
             justifyContent={'center'}
-            position={cssPosition}
+            position={tabBarCSSPosition}
             zIndex={3000}
             {...positionValues}
             {...tabBarSafeAreaPadding}

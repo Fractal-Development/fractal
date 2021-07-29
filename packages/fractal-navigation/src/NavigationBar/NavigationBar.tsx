@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationBarProps } from './types';
 import { useNavigationBarChildren } from './hooks';
-import { NavigationBarBackground, NavigationBarCenter, NavigationBarLeft, NavigationBarRight } from './sections';
+import { NavigationBarBackground, NavigationBarCenter, NavigationBarLeft, NavigationBarRight } from './navigationBarSections';
 
 export function NavigationBar({
     hidden,

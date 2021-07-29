@@ -1,0 +1,1 @@
+export const navigationBarBackgroundCSSPosition = 'absolute';

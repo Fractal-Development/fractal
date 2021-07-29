@@ -1,6 +1,6 @@
 import React, { memo, ReactElement } from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
-import { cssPosition } from '../nativeNavigationBarViews/cssPosition';
+import { navigationBarBackgroundCSSPosition } from './navigationBarBackgroundCSSPosition';
 import { useTabBarInsets } from '../../TabBar/hooks/useTabBarInsets';
 
 interface NavigationBarBackgroundProps {
@@ -21,7 +21,7 @@ export const NavigationBarBackground = memo(({ children }: NavigationBarBackgrou
             zIndex={2000}
             paddingLeft={spacings.m}
             paddingRight={spacings.m}
-            position={cssPosition}
+            position={navigationBarBackgroundCSSPosition}
             top={0}
             left={left !== 0 ? left : undefined}
             right={right !== 0 ? right : undefined}
