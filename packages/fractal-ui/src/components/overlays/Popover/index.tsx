@@ -1,14 +1,22 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { Layer } from '../../layout';
-import { styleVariants } from './utils/styleVariants';
 import { PlacementOffsetStyle, PopoverProps } from './types';
 import { getWebPlacementOffsetStyle } from './utils/getWebPlacementOffsetStyle';
-import { OutsideClickListener } from './OutsideClickListener';
+import { getWebPortalPlacementOffsetStyle } from './utils/getWebPortalPlacementOffsetStyle';
+import { PopoverPortalContent } from './PopoverPortalContent';
+import { PopoverContent } from './PopoverContent';
 
 const Popover = forwardRef(
     (
-        { active, placement = 'bottom', popoverChildren, popoverContainerProps, onRequestClose, children, ...others }: PopoverProps,
+        {
+            active,
+            placement = 'bottom',
+            usePortal,
+            popoverChildren,
+            popoverContainerProps,
+            onRequestClose,
+            children,
+            ...others
+        }: PopoverProps,
         ref: any
     ): JSX.Element => {
         const [placementOffsetStyle, setPlacementOffsetStyle] = useState<PlacementOffsetStyle>();
@@ -17,31 +25,47 @@ const Popover = forwardRef(
         const anchorWidth = anchorRef.current?.offsetWidth;
 
         useEffect(() => {
-            setPlacementOffsetStyle(getWebPlacementOffsetStyle(anchorRef, popoverRef, placement));
-        }, [placement, active]);
+            setPlacementOffsetStyle(
+                usePortal
+                    ? getWebPortalPlacementOffsetStyle(anchorRef, popoverRef, placement)
+                    : getWebPlacementOffsetStyle(anchorRef, popoverRef, placement)
+            );
+        }, [placement, active, usePortal]);
+
+        if (usePortal) {
+            return (
+                <PopoverPortalContent
+                    ref={ref}
+                    active={active}
+                    anchorRef={anchorRef}
+                    popoverRef={popoverRef}
+                    anchorWidth={anchorWidth}
+                    placementOffsetStyle={placementOffsetStyle}
+                    popoverChildren={popoverChildren}
+                    popoverContainerProps={popoverContainerProps}
+                    onRequestClose={onRequestClose}
+                    {...others}
+                >
+                    {children}
+                </PopoverPortalContent>
+            );
+        }
 
         return (
-            <Layer ref={ref} position={'relative'} display={'inline-block'} {...others}>
-                {children(anchorRef)}
-                <AnimatePresence>
-                    {active ? (
-                        <OutsideClickListener onOutsideClick={onRequestClose}>
-                            <Layer
-                                ref={popoverRef}
-                                from={styleVariants.initial}
-                                animate={styleVariants.visible}
-                                exit={styleVariants.initial}
-                                position={'absolute'}
-                                zIndex={2000}
-                                style={placementOffsetStyle}
-                                {...popoverContainerProps}
-                            >
-                                {popoverChildren(anchorWidth)}
-                            </Layer>
-                        </OutsideClickListener>
-                    ) : null}
-                </AnimatePresence>
-            </Layer>
+            <PopoverContent
+                ref={ref}
+                active={active}
+                anchorRef={anchorRef}
+                popoverRef={popoverRef}
+                anchorWidth={anchorWidth}
+                placementOffsetStyle={placementOffsetStyle}
+                popoverChildren={popoverChildren}
+                popoverContainerProps={popoverContainerProps}
+                onRequestClose={onRequestClose}
+                {...others}
+            >
+                {children}
+            </PopoverContent>
         );
     }
 );

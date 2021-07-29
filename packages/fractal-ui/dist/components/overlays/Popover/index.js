@@ -10,25 +10,26 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { Layer } from '../../layout';
-import { styleVariants } from './utils/styleVariants';
 import { getWebPlacementOffsetStyle } from './utils/getWebPlacementOffsetStyle';
-import { OutsideClickListener } from './OutsideClickListener';
+import { getWebPortalPlacementOffsetStyle } from './utils/getWebPortalPlacementOffsetStyle';
+import { PopoverPortalContent } from './PopoverPortalContent';
+import { PopoverContent } from './PopoverContent';
 const Popover = forwardRef((_a, ref) => {
     var _b;
-    var { active, placement = 'bottom', popoverChildren, popoverContainerProps, onRequestClose, children } = _a, others = __rest(_a, ["active", "placement", "popoverChildren", "popoverContainerProps", "onRequestClose", "children"]);
+    var { active, placement = 'bottom', usePortal, popoverChildren, popoverContainerProps, onRequestClose, children } = _a, others = __rest(_a, ["active", "placement", "usePortal", "popoverChildren", "popoverContainerProps", "onRequestClose", "children"]);
     const [placementOffsetStyle, setPlacementOffsetStyle] = useState();
     const anchorRef = useRef();
     const popoverRef = useRef();
     const anchorWidth = (_b = anchorRef.current) === null || _b === void 0 ? void 0 : _b.offsetWidth;
     useEffect(() => {
-        setPlacementOffsetStyle(getWebPlacementOffsetStyle(anchorRef, popoverRef, placement));
-    }, [placement, active]);
-    return (React.createElement(Layer, Object.assign({ ref: ref, position: 'relative', display: 'inline-block' }, others),
-        children(anchorRef),
-        React.createElement(AnimatePresence, null, active ? (React.createElement(OutsideClickListener, { onOutsideClick: onRequestClose },
-            React.createElement(Layer, Object.assign({ ref: popoverRef, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: 'absolute', zIndex: 2000, style: placementOffsetStyle }, popoverContainerProps), popoverChildren(anchorWidth)))) : null)));
+        setPlacementOffsetStyle(usePortal
+            ? getWebPortalPlacementOffsetStyle(anchorRef, popoverRef, placement)
+            : getWebPlacementOffsetStyle(anchorRef, popoverRef, placement));
+    }, [placement, active, usePortal]);
+    if (usePortal) {
+        return (React.createElement(PopoverPortalContent, Object.assign({ ref: ref, active: active, anchorRef: anchorRef, popoverRef: popoverRef, anchorWidth: anchorWidth, placementOffsetStyle: placementOffsetStyle, popoverChildren: popoverChildren, popoverContainerProps: popoverContainerProps, onRequestClose: onRequestClose }, others), children));
+    }
+    return (React.createElement(PopoverContent, Object.assign({ ref: ref, active: active, anchorRef: anchorRef, popoverRef: popoverRef, anchorWidth: anchorWidth, placementOffsetStyle: placementOffsetStyle, popoverChildren: popoverChildren, popoverContainerProps: popoverContainerProps, onRequestClose: onRequestClose }, others), children));
 });
 Popover.displayName = 'Popover';
 export { Popover };

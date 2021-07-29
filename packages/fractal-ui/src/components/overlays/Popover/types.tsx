@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MutableRefObject, ReactNode } from 'react';
 import { LayerProps } from '../../layout';
 
 export interface LayoutRectangle {
@@ -26,8 +26,16 @@ export interface PopoverProps extends Omit<LayerProps, 'children'> {
     active: boolean;
     onRequestClose: () => void;
     placement?: PlacementType;
+    usePortal?: boolean;
     popoverChildren: (anchorWidth?: number) => ReactNode;
     popoverContainerProps?: Omit<LayerProps, 'children'>;
     modalBackgroundColor?: string;
     children: (anchorRef: any) => ReactNode | Array<ReactNode>;
+}
+
+export interface PopoverPortalContentProps extends Omit<PopoverProps, 'placement' | 'usePortal'> {
+    anchorRef: MutableRefObject<HTMLDivElement | undefined>;
+    popoverRef: MutableRefObject<HTMLDivElement | undefined>;
+    placementOffsetStyle?: PlacementOffsetStyle;
+    anchorWidth?: number;
 }
