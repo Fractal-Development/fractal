@@ -15,7 +15,7 @@ export function MessageFragment(): JSX.Element {
                     title={'Some message'}
                     messageType={'alternative'}
                     description={'You can use it to show any message'}
-                    icon={() => <LoadIcon />}
+                    icon={(color) => <LoadIcon fill={color} />}
                 />
             </Box>
         </>
