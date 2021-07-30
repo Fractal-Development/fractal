@@ -22,11 +22,12 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: C
     const renderItem = (item: T): JSX.Element => {
         return (
             <Chip
+                key={item.id}
                 from={styleVariants.hidden}
                 animate={styleVariants.visible}
                 exit={styleVariants.hidden}
-                margin={spacings.s}
-                key={item.id}
+                marginRight={spacings.s}
+                marginBottom={spacings.s}
                 onCrossButtonPress={() => onItemPress(item)}
                 text={getLabel(item)}
             />
@@ -34,7 +35,13 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: C
     };
 
     return (
-        <ScrollWrapper marginTop={spacings.s} marginBottom={spacings.s} borderRadius={borderRadius.s} backgroundColor={colors.background}>
+        <ScrollWrapper
+            flex={1}
+            marginTop={spacings.s}
+            marginBottom={spacings.s}
+            borderRadius={borderRadius.s}
+            backgroundColor={colors.background}
+        >
             <AnimatePresence>{data.map(renderItem)}</AnimatePresence>
         </ScrollWrapper>
     );
