@@ -10,7 +10,7 @@ const styleVariants = {
 export function ChipList({ data, getLabel, onItemPress }) {
     const { spacings, colors, borderRadius } = useTheme();
     const renderItem = (item) => {
-        return (React.createElement(Chip, { key: item.id, from: styleVariants.hidden, animate: styleVariants.visible, exit: styleVariants.hidden, marginRight: spacings.s, marginBottom: spacings.s, onCrossButtonPress: () => onItemPress(item), text: getLabel(item) }));
+        return (React.createElement(Chip, { key: item.id, animate: styleVariants.visible, exit: styleVariants.hidden, marginRight: spacings.s, marginBottom: spacings.s, onCrossButtonPress: () => onItemPress(item), text: getLabel(item) }));
     };
     return (React.createElement(ScrollWrapper, { marginTop: spacings.s, borderRadius: borderRadius.s, backgroundColor: colors.background },
         React.createElement(AnimatePresence, null, data.map(renderItem))));

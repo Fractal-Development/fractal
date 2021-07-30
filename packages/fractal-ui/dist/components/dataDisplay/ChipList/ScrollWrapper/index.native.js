@@ -10,10 +10,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import { Layer, ScrollView } from '../../../layout';
+import { ScrollView } from 'react-native';
+import { Layer } from '../../../layout';
 export function ScrollWrapper(_a) {
     var { children } = _a, others = __rest(_a, ["children"]);
     return (React.createElement(Layer, Object.assign({}, others),
-        React.createElement(ScrollView, { flexDirection: 'row', flexWrap: 'wrap' }, children)));
+        React.createElement(ScrollView, { contentContainerStyle: { flexDirection: 'row', flexWrap: 'wrap' } }, children)));
 }
 //# sourceMappingURL=index.native.js.map

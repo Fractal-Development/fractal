@@ -23,7 +23,6 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: C
         return (
             <Chip
                 key={item.id}
-                from={styleVariants.hidden}
                 animate={styleVariants.visible}
                 exit={styleVariants.hidden}
                 marginRight={spacings.s}

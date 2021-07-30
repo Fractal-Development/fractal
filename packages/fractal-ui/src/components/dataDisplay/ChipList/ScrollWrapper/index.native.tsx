@@ -1,12 +1,11 @@
 import React from 'react';
-import { Layer, LayerProps, ScrollView } from '../../../layout';
+import { ScrollView } from 'react-native';
+import { Layer, LayerProps } from '../../../layout';
 
 export function ScrollWrapper({ children, ...others }: LayerProps): JSX.Element {
     return (
         <Layer {...others}>
-            <ScrollView flexDirection={'row'} flexWrap={'wrap'}>
-                {children}
-            </ScrollView>
+            <ScrollView contentContainerStyle={{ flexDirection: 'row', flexWrap: 'wrap' }}>{children}</ScrollView>
         </Layer>
     );
 }
