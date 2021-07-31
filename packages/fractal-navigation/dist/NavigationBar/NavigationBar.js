@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigationBarChildren } from './hooks';
-import { NavigationBarBackground, NavigationBarCenter, NavigationBarLeft, NavigationBarRight } from './sections';
+import { NavigationBarBackground, NavigationBarCenter, NavigationBarLeft, NavigationBarRight } from './navigationBarSections';
 export function NavigationBar({ hidden, title, showBackButton = false, backTitle, children, goBack }) {
     const [leftChild, centerChild, rightChild] = useNavigationBarChildren(children);
     return hidden ? null : (React.createElement(NavigationBarBackground, null,

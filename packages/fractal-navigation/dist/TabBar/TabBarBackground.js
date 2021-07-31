@@ -1,12 +1,12 @@
 import React from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
 import { useTabBarPositionValues, useTabBarSafeAreaPadding } from './hooks';
-import { cssPosition } from './cssPosition';
+import { tabBarCSSPosition } from './tabBarCSSPosition';
 export function TabBarBackground(props) {
     const { tabBarPosition } = props;
     const positionValues = useTabBarPositionValues(tabBarPosition);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
     const { colors, shadows } = useTheme();
-    return (React.createElement(Layer, Object.assign({ backgroundColor: colors.foreground, boxShadow: shadows.mainShadow, justifyContent: 'center', position: cssPosition, zIndex: 3000 }, positionValues, tabBarSafeAreaPadding, props)));
+    return (React.createElement(Layer, Object.assign({ backgroundColor: colors.foreground, boxShadow: shadows.mainShadow, justifyContent: 'center', position: tabBarCSSPosition, zIndex: 3000 }, positionValues, tabBarSafeAreaPadding, props)));
 }
 //# sourceMappingURL=TabBarBackground.js.map
