@@ -6,7 +6,7 @@ import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, Text } from '@bma98/fractal-ui';
 const tabBarItemCompactSpacerSize = { width: 0, height: 0 };
 const tabBarItemLargeSpacerSize = { width: 8, height: 1 };
-export const SimpleTabBarItem = memo(({ active = false, title, children }) => {
+export const SimpleTabBarItem = memo(({ active = false, title, children, tabIdentifier, onTabPress }) => {
     const color = useSimpleTabBarItemColor(active);
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
@@ -16,7 +16,7 @@ export const SimpleTabBarItem = memo(({ active = false, title, children }) => {
     const spacerSize = tabBarPosition !== 'bottom'
         ? tabBarItemCompactSpacerSize
         : getValueForLargeSizeType(widthSizeType, tabBarItemLargeSpacerSize, tabBarItemCompactSpacerSize);
-    return (React.createElement(SimpleTabBarItemContainer, { icon: renderItem },
+    return (React.createElement(SimpleTabBarItemContainer, { tabIdentifier: tabIdentifier, onTabPress: onTabPress, icon: renderItem },
         React.createElement(Layer, Object.assign({}, spacerSize)),
         React.createElement(Text, { variant: 'label', color: color }, title)));
 });

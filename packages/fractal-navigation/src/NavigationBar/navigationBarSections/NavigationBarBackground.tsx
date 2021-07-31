@@ -17,14 +17,13 @@ export const NavigationBarBackground = memo(({ children }: NavigationBarBackgrou
             flexDirection='row'
             height={50}
             boxShadow={shadows.mainShadow}
-            width={'100%'}
             zIndex={2000}
             paddingLeft={spacings.m}
             paddingRight={spacings.m}
             position={navigationBarBackgroundCSSPosition}
             top={0}
-            left={left !== 0 ? left : undefined}
-            right={right !== 0 ? right : undefined}
+            left={left}
+            right={right}
         >
             {children}
         </Layer>
