@@ -38,6 +38,7 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: C
             flex={1}
             padding={spacings.s}
             marginTop={spacings.s}
+            marginBottom={spacings.s}
             borderRadius={borderRadius.s}
             backgroundColor={colors.background}
         >
