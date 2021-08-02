@@ -34,7 +34,7 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress }: C
     };
 
     return (
-        <ScrollWrapper marginTop={spacings.s} borderRadius={borderRadius.s} backgroundColor={colors.background}>
+        <ScrollWrapper padding={spacings.s} marginTop={spacings.s} borderRadius={borderRadius.s} backgroundColor={colors.background}>
             <AnimatePresence>{data.map(renderItem)}</AnimatePresence>
         </ScrollWrapper>
     );
