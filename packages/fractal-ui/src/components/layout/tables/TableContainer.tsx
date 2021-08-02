@@ -14,6 +14,7 @@ const TableContainer = forwardRef(
             titleTextVariant = 'title',
             titleColorVariant = 'text',
             label,
+            labelTextVariant = 'label',
             labelColorVariant = 'text',
             ...others
         }: TableContainerProps,
@@ -35,7 +36,7 @@ const TableContainer = forwardRef(
                     <Text variant={titleTextVariant} color={titleColor}>
                         {title}
                     </Text>
-                    <Text variant={'label'} color={labelColor}>
+                    <Text variant={labelTextVariant} color={labelColor}>
                         {label}
                     </Text>
                 </HorizontalLayer>

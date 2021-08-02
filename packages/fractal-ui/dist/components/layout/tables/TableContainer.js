@@ -16,7 +16,7 @@ import { HorizontalLayer } from '../HorizontalLayer';
 import { Text } from '../../text';
 import { getTableContainerAccessibilityProps } from './accessibility/getTableContainerAccessibilityProps';
 const TableContainer = forwardRef((_a, ref) => {
-    var { title, children, titleTextVariant = 'title', titleColorVariant = 'text', label, labelColorVariant = 'text' } = _a, others = __rest(_a, ["title", "children", "titleTextVariant", "titleColorVariant", "label", "labelColorVariant"]);
+    var { title, children, titleTextVariant = 'title', titleColorVariant = 'text', label, labelTextVariant = 'label', labelColorVariant = 'text' } = _a, others = __rest(_a, ["title", "children", "titleTextVariant", "titleColorVariant", "label", "labelTextVariant", "labelColorVariant"]);
     const { colors, spacings } = useTheme();
     const getColorName = (colorVariant) => colorVariant !== 'text' ? `${colorVariant}InteractiveColor` : colorVariant;
     const titleColorName = getColorName(titleColorVariant);
@@ -26,7 +26,7 @@ const TableContainer = forwardRef((_a, ref) => {
     return (React.createElement(Box, Object.assign({ ref: ref }, getTableContainerAccessibilityProps(), others),
         React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: 'space-between', alignItems: 'center' },
             React.createElement(Text, { variant: titleTextVariant, color: titleColor }, title),
-            React.createElement(Text, { variant: 'label', color: labelColor }, label)),
+            React.createElement(Text, { variant: labelTextVariant, color: labelColor }, label)),
         children));
 });
 TableContainer.displayName = 'TableContainer';

@@ -10,5 +10,6 @@ export interface TableContainerProps extends Partial<Omit<LayerProps, 'children'
     titleTextVariant?: 'title' | 'subtitle' | 'normal';
     titleColorVariant?: TextColorVariant;
     label?: string;
+    labelTextVariant?: 'label' | 'subtitle';
     labelColorVariant?: TextColorVariant;
 }
