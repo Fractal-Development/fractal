@@ -29,6 +29,7 @@ export interface ChatMessageProps<T> {
     onFavoritePress?: (message: T) => void;
     onSharePress?: (message: T) => void;
     messageActions?: (message: T) => ReactNode;
+    getBubbleColor?: (message: T) => string;
 }
 
 export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {

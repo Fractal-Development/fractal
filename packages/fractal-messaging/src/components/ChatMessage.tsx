@@ -12,7 +12,8 @@ export function ChatMessage<T extends MinimalMessageData>({
     message,
     onFavoritePress,
     onSharePress,
-    messageActions
+    messageActions,
+    getBubbleColor
 }: ChatMessageProps<T>): JSX.Element {
     const { colors, spacings } = useTheme();
     const [popoverVisible, setPopoverVisible] = useState(false);
@@ -56,13 +57,20 @@ export function ChatMessage<T extends MinimalMessageData>({
                 onRequestClose={hidePopover}
                 popoverChildren={renderPopoverChildren}
                 modalBackgroundColor={'rgba(0, 0, 0, 0.15)'}
+                usePortal
                 display={'flex'}
             >
                 {(ref) => (
                     <Bubble
                         ref={ref}
                         arrowPosition={message.senderType == 'bot' ? 'left' : 'right'}
-                        color={message.senderType == 'bot' ? colors.foreground : colors.mainInteractiveColor}
+                        color={
+                            getBubbleColor
+                                ? getBubbleColor(message)
+                                : message.senderType == 'bot'
+                                ? colors.foreground
+                                : colors.mainInteractiveColor
+                        }
                         onLongPress={showPopover}
                     >
                         {message.image ? (
@@ -72,7 +80,7 @@ export function ChatMessage<T extends MinimalMessageData>({
                         ) : message.video ? (
                             <MessageVideo source={message.video} />
                         ) : (
-                            <MessageText text={message.text} />
+                            <MessageText text={message.text} color={message.senderType == 'bot' ? colors.text : colors.white} />
                         )}
                     </Bubble>
                 )}

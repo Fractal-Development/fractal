@@ -11,6 +11,7 @@ export function ChatContent<T extends MinimalMessageData>({
     onFavoritePress,
     onSharePress,
     messageActions,
+    getBubbleColor,
     onSend,
     placeholder = 'Escribe aquí...',
     isLoading,
@@ -25,6 +26,7 @@ export function ChatContent<T extends MinimalMessageData>({
                     onFavoritePress={onFavoritePress}
                     onSharePress={onSharePress}
                     messageActions={messageActions}
+                    getBubbleColor={getBubbleColor}
                 />
                 <AnimatePresence>
                     {isLoading ? (

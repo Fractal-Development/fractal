@@ -16,6 +16,7 @@ export function MessageList<T extends MinimalMessageData>({
     onFavoritePress,
     onSharePress,
     messageActions,
+    getBubbleColor,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
     const { spacings } = useTheme();
@@ -74,10 +75,11 @@ export function MessageList<T extends MinimalMessageData>({
                     onFavoritePress={onFavoritePress}
                     onSharePress={onSharePress}
                     messageActions={messageActions}
+                    getBubbleColor={getBubbleColor}
                 />
             );
         },
-        [messageActions, onFavoritePress, onSharePress]
+        [getBubbleColor, messageActions, onFavoritePress, onSharePress]
     );
 
     return (

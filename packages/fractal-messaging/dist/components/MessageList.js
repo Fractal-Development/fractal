@@ -20,7 +20,7 @@ const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne !== rowTwo;
 });
 export function MessageList(_a) {
-    var { messages, onFavoritePress, onSharePress, messageActions } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions"]);
+    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor"]);
     const { spacings } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messages));
     const width = useSizeValue('width');
@@ -62,8 +62,8 @@ export function MessageList(_a) {
         setDataProviderState(dataProvider.cloneWithRows(messages));
     }, [messages, width]);
     const renderBubbleMessage = useCallback((_, data) => {
-        return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions }));
-    }, [messageActions, onFavoritePress, onSharePress]);
+        return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
+    }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
     return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps),
         React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 })));
 }
