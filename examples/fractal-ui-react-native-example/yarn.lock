@@ -1126,7 +1126,7 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#403c7bf428c240e7a09c36f9599f2b1ec579c748"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#82271ee6f2065495a5d001bf29e99a52ba85d0ef"
   dependencies:
     "@types/node" "^16.3.2"
     d3-array "2.3.3"
@@ -1135,23 +1135,20 @@
 
 "@bma98/fractal-examples@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#05e71ce6979d8758b6eec898d2e7babb6e9b86e9"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#0e15439647e628eb7a9e05a23ea60aab251e3cb2"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-media@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#2c0a3b44cebba40cc48563fa8a3ce4bd96c7dba5"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#4fbbd089ccdc0935e380734f0f014dc109010ca2"
   dependencies:
     "@bma98/size-class" "^2.2.4"
-    expo-av "^9.1.2"
-    react-native-webview "^11.6.4"
-    react-native-youtube-iframe "^2.1.0"
     styled-components "^5.3.0"
 
 "@bma98/fractal-messaging@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master#2c5c577cb2cadf9236ab447aeb0b6de01a3ebb39"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master#2e9ddb6d123287b0d856778f6d21ff41e18f2c18"
   dependencies:
     "@bma98/fractal-media" "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master"
     "@bma98/size-class" "^2.2.4"
@@ -1160,7 +1157,7 @@
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#ef6f78c1629be7fac61fdeaab423e39bbc27a17a"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#87542fd5aa94550614fedf471040f4832c48637f"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -5788,7 +5785,7 @@ react-native-web@~0.13.12:
     prop-types "^15.6.0"
     react-timer-mixin "^0.13.4"
 
-react-native-webview@^11.6.4, react-native-webview@^11.6.5:
+react-native-webview@^11.6.5:
   version "11.6.5"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.6.5.tgz#34e86a342c6a2cbcf109db98f639f7bb8f055da2"
   integrity sha512-5U+hI8snkCrFeDy+bUTszwhzcJIenaaOy3ubhY77HZq7R0pFIZzRYWkT0YXe1ymRYW9mSU96nr6S0AVDk8qkMw==
