@@ -32,12 +32,12 @@ export const SimpleTabBarItem = memo(
 
         const spacerSize =
             tabBarPosition !== 'bottom'
-                ? tabBarItemCompactSpacerSize
+                ? tabBarItemLargeSpacerSize
                 : getValueForLargeSizeType(widthSizeType, tabBarItemLargeSpacerSize, tabBarItemCompactSpacerSize);
 
         return (
             <SimpleTabBarItemContainer tabIdentifier={tabIdentifier} onTabPress={onTabPress} icon={renderItem}>
-                <Layer {...spacerSize} />
+                <Layer width={spacerSize.width} height={spacerSize.height} />
                 <Text variant='label' {...tabBar.tabBarItemText} color={color}>
                     {title}
                 </Text>

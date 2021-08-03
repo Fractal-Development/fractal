@@ -8,7 +8,7 @@ export const SimpleTabBarItemContainer = memo(({ children, icon, onTabPress, tab
     const tabBarPosition = useTabBarPosition();
     const flexDirection = tabBarPosition !== 'bottom' ? 'column' : getValueForLargeSizeType(widthSizeType, 'row', 'column');
     const flexGrow = tabBarPosition === 'bottom' ? 1 : undefined;
-    const marginBottom = tabBarPosition === 'bottom' ? spacings.s : undefined;
+    const marginBottom = tabBarPosition === 'bottom' ? spacings.m : undefined;
     const handlePress = useCallback(() => {
         onTabPress === null || onTabPress === void 0 ? void 0 : onTabPress(tabIdentifier);
     }, [onTabPress, tabIdentifier]);

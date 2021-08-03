@@ -15,10 +15,10 @@ export const SimpleTabBarItem = memo(({ active = false, title, children, tabIden
         return children(color, size);
     }, [color, children]);
     const spacerSize = tabBarPosition !== 'bottom'
-        ? tabBarItemCompactSpacerSize
+        ? tabBarItemLargeSpacerSize
         : getValueForLargeSizeType(widthSizeType, tabBarItemLargeSpacerSize, tabBarItemCompactSpacerSize);
     return (React.createElement(SimpleTabBarItemContainer, { tabIdentifier: tabIdentifier, onTabPress: onTabPress, icon: renderItem },
-        React.createElement(Layer, Object.assign({}, spacerSize)),
+        React.createElement(Layer, { width: spacerSize.width, height: spacerSize.height }),
         React.createElement(Text, Object.assign({ variant: 'label' }, tabBar.tabBarItemText, { color: color }), title)));
 });
 SimpleTabBarItem.displayName = 'SimpleTabBarItem';
