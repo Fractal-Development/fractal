@@ -11,11 +11,12 @@ export interface BasicTabBarItemProps {
 }
 
 export const SimpleTabBarItemContainer = memo(({ children, icon, onTabPress, tabIdentifier }: BasicTabBarItemProps): ReactElement => {
-    const { tabBar } = useTheme();
+    const { tabBar, spacings } = useTheme();
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
     const flexDirection = tabBarPosition !== 'bottom' ? 'column' : getValueForLargeSizeType(widthSizeType, 'row', 'column');
     const flexGrow = tabBarPosition === 'bottom' ? 1 : undefined;
+    const marginBottom = tabBarPosition === 'bottom' ? spacings.s : undefined;
 
     const handlePress = useCallback(() => {
         onTabPress?.(tabIdentifier);
@@ -25,6 +26,7 @@ export const SimpleTabBarItemContainer = memo(({ children, icon, onTabPress, tab
         <Pressable
             flexGrow={flexGrow}
             flexDirection={flexDirection}
+            marginBottom={marginBottom}
             justifyContent='center'
             alignItems='center'
             minHeight={tabBar.iOSVerticalHeight - 1}
