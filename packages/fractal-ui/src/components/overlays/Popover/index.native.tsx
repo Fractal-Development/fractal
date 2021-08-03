@@ -55,6 +55,9 @@ const Popover = forwardRef(
                         position='absolute'
                         width='100%'
                         height='100%'
+                        from={styleVariants.initial}
+                        animate={styleVariants.visible}
+                        exit={styleVariants.initial}
                         backgroundColor={modalBackgroundColor}
                     />
                     <View style={[{ position: 'absolute', zIndex: 2 }, styles]}>
