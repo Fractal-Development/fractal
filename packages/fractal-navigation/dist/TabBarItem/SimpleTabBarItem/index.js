@@ -5,7 +5,8 @@ import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, Text, useTheme } from '@bma98/fractal-ui';
 const tabBarItemCompactSpacerSize = { width: 0, height: 0 };
-const tabBarItemLargeSpacerSize = { width: 8, height: 1 };
+const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 8 };
+const tabBarItemLargeHorizontalSpacerSize = { width: 8, height: 1 };
 export const SimpleTabBarItem = memo(({ active = false, title, children, tabIdentifier, onTabPress }) => {
     const color = useSimpleTabBarItemColor(active);
     const [widthSizeType] = useWidthSizeGroup();
@@ -14,11 +15,9 @@ export const SimpleTabBarItem = memo(({ active = false, title, children, tabIden
     const renderItem = useCallback((size) => {
         return children(color, size);
     }, [color, children]);
-    const spacerSize = tabBarPosition !== 'bottom'
-        ? tabBarItemLargeSpacerSize
-        : getValueForLargeSizeType(widthSizeType, tabBarItemLargeSpacerSize, tabBarItemCompactSpacerSize);
+    const spacerSize = getValueForLargeSizeType(widthSizeType, tabBarPosition !== 'bottom' ? tabBarItemLargeVerticalSpacerSize : tabBarItemLargeHorizontalSpacerSize, tabBarItemCompactSpacerSize);
     return (React.createElement(SimpleTabBarItemContainer, { tabIdentifier: tabIdentifier, onTabPress: onTabPress, icon: renderItem },
-        React.createElement(Layer, { width: spacerSize.width, height: spacerSize.height }),
+        React.createElement(Layer, Object.assign({}, spacerSize)),
         React.createElement(Text, Object.assign({ variant: 'label' }, tabBar.tabBarItemText, { color: color }), title)));
 });
 SimpleTabBarItem.displayName = 'SimpleTabBarItem';

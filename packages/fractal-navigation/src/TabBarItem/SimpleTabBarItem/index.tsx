@@ -6,7 +6,8 @@ import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, Text, useTheme } from '@bma98/fractal-ui';
 
 const tabBarItemCompactSpacerSize = { width: 0, height: 0 };
-const tabBarItemLargeSpacerSize = { width: 8, height: 1 };
+const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 8 };
+const tabBarItemLargeHorizontalSpacerSize = { width: 8, height: 1 };
 
 export interface SimpleTabBarItemProps {
     tabIdentifier: string;
@@ -30,14 +31,15 @@ export const SimpleTabBarItem = memo(
             [color, children]
         );
 
-        const spacerSize =
-            tabBarPosition !== 'bottom'
-                ? tabBarItemLargeSpacerSize
-                : getValueForLargeSizeType(widthSizeType, tabBarItemLargeSpacerSize, tabBarItemCompactSpacerSize);
+        const spacerSize = getValueForLargeSizeType(
+            widthSizeType,
+            tabBarPosition !== 'bottom' ? tabBarItemLargeVerticalSpacerSize : tabBarItemLargeHorizontalSpacerSize,
+            tabBarItemCompactSpacerSize
+        );
 
         return (
             <SimpleTabBarItemContainer tabIdentifier={tabIdentifier} onTabPress={onTabPress} icon={renderItem}>
-                <Layer width={spacerSize.width} height={spacerSize.height} />
+                <Layer {...spacerSize} />
                 <Text variant='label' {...tabBar.tabBarItemText} color={color}>
                     {title}
                 </Text>
