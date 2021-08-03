@@ -1,3 +1,4 @@
+import { FractalThemeNavigationBar, FractalThemeTabBar } from '../FractalTheme';
 export declare const darkColors: {
     background: string;
     foreground: string;
@@ -16,4 +17,6 @@ export declare const darkColors: {
     contentInteractiveColor800: string;
     contentInteractiveColor900: string;
 };
-export declare const darkFractalTheme: import("..").FractalTheme;
+export declare const darkNavigationBarTheme: FractalThemeNavigationBar;
+export declare const darkTabBarTheme: FractalThemeTabBar;
+export declare const darkFractalTheme: import("../FractalTheme").FractalTheme;

@@ -122,6 +122,24 @@ export interface FractalThemeTextVariants {
     textButton: TextStyle;
 }
 
+export interface FractalThemeNavigationBar {
+    title: TextStyle;
+    height: number;
+    shadow: string;
+    textButton: TextStyle;
+    iconButtonSize: number;
+    backgroundColor: string;
+}
+
+export interface FractalThemeTabBar {
+    tabBarItemText: TextStyle;
+    verticalHeight: number;
+    iOSVerticalHeight: number;
+    iOSHorizontalWidth: number;
+    horizontalWidth: number;
+    backgroundColor: string;
+    shadow: string;
+}
 export interface FractalTheme {
     colors: FractalThemeColors;
     spacings: FractalThemeSpacings;
@@ -129,4 +147,6 @@ export interface FractalTheme {
     sizes: FractalThemeSizes;
     shadows: FractalThemeShadows;
     textVariants: FractalThemeTextVariants;
+    navigationBarTheme: FractalThemeNavigationBar;
+    tabBarTheme: FractalThemeTabBar;
 }

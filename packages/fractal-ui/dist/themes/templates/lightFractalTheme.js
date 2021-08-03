@@ -171,12 +171,47 @@ export const textVariants = {
         fontFamily: systemFont
     }
 };
+//11
+export const lightNavigationBarTheme = {
+    title: {
+        fontSize: 16,
+        fontWeight: 600,
+        color: 'black',
+        fontFamily: systemFont
+    },
+    height: 50,
+    shadow: '0px 1px 1px rgba(0, 0, 0, 0.05)',
+    textButton: {
+        fontSize: 16,
+        fontWeight: 400,
+        color: 'mainInteractiveColor',
+        fontFamily: systemFont
+    },
+    iconButtonSize: 22,
+    backgroundColor: white.base
+};
+export const lightTabBarTheme = {
+    tabBarItemText: {
+        fontSize: 11,
+        fontWeight: 500,
+        color: 'black',
+        fontFamily: systemFont
+    },
+    verticalHeight: 61,
+    horizontalWidth: 61,
+    iOSVerticalHeight: 49,
+    iOSHorizontalWidth: 49,
+    backgroundColor: white.base,
+    shadow: '0px -1px 1px rgba(0, 0, 0, 0.05)'
+};
 export const lightFractalTheme = {
     colors,
     spacings,
     borderRadius,
     sizes,
     shadows,
-    textVariants
+    textVariants,
+    navigationBarTheme: lightNavigationBarTheme,
+    tabBarTheme: lightTabBarTheme
 };
 //# sourceMappingURL=lightFractalTheme.js.map

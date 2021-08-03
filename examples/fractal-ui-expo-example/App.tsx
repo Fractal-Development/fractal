@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement, useState } from 'react';
 import { Screen, ScreenStack } from 'react-native-screens';
 import { MainExample } from '@bma98/fractal-examples';
 import {
@@ -7,11 +7,18 @@ import {
     NavigationBarButton,
     TabBar,
     TabBarContextProvider,
-    NavigationLayer
+    NavigationLayer,
+    SimpleTabBarItem
 } from '@bma98/fractal-navigation';
-import { Layer } from '@bma98/fractal-ui';
+import { Layer, BugIcon, AppleIcon } from '@bma98/fractal-ui';
 
-export default function App() {
+interface NavigationProps {
+    children: ReactElement;
+}
+
+export function Navigation({ children }: NavigationProps) {
+    const [currentTab, setCurrentTab] = useState('/bug');
+
     return (
         <Layer flex={1}>
             <TabBarContextProvider>
@@ -22,13 +29,30 @@ export default function App() {
                                 <NavigationBarButton>Prueba</NavigationBarButton>
                             </NativeNavigationBarRightView>
                         </NativeNavigationBar>
-                        <NavigationLayer>
-                            <MainExample />
-                        </NavigationLayer>
+                        <NavigationLayer>{children}</NavigationLayer>
                     </Screen>
                 </ScreenStack>
-                <TabBar tabBarPosition={'bottom'} />
+                <TabBar tabBarPosition={'bottom'}>
+                    <SimpleTabBarItem active={currentTab === '/bug'} title={'Bug'} tabIdentifier='/bug' onTabPress={setCurrentTab}>
+                        {(color, size) => {
+                            return <BugIcon fill={color} height={size} width={size} />;
+                        }}
+                    </SimpleTabBarItem>
+                    <SimpleTabBarItem active={currentTab === '/apple'} title={'Apple'} tabIdentifier='/apple' onTabPress={setCurrentTab}>
+                        {(color, size) => {
+                            return <AppleIcon fill={color} height={size} width={size} />;
+                        }}
+                    </SimpleTabBarItem>
+                </TabBar>
             </TabBarContextProvider>
         </Layer>
+    );
+}
+
+export default function App() {
+    return (
+        <Navigation>
+            <MainExample />
+        </Navigation>
     );
 }
