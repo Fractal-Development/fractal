@@ -1,4 +1,5 @@
 export * from './AutoComplete';
+export { IDEnabled, AutoCompleteProps } from './AutoComplete/types';
 export * from './BaseTextField';
 export * from './DatePicker';
 export * from './Picker';

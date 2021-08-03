@@ -7,3 +7,4 @@ export * from './Slider';
 export * from './Switch';
 export * from './textInputs';
 export * from './Dropzone';
+export * from './Dropzone/fileTypes';
