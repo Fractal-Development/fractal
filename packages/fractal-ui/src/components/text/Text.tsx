@@ -5,8 +5,8 @@ import { TextProps } from './BaseText/types';
 
 const Text = forwardRef(({ variant = 'normal', ...others }: TextProps, ref: any): JSX.Element => {
     const { textVariants, colors } = useTheme();
-    const { fontSize, fontWeight, color, fontFamily } = textVariants[variant];
-    const finalColor = colors[color];
+    const { fontSize, fontWeight, color: colorName, fontFamily } = textVariants[variant];
+    const colorValue = colors[colorName];
 
     return (
         <BaseText
@@ -16,7 +16,7 @@ const Text = forwardRef(({ variant = 'normal', ...others }: TextProps, ref: any)
             fontFamily={fontFamily}
             fontSize={fontSize}
             fontWeight={fontWeight}
-            color={finalColor}
+            color={colorValue}
             {...others}
         />
     );

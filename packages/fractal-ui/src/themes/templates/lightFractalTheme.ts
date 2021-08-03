@@ -200,7 +200,7 @@ export const lightNavigationBarTheme: FractalThemeNavigationBar = {
     textButton: {
         fontSize: 16,
         fontWeight: 400,
-        color: 'mainInteractiveColor',
+        color: blue.base,
         fontFamily: systemFont
     },
     iconButtonSize: 22,
@@ -211,7 +211,7 @@ export const lightTabBarTheme: FractalThemeTabBar = {
     tabBarItemText: {
         fontSize: 11,
         fontWeight: 500,
-        color: 'black',
+        color: blue.base,
         fontFamily: systemFont
     },
     verticalHeight: 61,

@@ -15,9 +15,9 @@ import { BaseText } from './BaseText';
 const Text = forwardRef((_a, ref) => {
     var { variant = 'normal' } = _a, others = __rest(_a, ["variant"]);
     const { textVariants, colors } = useTheme();
-    const { fontSize, fontWeight, color, fontFamily } = textVariants[variant];
-    const finalColor = colors[color];
-    return (React.createElement(BaseText, Object.assign({ ref: ref, selectable: false, focusable: false, fontFamily: fontFamily, fontSize: fontSize, fontWeight: fontWeight, color: finalColor }, others)));
+    const { fontSize, fontWeight, color: colorName, fontFamily } = textVariants[variant];
+    const colorValue = colors[colorName];
+    return (React.createElement(BaseText, Object.assign({ ref: ref, selectable: false, focusable: false, fontFamily: fontFamily, fontSize: fontSize, fontWeight: fontWeight, color: colorValue }, others)));
 });
 Text.displayName = 'Text';
 export { Text };

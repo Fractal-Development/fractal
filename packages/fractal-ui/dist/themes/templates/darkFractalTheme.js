@@ -1,3 +1,4 @@
+import { blue } from '../../colors';
 import { black } from '../../colors/presets/black';
 import { systemFont } from '../systemFont';
 import { createFractalTheme } from './createFractalTheme';
@@ -24,14 +25,14 @@ export const darkNavigationBarTheme = {
     title: {
         fontSize: 16,
         fontWeight: 600,
-        color: black.base900
+        color: black.base
     },
     height: 50,
     shadow: '0px 1px 1px rgba(0, 0, 0, 0.05)',
     textButton: {
         fontSize: 16,
         fontWeight: 400,
-        color: 'mainInteractiveColor',
+        color: blue.base,
         fontFamily: systemFont
     },
     iconButtonSize: 22,
@@ -41,7 +42,7 @@ export const darkTabBarTheme = {
     tabBarItemText: {
         fontSize: 11,
         fontWeight: 500,
-        color: black.base900,
+        color: blue.base,
         fontFamily: systemFont
     },
     verticalHeight: 61,
