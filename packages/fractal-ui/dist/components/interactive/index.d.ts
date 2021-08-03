@@ -8,3 +8,4 @@ export * from './Switch';
 export * from './textInputs';
 export * from './Dropzone';
 export * from './Dropzone/fileTypes';
+export * from './Dropzone/types/FileTypes';
