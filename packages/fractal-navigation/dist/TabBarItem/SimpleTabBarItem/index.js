@@ -5,7 +5,7 @@ import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, Text, useTheme } from '@bma98/fractal-ui';
 const tabBarItemCompactSpacerSize = { width: 0, height: 0 };
-const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 8 };
+const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemLargeHorizontalSpacerSize = { width: 8, height: 1 };
 export const SimpleTabBarItem = memo(({ active = false, title, children, tabIdentifier, onTabPress }) => {
     const color = useSimpleTabBarItemColor(active);
