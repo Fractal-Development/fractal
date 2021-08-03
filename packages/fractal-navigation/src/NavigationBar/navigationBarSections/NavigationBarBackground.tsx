@@ -8,15 +8,15 @@ interface NavigationBarBackgroundProps {
 }
 
 export const NavigationBarBackground = memo(({ children }: NavigationBarBackgroundProps): ReactElement => {
-    const { spacings, shadows, colors } = useTheme();
+    const { spacings, navigationBar } = useTheme();
     const { left, right } = useTabBarInsets();
 
     return (
         <Layer
-            backgroundColor={colors.foreground}
+            backgroundColor={navigationBar.backgroundColor}
             flexDirection='row'
-            height={50}
-            boxShadow={shadows.mainShadow}
+            height={navigationBar.height}
+            boxShadow={navigationBar.shadow}
             zIndex={2000}
             paddingLeft={spacings.m}
             paddingRight={spacings.m}

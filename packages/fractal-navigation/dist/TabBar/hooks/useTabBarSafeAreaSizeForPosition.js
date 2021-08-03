@@ -1,8 +1,8 @@
-import { getTabBarSizeForPosition } from '../util';
 import { useSafeAreaInsets } from './useSafeAreaInsets';
+import { useTabBarSizeForPosition } from './useTabBarSizeForPosition';
 export function useTabBarSafeAreaSizeForPosition(tabBarPosition) {
     const safeAreaInsets = useSafeAreaInsets();
-    const size = getTabBarSizeForPosition(tabBarPosition);
+    const size = useTabBarSizeForPosition(tabBarPosition);
     switch (tabBarPosition) {
         case 'right':
             return safeAreaInsets.right + size;

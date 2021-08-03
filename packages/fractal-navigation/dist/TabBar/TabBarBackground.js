@@ -6,7 +6,7 @@ export function TabBarBackground(props) {
     const { tabBarPosition } = props;
     const positionValues = useTabBarPositionValues(tabBarPosition);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
-    const { colors, shadows } = useTheme();
-    return (React.createElement(Layer, Object.assign({ backgroundColor: colors.foreground, boxShadow: shadows.mainShadow, justifyContent: 'center', position: tabBarCSSPosition, zIndex: 3000 }, positionValues, tabBarSafeAreaPadding, props)));
+    const { tabBar } = useTheme();
+    return (React.createElement(Layer, Object.assign({ backgroundColor: tabBar.backgroundColor, boxShadow: tabBar.shadow, justifyContent: 'center', position: tabBarCSSPosition, zIndex: 3000 }, positionValues, tabBarSafeAreaPadding, props)));
 }
 //# sourceMappingURL=TabBarBackground.js.map

@@ -8,12 +8,12 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
     const { tabBarPosition } = props;
     const positionValues = useTabBarPositionValues(tabBarPosition);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
-    const { colors, shadows } = useTheme();
+    const { tabBar } = useTheme();
 
     return (
         <Layer
-            backgroundColor={colors.foreground}
-            boxShadow={shadows.mainShadow}
+            backgroundColor={tabBar.backgroundColor}
+            boxShadow={tabBar.shadow}
             justifyContent={'center'}
             position={tabBarCSSPosition}
             zIndex={3000}

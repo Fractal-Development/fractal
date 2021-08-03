@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/TabBar/util/getTabBarSizeForPosition/index.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,wBAAwB,CAAC,QAAwB,EAAE,MAAgB;IAC/E,IAAI,MAAM,EAAE;QACR,OAAO,CAAC,CAAC;KACZ;SAAM,IAAI,QAAQ,KAAK,MAAM,IAAI,QAAQ,KAAK,OAAO,IAAI,QAAQ,KAAK,QAAQ,EAAE;QAC7E,OAAO,EAAE,CAAC;KACb;SAAM;QACH,OAAO,CAAC,CAAC;KACZ;AACL,CAAC"}

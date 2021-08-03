@@ -3,7 +3,7 @@ import { useSimpleTabBarItemColor } from './hooks/useSimpleTabBarItemColor';
 import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContainer';
 import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
-import { Layer, Text } from '@bma98/fractal-ui';
+import { Layer, Text, useTheme } from '@bma98/fractal-ui';
 
 const tabBarItemCompactSpacerSize = { width: 0, height: 0 };
 const tabBarItemLargeSpacerSize = { width: 8, height: 1 };
@@ -21,6 +21,7 @@ export const SimpleTabBarItem = memo(
         const color = useSimpleTabBarItemColor(active);
         const [widthSizeType] = useWidthSizeGroup();
         const tabBarPosition = useTabBarPosition();
+        const { tabBar } = useTheme();
 
         const renderItem = useCallback(
             (size: number) => {
@@ -37,7 +38,7 @@ export const SimpleTabBarItem = memo(
         return (
             <SimpleTabBarItemContainer tabIdentifier={tabIdentifier} onTabPress={onTabPress} icon={renderItem}>
                 <Layer {...spacerSize} />
-                <Text variant='label' color={color}>
+                <Text variant='label' {...tabBar.tabBarItemText} color={color}>
                     {title}
                 </Text>
             </SimpleTabBarItemContainer>

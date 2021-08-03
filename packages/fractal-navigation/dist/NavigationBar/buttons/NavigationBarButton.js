@@ -1,6 +1,7 @@
 import React from 'react';
-import { TextButton } from '@bma98/fractal-ui';
+import { TextButton, useTheme } from '@bma98/fractal-ui';
 export function NavigationBarButton(props) {
-    return React.createElement(TextButton, Object.assign({}, props, { variant: 'main' }));
+    const { navigationBar } = useTheme();
+    return React.createElement(TextButton, Object.assign({}, props, { variant: 'main', textProps: navigationBar.textButton }));
 }
 //# sourceMappingURL=NavigationBarButton.js.map

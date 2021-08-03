@@ -1,12 +1,12 @@
 import { useContext, useLayoutEffect } from 'react';
-import { getTabBarSizeForPosition } from '../util';
 import { useTabBarIsHidden } from './useTabBarIsHidden';
 import { TabBarInsetsContext } from '../context/TabBarInsetsProvider';
 import { useTabBarPosition } from './useTabBarPosition';
+import { useTabBarSizeForPosition } from './useTabBarSizeForPosition';
 export function useSetTabBarInsets() {
     const tabBarPosition = useTabBarPosition();
     const tabBarIsHidden = useTabBarIsHidden();
-    const size = getTabBarSizeForPosition(tabBarPosition, tabBarIsHidden);
+    const size = useTabBarSizeForPosition(tabBarPosition, tabBarIsHidden);
     const [, setTabBarInsets] = useContext(TabBarInsetsContext);
     useLayoutEffect(() => {
         setTabBarInsets({

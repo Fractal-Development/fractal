@@ -1,6 +1,6 @@
 import { useTheme } from '@bma98/fractal-ui';
 export function useSimpleTabBarItemColor(active) {
-    const { colors } = useTheme();
-    return active ? colors.mainInteractiveColor : colors.label;
+    const { tabBar, colors } = useTheme();
+    return active ? tabBar.tabBarItemText.color : colors.label;
 }
 //# sourceMappingURL=useSimpleTabBarItemColor.js.map
