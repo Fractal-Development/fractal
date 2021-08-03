@@ -123,7 +123,7 @@ export interface FractalThemeTextVariants {
 }
 
 export interface FractalThemeNavigationBar {
-    title: TextStyle;
+    title: Omit<TextStyle, 'fontFamily'>;
     height: number;
     shadow: string;
     textButton: TextStyle;
@@ -147,6 +147,6 @@ export interface FractalTheme {
     sizes: FractalThemeSizes;
     shadows: FractalThemeShadows;
     textVariants: FractalThemeTextVariants;
-    navigationBarTheme: FractalThemeNavigationBar;
-    tabBarTheme: FractalThemeTabBar;
+    navigationBar: FractalThemeNavigationBar;
+    tabBar: FractalThemeTabBar;
 }

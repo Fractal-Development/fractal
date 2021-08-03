@@ -193,8 +193,7 @@ export const lightNavigationBarTheme: FractalThemeNavigationBar = {
     title: {
         fontSize: 16,
         fontWeight: 600,
-        color: 'black',
-        fontFamily: systemFont
+        color: 'black'
     },
     height: 50,
     shadow: '0px 1px 1px rgba(0, 0, 0, 0.05)',
@@ -230,6 +229,6 @@ export const lightFractalTheme: FractalTheme = {
     sizes,
     shadows,
     textVariants,
-    navigationBarTheme: lightNavigationBarTheme,
-    tabBarTheme: lightTabBarTheme
+    navigationBar: lightNavigationBarTheme,
+    tabBar: lightTabBarTheme
 };

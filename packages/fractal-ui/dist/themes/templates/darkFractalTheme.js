@@ -24,8 +24,7 @@ export const darkNavigationBarTheme = {
     title: {
         fontSize: 16,
         fontWeight: 600,
-        color: black.base900,
-        fontFamily: systemFont
+        color: black.base900
     },
     height: 50,
     shadow: '0px 1px 1px rgba(0, 0, 0, 0.05)',
@@ -54,7 +53,7 @@ export const darkTabBarTheme = {
 };
 export const darkFractalTheme = createFractalTheme({
     colors: Object.assign({}, darkColors),
-    navigationBarTheme: darkNavigationBarTheme,
-    tabBarTheme: darkTabBarTheme
+    navigationBar: darkNavigationBarTheme,
+    tabBar: darkTabBarTheme
 });
 //# sourceMappingURL=darkFractalTheme.js.map

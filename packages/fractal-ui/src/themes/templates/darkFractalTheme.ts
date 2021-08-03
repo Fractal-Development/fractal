@@ -27,8 +27,7 @@ export const darkNavigationBarTheme: FractalThemeNavigationBar = {
     title: {
         fontSize: 16,
         fontWeight: 600,
-        color: black.base900,
-        fontFamily: systemFont
+        color: black.base900
     },
     height: 50,
     shadow: '0px 1px 1px rgba(0, 0, 0, 0.05)',
@@ -61,6 +60,6 @@ export const darkFractalTheme = createFractalTheme({
     colors: {
         ...darkColors
     },
-    navigationBarTheme: darkNavigationBarTheme,
-    tabBarTheme: darkTabBarTheme
+    navigationBar: darkNavigationBarTheme,
+    tabBar: darkTabBarTheme
 });
