@@ -28,7 +28,7 @@ export function extractTextProps({
         ${fontFamily != null ? `font-family: ${fontFamily}` : ''};
         ${fontStyle != null ? `font-family: ${fontStyle}` : ''};
         ${getUserSelectAccessibilityProp(selectable)};
-        ${textAlign != null ? `text-align: ${textAlign}` : ''}
-        ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''}
+        ${textAlign != null ? `text-align: ${textAlign}` : ''};
+        ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''};
     `;
 }

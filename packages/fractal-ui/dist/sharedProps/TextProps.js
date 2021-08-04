@@ -7,8 +7,8 @@ export function extractTextProps({ fontSize, fontWeight, fontFamily, color, font
         ${fontFamily != null ? `font-family: ${fontFamily}` : ''};
         ${fontStyle != null ? `font-family: ${fontStyle}` : ''};
         ${getUserSelectAccessibilityProp(selectable)};
-        ${textAlign != null ? `text-align: ${textAlign}` : ''}
-        ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''}
+        ${textAlign != null ? `text-align: ${textAlign}` : ''};
+        ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''};
     `;
 }
 //# sourceMappingURL=TextProps.js.map
