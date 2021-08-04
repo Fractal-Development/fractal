@@ -40,7 +40,16 @@ export const SimpleTabBarItem = memo(
         return (
             <SimpleTabBarItemContainer tabIdentifier={tabIdentifier} onTabPress={onTabPress} icon={renderItem}>
                 <Layer {...spacerSize} />
-                <Text variant='label' {...tabBar.tabBarItemText} color={color}>
+                <Text
+                    {...tabBar.tabBarItemText}
+                    numberOfLines={1}
+                    overflow={'hidden'}
+                    width={tabBar.iOSHorizontalWidth - 1}
+                    display='block'
+                    variant='label'
+                    textOverflow='ellipsis'
+                    color={color}
+                >
                     {title}
                 </Text>
             </SimpleTabBarItemContainer>
