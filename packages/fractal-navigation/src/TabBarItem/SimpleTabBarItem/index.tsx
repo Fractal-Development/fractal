@@ -5,7 +5,9 @@ import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, Text, useTheme } from '@bma98/fractal-ui';
 
-const tabBarItemCompactSpacerSize = { width: 0, height: 0 };
+const tabBarItemCompactVerticalSpacerSize = { width: 1, height: 4 };
+const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 0 };
+
 const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemLargeHorizontalSpacerSize = { width: 8, height: 1 };
 
@@ -34,7 +36,7 @@ export const SimpleTabBarItem = memo(
         const spacerSize = getValueForLargeSizeType(
             widthSizeType,
             tabBarPosition !== 'bottom' ? tabBarItemLargeVerticalSpacerSize : tabBarItemLargeHorizontalSpacerSize,
-            tabBarItemCompactSpacerSize
+            tabBarPosition !== 'bottom' ? tabBarItemCompactVerticalSpacerSize : tabBarItemCompactHorizontalSpacerSize
         );
 
         return (
