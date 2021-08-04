@@ -8,9 +8,19 @@ export interface FractalTextProps {
     fontStyle?: 'italic' | 'normal';
     selectable?: boolean;
     textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
+    textOverflow?: 'ellipsis';
 }
 
-export function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable, textAlign }: FractalTextProps): string {
+export function extractTextProps({
+    fontSize,
+    fontWeight,
+    fontFamily,
+    color,
+    fontStyle,
+    selectable,
+    textAlign,
+    textOverflow
+}: FractalTextProps): string {
     return `
         ${fontSize != null ? `font-size: ${fontSize}px` : ''};
         ${fontWeight != null ? `font-weight: ${fontWeight}` : ''};
@@ -19,5 +29,6 @@ export function extractTextProps({ fontSize, fontWeight, fontFamily, color, font
         ${fontStyle != null ? `font-family: ${fontStyle}` : ''};
         ${getUserSelectAccessibilityProp(selectable)};
         ${textAlign != null ? `text-align: ${textAlign}` : ''}
+        ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''}
     `;
 }

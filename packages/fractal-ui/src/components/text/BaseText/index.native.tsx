@@ -25,9 +25,9 @@ const StyledText = styled(MotiText)`
     ${extractTextProps};
 `;
 
-const BaseText = forwardRef(({ currentVariant, variants, ...others }: TextProps, ref: any): JSX.Element => {
+const BaseText = forwardRef(({ currentVariant, variants, textOverflow, ...others }: TextProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);
-    return <StyledText ref={ref} state={variantState} {...others} />;
+    return <StyledText ellipsizeMode={textOverflow != null ? 'tail' : undefined} ref={ref} state={variantState} {...others} />;
 });
 
 BaseText.displayName = 'BaseText';

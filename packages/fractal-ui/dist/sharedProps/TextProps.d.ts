@@ -6,5 +6,6 @@ export interface FractalTextProps {
     fontStyle?: 'italic' | 'normal';
     selectable?: boolean;
     textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
+    textOverflow?: 'ellipsis';
 }
-export declare function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable, textAlign }: FractalTextProps): string;
+export declare function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable, textAlign, textOverflow }: FractalTextProps): string;
