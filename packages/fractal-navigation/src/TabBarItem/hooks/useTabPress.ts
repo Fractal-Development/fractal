@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
-import { SharedTabItemProps } from '../types/SharedTabItemProps';
 
-export function useTabPress({ tabIdentifier, onTabPress }: SharedTabItemProps): () => void {
+export function useTabPress(tabIdentifier: string, onTabPress?: (tabIdentifier: string) => void): () => void {
     return useCallback(() => {
         onTabPress?.(tabIdentifier);
     }, [onTabPress, tabIdentifier]);

@@ -3,7 +3,7 @@ import { useSimpleTabBarItemColor } from './hooks/useSimpleTabBarItemColor';
 import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContainer';
 import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
-import { Layer, spacings, Text, useTheme } from '@bma98/fractal-ui';
+import { Layer, LayerProps, spacings, Text, useTheme } from '@bma98/fractal-ui';
 import { SharedTabItemProps } from '../types/SharedTabItemProps';
 
 const tabBarItemCompactVerticalSpacerSize = { width: 1, height: 4 };
@@ -12,14 +12,14 @@ const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 0 };
 const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemLargeHorizontalSpacerSize = { width: 4, height: 1 };
 
-export interface SimpleTabBarItemProps extends SharedTabItemProps {
+export interface SimpleTabBarItemProps extends SharedTabItemProps, LayerProps {
     title?: string;
     children: (color: string, size: number) => JSX.Element;
     active?: boolean;
 }
 
 export const SimpleTabBarItem = memo(
-    ({ active = false, title, children, tabIdentifier, onTabPress }: SimpleTabBarItemProps): JSX.Element => {
+    ({ active = false, title, children, tabIdentifier, onTabPress, ...others }: SimpleTabBarItemProps): JSX.Element => {
         const color = useSimpleTabBarItemColor(active);
         const [widthSizeType] = useWidthSizeGroup();
         const tabBarPosition = useTabBarPosition();
@@ -44,7 +44,7 @@ export const SimpleTabBarItem = memo(
         );
 
         return (
-            <SimpleTabBarItemContainer tabIdentifier={tabIdentifier} onTabPress={onTabPress} icon={renderItem}>
+            <SimpleTabBarItemContainer tabIdentifier={tabIdentifier} onTabPress={onTabPress} icon={renderItem} {...others}>
                 <Layer {...spacerSize} />
                 <Text
                     {...tabBar.tabBarItemText}

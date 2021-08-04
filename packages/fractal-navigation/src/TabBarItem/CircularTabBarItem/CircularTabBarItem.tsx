@@ -1,20 +1,18 @@
 import React from 'react';
-import { CircularIconButton, Layer } from '@bma98/fractal-ui';
+import { Button } from '@bma98/fractal-ui';
 import { ReactElement, useCallback } from 'react';
 import { useTabPress } from '../hooks/useTabPress';
 import { CircularTabBarItemProps } from './types/CircularTabBarItemProps';
 
-export function CircularTabBarItem({ children, ...others }: CircularTabBarItemProps): ReactElement {
+export function CircularTabBarItem({ children, onTabPress, tabIdentifier, ...others }: CircularTabBarItemProps): ReactElement {
     const renderChildren = useCallback(() => {
-        return children('white', 24);
+        return children('white', 28);
     }, [children]);
-    const handlePress = useTabPress(others);
+    const handlePress = useTabPress(tabIdentifier, onTabPress);
 
     return (
-        <Layer>
-            <CircularIconButton borderRadius={24} height={48} width={48} {...others} onPress={handlePress}>
-                {renderChildren}
-            </CircularIconButton>
-        </Layer>
+        <Button borderRadius={24} height={48} width={48} {...others} onPress={handlePress}>
+            {renderChildren}
+        </Button>
     );
 }

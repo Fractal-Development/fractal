@@ -15,15 +15,15 @@ import { Pressable, useTheme } from '@bma98/fractal-ui';
 import { useTabBarPosition } from '../../../TabBar/hooks/useTabBarPosition';
 import { useTabPress } from '../../hooks/useTabPress';
 export const SimpleTabBarItemContainer = memo((_a) => {
-    var { children, icon } = _a, others = __rest(_a, ["children", "icon"]);
+    var { children, icon, tabIdentifier, onTabPress } = _a, others = __rest(_a, ["children", "icon", "tabIdentifier", "onTabPress"]);
     const { tabBar, spacings } = useTheme();
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
     const flexDirection = tabBarPosition !== 'bottom' ? 'column' : getValueForLargeSizeType(widthSizeType, 'row', 'column');
     const flexGrow = tabBarPosition === 'bottom' ? 1 : undefined;
     const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : undefined;
-    const handlePress = useTabPress(others);
-    return (React.createElement(Pressable, { flexGrow: flexGrow, flexDirection: flexDirection, marginBottom: marginBottom, justifyContent: 'center', alignItems: 'center', minHeight: tabBar.iOSVerticalHeight - 1, minWidth: tabBar.iOSHorizontalWidth - 1, cursor: 'pointer', onPress: handlePress },
+    const handlePress = useTabPress(tabIdentifier, onTabPress);
+    return (React.createElement(Pressable, Object.assign({ flexGrow: flexGrow, flexDirection: flexDirection, marginBottom: marginBottom, justifyContent: 'center', alignItems: 'center', minHeight: tabBar.iOSVerticalHeight - 1, minWidth: tabBar.iOSHorizontalWidth - 1, cursor: 'pointer', onPress: handlePress }, others),
         icon(24),
         children));
 });

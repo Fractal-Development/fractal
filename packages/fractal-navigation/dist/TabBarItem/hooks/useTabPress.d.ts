@@ -1,2 +1,1 @@
-import { SharedTabItemProps } from '../types/SharedTabItemProps';
-export declare function useTabPress({ tabIdentifier, onTabPress }: SharedTabItemProps): () => void;
+export declare function useTabPress(tabIdentifier: string, onTabPress?: (tabIdentifier: string) => void): () => void;
