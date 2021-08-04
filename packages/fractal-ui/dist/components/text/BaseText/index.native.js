@@ -25,9 +25,9 @@ const StyledText = styled(MotiText) `
     ${extractTextProps};
 `;
 const BaseText = forwardRef((_a, ref) => {
-    var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);
+    var { currentVariant, variants, textOverflow } = _a, others = __rest(_a, ["currentVariant", "variants", "textOverflow"]);
     const variantState = useVariantState(currentVariant, variants);
-    return React.createElement(StyledText, Object.assign({ ref: ref, state: variantState }, others));
+    return React.createElement(StyledText, Object.assign({ ellipsizeMode: textOverflow != null ? 'tail' : undefined, ref: ref, state: variantState }, others));
 });
 BaseText.displayName = 'BaseText';
 export { BaseText };

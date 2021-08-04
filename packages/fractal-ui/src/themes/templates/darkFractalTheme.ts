@@ -52,7 +52,7 @@ export const darkTabBarTheme: FractalThemeTabBar = {
     verticalHeight: 61,
     horizontalWidth: 61,
     iOSVerticalHeight: 49,
-    iOSHorizontalWidth: 49,
+    iOSHorizontalWidth: 61,
     backgroundColor: black.base,
     shadow: '0px -1px 1px rgba(0, 0, 0, 0.05)'
 };

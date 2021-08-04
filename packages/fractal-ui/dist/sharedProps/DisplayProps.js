@@ -1,7 +1,8 @@
+import { getDisplayProperty } from './utils/getDisplayProperty';
 export function extractDisplayProps({ flex, display, justifyContent, alignItems, flexDirection, alignSelf, alignContent, flexWrap, flexBasis, flexGrow, flexShrink, position, top, right, bottom, left, zIndex, opacity, overflow }) {
     return `
         ${flex != null ? `flex: ${flex}` : ''};
-        display: ${display !== null && display !== void 0 ? display : 'flex'};
+        ${getDisplayProperty(display)};
         ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};
         ${justifyContent != null ? `justify-content: ${justifyContent}` : ''};
         ${alignItems != null ? `align-items: ${alignItems}` : ''};
