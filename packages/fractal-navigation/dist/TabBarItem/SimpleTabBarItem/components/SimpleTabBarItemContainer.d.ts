@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react';
-export interface BasicTabBarItemProps {
-    tabIdentifier: string;
-    onTabPress?: (tabIdentifier: string) => void;
+import { SharedTabItemProps } from '../../types/SharedTabItemProps';
+export interface BasicTabBarItemProps extends SharedTabItemProps {
     icon: (iconSize: number) => ReactElement;
     children: Array<ReactElement> | ReactElement;
 }
-export declare const SimpleTabBarItemContainer: React.MemoExoticComponent<({ children, icon, onTabPress, tabIdentifier }: BasicTabBarItemProps) => ReactElement>;
+export declare const SimpleTabBarItemContainer: React.MemoExoticComponent<({ children, icon, ...others }: BasicTabBarItemProps) => ReactElement>;

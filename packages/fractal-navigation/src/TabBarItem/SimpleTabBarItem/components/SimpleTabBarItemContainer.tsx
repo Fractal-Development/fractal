@@ -1,26 +1,23 @@
-import React, { memo, ReactElement, useCallback } from 'react';
+import React, { memo, ReactElement } from 'react';
 import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { Pressable, useTheme } from '@bma98/fractal-ui';
 import { useTabBarPosition } from '../../../TabBar/hooks/useTabBarPosition';
+import { SharedTabItemProps } from '../../types/SharedTabItemProps';
+import { useTabPress } from '../../hooks/useTabPress';
 
-export interface BasicTabBarItemProps {
-    tabIdentifier: string;
-    onTabPress?: (tabIdentifier: string) => void;
+export interface BasicTabBarItemProps extends SharedTabItemProps {
     icon: (iconSize: number) => ReactElement;
     children: Array<ReactElement> | ReactElement;
 }
 
-export const SimpleTabBarItemContainer = memo(({ children, icon, onTabPress, tabIdentifier }: BasicTabBarItemProps): ReactElement => {
+export const SimpleTabBarItemContainer = memo(({ children, icon, ...others }: BasicTabBarItemProps): ReactElement => {
     const { tabBar, spacings } = useTheme();
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
     const flexDirection = tabBarPosition !== 'bottom' ? 'column' : getValueForLargeSizeType(widthSizeType, 'row', 'column');
     const flexGrow = tabBarPosition === 'bottom' ? 1 : undefined;
     const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : undefined;
-
-    const handlePress = useCallback(() => {
-        onTabPress?.(tabIdentifier);
-    }, [onTabPress, tabIdentifier]);
+    const handlePress = useTabPress(others);
 
     return (
         <Pressable

@@ -1,7 +1,6 @@
 import React from 'react';
-export interface SimpleTabBarItemProps {
-    tabIdentifier: string;
-    onTabPress?: (tabIdentifier: string) => void;
+import { SharedTabItemProps } from '../types/SharedTabItemProps';
+export interface SimpleTabBarItemProps extends SharedTabItemProps {
     title?: string;
     children: (color: string, size: number) => JSX.Element;
     active?: boolean;

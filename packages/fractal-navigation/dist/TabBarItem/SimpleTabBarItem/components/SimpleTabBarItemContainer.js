@@ -1,17 +1,28 @@
-import React, { memo, useCallback } from 'react';
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+import React, { memo } from 'react';
 import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { Pressable, useTheme } from '@bma98/fractal-ui';
 import { useTabBarPosition } from '../../../TabBar/hooks/useTabBarPosition';
-export const SimpleTabBarItemContainer = memo(({ children, icon, onTabPress, tabIdentifier }) => {
+import { useTabPress } from '../../hooks/useTabPress';
+export const SimpleTabBarItemContainer = memo((_a) => {
+    var { children, icon } = _a, others = __rest(_a, ["children", "icon"]);
     const { tabBar, spacings } = useTheme();
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
     const flexDirection = tabBarPosition !== 'bottom' ? 'column' : getValueForLargeSizeType(widthSizeType, 'row', 'column');
     const flexGrow = tabBarPosition === 'bottom' ? 1 : undefined;
     const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : undefined;
-    const handlePress = useCallback(() => {
-        onTabPress === null || onTabPress === void 0 ? void 0 : onTabPress(tabIdentifier);
-    }, [onTabPress, tabIdentifier]);
+    const handlePress = useTabPress(others);
     return (React.createElement(Pressable, { flexGrow: flexGrow, flexDirection: flexDirection, marginBottom: marginBottom, justifyContent: 'center', alignItems: 'center', minHeight: tabBar.iOSVerticalHeight - 1, minWidth: tabBar.iOSHorizontalWidth - 1, cursor: 'pointer', onPress: handlePress },
         icon(24),
         children));

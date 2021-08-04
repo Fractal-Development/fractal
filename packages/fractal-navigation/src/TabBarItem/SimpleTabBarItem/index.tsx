@@ -3,17 +3,16 @@ import { useSimpleTabBarItemColor } from './hooks/useSimpleTabBarItemColor';
 import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContainer';
 import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
-import { Layer, Text, useTheme } from '@bma98/fractal-ui';
+import { Layer, spacings, Text, useTheme } from '@bma98/fractal-ui';
+import { SharedTabItemProps } from '../types/SharedTabItemProps';
 
 const tabBarItemCompactVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 0 };
 
 const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
-const tabBarItemLargeHorizontalSpacerSize = { width: 8, height: 1 };
+const tabBarItemLargeHorizontalSpacerSize = { width: 4, height: 1 };
 
-export interface SimpleTabBarItemProps {
-    tabIdentifier: string;
-    onTabPress?: (tabIdentifier: string) => void;
+export interface SimpleTabBarItemProps extends SharedTabItemProps {
     title?: string;
     children: (color: string, size: number) => JSX.Element;
     active?: boolean;
@@ -25,6 +24,11 @@ export const SimpleTabBarItem = memo(
         const [widthSizeType] = useWidthSizeGroup();
         const tabBarPosition = useTabBarPosition();
         const { tabBar } = useTheme();
+
+        const textWidth =
+            tabBarPosition === 'bottom'
+                ? getValueForLargeSizeType(widthSizeType, undefined, tabBar.iOSHorizontalWidth - spacings.m)
+                : undefined;
 
         const renderItem = useCallback(
             (size: number) => {
@@ -46,7 +50,7 @@ export const SimpleTabBarItem = memo(
                     {...tabBar.tabBarItemText}
                     numberOfLines={1}
                     overflow={'hidden'}
-                    width={tabBar.iOSHorizontalWidth - 1}
+                    width={textWidth}
                     display='block'
                     variant='label'
                     textOverflow='ellipsis'
