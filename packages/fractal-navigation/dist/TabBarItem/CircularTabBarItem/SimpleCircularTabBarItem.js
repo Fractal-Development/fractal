@@ -9,6 +9,7 @@ export function SimpleCircularTabBarItem(props) {
     const [widthSizeType] = useWidthSizeGroup();
     const size = getValueForCompactSize(widthSizeType, 56, 48);
     const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : getValueForCompactSize(widthSizeType, spacings.m, undefined);
-    return (React.createElement(CircularTabBarItem, Object.assign({ width: size, height: size, borderRadius: size / 2, marginBottom: marginBottom, alignSelf: 'center' }, props)));
+    const marginLeft = tabBarPosition !== 'bottom' ? getValueForCompactSize(widthSizeType, spacings.m, undefined) : undefined;
+    return (React.createElement(CircularTabBarItem, Object.assign({ width: size, height: size, borderRadius: size / 2, marginBottom: marginBottom, marginLeft: marginLeft, alignSelf: 'center' }, props)));
 }
 //# sourceMappingURL=SimpleCircularTabBarItem.js.map

@@ -13,8 +13,17 @@ export function SimpleCircularTabBarItem(props: CircularTabBarItemProps): ReactE
     const [widthSizeType] = useWidthSizeGroup();
     const size = getValueForCompactSize(widthSizeType, 56, 48);
     const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : getValueForCompactSize(widthSizeType, spacings.m, undefined);
+    const marginLeft = tabBarPosition !== 'bottom' ? getValueForCompactSize(widthSizeType, spacings.m, undefined) : undefined;
 
     return (
-        <CircularTabBarItem width={size} height={size} borderRadius={size / 2} marginBottom={marginBottom} alignSelf='center' {...props} />
+        <CircularTabBarItem
+            width={size}
+            height={size}
+            borderRadius={size / 2}
+            marginBottom={marginBottom}
+            marginLeft={marginLeft}
+            alignSelf='center'
+            {...props}
+        />
     );
 }
