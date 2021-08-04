@@ -17,7 +17,7 @@ export function QuadrantChartExample() {
         return React.createElement(DiscouragedFaceIcon, { fill: color, width: size, height: size });
     };
     return (React.createElement(Box, { marginBottom: spacings.m, maxWidth: 400 },
-        React.createElement(QuadrantChart, { data: [24, 1, 2, 3], positiveYAxisLabel: 'Sí acepto', negativeYAxisLabel: 'No acepto', positiveXAxisLabel: 'Sí puedo cambiar', negativeXAxisLabel: 'No puedo cambiar', firstQuadrantLabel: 'Tranquilidad/Paz', secondQuadrantLabel: 'Entusiasmo/Alegría', thirdQuadrantLabel: 'Frustración/Enojo', fourthQuadrantLabel: 'Desánimo/Apatía', renderQuadrantIcon: renderIcon, showIconInQuadrant: 'first', colors: {
+        React.createElement(QuadrantChart, { height: 300, data: [24, 1, 2, 3], positiveYAxisLabel: 'Sí acepto', negativeYAxisLabel: 'No acepto', positiveXAxisLabel: 'Sí puedo cambiar', negativeXAxisLabel: 'No puedo cambiar', firstQuadrantLabel: 'Tranquilidad/Paz', secondQuadrantLabel: 'Entusiasmo/Alegría', thirdQuadrantLabel: 'Frustración/Enojo', fourthQuadrantLabel: 'Desánimo/Apatía', renderQuadrantIcon: renderIcon, showIconInQuadrant: 'first', colors: {
                 firstQuadrant: '#fec201',
                 secondQuadrant: '#00a5b5',
                 thirdQuadrant: '#fd4e15',

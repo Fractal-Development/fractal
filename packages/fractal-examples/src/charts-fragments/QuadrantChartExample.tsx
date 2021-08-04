@@ -21,6 +21,7 @@ export function QuadrantChartExample(): JSX.Element {
     return (
         <Box marginBottom={spacings.m} maxWidth={400}>
             <QuadrantChart
+                height={300}
                 data={[24, 1, 2, 3]}
                 positiveYAxisLabel={'Sí acepto'}
                 negativeYAxisLabel={'No acepto'}
