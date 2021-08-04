@@ -5,9 +5,10 @@ import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, LayerProps, spacings, Text, useTheme } from '@bma98/fractal-ui';
 import { SharedTabItemProps } from '../types/SharedTabItemProps';
+import { justifyContent } from './util/justifyContent';
 
 const tabBarItemCompactVerticalSpacerSize = { width: 1, height: 4 };
-const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 0 };
+const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 2 };
 
 const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemLargeHorizontalSpacerSize = { width: 4, height: 1 };
@@ -55,6 +56,7 @@ export const SimpleTabBarItem = memo(
                     variant='label'
                     textOverflow='ellipsis'
                     textAlign='center'
+                    justifyContent={justifyContent}
                     color={color}
                 >
                     {title}

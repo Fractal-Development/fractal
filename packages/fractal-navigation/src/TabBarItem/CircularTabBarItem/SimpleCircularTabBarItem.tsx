@@ -4,12 +4,17 @@ import { ReactElement } from 'react';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { CircularTabBarItem } from './CircularTabBarItem';
 import { CircularTabBarItemProps } from './types/CircularTabBarItemProps';
+import { useWidthSizeGroup, getValueForCompactSize } from '@bma98/size-class';
 
 export function SimpleCircularTabBarItem(props: CircularTabBarItemProps): ReactElement {
     const tabBarPosition = useTabBarPosition();
     const { spacings } = useTheme();
 
-    const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : undefined;
+    const [widthSizeType] = useWidthSizeGroup();
+    const size = getValueForCompactSize(widthSizeType, 56, 48);
+    const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : getValueForCompactSize(widthSizeType, spacings.m, undefined);
 
-    return <CircularTabBarItem marginBottom={marginBottom} alignSelf='center' {...props} />;
+    return (
+        <CircularTabBarItem width={size} height={size} borderRadius={size / 2} marginBottom={marginBottom} alignSelf='center' {...props} />
+    );
 }

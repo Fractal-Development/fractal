@@ -15,8 +15,9 @@ import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContaine
 import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../TabBar/hooks/useTabBarPosition';
 import { Layer, spacings, Text, useTheme } from '@bma98/fractal-ui';
+import { justifyContent } from './util/justifyContent';
 const tabBarItemCompactVerticalSpacerSize = { width: 1, height: 4 };
-const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 0 };
+const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 2 };
 const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemLargeHorizontalSpacerSize = { width: 4, height: 1 };
 export const SimpleTabBarItem = memo((_a) => {
@@ -34,7 +35,7 @@ export const SimpleTabBarItem = memo((_a) => {
     const spacerSize = getValueForLargeSizeType(widthSizeType, tabBarPosition !== 'bottom' ? tabBarItemLargeVerticalSpacerSize : tabBarItemLargeHorizontalSpacerSize, tabBarPosition !== 'bottom' ? tabBarItemCompactVerticalSpacerSize : tabBarItemCompactHorizontalSpacerSize);
     return (React.createElement(SimpleTabBarItemContainer, Object.assign({ tabIdentifier: tabIdentifier, onTabPress: onTabPress, icon: renderItem }, others),
         React.createElement(Layer, Object.assign({}, spacerSize)),
-        React.createElement(Text, Object.assign({}, tabBar.tabBarItemText, { numberOfLines: 1, overflow: 'hidden', width: textWidth, display: 'block', variant: 'label', textOverflow: 'ellipsis', textAlign: 'center', color: color }), title)));
+        React.createElement(Text, Object.assign({}, tabBar.tabBarItemText, { numberOfLines: 1, overflow: 'hidden', width: textWidth, display: 'block', variant: 'label', textOverflow: 'ellipsis', textAlign: 'center', justifyContent: justifyContent, color: color }), title)));
 });
 SimpleTabBarItem.displayName = 'SimpleTabBarItem';
 //# sourceMappingURL=index.js.map
