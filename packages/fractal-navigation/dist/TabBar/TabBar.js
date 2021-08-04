@@ -13,13 +13,16 @@ import React, { useContext, useLayoutEffect } from 'react';
 import { useSetTabBarInsets } from './hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from './context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
+import { SafeAreaLayer } from '@bma98/fractal-ui';
 export function TabBar(_a) {
-    var { tabBarPosition } = _a, others = __rest(_a, ["tabBarPosition"]);
+    var { tabBarPosition, children } = _a, others = __rest(_a, ["tabBarPosition", "children"]);
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
     useLayoutEffect(() => {
         setTabBarPosition(tabBarPosition);
     }, [tabBarPosition, setTabBarPosition]);
     useSetTabBarInsets();
-    return React.createElement(TabBarBackground, Object.assign({ tabBarPosition: tabBarPosition }, others));
+    return (React.createElement(TabBarBackground, Object.assign({ tabBarPosition: tabBarPosition }, others),
+        React.createElement(SafeAreaLayer, null),
+        children));
 }
 //# sourceMappingURL=TabBar.js.map

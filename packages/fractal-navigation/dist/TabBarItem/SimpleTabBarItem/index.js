@@ -18,7 +18,7 @@ export const SimpleTabBarItem = memo(({ active = false, title, children, tabIden
     const spacerSize = getValueForLargeSizeType(widthSizeType, tabBarPosition !== 'bottom' ? tabBarItemLargeVerticalSpacerSize : tabBarItemLargeHorizontalSpacerSize, tabBarItemCompactSpacerSize);
     return (React.createElement(SimpleTabBarItemContainer, { tabIdentifier: tabIdentifier, onTabPress: onTabPress, icon: renderItem },
         React.createElement(Layer, Object.assign({}, spacerSize)),
-        React.createElement(Text, Object.assign({}, tabBar.tabBarItemText, { numberOfLines: 1, overflow: 'hidden', width: tabBar.iOSHorizontalWidth - 1, display: 'block', variant: 'label', textOverflow: 'ellipsis', color: color }), title)));
+        React.createElement(Text, Object.assign({}, tabBar.tabBarItemText, { numberOfLines: 1, overflow: 'hidden', width: tabBar.iOSHorizontalWidth - 1, display: 'block', variant: 'label', textOverflow: 'ellipsis', textAlign: 'center', color: color }), title)));
 });
 SimpleTabBarItem.displayName = 'SimpleTabBarItem';
 //# sourceMappingURL=index.js.map

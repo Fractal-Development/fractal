@@ -48,6 +48,7 @@ export const SimpleTabBarItem = memo(
                     display='block'
                     variant='label'
                     textOverflow='ellipsis'
+                    textAlign='center'
                     color={color}
                 >
                     {title}
