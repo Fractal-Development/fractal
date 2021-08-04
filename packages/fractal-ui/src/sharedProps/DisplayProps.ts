@@ -1,3 +1,5 @@
+import { getDisplayProperty } from './utils/getDisplayProperty';
+
 export interface DisplayProps {
     flex?: 'none' | 'auto' | number;
     display?: 'flow' | 'table' | 'flex' | 'grid' | 'ruby' | 'subgrid' | 'block' | 'inline' | 'none' | 'inline-block';
@@ -43,7 +45,7 @@ export function extractDisplayProps({
 }: DisplayProps): string {
     return `
         ${flex != null ? `flex: ${flex}` : ''};
-        display: ${display ?? 'flex'};
+        ${getDisplayProperty(display)};
         ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};
         ${justifyContent != null ? `justify-content: ${justifyContent}` : ''};
         ${alignItems != null ? `align-items: ${alignItems}` : ''};
