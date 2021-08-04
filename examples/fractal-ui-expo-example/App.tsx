@@ -8,9 +8,10 @@ import {
     TabBar,
     TabBarContextProvider,
     NavigationLayer,
-    SimpleTabBarItem
+    SimpleTabBarItem,
+    SimpleCircularTabBarItem
 } from '@bma98/fractal-navigation';
-import { Layer, BugIcon, AppleIcon } from '@bma98/fractal-ui';
+import { Layer, BugIcon, AppleIcon, SearchIcon, SafeAreaLayer } from '@bma98/fractal-ui';
 
 interface NavigationProps {
     children: ReactElement;
@@ -38,6 +39,11 @@ export function Navigation({ children }: NavigationProps) {
                             return <BugIcon fill={color} height={size} width={size} />;
                         }}
                     </SimpleTabBarItem>
+                    <SimpleCircularTabBarItem tabIdentifier='/search' onTabPress={setCurrentTab}>
+                        {(color, size) => {
+                            return <SearchIcon fill={color} height={size} width={size} />;
+                        }}
+                    </SimpleCircularTabBarItem>
                     <SimpleTabBarItem active={currentTab === '/apple'} title={'Apple'} tabIdentifier='/apple' onTabPress={setCurrentTab}>
                         {(color, size) => {
                             return <AppleIcon fill={color} height={size} width={size} />;
