@@ -1,12 +1,12 @@
 import React from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
 import { TabBarProps } from './types';
-import { useTabBarPositionValues, useTabBarSafeAreaPadding } from './hooks';
+import { useTabBarPositionLayoutProps, useTabBarSafeAreaPadding } from './hooks';
 import { tabBarCSSPosition } from './tabBarCSSPosition';
 
 export function TabBarBackground(props: TabBarProps): JSX.Element {
     const { tabBarPosition } = props;
-    const positionValues = useTabBarPositionValues(tabBarPosition);
+    const positionValues = useTabBarPositionLayoutProps(tabBarPosition);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
     const justifyContent = tabBarPosition === 'bottom' ? 'center' : 'flex-start';
     const { tabBar } = useTheme();

@@ -7,5 +7,5 @@ interface PositionValue {
     left?: number;
     right?: number;
 }
-export declare function useTabBarPositionValues(tabBarPosition: TabBarPosition): PositionValue;
+export declare function useTabBarPositionLayoutProps(tabBarPosition: TabBarPosition): PositionValue;
 export {};

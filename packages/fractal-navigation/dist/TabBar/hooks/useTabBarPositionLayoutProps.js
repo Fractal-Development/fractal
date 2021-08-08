@@ -4,7 +4,7 @@ import { useTabBarSafeAreaSizeForPosition } from './useTabBarSafeAreaSizeForPosi
 const bottomSide = { bottom: 0 };
 const leftSide = { left: 0 };
 const rightSide = { right: 0 };
-export function useTabBarPositionValues(tabBarPosition) {
+export function useTabBarPositionLayoutProps(tabBarPosition) {
     const safeAreaSize = useTabBarSafeAreaSizeForPosition(tabBarPosition);
     const width = getValueForTabBarPosition(tabBarPosition, '100%', safeAreaSize, safeAreaSize);
     const height = getValueForTabBarPosition(tabBarPosition, safeAreaSize, '100%', '100%');
@@ -14,4 +14,4 @@ export function useTabBarPositionValues(tabBarPosition) {
         return Object.assign({ width, height, flexDirection }, absolutePositionValue);
     }, [width, height, flexDirection, absolutePositionValue]);
 }
-//# sourceMappingURL=useTabBarPositionValues.js.map
+//# sourceMappingURL=useTabBarPositionLayoutProps.js.map
