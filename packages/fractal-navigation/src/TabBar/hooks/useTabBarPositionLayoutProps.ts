@@ -18,6 +18,7 @@ const rightSide = { right: 0 };
 
 export function useTabBarPositionLayoutProps(tabBarPosition: TabBarPosition): PositionValue {
     const safeAreaSize = useTabBarSafeAreaSizeForPosition(tabBarPosition);
+
     const width = getValueForTabBarPosition<string | number>(tabBarPosition, '100%', safeAreaSize, safeAreaSize);
     const height = getValueForTabBarPosition<string | number>(tabBarPosition, safeAreaSize, '100%', '100%');
     const flexDirection = getValueForTabBarPosition(tabBarPosition, 'row', 'column', 'column');

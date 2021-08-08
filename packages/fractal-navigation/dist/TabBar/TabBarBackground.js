@@ -14,7 +14,7 @@ export function TabBarBackground(props) {
             hidden: Object.assign(Object.assign({}, layoutProps), { opacity: 0 }),
             visible: Object.assign(Object.assign({}, layoutProps), { opacity: 1 })
         };
-    }, []);
-    return (React.createElement(Layer, Object.assign({ variants: variants, currentVariant: tabBarIsHidden ? 'hidden' : 'visible', backgroundColor: tabBar.backgroundColor, boxShadow: tabBar.shadow, justifyContent: justifyContent, position: tabBarCSSPosition, zIndex: 3000 }, layoutProps, tabBarSafeAreaPadding, props)));
+    }, [layoutProps]);
+    return (React.createElement(Layer, Object.assign({ variants: variants, currentVariant: tabBarIsHidden ? 'hidden' : 'visible', backgroundColor: tabBar.backgroundColor, boxShadow: tabBar.shadow, justifyContent: justifyContent, position: tabBarCSSPosition, zIndex: 3000 }, tabBarSafeAreaPadding, props)));
 }
 //# sourceMappingURL=TabBarBackground.js.map

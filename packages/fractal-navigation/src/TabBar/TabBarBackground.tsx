@@ -18,7 +18,7 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
             hidden: { ...layoutProps, opacity: 0 },
             visible: { ...layoutProps, opacity: 1 }
         };
-    }, []);
+    }, [layoutProps]);
 
     return (
         <Layer
@@ -29,7 +29,6 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
             justifyContent={justifyContent}
             position={tabBarCSSPosition}
             zIndex={3000}
-            {...layoutProps}
             {...tabBarSafeAreaPadding}
             {...props}
         />
