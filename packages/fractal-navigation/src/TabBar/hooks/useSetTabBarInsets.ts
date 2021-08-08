@@ -1,6 +1,6 @@
 import { useContext, useLayoutEffect } from 'react';
 import { useTabBarIsHidden } from './useTabBarIsHidden';
-import { TabBarInsetsContext } from '../context/TabBarInsetsProvider';
+import { TabBarInsetsContext } from '../context';
 import { useTabBarPosition } from './useTabBarPosition';
 import { useTabBarSizeForPosition } from './useTabBarSizeForPosition';
 import { useSafeAreaInsets } from './useSafeAreaInsets';
