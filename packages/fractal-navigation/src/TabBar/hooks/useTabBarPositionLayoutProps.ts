@@ -2,6 +2,7 @@ import { getValueForTabBarPosition } from '../util';
 import { useMemo } from 'react';
 import { useTabBarSafeAreaSizeForPosition } from './useTabBarSafeAreaSizeForPosition';
 import { TabBarPosition } from '../types';
+import { useTabBarIsHidden } from './useTabBarIsHidden';
 
 interface PositionValue {
     width: string | number;
@@ -20,6 +21,7 @@ const rightSide = { right: 0 };
 
 export function useTabBarPositionLayoutProps(tabBarPosition: TabBarPosition): PositionValue {
     const safeAreaSize = useTabBarSafeAreaSizeForPosition(tabBarPosition);
+    const tabBarIsHidden = useTabBarIsHidden();
 
     const width = getValueForTabBarPosition<string | number>(tabBarPosition, '100%', safeAreaSize, safeAreaSize);
     const height = getValueForTabBarPosition<string | number>(tabBarPosition, safeAreaSize, '100%', '100%');
@@ -27,8 +29,8 @@ export function useTabBarPositionLayoutProps(tabBarPosition: TabBarPosition): Po
     const absolutePositionValue = getValueForTabBarPosition<any>(tabBarPosition, bottomSide, leftSide, rightSide);
 
     const translateSize = safeAreaSize + 20;
-    const translateY = getValueForTabBarPosition(tabBarPosition, translateSize, 0, 0);
-    const translateX = getValueForTabBarPosition(tabBarPosition, 0, -1 * translateSize, translateSize);
+    const translateY = tabBarIsHidden ? getValueForTabBarPosition(tabBarPosition, translateSize, 0, 0) : 0;
+    const translateX = tabBarIsHidden ? getValueForTabBarPosition(tabBarPosition, 0, -1 * translateSize, translateSize) : 0;
 
     return useMemo(() => {
         return { width, height, flexDirection, translateY, translateX, ...absolutePositionValue };
