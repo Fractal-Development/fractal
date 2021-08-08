@@ -15,6 +15,7 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
     return (
         <Layer
             animate={{ translateY, translateX }}
+            transition={{ type: 'timing' }}
             backgroundColor={tabBar.backgroundColor}
             boxShadow={tabBar.shadow}
             justifyContent={justifyContent}

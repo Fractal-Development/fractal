@@ -9,6 +9,10 @@ export function NavigationLayer(props: LayerProps): ReactElement {
 
     return (
         <SafeAreaLayer
+            marginTop={0}
+            marginRight={0}
+            marginLeft={0}
+            marginBottom={0}
             from={false}
             animate={{
                 marginTop: navigationBarInsets.top,
@@ -16,6 +20,7 @@ export function NavigationLayer(props: LayerProps): ReactElement {
                 marginLeft: tabBarInsets.left,
                 marginBottom: tabBarInsets.bottom
             }}
+            transition={{ type: 'timing' }}
             flex={1}
             {...props}
         />
