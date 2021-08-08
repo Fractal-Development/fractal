@@ -11,18 +11,14 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
-import { useTabBarIsHidden, useTabBarPositionLayoutProps, useTabBarSafeAreaPadding } from './hooks';
+import { useTabBarPositionLayoutProps, useTabBarSafeAreaPadding } from './hooks';
 import { tabBarCSSPosition } from './tabBarCSSPosition';
 export function TabBarBackground(props) {
     const { tabBarPosition } = props;
     const { tabBar } = useTheme();
     const _a = useTabBarPositionLayoutProps(tabBarPosition), { translateY, translateX } = _a, layoutProps = __rest(_a, ["translateY", "translateX"]);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
-    const tabBarIsHidden = useTabBarIsHidden();
     const justifyContent = tabBarPosition === 'bottom' ? 'center' : 'flex-start';
-    return (React.createElement(Layer, Object.assign({ variants: {
-            hidden: { translateY, translateX },
-            visible: { translateY, translateX }
-        }, currentVariant: tabBarIsHidden ? 'hidden' : 'visible', backgroundColor: tabBar.backgroundColor, boxShadow: tabBar.shadow, justifyContent: justifyContent, position: tabBarCSSPosition, zIndex: 3000 }, layoutProps, tabBarSafeAreaPadding, props)));
+    return (React.createElement(Layer, Object.assign({ animate: { translateY, translateX }, backgroundColor: tabBar.backgroundColor, boxShadow: tabBar.shadow, justifyContent: justifyContent, position: tabBarCSSPosition, zIndex: 3000 }, layoutProps, tabBarSafeAreaPadding, props)));
 }
 //# sourceMappingURL=TabBarBackground.js.map

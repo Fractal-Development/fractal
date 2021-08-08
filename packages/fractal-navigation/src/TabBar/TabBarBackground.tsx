@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
 import { TabBarProps } from './types';
-import { useTabBarIsHidden, useTabBarPositionLayoutProps, useTabBarSafeAreaPadding } from './hooks';
+import { useTabBarPositionLayoutProps, useTabBarSafeAreaPadding } from './hooks';
 import { tabBarCSSPosition } from './tabBarCSSPosition';
 
 export function TabBarBackground(props: TabBarProps): JSX.Element {
@@ -9,17 +9,12 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
     const { tabBar } = useTheme();
     const { translateY, translateX, ...layoutProps } = useTabBarPositionLayoutProps(tabBarPosition);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
-    const tabBarIsHidden = useTabBarIsHidden();
 
     const justifyContent = tabBarPosition === 'bottom' ? 'center' : 'flex-start';
 
     return (
         <Layer
-            variants={{
-                hidden: { translateY, translateX },
-                visible: { translateY, translateX }
-            }}
-            currentVariant={tabBarIsHidden ? 'hidden' : 'visible'}
+            animate={{ translateY, translateX }}
             backgroundColor={tabBar.backgroundColor}
             boxShadow={tabBar.shadow}
             justifyContent={justifyContent}
