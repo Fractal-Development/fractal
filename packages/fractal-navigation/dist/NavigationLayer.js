@@ -3,7 +3,10 @@ import { useNavigationBarInsets } from './NavigationBar/hooks/useNavigationBarIn
 import { useTabBarInsets } from './TabBar';
 import { SafeAreaLayer } from '@bma98/fractal-ui';
 const initialMargins = {
-    margin: 0
+    marginTop: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    marginBottom: 0
 };
 export function NavigationLayer(props) {
     const navigationBarInsets = useNavigationBarInsets();
