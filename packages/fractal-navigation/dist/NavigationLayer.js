@@ -5,7 +5,12 @@ import { SafeAreaLayer } from '@bma98/fractal-ui';
 export function NavigationLayer(props) {
     const navigationBarInsets = useNavigationBarInsets();
     const tabBarInsets = useTabBarInsets();
-    return (React.createElement(SafeAreaLayer, Object.assign({ animate: {
+    return (React.createElement(SafeAreaLayer, Object.assign({ from: {
+            marginTop: navigationBarInsets.top,
+            marginRight: tabBarInsets.right,
+            marginLeft: tabBarInsets.left,
+            marginBottom: tabBarInsets.bottom
+        }, animate: {
             marginTop: navigationBarInsets.top,
             marginRight: tabBarInsets.right,
             marginLeft: tabBarInsets.left,

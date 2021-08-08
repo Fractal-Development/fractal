@@ -9,6 +9,12 @@ export function NavigationLayer(props: LayerProps): ReactElement {
 
     return (
         <SafeAreaLayer
+            from={{
+                marginTop: navigationBarInsets.top,
+                marginRight: tabBarInsets.right,
+                marginLeft: tabBarInsets.left,
+                marginBottom: tabBarInsets.bottom
+            }}
             animate={{
                 marginTop: navigationBarInsets.top,
                 marginRight: tabBarInsets.right,
