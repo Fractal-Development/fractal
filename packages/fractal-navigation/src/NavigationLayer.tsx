@@ -3,20 +3,13 @@ import { useNavigationBarInsets } from './NavigationBar/hooks/useNavigationBarIn
 import { useTabBarInsets } from './TabBar';
 import { LayerProps, SafeAreaLayer } from '@bma98/fractal-ui';
 
-const initialMargins = {
-    marginTop: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    marginBottom: 0
-};
-
 export function NavigationLayer(props: LayerProps): ReactElement {
     const navigationBarInsets = useNavigationBarInsets();
     const tabBarInsets = useTabBarInsets();
 
     return (
         <SafeAreaLayer
-            from={initialMargins}
+            from={false}
             animate={{
                 marginTop: navigationBarInsets.top,
                 marginRight: tabBarInsets.right,
