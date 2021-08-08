@@ -10,8 +10,11 @@ export function useTabBarPositionLayoutProps(tabBarPosition) {
     const height = getValueForTabBarPosition(tabBarPosition, safeAreaSize, '100%', '100%');
     const flexDirection = getValueForTabBarPosition(tabBarPosition, 'row', 'column', 'column');
     const absolutePositionValue = getValueForTabBarPosition(tabBarPosition, bottomSide, leftSide, rightSide);
+    const translateSize = safeAreaSize + 20;
+    const translateY = getValueForTabBarPosition(tabBarPosition, translateSize, 0, 0);
+    const translateX = getValueForTabBarPosition(tabBarPosition, 0, -1 * translateSize, translateSize);
     return useMemo(() => {
-        return Object.assign({ width, height, flexDirection }, absolutePositionValue);
-    }, [width, height, flexDirection, absolutePositionValue]);
+        return Object.assign({ width, height, flexDirection, translateY, translateX }, absolutePositionValue);
+    }, [width, height, flexDirection, absolutePositionValue, translateY, translateX]);
 }
 //# sourceMappingURL=useTabBarPositionLayoutProps.js.map

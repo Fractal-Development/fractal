@@ -6,6 +6,8 @@ interface PositionValue {
     bottom?: number;
     left?: number;
     right?: number;
+    translateY: number;
+    translateX: number;
 }
 export declare function useTabBarPositionLayoutProps(tabBarPosition: TabBarPosition): PositionValue;
 export {};

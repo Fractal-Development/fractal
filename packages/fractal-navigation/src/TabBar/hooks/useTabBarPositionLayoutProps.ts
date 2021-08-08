@@ -10,6 +10,8 @@ interface PositionValue {
     bottom?: number;
     left?: number;
     right?: number;
+    translateY: number;
+    translateX: number;
 }
 
 const bottomSide = { bottom: 0 };
@@ -24,7 +26,11 @@ export function useTabBarPositionLayoutProps(tabBarPosition: TabBarPosition): Po
     const flexDirection = getValueForTabBarPosition(tabBarPosition, 'row', 'column', 'column');
     const absolutePositionValue = getValueForTabBarPosition<any>(tabBarPosition, bottomSide, leftSide, rightSide);
 
+    const translateSize = safeAreaSize + 20;
+    const translateY = getValueForTabBarPosition(tabBarPosition, translateSize, 0, 0);
+    const translateX = getValueForTabBarPosition(tabBarPosition, 0, -1 * translateSize, translateSize);
+
     return useMemo(() => {
-        return { width, height, flexDirection, ...absolutePositionValue };
-    }, [width, height, flexDirection, absolutePositionValue]);
+        return { width, height, flexDirection, translateY, translateX, ...absolutePositionValue };
+    }, [width, height, flexDirection, absolutePositionValue, translateY, translateX]);
 }
