@@ -10,6 +10,6 @@ export function NavigationLayer(props) {
             marginRight: tabBarInsets.right,
             marginLeft: tabBarInsets.left,
             marginBottom: tabBarInsets.bottom
-        }, transition: { type: 'timing' }, flex: 1 }, props)));
+        }, transition: { type: 'timing' }, flex: 1, overflow: 'hidden' }, props)));
 }
 //# sourceMappingURL=NavigationLayer.js.map

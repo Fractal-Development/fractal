@@ -22,6 +22,7 @@ export function NavigationLayer(props: LayerProps): ReactElement {
             }}
             transition={{ type: 'timing' }}
             flex={1}
+            overflow={'hidden'}
             {...props}
         />
     );
