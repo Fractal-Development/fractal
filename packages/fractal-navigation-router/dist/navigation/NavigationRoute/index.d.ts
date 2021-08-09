@@ -1,2 +1,2 @@
 import { NavigationRouteProps } from './types/NavigationRouteProps';
-export declare function NavigationRoute(props: NavigationRouteProps): JSX.Element | null;
+export declare function NavigationRoute({ onDismissed, ...others }: NavigationRouteProps): JSX.Element | null;

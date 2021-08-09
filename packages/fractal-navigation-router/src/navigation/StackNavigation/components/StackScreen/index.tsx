@@ -14,7 +14,17 @@ export function StackScreen({ navBarConfig, children, path, ...others }: StackSc
     const isRootNavigationBar = useIsRootNavigationBar(path);
 
     return (
-        <NavigationRoute {...others} path={path} onDismissed={goBack}>
+        <NavigationRoute
+            top={0}
+            left={0}
+            right={0}
+            bottom={0}
+            position={'absolute'}
+            overflow={'hidden'}
+            {...others}
+            path={path}
+            onDismissed={goBack}
+        >
             <NavigationBar showBackButton={!isRootNavigationBar} {...navBarConfig?.props} goBack={goBack} />
             {children}
         </NavigationRoute>

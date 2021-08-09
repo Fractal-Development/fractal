@@ -17,7 +17,18 @@ export function StackScreen({ children, navBarConfig, stackPresentation = 'push'
         stackPresentation === 'modal' && navBarConfig != null && (Platform.OS === 'ios' || Platform.OS === 'android');
 
     return (
-        <NavigationRoute {...others} onDismissed={goBack} stackPresentation={stackPresentation} path={path}>
+        <NavigationRoute
+            top={0}
+            left={0}
+            right={0}
+            bottom={0}
+            position={'absolute'}
+            overflow={'hidden'}
+            {...others}
+            onDismissed={goBack}
+            stackPresentation={stackPresentation}
+            path={path}
+        >
             {stackPresentation === 'modal' ? <StatusBar barStyle='light-content' /> : null}
             {isNavigationBarForModal ? (
                 <NavigationBar showBackButton={showNavigationBarButton} {...navBarConfig?.props} goBack={goBack} />

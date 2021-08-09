@@ -20,7 +20,7 @@ export function StackScreen(_a) {
     const { goBack } = useHistory();
     const showNavigationBarButton = useIsRootNavigationBar(path);
     const isNavigationBarForModal = stackPresentation === 'modal' && navBarConfig != null && (Platform.OS === 'ios' || Platform.OS === 'android');
-    return (React.createElement(NavigationRoute, Object.assign({}, others, { onDismissed: goBack, stackPresentation: stackPresentation, path: path }),
+    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute', overflow: 'hidden' }, others, { onDismissed: goBack, stackPresentation: stackPresentation, path: path }),
         stackPresentation === 'modal' ? React.createElement(StatusBar, { barStyle: 'light-content' }) : null,
         isNavigationBarForModal ? (React.createElement(NavigationBar, Object.assign({ showBackButton: showNavigationBarButton }, navBarConfig === null || navBarConfig === void 0 ? void 0 : navBarConfig.props, { goBack: goBack }))) : navBarConfig != null ? (React.createElement(NativeNavigationBar, Object.assign({ showBackButton: showNavigationBarButton }, navBarConfig.props, { goBack: goBack }))) : null,
         children));
