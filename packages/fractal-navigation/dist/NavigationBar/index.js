@@ -2,7 +2,6 @@ export * from './assets';
 export * from './buttons';
 export * from './hooks';
 export * from './navigationBarViews';
-export * from './navigationBarSections';
 export * from './types';
 export * from './nativeNavigationBarViews';
 export * from './NavigationBar';

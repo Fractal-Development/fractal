@@ -1,3 +1,3 @@
-import { Layer } from '@bma98/fractal-ui';
+import { Fragment } from 'react';
 
-export const SafeAreaProvider = Layer;
+export const SafeAreaProvider = Fragment;

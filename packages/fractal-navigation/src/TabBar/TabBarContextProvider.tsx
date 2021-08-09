@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import { TabBarInsetsProvider, SafeAreaProvider, TabBarIsHiddenProvider, TabBarPositionProvider } from './context';
 
 export interface TabBarContextProviderProps {
-    children: ReactElement | Array<ReactElement>;
+    children: ReactNode;
 }
 
 export function TabBarContextProvider({ children }: TabBarContextProviderProps): ReactElement {

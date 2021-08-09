@@ -1,5 +1,5 @@
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 export interface TabBarContextProviderProps {
-    children: ReactElement | Array<ReactElement>;
+    children: ReactNode;
 }
 export declare function TabBarContextProvider({ children }: TabBarContextProviderProps): ReactElement;
