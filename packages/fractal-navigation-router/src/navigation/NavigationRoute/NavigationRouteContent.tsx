@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { Route } from '../../router';
 import { useScreenActivityState } from './hooks/useScreenActivityState';
-import { useIsInitialRenderDone } from '../../hooks/useIsInitialRenderDone';
+import { useIsInitialRenderDone } from '../../hooks';
 import { useNavigationRouteStyles } from './hooks/useNavigationRouteStyles';
 import { StackPresentationTypeProvider } from '../StackNavigation/context/StackPresentationTypeProvider';
 import { Screen } from '../../components/Screen';
