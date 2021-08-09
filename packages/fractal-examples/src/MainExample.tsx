@@ -132,11 +132,10 @@ export function MainExample(): JSX.Element {
     return (
         <FractalAppRoot handleThemeManually>
             <Background>
-                <SafeAreaLayer>
-                    <ScrollView>
-                        <Content />
-                    </ScrollView>
-                </SafeAreaLayer>
+                <ScrollView>
+                    <Content />
+                    <SafeAreaLayer />
+                </ScrollView>
             </Background>
         </FractalAppRoot>
     );

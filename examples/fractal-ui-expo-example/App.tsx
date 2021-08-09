@@ -103,7 +103,7 @@ export function Navigation() {
 
 export default function App() {
     return (
-        <NavigationRouter style={{ flex: 1, backgroundColor: 'red' }}>
+        <NavigationRouter>
             <Navigation />
         </NavigationRouter>
     );
