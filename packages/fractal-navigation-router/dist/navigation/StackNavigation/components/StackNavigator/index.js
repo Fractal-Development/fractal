@@ -9,29 +9,21 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { Children, useEffect, useMemo, useRef } from 'react';
+import React, { Children, useEffect, useRef } from 'react';
 import { useLocation } from '../../../../router';
 import { ScreenStack } from '../ScreenStack';
 import { filterMatchingChildren } from './util/filterMatchingChildren';
 import { useIsRouteActive } from '../../../../hooks/useIsRouteActive';
-import { useTabBarInsets } from '@bma98/fractal-navigation';
-import { getMarginInsets } from './util/getMarginInsets';
 import { StackNavigatorRootPathProvider } from '../../context/StackNavigatorRootPathProvider';
+import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
 export function StackNavigator(_a) {
     var { path = '', children, style } = _a, others = __rest(_a, ["path", "children", "style"]);
     const { pathname } = useLocation();
     const isRouteActive = useIsRouteActive(path, false);
     const prevChildrenRef = useRef([]);
-    const tabBarInsets = useTabBarInsets();
-    const marginInsets = getMarginInsets(tabBarInsets, false, true);
     let childrenToRender = Children.toArray(children);
     childrenToRender = filterMatchingChildren(childrenToRender, pathname);
-    const finalStyle = useMemo(() => {
-        return [
-            style,
-            Object.assign({ flex: 1 }, marginInsets)
-        ];
-    }, [style, marginInsets]);
+    const finalStyle = useStackNavigatorStyles(style);
     useEffect(() => {
         if (isRouteActive) {
             prevChildrenRef.current = childrenToRender;

@@ -4,7 +4,7 @@ import { useHistory } from '../../../../router';
 import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationRouteProps';
 import { NavigationRoute } from '../../../NavigationRoute';
 import { NativeNavigationBar, NavigationBar } from '@bma98/fractal-navigation';
-import { useShowNavigationBarBackButton } from './hooks/useShowNavigationBarBackButton';
+import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 
 interface StackScreenProps extends NavigationRouteProps {
     navBarConfig?: ReactElement;
@@ -12,7 +12,7 @@ interface StackScreenProps extends NavigationRouteProps {
 
 export function StackScreen({ children, navBarConfig, stackPresentation = 'push', path, ...others }: StackScreenProps): JSX.Element {
     const { goBack } = useHistory();
-    const showNavigationBarButton = useShowNavigationBarBackButton(path);
+    const showNavigationBarButton = useIsRootNavigationBar(path);
     const isNavigationBarForModal =
         stackPresentation === 'modal' && navBarConfig != null && (Platform.OS === 'ios' || Platform.OS === 'android');
 

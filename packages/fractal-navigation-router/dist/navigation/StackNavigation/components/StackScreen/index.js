@@ -13,13 +13,13 @@ import React from 'react';
 import { useHistory } from '../../../../router';
 import { NavigationRoute } from '../../../NavigationRoute';
 import { NavigationBar } from '@bma98/fractal-navigation';
-import { useShowNavigationBarBackButton } from './hooks/useShowNavigationBarBackButton';
+import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 export function StackScreen(_a) {
     var { navBarConfig, children, path } = _a, others = __rest(_a, ["navBarConfig", "children", "path"]);
     const { goBack } = useHistory();
-    const showNavigationBarButton = useShowNavigationBarBackButton(path);
+    const isRootNavigationBar = useIsRootNavigationBar(path);
     return (React.createElement(NavigationRoute, Object.assign({}, others, { path: path, onDismissed: goBack }),
-        React.createElement(NavigationBar, Object.assign({ showBackButton: showNavigationBarButton }, navBarConfig, { goBack: goBack })),
+        React.createElement(NavigationBar, Object.assign({ showBackButton: !isRootNavigationBar }, navBarConfig === null || navBarConfig === void 0 ? void 0 : navBarConfig.props, { goBack: goBack })),
         children));
 }
 //# sourceMappingURL=index.js.map

@@ -14,11 +14,11 @@ import { Platform, StatusBar } from 'react-native';
 import { useHistory } from '../../../../router';
 import { NavigationRoute } from '../../../NavigationRoute';
 import { NativeNavigationBar, NavigationBar } from '@bma98/fractal-navigation';
-import { useShowNavigationBarBackButton } from './hooks/useShowNavigationBarBackButton';
+import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 export function StackScreen(_a) {
     var { children, navBarConfig, stackPresentation = 'push', path } = _a, others = __rest(_a, ["children", "navBarConfig", "stackPresentation", "path"]);
     const { goBack } = useHistory();
-    const showNavigationBarButton = useShowNavigationBarBackButton(path);
+    const showNavigationBarButton = useIsRootNavigationBar(path);
     const isNavigationBarForModal = stackPresentation === 'modal' && navBarConfig != null && (Platform.OS === 'ios' || Platform.OS === 'android');
     return (React.createElement(NavigationRoute, Object.assign({}, others, { onDismissed: goBack, stackPresentation: stackPresentation, path: path }),
         stackPresentation === 'modal' ? React.createElement(StatusBar, { barStyle: 'light-content' }) : null,
