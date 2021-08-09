@@ -29,7 +29,7 @@ export function StackNavigator({ path = '', children, style, ...others }: StackN
 
     return (
         <StackNavigatorRootPathProvider initialValue={path}>
-            <ScreenStack flex={1} top={0} right={0} left={0} bottom={0} position={'absolute'} style={finalStyle} {...others}>
+            <ScreenStack style={finalStyle} {...others}>
                 {isRouteActive ? childrenToRender : prevChildrenRef.current}
             </ScreenStack>
         </StackNavigatorRootPathProvider>

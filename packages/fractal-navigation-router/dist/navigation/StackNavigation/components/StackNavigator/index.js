@@ -30,6 +30,6 @@ export function StackNavigator(_a) {
         }
     }, [childrenToRender, isRouteActive]);
     return (React.createElement(StackNavigatorRootPathProvider, { initialValue: path },
-        React.createElement(ScreenStack, Object.assign({ flex: 1, top: 0, right: 0, left: 0, bottom: 0, position: 'absolute', style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current)));
+        React.createElement(ScreenStack, Object.assign({ style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current)));
 }
 //# sourceMappingURL=index.js.map
