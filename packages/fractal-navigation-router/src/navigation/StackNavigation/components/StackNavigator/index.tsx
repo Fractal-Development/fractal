@@ -2,8 +2,8 @@ import React, { Children, useEffect, useRef } from 'react';
 import { useLocation } from '../../../../router';
 import { ScreenStack, ScreenStackProps } from '../ScreenStack';
 import { filterMatchingChildren } from './util/filterMatchingChildren';
-import { useIsRouteActive } from '../../../../hooks/useIsRouteActive';
-import { StackNavigatorRootPathProvider } from '../../context/StackNavigatorRootPathProvider';
+import { useIsRouteActive } from '../../../../hooks';
+import { StackNavigatorRootPathProvider } from '../../context';
 import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
 
 export interface StackNavigatorProps extends Omit<ScreenStackProps, 'children'> {
@@ -29,7 +29,7 @@ export function StackNavigator({ path = '', children, style, ...others }: StackN
 
     return (
         <StackNavigatorRootPathProvider initialValue={path}>
-            <ScreenStack style={finalStyle} {...others}>
+            <ScreenStack flex={1} top={0} right={0} left={0} bottom={0} position={'absolute'} style={finalStyle} {...others}>
                 {isRouteActive ? childrenToRender : prevChildrenRef.current}
             </ScreenStack>
         </StackNavigatorRootPathProvider>

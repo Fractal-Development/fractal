@@ -4,13 +4,11 @@ import { getMarginInsets } from '../../util/getMarginInsets';
 
 export function useStackNavigatorStyles(style: any) {
     const tabBarInsets = useTabBarInsets();
-    const marginInsets = getMarginInsets(tabBarInsets, false, true);
 
     return useMemo(() => {
         return {
-            flex: 1,
-            ...marginInsets,
+            ...getMarginInsets(tabBarInsets, false, true),
             ...style
         };
-    }, [style, marginInsets]);
+    }, [style, tabBarInsets]);
 }

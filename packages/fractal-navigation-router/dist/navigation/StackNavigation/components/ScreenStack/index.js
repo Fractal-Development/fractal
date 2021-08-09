@@ -1,6 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Layer } from '@bma98/fractal-ui';
 export function ScreenStack(props) {
-    return React.createElement(View, Object.assign({}, props));
+    return React.createElement(Layer, Object.assign({}, props));
 }
 //# sourceMappingURL=index.js.map

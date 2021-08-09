@@ -6,6 +6,7 @@ import { useScreenActivityState } from './hooks/useScreenActivityState';
 import { NavigationRouteProps } from './types/NavigationRouteProps';
 
 export function NavigationRoute(props: NavigationRouteProps): JSX.Element | null {
+    delete props.onDismissed;
     const { isTabScreen, path = '/', stackPresentation = 'push', isRootRoute = false } = props;
     const activityState = useScreenActivityState(path, isTabScreen ?? false);
 

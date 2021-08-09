@@ -1,11 +1,10 @@
 import React, { ReactNode } from 'react';
-import { View } from 'react-native';
-import { ScreenStackProps as Props } from 'react-native-screens';
+import { Layer, LayerProps } from '@bma98/fractal-ui';
 
-export interface ScreenStackProps extends Props {
+export interface ScreenStackProps extends LayerProps {
     children?: ReactNode;
 }
 
 export function ScreenStack(props: ScreenStackProps): JSX.Element {
-    return <View {...props} />;
+    return <Layer {...props} />;
 }

@@ -13,8 +13,8 @@ import React, { Children, useEffect, useRef } from 'react';
 import { useLocation } from '../../../../router';
 import { ScreenStack } from '../ScreenStack';
 import { filterMatchingChildren } from './util/filterMatchingChildren';
-import { useIsRouteActive } from '../../../../hooks/useIsRouteActive';
-import { StackNavigatorRootPathProvider } from '../../context/StackNavigatorRootPathProvider';
+import { useIsRouteActive } from '../../../../hooks';
+import { StackNavigatorRootPathProvider } from '../../context';
 import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
 export function StackNavigator(_a) {
     var { path = '', children, style } = _a, others = __rest(_a, ["path", "children", "style"]);
@@ -30,6 +30,6 @@ export function StackNavigator(_a) {
         }
     }, [childrenToRender, isRouteActive]);
     return (React.createElement(StackNavigatorRootPathProvider, { initialValue: path },
-        React.createElement(ScreenStack, Object.assign({ style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current)));
+        React.createElement(ScreenStack, Object.assign({ flex: 1, top: 0, right: 0, left: 0, bottom: 0, position: 'absolute', style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current)));
 }
 //# sourceMappingURL=index.js.map

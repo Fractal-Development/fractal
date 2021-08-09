@@ -3,12 +3,8 @@ import { useTabBarInsets } from '@bma98/fractal-navigation';
 import { getMarginInsets } from '../../util/getMarginInsets';
 export function useStackNavigatorStyles(style) {
     const tabBarInsets = useTabBarInsets();
-    const marginInsets = getMarginInsets(tabBarInsets, false, true);
     return useMemo(() => {
-        return [
-            style,
-            Object.assign({ flex: 1 }, marginInsets)
-        ];
-    }, [style, marginInsets]);
+        return [style, getMarginInsets(tabBarInsets, false, true)];
+    }, [style, tabBarInsets]);
 }
 //# sourceMappingURL=index.native.js.map

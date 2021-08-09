@@ -4,6 +4,7 @@ import { StackScreenWebContainer } from '../StackNavigation/components/StackScre
 import { NavigationRouteContent } from './NavigationRouteContent';
 import { useScreenActivityState } from './hooks/useScreenActivityState';
 export function NavigationRoute(props) {
+    delete props.onDismissed;
     const { isTabScreen, path = '/', stackPresentation = 'push', isRootRoute = false } = props;
     const activityState = useScreenActivityState(path, isTabScreen !== null && isTabScreen !== void 0 ? isTabScreen : false);
     if (stackPresentation === 'push' && !isTabScreen && !isRootRoute) {
