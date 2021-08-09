@@ -5,5 +5,5 @@ export interface ScreenProps extends LayerProps {
     activityState: ScreenActivityState;
     active: ScreenActivityState;
     stackPresentation?: StackPresentationType;
-    style: any;
+    style?: any;
 }

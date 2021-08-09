@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { useHistory } from '../../../../router';
 import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationRouteProps';
 import { NavigationRoute } from '../../../NavigationRoute';
-import { NavigationBar, NavigationBarProps } from '@bma98/fractal-navigation';
+import { NavigationBar } from '@bma98/fractal-navigation';
 import { useShowNavigationBarBackButton } from './hooks/useShowNavigationBarBackButton';
 
 interface StackScreenProps extends NavigationRouteProps {
-    navBarConfig?: NavigationBarProps;
+    navBarConfig?: ReactElement;
 }
 
 export function StackScreen({ navBarConfig, children, path, ...others }: StackScreenProps): JSX.Element {
