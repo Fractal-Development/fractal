@@ -1,6 +1,6 @@
 import React from 'react';
-import { Layer } from '@bma98/fractal-ui';
+import { Background } from '@bma98/fractal-ui';
 export function StackScreenWebContainer({ children }) {
-    return React.createElement(Layer, null, children);
+    return React.createElement(Background, null, children);
 }
 //# sourceMappingURL=StackScreenWebContainer.js.map

@@ -14,15 +14,17 @@ import { Route } from '../../router';
 import { useScreenActivityState } from './hooks/useScreenActivityState';
 import { useIsInitialRenderDone } from '../../hooks';
 import { useNavigationRouteStyles } from './hooks/useNavigationRouteStyles';
-import { StackPresentationTypeProvider } from '../StackNavigation/context/StackPresentationTypeProvider';
+import { StackPresentationTypeProvider } from '../StackNavigation';
 import { Screen } from '../../components/Screen';
+import { useTheme } from '@bma98/fractal-ui';
 export function NavigationRouteContent(_a) {
     var { path = '/', style, children, isTabScreen, stackPresentation = 'push', isRootRoute = false } = _a, others = __rest(_a, ["path", "style", "children", "isTabScreen", "stackPresentation", "isRootRoute"]);
     const renderChildren = useCallback(() => children, [children]);
     const activityState = useScreenActivityState(path, isTabScreen !== null && isTabScreen !== void 0 ? isTabScreen : false);
     const [initialRenderDone] = useIsInitialRenderDone(activityState);
     const contentStyle = useNavigationRouteStyles(style);
-    return (React.createElement(Screen, Object.assign({}, others, { activityState: activityState, active: activityState, stackPresentation: stackPresentation, style: contentStyle }),
+    const theme = useTheme();
+    return (React.createElement(Screen, Object.assign({}, others, { width: '100%', flex: 1, backgroundColor: theme.colors.background, activityState: activityState, active: activityState, stackPresentation: stackPresentation, style: contentStyle }),
         React.createElement(StackPresentationTypeProvider, { stackPresentation: stackPresentation },
             React.createElement(Route, { path: path }, initialRenderDone ? renderChildren : null))));
 }
