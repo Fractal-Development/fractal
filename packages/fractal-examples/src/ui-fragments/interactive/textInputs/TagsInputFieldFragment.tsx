@@ -53,8 +53,9 @@ export function TagsInputFieldFragment(): JSX.Element {
             <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 Multi Select Input Fragment
             </Text>
-            <Box marginTop={spacings.s} marginBottom={spacings.xl} maxHeight={320} {...getMultiSelectInputAccessibilityProps()}>
+            <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getMultiSelectInputAccessibilityProps()}>
                 <MultiSelectInput
+                    height={240}
                     enableClearButton
                     placeholder={'Escribe y da enter'}
                     clearButtonText={'Limpiar'}
