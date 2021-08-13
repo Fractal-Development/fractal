@@ -25,7 +25,7 @@ export function StackScreen({ children, navBarConfig, stackPresentation = 'push'
             position={'absolute'}
             overflow={'hidden'}
             {...others}
-            onDismissed={goBack}
+            onDismissed={stackPresentation === 'modal' ? goBack : undefined}
             stackPresentation={stackPresentation}
             path={path}
         >

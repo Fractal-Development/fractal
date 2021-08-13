@@ -18,7 +18,7 @@ export function StackScreen(_a) {
     var { navBarConfig, children, path } = _a, others = __rest(_a, ["navBarConfig", "children", "path"]);
     const { goBack } = useHistory();
     const isRootNavigationBar = useIsRootNavigationBar(path);
-    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute', overflow: 'hidden' }, others, { path: path, onDismissed: goBack }),
+    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute', overflow: 'hidden' }, others, { path: path }),
         React.createElement(NavigationBar, Object.assign({ showBackButton: !isRootNavigationBar }, navBarConfig === null || navBarConfig === void 0 ? void 0 : navBarConfig.props, { goBack: goBack })),
         children));
 }
