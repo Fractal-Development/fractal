@@ -3,7 +3,7 @@ import { ModalProps } from './Modal/types';
 import { DimmedModal } from './DimmedModal';
 import { ModalCell } from './ModalCell';
 
-const MiddleCellModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, ref: any): JSX.Element => {
+const MiddleCellModal = forwardRef(({ visible, onDismiss, onExitComplete, ...others }: ModalProps, ref: any): JSX.Element => {
     return (
         <DimmedModal
             ref={ref}
@@ -14,6 +14,7 @@ const MiddleCellModal = forwardRef(({ visible, onDismiss, ...others }: ModalProp
             width={'100%'}
             justifyContent={'center'}
             alignItems={'center'}
+            onExitComplete={onExitComplete}
         >
             <ModalCell {...others} variant={'middle'} />
         </DimmedModal>

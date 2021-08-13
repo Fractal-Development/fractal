@@ -14,7 +14,7 @@ const pressableAnimationStyles = {
     animate: { opacity: 0.6 }
 };
 
-const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, ref: any): JSX.Element => {
+const DimmedModal = forwardRef(({ visible, onDismiss, onExitComplete, ...others }: ModalProps, ref: any): JSX.Element => {
     return (
         <Modal
             ref={ref}
@@ -23,6 +23,7 @@ const DimmedModal = forwardRef(({ visible, onDismiss, ...others }: ModalProps, r
             from={modalAnimationStyles.initial}
             animate={modalAnimationStyles.animate}
             exit={modalAnimationStyles.initial}
+            onExitComplete={onExitComplete}
         >
             <Pressable
                 zIndex={999}
