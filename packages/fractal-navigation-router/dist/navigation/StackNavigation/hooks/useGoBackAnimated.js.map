@@ -1,0 +1,1 @@
+{"version":3,"file":"useGoBackAnimated.js","sourceRoot":"","sources":["../../../../src/navigation/StackNavigation/hooks/useGoBackAnimated.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,oCAAoC,EAAE,MAAM,kDAAkD,CAAC;AAExG,MAAM,UAAU,iBAAiB;IAC7B,OAAO,UAAU,CAAC,oCAAoC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC"}
