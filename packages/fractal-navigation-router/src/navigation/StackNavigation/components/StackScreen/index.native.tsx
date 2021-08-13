@@ -12,7 +12,7 @@ interface StackScreenProps extends NavigationRouteProps {
 
 export function StackScreen({ children, navBarConfig, stackPresentation = 'push', path, ...others }: StackScreenProps): JSX.Element {
     const { goBack } = useHistory();
-    const showNavigationBarButton = useIsRootNavigationBar(path);
+    const isRootNavigationBar = useIsRootNavigationBar(path);
     const isNavigationBarForModal =
         stackPresentation === 'modal' && navBarConfig != null && (Platform.OS === 'ios' || Platform.OS === 'android');
 
@@ -25,15 +25,15 @@ export function StackScreen({ children, navBarConfig, stackPresentation = 'push'
             position={'absolute'}
             overflow={'hidden'}
             {...others}
-            onDismissed={stackPresentation === 'modal' ? goBack : undefined}
+            onDismissed={goBack}
             stackPresentation={stackPresentation}
             path={path}
         >
             {stackPresentation === 'modal' ? <StatusBar barStyle='light-content' /> : null}
             {isNavigationBarForModal ? (
-                <NavigationBar showBackButton={showNavigationBarButton} {...navBarConfig?.props} goBack={goBack} />
+                <NavigationBar showBackButton={!isRootNavigationBar} {...navBarConfig?.props} goBack={goBack} />
             ) : navBarConfig != null ? (
-                <NativeNavigationBar showBackButton={showNavigationBarButton} {...navBarConfig.props} goBack={goBack} />
+                <NativeNavigationBar showBackButton={!isRootNavigationBar} {...navBarConfig.props} goBack={goBack} />
             ) : null}
             {children}
         </NavigationRoute>
