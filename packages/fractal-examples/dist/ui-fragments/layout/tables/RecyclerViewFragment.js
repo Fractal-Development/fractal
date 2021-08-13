@@ -33,8 +33,8 @@ function Table() {
     return (React.createElement(TableContainer, { title: '', height: 500 },
         React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(TitleRow, null),
-        React.createElement(Layer, { flex: 1 },
-            React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: 1000 }))));
+        React.createElement(Layer, { height: 200 },
+            React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: 1000, style: { height: '200px' } }))));
 }
 export function RecyclerViewFragment() {
     const { spacings } = useTheme();

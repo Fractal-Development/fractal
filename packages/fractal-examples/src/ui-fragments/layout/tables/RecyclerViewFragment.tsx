@@ -46,13 +46,14 @@ function Table(): JSX.Element {
         <TableContainer title={''} height={500}>
             <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
             <TitleRow />
-            <Layer flex={1}>
+            <Layer height={200}>
                 <RecyclerView
                     key={width}
                     layoutProvider={layoutProvider}
                     dataProvider={dataProviderState}
                     rowRenderer={rowRenderer}
                     initialRenderIndex={1000}
+                    style={{ height: '200px' }}
                 />
             </Layer>
         </TableContainer>
