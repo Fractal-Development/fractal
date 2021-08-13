@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { ScreenStackHeaderCenterView, ScreenStackHeaderLeftView, ScreenStackHeaderRightView } from 'react-native-screens';
+import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../../navigationBarViews';
 
 export function useNavigationBarChildren(
     children: Array<JSX.Element> | JSX.Element | undefined
@@ -10,11 +11,11 @@ export function useNavigationBarChildren(
         let rightChild: JSX.Element | null = null;
 
         React.Children.forEach(children, (child) => {
-            if (child?.type === ScreenStackHeaderLeftView) {
+            if (child?.type === ScreenStackHeaderLeftView || child?.type === NavigationBarLeftView) {
                 leftChild = child;
-            } else if (child?.type === ScreenStackHeaderCenterView) {
+            } else if (child?.type === ScreenStackHeaderCenterView || child?.type === NavigationBarCenterView) {
                 centerChild = child;
-            } else if (child?.type === ScreenStackHeaderRightView) {
+            } else if (child?.type === ScreenStackHeaderRightView || child?.type === NavigationBarRightView) {
                 rightChild = child;
             }
         });
