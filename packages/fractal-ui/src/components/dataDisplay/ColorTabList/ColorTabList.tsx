@@ -1,7 +1,6 @@
 import React, { ReactElement, useCallback, useState } from 'react';
 import { Box, HorizontalLayer, Layer, LayerProps, ScrollView } from '../../layout';
 import { useTheme } from '../../../context';
-import { useValueForLargeSizeType } from '@bma98/size-class';
 import { ColorTab, ColorTabProps } from './ColorTab';
 
 export interface ColorTabListProps extends LayerProps {
@@ -11,10 +10,9 @@ export interface ColorTabListProps extends LayerProps {
 }
 
 export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTabListProps): ReactElement {
-    const { borderRadius, sizes } = useTheme();
+    const { borderRadius, sizes, spacings } = useTheme();
     const [activeIndex, setActiveIndex] = useState(0);
     const { tabColor } = tabs[activeIndex];
-    const borderTopRightRadius = useValueForLargeSizeType('width', borderRadius.m, 0);
 
     const handlePress = useCallback(
         (index: number) => {
@@ -26,7 +24,7 @@ export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTa
 
     return (
         <Layer {...others}>
-            <HorizontalLayer height={sizes.colorTabListItemHeight}>
+            <HorizontalLayer marginRight={spacings.m} height={sizes.colorTabListItemHeight}>
                 <ScrollView showsHorizontalScrollIndicator={false} horizontal>
                     {tabs.map((props, index) => (
                         <ColorTab key={index} {...props} onPress={handlePress} index={index} active={index === activeIndex} />
@@ -35,7 +33,7 @@ export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTa
             </HorizontalLayer>
             <Box
                 borderTopLeftRadius={activeIndex != 0 ? borderRadius.m : 0}
-                borderTopRightRadius={borderTopRightRadius}
+                borderTopRightRadius={borderRadius.m}
                 width={'100%'}
                 flex={1}
                 animate={{ backgroundColor: tabColor }}

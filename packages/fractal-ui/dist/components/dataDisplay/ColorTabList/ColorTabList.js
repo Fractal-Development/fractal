@@ -12,21 +12,19 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { useCallback, useState } from 'react';
 import { Box, HorizontalLayer, Layer, ScrollView } from '../../layout';
 import { useTheme } from '../../../context';
-import { useValueForLargeSizeType } from '@bma98/size-class';
 import { ColorTab } from './ColorTab';
 export function ColorTabList(_a) {
     var { children, tabs, onItemPress } = _a, others = __rest(_a, ["children", "tabs", "onItemPress"]);
-    const { borderRadius, sizes } = useTheme();
+    const { borderRadius, sizes, spacings } = useTheme();
     const [activeIndex, setActiveIndex] = useState(0);
     const { tabColor } = tabs[activeIndex];
-    const borderTopRightRadius = useValueForLargeSizeType('width', borderRadius.m, 0);
     const handlePress = useCallback((index) => {
         setActiveIndex(index);
         onItemPress === null || onItemPress === void 0 ? void 0 : onItemPress(index);
     }, [onItemPress]);
     return (React.createElement(Layer, Object.assign({}, others),
-        React.createElement(HorizontalLayer, { height: sizes.colorTabListItemHeight },
+        React.createElement(HorizontalLayer, { marginRight: spacings.m, height: sizes.colorTabListItemHeight },
             React.createElement(ScrollView, { showsHorizontalScrollIndicator: false, horizontal: true }, tabs.map((props, index) => (React.createElement(ColorTab, Object.assign({ key: index }, props, { onPress: handlePress, index: index, active: index === activeIndex })))))),
-        React.createElement(Box, { borderTopLeftRadius: activeIndex != 0 ? borderRadius.m : 0, borderTopRightRadius: borderTopRightRadius, width: '100%', flex: 1, animate: { backgroundColor: tabColor }, transition: { type: 'timing' } }, children(activeIndex))));
+        React.createElement(Box, { borderTopLeftRadius: activeIndex != 0 ? borderRadius.m : 0, borderTopRightRadius: borderRadius.m, width: '100%', flex: 1, animate: { backgroundColor: tabColor }, transition: { type: 'timing' } }, children(activeIndex))));
 }
 //# sourceMappingURL=ColorTabList.js.map
