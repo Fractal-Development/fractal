@@ -15,7 +15,7 @@ import { useScreenActivityState } from './hooks/useScreenActivityState';
 import { useIsInitialRenderDone } from '../../hooks';
 import { useNavigationRouteStyles } from './hooks/useNavigationRouteStyles';
 import { StackPresentationTypeProvider } from '../StackNavigation';
-import { Screen } from '../../components/Screen';
+import { Screen } from '../../components';
 import { useTheme } from '@bma98/fractal-ui';
 export function NavigationRouteContent(_a) {
     var { path = '/', style, children, isTabScreen, stackPresentation = 'push', isRootRoute = false } = _a, others = __rest(_a, ["path", "style", "children", "isTabScreen", "stackPresentation", "isRootRoute"]);

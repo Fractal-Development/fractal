@@ -3,5 +3,5 @@ import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationR
 interface StackScreenProps extends NavigationRouteProps {
     navBarConfig?: ReactElement;
 }
-export declare function StackScreen({ navBarConfig, children, path, ...others }: StackScreenProps): JSX.Element;
+export declare function StackScreen({ navBarConfig, ...others }: StackScreenProps): ReactElement;
 export {};

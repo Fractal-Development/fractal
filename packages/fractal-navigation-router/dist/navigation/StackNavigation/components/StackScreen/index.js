@@ -14,12 +14,18 @@ import { NavigationRoute } from '../../../NavigationRoute';
 import { NavigationBar } from '@bma98/fractal-navigation';
 import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 import { useGoBackAnimated } from '../../hooks/useGoBackAnimated';
-export function StackScreen(_a) {
-    var { navBarConfig, children, path } = _a, others = __rest(_a, ["navBarConfig", "children", "path"]);
+import { StackScreenWebContainer } from '../StackScreenWebContainers/StackScreenWebContainer';
+function StackScreenWebContent({ path = '/', navBarConfig, children }) {
     const isRootNavigationBar = useIsRootNavigationBar(path);
     const goBack = useGoBackAnimated();
-    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute', overflow: 'hidden' }, others, { path: path }),
+    return (React.createElement(React.Fragment, null,
         React.createElement(NavigationBar, Object.assign({ showBackButton: !isRootNavigationBar }, navBarConfig === null || navBarConfig === void 0 ? void 0 : navBarConfig.props, { goBack: goBack })),
         children));
+}
+export function StackScreen(_a) {
+    var { navBarConfig } = _a, others = __rest(_a, ["navBarConfig"]);
+    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute', overflow: 'hidden' }, others),
+        React.createElement(StackScreenWebContainer, Object.assign({}, others),
+            React.createElement(StackScreenWebContent, Object.assign({}, others, { navBarConfig: navBarConfig })))));
 }
 //# sourceMappingURL=index.js.map

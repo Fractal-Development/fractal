@@ -5,6 +5,6 @@ export interface StackScreenWebContainerProps {
     children?: ReactNode;
 }
 
-export function StackScreenWebContainer({ children }: StackScreenWebContainerProps): JSX.Element {
+export function StackScreenWebPushContainer({ children }: StackScreenWebContainerProps): JSX.Element {
     return <Background>{children}</Background>;
 }

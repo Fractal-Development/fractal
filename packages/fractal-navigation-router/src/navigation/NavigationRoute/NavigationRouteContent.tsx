@@ -4,7 +4,7 @@ import { useScreenActivityState } from './hooks/useScreenActivityState';
 import { useIsInitialRenderDone } from '../../hooks';
 import { useNavigationRouteStyles } from './hooks/useNavigationRouteStyles';
 import { StackPresentationTypeProvider } from '../StackNavigation';
-import { Screen } from '../../components/Screen';
+import { Screen } from '../../components';
 import { NavigationRouteProps } from './types/NavigationRouteProps';
 import { useTheme } from '@bma98/fractal-ui';
 

@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-export interface StackScreenWebContainerProps {
-    children?: ReactNode;
-}
-export declare function StackScreenWebContainer({ children }: StackScreenWebContainerProps): JSX.Element;
+import { ReactElement } from 'react';
+import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationRouteProps';
+export declare function StackScreenWebContainer({ isTabScreen, path, stackPresentation, isRootRoute, children }: NavigationRouteProps): ReactElement | null;

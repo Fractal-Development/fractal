@@ -1,10 +1,17 @@
 import React from 'react';
-import { Background } from '@bma98/fractal-ui';
-import { StackNavigationGoBackAnimatedProvider } from '../../context/StackNavigationGoBackAnimatedProvider';
-import { useHistory } from '../../../../router';
-export function StackScreenWebContainer({ children }) {
-    const { goBack } = useHistory();
-    return (React.createElement(StackNavigationGoBackAnimatedProvider, { goBackAnimated: goBack },
-        React.createElement(Background, null, children)));
+import { StackScreenWebModalContainer } from './StackScreenWebModalContainer';
+import { useScreenActivityState } from '../../../NavigationRoute/hooks/useScreenActivityState';
+import { StackScreenWebPushContainer } from './StackScreenWebPushContainer';
+export function StackScreenWebContainer({ isTabScreen, path = '/', stackPresentation = 'push', isRootRoute = false, children }) {
+    const activityState = useScreenActivityState(path, isTabScreen !== null && isTabScreen !== void 0 ? isTabScreen : false);
+    if (stackPresentation === 'push' && !isTabScreen && !isRootRoute) {
+        return React.createElement(StackScreenWebPushContainer, null, children);
+    }
+    else if (stackPresentation === 'modal') {
+        return activityState > 0 ? React.createElement(StackScreenWebModalContainer, null, children) : null;
+    }
+    else {
+        return React.createElement(React.Fragment, null, children);
+    }
 }
 //# sourceMappingURL=StackScreenWebContainer.js.map
