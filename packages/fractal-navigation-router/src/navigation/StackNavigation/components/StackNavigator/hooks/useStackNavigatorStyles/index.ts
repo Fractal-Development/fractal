@@ -1,14 +1,3 @@
-import { useMemo } from 'react';
-import { useTabBarInsets } from '@bma98/fractal-navigation';
-import { getMarginInsets } from '../../util/getMarginInsets';
-
 export function useStackNavigatorStyles(style: any) {
-    const tabBarInsets = useTabBarInsets();
-
-    return useMemo(() => {
-        return {
-            ...getMarginInsets(tabBarInsets, false, true),
-            ...style
-        };
-    }, [style, tabBarInsets]);
+    return style;
 }
