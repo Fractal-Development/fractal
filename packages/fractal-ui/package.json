@@ -63,9 +63,6 @@
         "react-native-svg": {
             "optional": true
         },
-        "react-virtualized-auto-sizer": {
-            "optional": true
-        },
         "moti": {
             "optional": true
         }
@@ -84,7 +81,6 @@
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
-        "@types/react-virtualized-auto-sizer": "^1.0.0",
         "@types/styled-components": "^5.1.10",
         "@typescript-eslint/eslint-plugin": "^4.28.0",
         "@typescript-eslint/parser": "^4.15.1",
