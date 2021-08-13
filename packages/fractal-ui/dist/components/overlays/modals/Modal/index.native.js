@@ -14,8 +14,8 @@ import { Modal as RNModal } from 'react-native';
 import { AnimatePresence } from '@motify/core';
 import { Layer } from '../../../layout';
 const Modal = forwardRef((_a, ref) => {
-    var { visible } = _a, others = __rest(_a, ["visible"]);
-    return (React.createElement(AnimatePresence, null, visible ? (React.createElement(RNModal, { ref: ref, visible: true, animationType: 'none', transparent: true },
+    var { visible, onExitComplete } = _a, others = __rest(_a, ["visible", "onExitComplete"]);
+    return (React.createElement(AnimatePresence, { onExitComplete: onExitComplete }, visible ? (React.createElement(RNModal, { ref: ref, visible: true, animationType: 'none', transparent: true },
         React.createElement(Layer, Object.assign({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0 }, others)))) : null));
 });
 Modal.displayName = 'Modal';
