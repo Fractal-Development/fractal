@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Layer, LayoutProvider, MemoizedBaseRow, RecyclerView, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './tableHelpers';
+import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './util/tableHelpers';
 
 const heights: Array<number | undefined> = tableDummyData.map(() => undefined);
 
@@ -19,7 +19,7 @@ function TitleRow(): JSX.Element {
 
 function Table(): JSX.Element {
     const { spacings } = useTheme();
-    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
+    const [dataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
 
     const layoutProvider = useMemo(() => {
@@ -42,12 +42,8 @@ function Table(): JSX.Element {
         );
     }, [width]);
 
-    useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
-    }, [width]);
-
     return (
-        <TableContainer title={''} flex={1}>
+        <TableContainer title={''} height={500}>
             <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
             <TitleRow />
             <Layer flex={1}>
@@ -67,15 +63,11 @@ export function RecyclerViewFragment(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
-        <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+        <Layer marginBottom={spacings.m}>
+            <Text marginBottom={spacings.m} variant={'title'} {...getTitleTextAccessibilityProps(1)}>
                 RecyclerView Fragment
             </Text>
-            <Layer height={500} marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Layer flex={1}>
-                    <Table />
-                </Layer>
-            </Layer>
-        </>
+            <Table />
+        </Layer>
     );
 }

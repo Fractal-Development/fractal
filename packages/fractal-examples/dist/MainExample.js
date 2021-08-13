@@ -69,8 +69,8 @@ function Content() {
 export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
         React.createElement(Background, null,
-            React.createElement(SafeAreaLayer, null,
-                React.createElement(ScrollView, null,
-                    React.createElement(Content, null))))));
+            React.createElement(ScrollView, null,
+                React.createElement(Content, null),
+                React.createElement(SafeAreaLayer, null)))));
 }
 //# sourceMappingURL=MainExample.js.map

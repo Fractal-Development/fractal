@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Layer, VerticalFlatList, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, rowRenderer, tableDummyData } from './tableHelpers';
+import { dataProvider, rowRenderer, tableDummyData } from './util/tableHelpers';
 function Table() {
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));

@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Layer, LayoutProvider, MemoizedBaseRow, RecyclerView, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './tableHelpers';
+import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './util/tableHelpers';
 const heights = tableDummyData.map(() => undefined);
 function TitleRow() {
     const { colors } = useTheme();
@@ -11,7 +11,7 @@ function TitleRow() {
 }
 function Table() {
     const { spacings } = useTheme();
-    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
+    const [dataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
     const layoutProvider = useMemo(() => {
         return new LayoutProvider(() => {
@@ -30,10 +30,7 @@ function Table() {
             return;
         });
     }, [width]);
-    useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
-    }, [width]);
-    return (React.createElement(TableContainer, { title: '', flex: 1 },
+    return (React.createElement(TableContainer, { title: '', height: 500 },
         React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(TitleRow, null),
         React.createElement(Layer, { flex: 1 },
@@ -41,10 +38,8 @@ function Table() {
 }
 export function RecyclerViewFragment() {
     const { spacings } = useTheme();
-    return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "RecyclerView Fragment"),
-        React.createElement(Layer, { height: 500, marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(Layer, { flex: 1 },
-                React.createElement(Table, null)))));
+    return (React.createElement(Layer, { marginBottom: spacings.m },
+        React.createElement(Text, Object.assign({ marginBottom: spacings.m, variant: 'title' }, getTitleTextAccessibilityProps(1)), "RecyclerView Fragment"),
+        React.createElement(Table, null)));
 }
 //# sourceMappingURL=RecyclerViewFragment.js.map

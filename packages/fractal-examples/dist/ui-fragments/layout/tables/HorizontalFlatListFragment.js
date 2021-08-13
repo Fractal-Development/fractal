@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, HorizontalFlatList, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
-import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './tableHelpers';
+import { dataProvider, rowRendererHorizontalTable, tableDummyData } from './util/tableHelpers';
 function Table() {
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
