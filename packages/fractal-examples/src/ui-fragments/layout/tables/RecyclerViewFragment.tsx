@@ -41,7 +41,7 @@ export function RecyclerViewFragment(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={'RecyclerViewFragmentScreen'} flex={1}>
+        <TableContainer title={'AutoSizeRecyclerView'} flex={1}>
             <TitleRow />
             <Layer flex={1}>
                 <AutoSizeRecyclerView

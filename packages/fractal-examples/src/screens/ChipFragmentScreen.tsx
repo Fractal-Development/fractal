@@ -5,7 +5,7 @@ import { ChipFragment } from '../ui-fragments';
 import { screens } from './util/screens';
 import { PaddingLayer } from '@bma98/fractal-ui';
 
-const data = screens.find((item) => item.name === 'ChipFragmentScreen');
+const data = screens.find((item) => item.name === 'Chip Fragment');
 
 export function ChipFragmentScreen(): ReactElement {
     return (

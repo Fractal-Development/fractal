@@ -5,12 +5,12 @@ export interface Screen {
 
 export const screens: Array<Screen> = [
     {
-        name: 'RecyclerViewFragmentScreen',
+        name: 'Recycler View Fragment',
         path: '/recycler_view_fragment_screen'
     },
     {
-        name: 'ChipFragmentScreen',
-        path: 'chip_fragment_screen'
+        name: 'Chip Fragment',
+        path: '/chip_fragment_screen'
     }
 ];
 
