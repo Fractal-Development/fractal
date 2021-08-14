@@ -54,7 +54,7 @@ export function RootScreen(): ReactElement {
         <StackScreen navBarConfig={<NavigationBarConfig title={'Fragments'} largeTitle />} isRootRoute path={'/'}>
             <NavigationLayer>
                 <PaddingLayer flex={1}>
-                    <TableContainer title='Fragments' flex={1}>
+                    <TableContainer title='TableContainer Example' flex={1}>
                         <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
                         <Layer flex={1}>
                             <AutoSizeRecyclerView

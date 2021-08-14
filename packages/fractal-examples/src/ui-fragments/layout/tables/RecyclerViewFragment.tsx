@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Layer, LayoutProvider, MemoizedBaseRow, AutoSizeRecyclerView, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
+import { Layer, LayoutProvider, MemoizedBaseRow, AutoSizeRecyclerView, Text, useTheme, Box } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './util/tableHelpers';
 
@@ -41,7 +41,7 @@ export function RecyclerViewFragment(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={'AutoSizeRecyclerView'} flex={1}>
+        <Box flex={1}>
             <TitleRow />
             <Layer flex={1}>
                 <AutoSizeRecyclerView
@@ -51,6 +51,6 @@ export function RecyclerViewFragment(): JSX.Element {
                     initialRenderIndex={1000}
                 />
             </Layer>
-        </TableContainer>
+        </Box>
     );
 }

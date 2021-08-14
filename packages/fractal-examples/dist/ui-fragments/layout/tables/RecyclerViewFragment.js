@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Layer, LayoutProvider, MemoizedBaseRow, AutoSizeRecyclerView, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
+import { Layer, LayoutProvider, MemoizedBaseRow, AutoSizeRecyclerView, Text, useTheme, Box } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './util/tableHelpers';
 const heights = tableDummyData.map(() => undefined);
@@ -28,7 +28,7 @@ export function RecyclerViewFragment() {
             return;
         });
     }, [width]);
-    return (React.createElement(TableContainer, { title: 'AutoSizeRecyclerView', flex: 1 },
+    return (React.createElement(Box, { flex: 1 },
         React.createElement(TitleRow, null),
         React.createElement(Layer, { flex: 1 },
             React.createElement(AutoSizeRecyclerView, { layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: 1000 }))));
