@@ -17,6 +17,8 @@
         "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
         "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
         "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
+        "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
+        "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "react": "*",
         "react-dom": "*",
@@ -46,6 +48,8 @@
         "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
         "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
         "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
+        "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
+        "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
@@ -68,7 +72,9 @@
         "prettier": "^2.3.2",
         "react-native-svg": "^12.1.1",
         "typescript": "^4.3.4",
-        "utility-types": "^3.10.0"
+        "utility-types": "^3.10.0",
+        "@types/react-router-dom": "^5.1.5",
+        "@types/react-router-native": "^5.1.0"
     },
     "keywords": [
         "Javascript",

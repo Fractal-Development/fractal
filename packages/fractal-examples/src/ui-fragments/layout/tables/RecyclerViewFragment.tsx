@@ -66,7 +66,7 @@ export function RecyclerViewFragment(): JSX.Element {
     return (
         <Layer marginBottom={spacings.m}>
             <Text marginBottom={spacings.m} variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                RecyclerView Fragment
+                RecyclerViewFragment
             </Text>
             <Table />
         </Layer>

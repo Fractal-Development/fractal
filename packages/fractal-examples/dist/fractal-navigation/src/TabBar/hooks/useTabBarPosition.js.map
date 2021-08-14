@@ -1,0 +1,1 @@
+{"version":3,"file":"useTabBarPosition.js","sourceRoot":"","sources":["../../../../../../fractal-navigation/src/TabBar/hooks/useTabBarPosition.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,qBAAqB,EAAE,MAAM,mCAAmC,CAAC;AAG1E,MAAM,UAAU,iBAAiB;IAC7B,MAAM,CAAC,QAAQ,CAAC,GAAG,UAAU,CAAC,qBAAqB,CAAC,CAAC;IACrD,OAAO,QAAQ,CAAC;AACpB,CAAC"}
