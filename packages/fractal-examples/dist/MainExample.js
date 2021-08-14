@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { DetailsRow, FractalAppRoot, LayoutProvider, RecyclerView, TouchableOpacity, useTheme } from '@bma98/fractal-ui';
+import { DetailsRow, FractalAppRoot, Layer, LayoutProvider, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, AutoSizeRecyclerView } from '@bma98/fractal-ui';
 import { dataProvider } from './ui-fragments/layout/tables/util/tableHelpers';
 import { useSizeValue } from '@bma98/size-class';
 import { StackScreen, useHistory, NavigationRouter, NavigationBarConfig, StackNavigator } from '@bma98/fractal-navigation-router';
@@ -15,7 +15,7 @@ const lastScreenIndex = screens.length - 1;
 export function RootScreen() {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(screens));
     const width = useSizeValue('width');
-    const { sizes } = useTheme();
+    const { sizes, spacings } = useTheme();
     const history = useHistory();
     const layoutProvider = useMemo(() => {
         return new LayoutProvider(() => {
@@ -33,9 +33,13 @@ export function RootScreen() {
         return (React.createElement(TouchableOpacity, { onPress: goToItem },
             React.createElement(DetailsRow, { title: data.name, details: data.path, addSeparator: index !== lastScreenIndex })));
     }, [history]);
-    return (React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: 'Examples', largeTitle: true }), isRootRoute: true, path: '/' },
+    return (React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: 'Fragments', largeTitle: true }), isRootRoute: true, path: '/' },
         React.createElement(NavigationLayer, null,
-            React.createElement(RecyclerView, { style: { height: 500 }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
+            React.createElement(PaddingLayer, null,
+                React.createElement(TableContainer, { title: 'Fragments' },
+                    React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
+                    React.createElement(Layer, { flex: 1 },
+                        React.createElement(AutoSizeRecyclerView, { layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer })))))));
 }
 export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
