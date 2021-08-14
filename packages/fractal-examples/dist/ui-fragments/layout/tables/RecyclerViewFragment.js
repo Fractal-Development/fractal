@@ -39,7 +39,7 @@ function Table() {
 export function RecyclerViewFragment() {
     const { spacings } = useTheme();
     return (React.createElement(Layer, { marginBottom: spacings.m },
-        React.createElement(Text, Object.assign({ marginBottom: spacings.m, variant: 'title' }, getTitleTextAccessibilityProps(1)), "RecyclerView Fragment"),
+        React.createElement(Text, Object.assign({ marginBottom: spacings.m, variant: 'title' }, getTitleTextAccessibilityProps(1)), "RecyclerViewFragment"),
         React.createElement(Table, null)));
 }
 //# sourceMappingURL=RecyclerViewFragment.js.map

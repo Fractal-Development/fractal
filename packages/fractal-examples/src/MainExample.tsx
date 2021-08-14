@@ -1,9 +1,8 @@
 import React, { ReactElement, useCallback, useMemo, useState } from 'react';
 import { DetailsRow, FractalAppRoot, LayoutProvider, RecyclerView, TouchableOpacity, useTheme } from '@bma98/fractal-ui';
-import { NavigationBarConfig, StackNavigator } from '../../fractal-navigation-router/src';
 import { dataProvider } from './ui-fragments/layout/tables/util/tableHelpers';
 import { useSizeValue } from '@bma98/size-class';
-import { StackScreen, useHistory, NavigationRouter } from '@bma98/fractal-navigation-router';
+import { StackScreen, useHistory, NavigationRouter, NavigationBarConfig, StackNavigator } from '@bma98/fractal-navigation-router';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 
 interface Screen {

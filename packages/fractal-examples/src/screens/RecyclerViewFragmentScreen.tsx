@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react';
-import { StackScreen } from '@bma98/fractal-navigation-router';
-import { NavigationLayer } from '../../../fractal-navigation/src';
+import { StackScreen, NavigationBarConfig } from '@bma98/fractal-navigation-router';
+import { NavigationLayer } from '@bma98/fractal-navigation';
 import { RecyclerViewFragment } from '../ui-fragments';
-import { NavigationBarConfig } from '../../../fractal-navigation-router/src';
 
 export function RecyclerViewFragmentScreen(): ReactElement {
     return (

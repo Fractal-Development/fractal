@@ -1,1 +1,0 @@
-{"version":3,"file":"useTabBarInsets.js","sourceRoot":"","sources":["../../../../../../fractal-navigation/src/TabBar/hooks/useTabBarInsets.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,mBAAmB,EAAE,MAAM,iCAAiC,CAAC;AAGtE,MAAM,UAAU,eAAe;IAC3B,MAAM,CAAC,MAAM,CAAC,GAAG,UAAU,CAAC,mBAAmB,CAAC,CAAC;IACjD,OAAO,MAAM,CAAC;AAClB,CAAC"}

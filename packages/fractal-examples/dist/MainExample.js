@@ -1,133 +1,45 @@
-import React from 'react';
-import { FractalAppRoot, Background } from '@bma98/fractal-ui';
-import { 
-// ThemeSwapperFragment,
-// DropZoneFragment,
-// IconsFragment,
-// ChipFragment,
-// ChipListFragment,
-// ColorTabListFragment,
-// TagsInputFieldFragment,
-// ActivityIndicatorFragment,
-// AvatarFragment,
-// ImageFragment,
-// ImageBackgroundFragment,
-// SegmentedControlFragment,
-// SliderFragment,
-// SwitchFragment,
-// CheckBoxFragment,
-// RadioButtonFragment,
-// RadioGroupFragment,
-// TextsFragment,
-// CrossButtonFragment,
-// OptionsMenuButtonFragment,
-// OptionsButtonFragment,
-// TextButtonFragment,
-// ButtonFragment,
-// ToggleButtonFragment,
-// RoundedToggleButtonFragment,
-// CircularIconButtonFragment,
-// ColorPickerFragment,
-// HorizontalLayerFragment,
-// MarginLayerFragment,
-// PaddingLayerFragment,
-// BoxContentFragment,
-// SeparatorFragment,
-// SearchBarFragment,
-// AutocompleteFragment,
-// TextFieldFragment,
-// TextFieldMaskFragment,
-// IconTextFieldFragment,
-// PickerFragment,
-// DatePickerFragment,
-// TimePickerFragment,
-// BlurredModalFragment,
-// MiddleCellModalFragment,
-// DimmedModalFragment,
-// BottomCellModalFragment,
-// ErrorMessageFragment,
-// BadgeFragment,
-// MessageFragment,
-// PopoverFragment,
-// TableContainerFragment,
-// GridListFragment,
-// GridFragment,
-// SocialMediaButtonsFragment,
-// VerticalFlatListFragment,
-// HorizontalFlatListFragment,
-RecyclerViewFragment } from './ui-fragments';
-// import { ChartsExamples } from './charts-fragments';
-// import { MediaExamples } from './media-fragments';
-// import { ChatContentExample } from './messaging-fragments';
-// function Content(): JSX.Element {
-//     return (
-//         <Fragment>
-//             <PaddingLayer>
-//                 <ThemeSwapperFragment />
-//                 <DropZoneFragment />
-//                 <IconsFragment />
-//                 <ChipFragment />
-//                 <ChipListFragment />
-//                 <ColorTabListFragment />
-//                 <TagsInputFieldFragment />
-//                 <ActivityIndicatorFragment />
-//                 <AvatarFragment />
-//                 <ImageFragment />
-//                 <ImageBackgroundFragment />
-//                 <SegmentedControlFragment />
-//                 <SliderFragment />
-//                 <SwitchFragment />
-//                 <CheckBoxFragment />
-//                 <RadioButtonFragment />
-//                 <RadioGroupFragment />
-//                 <TextsFragment />
-//                 <HorizontalLayerFragment />
-//                 <MarginLayerFragment />
-//                 <PaddingLayerFragment />
-//                 <BoxContentFragment />
-//                 <SeparatorFragment />
-//                 <CrossButtonFragment />
-//                 <OptionsButtonFragment />
-//                 <OptionsMenuButtonFragment />
-//                 <TextButtonFragment />
-//                 <ButtonFragment />
-//                 <ToggleButtonFragment />
-//                 <RoundedToggleButtonFragment />
-//                 <CircularIconButtonFragment />
-//                 <ColorPickerFragment />
-//                 <SearchBarFragment />
-//                 <AutocompleteFragment />
-//                 <TextFieldFragment />
-//                 <TextFieldMaskFragment />
-//                 <IconTextFieldFragment />
-//                 <PickerFragment />
-//                 <DatePickerFragment />
-//                 <TimePickerFragment />
-//                 <BlurredModalFragment />
-//                 <MiddleCellModalFragment />
-//                 <DimmedModalFragment />
-//                 <BottomCellModalFragment />
-//                 <ErrorMessageFragment />
-//                 <BadgeFragment />
-//                 <MessageFragment />
-//                 <PopoverFragment />
-//                 <TableContainerFragment />
-//                 <GridListFragment />
-//                 <GridFragment />
-//                 <SocialMediaButtonsFragment />
-//                 <RecyclerViewFragment />
-//                 <VerticalFlatListFragment />
-//                 <HorizontalFlatListFragment />
-//                 <ChartsExamples />
-//                 <MediaExamples />
-//             </PaddingLayer>
-//             <ChatContentExample />
-//         </Fragment>
-//     );
-// }
+import React, { useCallback, useMemo, useState } from 'react';
+import { DetailsRow, FractalAppRoot, LayoutProvider, RecyclerView, TouchableOpacity, useTheme } from '@bma98/fractal-ui';
+import { dataProvider } from './ui-fragments/layout/tables/util/tableHelpers';
+import { useSizeValue } from '@bma98/size-class';
+import { StackScreen, useHistory, NavigationRouter, NavigationBarConfig, StackNavigator } from '@bma98/fractal-navigation-router';
+import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
+const screens = [
+    {
+        name: 'RecyclerViewFragmentScreen',
+        path: '/recycler_view_fragment_screen'
+    }
+];
+const lastScreenIndex = screens.length - 1;
+export function RootScreen() {
+    const [dataProviderState] = useState(dataProvider.cloneWithRows(screens));
+    const width = useSizeValue('width');
+    const { sizes } = useTheme();
+    const history = useHistory();
+    const layoutProvider = useMemo(() => {
+        return new LayoutProvider(() => {
+            return 0;
+        }, (_, dim) => {
+            dim.height = sizes.baseRowHeight;
+            dim.width = width;
+            return;
+        });
+    }, [width, sizes.baseRowHeight]);
+    const rowRenderer = useCallback((_, data, index) => {
+        const goToItem = () => {
+            history.push(data.path);
+        };
+        return (React.createElement(TouchableOpacity, { onPress: goToItem },
+            React.createElement(DetailsRow, { title: data.name, details: data.path, addSeparator: index !== lastScreenIndex })));
+    }, [history]);
+    return (React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: 'Examples', largeTitle: true }), isRootRoute: true, path: '/' },
+        React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer })));
+}
 export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
-        React.createElement(Background, null,
-            React.createElement(RecyclerViewFragment, null))));
+        React.createElement(NavigationRouter, null,
+            React.createElement(StackNavigator, { path: '/' },
+                React.createElement(RootScreen, null),
+                React.createElement(RecyclerViewFragmentScreen, null)))));
 }
 //# sourceMappingURL=MainExample.js.map
