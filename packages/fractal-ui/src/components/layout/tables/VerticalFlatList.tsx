@@ -1,6 +1,7 @@
 import React, { ReactElement, useMemo } from 'react';
 import { useSizeValue } from '@bma98/size-class';
-import { RecyclerView, RecyclerViewProps, LayoutProvider } from './RecyclerView';
+import { RecyclerViewProps, LayoutProvider } from './RecyclerView';
+import { AutoSizeRecyclerView } from './AutoSizeRecyclerView';
 
 export interface VerticalFlatListProps extends Omit<RecyclerViewProps, 'layoutProvider' | 'isHorizontal'> {
     rowHeight: number;
@@ -22,5 +23,5 @@ export function VerticalFlatList({ rowHeight, ...others }: VerticalFlatListProps
         );
     }, [width, rowHeight]);
 
-    return <RecyclerView layoutProvider={layoutProvider} {...others} />;
+    return <AutoSizeRecyclerView layoutProvider={layoutProvider} {...others} />;
 }

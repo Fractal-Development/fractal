@@ -11,7 +11,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { useMemo } from 'react';
 import { useSizeValue } from '@bma98/size-class';
-import { RecyclerView, LayoutProvider } from './RecyclerView';
+import { LayoutProvider } from './RecyclerView';
+import { AutoSizeRecyclerView } from './AutoSizeRecyclerView';
 export function VerticalFlatList(_a) {
     var { rowHeight } = _a, others = __rest(_a, ["rowHeight"]);
     const width = useSizeValue('width');
@@ -24,6 +25,6 @@ export function VerticalFlatList(_a) {
             return;
         });
     }, [width, rowHeight]);
-    return React.createElement(RecyclerView, Object.assign({ layoutProvider: layoutProvider }, others));
+    return React.createElement(AutoSizeRecyclerView, Object.assign({ layoutProvider: layoutProvider }, others));
 }
 //# sourceMappingURL=VerticalFlatList.js.map

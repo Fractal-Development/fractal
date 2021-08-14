@@ -10,7 +10,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useMemo } from 'react';
-import { RecyclerView, LayoutProvider } from './RecyclerView';
+import { AutoSizeRecyclerView } from './AutoSizeRecyclerView';
+import { LayoutProvider } from './RecyclerView';
 export function HorizontalFlatList(_a) {
     var { rowHeight, rowWidth } = _a, others = __rest(_a, ["rowHeight", "rowWidth"]);
     const layoutProvider = useMemo(() => {
@@ -22,6 +23,6 @@ export function HorizontalFlatList(_a) {
             return;
         });
     }, [rowWidth, rowHeight]);
-    return React.createElement(RecyclerView, Object.assign({ isHorizontal: true, layoutProvider: layoutProvider }, others));
+    return React.createElement(AutoSizeRecyclerView, Object.assign({ isHorizontal: true, layoutProvider: layoutProvider }, others));
 }
 //# sourceMappingURL=HorizontalFlatList.js.map
