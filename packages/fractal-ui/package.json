@@ -19,6 +19,7 @@
         "@react-native-picker/picker": "^1.16.3",
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
+        "moti": "^0.11.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -26,8 +27,7 @@
         "react-native-gesture-handler": "~1.10.3",
         "react-native-reanimated": "~2.1.0",
         "react-native-svg": "^12.1.1",
-        "react-virtualized-auto-sizer": "^1.0.5",
-        "moti": "^0.11.0"
+        "react-virtualized-auto-sizer": "^1.0.5"
     },
     "peerDependenciesMeta": {
         "@react-native-community/datetimepicker": {
@@ -81,6 +81,7 @@
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
+        "@types/react-virtualized-auto-sizer": "^1.0.1",
         "@types/styled-components": "^5.1.10",
         "@typescript-eslint/eslint-plugin": "^4.28.0",
         "@typescript-eslint/parser": "^4.15.1",
