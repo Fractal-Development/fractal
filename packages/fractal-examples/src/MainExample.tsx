@@ -4,6 +4,7 @@ import { dataProvider } from './ui-fragments/layout/tables/util/tableHelpers';
 import { useSizeValue } from '@bma98/size-class';
 import { StackScreen, useHistory, NavigationRouter, NavigationBarConfig, StackNavigator } from '@bma98/fractal-navigation-router';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
+import { NavigationLayer } from '@bma98/fractal-navigation';
 
 interface Screen {
     name: string;
@@ -54,7 +55,15 @@ export function RootScreen(): ReactElement {
 
     return (
         <StackScreen navBarConfig={<NavigationBarConfig title={'Examples'} largeTitle />} isRootRoute path={'/'}>
-            <RecyclerView key={width} layoutProvider={layoutProvider} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
+            <NavigationLayer>
+                <RecyclerView
+                    style={{ height: 500 }}
+                    key={width}
+                    layoutProvider={layoutProvider}
+                    dataProvider={dataProviderState}
+                    rowRenderer={rowRenderer}
+                />
+            </NavigationLayer>
         </StackScreen>
     );
 }

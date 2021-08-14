@@ -4,6 +4,7 @@ import { dataProvider } from './ui-fragments/layout/tables/util/tableHelpers';
 import { useSizeValue } from '@bma98/size-class';
 import { StackScreen, useHistory, NavigationRouter, NavigationBarConfig, StackNavigator } from '@bma98/fractal-navigation-router';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
+import { NavigationLayer } from '@bma98/fractal-navigation';
 const screens = [
     {
         name: 'RecyclerViewFragmentScreen',
@@ -33,7 +34,8 @@ export function RootScreen() {
             React.createElement(DetailsRow, { title: data.name, details: data.path, addSeparator: index !== lastScreenIndex })));
     }, [history]);
     return (React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: 'Examples', largeTitle: true }), isRootRoute: true, path: '/' },
-        React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer })));
+        React.createElement(NavigationLayer, null,
+            React.createElement(RecyclerView, { style: { height: 500 }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
 }
 export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
