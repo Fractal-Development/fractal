@@ -1,0 +1,1 @@
+{"version":3,"file":"screens.js","sourceRoot":"","sources":["../../../src/screens/util/screens.ts"],"names":[],"mappings":"AAKA,MAAM,CAAC,MAAM,OAAO,GAAkB;IAClC;QACI,IAAI,EAAE,4BAA4B;QAClC,IAAI,EAAE,gCAAgC;KACzC;IACD;QACI,IAAI,EAAE,oBAAoB;QAC1B,IAAI,EAAE,sBAAsB;KAC/B;CACJ,CAAC;AAEF,MAAM,CAAC,MAAM,eAAe,GAAG,OAAO,CAAC,MAAM,GAAG,CAAC,CAAC"}

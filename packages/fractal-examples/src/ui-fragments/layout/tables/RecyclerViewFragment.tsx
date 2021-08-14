@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { Layer, LayoutProvider, MemoizedBaseRow, RecyclerView, SearchBar, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
+import { Layer, LayoutProvider, MemoizedBaseRow, AutoSizeRecyclerView, TableContainer, Text, useTheme } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
-import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './util/tableHelpers';
 
 const heights: Array<number | undefined> = tableDummyData.map(() => undefined);
@@ -17,8 +16,7 @@ function TitleRow(): JSX.Element {
     );
 }
 
-function Table(): JSX.Element {
-    const { spacings } = useTheme();
+export function RecyclerViewFragment(): JSX.Element {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
 
@@ -43,32 +41,16 @@ function Table(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={''} height={500}>
-            <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
+        <TableContainer title={'RecyclerViewFragmentScreen'} flex={1}>
             <TitleRow />
-            <Layer height={200}>
-                <RecyclerView
-                    key={width}
+            <Layer flex={1}>
+                <AutoSizeRecyclerView
                     layoutProvider={layoutProvider}
                     dataProvider={dataProviderState}
                     rowRenderer={rowRenderer}
                     initialRenderIndex={1000}
-                    style={{ height: '200px' }}
                 />
             </Layer>
         </TableContainer>
-    );
-}
-
-export function RecyclerViewFragment(): JSX.Element {
-    const { spacings } = useTheme();
-
-    return (
-        <Layer marginBottom={spacings.m}>
-            <Text marginBottom={spacings.m} variant={'title'} {...getTitleTextAccessibilityProps(1)}>
-                RecyclerViewFragment
-            </Text>
-            <Table />
-        </Layer>
     );
 }
