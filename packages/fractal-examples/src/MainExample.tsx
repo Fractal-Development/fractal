@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { FractalAppRoot } from '@bma98/fractal-ui';
+import { FractalAppRoot, PaddingLayer, Text } from '@bma98/fractal-ui';
 import {
     NavigationBarConfig,
     NavigationRouter,
@@ -24,7 +24,10 @@ function renderReactIcon(color, size) {
 function MainTabBar(): ReactElement {
     return (
         <TabBar tabBarPosition='bottom'>
-            <SimpleTabBarItemLink path='/components' title='Components'>
+            <SimpleTabBarItemLink path={routes.components} title='Components'>
+                {renderReactIcon}
+            </SimpleTabBarItemLink>
+            <SimpleTabBarItemLink path={routes.credits} title='Credits'>
                 {renderReactIcon}
             </SimpleTabBarItemLink>
         </TabBar>
@@ -35,32 +38,34 @@ export function MainExample(): JSX.Element {
     return (
         <FractalAppRoot handleThemeManually>
             <NavigationRouter>
-                <StackNavigator path={routes.components}>
-                    <StackScreen navBarConfig={<NavigationBarConfig title={'Fragments'} largeTitle />} isRootRoute path={routes.components}>
-                        <RootScreen />
-                    </StackScreen>
-                    <StackScreen
-                        navBarConfig={<NavigationBarConfig title={screens.recyclerViewFragment.name} />}
-                        path={screens.recyclerViewFragment.path}
-                    >
-                        <RecyclerViewFragmentScreen />
-                    </StackScreen>
-                    <ChipFragmentScreen />
-                </StackNavigator>
-            </NavigationRouter>
-        </FractalAppRoot>
-    );
-
-    return (
-        <FractalAppRoot handleThemeManually>
-            <NavigationRouter>
                 <TabNavigator tabBar={<MainTabBar />}>
                     <TabScreen path={routes.components}>
                         <StackNavigator path={routes.components}>
-                            <RootScreen />
-                            <RecyclerViewFragmentScreen />
-                            <ChipFragmentScreen />
+                            <StackScreen
+                                navBarConfig={<NavigationBarConfig title={'Fragments'} largeTitle />}
+                                isRootRoute
+                                path={routes.components}
+                            >
+                                <RootScreen />
+                            </StackScreen>
+                            <StackScreen
+                                navBarConfig={<NavigationBarConfig title={screens.recyclerViewFragment.name} />}
+                                path={screens.recyclerViewFragment.path}
+                            >
+                                <RecyclerViewFragmentScreen />
+                            </StackScreen>
+                            <StackScreen
+                                navBarConfig={<NavigationBarConfig title={screens.chipFragment.name} />}
+                                path={screens.chipFragment.path}
+                            >
+                                <ChipFragmentScreen />
+                            </StackScreen>
                         </StackNavigator>
+                    </TabScreen>
+                    <TabScreen path={routes.credits}>
+                        <PaddingLayer>
+                            <Text>Empty for now...</Text>
+                        </PaddingLayer>
                     </TabScreen>
                 </TabNavigator>
             </NavigationRouter>

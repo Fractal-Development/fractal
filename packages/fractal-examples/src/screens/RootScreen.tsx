@@ -1,6 +1,5 @@
 import React, { ReactElement, useCallback, useMemo, useState } from 'react';
 import {
-    DetailsRow,
     Layer,
     LayoutProvider,
     PaddingLayer,
@@ -8,7 +7,8 @@ import {
     TableContainer,
     TouchableOpacity,
     useTheme,
-    AutoSizeRecyclerView
+    AutoSizeRecyclerView,
+    SimpleRow
 } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { useHistory } from '@bma98/fractal-navigation-router';
@@ -43,7 +43,7 @@ export function RootScreen(): ReactElement {
 
             return (
                 <TouchableOpacity onPress={goToItem}>
-                    <DetailsRow title={data.name} details={data.path} addSeparator={index !== lastScreenIndex} />
+                    <SimpleRow title={data.name} addSeparator={index !== lastScreenIndex} />
                 </TouchableOpacity>
             );
         },

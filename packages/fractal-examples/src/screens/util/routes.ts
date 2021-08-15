@@ -1,4 +1,5 @@
 export const routes = {
     components: '/',
-    component: '/:component'
+    component: '/:component',
+    credits: '/'
 };

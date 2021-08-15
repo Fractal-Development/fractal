@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { DetailsRow, Layer, LayoutProvider, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, AutoSizeRecyclerView } from '@bma98/fractal-ui';
+import { Layer, LayoutProvider, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, AutoSizeRecyclerView, SimpleRow } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { useHistory } from '@bma98/fractal-navigation-router';
 import { NavigationLayer } from '@bma98/fractal-navigation';
@@ -24,7 +24,7 @@ export function RootScreen() {
             history.push(data.path);
         };
         return (React.createElement(TouchableOpacity, { onPress: goToItem },
-            React.createElement(DetailsRow, { title: data.name, details: data.path, addSeparator: index !== lastScreenIndex })));
+            React.createElement(SimpleRow, { title: data.name, addSeparator: index !== lastScreenIndex })));
     }, [history]);
     return (React.createElement(NavigationLayer, null,
         React.createElement(PaddingLayer, { flex: 1 },

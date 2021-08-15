@@ -1,5 +1,6 @@
 export const routes = {
     components: '/',
-    component: '/:component'
+    component: '/:component',
+    credits: '/'
 };
 //# sourceMappingURL=routes.js.map
