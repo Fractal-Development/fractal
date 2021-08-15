@@ -1,6 +1,5 @@
 import React, { memo, ReactElement } from 'react';
 import { Layer, useTheme } from '@bma98/fractal-ui';
-import { useTabBarInsets } from '../../../../TabBar/hooks/useTabBarInsets';
 
 interface NavigationBarBackgroundProps {
     children: ReactElement | Array<ReactElement>;
@@ -8,7 +7,6 @@ interface NavigationBarBackgroundProps {
 
 export const NavigationBarBackground = memo(({ children }: NavigationBarBackgroundProps): ReactElement => {
     const { spacings, navigationBar } = useTheme();
-    const { left, right } = useTabBarInsets();
 
     return (
         <Layer
@@ -21,8 +19,8 @@ export const NavigationBarBackground = memo(({ children }: NavigationBarBackgrou
             paddingRight={spacings.m}
             position={'absolute'}
             top={0}
-            left={left}
-            right={right}
+            left={0}
+            right={0}
         >
             {children}
         </Layer>

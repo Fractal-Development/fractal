@@ -8,6 +8,6 @@ export function TabBarInsetsLayer(props) {
             marginRight: tabBarInsets.right,
             marginLeft: tabBarInsets.left,
             marginBottom: tabBarInsets.bottom
-        }, transition: { type: 'timing' }, flex: 1, overflow: 'hidden' }, props)));
+        }, transition: { type: 'timing' }, flex: 1, position: 'relative', overflow: 'hidden' }, props)));
 }
 //# sourceMappingURL=TabBarInsetsLayer.js.map

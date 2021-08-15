@@ -20,6 +20,7 @@ export function TabBarInsetsLayer(props: LayerProps): ReactElement {
             }}
             transition={{ type: 'timing' }}
             flex={1}
+            position='relative'
             overflow={'hidden'}
             {...props}
         />
