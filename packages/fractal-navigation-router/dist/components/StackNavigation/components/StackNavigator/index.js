@@ -16,6 +16,7 @@ import { filterMatchingChildren } from './util/filterMatchingChildren';
 import { useIsRouteActive } from '../../../../hooks';
 import { StackNavigatorRootPathProvider } from '../../context';
 import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
+import { NavigationBarInsetsProvider } from '@bma98/fractal-navigation';
 export function StackNavigator(_a) {
     var { path = '', children, style } = _a, others = __rest(_a, ["path", "children", "style"]);
     const { pathname } = useLocation();
@@ -30,6 +31,7 @@ export function StackNavigator(_a) {
         }
     }, [childrenToRender, isRouteActive]);
     return (React.createElement(StackNavigatorRootPathProvider, { initialValue: path },
-        React.createElement(ScreenStack, Object.assign({ flex: 1, overflow: 'hidden', style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current)));
+        React.createElement(NavigationBarInsetsProvider, null,
+            React.createElement(ScreenStack, Object.assign({ flex: 1, overflow: 'hidden', style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current))));
 }
 //# sourceMappingURL=index.js.map

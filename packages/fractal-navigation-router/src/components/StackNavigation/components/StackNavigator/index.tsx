@@ -5,6 +5,7 @@ import { filterMatchingChildren } from './util/filterMatchingChildren';
 import { useIsRouteActive } from '../../../../hooks';
 import { StackNavigatorRootPathProvider } from '../../context';
 import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
+import { NavigationBarInsetsProvider } from '@bma98/fractal-navigation';
 
 export interface StackNavigatorProps extends Omit<ScreenStackProps, 'children'> {
     children: Array<JSX.Element> | JSX.Element;
@@ -29,9 +30,11 @@ export function StackNavigator({ path = '', children, style, ...others }: StackN
 
     return (
         <StackNavigatorRootPathProvider initialValue={path}>
-            <ScreenStack flex={1} overflow={'hidden'} style={finalStyle} {...others}>
-                {isRouteActive ? childrenToRender : prevChildrenRef.current}
-            </ScreenStack>
+            <NavigationBarInsetsProvider>
+                <ScreenStack flex={1} overflow={'hidden'} style={finalStyle} {...others}>
+                    {isRouteActive ? childrenToRender : prevChildrenRef.current}
+                </ScreenStack>
+            </NavigationBarInsetsProvider>
         </StackNavigatorRootPathProvider>
     );
 }
