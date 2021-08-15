@@ -9,7 +9,8 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { SimpleTabBarItem } from '@bma98/fractal-navigation';
+import React from 'react';
+import { SimpleTabBarItem } from '@bma98/fractal-navigation';
 import { useIsRouteActive } from '../../../../../hooks/useIsRouteActive';
 import { useGoToTab } from '../hooks/useGoToTab';
 export function SimpleTabBarItemLink(_a) {

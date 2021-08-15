@@ -1,4 +1,5 @@
-import React, { SimpleTabBarItem, SimpleTabBarItemProps } from '@bma98/fractal-navigation';
+import React from 'react';
+import { SimpleTabBarItem, SimpleTabBarItemProps } from '@bma98/fractal-navigation';
 import { ReactElement } from 'react';
 import { useIsRouteActive } from '../../../../../hooks/useIsRouteActive';
 import { useGoToTab } from '../hooks/useGoToTab';
