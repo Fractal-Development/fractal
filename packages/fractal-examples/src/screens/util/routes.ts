@@ -1,4 +1,4 @@
 export const routes = {
-    components: '/components',
-    component: '/components/:component'
+    components: '/',
+    component: '/:component'
 };

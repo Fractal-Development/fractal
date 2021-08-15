@@ -15,6 +15,10 @@ function MainTabBar() {
         React.createElement(SimpleTabBarItemLink, { path: '/components', title: 'Components' }, renderReactIcon)));
 }
 export function MainExample() {
+    return (React.createElement(StackNavigator, { path: routes.components },
+        React.createElement(RootScreen, null),
+        React.createElement(RecyclerViewFragmentScreen, null),
+        React.createElement(ChipFragmentScreen, null)));
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
         React.createElement(NavigationRouter, null,
             React.createElement(TabNavigator, { tabBar: React.createElement(MainTabBar, null) },

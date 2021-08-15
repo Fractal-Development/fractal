@@ -24,6 +24,14 @@ function MainTabBar(): ReactElement {
 
 export function MainExample(): JSX.Element {
     return (
+        <StackNavigator path={routes.components}>
+            <RootScreen />
+            <RecyclerViewFragmentScreen />
+            <ChipFragmentScreen />
+        </StackNavigator>
+    );
+
+    return (
         <FractalAppRoot handleThemeManually>
             <NavigationRouter>
                 <TabNavigator tabBar={<MainTabBar />}>
