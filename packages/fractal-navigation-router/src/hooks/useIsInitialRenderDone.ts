@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useLayoutEffect, useMemo, useState } from 'react';
 import { ScreenActivityState } from '../types';
 
 export function useIsInitialRenderDone(activityState: ScreenActivityState): [boolean, () => void] {
@@ -7,7 +7,7 @@ export function useIsInitialRenderDone(activityState: ScreenActivityState): [boo
 
     // Basically, we only render if the route is active, or was active before.
     // This prevents render calls from tabs the user never opened before.
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (activityState >= 1) {
             setInitialRenderDone(true);
         }
