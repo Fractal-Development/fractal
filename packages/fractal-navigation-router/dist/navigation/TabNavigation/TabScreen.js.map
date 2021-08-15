@@ -1,1 +1,0 @@
-{"version":3,"file":"TabScreen.js","sourceRoot":"","sources":["../../../src/navigation/TabNavigation/TabScreen.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,eAAe,EAAE,MAAM,oBAAoB,CAAC;AAOrD,MAAM,UAAU,SAAS,CAAC,KAAqB;IAC3C,OAAO,oBAAC,eAAe,oBAAK,KAAK,IAAE,WAAW,UAAG,CAAC;AACtD,CAAC"}

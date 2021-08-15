@@ -1,3 +1,3 @@
 export * from './TabNavigator';
-export * from './TabScreen';
+export * from './components';
 //# sourceMappingURL=index.js.map
