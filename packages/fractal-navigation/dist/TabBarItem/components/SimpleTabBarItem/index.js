@@ -26,9 +26,7 @@ export const SimpleTabBarItem = memo((_a) => {
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
     const { tabBar } = useTheme();
-    const textWidth = tabBarPosition === 'bottom'
-        ? getValueForLargeSizeType(widthSizeType, undefined, tabBar.iOSHorizontalWidth - spacings.m)
-        : undefined;
+    const textWidth = tabBarPosition !== 'bottom' ? tabBar.iOSHorizontalWidth - spacings.m : undefined;
     const renderItem = useCallback((size) => {
         return children(color, size);
     }, [color, children]);
