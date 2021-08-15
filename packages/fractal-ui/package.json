@@ -9,7 +9,7 @@
     "source": "src/index.tsx",
     "scripts": {
         "build": "expo-module build",
-        "clean": "rm -rf ./dist",
+        "clean-build": "rm -rf ./dist",
         "lint": "eslint src/ --fix",
         "expo-module": "expo-module"
     },
@@ -45,6 +45,9 @@
         "expo-document-picker": {
             "optional": true
         },
+        "moti": {
+            "optional": true
+        },
         "react-dom": {
             "optional": true
         },
@@ -63,7 +66,7 @@
         "react-native-svg": {
             "optional": true
         },
-        "moti": {
+        "react-virtualized-auto-sizer": {
             "optional": true
         }
     },
