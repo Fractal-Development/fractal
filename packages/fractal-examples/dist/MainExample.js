@@ -4,7 +4,7 @@ import { NavigationBarConfig, NavigationRouter, SimpleTabBarItemLink, StackNavig
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
-import { TabBar } from '@bma98/fractal-navigation';
+import { ResponsiveSideTabBar } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
@@ -12,7 +12,7 @@ function renderReactIcon(color, size) {
     return React.createElement(ReactIcon, { fill: color, height: size, width: size });
 }
 function MainTabBar() {
-    return (React.createElement(TabBar, { tabBarPosition: 'bottom' },
+    return (React.createElement(ResponsiveSideTabBar, null,
         React.createElement(SimpleTabBarItemLink, { path: routes.components, title: 'Components' }, renderReactIcon),
         React.createElement(SimpleTabBarItemLink, { path: routes.credits, title: 'Credits' }, renderReactIcon)));
 }

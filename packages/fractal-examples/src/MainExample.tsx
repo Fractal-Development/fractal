@@ -12,7 +12,7 @@ import {
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
-import { TabBar } from '@bma98/fractal-navigation';
+import { ResponsiveSideTabBar } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
@@ -23,14 +23,14 @@ function renderReactIcon(color, size) {
 
 function MainTabBar(): ReactElement {
     return (
-        <TabBar tabBarPosition='bottom'>
+        <ResponsiveSideTabBar>
             <SimpleTabBarItemLink path={routes.components} title='Components'>
                 {renderReactIcon}
             </SimpleTabBarItemLink>
             <SimpleTabBarItemLink path={routes.credits} title='Credits'>
                 {renderReactIcon}
             </SimpleTabBarItemLink>
-        </TabBar>
+        </ResponsiveSideTabBar>
     );
 }
 

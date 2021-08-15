@@ -28,7 +28,7 @@ export function RootScreen() {
     }, [history]);
     return (React.createElement(NavigationLayer, null,
         React.createElement(PaddingLayer, { flex: 1 },
-            React.createElement(TableContainer, { title: 'TableContainer Example', flex: 1 },
+            React.createElement(TableContainer, { title: 'Table Container', flex: 1 },
                 React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
                 React.createElement(Layer, { flex: 1 },
                     React.createElement(AutoSizeRecyclerView, { layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer }))))));

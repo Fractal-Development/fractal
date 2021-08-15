@@ -53,7 +53,7 @@ export function RootScreen(): ReactElement {
     return (
         <NavigationLayer>
             <PaddingLayer flex={1}>
-                <TableContainer title='TableContainer Example' flex={1}>
+                <TableContainer title='Table Container' flex={1}>
                     <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
                     <Layer flex={1}>
                         <AutoSizeRecyclerView layoutProvider={layoutProvider} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
