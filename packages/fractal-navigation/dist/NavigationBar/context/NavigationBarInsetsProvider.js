@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 const cleanEdgeInsets = {
-    top: 50,
+    top: 0,
     right: 0,
     bottom: 0,
     left: 0

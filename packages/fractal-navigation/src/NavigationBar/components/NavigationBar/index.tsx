@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationBarProps } from '../../types';
 import { useNavigationBarChildren } from '../../hooks';
 import { NavigationBarBackground, NavigationBarCenter, NavigationBarLeft, NavigationBarRight } from './components';
+import { useSetNavigationBarInsets } from '../../hooks/useSetNavigationBarInsets';
 
 export function NavigationBar({
     hidden,
@@ -12,6 +13,8 @@ export function NavigationBar({
     goBack
 }: NavigationBarProps): JSX.Element | null {
     const [leftChild, centerChild, rightChild] = useNavigationBarChildren(children);
+
+    useSetNavigationBarInsets();
 
     return hidden ? null : (
         <NavigationBarBackground>

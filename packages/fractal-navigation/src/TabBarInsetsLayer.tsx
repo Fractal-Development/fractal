@@ -1,10 +1,8 @@
 import React, { ReactElement } from 'react';
-import { useNavigationBarInsets } from './NavigationBar/hooks/useNavigationBarInsets';
 import { useTabBarInsets } from './TabBar';
 import { LayerProps, SafeAreaLayer } from '@bma98/fractal-ui';
 
-export function NavigationLayer(props: LayerProps): ReactElement {
-    const navigationBarInsets = useNavigationBarInsets();
+export function TabBarInsetsLayer(props: LayerProps): ReactElement {
     const tabBarInsets = useTabBarInsets();
 
     return (
@@ -15,7 +13,7 @@ export function NavigationLayer(props: LayerProps): ReactElement {
             marginBottom={0}
             from={false}
             animate={{
-                marginTop: navigationBarInsets.top,
+                marginTop: tabBarInsets.top,
                 marginRight: tabBarInsets.right,
                 marginLeft: tabBarInsets.left,
                 marginBottom: tabBarInsets.bottom
