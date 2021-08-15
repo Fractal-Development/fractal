@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { ScreenStackHeaderCenterView, ScreenStackHeaderLeftView, ScreenStackHeaderRightView } from 'react-native-screens';
-import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../../navigationBarViews';
+import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../../components/NavigationBar/views';
 export function useNavigationBarChildren(children) {
     return useMemo(() => {
         let leftChild = null;

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../../navigationBarViews';
+import { NavigationBarCenterView, NavigationBarLeftView, NavigationBarRightView } from '../../components/NavigationBar/views';
 
 export function useNavigationBarChildren(
     children: Array<JSX.Element> | JSX.Element | undefined

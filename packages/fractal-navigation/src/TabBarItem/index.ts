@@ -1,2 +1,1 @@
-export * from './SimpleTabBarItem';
-export * from './CircularTabBarItem';
+export * from './components';

@@ -1,3 +1,2 @@
-export * from './SimpleTabBarItem';
-export * from './CircularTabBarItem';
+export * from './components';
 //# sourceMappingURL=index.js.map
