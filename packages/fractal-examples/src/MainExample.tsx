@@ -12,7 +12,7 @@ import {
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
-import { NavigationLayer, ResponsiveSideTabBar } from '@bma98/fractal-navigation';
+import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
@@ -40,7 +40,7 @@ export function MainExample(): JSX.Element {
             <NavigationRouter>
                 <TabNavigator tabBar={<MainTabBar />}>
                     <TabScreen path={routes.components}>
-                        <NavigationLayer>
+                        <TabBarInsetsLayer>
                             <StackNavigator path={routes.components}>
                                 <StackScreen
                                     navBarConfig={<NavigationBarConfig title={'Fragments'} largeTitle />}
@@ -62,14 +62,14 @@ export function MainExample(): JSX.Element {
                                     <ChipFragmentScreen />
                                 </StackScreen>
                             </StackNavigator>
-                        </NavigationLayer>
+                        </TabBarInsetsLayer>
                     </TabScreen>
                     <TabScreen path={routes.credits}>
-                        <NavigationLayer>
+                        <TabBarInsetsLayer>
                             <PaddingLayer>
                                 <Text>Empty for now...</Text>
                             </PaddingLayer>
-                        </NavigationLayer>
+                        </TabBarInsetsLayer>
                     </TabScreen>
                 </TabNavigator>
             </NavigationRouter>

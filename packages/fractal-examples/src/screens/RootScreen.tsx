@@ -12,9 +12,9 @@ import {
 } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { useHistory } from '@bma98/fractal-navigation-router';
-import { NavigationLayer } from '@bma98/fractal-navigation';
 import { dataProvider } from '../ui-fragments/layout/tables/util/tableHelpers';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
+import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 
 export function RootScreen(): ReactElement {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(screensArray));
@@ -51,7 +51,7 @@ export function RootScreen(): ReactElement {
     );
 
     return (
-        <NavigationLayer>
+        <NavigationBarInsetsLayer>
             <PaddingLayer flex={1}>
                 <TableContainer title='Table Container' flex={1}>
                     <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
@@ -60,6 +60,6 @@ export function RootScreen(): ReactElement {
                     </Layer>
                 </TableContainer>
             </PaddingLayer>
-        </NavigationLayer>
+        </NavigationBarInsetsLayer>
     );
 }

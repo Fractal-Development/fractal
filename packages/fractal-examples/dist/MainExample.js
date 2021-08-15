@@ -4,7 +4,7 @@ import { NavigationBarConfig, NavigationRouter, SimpleTabBarItemLink, StackNavig
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
-import { NavigationLayer, ResponsiveSideTabBar } from '@bma98/fractal-navigation';
+import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
@@ -21,7 +21,7 @@ export function MainExample() {
         React.createElement(NavigationRouter, null,
             React.createElement(TabNavigator, { tabBar: React.createElement(MainTabBar, null) },
                 React.createElement(TabScreen, { path: routes.components },
-                    React.createElement(NavigationLayer, null,
+                    React.createElement(TabBarInsetsLayer, null,
                         React.createElement(StackNavigator, { path: routes.components },
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: 'Fragments', largeTitle: true }), isRootRoute: true, path: routes.components },
                                 React.createElement(RootScreen, null)),
@@ -30,7 +30,7 @@ export function MainExample() {
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.chipFragment.name }), path: screens.chipFragment.path },
                                 React.createElement(ChipFragmentScreen, null))))),
                 React.createElement(TabScreen, { path: routes.credits },
-                    React.createElement(NavigationLayer, null,
+                    React.createElement(TabBarInsetsLayer, null,
                         React.createElement(PaddingLayer, null,
                             React.createElement(Text, null, "Empty for now..."))))))));
 }
