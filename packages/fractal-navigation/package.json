@@ -43,6 +43,9 @@
             "optional": true
         }
     },
+    "dependencies": {
+        "@bma98/size-class": "^2.2.4"
+    },
     "devDependencies": {
         "@babel/core": "^7.9.0",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
