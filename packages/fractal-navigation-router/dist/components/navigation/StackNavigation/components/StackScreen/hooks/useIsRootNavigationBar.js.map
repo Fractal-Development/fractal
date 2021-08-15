@@ -1,1 +1,0 @@
-{"version":3,"file":"useIsRootNavigationBar.js","sourceRoot":"","sources":["../../../../../../../src/components/navigation/StackNavigation/components/StackScreen/hooks/useIsRootNavigationBar.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,yBAAyB,EAAE,MAAM,0CAA0C,CAAC;AAErF,MAAM,UAAU,sBAAsB,CAAC,IAAa;IAChD,MAAM,sBAAsB,GAAG,yBAAyB,EAAE,CAAC;IAC3D,OAAO,sBAAsB,KAAK,IAAI,CAAC;AAC3C,CAAC"}
