@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { TabBarProps } from '../types';
 import { useSetTabBarInsets } from '../hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from '../context/TabBarPositionProvider';
@@ -8,7 +8,7 @@ import { SafeAreaLayer } from '@bma98/fractal-ui';
 export function TabBar({ tabBarPosition, children, ...others }: TabBarProps): JSX.Element {
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         setTabBarPosition(tabBarPosition);
     }, [tabBarPosition, setTabBarPosition]);
 

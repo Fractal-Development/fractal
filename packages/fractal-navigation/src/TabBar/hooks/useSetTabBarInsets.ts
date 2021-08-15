@@ -1,4 +1,4 @@
-import { useContext, useLayoutEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useTabBarIsHidden } from './useTabBarIsHidden';
 import { TabBarInsetsContext } from '../context';
 import { useTabBarPosition } from './useTabBarPosition';
@@ -12,7 +12,7 @@ export function useSetTabBarInsets(): void {
     const safeAreaInsets = useSafeAreaInsets();
     const [, setTabBarInsets] = useContext(TabBarInsetsContext);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         setTabBarInsets({
             top: 0,
             right: tabBarPosition === 'right' ? size + safeAreaInsets.right : 0,
