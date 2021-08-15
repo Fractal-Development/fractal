@@ -7,18 +7,18 @@ export function NavigationBarInsetsLayer(props: LayerProps): ReactElement {
 
     return (
         <SafeAreaLayer
-            marginTop={0}
-            marginRight={0}
-            marginLeft={0}
-            marginBottom={0}
-            from={false}
-            animate={{
-                marginTop: navigationBarInsets.top,
-                marginRight: navigationBarInsets.right,
-                marginLeft: navigationBarInsets.left,
-                marginBottom: navigationBarInsets.bottom
-            }}
-            transition={{ type: 'timing' }}
+            marginTop={navigationBarInsets.top}
+            marginRight={navigationBarInsets.right}
+            marginLeft={navigationBarInsets.left}
+            marginBottom={navigationBarInsets.bottom}
+            // from={false}
+            // animate={{
+            //     marginTop: navigationBarInsets.top,
+            //     marginRight: navigationBarInsets.right,
+            //     marginLeft: navigationBarInsets.left,
+            //     marginBottom: navigationBarInsets.bottom
+            // }}
+            // transition={{ type: 'timing' }}
             flex={1}
             position='relative'
             overflow={'hidden'}

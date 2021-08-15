@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useSetTabBarInsets } from '../hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from '../context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
@@ -17,7 +17,7 @@ import { SafeAreaLayer } from '@bma98/fractal-ui';
 export function TabBar(_a) {
     var { tabBarPosition, children } = _a, others = __rest(_a, ["tabBarPosition", "children"]);
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
-    useLayoutEffect(() => {
+    useEffect(() => {
         setTabBarPosition(tabBarPosition);
     }, [tabBarPosition, setTabBarPosition]);
     useSetTabBarInsets();
