@@ -1,8 +1,7 @@
-import { blue } from '../../colors';
 import { black } from '../../colors/presets/black';
 import { FractalThemeNavigationBar, FractalThemeTabBar } from '../FractalTheme';
-import { systemFont } from '../systemFont';
 import { createFractalTheme } from './createFractalTheme';
+import { lightNavigationBarTheme, lightTabBarTheme } from './lightFractalTheme';
 
 export const darkColors = {
     background: black.base400,
@@ -25,36 +24,13 @@ export const darkColors = {
 };
 
 export const darkNavigationBarTheme: FractalThemeNavigationBar = {
-    title: {
-        fontSize: 16,
-        fontWeight: 600,
-        color: black.base
-    },
-    height: 50,
-    shadow: '0px 1px 1px rgba(0, 0, 0, 0.05)',
-    textButton: {
-        fontSize: 16,
-        fontWeight: 400,
-        color: blue.base,
-        fontFamily: systemFont
-    },
-    iconButtonSize: 22,
+    ...lightNavigationBarTheme,
     backgroundColor: black.base
 };
 
 export const darkTabBarTheme: FractalThemeTabBar = {
-    tabBarItemText: {
-        fontSize: 11,
-        fontWeight: 500,
-        color: blue.base,
-        fontFamily: systemFont
-    },
-    verticalHeight: 61,
-    horizontalWidth: 61,
-    iOSVerticalHeight: 49,
-    iOSHorizontalWidth: 61,
-    backgroundColor: black.base,
-    shadow: '0px -1px 1px rgba(0, 0, 0, 0.05)'
+    ...lightTabBarTheme,
+    backgroundColor: black.base
 };
 
 export const darkFractalTheme = createFractalTheme({

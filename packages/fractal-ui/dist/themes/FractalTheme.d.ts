@@ -125,6 +125,8 @@ export interface FractalThemeTabBar {
     horizontalWidth: number;
     backgroundColor: string;
     shadow: string;
+    leftPositionShadow: string;
+    rightPositionShadow: string;
 }
 export interface FractalTheme {
     colors: FractalThemeColors;

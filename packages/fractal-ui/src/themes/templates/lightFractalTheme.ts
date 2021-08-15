@@ -215,11 +215,13 @@ export const lightTabBarTheme: FractalThemeTabBar = {
         fontFamily: systemFont
     },
     verticalHeight: 61,
-    horizontalWidth: 61,
+    horizontalWidth: 81,
     iOSVerticalHeight: 49,
-    iOSHorizontalWidth: 61,
+    iOSHorizontalWidth: 81,
     backgroundColor: white.base,
-    shadow: '0px -1px 1px rgba(0, 0, 0, 0.05)'
+    shadow: '0px -1px 1px rgba(0, 0, 0, 0.05)',
+    leftPositionShadow: '1px 0px 1px rgba(0, 0, 0, 0.05)',
+    rightPositionShadow: '-1px 0px 1px rgba(0, 0, 0, 0.05)'
 };
 
 export const lightFractalTheme: FractalTheme = {
