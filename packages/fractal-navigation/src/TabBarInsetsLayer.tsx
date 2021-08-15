@@ -11,14 +11,6 @@ export function TabBarInsetsLayer(props: LayerProps): ReactElement {
             marginRight={tabBarInsets.right}
             marginLeft={tabBarInsets.left}
             marginBottom={tabBarInsets.bottom}
-            // from={false}
-            // animate={{
-            //     marginTop: tabBarInsets.top,
-            //     marginRight: tabBarInsets.right,
-            //     marginLeft: tabBarInsets.left,
-            //     marginBottom: tabBarInsets.bottom
-            // }}
-            // transition={{ type: 'timing' }}
             flex={1}
             position='relative'
             overflow={'hidden'}

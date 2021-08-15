@@ -11,14 +11,6 @@ export function NavigationBarInsetsLayer(props: LayerProps): ReactElement {
             marginRight={navigationBarInsets.right}
             marginLeft={navigationBarInsets.left}
             marginBottom={navigationBarInsets.bottom}
-            // from={false}
-            // animate={{
-            //     marginTop: navigationBarInsets.top,
-            //     marginRight: navigationBarInsets.right,
-            //     marginLeft: navigationBarInsets.left,
-            //     marginBottom: navigationBarInsets.bottom
-            // }}
-            // transition={{ type: 'timing' }}
             flex={1}
             position='relative'
             overflow={'hidden'}
