@@ -9,23 +9,16 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Layer } from '@bma98/fractal-ui';
 import { TabBarContextProvider } from '@bma98/fractal-navigation';
 import { ScreenContainer } from '../../components/ScreenContainer';
+const styles = { flex: 1 };
 export function TabNavigator(_a) {
-    var { tabBar, children, style } = _a, others = __rest(_a, ["tabBar", "children", "style"]);
-    const finalStyle = useMemo(() => {
-        return [
-            style,
-            {
-                flex: 1
-            }
-        ];
-    }, [style]);
+    var { tabBar, children } = _a, others = __rest(_a, ["tabBar", "children"]);
     return (React.createElement(TabBarContextProvider, null,
         React.createElement(Layer, { flex: 1, overflow: 'hidden' },
-            React.createElement(ScreenContainer, Object.assign({}, others, { style: finalStyle }), children),
+            React.createElement(ScreenContainer, Object.assign({}, others, { style: styles }), children),
             tabBar)));
 }
 //# sourceMappingURL=TabNavigator.js.map

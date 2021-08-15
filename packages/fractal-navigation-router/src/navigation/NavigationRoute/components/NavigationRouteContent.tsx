@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react';
-import { Route } from '../../router';
-import { useScreenActivityState } from './hooks/useScreenActivityState';
-import { useIsInitialRenderDone } from '../../hooks';
-import { useNavigationRouteStyles } from './hooks/useNavigationRouteStyles';
-import { StackPresentationTypeProvider } from '../StackNavigation';
-import { Screen } from '../../components';
-import { NavigationRouteProps } from './types/NavigationRouteProps';
+import { Route } from '../../../router';
+import { useScreenActivityState } from '../hooks/useScreenActivityState';
+import { useIsInitialRenderDone } from '../../../hooks';
+import { useNavigationRouteStyles } from '../hooks/useNavigationRouteStyles';
+import { StackPresentationTypeProvider } from '../../StackNavigation';
+import { Screen } from '../../../components';
+import { NavigationRouteProps } from '../types/NavigationRouteProps';
 
 export function NavigationRouteContent({
     path = '/',
@@ -13,7 +13,6 @@ export function NavigationRouteContent({
     children,
     isTabScreen,
     stackPresentation = 'push',
-    isRootRoute = false,
     ...others
 }: NavigationRouteProps): JSX.Element | null {
     const renderChildren = useCallback(() => children, [children]);

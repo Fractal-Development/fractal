@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { NavigationRouteContent } from './NavigationRouteContent';
+import { NavigationRouteContent } from './components/NavigationRouteContent';
 import { NavigationRouteProps } from './types/NavigationRouteProps';
 import { useTheme } from '@bma98/fractal-ui';
 
@@ -10,7 +10,7 @@ export function NavigationRoute({ onDismissed, ...others }: NavigationRouteProps
         return () => {
             onDismissed?.();
         };
-    }, []);
+    }, [onDismissed]);
 
     return (
         <NavigationRouteContent

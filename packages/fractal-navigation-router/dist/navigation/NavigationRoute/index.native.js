@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationRouteContent } from './NavigationRouteContent';
+import { NavigationRouteContent } from './components/NavigationRouteContent';
 import { useTheme } from '@bma98/fractal-ui';
 export function NavigationRoute(props) {
     const theme = useTheme();
