@@ -16,6 +16,6 @@ export function SimpleTabBarItemLink(_a) {
     var { path } = _a, others = __rest(_a, ["path"]);
     const isRouteActive = useIsRouteActive(path, false);
     const goToTab = useGoToTab(path, isRouteActive);
-    return React.createElement(SimpleTabBarItem, Object.assign({}, others, { onTabPress: goToTab, active: isRouteActive }));
+    return React.createElement(SimpleTabBarItem, Object.assign({}, others, { tabIdentifier: path, onTabPress: goToTab, active: isRouteActive }));
 }
 //# sourceMappingURL=SimpleTabBarItemLink.js.map

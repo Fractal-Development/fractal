@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { useIsRouteActive } from '../../../../hooks/useIsRouteActive';
 import { useGoToTab } from './hooks/useGoToTab';
 
-export interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress'> {
+export interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
     path: string;
 }
 
@@ -11,5 +11,5 @@ export function SimpleTabBarItemLink({ path, ...others }: SimpleTabBarItemLinkPr
     const isRouteActive = useIsRouteActive(path, false);
     const goToTab = useGoToTab(path, isRouteActive);
 
-    return <SimpleTabBarItem {...others} onTabPress={goToTab} active={isRouteActive} />;
+    return <SimpleTabBarItem {...others} tabIdentifier={path} onTabPress={goToTab} active={isRouteActive} />;
 }
