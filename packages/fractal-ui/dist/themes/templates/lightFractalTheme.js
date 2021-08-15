@@ -111,31 +111,31 @@ export const textVariants = {
         fontFamily: systemFont
     },
     title: {
-        fontSize: 27,
-        fontWeight: 700,
-        color: 'text',
-        fontFamily: systemFont
-    },
-    title2: {
         fontSize: 25,
         fontWeight: 700,
         color: 'text',
         fontFamily: systemFont
     },
-    title3: {
+    title2: {
         fontSize: 23,
         fontWeight: 700,
         color: 'text',
         fontFamily: systemFont
     },
-    subtitle: {
+    title3: {
         fontSize: 21,
+        fontWeight: 700,
+        color: 'text',
+        fontFamily: systemFont
+    },
+    subtitle: {
+        fontSize: 19,
         fontWeight: 600,
         color: 'text',
         fontFamily: systemFont
     },
     placeholder: {
-        fontSize: 21,
+        fontSize: 17,
         fontWeight: 600,
         color: 'placeholder',
         fontFamily: systemFont
