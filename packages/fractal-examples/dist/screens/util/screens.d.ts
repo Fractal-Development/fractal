@@ -2,5 +2,21 @@ export interface Screen {
     name: string;
     path: string;
 }
-export declare const componentScreens: Array<Screen>;
+export declare const screens: {
+    recyclerViewFragment: {
+        name: string;
+        path: string;
+    };
+    chipFragment: {
+        name: string;
+        path: string;
+    };
+};
+export declare const screensArray: ({
+    name: string;
+    path: string;
+} | {
+    name: string;
+    path: string;
+})[];
 export declare const lastScreenIndex: number;
