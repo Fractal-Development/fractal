@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FractalAppRoot } from '@bma98/fractal-ui';
-import { NavigationRouter, StackNavigator } from '@bma98/fractal-navigation-router';
+import { NavigationRouter, SimpleTabBarItemLink, StackNavigator, TabNavigator, TabScreen } from '@bma98/fractal-navigation-router';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
+import { TabBar } from '@bma98/fractal-navigation';
+import { ReactIcon } from './assets/ReactIcon';
+
+function renderReactIcon(color, size) {
+    return <ReactIcon fill={color} height={size} width={size} />;
+}
+
+function MainTabBar(): ReactElement {
+    return (
+        <TabBar tabBarPosition='bottom'>
+            <SimpleTabBarItemLink path='/components' title='Components'>
+                {renderReactIcon}
+            </SimpleTabBarItemLink>
+        </TabBar>
+    );
+}
 
 export function MainExample(): JSX.Element {
     return (
         <FractalAppRoot handleThemeManually>
             <NavigationRouter>
-                <StackNavigator path='/'>
-                    <RootScreen />
-                    <RecyclerViewFragmentScreen />
-                    <ChipFragmentScreen />
-                </StackNavigator>
+                <TabNavigator tabBar={<MainTabBar />}>
+                    <TabScreen path='/components'>
+                        <StackNavigator path='/components'>
+                            <RootScreen />
+                            <RecyclerViewFragmentScreen />
+                            <ChipFragmentScreen />
+                        </StackNavigator>
+                    </TabScreen>
+                </TabNavigator>
             </NavigationRouter>
         </FractalAppRoot>
     );
