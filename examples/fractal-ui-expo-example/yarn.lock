@@ -1133,7 +1133,7 @@
 
 "@bma98/fractal-charts@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#6747d9abb91f196557dd8e7cb6137f6da5fb4f18"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master#16f3a9fae4ad49845b5229097f7536115308d637"
   dependencies:
     "@types/node" "^16.3.2"
     d3-array "2.3.3"
@@ -1142,20 +1142,20 @@
 
 "@bma98/fractal-examples@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#24c81b34709e6898e2bb0efd7f1f51519ea306ab"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master#0ec7c1833541c575c4507db6d7261449a411be7e"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-media@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#1dbb9cd9e76c22b6492e4e0744cfb1210a79f047"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#b3cc5e057bbd6032b7dd7fd1c400e44c2bf9d785"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
 "@bma98/fractal-messaging@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master#2bac1055ce4b750d76453b1d58eb134adcaf0e54"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master#7cf1359f4d933617845409d3ed47b95647ad4bfa"
   dependencies:
     "@bma98/fractal-media" "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master"
     "@bma98/size-class" "^2.2.4"
@@ -1164,15 +1164,15 @@
 
 "@bma98/fractal-navigation-router@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master#505700335efbbad08176f78fe0b489211f9d31af"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master#3e6b7168f10cf40a952b47a87056a928cfab6abe"
 
 "@bma98/fractal-navigation@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master#1da89a5c0433568b4f404a63789cde10039a3190"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master#4c68fe8727a085dac0cff797a2c35be0b1e8e4bc"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#c8bf03acbc0942e2ca4ae22b35fb3580f643c3c2"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#b29df73c0a5fb924bbce3f4b4eb69b8a3357f7f5"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -2168,9 +2168,9 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "17.0.17"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.17.tgz#1772d3d5425128e0635a716f49ef57c2955df055"
-  integrity sha512-nrfi7I13cAmrd0wje8czYpf5SFbryczCtPzFc6ijqvdjKcyA3tCvGxwchOUlxb2ucBPuJ9Y3oUqKrRqZvrz0lw==
+  version "17.0.18"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.18.tgz#4109cbbd901be9582e5e39e3d77acd7b66bb7fbe"
+  integrity sha512-YTLgu7oS5zvSqq49X5Iue5oAbVGhgPc5Au29SJC4VeE17V6gASoOxVkUDy9pXFMRFxCWCD9fLeweNFizo3UzOg==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
