@@ -6,6 +6,7 @@ import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
 import { TabBar } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
+import { routes } from './screens/util/routes';
 function renderReactIcon(color, size) {
     return React.createElement(ReactIcon, { fill: color, height: size, width: size });
 }
@@ -17,8 +18,8 @@ export function MainExample() {
     return (React.createElement(FractalAppRoot, { handleThemeManually: true },
         React.createElement(NavigationRouter, null,
             React.createElement(TabNavigator, { tabBar: React.createElement(MainTabBar, null) },
-                React.createElement(TabScreen, { path: '/components' },
-                    React.createElement(StackNavigator, { path: '/components' },
+                React.createElement(TabScreen, { path: routes.components },
+                    React.createElement(StackNavigator, { path: routes.components },
                         React.createElement(RootScreen, null),
                         React.createElement(RecyclerViewFragmentScreen, null),
                         React.createElement(ChipFragmentScreen, null)))))));

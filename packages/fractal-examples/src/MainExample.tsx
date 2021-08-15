@@ -6,6 +6,7 @@ import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
 import { TabBar } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
+import { routes } from './screens/util/routes';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;
@@ -26,8 +27,8 @@ export function MainExample(): JSX.Element {
         <FractalAppRoot handleThemeManually>
             <NavigationRouter>
                 <TabNavigator tabBar={<MainTabBar />}>
-                    <TabScreen path='/components'>
-                        <StackNavigator path='/components'>
+                    <TabScreen path={routes.components}>
+                        <StackNavigator path={routes.components}>
                             <RootScreen />
                             <RecyclerViewFragmentScreen />
                             <ChipFragmentScreen />

@@ -2,9 +2,9 @@ import React from 'react';
 import { StackScreen, NavigationBarConfig } from '@bma98/fractal-navigation-router';
 import { NavigationLayer } from '@bma98/fractal-navigation';
 import { RecyclerViewFragment } from '../ui-fragments';
-import { screens } from './util/screens';
+import { componentScreens } from './util/screens';
 import { PaddingLayer } from '@bma98/fractal-ui';
-const data = screens.find((item) => item.name === 'Recycler View Fragment');
+const data = componentScreens.find((item) => item.name === 'Recycler View Fragment');
 export function RecyclerViewFragmentScreen() {
     return (React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: data === null || data === void 0 ? void 0 : data.name }), path: data === null || data === void 0 ? void 0 : data.path },
         React.createElement(NavigationLayer, null,

@@ -1,12 +1,13 @@
-export const screens = [
+import { routes } from './routes';
+export const componentScreens = [
     {
         name: 'Recycler View Fragment',
-        path: '/recycler_view_fragment_screen'
+        path: routes.component.replace(':component', 'recycler_view_fragment_screen')
     },
     {
         name: 'Chip Fragment',
-        path: '/chip_fragment_screen'
+        path: routes.component.replace(':component', 'chip_fragment_screen')
     }
 ];
-export const lastScreenIndex = screens.length - 1;
+export const lastScreenIndex = componentScreens.length - 1;
 //# sourceMappingURL=screens.js.map
