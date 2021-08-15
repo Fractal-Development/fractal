@@ -11,13 +11,15 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
 
     const justifyContent = tabBarPosition === 'bottom' ? 'center' : 'flex-start';
+    const shadow =
+        tabBarPosition === 'bottom' ? tabBar.shadow : tabBarPosition === 'left' ? tabBar.leftPositionShadow : tabBar.rightPositionShadow;
 
     return (
         <Layer
             animate={{ translateY, translateX }}
             transition={{ type: 'timing' }}
             backgroundColor={tabBar.backgroundColor}
-            boxShadow={tabBar.shadow}
+            boxShadow={shadow}
             justifyContent={justifyContent}
             position={tabBarCSSPosition}
             zIndex={3000}

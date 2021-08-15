@@ -19,6 +19,7 @@ export function TabBarBackground(props) {
     const _a = useTabBarPositionLayoutProps(tabBarPosition), { translateY, translateX } = _a, layoutProps = __rest(_a, ["translateY", "translateX"]);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
     const justifyContent = tabBarPosition === 'bottom' ? 'center' : 'flex-start';
-    return (React.createElement(Layer, Object.assign({ animate: { translateY, translateX }, transition: { type: 'timing' }, backgroundColor: tabBar.backgroundColor, boxShadow: tabBar.shadow, justifyContent: justifyContent, position: tabBarCSSPosition, zIndex: 3000 }, layoutProps, tabBarSafeAreaPadding, props)));
+    const shadow = tabBarPosition === 'bottom' ? tabBar.shadow : tabBarPosition === 'left' ? tabBar.leftPositionShadow : tabBar.rightPositionShadow;
+    return (React.createElement(Layer, Object.assign({ animate: { translateY, translateX }, transition: { type: 'timing' }, backgroundColor: tabBar.backgroundColor, boxShadow: shadow, justifyContent: justifyContent, position: tabBarCSSPosition, zIndex: 3000 }, layoutProps, tabBarSafeAreaPadding, props)));
 }
 //# sourceMappingURL=TabBarBackground.js.map
