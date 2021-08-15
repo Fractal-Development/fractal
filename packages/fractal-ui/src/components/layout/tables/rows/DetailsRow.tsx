@@ -16,7 +16,9 @@ const DetailsRow = forwardRef(({ title, details, ...others }: DetailsRowProps, r
                 <Layer flexGrow={1}>
                     <Text variant='small'>{title}</Text>
                 </Layer>
-                <Text variant='label'>{details}</Text>
+                <Text variant='label' maxWidth={150} ellipsizeMode='clip' numberOfLines={1}>
+                    {details}
+                </Text>
             </HorizontalLayer>
         </BaseRow>
     );

@@ -20,7 +20,7 @@ const DetailsRow = forwardRef((_a, ref) => {
         React.createElement(HorizontalLayer, null,
             React.createElement(Layer, { flexGrow: 1 },
                 React.createElement(Text, { variant: 'small' }, title)),
-            React.createElement(Text, { variant: 'label' }, details))));
+            React.createElement(Text, { variant: 'label', maxWidth: 150, ellipsizeMode: 'clip', numberOfLines: 1 }, details))));
 });
 DetailsRow.displayName = 'DetailsRow';
 export { DetailsRow };
