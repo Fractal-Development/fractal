@@ -1,2 +1,2 @@
-export * from './SimpleTabBarItemLink';
+export * from './components';
 //# sourceMappingURL=index.js.map

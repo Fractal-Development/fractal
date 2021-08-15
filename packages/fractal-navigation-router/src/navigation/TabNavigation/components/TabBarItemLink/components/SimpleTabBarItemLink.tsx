@@ -1,7 +1,7 @@
 import React, { SimpleTabBarItem, SimpleTabBarItemProps } from '@bma98/fractal-navigation';
 import { ReactElement } from 'react';
-import { useIsRouteActive } from '../../../../hooks/useIsRouteActive';
-import { useGoToTab } from './hooks/useGoToTab';
+import { useIsRouteActive } from '../../../../../hooks/useIsRouteActive';
+import { useGoToTab } from '../hooks/useGoToTab';
 
 export interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
     path: string;

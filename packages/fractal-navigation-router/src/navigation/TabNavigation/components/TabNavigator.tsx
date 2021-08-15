@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layer } from '@bma98/fractal-ui';
 import { TabBarContextProvider } from '@bma98/fractal-navigation';
-import { ScreenContainer } from '../../components/ScreenContainer';
+import { ScreenContainer } from '../../../components/ScreenContainer';
 
 export interface TabNavigatorProps {
     children: Array<JSX.Element> | JSX.Element;

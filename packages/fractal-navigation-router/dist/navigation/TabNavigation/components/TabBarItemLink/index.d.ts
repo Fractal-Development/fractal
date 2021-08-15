@@ -1,1 +1,1 @@
-export * from './SimpleTabBarItemLink';
+export * from './components';

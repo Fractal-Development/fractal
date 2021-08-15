@@ -14,7 +14,7 @@ import { NavigationRoute } from '../../../NavigationRoute';
 import { NavigationBar } from '@bma98/fractal-navigation';
 import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 import { useGoBackAnimated } from '../../hooks/useGoBackAnimated';
-import { StackScreenWebContainer } from '../StackScreenWebContainers/StackScreenWebContainer';
+import { StackScreenWebContainer } from '../StackScreenWebContainer';
 function StackScreenWebContent({ path = '/', navBarConfig, children }) {
     const isRootNavigationBar = useIsRootNavigationBar(path);
     const goBack = useGoBackAnimated();

@@ -4,7 +4,7 @@ import { NavigationRoute } from '../../../NavigationRoute';
 import { NavigationBar } from '@bma98/fractal-navigation';
 import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 import { useGoBackAnimated } from '../../hooks/useGoBackAnimated';
-import { StackScreenWebContainer } from '../StackScreenWebContainers/StackScreenWebContainer';
+import { StackScreenWebContainer } from '../StackScreenWebContainer';
 
 interface StackScreenProps extends NavigationRouteProps {
     navBarConfig?: ReactElement;
