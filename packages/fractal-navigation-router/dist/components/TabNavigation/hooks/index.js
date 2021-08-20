@@ -1,2 +1,2 @@
-export * from './useTabBarItemHistory';
+export * from './useTabBarItemsHistory';
 //# sourceMappingURL=index.js.map

@@ -1,1 +1,1 @@
-export * from './useTabBarItemHistory';
+export * from './useTabBarItemsHistory';
