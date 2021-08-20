@@ -13,12 +13,14 @@ import React from 'react';
 import { Layer } from '@bma98/fractal-ui';
 import { TabBarContextProvider } from '@bma98/fractal-navigation';
 import { ScreenContainer } from '../../ScreenContainer';
+import { TabBarItemsHistoryProvider } from '../context';
 const styles = { flex: 1 };
 export function TabNavigator(_a) {
     var { tabBar, children } = _a, others = __rest(_a, ["tabBar", "children"]);
     return (React.createElement(TabBarContextProvider, null,
-        React.createElement(Layer, { flex: 1, overflow: 'hidden' },
-            React.createElement(ScreenContainer, Object.assign({}, others, { style: styles }), children),
-            tabBar)));
+        React.createElement(TabBarItemsHistoryProvider, null,
+            React.createElement(Layer, { flex: 1, overflow: 'hidden' },
+                React.createElement(ScreenContainer, Object.assign({}, others, { style: styles }), children),
+                tabBar))));
 }
 //# sourceMappingURL=TabNavigator.js.map
