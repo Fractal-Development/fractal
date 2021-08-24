@@ -11,15 +11,24 @@ export function SuggestionItem({ label, itemData, isMultiple, addSeparator, onPr
         onPress();
         setSelectedOptions([...selectedOptions, option]);
     };
+    const addOption = (option) => {
+        onPress();
+        setSelectedOptions([option]);
+    };
     const removeSelectedOption = (option) => {
         setSelectedOptions(selectedOptions.filter((item) => item.id != option.id));
     };
     const onOptionPress = () => {
-        if (!isSelected) {
-            addSelectedOption(itemData);
+        if (isMultiple) {
+            if (!isSelected) {
+                addSelectedOption(itemData);
+            }
+            else {
+                removeSelectedOption(itemData);
+            }
         }
         else {
-            removeSelectedOption(itemData);
+            addOption(itemData);
         }
     };
     return (React.createElement(TouchableOpacity, { width: '100%', onPress: onOptionPress }, isMultiple ? (React.createElement(CheckMarkRow, { title: label, isSelected: isSelected, addSeparator: addSeparator, minHeight: SUGGESTION_ITEM_HEIGHT })) : (React.createElement(SimpleRow, { title: label, addSeparator: addSeparator }))));

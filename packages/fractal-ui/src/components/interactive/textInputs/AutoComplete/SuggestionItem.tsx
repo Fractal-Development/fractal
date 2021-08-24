@@ -30,15 +30,24 @@ export function SuggestionItem<T extends IDEnabled>({
         setSelectedOptions([...selectedOptions, option]);
     };
 
+    const addOption = (option: T) => {
+        onPress();
+        setSelectedOptions([option]);
+    };
+
     const removeSelectedOption = (option: T) => {
         setSelectedOptions(selectedOptions.filter((item: T) => item.id != option.id));
     };
 
     const onOptionPress = () => {
-        if (!isSelected) {
-            addSelectedOption(itemData);
+        if (isMultiple) {
+            if (!isSelected) {
+                addSelectedOption(itemData);
+            } else {
+                removeSelectedOption(itemData);
+            }
         } else {
-            removeSelectedOption(itemData);
+            addOption(itemData);
         }
     };
 
