@@ -22,11 +22,11 @@ const PopoverContent = forwardRef(
         ref: any
     ): JSX.Element => {
         return (
-            <Layer ref={ref} position={'relative'} display={'inline-block'} {...others}>
-                {children(anchorRef)}
-                <AnimatePresence>
-                    {active ? (
-                        <OutsideClickListener onOutsideClick={onRequestClose}>
+            <OutsideClickListener onOutsideClick={onRequestClose}>
+                <Layer ref={ref} position={'relative'} display={'inline-block'} {...others}>
+                    {children(anchorRef)}
+                    <AnimatePresence>
+                        {active ? (
                             <Layer
                                 ref={popoverRef}
                                 from={styleVariants.initial}
@@ -39,10 +39,10 @@ const PopoverContent = forwardRef(
                             >
                                 {popoverChildren(anchorWidth)}
                             </Layer>
-                        </OutsideClickListener>
-                    ) : null}
-                </AnimatePresence>
-            </Layer>
+                        ) : null}
+                    </AnimatePresence>
+                </Layer>
+            </OutsideClickListener>
         );
     }
 );
