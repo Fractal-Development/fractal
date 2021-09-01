@@ -38,7 +38,7 @@ export function alignWebPortalPopoverIfRequired(
             style.left = style.left - popoverWidth - offsetWidth;
         }
     }
-    if (isOverflowingTop) {
+    if (isOverflowingTop && placement != 'bottom') {
         style.top = style.top + offsetHeight + popoverHeight;
         style.transform = isVertical ? style.transform : undefined;
     }
