@@ -1,4 +1,4 @@
-export function extractDimensionProps({ height, maxHeight, minHeight, maxWidth, minWidth, width, padding, paddingBottom, paddingLeft, paddingRight, paddingTop, margin, marginBottom, marginLeft, marginRight, marginTop }) {
+export function extractDimensionProps({ height, maxHeight, minHeight = 0, maxWidth, minWidth = 0, width, padding = 0, paddingBottom, paddingLeft, paddingRight, paddingTop, margin = 0, marginBottom, marginLeft, marginRight, marginTop }) {
     return `
         ${height != null ? `height: ${typeof height === 'number' ? `${height}px` : height}` : ''};
         ${minHeight != null ? `min-height: ${typeof minHeight === 'number' ? `${minHeight}px` : minHeight}` : ''};

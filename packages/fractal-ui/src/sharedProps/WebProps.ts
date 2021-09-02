@@ -39,6 +39,9 @@ export interface WebProps {
 
 export function extractWebProps({ cursor, pointerEvents, focusable, boxSizing = 'border-box' }: WebProps): string {
     return `
+        -webkit-box-align: stretch;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
         ${cursor ? `cursor: ${cursor}` : ''};
         ${pointerEvents ? `pointer-events: ${pointerEvents === 'box-none' ? 'none' : pointerEvents}` : ''};
         ${boxSizing ? `box-sizing: ${boxSizing}` : ''};

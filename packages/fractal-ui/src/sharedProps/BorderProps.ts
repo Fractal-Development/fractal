@@ -19,13 +19,13 @@ export function extractBorderProps({
     borderTopRightRadius,
     borderBottomLeftRadius,
     borderBottomRightRadius,
-    borderWidth,
+    borderWidth = 0,
     borderTopWidth,
     borderBottomWidth,
     borderLeftWidth,
     borderRightWidth,
     borderColor,
-    borderStyle
+    borderStyle = 'solid'
 }: BorderProps): string {
     return `
         ${borderRadius != null ? `border-radius: ${borderRadius}px` : ''};

@@ -26,25 +26,24 @@ export function extractDisplayProps({
     flex,
     display,
     justifyContent,
-    alignItems,
-    flexDirection,
+    alignItems = 'stretch',
+    flexDirection = 'column',
     alignSelf,
     alignContent,
     flexWrap,
-    flexBasis,
+    flexBasis = 'auto',
     flexGrow,
-    flexShrink,
-    position,
+    flexShrink = 0,
+    position = 'relative',
     top,
     right,
     bottom,
     left,
-    zIndex,
+    zIndex = 0,
     opacity,
     overflow
 }: DisplayProps): string {
     return `
-        ${flex != null ? `flex: ${flex}` : ''};
         ${getDisplayProperty(display)};
         ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};
         ${justifyContent != null ? `justify-content: ${justifyContent}` : ''};
@@ -63,5 +62,7 @@ export function extractDisplayProps({
         ${zIndex != null ? `z-index: ${zIndex}` : ''};
         ${opacity != null ? `opacity: ${opacity}` : ''};
         ${overflow != null ? `overflow: ${overflow}` : ''};
+        ${flex != null ? `flex: ${flex} 1 0%` : ''};
+        ${flex != null ? `-webkit-box-flex: ${flex}` : ''};
     `;
 }
