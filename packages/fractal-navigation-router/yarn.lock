@@ -1166,13 +1166,13 @@
 
 "@bma98/fractal-navigation@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master#d5cc8f302bcf3d20da87ee65119beb196807b958"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master#13d821143e3eab075d33ac42325314e359e94639"
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#2755cc321a5084081880df36df4beda087013146"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#83945af460887a11eeb1865d84a043914289ef57"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"

@@ -32,6 +32,6 @@ export function StackNavigator(_a) {
     }, [childrenToRender, isRouteActive]);
     return (React.createElement(StackNavigatorRootPathProvider, { initialValue: path },
         React.createElement(NavigationBarInsetsProvider, null,
-            React.createElement(ScreenStack, Object.assign({ flex: 1, overflow: 'hidden', style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current))));
+            React.createElement(ScreenStack, Object.assign({ flex: 1, style: finalStyle }, others), isRouteActive ? childrenToRender : prevChildrenRef.current))));
 }
 //# sourceMappingURL=index.js.map

@@ -19,7 +19,7 @@ export function TabNavigator(_a) {
     var { tabBar, children } = _a, others = __rest(_a, ["tabBar", "children"]);
     return (React.createElement(TabBarContextProvider, null,
         React.createElement(TabBarItemsHistoryProvider, null,
-            React.createElement(Layer, { flex: 1, overflow: 'hidden' },
+            React.createElement(Layer, { flex: 1 },
                 React.createElement(ScreenContainer, Object.assign({}, others, { style: styles }), children),
                 tabBar))));
 }

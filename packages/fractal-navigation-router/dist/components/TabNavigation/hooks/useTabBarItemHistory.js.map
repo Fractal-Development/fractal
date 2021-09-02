@@ -1,1 +1,0 @@
-{"version":3,"file":"useTabBarItemHistory.js","sourceRoot":"","sources":["../../../../src/components/TabNavigation/hooks/useTabBarItemHistory.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,yBAAyB,EAAiC,MAAM,uCAAuC,CAAC;AAEjH,MAAM,UAAU,oBAAoB;IAChC,OAAO,UAAU,CAAC,yBAAyB,CAAC,CAAC;AACjD,CAAC"}

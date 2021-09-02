@@ -3,6 +3,6 @@ import { useNavigationBarInsets } from './NavigationBar/hooks/useNavigationBarIn
 import { SafeAreaLayer } from '@bma98/fractal-ui';
 export function NavigationBarInsetsLayer(props) {
     const navigationBarInsets = useNavigationBarInsets();
-    return (React.createElement(SafeAreaLayer, Object.assign({ marginTop: navigationBarInsets.top, marginRight: navigationBarInsets.right, marginLeft: navigationBarInsets.left, marginBottom: navigationBarInsets.bottom, flex: 1, position: 'relative', overflow: 'hidden' }, props)));
+    return (React.createElement(SafeAreaLayer, Object.assign({ marginTop: navigationBarInsets.top, marginRight: navigationBarInsets.right, marginLeft: navigationBarInsets.left, marginBottom: navigationBarInsets.bottom, flex: 1, position: 'relative' }, props)));
 }
 //# sourceMappingURL=NavigationBarInsetsLayer.js.map
