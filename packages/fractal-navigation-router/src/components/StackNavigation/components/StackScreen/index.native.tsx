@@ -23,7 +23,6 @@ export function StackScreen({ children, navBarConfig, stackPresentation = 'push'
             right={0}
             bottom={0}
             position={'absolute'}
-            overflow={'hidden'}
             {...others}
             onDismissed={goBack}
             stackPresentation={stackPresentation}

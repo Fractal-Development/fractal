@@ -31,7 +31,7 @@ export function StackNavigator({ path = '', children, style, ...others }: StackN
     return (
         <StackNavigatorRootPathProvider initialValue={path}>
             <NavigationBarInsetsProvider>
-                <ScreenStack flex={1} overflow={'hidden'} style={finalStyle} {...others}>
+                <ScreenStack flex={1} style={finalStyle} {...others}>
                     {isRouteActive ? childrenToRender : prevChildrenRef.current}
                 </ScreenStack>
             </NavigationBarInsetsProvider>

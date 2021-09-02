@@ -15,7 +15,7 @@ export function TabNavigator({ tabBar, children, ...others }: TabNavigatorProps)
     return (
         <TabBarContextProvider>
             <TabBarItemsHistoryProvider>
-                <Layer flex={1} overflow={'hidden'}>
+                <Layer flex={1}>
                     <ScreenContainer {...others} style={styles}>
                         {children}
                     </ScreenContainer>
