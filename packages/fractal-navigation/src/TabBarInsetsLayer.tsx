@@ -13,7 +13,6 @@ export function TabBarInsetsLayer(props: LayerProps): ReactElement {
             marginBottom={tabBarInsets.bottom}
             flex={1}
             position='relative'
-            overflow={'hidden'}
             {...props}
         />
     );

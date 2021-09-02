@@ -13,7 +13,6 @@ export function NavigationBarInsetsLayer(props: LayerProps): ReactElement {
             marginBottom={navigationBarInsets.bottom}
             flex={1}
             position='relative'
-            overflow={'hidden'}
             {...props}
         />
     );
