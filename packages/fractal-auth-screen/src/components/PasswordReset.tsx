@@ -1,9 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Message, IconTextField, Separator, TextButton, useTheme } from '@bma98/fractal-ui';
-import { LayoutAnimation } from 'react-native';
-import { renderEmailIcon } from './util/renderEmailIcon';
-import { renderLockIcon } from './util/renderLockIcon';
-import { PasswordResetProps } from './types/PasswordResetProps';
+import { renderLockIcon, renderEmailIcon, scheduleAnimation } from './util';
+import { PasswordResetProps } from './types';
 
 export function PasswordReset({
     emailPlaceholder,
@@ -21,7 +19,7 @@ export function PasswordReset({
 
     const handlePasswordReset = async () => {
         if (email !== '') {
-            LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+            scheduleAnimation();
             toggleLoading();
             setShowMessage(true);
             try {

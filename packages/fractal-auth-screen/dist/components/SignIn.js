@@ -9,8 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import React, { useCallback, useState } from 'react';
 import { Button, IconTextField, Separator, TextButton, useTheme } from '@bma98/fractal-ui';
-import { renderEmailIcon } from './util/renderEmailIcon';
-import { renderLockIcon } from './util/renderLockIcon';
+import { renderLockIcon, renderEmailIcon } from './util';
 const textFieldProps = {
     secureTextEntry: true
 };

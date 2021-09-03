@@ -10,9 +10,9 @@ export interface AuthenticationScreenProps
         Omit<PasswordResetProps, 'onSignInButtonPress'> {
     logo?: JSX.Element;
     removeAppleButton?: boolean;
+    removeSocialMediaButtons?: boolean;
     background?: JSX.Element;
     footer?: JSX.Element;
-    androidID: string;
     handleGoogleSignIn?: () => Promise<void>;
     handleFacebookSignIn?: () => Promise<void>;
     handleAppleSignIn?: () => Promise<void>;

@@ -21,6 +21,7 @@ export function AuthenticationScreen({
     handleGoogleSignIn,
     handleFacebookSignIn,
     handleAppleSignIn,
+    removeSocialMediaButtons,
     ...others
 }: AuthenticationScreenProps): JSX.Element {
     const [state, setState] = useState<AuthenticationScreenState>('signIn');
@@ -93,16 +94,18 @@ export function AuthenticationScreen({
                                     )}
                                 </ErrorMessage>
                             </Box>
-                            <SocialMediaButtons
-                                width={'100%'}
-                                onApplePress={handleAppleButtonPress}
-                                onGooglePress={handleGoogleButtonPress}
-                                onFacebookPress={handleFacebookButtonPress}
-                                googleLoading={googleLoading}
-                                appleLoading={appleLoading}
-                                facebookLoading={facebookLoading}
-                                removeAppleButton={removeAppleButton}
-                            />
+                            {!removeSocialMediaButtons && (
+                                <SocialMediaButtons
+                                    width={'100%'}
+                                    onApplePress={handleAppleButtonPress}
+                                    onGooglePress={handleGoogleButtonPress}
+                                    onFacebookPress={handleFacebookButtonPress}
+                                    googleLoading={googleLoading}
+                                    appleLoading={appleLoading}
+                                    facebookLoading={facebookLoading}
+                                    removeAppleButton={removeAppleButton}
+                                />
+                            )}
                         </PaddingLayer>
                     </Layer>
                 </Layer>

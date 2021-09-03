@@ -1,4 +1,4 @@
-import { memo, ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 
 export interface CredentialValidatorProps {
     key: string;
@@ -11,37 +11,35 @@ export interface CredentialValidatorProps {
 
 type AuthenticationState = 'loading' | 'accessIsAllowed' | 'accessIsNotAllowed';
 
-export const AuthenticationCheck = memo(
-    ({
-        loadingComponent,
-        children,
-        redirectComponent,
-        checkIfShouldAllowAccess,
-        onCredentialLoadFailed
-    }: CredentialValidatorProps): ReactElement => {
-        const [authenticationState, setAuthenticationState] = useState<AuthenticationState>('loading');
+export function AuthenticationCheck({
+    loadingComponent,
+    children,
+    redirectComponent,
+    checkIfShouldAllowAccess,
+    onCredentialLoadFailed
+}: CredentialValidatorProps): ReactElement {
+    const [authenticationState, setAuthenticationState] = useState<AuthenticationState>('loading');
 
-        useEffect(() => {
-            checkIfShouldAllowAccess()
-                .then((isValid) => {
-                    setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
-                })
-                .catch((error) => {
-                    console.log(error.message);
-                    onCredentialLoadFailed?.(error.message);
-                    setAuthenticationState('accessIsNotAllowed');
-                });
-        }, [checkIfShouldAllowAccess, onCredentialLoadFailed]);
+    useEffect(() => {
+        checkIfShouldAllowAccess()
+            .then((isValid) => {
+                return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
+            })
+            .catch((error) => {
+                console.log(error.message);
+                onCredentialLoadFailed?.(error.message);
+                setAuthenticationState('accessIsNotAllowed');
+            });
+    }, [checkIfShouldAllowAccess, onCredentialLoadFailed]);
 
-        switch (authenticationState) {
-            case 'loading':
-                return loadingComponent;
-            case 'accessIsAllowed':
-                return children;
-            case 'accessIsNotAllowed':
-                return redirectComponent;
-        }
+    switch (authenticationState) {
+        case 'loading':
+            return loadingComponent;
+        case 'accessIsAllowed':
+            return children;
+        case 'accessIsNotAllowed':
+            return redirectComponent;
     }
-);
+}
 
 AuthenticationCheck.displayName = 'AuthenticationCheck';

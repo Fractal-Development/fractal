@@ -1,10 +1,10 @@
-import { memo, useEffect, useState } from 'react';
-export const AuthenticationCheck = memo(({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed }) => {
+import { useEffect, useState } from 'react';
+export function AuthenticationCheck({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed }) {
     const [authenticationState, setAuthenticationState] = useState('loading');
     useEffect(() => {
         checkIfShouldAllowAccess()
             .then((isValid) => {
-            setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
+            return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
         })
             .catch((error) => {
             console.log(error.message);
@@ -20,6 +20,6 @@ export const AuthenticationCheck = memo(({ loadingComponent, children, redirectC
         case 'accessIsNotAllowed':
             return redirectComponent;
     }
-});
+}
 AuthenticationCheck.displayName = 'AuthenticationCheck';
 //# sourceMappingURL=AuthenticationCheck.js.map

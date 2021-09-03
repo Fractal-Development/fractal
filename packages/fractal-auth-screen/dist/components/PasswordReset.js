@@ -9,9 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import React, { useCallback, useState } from 'react';
 import { Button, Message, IconTextField, Separator, TextButton, useTheme } from '@bma98/fractal-ui';
-import { LayoutAnimation } from 'react-native';
-import { renderEmailIcon } from './util/renderEmailIcon';
-import { renderLockIcon } from './util/renderLockIcon';
+import { renderLockIcon, renderEmailIcon, scheduleAnimation } from './util';
 export function PasswordReset({ emailPlaceholder, resetPasswordText, resetPasswordDescriptionText, onSignInButtonPress, signInText, resetPassword }) {
     const [email, setEmail] = useState('');
     const [showMessage, setShowMessage] = useState(false);
@@ -20,7 +18,7 @@ export function PasswordReset({ emailPlaceholder, resetPasswordText, resetPasswo
     const { spacings } = useTheme();
     const handlePasswordReset = () => __awaiter(this, void 0, void 0, function* () {
         if (email !== '') {
-            LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+            scheduleAnimation();
             toggleLoading();
             setShowMessage(true);
             try {

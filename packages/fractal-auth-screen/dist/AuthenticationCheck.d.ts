@@ -7,4 +7,7 @@ export interface CredentialValidatorProps {
     loadingComponent: ReactElement;
     redirectComponent: ReactElement;
 }
-export declare const AuthenticationCheck: import("react").MemoExoticComponent<({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed }: CredentialValidatorProps) => ReactElement>;
+export declare function AuthenticationCheck({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed }: CredentialValidatorProps): ReactElement;
+export declare namespace AuthenticationCheck {
+    var displayName: string;
+}

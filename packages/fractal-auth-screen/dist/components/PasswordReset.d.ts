@@ -1,2 +1,2 @@
-import { PasswordResetProps } from './types/PasswordResetProps';
+import { PasswordResetProps } from './types';
 export declare function PasswordReset({ emailPlaceholder, resetPasswordText, resetPasswordDescriptionText, onSignInButtonPress, signInText, resetPassword }: PasswordResetProps): JSX.Element;

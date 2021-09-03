@@ -1,8 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Text, TouchableOpacity, IconTextField, Separator, useTheme, HorizontalLayer } from '@bma98/fractal-ui';
-import { renderEmailIcon } from './util/renderEmailIcon';
-import { renderLockIcon } from './util/renderLockIcon';
-import { SignUpProps } from './types/SignUpProps';
+import { renderEmailIcon, renderLockIcon } from './util';
+import { SignUpProps } from './types';
 
 const textFieldProps = {
     secureTextEntry: true
