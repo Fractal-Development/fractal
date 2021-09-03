@@ -117,5 +117,6 @@
         "React",
         "React native",
         "UI Library"
-    ]
+    ],
+    "sideEffects": false
 }
