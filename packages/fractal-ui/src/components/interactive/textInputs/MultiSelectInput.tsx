@@ -18,6 +18,7 @@ interface MultiSelectInputProps<T> extends Omit<LayerProps, 'children'> {
     controllableSelectedOptions: Array<T>;
     placeholder?: string;
     enableClearButton?: boolean;
+    chipListStyle?: Omit<LayerProps, 'children'>;
 }
 
 export function MultiSelectInput<T extends IDEnabled>({
@@ -33,6 +34,7 @@ export function MultiSelectInput<T extends IDEnabled>({
     placeholder,
     onSubmitEditing,
     enableClearButton = false,
+    chipListStyle,
     ...layerProps
 }: MultiSelectInputProps<T>): JSX.Element {
     return (
@@ -48,8 +50,14 @@ export function MultiSelectInput<T extends IDEnabled>({
                 onChangeText={onChangeText}
                 onSubmitEditing={onSubmitEditing}
             />
-            <ChipList data={controllableSelectedOptions} getLabel={getOptionLabel} onItemPress={onDeletePress} />
-            {enableClearButton ? <Button variant={'warning'} onPress={onClearPress} text={clearButtonText} /> : null}
+            <ChipList
+                zIndex={-1}
+                data={controllableSelectedOptions}
+                getLabel={getOptionLabel}
+                onItemPress={onDeletePress}
+                {...chipListStyle}
+            />
+            {enableClearButton ? <Button zIndex={-1} variant={'warning'} onPress={onClearPress} text={clearButtonText} /> : null}
         </Layer>
     );
 }
