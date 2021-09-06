@@ -33,7 +33,7 @@ const TableContainer = forwardRef(
         return (
             <Box ref={ref} {...getTableContainerAccessibilityProps()} {...others}>
                 <HorizontalLayer marginBottom={spacings.m} justifyContent='space-between' alignItems={'center'}>
-                    <Text variant={titleTextVariant} color={titleColor}>
+                    <Text variant={titleTextVariant} color={titleColor} flex={1}>
                         {title}
                     </Text>
                     <Text variant={labelTextVariant} color={labelColor}>
