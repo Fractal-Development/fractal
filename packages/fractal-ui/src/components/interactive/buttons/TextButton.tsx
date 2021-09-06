@@ -22,7 +22,7 @@ const TextButton = forwardRef(
     ({ variant, children, leftIcon, rightIcon, textProps, disabled, ...others }: TextButtonProps, ref: any): JSX.Element => {
         const { colors } = useTheme();
         const colorName = `${variant}InteractiveColor`;
-        const color = colors[colorName];
+        const color: string = textProps?.color ?? colors[colorName];
 
         return (
             <TouchableOpacity
