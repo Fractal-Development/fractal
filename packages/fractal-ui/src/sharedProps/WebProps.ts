@@ -35,9 +35,10 @@ export interface WebProps {
         | 'w-resize';
     boxSizing?: 'border-box' | 'content-box';
     focusable?: boolean;
+    borderStyle?: 'solid' | 'dotted' | 'dashed';
 }
 
-export function extractWebProps({ cursor, pointerEvents, focusable, boxSizing = 'border-box' }: WebProps): string {
+export function extractWebProps({ borderStyle, cursor, pointerEvents, focusable, boxSizing = 'border-box' }: WebProps): string {
     return `
         -webkit-box-align: stretch;
         -webkit-box-direction: normal;
@@ -46,5 +47,6 @@ export function extractWebProps({ cursor, pointerEvents, focusable, boxSizing = 
         ${pointerEvents ? `pointer-events: ${pointerEvents === 'box-none' ? 'none' : pointerEvents}` : ''};
         ${boxSizing ? `box-sizing: ${boxSizing}` : ''};
         ${focusable ? `user-focus: ${focusable ? 'text' : 'none'}` : ''};
+        ${borderStyle == null ? `border-style: solid` : ''};
     `;
 }

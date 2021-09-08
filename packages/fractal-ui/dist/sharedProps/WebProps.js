@@ -1,4 +1,4 @@
-export function extractWebProps({ cursor, pointerEvents, focusable, boxSizing = 'border-box' }) {
+export function extractWebProps({ borderStyle, cursor, pointerEvents, focusable, boxSizing = 'border-box' }) {
     return `
         -webkit-box-align: stretch;
         -webkit-box-direction: normal;
@@ -7,6 +7,7 @@ export function extractWebProps({ cursor, pointerEvents, focusable, boxSizing = 
         ${pointerEvents ? `pointer-events: ${pointerEvents === 'box-none' ? 'none' : pointerEvents}` : ''};
         ${boxSizing ? `box-sizing: ${boxSizing}` : ''};
         ${focusable ? `user-focus: ${focusable ? 'text' : 'none'}` : ''};
+        ${borderStyle == null ? `border-style: solid` : ''};
     `;
 }
 //# sourceMappingURL=WebProps.js.map

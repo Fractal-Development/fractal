@@ -1,4 +1,4 @@
-export function extractBorderProps({ borderRadius, borderTopLeftRadius, borderTopRightRadius, borderBottomLeftRadius, borderBottomRightRadius, borderWidth = 0, borderTopWidth, borderBottomWidth, borderLeftWidth, borderRightWidth, borderColor, borderStyle = 'solid' }) {
+export function extractBorderProps({ borderRadius, borderTopLeftRadius, borderTopRightRadius, borderBottomLeftRadius, borderBottomRightRadius, borderWidth = 0, borderTopWidth, borderBottomWidth, borderLeftWidth, borderRightWidth, borderColor, borderStyle }) {
     return `
         ${borderRadius != null ? `border-radius: ${borderRadius}px` : ''};
         ${borderTopLeftRadius != null ? `border-top-left-radius: ${borderTopLeftRadius}px` : ''};

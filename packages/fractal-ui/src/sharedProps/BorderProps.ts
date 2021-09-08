@@ -25,7 +25,7 @@ export function extractBorderProps({
     borderLeftWidth,
     borderRightWidth,
     borderColor,
-    borderStyle = 'solid'
+    borderStyle
 }: BorderProps): string {
     return `
         ${borderRadius != null ? `border-radius: ${borderRadius}px` : ''};
