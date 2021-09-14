@@ -1,4 +1,5 @@
 import { getDisplayProperty } from './utils/getDisplayProperty';
+import { getFlexProperty } from './utils/getFlexProperty';
 export function extractDisplayProps({ flex, display, justifyContent, alignItems = 'stretch', flexDirection = 'column', alignSelf, alignContent, flexWrap, flexBasis = 'auto', flexGrow, flexShrink = 0, position = 'relative', top, right, bottom, left, zIndex = 0, opacity, overflow }) {
     return `
         ${getDisplayProperty(display)};
@@ -19,8 +20,7 @@ export function extractDisplayProps({ flex, display, justifyContent, alignItems 
         ${zIndex != null ? `z-index: ${zIndex}` : ''};
         ${opacity != null ? `opacity: ${opacity}` : ''};
         ${overflow != null ? `overflow: ${overflow}` : ''};
-        ${flex != null ? `flex: ${flex} 1 0%` : ''};
-        ${flex != null ? `-webkit-box-flex: ${flex}` : ''};
+        ${getFlexProperty(flex)}
     `;
 }
 //# sourceMappingURL=DisplayProps.js.map

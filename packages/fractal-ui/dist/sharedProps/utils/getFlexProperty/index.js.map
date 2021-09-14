@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/sharedProps/utils/getFlexProperty/index.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,eAAe,CAAC,IAA+B;IAC3D,OAAO;UACD,IAAI,IAAI,IAAI,CAAC,CAAC,CAAC,SAAS,IAAI,OAAO,CAAC,CAAC,CAAC,EAAE;UACxC,IAAI,IAAI,IAAI,CAAC,CAAC,CAAC,qBAAqB,IAAI,EAAE,CAAC,CAAC,CAAC,EAAE;KACpD,CAAC;AACN,CAAC"}

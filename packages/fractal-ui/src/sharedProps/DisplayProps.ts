@@ -1,4 +1,5 @@
 import { getDisplayProperty } from './utils/getDisplayProperty';
+import { getFlexProperty } from './utils/getFlexProperty';
 
 export interface DisplayProps {
     flex?: 'none' | 'auto' | number;
@@ -62,7 +63,6 @@ export function extractDisplayProps({
         ${zIndex != null ? `z-index: ${zIndex}` : ''};
         ${opacity != null ? `opacity: ${opacity}` : ''};
         ${overflow != null ? `overflow: ${overflow}` : ''};
-        ${flex != null ? `flex: ${flex} 1 0%` : ''};
-        ${flex != null ? `-webkit-box-flex: ${flex}` : ''};
+        ${getFlexProperty(flex)}
     `;
 }
