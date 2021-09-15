@@ -4,6 +4,7 @@ export type MaskType = 'money' | 'phone';
 
 export interface TextFieldMaskProps extends Omit<TextFieldProps, 'onChangeText' | 'value'> {
     type: MaskType;
+    defaultValue?: string;
     onChangeText?: (maskedText: string, rawText: string) => void;
 }
 

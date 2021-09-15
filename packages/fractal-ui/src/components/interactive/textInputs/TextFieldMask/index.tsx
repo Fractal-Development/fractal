@@ -4,10 +4,10 @@ import { useUpdateValue } from './hooks/useUpdateValue';
 import { TextFieldMaskProps } from './types';
 import { getTextFieldMaskAccessibilityProps } from '../accessibility/getTextFieldMaskAccessibilityProps';
 
-const TextFieldMask = forwardRef(({ onChangeText, type, ...others }: TextFieldMaskProps, ref: any): JSX.Element => {
-    const [value, setValue] = useState('');
-
+const TextFieldMask = forwardRef(({ defaultValue, onChangeText, type, ...others }: TextFieldMaskProps, ref: any): JSX.Element => {
     const updateValue = useUpdateValue(type);
+    const defaultMaskedText = defaultValue ? updateValue(defaultValue, '').maskedText : '';
+    const [value, setValue] = useState(defaultMaskedText);
 
     const handleChangeText = (text: string) => {
         const { maskedText, rawText } = updateValue(text, value);

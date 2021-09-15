@@ -14,9 +14,10 @@ import { TextField } from '../TextField';
 import { useUpdateValue } from './hooks/useUpdateValue';
 import { getTextFieldMaskAccessibilityProps } from '../accessibility/getTextFieldMaskAccessibilityProps';
 const TextFieldMask = forwardRef((_a, ref) => {
-    var { onChangeText, type } = _a, others = __rest(_a, ["onChangeText", "type"]);
-    const [value, setValue] = useState('');
+    var { defaultValue, onChangeText, type } = _a, others = __rest(_a, ["defaultValue", "onChangeText", "type"]);
     const updateValue = useUpdateValue(type);
+    const defaultMaskedText = defaultValue ? updateValue(defaultValue, '').maskedText : '';
+    const [value, setValue] = useState(defaultMaskedText);
     const handleChangeText = (text) => {
         const { maskedText, rawText } = updateValue(text, value);
         setValue(maskedText);
