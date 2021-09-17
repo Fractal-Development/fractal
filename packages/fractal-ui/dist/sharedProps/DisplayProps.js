@@ -1,6 +1,6 @@
 import { getDisplayProperty } from './utils/getDisplayProperty';
 import { getFlexProperty } from './utils/getFlexProperty';
-export function extractDisplayProps({ flex, display, justifyContent, alignItems = 'stretch', flexDirection = 'column', alignSelf, alignContent, flexWrap, flexBasis = 'auto', flexGrow, flexShrink = 0, position = 'relative', top, right, bottom, left, zIndex = 0, opacity, overflow }) {
+export function extractDisplayProps({ flex, display, justifyContent, alignItems, flexDirection = 'column', alignSelf, alignContent, flexWrap, flexBasis = 'auto', flexGrow, flexShrink = 0, position = 'relative', top, right, bottom, left, zIndex = 0, opacity, overflow }) {
     return `
         ${getDisplayProperty(display)};
         ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};

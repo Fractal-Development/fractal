@@ -27,7 +27,7 @@ export function extractDisplayProps({
     flex,
     display,
     justifyContent,
-    alignItems = 'stretch',
+    alignItems,
     flexDirection = 'column',
     alignSelf,
     alignContent,

@@ -1,6 +1,6 @@
-export function extractWebProps({ borderStyle, cursor, pointerEvents, focusable, boxSizing = 'border-box' }) {
+export function extractWebProps({ borderStyle, cursor, pointerEvents, focusable, boxSizing = 'border-box', alignItems }) {
     return `
-        -webkit-box-align: stretch;
+        ${alignItems == null ? `-webkit-box-align: stretch` : `-webkit-box-align:: ${alignItems}`};
         -webkit-box-direction: normal;
         -webkit-box-orient: vertical;
         ${cursor ? `cursor: ${cursor}` : ''};
@@ -8,6 +8,7 @@ export function extractWebProps({ borderStyle, cursor, pointerEvents, focusable,
         ${boxSizing ? `box-sizing: ${boxSizing}` : ''};
         ${focusable ? `user-focus: ${focusable ? 'text' : 'none'}` : ''};
         ${borderStyle == null ? `border-style: solid` : ''};
+        ${alignItems == null ? `align-items: stretch` : ''};
     `;
 }
 //# sourceMappingURL=WebProps.js.map

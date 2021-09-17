@@ -5,5 +5,6 @@ export interface WebProps {
     boxSizing?: 'border-box' | 'content-box';
     focusable?: boolean;
     borderStyle?: 'solid' | 'dotted' | 'dashed';
+    alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
 }
-export declare function extractWebProps({ borderStyle, cursor, pointerEvents, focusable, boxSizing }: WebProps): string;
+export declare function extractWebProps({ borderStyle, cursor, pointerEvents, focusable, boxSizing, alignItems }: WebProps): string;
