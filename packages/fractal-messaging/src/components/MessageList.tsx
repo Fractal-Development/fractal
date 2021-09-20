@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useMemo, useEffect } from 'react';
-import { LayoutProvider, DataProvider, RecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
+import { LayoutProvider, DataProvider, AutoSizeRecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { MessageListProps, MinimalMessageData } from './types';
 import { ChatMessage } from './ChatMessage';
@@ -84,7 +84,7 @@ export function MessageList<T extends MinimalMessageData>({
 
     return (
         <Layer flex={1} {...layerProps}>
-            <RecyclerView
+            <AutoSizeRecyclerView
                 key={width}
                 layoutProvider={layoutProvider}
                 dataProvider={dataProviderState}

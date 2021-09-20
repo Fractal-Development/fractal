@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useCallback, useState, useMemo, useEffect } from 'react';
-import { LayoutProvider, DataProvider, RecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
+import { LayoutProvider, DataProvider, AutoSizeRecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
@@ -65,6 +65,6 @@ export function MessageList(_a) {
         return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
     }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
     return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps),
-        React.createElement(RecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 })));
+        React.createElement(AutoSizeRecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 })));
 }
 //# sourceMappingURL=MessageList.js.map

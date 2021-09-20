@@ -1166,14 +1166,14 @@
 
 "@bma98/fractal-media@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#00709d123bbadac606d971c1c8da249b361bb33f"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#720d719f8585cb91af21024d743c59bcc740765a"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
 "@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#9d7cf6a0530b6bb4c74e1fa3a8e499f9cadca8c4"
+  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#2e8129f46ffc640e4c2822acba2f3cc5518d2f39"
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
