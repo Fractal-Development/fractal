@@ -16,6 +16,7 @@ export function ChatContent<T extends MinimalMessageData>({
     placeholder = 'Escribe aquí...',
     isLoading,
     keyboardAvoidingViewProps,
+    messageInputButtonVariant = 'alternative',
     ...layerProps
 }: ChatContentProps<T>): JSX.Element {
     return (
@@ -35,6 +36,7 @@ export function ChatContent<T extends MinimalMessageData>({
                         <MessageInput
                             placeholder={placeholder}
                             useForegroundVariant
+                            buttonVariant={messageInputButtonVariant}
                             onSend={onSend}
                             from={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}

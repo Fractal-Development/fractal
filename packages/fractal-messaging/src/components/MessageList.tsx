@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo, useEffect } from 'react';
+import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
 import { LayoutProvider, DataProvider, AutoSizeRecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { MessageListProps, MinimalMessageData } from './types';
@@ -19,6 +19,7 @@ export function MessageList<T extends MinimalMessageData>({
     getBubbleColor,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
+    const listView = useRef<any>();
     const { spacings } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messages));
     const width = useSizeValue('width');
@@ -66,6 +67,18 @@ export function MessageList<T extends MinimalMessageData>({
         setDataProviderState(dataProvider.cloneWithRows(messages));
     }, [messages, width]);
 
+    const scrollToEnd = useCallback(() => {
+        setTimeout(() => {
+            if (listView.current) {
+                listView.current.scrollToEnd();
+            }
+        });
+    }, []);
+
+    useEffect(() => {
+        scrollToEnd();
+    }, [dataProviderState, scrollToEnd]);
+
     const renderBubbleMessage = useCallback(
         (_, data) => {
             return (
@@ -85,11 +98,12 @@ export function MessageList<T extends MinimalMessageData>({
     return (
         <Layer flex={1} {...layerProps}>
             <AutoSizeRecyclerView
+                ref={listView}
+                renderAheadOffset={250}
                 key={width}
                 layoutProvider={layoutProvider}
                 dataProvider={dataProviderState}
                 rowRenderer={renderBubbleMessage}
-                initialRenderIndex={messages.length - 1}
             />
         </Layer>
     );

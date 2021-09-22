@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useCallback, useState, useMemo, useEffect } from 'react';
+import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
 import { LayoutProvider, DataProvider, AutoSizeRecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { ChatMessage } from './ChatMessage';
@@ -21,6 +21,7 @@ const dataProvider = new DataProvider((rowOne, rowTwo) => {
 });
 export function MessageList(_a) {
     var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor"]);
+    const listView = useRef();
     const { spacings } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messages));
     const width = useSizeValue('width');
@@ -61,10 +62,20 @@ export function MessageList(_a) {
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(messages));
     }, [messages, width]);
+    const scrollToEnd = useCallback(() => {
+        setTimeout(() => {
+            if (listView.current) {
+                listView.current.scrollToEnd();
+            }
+        });
+    }, []);
+    useEffect(() => {
+        scrollToEnd();
+    }, [dataProviderState, scrollToEnd]);
     const renderBubbleMessage = useCallback((_, data) => {
         return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
     }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
     return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps),
-        React.createElement(AutoSizeRecyclerView, { key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 })));
+        React.createElement(AutoSizeRecyclerView, { ref: listView, renderAheadOffset: 250, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage })));
 }
 //# sourceMappingURL=MessageList.js.map

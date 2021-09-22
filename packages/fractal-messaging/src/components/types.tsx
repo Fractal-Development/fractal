@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { LayerProps, TouchableOpacityProps } from '@bma98/fractal-ui';
+import { ButtonVariant, LayerProps, TouchableOpacityProps } from '@bma98/fractal-ui';
 import { KeyboardAvoidingViewProps } from './KeyboardAvoidingView/types';
 
 export interface BubbleTriangleProps {
@@ -41,4 +41,5 @@ export interface ChatContentProps<T extends MinimalMessageData> extends MessageL
     placeholder?: string;
     isLoading?: boolean;
     keyboardAvoidingViewProps?: KeyboardAvoidingViewProps;
+    messageInputButtonVariant?: ButtonVariant;
 }
