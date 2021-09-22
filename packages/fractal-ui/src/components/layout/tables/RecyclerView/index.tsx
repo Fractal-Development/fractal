@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { RecyclerListViewProps, RecyclerListView, LayoutProvider, DataProvider } from 'recyclerlistview/web';
 
 export interface RecyclerViewProps extends Omit<RecyclerListViewProps, 'style'> {
     style?: any;
 }
 
-function RecyclerView(props: RecyclerViewProps): JSX.Element {
-    return <RecyclerListView {...props} />;
-}
+const RecyclerView = forwardRef((props: RecyclerViewProps, ref?: any): JSX.Element => {
+    return <RecyclerListView ref={ref} {...props} />;
+});
+
+RecyclerView.displayName = 'RecyclerView';
 
 export { RecyclerView, LayoutProvider, DataProvider };

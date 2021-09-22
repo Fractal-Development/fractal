@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { RecyclerView } from '../RecyclerView';
-export function AutoSizeRecyclerView(props) {
-    return React.createElement(RecyclerView, Object.assign({}, props));
-}
+const AutoSizeRecyclerView = forwardRef((props, ref) => {
+    return React.createElement(RecyclerView, Object.assign({ ref: ref }, props));
+});
+AutoSizeRecyclerView.displayName = 'AutoSizeRecyclerView';
+export { AutoSizeRecyclerView };
 //# sourceMappingURL=index.native.js.map

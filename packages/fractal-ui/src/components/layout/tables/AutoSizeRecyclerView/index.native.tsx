@@ -1,6 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, forwardRef } from 'react';
 import { RecyclerView, RecyclerViewProps } from '../RecyclerView';
 
-export function AutoSizeRecyclerView(props: RecyclerViewProps): ReactElement {
-    return <RecyclerView {...props} />;
-}
+const AutoSizeRecyclerView = forwardRef((props: RecyclerViewProps, ref?: any): ReactElement => {
+    return <RecyclerView ref={ref} {...props} />;
+});
+
+AutoSizeRecyclerView.displayName = 'AutoSizeRecyclerView';
+
+export { AutoSizeRecyclerView };

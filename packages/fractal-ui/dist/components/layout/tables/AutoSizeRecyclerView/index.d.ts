@@ -1,3 +1,4 @@
-import { ReactElement } from 'react';
+import React from 'react';
 import { RecyclerViewProps } from '../RecyclerView';
-export declare function AutoSizeRecyclerView({ style, ...others }: RecyclerViewProps): ReactElement;
+declare const AutoSizeRecyclerView: React.ForwardRefExoticComponent<RecyclerViewProps & React.RefAttributes<unknown>>;
+export { AutoSizeRecyclerView };

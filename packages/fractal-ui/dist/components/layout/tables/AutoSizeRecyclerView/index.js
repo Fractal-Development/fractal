@@ -9,11 +9,13 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React from 'react';
+import React, { forwardRef } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { RecyclerView } from '../RecyclerView';
-export function AutoSizeRecyclerView(_a) {
+const AutoSizeRecyclerView = forwardRef((_a, ref) => {
     var { style } = _a, others = __rest(_a, ["style"]);
-    return React.createElement(AutoSizer, null, ({ height, width }) => React.createElement(RecyclerView, Object.assign({ canChangeSize: true, style: Object.assign({ height, width }, style) }, others)));
-}
+    return (React.createElement(AutoSizer, null, ({ height, width }) => React.createElement(RecyclerView, Object.assign({ ref: ref, canChangeSize: true, style: Object.assign({ height, width }, style) }, others))));
+});
+AutoSizeRecyclerView.displayName = 'AutoSizeRecyclerView';
+export { AutoSizeRecyclerView };
 //# sourceMappingURL=index.js.map

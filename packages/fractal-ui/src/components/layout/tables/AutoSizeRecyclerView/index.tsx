@@ -1,7 +1,15 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, forwardRef } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { RecyclerView, RecyclerViewProps } from '../RecyclerView';
 
-export function AutoSizeRecyclerView({ style, ...others }: RecyclerViewProps): ReactElement {
-    return <AutoSizer>{({ height, width }) => <RecyclerView canChangeSize style={{ height, width, ...style }} {...others} />}</AutoSizer>;
-}
+const AutoSizeRecyclerView = forwardRef(({ style, ...others }: RecyclerViewProps, ref?: any): ReactElement => {
+    return (
+        <AutoSizer>
+            {({ height, width }) => <RecyclerView ref={ref} canChangeSize style={{ height, width, ...style }} {...others} />}
+        </AutoSizer>
+    );
+});
+
+AutoSizeRecyclerView.displayName = 'AutoSizeRecyclerView';
+
+export { AutoSizeRecyclerView };
