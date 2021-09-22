@@ -76,6 +76,6 @@ export function MessageList(_a) {
         return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
     }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
     return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps),
-        React.createElement(AutoSizeRecyclerView, { ref: listView, renderAheadOffset: 250, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage })));
+        React.createElement(AutoSizeRecyclerView, { ref: listView, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 })));
 }
 //# sourceMappingURL=MessageList.js.map

@@ -99,11 +99,11 @@ export function MessageList<T extends MinimalMessageData>({
         <Layer flex={1} {...layerProps}>
             <AutoSizeRecyclerView
                 ref={listView}
-                renderAheadOffset={250}
                 key={width}
                 layoutProvider={layoutProvider}
                 dataProvider={dataProviderState}
                 rowRenderer={renderBubbleMessage}
+                initialRenderIndex={messages.length - 1}
             />
         </Layer>
     );
