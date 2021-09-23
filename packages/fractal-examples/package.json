@@ -20,6 +20,7 @@
         "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
         "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-auth-screen": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-auth-screen?master",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
