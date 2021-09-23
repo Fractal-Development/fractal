@@ -51,6 +51,7 @@
         "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
         "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-auth-screen": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-auth-screen?master",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",

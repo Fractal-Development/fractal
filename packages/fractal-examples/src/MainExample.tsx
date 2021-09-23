@@ -16,6 +16,7 @@ import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigati
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
+import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;
@@ -60,6 +61,12 @@ export function MainExample(): JSX.Element {
                                     path={screens.chipFragment.path}
                                 >
                                     <ChipFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.authScreen.name} />}
+                                    path={screens.authScreen.path}
+                                >
+                                    <AuthenticationScreenFragmentScreen />
                                 </StackScreen>
                             </StackNavigator>
                         </TabBarInsetsLayer>

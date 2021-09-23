@@ -13,6 +13,10 @@ export const screens = {
     chipFragment: {
         name: 'Chip Fragment',
         path: routes.component.replace(':component', 'chip_fragment_screen')
+    },
+    authScreen: {
+        name: 'Authentication Screen Fragment',
+        path: routes.component.replace(':component', 'authentication_screen_fragment_screen')
     }
 };
 
