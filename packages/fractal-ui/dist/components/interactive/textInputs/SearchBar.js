@@ -26,7 +26,7 @@ const SearchBar = forwardRef((_a, ref) => {
     const handleSearch = () => {
         onSearch === null || onSearch === void 0 ? void 0 : onSearch(query);
     };
-    return (React.createElement(ButtonTextField, Object.assign({ ref: ref, value: value, placeholder: placeholder, leftImage: enableSearchButton ? undefined : renderIcon, onChangeText: handleChangeText, textFieldProps: { onSubmitEditing: enableSearchButton ? handleSearch : undefined }, showButton: enableSearchButton, buttonText: buttonText, buttonVariant: buttonVariant, onButtonPress: handleSearch, buttonAriaLabel: ariaLabel, buttonImage: renderIcon }, others)));
+    return (React.createElement(ButtonTextField, Object.assign({ ref: ref, value: value, placeholder: placeholder, leftImage: renderIcon, onChangeText: handleChangeText, textFieldProps: { onSubmitEditing: enableSearchButton ? handleSearch : undefined }, showButton: enableSearchButton, buttonText: buttonText, buttonVariant: buttonVariant, onButtonPress: handleSearch, buttonAriaLabel: ariaLabel, buttonImage: renderIcon }, others)));
 });
 SearchBar.displayName = 'SearchBar';
 export { SearchBar };
