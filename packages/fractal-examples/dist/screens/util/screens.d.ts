@@ -11,8 +11,15 @@ export declare const screens: {
         name: string;
         path: string;
     };
+    authScreen: {
+        name: string;
+        path: string;
+    };
 };
 export declare const screensArray: ({
+    name: string;
+    path: string;
+} | {
     name: string;
     path: string;
 } | {

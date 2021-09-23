@@ -8,6 +8,7 @@ import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigati
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
+import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
 function renderReactIcon(color, size) {
     return React.createElement(ReactIcon, { fill: color, height: size, width: size });
 }
@@ -28,7 +29,9 @@ export function MainExample() {
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.recyclerViewFragment.name }), path: screens.recyclerViewFragment.path },
                                 React.createElement(RecyclerViewFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.chipFragment.name }), path: screens.chipFragment.path },
-                                React.createElement(ChipFragmentScreen, null))))),
+                                React.createElement(ChipFragmentScreen, null)),
+                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.authScreen.name }), path: screens.authScreen.path },
+                                React.createElement(AuthenticationScreenFragmentScreen, null))))),
                 React.createElement(TabScreen, { path: routes.credits },
                     React.createElement(TabBarInsetsLayer, null,
                         React.createElement(PaddingLayer, null,
