@@ -16,6 +16,7 @@
         "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
         "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
         "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-auth-screen": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-auth-screen?master",
         "@bma98/size-class": "^2.2.4",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",
