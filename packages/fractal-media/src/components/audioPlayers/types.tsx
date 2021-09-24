@@ -3,6 +3,7 @@ import { MinimalTrackData } from './useAudioPlayer/types';
 
 export interface AudioPlayerProps extends Omit<LayerProps, 'flexDirection'> {
     tracks: Array<MinimalTrackData>;
+    controllableTrackIndex?: number;
 }
 
 export type AudioSource = number | string;

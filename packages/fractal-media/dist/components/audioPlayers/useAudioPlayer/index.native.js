@@ -7,14 +7,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { Audio } from 'expo-av';
 import { useShufflePlaybackController } from './hooks/useShufflePlaybackController';
 import { useEnableRepeatPlayback } from './hooks/useEnableRepeatPlayback';
 import { useCheckIfShouldGoToNextTrack } from './hooks/useCheckIfShouldGoToNextTrack';
 import { usePreviousAndNextControllers } from './hooks/usePreviousAndNextControllers';
 import { useAudioNativeEffects } from './hooks/useAudioNativeEffects';
-export function useAudioPlayer(tracks, shufflePlayback, repeatPlayback) {
+export function useAudioPlayer(tracks, controllableTrackIndex, shufflePlayback, repeatPlayback) {
     const [didJustFinish, setDidJustFinish] = useState(false);
     const [duration, setDuration] = useState(0);
     const [trackIndex, setTrackIndex] = useState(0);
@@ -91,6 +91,11 @@ export function useAudioPlayer(tracks, shufflePlayback, repeatPlayback) {
     const handleLoadNewSoundAsync = useCallback(() => __awaiter(this, void 0, void 0, function* () {
         yield loadNewSoundAsync(trackIndex, isPlaying, currentTime);
     }), [currentTime, isPlaying, loadNewSoundAsync, trackIndex]);
+    useEffect(() => {
+        if (controllableTrackIndex) {
+            setTrackIndex(controllableTrackIndex);
+        }
+    }, [controllableTrackIndex]);
     useAudioNativeEffects(audioRef, checkIfShouldGoToNextTrack, handleLoadNewSoundAsync, didJustFinish, setDidJustFinish);
     return {
         currentTrackInfo,

@@ -25,9 +25,9 @@ import { AudioControls } from './AudioControls';
 import { AudioProgressBar } from './AudioProgressBar';
 import { getAudioPlayerAccessibilityProps } from './accessibility/getAudioPlayerAccessibilityProps';
 export function AudioPlayer(_a) {
-    var { tracks } = _a, layerProps = __rest(_a, ["tracks"]);
+    var { tracks, controllableTrackIndex } = _a, layerProps = __rest(_a, ["tracks", "controllableTrackIndex"]);
     const { spacings, borderRadius, colors } = useTheme();
-    const { currentTrackInfo, currentTime, duration, isPlaying, enableShufflePlayback, enableRepeatPlayback, handlePlayPause, setPositionManually, toNextTrack, toPreviousTrack, toggleShufflePlayback, toggleRepeatPlayback } = useAudioPlayer(tracks);
+    const { currentTrackInfo, currentTime, duration, isPlaying, enableShufflePlayback, enableRepeatPlayback, handlePlayPause, setPositionManually, toNextTrack, toPreviousTrack, toggleShufflePlayback, toggleRepeatPlayback } = useAudioPlayer(tracks, controllableTrackIndex);
     const { title, image } = currentTrackInfo;
     const handleUpdateTime = useCallback((positionMillis) => __awaiter(this, void 0, void 0, function* () {
         yield setPositionManually(positionMillis);

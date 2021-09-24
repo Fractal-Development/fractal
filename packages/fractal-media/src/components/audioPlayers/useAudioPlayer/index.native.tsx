@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { Audio } from 'expo-av';
 import { AudioPlayerReturnedObject, MinimalTrackData, CustomAVPlaybackStatus } from './types';
 import { useShufflePlaybackController } from './hooks/useShufflePlaybackController';
@@ -9,6 +9,7 @@ import { useAudioNativeEffects } from './hooks/useAudioNativeEffects';
 
 export function useAudioPlayer<T extends MinimalTrackData>(
     tracks: Array<T>,
+    controllableTrackIndex?: number,
     shufflePlayback?: boolean,
     repeatPlayback?: false
 ): AudioPlayerReturnedObject<T> {
@@ -116,6 +117,12 @@ export function useAudioPlayer<T extends MinimalTrackData>(
     const handleLoadNewSoundAsync = useCallback(async () => {
         await loadNewSoundAsync(trackIndex, isPlaying, currentTime);
     }, [currentTime, isPlaying, loadNewSoundAsync, trackIndex]);
+
+    useEffect(() => {
+        if (controllableTrackIndex) {
+            setTrackIndex(controllableTrackIndex);
+        }
+    }, [controllableTrackIndex]);
 
     useAudioNativeEffects(audioRef, checkIfShouldGoToNextTrack, handleLoadNewSoundAsync, didJustFinish, setDidJustFinish);
 

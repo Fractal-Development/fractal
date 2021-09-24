@@ -7,13 +7,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useEnableRepeatPlayback } from './hooks/useEnableRepeatPlayback';
 import { useShufflePlaybackController } from './hooks/useShufflePlaybackController';
 import { useCheckIfShouldGoToNextTrack } from './hooks/useCheckIfShouldGoToNextTrack';
 import { useAudioWebEffects } from './hooks/useAudioWebEffects';
 import { usePreviousAndNextControllers } from './hooks/usePreviousAndNextControllers';
-export function useAudioPlayer(tracks, shufflePlayback, repeatPlayback) {
+export function useAudioPlayer(tracks, controllableTrackIndex, shufflePlayback, repeatPlayback) {
     const [trackIndex, setTrackIndex] = useState(0);
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
@@ -54,6 +54,11 @@ export function useAudioPlayer(tracks, shufflePlayback, repeatPlayback) {
             audioRef.current.currentTime = 0;
     }), []);
     const checkIfShouldGoToNextTrack = useCheckIfShouldGoToNextTrack(trackIndex, tracks.length, enableRepeatPlayback, toNextTrack, setCurrentTime, setIsPlaying, resetPosition);
+    useEffect(() => {
+        if (controllableTrackIndex) {
+            setTrackIndex(controllableTrackIndex);
+        }
+    }, [controllableTrackIndex]);
     useAudioWebEffects(audioRef, audioSrc, setIsPlaying, setCurrentTime, setDuration, checkIfShouldGoToNextTrack);
     return {
         currentTrackInfo,

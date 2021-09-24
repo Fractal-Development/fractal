@@ -6,7 +6,7 @@ import { AudioControls } from './AudioControls';
 import { AudioProgressBar } from './AudioProgressBar';
 import { getAudioPlayerAccessibilityProps } from './accessibility/getAudioPlayerAccessibilityProps';
 
-export function AudioPlayer({ tracks, ...layerProps }: AudioPlayerProps): JSX.Element {
+export function AudioPlayer({ tracks, controllableTrackIndex, ...layerProps }: AudioPlayerProps): JSX.Element {
     const { spacings, borderRadius, colors } = useTheme();
     const {
         currentTrackInfo,
@@ -21,7 +21,7 @@ export function AudioPlayer({ tracks, ...layerProps }: AudioPlayerProps): JSX.El
         toPreviousTrack,
         toggleShufflePlayback,
         toggleRepeatPlayback
-    } = useAudioPlayer(tracks);
+    } = useAudioPlayer(tracks, controllableTrackIndex);
 
     const { title, image } = currentTrackInfo;
 

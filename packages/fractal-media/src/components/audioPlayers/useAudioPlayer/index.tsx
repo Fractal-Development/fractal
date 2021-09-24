@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useEnableRepeatPlayback } from './hooks/useEnableRepeatPlayback';
 import { useShufflePlaybackController } from './hooks/useShufflePlaybackController';
 import { useCheckIfShouldGoToNextTrack } from './hooks/useCheckIfShouldGoToNextTrack';
@@ -8,6 +8,7 @@ import { usePreviousAndNextControllers } from './hooks/usePreviousAndNextControl
 
 export function useAudioPlayer<T extends MinimalTrackData>(
     tracks: Array<T>,
+    controllableTrackIndex?: number,
     shufflePlayback?: boolean,
     repeatPlayback?: boolean
 ): AudioPlayerReturnedObject<T> {
@@ -65,6 +66,12 @@ export function useAudioPlayer<T extends MinimalTrackData>(
         setIsPlaying,
         resetPosition
     );
+
+    useEffect(() => {
+        if (controllableTrackIndex) {
+            setTrackIndex(controllableTrackIndex);
+        }
+    }, [controllableTrackIndex]);
 
     useAudioWebEffects(audioRef, audioSrc as string, setIsPlaying, setCurrentTime, setDuration, checkIfShouldGoToNextTrack);
 
