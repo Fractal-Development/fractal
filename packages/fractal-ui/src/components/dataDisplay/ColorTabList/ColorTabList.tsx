@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useState } from 'react';
-import { Box, HorizontalLayer, Layer, LayerProps, ScrollView } from '../../layout';
+import { Box, Layer, LayerProps, ScrollView } from '../../layout';
 import { useTheme } from '../../../context';
 import { ColorTab, ColorTabProps } from './ColorTab';
 
@@ -10,7 +10,7 @@ export interface ColorTabListProps extends LayerProps {
 }
 
 export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTabListProps): ReactElement {
-    const { borderRadius, sizes, spacings } = useTheme();
+    const { borderRadius } = useTheme();
     const [activeIndex, setActiveIndex] = useState(0);
     const { tabColor } = tabs[activeIndex];
 
@@ -24,13 +24,11 @@ export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTa
 
     return (
         <Layer {...others}>
-            <HorizontalLayer marginRight={spacings.m} height={sizes.colorTabListItemHeight}>
-                <ScrollView showsHorizontalScrollIndicator={false} horizontal>
-                    {tabs.map((props, index) => (
-                        <ColorTab key={index} {...props} onPress={handlePress} index={index} active={index === activeIndex} />
-                    ))}
-                </ScrollView>
-            </HorizontalLayer>
+            <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+                {tabs.map((props, index) => (
+                    <ColorTab key={index} {...props} onPress={handlePress} index={index} active={index === activeIndex} />
+                ))}
+            </ScrollView>
             <Box
                 borderTopLeftRadius={activeIndex != 0 ? borderRadius.m : 0}
                 borderTopRightRadius={borderRadius.m}
