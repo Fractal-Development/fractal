@@ -14,7 +14,7 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-ui": "2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -51,7 +51,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-ui": "2.0.0",
         "@types/d3-array": "^3.0.1",
         "@types/d3-scale": "^4.0.1",
         "@types/d3-shape": "^3.0.0",
@@ -84,5 +84,6 @@
         "React",
         "React native",
         "UI Library"
-    ]
+    ],
+    "sideEffects": false
 }
