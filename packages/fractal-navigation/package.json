@@ -14,7 +14,7 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-ui": "2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -79,5 +79,6 @@
         "React",
         "React native",
         "UI Library"
-    ]
+    ],
+    "sideEffects": false
 }
