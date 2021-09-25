@@ -14,13 +14,13 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
-        "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
-        "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
-        "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
-        "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
-        "@bma98/fractal-auth-screen": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-auth-screen?master",
+        "@bma98/fractal-charts": "2.0.0",
+        "@bma98/fractal-media": "2.0.0",
+        "@bma98/fractal-messaging": "2.0.0",
+        "@bma98/fractal-navigation": "2.0.0",
+        "@bma98/fractal-navigation-router": "2.0.0",
+        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-auth-screen": "2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -46,13 +46,13 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
-        "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
-        "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
-        "@bma98/fractal-navigation": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation?master",
-        "@bma98/fractal-navigation-router": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-navigation-router?master",
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
-        "@bma98/fractal-auth-screen": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-auth-screen?master",
+        "@bma98/fractal-charts": "2.0.0",
+        "@bma98/fractal-media": "2.0.0",
+        "@bma98/fractal-messaging": "2.0.0",
+        "@bma98/fractal-navigation": "2.0.0",
+        "@bma98/fractal-navigation-router": "2.0.0",
+        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-auth-screen": "2.0.0",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
@@ -83,5 +83,6 @@
         "React",
         "React native",
         "UI Library"
-    ]
+    ],
+    "sideEffects": false
 }
