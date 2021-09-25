@@ -1164,16 +1164,18 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bma98/fractal-media@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master":
+"@bma98/fractal-media@2.0.0":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master#887d7d9f7abfc55100896769152411b65d204c30"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.0.tgz#dd4d224afe2ee275f4df2f9c52482383bc330dbc"
+  integrity sha512-hkfmNUy2ioobUl7bjBkHvVPvTdXc8OE5IV7lStcpoH4QAISAsPOMDg38Ur2zScvV3FdInWeflVv4iFp67+Bi9w==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
-"@bma98/fractal-ui@https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master":
+"@bma98/fractal-ui@2.0.0":
   version "2.0.0"
-  resolved "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master#73b89432af9d7c6cb81e533979beb9ba4bffa8d8"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.0.tgz#3cc009daa648e4354349623c9da9c821f12906d4"
+  integrity sha512-NaFBP7E/lFuR1GhD3DlZTCqws6KgJOVX6K/2GOYnu5a3HaILOlIJaCN2RbACkZc+k1JJ1DOc4hdU3Wc0Yx0yww==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
