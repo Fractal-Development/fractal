@@ -3,7 +3,7 @@ import { TabBarProps } from '../types';
 import { useSetTabBarInsets } from '../hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from '../context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
-import { Layer, SafeAreaLayer } from '@bma98/fractal-ui';
+import { SafeAreaLayer } from '@bma98/fractal-ui';
 import { useValueForLargeSizeType } from '@bma98/size-class';
 
 export function TabBar({ tabBarPosition, logo, children, ...others }: TabBarProps): JSX.Element {
@@ -20,11 +20,7 @@ export function TabBar({ tabBarPosition, logo, children, ...others }: TabBarProp
     return (
         <TabBarBackground tabBarPosition={tabBarPosition} {...others}>
             <SafeAreaLayer />
-            {isSideBar && (
-                <Layer position='absolute' top={0} left={0} bottom={0}>
-                    {logoForLargeSizeType}
-                </Layer>
-            )}
+            {isSideBar && logoForLargeSizeType}
             {children}
         </TabBarBackground>
     );
