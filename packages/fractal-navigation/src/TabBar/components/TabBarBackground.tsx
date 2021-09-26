@@ -9,7 +9,6 @@ export function TabBarBackground(props: TabBarProps): JSX.Element {
     const { tabBar } = useTheme();
     const { translateY, translateX, ...layoutProps } = useTabBarPositionLayoutProps(tabBarPosition);
     const tabBarSafeAreaPadding = useTabBarSafeAreaPadding(tabBarPosition);
-
     const justifyContent = tabBarPosition === 'bottom' ? 'center' : 'flex-start';
     const shadow =
         tabBarPosition === 'bottom' ? tabBar.shadow : tabBarPosition === 'left' ? tabBar.leftPositionShadow : tabBar.rightPositionShadow;
