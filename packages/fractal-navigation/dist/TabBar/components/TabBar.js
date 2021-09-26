@@ -13,16 +13,20 @@ import React, { useContext, useEffect } from 'react';
 import { useSetTabBarInsets } from '../hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from '../context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
-import { SafeAreaLayer } from '@bma98/fractal-ui';
+import { Layer, SafeAreaLayer } from '@bma98/fractal-ui';
+import { useValueForLargeSizeType } from '@bma98/size-class';
 export function TabBar(_a) {
-    var { tabBarPosition, children } = _a, others = __rest(_a, ["tabBarPosition", "children"]);
+    var { tabBarPosition, logo, children } = _a, others = __rest(_a, ["tabBarPosition", "logo", "children"]);
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
+    const logoForLargeSizeType = useValueForLargeSizeType('width', logo, undefined);
+    const isSideBar = tabBarPosition === 'left' || tabBarPosition === 'right';
     useEffect(() => {
         setTabBarPosition(tabBarPosition);
     }, [tabBarPosition, setTabBarPosition]);
     useSetTabBarInsets();
     return (React.createElement(TabBarBackground, Object.assign({ tabBarPosition: tabBarPosition }, others),
         React.createElement(SafeAreaLayer, null),
+        isSideBar && (React.createElement(Layer, { position: 'absolute', top: 0, left: 0, bottom: 0 }, logoForLargeSizeType)),
         children));
 }
 //# sourceMappingURL=TabBar.js.map
