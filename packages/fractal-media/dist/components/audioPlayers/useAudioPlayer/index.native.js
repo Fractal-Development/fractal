@@ -92,7 +92,7 @@ export function useAudioPlayer(tracks, controllableTrackIndex, shufflePlayback, 
         yield loadNewSoundAsync(trackIndex, isPlaying, currentTime);
     }), [currentTime, isPlaying, loadNewSoundAsync, trackIndex]);
     useEffect(() => {
-        if (controllableTrackIndex) {
+        if (controllableTrackIndex != undefined) {
             setTrackIndex(controllableTrackIndex);
         }
     }, [controllableTrackIndex]);

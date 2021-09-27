@@ -55,7 +55,7 @@ export function useAudioPlayer(tracks, controllableTrackIndex, shufflePlayback, 
     }), []);
     const checkIfShouldGoToNextTrack = useCheckIfShouldGoToNextTrack(trackIndex, tracks.length, enableRepeatPlayback, toNextTrack, setCurrentTime, setIsPlaying, resetPosition);
     useEffect(() => {
-        if (controllableTrackIndex) {
+        if (controllableTrackIndex != undefined) {
             setTrackIndex(controllableTrackIndex);
         }
     }, [controllableTrackIndex]);

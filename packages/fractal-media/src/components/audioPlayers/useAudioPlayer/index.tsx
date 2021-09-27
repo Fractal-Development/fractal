@@ -68,7 +68,7 @@ export function useAudioPlayer<T extends MinimalTrackData>(
     );
 
     useEffect(() => {
-        if (controllableTrackIndex) {
+        if (controllableTrackIndex != undefined) {
             setTrackIndex(controllableTrackIndex);
         }
     }, [controllableTrackIndex]);
