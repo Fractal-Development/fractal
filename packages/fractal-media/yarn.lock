@@ -1164,7 +1164,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bma98/fractal-ui@2.0.0":
+"@bma98/fractal-ui@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.0.tgz#3cc009daa648e4354349623c9da9c821f12906d4"
   integrity sha512-NaFBP7E/lFuR1GhD3DlZTCqws6KgJOVX6K/2GOYnu5a3HaILOlIJaCN2RbACkZc+k1JJ1DOc4hdU3Wc0Yx0yww==
