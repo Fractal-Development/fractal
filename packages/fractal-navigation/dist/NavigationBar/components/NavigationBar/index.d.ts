@@ -1,2 +1,2 @@
 import { NavigationBarProps } from '../../types';
-export declare function NavigationBar({ hidden, title, showBackButton, backTitle, children, goBack }: NavigationBarProps): JSX.Element | null;
+export declare function NavigationBar({ hidden, title, showBackButton, backTitle, children, goBack, backgroundColor }: NavigationBarProps): JSX.Element | null;

@@ -7,4 +7,5 @@ export interface NavigationBarProps {
     path?: string;
     largeTitle?: boolean;
     goBack: () => void;
+    backgroundColor?: string;
 }

@@ -3,14 +3,15 @@ import { Layer, useTheme } from '@bma98/fractal-ui';
 
 interface NavigationBarBackgroundProps {
     children: ReactElement | Array<ReactElement>;
+    backgroundColor?: string;
 }
 
-export const NavigationBarBackground = memo(({ children }: NavigationBarBackgroundProps): ReactElement => {
+export const NavigationBarBackground = memo(({ children, backgroundColor }: NavigationBarBackgroundProps): ReactElement => {
     const { spacings, navigationBar } = useTheme();
 
     return (
         <Layer
-            backgroundColor={navigationBar.backgroundColor}
+            backgroundColor={backgroundColor || navigationBar.backgroundColor}
             flexDirection='row'
             height={navigationBar.height}
             boxShadow={navigationBar.shadow}

@@ -10,14 +10,15 @@ export function NavigationBar({
     showBackButton = false,
     backTitle,
     children,
-    goBack
+    goBack,
+    backgroundColor
 }: NavigationBarProps): JSX.Element | null {
     const [leftChild, centerChild, rightChild] = useNavigationBarChildren(children);
 
     useSetNavigationBarInsets();
 
     return hidden ? null : (
-        <NavigationBarBackground>
+        <NavigationBarBackground backgroundColor={backgroundColor}>
             <NavigationBarLeft showBackButton={showBackButton} goBack={goBack} backTitle={backTitle}>
                 {leftChild}
             </NavigationBarLeft>
