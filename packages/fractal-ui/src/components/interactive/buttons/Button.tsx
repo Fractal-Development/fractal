@@ -32,8 +32,10 @@ const Button = forwardRef(
         const [backgroundColor, foregroundColor, pressedColor] = useButtonColors(variant, reduceColor);
 
         const handleButtonPress = (): void => {
-            setPressed(true);
-            onPress?.();
+            if (!disabled && !loading) {
+                setPressed(true);
+                onPress?.();
+            }
         };
 
         return (

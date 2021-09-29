@@ -22,8 +22,10 @@ const Button = forwardRef((_a, ref) => {
     const [pressed, setPressed] = useState(false);
     const [backgroundColor, foregroundColor, pressedColor] = useButtonColors(variant, reduceColor);
     const handleButtonPress = () => {
-        setPressed(true);
-        onPress === null || onPress === void 0 ? void 0 : onPress();
+        if (!disabled && !loading) {
+            setPressed(true);
+            onPress === null || onPress === void 0 ? void 0 : onPress();
+        }
     };
     return (React.createElement(BaseButton, Object.assign({ ref: ref, height: sizes.interactiveItemHeight, backgroundColor: backgroundColor, pressedBackgroundColor: pressedColor, borderRadius: borderRadius.m, boxShadow: addShadow ? shadows.mainShadow : undefined, justifyContent: 'center', alignItems: 'center', paddingRight: spacings.s, paddingLeft: spacings.s, onPress: handleButtonPress, opacity: disabled || loading ? 0.5 : 1, pointerEvents: disabled || loading ? 'none' : undefined }, getButtonAccessibilityProps(pressed, false, text !== null && text !== void 0 ? text : ariaLabel), others), loading ? (React.createElement(ActivityIndicator, { color: colors.white, height: sizes.loadingComponentHeightForButton, width: sizes.loadingComponentHeightForButton })) : (React.createElement(React.Fragment, null,
         typeof children === 'function' ? children === null || children === void 0 ? void 0 : children(foregroundColor) : children,
