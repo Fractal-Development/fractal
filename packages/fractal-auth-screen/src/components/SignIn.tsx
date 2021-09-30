@@ -15,7 +15,8 @@ export function SignIn({
     signUpText,
     forgotPasswordText,
     onSignUpButtonPress,
-    signIn
+    signIn,
+    removeSignUpButton
 }: SignInProps): JSX.Element {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -56,8 +57,13 @@ export function SignIn({
             <TextButton onPress={onPasswordResetButtonPress} alignSelf={'center'} variant={'main'} marginBottom={spacings.m}>
                 {forgotPasswordText}
             </TextButton>
-            <Separator marginBottom={spacings.m} />
-            <Button text={signUpText} variant={'alternative'} onPress={onSignUpButtonPress} />
+            {!removeSignUpButton && (
+                <>
+                    {' '}
+                    <Separator marginBottom={spacings.m} />
+                    <Button text={signUpText} variant={'alternative'} onPress={onSignUpButtonPress} />
+                </>
+            )}
         </>
     );
 }

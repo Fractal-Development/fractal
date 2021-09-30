@@ -22,6 +22,8 @@ export function AuthenticationScreen({
     handleFacebookSignIn,
     handleAppleSignIn,
     removeSocialMediaButtons,
+    removeSignUpButton,
+    children,
     ...others
 }: AuthenticationScreenProps): JSX.Element {
     const [state, setState] = useState<AuthenticationScreenState>('signIn');
@@ -84,11 +86,14 @@ export function AuthenticationScreen({
                                     {state === 'signIn' ? (
                                         <SignIn
                                             {...others}
+                                            removeSignUpButton={removeSignUpButton}
                                             onPasswordResetButtonPress={handlePasswordResetButtonPress}
                                             onSignUpButtonPress={toggleState}
                                         />
                                     ) : state === 'signUp' ? (
-                                        <SignUp {...others} onSignInButtonPress={toggleState} />
+                                        <SignUp {...others} onSignInButtonPress={toggleState}>
+                                            {children}
+                                        </SignUp>
                                     ) : (
                                         <PasswordReset {...others} onSignInButtonPress={toggleState} />
                                     )}

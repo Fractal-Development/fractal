@@ -19,7 +19,8 @@ export function SignUp({
     onTermsButtonPressed,
     onPrivacyButtonPressed,
     signUp,
-    onSignInButtonPress
+    onSignInButtonPress,
+    children
 }: SignUpProps): JSX.Element {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -41,26 +42,32 @@ export function SignUp({
 
     return (
         <>
-            <IconTextField
-                value={email}
-                onChangeText={setEmail}
-                placeholder={emailPlaceholder}
-                leftImage={renderEmailIcon}
-                marginBottom={spacings.m}
-            />
-            <IconTextField
-                value={password}
-                onChangeText={setPassword}
-                placeholder={passwordPlaceholder}
-                leftImage={renderLockIcon}
-                marginBottom={spacings.m}
-                textFieldProps={textFieldProps}
-            />
-            <Button loading={loading} text={signUpText} variant={'main'} marginBottom={spacings.m} onPress={handleEmailSignUp} />
-            <Text marginBottom={spacings.m} variant={'label'} alignSelf={'center'}>
+            {children ? (
+                children
+            ) : (
+                <>
+                    <IconTextField
+                        value={email}
+                        onChangeText={setEmail}
+                        placeholder={emailPlaceholder}
+                        leftImage={renderEmailIcon}
+                        marginBottom={spacings.m}
+                    />
+                    <IconTextField
+                        value={password}
+                        onChangeText={setPassword}
+                        placeholder={passwordPlaceholder}
+                        leftImage={renderLockIcon}
+                        marginBottom={spacings.m}
+                        textFieldProps={textFieldProps}
+                    />
+                    <Button loading={loading} text={signUpText} variant={'main'} marginBottom={spacings.m} onPress={handleEmailSignUp} />
+                </>
+            )}
+            <Text marginBottom={spacings.m} variant={'label'} textAlign={'center'}>
                 {`${byAcceptingTerms}`}
             </Text>
-            <HorizontalLayer marginBottom={spacings.m} justifyContent={'center'}>
+            <HorizontalLayer marginBottom={spacings.m} justifyContent={'center'} flexWrap={'wrap'}>
                 <TouchableOpacity onPress={onTermsButtonPressed} marginRight={4}>
                     <Text style={{ color: colors.mainInteractiveColor }}>{termsAndConditions}</Text>
                 </TouchableOpacity>
