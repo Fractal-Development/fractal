@@ -22,7 +22,7 @@ import React, { useCallback, useState } from 'react';
 import { Background, Box, ErrorMessage, Layer, PaddingLayer, SocialMediaButtons, ScrollView, SafeAreaLayer, useTheme } from '@bma98/fractal-ui';
 import { SignUp, SignIn, PasswordReset, scheduleAnimation } from './components';
 export function AuthenticationScreen(_a) {
-    var { logo, background, removeAppleButton = true, handleGoogleSignIn, handleFacebookSignIn, handleAppleSignIn, removeSocialMediaButtons } = _a, others = __rest(_a, ["logo", "background", "removeAppleButton", "handleGoogleSignIn", "handleFacebookSignIn", "handleAppleSignIn", "removeSocialMediaButtons"]);
+    var { logo, background, removeAppleButton = true, handleGoogleSignIn, handleFacebookSignIn, handleAppleSignIn, removeSocialMediaButtons, removeSignUpButton, children } = _a, others = __rest(_a, ["logo", "background", "removeAppleButton", "handleGoogleSignIn", "handleFacebookSignIn", "handleAppleSignIn", "removeSocialMediaButtons", "removeSignUpButton", "children"]);
     const [state, setState] = useState('signIn');
     const [googleLoading, setGoogleLoading] = useState(false);
     const [facebookLoading, setFacebookLoading] = useState(false);
@@ -75,7 +75,7 @@ export function AuthenticationScreen(_a) {
                     logo,
                     React.createElement(PaddingLayer, { width: '100%' },
                         React.createElement(Box, { marginBottom: spacings.m },
-                            React.createElement(ErrorMessage, null, state === 'signIn' ? (React.createElement(SignIn, Object.assign({}, others, { onPasswordResetButtonPress: handlePasswordResetButtonPress, onSignUpButtonPress: toggleState }))) : state === 'signUp' ? (React.createElement(SignUp, Object.assign({}, others, { onSignInButtonPress: toggleState }))) : (React.createElement(PasswordReset, Object.assign({}, others, { onSignInButtonPress: toggleState }))))),
+                            React.createElement(ErrorMessage, null, state === 'signIn' ? (React.createElement(SignIn, Object.assign({}, others, { removeSignUpButton: removeSignUpButton, onPasswordResetButtonPress: handlePasswordResetButtonPress, onSignUpButtonPress: toggleState }))) : state === 'signUp' ? (React.createElement(SignUp, Object.assign({}, others, { onSignInButtonPress: toggleState }), children)) : (React.createElement(PasswordReset, Object.assign({}, others, { onSignInButtonPress: toggleState }))))),
                         !removeSocialMediaButtons && (React.createElement(SocialMediaButtons, { width: '100%', onApplePress: handleAppleButtonPress, onGooglePress: handleGoogleButtonPress, onFacebookPress: handleFacebookButtonPress, googleLoading: googleLoading, appleLoading: appleLoading, facebookLoading: facebookLoading, removeAppleButton: removeAppleButton }))))))));
 }
 //# sourceMappingURL=AuthenticationScreen.js.map

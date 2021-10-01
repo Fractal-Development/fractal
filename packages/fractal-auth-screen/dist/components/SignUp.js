@@ -13,7 +13,7 @@ import { renderEmailIcon, renderLockIcon } from './util';
 const textFieldProps = {
     secureTextEntry: true
 };
-export function SignUp({ emailPlaceholder, passwordPlaceholder, signInText, signUpText, byAcceptingTerms, termsAndConditions, and, privacyPolicy, onTermsButtonPressed, onPrivacyButtonPressed, signUp, onSignInButtonPress }) {
+export function SignUp({ emailPlaceholder, passwordPlaceholder, signInText, signUpText, byAcceptingTerms, termsAndConditions, and, privacyPolicy, onTermsButtonPressed, onPrivacyButtonPressed, signUp, onSignInButtonPress, children }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -32,11 +32,12 @@ export function SignUp({ emailPlaceholder, passwordPlaceholder, signInText, sign
         }
     });
     return (React.createElement(React.Fragment, null,
-        React.createElement(IconTextField, { value: email, onChangeText: setEmail, placeholder: emailPlaceholder, leftImage: renderEmailIcon, marginBottom: spacings.m }),
-        React.createElement(IconTextField, { value: password, onChangeText: setPassword, placeholder: passwordPlaceholder, leftImage: renderLockIcon, marginBottom: spacings.m, textFieldProps: textFieldProps }),
-        React.createElement(Button, { loading: loading, text: signUpText, variant: 'main', marginBottom: spacings.m, onPress: handleEmailSignUp }),
-        React.createElement(Text, { marginBottom: spacings.m, variant: 'label', alignSelf: 'center' }, `${byAcceptingTerms}`),
-        React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: 'center' },
+        children ? (children) : (React.createElement(React.Fragment, null,
+            React.createElement(IconTextField, { value: email, onChangeText: setEmail, placeholder: emailPlaceholder, leftImage: renderEmailIcon, marginBottom: spacings.m }),
+            React.createElement(IconTextField, { value: password, onChangeText: setPassword, placeholder: passwordPlaceholder, leftImage: renderLockIcon, marginBottom: spacings.m, textFieldProps: textFieldProps }),
+            React.createElement(Button, { loading: loading, text: signUpText, variant: 'main', marginBottom: spacings.m, onPress: handleEmailSignUp }))),
+        React.createElement(Text, { marginBottom: spacings.m, variant: 'label', textAlign: 'center' }, `${byAcceptingTerms}`),
+        React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: 'center', flexWrap: 'wrap' },
             React.createElement(TouchableOpacity, { onPress: onTermsButtonPressed, marginRight: 4 },
                 React.createElement(Text, { style: { color: colors.mainInteractiveColor } }, termsAndConditions)),
             React.createElement(Text, { variant: 'label', marginRight: 4 }, and),

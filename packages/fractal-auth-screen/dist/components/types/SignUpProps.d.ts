@@ -4,4 +4,5 @@ export interface SignUpProps extends AuthenticationTextProps {
     onTermsButtonPressed?: () => void;
     onPrivacyButtonPressed?: () => void;
     signUp: (email: string, password: string) => Promise<void>;
+    children?: JSX.Element;
 }

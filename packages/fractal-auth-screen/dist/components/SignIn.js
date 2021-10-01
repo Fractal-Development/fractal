@@ -13,7 +13,7 @@ import { renderLockIcon, renderEmailIcon } from './util';
 const textFieldProps = {
     secureTextEntry: true
 };
-export function SignIn({ emailPlaceholder, passwordPlaceholder, onPasswordResetButtonPress, signInText, signUpText, forgotPasswordText, onSignUpButtonPress, signIn }) {
+export function SignIn({ emailPlaceholder, passwordPlaceholder, onPasswordResetButtonPress, signInText, signUpText, forgotPasswordText, onSignUpButtonPress, signIn, removeSignUpButton }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -36,7 +36,9 @@ export function SignIn({ emailPlaceholder, passwordPlaceholder, onPasswordResetB
         React.createElement(IconTextField, { value: password, onChangeText: setPassword, placeholder: passwordPlaceholder, leftImage: renderLockIcon, marginBottom: spacings.m, textFieldProps: textFieldProps }),
         React.createElement(Button, { loading: loading, text: signInText, variant: 'main', marginBottom: spacings.m, onPress: handleEmailSignIn }),
         React.createElement(TextButton, { onPress: onPasswordResetButtonPress, alignSelf: 'center', variant: 'main', marginBottom: spacings.m }, forgotPasswordText),
-        React.createElement(Separator, { marginBottom: spacings.m }),
-        React.createElement(Button, { text: signUpText, variant: 'alternative', onPress: onSignUpButtonPress })));
+        !removeSignUpButton && (React.createElement(React.Fragment, null,
+            ' ',
+            React.createElement(Separator, { marginBottom: spacings.m }),
+            React.createElement(Button, { text: signUpText, variant: 'alternative', onPress: onSignUpButtonPress })))));
 }
 //# sourceMappingURL=SignIn.js.map
