@@ -53,7 +53,6 @@ export function MessageList(_a) {
                 height = messageHeightCalculator(messages[index]);
                 heights[index] = height;
                 dim.height = height;
-                //console.log('HEIGHT: ', height);
             }
             dim.width = width;
             return;
@@ -75,7 +74,6 @@ export function MessageList(_a) {
     const renderBubbleMessage = useCallback((_, data) => {
         return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
     }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
-    return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps),
-        React.createElement(AutoSizeRecyclerView, { ref: listView, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 })));
+    return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps), messages.length > 0 && (React.createElement(AutoSizeRecyclerView, { ref: listView, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 }))));
 }
 //# sourceMappingURL=MessageList.js.map

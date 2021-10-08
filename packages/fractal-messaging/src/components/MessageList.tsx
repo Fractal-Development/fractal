@@ -55,7 +55,6 @@ export function MessageList<T extends MinimalMessageData>({
                     height = messageHeightCalculator(messages[index]);
                     heights[index] = height;
                     dim.height = height as number;
-                    //console.log('HEIGHT: ', height);
                 }
                 dim.width = width;
                 return;
@@ -97,14 +96,16 @@ export function MessageList<T extends MinimalMessageData>({
 
     return (
         <Layer flex={1} {...layerProps}>
-            <AutoSizeRecyclerView
-                ref={listView}
-                key={width}
-                layoutProvider={layoutProvider}
-                dataProvider={dataProviderState}
-                rowRenderer={renderBubbleMessage}
-                initialRenderIndex={messages.length - 1}
-            />
+            {messages.length > 0 && (
+                <AutoSizeRecyclerView
+                    ref={listView}
+                    key={width}
+                    layoutProvider={layoutProvider}
+                    dataProvider={dataProviderState}
+                    rowRenderer={renderBubbleMessage}
+                    initialRenderIndex={messages.length - 1}
+                />
+            )}
         </Layer>
     );
 }
