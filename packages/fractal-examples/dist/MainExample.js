@@ -1,6 +1,6 @@
 import React from 'react';
 import { FractalAppRoot, PaddingLayer, Text } from '@bma98/fractal-ui';
-import { NavigationBarConfig, NavigationRouter, SimpleTabBarItemLink, StackNavigator, StackScreen, TabNavigator, TabScreen } from '@bma98/fractal-navigation-router';
+import { NavigationBarConfig, NavigationRouter, SimpleTabBarItemLink, StackNavigator, StackScreen, TabNavigator, TabScreen, Route, Redirect } from '@bma98/fractal-navigation-router';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
@@ -35,6 +35,8 @@ export function MainExample() {
                 React.createElement(TabScreen, { path: routes.credits },
                     React.createElement(TabBarInsetsLayer, null,
                         React.createElement(PaddingLayer, null,
-                            React.createElement(Text, null, "Empty for now..."))))))));
+                            React.createElement(Text, null, "Empty for now..."))))),
+            React.createElement(Route, { exact: true, strict: true, path: '/' },
+                React.createElement(Redirect, { to: routes.components })))));
 }
 //# sourceMappingURL=MainExample.js.map
