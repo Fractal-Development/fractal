@@ -9,5 +9,6 @@ const StyledScrollView = styled(Layer)`
 `;
 
 export function ScrollView(props: ScrollViewProps): JSX.Element {
-    return <StyledScrollView flexDirection={props.horizontal ? 'row' : 'column'} {...props} />;
+    const { horizontal } = props;
+    return <StyledScrollView flexDirection={horizontal ? 'row' : 'column'} {...props} />;
 }

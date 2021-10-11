@@ -20,10 +20,9 @@ const PopoverContent = forwardRef(
             ...others
         }: PopoverPortalContentProps,
         ref: any
-    ): JSX.Element => {
-        return (
+    ): JSX.Element => (
             <OutsideClickListener onOutsideClick={onRequestClose}>
-                <Layer ref={ref} position={'relative'} display={'inline-block'} {...others}>
+                <Layer ref={ref} position="relative" display="inline-block" {...others}>
                     {children(anchorRef)}
                     <AnimatePresence>
                         {active ? (
@@ -32,7 +31,7 @@ const PopoverContent = forwardRef(
                                 from={styleVariants.initial}
                                 animate={styleVariants.visible}
                                 exit={styleVariants.initial}
-                                position={'absolute'}
+                                position="absolute"
                                 zIndex={2000}
                                 style={placementOffsetStyle}
                                 {...popoverContainerProps}
@@ -43,8 +42,7 @@ const PopoverContent = forwardRef(
                     </AnimatePresence>
                 </Layer>
             </OutsideClickListener>
-        );
-    }
+        )
 );
 
 PopoverContent.displayName = 'PopoverContent';

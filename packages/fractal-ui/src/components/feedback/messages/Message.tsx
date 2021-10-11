@@ -20,11 +20,11 @@ const Message = forwardRef(({ messageType = 'main', title, icon, description, ..
         <Layer ref={ref} padding={spacings.m} borderRadius={borderRadius.m} backgroundColor={colors[backgroundColor]} {...others}>
             <HorizontalLayer alignItems='center' marginBottom={spacings.xs}>
                 {icon != null ? icon(colors[textVariant]) : null}
-                <Text marginLeft={icon != null ? spacings.s : undefined} variant={'title'} color={colors[titleVariant]}>
+                <Text marginLeft={icon != null ? spacings.s : undefined} variant="title" color={colors[titleVariant]}>
                     {title}
                 </Text>
             </HorizontalLayer>
-            <Text variant={'normal'} color={colors[textVariant]}>
+            <Text variant="normal" color={colors[textVariant]}>
                 {description}
             </Text>
         </Layer>

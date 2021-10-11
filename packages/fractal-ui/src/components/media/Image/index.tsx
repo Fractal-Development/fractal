@@ -6,8 +6,8 @@ import { getImageAccessibilityProps } from './accessibility/getImageAccessibilit
 
 const Image = forwardRef(({ label, source, resizeMode, width, height, ...others }: ImageProps, ref: any): JSX.Element => {
     const getBackgroundSize = useCallback((): string | undefined => {
-        if ((resizeMode == 'center' || resizeMode == 'repeat') && width != null && height != null) {
-            if (typeof width == 'string') {
+        if ((resizeMode === 'center' || resizeMode === 'repeat') && width != null && height != null) {
+            if (typeof width === 'string') {
                 return `${width} ${height}`;
             }
             return width < height ? `${width}px` : `${height}px`;
@@ -18,10 +18,10 @@ const Image = forwardRef(({ label, source, resizeMode, width, height, ...others 
     return (
         <Layer
             ref={ref}
-            flexBasis={'auto'}
-            overflow={'hidden'}
+            flexBasis='auto'
+            overflow='hidden'
             zIndex={0}
-            display={'flex'}
+            display='flex'
             width={width}
             height={height}
             {...others}

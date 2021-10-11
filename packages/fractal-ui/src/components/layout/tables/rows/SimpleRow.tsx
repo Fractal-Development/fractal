@@ -6,13 +6,11 @@ export interface SimpleRowProps extends BaseRowProps {
     title: string;
 }
 
-const SimpleRow = forwardRef(({ title, ...others }: SimpleRowProps, ref: any): JSX.Element => {
-    return (
+const SimpleRow = forwardRef(({ title, ...others }: SimpleRowProps, ref: any): JSX.Element => (
         <BaseRow ref={ref} {...others}>
             <Text variant='small'>{title}</Text>
         </BaseRow>
-    );
-});
+    ));
 
 SimpleRow.displayName = 'SimpleRow';
 

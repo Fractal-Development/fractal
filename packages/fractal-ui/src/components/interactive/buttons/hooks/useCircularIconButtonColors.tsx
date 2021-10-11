@@ -6,25 +6,25 @@ export function useCircularButtonColors(variant: ButtonVariant, reduceColor = fa
     const backgroundColorName = (() => {
         if (variant === 'content') {
             return reduceColor ? `${variant}InteractiveColor100` : `${variant}InteractiveColor`;
-        } else {
+        } 
             return reduceColor ? `${variant}InteractiveColor100` : `${variant}InteractiveColor400`;
-        }
+        
     })();
 
     const foregroundColorName = (() => {
         if (variant === 'content') {
             return 'text';
-        } else {
+        } 
             return reduceColor ? `${variant}InteractiveColor` : `${variant}InteractiveColor700`;
-        }
+        
     })();
 
     const pressedColorName = (() => {
         if (variant === 'content') {
             return `${variant}InteractiveColor600`;
-        } else {
+        } 
             return reduceColor ? `${variant}InteractiveColor200` : `${variant}InteractiveColor`;
-        }
+        
     })();
 
     const backgroundColor = colors[backgroundColorName];

@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { Layer } from '../../layout';
 import { UploadedFileItem } from './UploadedFileItem';
-import { AnimatePresence } from 'framer-motion';
 import { FractalFile } from './types';
 
 interface UploadedFileListProps {
@@ -11,13 +11,11 @@ interface UploadedFileListProps {
 
 export function UploadedFileList({ files, removeFile }: UploadedFileListProps): JSX.Element {
     const renderItem = useCallback(
-        (file: File, index: number): JSX.Element => {
-            return (
+        (file: File, index: number): JSX.Element => (
                 <Fragment key={`${index}`}>
                     <UploadedFileItem file={file} onDeletePress={() => removeFile(index)} />
                 </Fragment>
-            );
-        },
+            ),
         [removeFile]
     );
 

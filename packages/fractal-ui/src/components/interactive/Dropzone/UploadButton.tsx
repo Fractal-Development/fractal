@@ -18,15 +18,15 @@ export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', accep
 
     const pickFile = async () => {
         const result = await DocumentPicker.getDocumentAsync({ type: acceptedTypes?.join(',') });
-        if (result.type == 'success') {
+        if (result.type === 'success') {
             onSelectFile({ name: result.name, size: result.size, uri: result.uri, type: '' });
         }
     };
     return (
-        <Button variant={'main'} onPress={pickFile}>
-            <HorizontalLayer justifyContent={'center'} alignItems={'center'} padding={spacings.s}>
-                <LoadIcon width={24} height={24} fill={'white'} />
-                <Text variant={'button'} marginLeft={spacings.xs}>
+        <Button variant='main' onPress={pickFile}>
+            <HorizontalLayer justifyContent='center' alignItems='center' padding={spacings.s}>
+                <LoadIcon width={24} height={24} fill='white' />
+                <Text variant='button' marginLeft={spacings.xs}>
                     {text}
                 </Text>
             </HorizontalLayer>

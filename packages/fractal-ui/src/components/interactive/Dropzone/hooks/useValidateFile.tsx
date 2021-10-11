@@ -18,9 +18,7 @@ export function useValidateFile(
     );
 
     return useCallback(
-        (fileType: string, fileSize: number) => {
-            return validateFileType(fileType) && validateFileSize(fileSize);
-        },
+        (fileType: string, fileSize: number) => validateFileType(fileType) && validateFileSize(fileSize),
         [validateFileSize, validateFileType]
     );
 }

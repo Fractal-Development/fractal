@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Text } from '../../text';
 import { useTheme } from '../../../context';
-import { TouchableOpacity } from '../buttons';
-import { TouchableOpacityProps } from '../buttons';
+import { TouchableOpacity, TouchableOpacityProps } from '../buttons';
 import { Layer } from '../../layout';
 
 export interface TextFieldButtonProps extends Partial<Omit<TouchableOpacityProps, 'children'>> {
@@ -26,16 +25,16 @@ const TextFieldButton = forwardRef(({ value, placeholder, rightImage, ...others 
             backgroundColor={colors.textField}
             {...others}
         >
-            <Layer flexGrow={1} height={'100%'} justifyContent={'center'}>
+            <Layer flexGrow={1} height='100%' justifyContent='center'>
                 <Text
-                    variant={'normal'}
-                    color={value == '' ? colors.placeholder : colors.text}
-                    alignSelf={'flex-start'}
+                    variant='normal'
+                    color={value === '' ? colors.placeholder : colors.text}
+                    alignSelf='flex-start'
                     fontSize={14}
                     fontWeight={400}
                     numberOfLines={1}
                 >
-                    {value == '' ? placeholder : value}
+                    {value === '' ? placeholder : value}
                 </Text>
             </Layer>
             {rightImage != null ? <Layer alignSelf='center'>{rightImage}</Layer> : null}

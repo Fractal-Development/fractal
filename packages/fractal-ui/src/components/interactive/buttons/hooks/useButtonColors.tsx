@@ -8,9 +8,9 @@ export function useButtonColors(variant: ButtonVariant, reduceColor = false): [s
     const foregroundColorName = (() => {
         if (variant === 'content') {
             return 'text';
-        } else {
+        } 
             return reduceColor ? `${variant}InteractiveColor` : 'white';
-        }
+        
     })();
 
     const pressedColorName = reduceColor && variant !== 'content' ? `${variant}InteractiveColor200` : `${variant}InteractiveColor600`;

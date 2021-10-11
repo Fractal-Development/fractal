@@ -18,7 +18,7 @@ const BaseButton = forwardRef(
         return (
             <Pressable
                 ref={ref}
-                animate={{ backgroundColor: backgroundColor }}
+                animate={{ backgroundColor }}
                 backgroundColor={backgroundColor}
                 whileHover={hoverStyles}
                 whileTap={tapStyles}

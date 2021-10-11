@@ -50,8 +50,8 @@ const BaseSegmentedControl = forwardRef(
         return (
             <Layer
                 ref={ref}
-                overflow={'hidden'}
-                position={'relative'}
+                overflow="hidden"
+                position="relative"
                 height={sizes.segmentedControlSize}
                 backgroundColor={backgroundColor ?? colors.background}
                 borderRadius={borderRadius.s}
@@ -61,8 +61,7 @@ const BaseSegmentedControl = forwardRef(
                 {!backgroundColor && !tintColor && <SegmentsSeparators values={values.length} selectedIndex={selectedIndex} />}
                 <SegmentsContainer>
                     {values &&
-                        values.map((value, index) => {
-                            return (
+                        values.map((value, index) => (
                                 <SegmentedControlTab
                                     selected={selectedIndex === index}
                                     key={index}
@@ -74,8 +73,7 @@ const BaseSegmentedControl = forwardRef(
                                         onTabPress(index);
                                     }}
                                 />
-                            );
-                        })}
+                            ))}
                 </SegmentsContainer>
                 {selectedIndex != null && segmentWidth ? (
                     <Slider boxShadow={shadows.mainShadow} borderRadius={borderRadius.s} style={sliderStyle} />

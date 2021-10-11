@@ -30,15 +30,15 @@ export function ColorTab({ tabColor, text, active, onPress, index }: InternalCol
             borderRadius={borderRadius.m}
             borderBottomRightRadius={active ? 0 : borderRadius.m}
             borderBottomLeftRadius={active ? 0 : borderRadius.m}
-            alignItems={'center'}
-            justifyContent={'flex-end'}
-            overflow={'hidden'}
+            alignItems="center"
+            justifyContent="flex-end"
+            overflow="hidden"
             padding={0}
         >
             <Text marginRight={spacings.m} marginLeft={spacings.m} variant='button' color={colors.text} marginBottom={spacings.xs}>
                 {text}
             </Text>
-            <Layer width={'100%'} height={10} backgroundColor={tabColor} />
+            <Layer width="100%" height={10} backgroundColor={tabColor} />
         </Pressable>
     );
 }

@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
+import { Pressable as RNPressable } from 'react-native';
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -8,7 +9,6 @@ import {
     extractDisplayProps,
     extractShadowProps
 } from '../../../../sharedProps';
-import { Pressable as RNPressable } from 'react-native';
 import { PressableProps } from './types';
 import { usePressableAnimationStyles } from '../../../../animations/native/hooks/usePressableAnimationStyles';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';

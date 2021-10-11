@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
+import { TouchableOpacity as RNTouchableOpacity } from 'react-native';
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -8,7 +9,6 @@ import {
     extractDisplayProps,
     extractShadowProps
 } from '../../../../sharedProps';
-import { TouchableOpacity as RNTouchableOpacity } from 'react-native';
 import { TouchableOpacityProps } from './types';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BaseRadioButtonProps } from '../../types';
 import styled from 'styled-components';
+import { BaseRadioButtonProps } from '../../types';
 import { RadioControl } from '../RadioControl';
 import { getRadioButtonAccessibilityProps } from '../../accessibility/getRadioButtonAccessibilityProps';
 

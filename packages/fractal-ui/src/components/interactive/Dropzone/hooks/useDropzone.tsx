@@ -1,5 +1,5 @@
 import { useRef, ChangeEvent, useCallback } from 'react';
-import { DragAndDropEventHandlers, fileInputProps, FractalFile } from '../types';
+import { DragAndDropEventHandlers, FileInputProps, FractalFile } from '../types';
 import { useAcceptedFiles } from './useAcceptedFiles';
 import { useDragAndDropEventHandlers } from './useDragAndDropEventHandlers';
 
@@ -25,7 +25,7 @@ export function useDropzone(
     openFileDialog: () => void;
     removeFile: (fileIndex: number) => void;
     containerProps: DragAndDropEventHandlers;
-    fileInputProps: fileInputProps;
+    fileInputProps: FileInputProps;
 } {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(

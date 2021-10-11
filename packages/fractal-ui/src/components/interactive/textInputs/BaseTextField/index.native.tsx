@@ -1,5 +1,7 @@
 import React, { forwardRef, Ref } from 'react';
 import styled from 'styled-components/native';
+import { TextInput } from 'react-native';
+import { motify } from '@motify/core';
 import { TextFieldProps } from './types';
 import {
     extractBackgroundProps,
@@ -8,8 +10,6 @@ import {
     extractDisplayProps,
     extractTextProps
 } from '../../../../sharedProps';
-import { TextInput } from 'react-native';
-import { motify } from '@motify/core';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';
 
 const MotiTextInput = motify(TextInput)();

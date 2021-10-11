@@ -188,7 +188,7 @@ export const textVariants: FractalThemeTextVariants = {
         fontFamily: systemFont
     }
 };
-//11
+// 11
 export const lightNavigationBarTheme: FractalThemeNavigationBar = {
     title: {
         fontSize: 16,

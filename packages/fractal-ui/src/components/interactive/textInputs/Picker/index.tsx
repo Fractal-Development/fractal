@@ -24,7 +24,7 @@ export function Picker({ items, onChange, value, defaultValue, disabled, rightIm
     return (
         <HorizontalLayer
             justifyContent='space-between'
-            alignItems={'center'}
+            alignItems="center"
             position='relative'
             borderRadius={borderRadius.s}
             height={sizes.textFieldHeight}

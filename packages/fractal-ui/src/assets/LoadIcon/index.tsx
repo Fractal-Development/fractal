@@ -1,7 +1,6 @@
 import React, { memo, SVGProps } from 'react';
 
-const LoadIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
-    return (
+const LoadIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => (
         <svg width='28' height='28' viewBox='0 0 28 28' {...props}>
             <rect width='18' height='2' rx='1' transform='translate(5 21)' />
             <rect width='4' height='2' rx='1' transform='rotate(-90 14 9)' />
@@ -15,8 +14,7 @@ const LoadIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
                 transform='translate(12.832 5.833)'
             />
         </svg>
-    );
-});
+    ));
 
 LoadIcon.displayName = 'LoadIcon';
 

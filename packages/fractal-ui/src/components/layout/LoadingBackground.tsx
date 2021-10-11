@@ -8,7 +8,7 @@ const LoadingBackground = forwardRef((props: Omit<LayerProps, 'children'>, ref: 
     const { colors } = useTheme();
 
     return (
-        <Background ref={ref} justifyContent={'center'} alignItems={'center'} {...props}>
+        <Background ref={ref} justifyContent="center" alignItems="center" {...props}>
             <ActivityIndicator color={colors.mainInteractiveColor} />
         </Background>
     );

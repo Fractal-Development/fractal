@@ -18,7 +18,7 @@ const Badge = forwardRef(({ children, variant }: BadgeProps, ref: any): JSX.Elem
 
     return (
         <Layer ref={ref} backgroundColor={backgroundColor} alignSelf='flex-start' padding={spacings.xs / 2} borderRadius={spacings.xs / 2}>
-            <Text variant={'normal'} color={color} fontWeight={'bold'}>
+            <Text variant='normal' color={color} fontWeight='bold'>
                 {children}
             </Text>
         </Layer>

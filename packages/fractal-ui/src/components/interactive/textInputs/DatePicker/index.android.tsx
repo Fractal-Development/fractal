@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { PickerButton } from '../PickerButton';
 import { DatePickerProps } from './types/DatePickerProps';
-import DateTimePicker from '@react-native-community/datetimepicker';
 import { useControllableState } from '../../../../hooks/useControllableState';
 
 export function DatePicker({

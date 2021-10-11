@@ -16,8 +16,8 @@ export function alignWebPortalPopoverIfRequired(
     top: number;
     transform?: string;
 } {
-    const offsetHeight = anchorElement.offsetHeight;
-    const offsetWidth = anchorElement.offsetWidth;
+    const { offsetHeight } = anchorElement;
+    const { offsetWidth } = anchorElement;
     const offset = getElementViewportOffset(anchorElement, 0);
 
     const isVertical = placement === 'top' || placement === 'bottom';
@@ -30,20 +30,20 @@ export function alignWebPortalPopoverIfRequired(
     const isOverflowingBottom = offset.top + (isVertical ? offsetHeight : offsetHeight / 2) + offsetPopoverHeight > window.innerHeight;
     const isOverflowingTop = offset.bottom + (isVertical ? offsetHeight : offsetHeight / 2) + offsetPopoverHeight > window.innerHeight;
 
-    if (isOverflowingRight && placement != 'left') {
+    if (isOverflowingRight && placement !== 'left') {
         if (isVertical) {
-            style.left = style.left - popoverWidth;
+            style.left -= popoverWidth;
             style.transform = undefined;
         } else {
             style.left = style.left - popoverWidth - offsetWidth;
         }
     }
-    if (isOverflowingTop && placement != 'bottom') {
+    if (isOverflowingTop && placement !== 'bottom') {
         style.top = style.top + offsetHeight + popoverHeight;
         style.transform = isVertical ? style.transform : undefined;
     }
     if (isOverflowingBottom) {
-        style.top = style.top - popoverHeight;
+        style.top -= popoverHeight;
         style.transform = isVertical ? style.transform : undefined;
     }
     if (isOverflowingLeft) {

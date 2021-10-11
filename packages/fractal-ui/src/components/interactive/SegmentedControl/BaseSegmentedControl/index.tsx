@@ -46,35 +46,33 @@ const BaseSegmentedControl = forwardRef(
                     tabIndex={0}
                     margin={0}
                     padding={2}
-                    width={'100%'}
+                    width='100%'
                     backgroundColor={backgroundColor ?? colors.background}
                     height={sizes.segmentedControlSize}
                     borderRadius={borderRadius.s}
-                    display={'inline-flex'}
-                    flexDirection={'row'}
+                    display='inline-flex'
+                    flexDirection='row'
                     {...layerProps}
                 >
-                    {values.map((item, index) => {
-                        return (
-                            <SegmentedControlTab
-                                selected={selectedIndex === index}
-                                hideDivider={
-                                    backgroundColor != undefined ||
-                                    tintColor != undefined ||
-                                    selectedIndex === index ||
-                                    index === selectedIndex - 1
-                                }
-                                key={index}
-                                value={item}
-                                tintColor={tintColor}
-                                textStyle={textStyle}
-                                activeTextStyle={activeTextStyle}
-                                onSelect={() => {
-                                    onTabPress(index);
-                                }}
-                            />
-                        );
-                    })}
+                    {values.map((item, index) => (
+                        <SegmentedControlTab
+                            selected={selectedIndex === index}
+                            hideDivider={
+                                backgroundColor !== undefined ||
+                                tintColor !== undefined ||
+                                selectedIndex === index ||
+                                index === selectedIndex - 1
+                            }
+                            key={index}
+                            value={item}
+                            tintColor={tintColor}
+                            textStyle={textStyle}
+                            activeTextStyle={activeTextStyle}
+                            onSelect={() => {
+                                onTabPress(index);
+                            }}
+                        />
+                    ))}
                 </Container>
             </AnimateSharedLayout>
         );

@@ -1,7 +1,7 @@
 import { RefObject, ChangeEvent } from 'react';
 import { DragAndDropEventHandlers } from './DragAndDropProps';
 
-export interface fileInputProps {
+export interface FileInputProps {
     ref: RefObject<HTMLInputElement>;
     accept: string | undefined;
     multiple: boolean | undefined;
@@ -12,7 +12,7 @@ export interface fileInputProps {
 export interface DropBoxProps {
     dragFocused: boolean;
     dropContainerProps: DragAndDropEventHandlers;
-    fileInputProps: fileInputProps;
+    fileInputProps: FileInputProps;
     onButtonPress: () => void;
     textButton?: string;
     text?: string;

@@ -1,10 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Text } from '../../../text';
 import { BaseSegmentedControlTabProps } from '../types';
 import { useTheme } from '../../../../context';
-import styled from 'styled-components';
 import { extractDimensionProps, extractBackgroundProps, extractShadowProps, extractBorderProps } from '../../../../sharedProps';
-import { motion } from 'framer-motion';
 import { getSegmentedControlButtonAccessibilityProps } from '../accessibility/getSegmentedControlButtonAccessibilityProps';
 import { Layer } from '../../../layout/Layer';
 
@@ -87,8 +87,8 @@ export function BaseSegmentedControlTab({
         <Tap noDivider={hideDivider ?? selected} whileTap={selected ? { scale: 0.95 } : { opacity: 0.6 }}>
             <Button
                 margin={0}
-                width={'100%'}
-                height={'100%'}
+                width="100%"
+                height="100%"
                 type='button'
                 onClick={onSelect}
                 {...getSegmentedControlButtonAccessibilityProps(selected)}
@@ -101,7 +101,7 @@ export function BaseSegmentedControlTab({
                         borderRadius={borderRadius.s}
                     />
                 )}
-                <Layer position={'relative'} zIndex={2} alignItems={'center'}>
+                <Layer position="relative" zIndex={2} alignItems="center">
                     <Text fontFamily={fontFamily} fontSize={fontSize} color={color} fontWeight={fontWeight} fontStyle={fontStyle}>
                         {value}
                     </Text>

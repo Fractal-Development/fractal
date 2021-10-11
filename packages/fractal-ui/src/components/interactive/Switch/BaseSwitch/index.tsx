@@ -26,7 +26,7 @@ export function BaseSwitch({ value, onValueChange }: BaseSwitchProps): JSX.Eleme
 
     return (
         <Pressable
-            flexDirection={'row'}
+            flexDirection="row"
             height={24}
             width={40}
             borderRadius={12}
@@ -34,13 +34,13 @@ export function BaseSwitch({ value, onValueChange }: BaseSwitchProps): JSX.Eleme
             paddingRight={2}
             onPress={onPress}
             alignItems='center'
-            //from={'inactive'}
+            // from={'inactive'}
             currentVariant={value ? 'active' : 'inactive'}
             variants={backgroundVariants}
             {...getSwitchAccessibilityProps(value)}
         >
             <Layer
-                //from={'start'}
+                // from={'start'}
                 currentVariant={value ? 'end' : 'start'}
                 variants={styleVariants}
                 height={20}

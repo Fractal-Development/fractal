@@ -22,18 +22,16 @@ const StyledLayer = styled(motion.div as any)`
 ` as FunctionComponent<WebAnimationProps>;
 
 const Layer = forwardRef(
-    ({ from, currentVariant, animate, transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => {
-        return (
+    ({ from, currentVariant, animate, transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => (
             <StyledLayer
                 ref={ref}
-                flexDirection={'column'}
+                flexDirection="column"
                 initial={currentVariant ? 'from' : from}
                 animate={currentVariant ?? animate}
                 transition={transition}
                 {...others}
             />
-        );
-    }
+        )
 );
 
 Layer.displayName = 'Layer';

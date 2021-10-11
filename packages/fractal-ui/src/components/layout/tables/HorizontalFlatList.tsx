@@ -8,18 +8,14 @@ export interface HorizontalFlatListProps extends Omit<RecyclerViewProps, 'layout
 }
 
 export function HorizontalFlatList({ rowHeight, rowWidth, ...others }: HorizontalFlatListProps): ReactElement {
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(
-            () => {
-                return 0;
-            },
+    const layoutProvider = useMemo(() => new LayoutProvider(
+            () => 0,
             (_, dim) => {
                 dim.height = rowHeight;
                 dim.width = rowWidth;
-                return;
+                
             }
-        );
-    }, [rowWidth, rowHeight]);
+        ), [rowWidth, rowHeight]);
 
     return <AutoSizeRecyclerView isHorizontal layoutProvider={layoutProvider} {...others} />;
 }

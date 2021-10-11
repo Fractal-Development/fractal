@@ -21,8 +21,7 @@ const PopoverPortalContent = forwardRef(
             ...others
         }: PopoverPortalContentProps,
         ref: any
-    ): JSX.Element => {
-        return (
+    ): JSX.Element => (
             <Layer ref={ref} {...others}>
                 {children(anchorRef)}
                 <ModalPortal>
@@ -33,7 +32,7 @@ const PopoverPortalContent = forwardRef(
                                 from={styleVariants.initial}
                                 animate={styleVariants.visible}
                                 exit={styleVariants.initial}
-                                position={'absolute'}
+                                position="absolute"
                                 zIndex={2}
                                 style={placementOffsetStyle}
                                 {...popoverContainerProps}
@@ -44,8 +43,7 @@ const PopoverPortalContent = forwardRef(
                     </AnimatePresence>
                 </ModalPortal>
             </Layer>
-        );
-    }
+        )
 );
 
 PopoverPortalContent.displayName = 'PopoverPortalContent';

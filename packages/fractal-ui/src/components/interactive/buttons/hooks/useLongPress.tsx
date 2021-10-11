@@ -5,9 +5,7 @@ interface Options {
     delay?: number;
 }
 
-const isTouchEvent = (event: Event): event is TouchEvent => {
-    return 'touches' in event;
-};
+const isTouchEvent = (event: Event): event is TouchEvent => 'touches' in event;
 
 const preventDefault = (event: Event) => {
     if (!isTouchEvent(event)) return;
@@ -31,7 +29,9 @@ export const useLongPress = (callback: (() => void) | undefined, options: Option
     );
 
     const clear = useCallback(() => {
-        timeout.current && clearTimeout(timeout.current);
+        if (timeout.current) {
+            clearTimeout(timeout.current);
+        }
 
         if (shouldPreventDefault && target.current) {
             target.current.removeEventListener('touchend', preventDefault);

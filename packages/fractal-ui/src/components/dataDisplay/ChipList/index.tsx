@@ -20,8 +20,7 @@ interface ChipListProps<T> extends LayerProps {
 export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress, ...others }: ChipListProps<T>): JSX.Element {
     const { spacings, colors, borderRadius } = useTheme();
 
-    const renderItem = (item: T): JSX.Element => {
-        return (
+    const renderItem = (item: T): JSX.Element => (
             <Chip
                 key={item.id}
                 animate={styleVariants.visible}
@@ -32,7 +31,6 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress, ...
                 text={getLabel(item)}
             />
         );
-    };
 
     return (
         <ScrollWrapper

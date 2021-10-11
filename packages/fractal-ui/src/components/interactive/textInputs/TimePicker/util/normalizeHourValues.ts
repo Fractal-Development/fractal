@@ -3,8 +3,8 @@ export function normalizeHourValues(values: Array<[string, string]>): Array<[str
         const [id, value] = item;
         if (value.length === 1) {
             return [id, `0${value}`];
-        } else {
+        } 
             return item;
-        }
+        
     });
 }

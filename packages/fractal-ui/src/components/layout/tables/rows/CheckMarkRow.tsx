@@ -13,7 +13,7 @@ const CheckMarkRow = forwardRef(({ title, isSelected, ...others }: CheckMarkRowP
     const { spacings } = useTheme();
     return (
         <BaseRow ref={ref} {...others}>
-            <HorizontalLayer alignItems={'center'} flex={1} marginRight={spacings.s}>
+            <HorizontalLayer alignItems="center" flex={1} marginRight={spacings.s}>
                 <Check value={isSelected} label={title} />
             </HorizontalLayer>
         </BaseRow>

@@ -18,8 +18,8 @@ const RadioGroupItem = memo(({ item, isLastItem, flexDirection, active, handleCh
 
     return (
         <RadioButton
-            marginBottom={flexDirection != 'row' && isLastItem ? 0 : spacings.s}
-            marginRight={flexDirection == 'row' && isLastItem ? 0 : spacings.s}
+            marginBottom={flexDirection !== 'row' && isLastItem ? 0 : spacings.s}
+            marginRight={flexDirection === 'row' && isLastItem ? 0 : spacings.s}
             key={item.value}
             active={active}
             label={item.label}

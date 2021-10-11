@@ -30,9 +30,9 @@ export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTa
                 ))}
             </ScrollView>
             <Box
-                borderTopLeftRadius={activeIndex != 0 ? borderRadius.m : 0}
+                borderTopLeftRadius={activeIndex !== 0 ? borderRadius.m : 0}
                 borderTopRightRadius={borderRadius.m}
-                width={'100%'}
+                width='100%'
                 flex={1}
                 animate={{ backgroundColor: tabColor }}
                 transition={{ type: 'timing' }}

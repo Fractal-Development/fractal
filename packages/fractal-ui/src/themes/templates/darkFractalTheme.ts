@@ -11,7 +11,7 @@ export const darkColors = {
     placeholder: black.base300,
     label: black.base200,
     separator: black.base400,
-    //Content
+    // Content
     contentInteractiveColor100: black.base100,
     contentInteractiveColor200: black.base200,
     contentInteractiveColor300: black.base300,

@@ -5,7 +5,7 @@ import { ModalContent } from './ModalContent';
 import { ModalProps } from './types';
 
 const Modal = forwardRef(({ visible, onExitComplete, ...others }: ModalProps, ref: any): JSX.Element => {
-    delete others['onDismiss'];
+    delete others.onDismiss;
 
     return (
         <ModalPortal>

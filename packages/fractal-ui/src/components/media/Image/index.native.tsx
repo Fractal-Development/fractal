@@ -1,5 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
+import { Image as RNImage } from 'react-native';
+import { motify } from '@motify/core';
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -7,8 +9,6 @@ import {
     extractDisplayProps,
     extractShadowProps
 } from '../../../sharedProps';
-import { Image as RNImage } from 'react-native';
-import { motify } from '@motify/core';
 import { ImageProps } from './types';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
@@ -28,7 +28,7 @@ const Image = forwardRef(({ source, resizeMode, currentVariant, variants, ...oth
         <StyledImage
             ref={ref}
             state={variantState}
-            source={typeof source == 'string' ? { uri: source } : source}
+            source={typeof source === 'string' ? { uri: source } : source}
             resizeMode={resizeMode}
             {...others}
         />

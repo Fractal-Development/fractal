@@ -40,7 +40,7 @@ export function PopoverOptionsMenuButton({
         <Box padding={0} {...menuContainerProps}>
             {options.map((option, index) => (
                 <TouchableOpacity key={`${option}_${index}`} padding={spacings.s} onPress={() => handleOptionPress(option)}>
-                    <Text variant={'normal'} style={{ textAlign: 'left' }}>
+                    <Text variant="normal" style={{ textAlign: 'left' }}>
                         {option}
                     </Text>
                 </TouchableOpacity>
@@ -50,7 +50,7 @@ export function PopoverOptionsMenuButton({
 
     return (
         <Popover
-            placement={'bottom'}
+            placement="bottom"
             active={optionsVisible}
             onRequestClose={hideOptions}
             popoverChildren={renderMenu}
@@ -59,16 +59,14 @@ export function PopoverOptionsMenuButton({
             {children
                 ? (ref) => children(ref, showOptions)
                 : (ref) => (
-                      <CircularIconButton ref={ref} variant={'content'} reduceColor onPress={showOptions}>
-                          {customIcon
-                              ? customIcon
-                              : (color) => (
+                      <CircularIconButton ref={ref} variant="content" reduceColor onPress={showOptions}>
+                          {customIcon || ((color) => (
                                     <ThreeDotsHorizontalIcon
                                         height={sizes.textFieldIconSize}
                                         width={sizes.textFieldIconSize}
                                         fill={color}
                                     />
-                                )}
+                                ))}
                       </CircularIconButton>
                   )}
         </Popover>

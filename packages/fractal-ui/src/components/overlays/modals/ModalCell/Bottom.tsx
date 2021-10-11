@@ -23,9 +23,9 @@ function BottomCellSharedStyles(props: LayerProps): JSX.Element {
 }
 
 export function BottomCellDesktop(props: LayerProps): JSX.Element {
-    return <BottomCellSharedStyles maxWidth={550} maxHeight={'50%'} width={'60%'} minHeight={300} {...props} />;
+    return <BottomCellSharedStyles maxWidth={550} maxHeight="50%" width="60%" minHeight={300} {...props} />;
 }
 
 export function BottomCellPhone(props: LayerProps): JSX.Element {
-    return <BottomCellSharedStyles alignSelf={'stretch'} minHeight={300} maxHeight={'50%'} {...props} />;
+    return <BottomCellSharedStyles alignSelf="stretch" minHeight={300} maxHeight="50%" {...props} />;
 }

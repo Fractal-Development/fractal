@@ -23,7 +23,7 @@ export function SuggestionItem<T extends IDEnabled>({
     onPress
 }: SuggestionItemProps<T>): JSX.Element {
     const [selectedOptions, setSelectedOptions] = useSelectedOptions();
-    const isSelected = selectedOptions.find((element: { id: string }) => element.id == itemData.id) != undefined;
+    const isSelected = selectedOptions.find((element: { id: string }) => element.id === itemData.id) !== undefined;
 
     const addSelectedOption = (option: T) => {
         onPress();
@@ -36,7 +36,7 @@ export function SuggestionItem<T extends IDEnabled>({
     };
 
     const removeSelectedOption = (option: T) => {
-        setSelectedOptions(selectedOptions.filter((item: T) => item.id != option.id));
+        setSelectedOptions(selectedOptions.filter((item: T) => item.id !== option.id));
     };
 
     const onOptionPress = () => {
@@ -52,7 +52,7 @@ export function SuggestionItem<T extends IDEnabled>({
     };
 
     return (
-        <TouchableOpacity width={'100%'} onPress={onOptionPress}>
+        <TouchableOpacity width='100%' onPress={onOptionPress}>
             {isMultiple ? (
                 <CheckMarkRow title={label} isSelected={isSelected} addSeparator={addSeparator} minHeight={SUGGESTION_ITEM_HEIGHT} />
             ) : (

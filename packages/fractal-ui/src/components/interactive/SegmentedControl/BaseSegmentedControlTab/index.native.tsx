@@ -17,9 +17,9 @@ export function BaseSegmentedControlTab({
     const { borderRadius } = useTheme();
     return (
         <TouchableOpacity onPress={onSelect} flex={1} borderRadius={borderRadius.xs}>
-            <Layer flex={1} justifyContent={'center'} alignItems={'center'} margin={2} borderRadius={borderRadius.xs}>
+            <Layer flex={1} justifyContent="center" alignItems="center" margin={2} borderRadius={borderRadius.xs}>
                 <Text
-                    variant={'normal'}
+                    variant="normal"
                     fontFamily={fontFamily}
                     fontSize={fontSize}
                     color={color}

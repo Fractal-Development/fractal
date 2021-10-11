@@ -13,14 +13,13 @@ export interface ColorPickerProps extends Partial<Omit<LayerProps, 'children'>> 
 }
 
 const ColorPicker = forwardRef(({ colors, onColorChange, defaultValue, value, ...others }: ColorPickerProps, ref: any): JSX.Element => {
-    const finalDefaultValue = defaultValue ? defaultValue : colors[0];
+    const finalDefaultValue = defaultValue || colors[0];
     const [activeColor, setActiveColor] = useControllableState(value, finalDefaultValue, onColorChange);
     const { spacings } = useTheme();
 
     const handleColorChange = (_active: boolean, color: string) => setActiveColor(color);
 
-    const renderColorToggle = (color: string) => {
-        return (
+    const renderColorToggle = (color: string) => (
             <ColorToggle
                 backgroundColor={color}
                 key={color}
@@ -30,10 +29,9 @@ const ColorPicker = forwardRef(({ colors, onColorChange, defaultValue, value, ..
                 {...getColorAccessibilityProps(activeColor === color)}
             />
         );
-    };
 
     return (
-        <HorizontalLayer ref={ref} justifyContent={'space-around'} flexWrap={'wrap'} {...others}>
+        <HorizontalLayer ref={ref} justifyContent="space-around" flexWrap="wrap" {...others}>
             {colors.map(renderColorToggle)}
         </HorizontalLayer>
     );

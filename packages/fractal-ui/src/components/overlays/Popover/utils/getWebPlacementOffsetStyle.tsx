@@ -10,14 +10,14 @@ export function getWebPlacementOffsetStyle(
     let style: PlacementOffsetStyle = {};
 
     if (anchorRef.current && popoverRef.current) {
-        const offsetHeight = anchorRef.current.offsetHeight;
-        const offsetWidth = anchorRef.current.offsetWidth;
-        const offsetLeft = anchorRef.current.offsetLeft;
-        const offsetTop = anchorRef.current.offsetTop;
+        const { offsetHeight } = anchorRef.current;
+        const { offsetWidth } = anchorRef.current;
+        const { offsetLeft } = anchorRef.current;
+        const { offsetTop } = anchorRef.current;
         const popoverWidth = popoverRef.current.offsetWidth;
         const popoverHeight = popoverRef.current.offsetHeight;
 
-        if (placement == 'bottom') {
+        if (placement === 'bottom') {
             style = {
                 left: offsetLeft + offsetWidth / 2,
                 top: offsetHeight,
@@ -38,7 +38,7 @@ export function getWebPlacementOffsetStyle(
                 transform: 'translateY(-50%)'
             };
         }
-        if (placement == 'right') {
+        if (placement === 'right') {
             style = {
                 left: offsetLeft + offsetWidth,
                 top: offsetTop + offsetHeight / 2,

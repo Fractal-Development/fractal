@@ -57,7 +57,7 @@ export function MultiSelectInput<T extends IDEnabled>({
                 onItemPress={onDeletePress}
                 {...chipListStyle}
             />
-            {enableClearButton ? <Button zIndex={-1} variant={'warning'} onPress={onClearPress} text={clearButtonText} /> : null}
+            {enableClearButton ? <Button zIndex={-1} variant="warning" onPress={onClearPress} text={clearButtonText} /> : null}
         </Layer>
     );
 }

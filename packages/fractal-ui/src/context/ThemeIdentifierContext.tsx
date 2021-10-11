@@ -2,7 +2,7 @@ import React, { createContext, ReactNode, useState, Dispatch, SetStateAction, us
 import { usePlatformColorScheme } from '../hooks/usePlatformColorScheme';
 
 const placeholderFunction = () => {
-    return;
+    
 };
 
 export type ThemeIdentifierType = 'light' | 'dark';

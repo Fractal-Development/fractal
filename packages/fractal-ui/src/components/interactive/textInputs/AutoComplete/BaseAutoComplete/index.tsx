@@ -21,14 +21,14 @@ export function BaseAutoComplete<T extends IDEnabled>({
     const { spacings } = useTheme();
 
     useEffect(() => {
-        if (filteredData.length == 0) {
+        if (filteredData.length === 0) {
             hideSuggestions();
         }
     }, [filteredData.length, hideSuggestions]);
 
     return (
         <Popover
-            placement={'bottom'}
+            placement='bottom'
             active={suggestionsVisible}
             onRequestClose={hideSuggestions}
             popoverChildren={(anchorWidth: number) => (
@@ -39,7 +39,7 @@ export function BaseAutoComplete<T extends IDEnabled>({
                     paddingTop={spacings.xs}
                     paddingBottom={spacings.xs}
                     maxHeight={240}
-                    overflow={'scroll'}
+                    overflow='scroll'
                 >
                     <SuggestionsList multiple={multiple} filteredData={filteredData} getLabel={getLabel} onItemPress={onItemPress} />
                 </Box>
@@ -49,7 +49,7 @@ export function BaseAutoComplete<T extends IDEnabled>({
                 <SearchBar
                     ref={ref}
                     value={value}
-                    ariaLabel={'Autocomplete'}
+                    ariaLabel='Autocomplete'
                     onSearch={onSearch}
                     onChangeText={onChangeText}
                     {...searchBarProps}

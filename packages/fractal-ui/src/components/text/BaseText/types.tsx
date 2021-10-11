@@ -1,7 +1,7 @@
-import { AnimationProps, FractalSharedStyleProps, FractalTextProps } from '../../../sharedProps';
-import { FractalThemeTextVariants } from '../../../themes';
 import { RequiredKeys } from 'utility-types';
 import { ReactElement } from 'react';
+import { AnimationProps, FractalSharedStyleProps, FractalTextProps } from '../../../sharedProps';
+import { FractalThemeTextVariants } from '../../../themes';
 
 interface DefaultTexProps {
     allowFontScaling?: boolean;

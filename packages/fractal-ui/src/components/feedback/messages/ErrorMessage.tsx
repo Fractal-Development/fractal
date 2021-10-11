@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Message } from './Message';
 import { BugIcon } from '../../../assets';
 import { Layer, LayerProps } from '../../layout';
@@ -31,18 +31,14 @@ export class ErrorMessage extends React.Component<ErrorMessageProps, State> {
     renderErrorIcon = (color: string): JSX.Element => <BugIcon width={20} fill={color} />;
 
     render(): React.ReactNode {
-        if (this.state.hasError) {
+        const { hasError, errorTitle, errorMessage } = this.state;
+
+        if (hasError) {
             return (
-                <Message
-                    messageType={'danger'}
-                    title={this.state.errorTitle}
-                    description={this.state.errorMessage}
-                    icon={this.renderErrorIcon}
-                    {...this.props}
-                />
+                <Message messageType='danger' title={errorTitle} description={errorMessage} icon={this.renderErrorIcon} {...this.props} />
             );
         }
 
-        return <Layer {...this.props}>{this.props.children}</Layer>;
+        return <Layer {...this.props} />;
     }
 }

@@ -1,7 +1,7 @@
-import { PressableProps } from '../../../components/interactive/buttons/Pressable/types';
 import { ViewStyle } from 'react-native';
-import { useSharedValueCallbacks } from './useSharedValueCallbacks';
 import { interpolateColor, useAnimatedStyle } from 'react-native-reanimated';
+import { PressableProps } from '../../../components/interactive/buttons/Pressable/types';
+import { useSharedValueCallbacks } from './useSharedValueCallbacks';
 import { useColorAnimationCallbacks } from './useColorAnimationCallbacks';
 import { insertTransitionValue } from '../worklets/inserTransitionValue';
 import { insertTransformTransitionValue } from '../worklets/insertTransformTransitionValue';
@@ -59,7 +59,7 @@ export function usePressableAnimationStyles({
         insertTransitionValue(styles, 'height', heightAnimatedValue.value);
 
         if (backgroundColors.length === 2) {
-            styles['backgroundColor'] = initialPressDone.value
+            styles.backgroundColor = initialPressDone.value
                 ? interpolateColor(backgroundColorAnimatedValue.value, [0, 1], backgroundColors)
                 : backgroundColor;
         }

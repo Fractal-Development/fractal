@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { TextProps } from './types';
 import { motion } from 'framer-motion';
+import { TextProps } from './types';
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -23,9 +23,7 @@ const StyledText = styled(motion.span as any)`
     ${extractTextProps};
 `;
 
-const BaseText = forwardRef(({ from, currentVariant, animate, ...others }: Omit<TextProps, 'variant'>, ref: any): JSX.Element => {
-    return <StyledText ref={ref} initial={currentVariant ? 'from' : from} animate={currentVariant ?? animate} {...others} />;
-});
+const BaseText = forwardRef(({ from, currentVariant, animate, ...others }: Omit<TextProps, 'variant'>, ref: any): JSX.Element => <StyledText ref={ref} initial={currentVariant ? 'from' : from} animate={currentVariant ?? animate} {...others} />);
 
 BaseText.displayName = 'BaseText';
 

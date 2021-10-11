@@ -5,9 +5,7 @@ export interface RecyclerViewProps extends Omit<RecyclerListViewProps, 'style'> 
     style?: any;
 }
 
-const RecyclerView = forwardRef((props: RecyclerViewProps, ref?: any): JSX.Element => {
-    return <RecyclerListView ref={ref} {...props} />;
-});
+const RecyclerView = forwardRef((props: RecyclerViewProps, ref?: any): JSX.Element => <RecyclerListView ref={ref} {...props} />);
 
 RecyclerView.displayName = 'RecyclerView';
 

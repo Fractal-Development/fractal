@@ -38,7 +38,7 @@ const ToggleButton = forwardRef(
             <BaseButton
                 ref={ref}
                 height={sizes.interactiveItemHeight}
-                width={'100%'}
+                width="100%"
                 pressedBackgroundColor={pressedColor}
                 borderRadius={borderRadius.m}
                 justifyContent='center'

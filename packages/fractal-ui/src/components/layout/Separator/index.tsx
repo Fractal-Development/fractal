@@ -15,7 +15,7 @@ const Separator = forwardRef(({ isAtBackgroundLevel, ...others }: SeparatorProps
         <Layer
             ref={ref}
             height={1}
-            width={'100%'}
+            width="100%"
             backgroundColor={isAtBackgroundLevel ? colors.placeholder : colors.background}
             {...others}
             {...getSeparatorAccessibilityProps()}

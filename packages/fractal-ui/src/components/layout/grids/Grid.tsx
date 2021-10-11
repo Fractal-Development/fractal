@@ -8,7 +8,7 @@ const Grid = forwardRef(({ children, ...others }: GridProps, ref: any): JSX.Elem
     const isRow = (): boolean => {
         let row = false;
         Children.forEach(children, (child) => {
-            if (child && child.type == GridRow) row = true;
+            if (child && child.type === GridRow) row = true;
         });
         return row;
     };

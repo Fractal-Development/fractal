@@ -10,10 +10,11 @@
     "scripts": {
         "build": "expo-module build",
         "clean-build": "rm -rf ./dist",
-        "lint": "eslint src/ --fix",
+        "lint": "eslint 'src/**/*.ts*' --fix",
         "expo-module": "expo-module"
     },
     "peerDependencies": {
+        "@motify/core": "^0.16.0",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",
         "@react-native-picker/picker": "^1.16.3",
@@ -30,6 +31,9 @@
         "react-virtualized-auto-sizer": "^1.0.5"
     },
     "peerDependenciesMeta": {
+        "@motify/core": {
+            "optional": true
+        },
         "@react-native-community/datetimepicker": {
             "optional": true
         },
@@ -74,10 +78,12 @@
         "@bma98/size-class": "^2.2.4",
         "framer-motion": "^4.1.17",
         "recyclerlistview": "^3.0.5",
-        "styled-components": "^5.3.0"
+        "styled-components": "^5.3.0",
+        "utility-types": "^3.10.0"
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
+        "@motify/core": "^0.16.0",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",
         "@react-native-picker/picker": "^1.16.3",
@@ -90,15 +96,15 @@
         "@typescript-eslint/parser": "^4.15.1",
         "babel-eslint": "^10.1.0",
         "eslint": "^7.29.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-typescript": "^14.0.1",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-config-standard": "^16.0.3",
-        "eslint-config-standard-react": "^11.0.1",
-        "eslint-plugin-import": "^2.23.4",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-promise": "^5.1.0",
-        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-unused-imports": "^1.1.5",
         "expo-blur": "^9.0.3",
         "expo-document-picker": "^9.1.2",
         "expo-module-scripts": "^2.0.0",
@@ -109,8 +115,7 @@
         "react-native-gesture-handler": "~1.10.3",
         "react-native-reanimated": "~2.1.0",
         "react-native-svg": "^12.1.1",
-        "typescript": "^4.3.4",
-        "utility-types": "^3.10.0"
+        "typescript": "^4.3.4"
     },
     "keywords": [
         "Javascript",

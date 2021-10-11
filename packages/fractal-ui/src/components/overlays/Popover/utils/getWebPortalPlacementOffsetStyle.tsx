@@ -11,12 +11,12 @@ export function getWebPortalPlacementOffsetStyle(
 
     if (anchorRef.current && popoverRef.current) {
         const { left, top, bottom } = anchorRef.current.getBoundingClientRect();
-        const offsetHeight = anchorRef.current.offsetHeight;
-        const offsetWidth = anchorRef.current.offsetWidth;
+        const { offsetHeight } = anchorRef.current;
+        const { offsetWidth } = anchorRef.current;
         const popoverWidth = popoverRef.current.offsetWidth;
         const popoverHeight = popoverRef.current.offsetHeight;
 
-        if (placement == 'bottom') {
+        if (placement === 'bottom') {
             style = {
                 left: left + offsetWidth / 2,
                 top: bottom + window.scrollY,
@@ -37,7 +37,7 @@ export function getWebPortalPlacementOffsetStyle(
                 transform: 'translateY(-50%)'
             };
         }
-        if (placement == 'right') {
+        if (placement === 'right') {
             style = {
                 left: left + offsetWidth,
                 top: top + offsetHeight / 2 + window.scrollY,

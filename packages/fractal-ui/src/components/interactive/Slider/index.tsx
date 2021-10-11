@@ -18,8 +18,7 @@ const Slider = forwardRef(
             ...layerProps
         }: SliderProps,
         ref: any
-    ): JSX.Element => {
-        return (
+    ): JSX.Element => (
             <Layer ref={ref} {...layerProps}>
                 <BaseSlider
                     defaultValue={defaultValue}
@@ -33,8 +32,7 @@ const Slider = forwardRef(
                     value={value}
                 />
             </Layer>
-        );
-    }
+        )
 );
 
 Slider.displayName = 'Slider';

@@ -21,8 +21,8 @@ export function Check({ value, label }: CheckProps): JSX.Element {
                 borderWidth={2}
                 borderRadius={borderRadius.xs}
                 borderColor={value ? colors.mainInteractiveColor : colors.placeholder}
-                overflow={'hidden'}
-                borderStyle={'solid'}
+                overflow="hidden"
+                borderStyle="solid"
             >
                 <AnimatePresence>
                     {value && (
@@ -31,10 +31,10 @@ export function Check({ value, label }: CheckProps): JSX.Element {
                             from={checkVariants.hidden}
                             animate={checkVariants.visible}
                             exit={checkVariants.hidden}
-                            width={'100%'}
-                            height={'100%'}
-                            alignItems={'center'}
-                            justifyContent={'center'}
+                            width="100%"
+                            height="100%"
+                            alignItems="center"
+                            justifyContent="center"
                         >
                             <CheckIcon width={16} height={16} fill={colors.white} />
                         </Layer>
