@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-charts",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Charts and Graphs Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -14,14 +14,14 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-ui": "^2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
-        "react-native-gesture-handler": "~1.10.3",
-        "react-native-reanimated": "~2.1.0",
-        "react-native-svg": "^12.1.1"
+        "react-native": "*",
+        "react-native-gesture-handler": "*",
+        "react-native-reanimated": "^2.0.0",
+        "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
         "react-dom": {
