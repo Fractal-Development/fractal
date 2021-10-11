@@ -18,7 +18,7 @@
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
+        "react-native": "*",
         "expo-av": "^9.1.2",
         "react-native-webview": "^11.6.4",
         "react-native-youtube-iframe": "^2.1.0"
