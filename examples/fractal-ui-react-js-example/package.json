@@ -10,7 +10,7 @@
         "@bma98/fractal-messaging": "^2.0.0",
         "@bma98/fractal-navigation": "^2.0.0",
         "@bma98/fractal-navigation-router": "^2.0.0",
-        "@bma98/fractal-ui": "^2.0.0",
+        "@bma98/fractal-ui": "^2.0.3",
         "@bma98/size-class": "^2.2.4",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
