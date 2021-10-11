@@ -14,12 +14,12 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-ui": "^2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
-        "react-native-svg": "^12.1.1"
+        "react-native": "*",
+        "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
         "react-dom": {
