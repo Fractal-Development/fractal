@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-navigation-router",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Router based on React Router that works on ReactJS and React Native.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -14,15 +14,15 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-navigation": "2.0.0",
-        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-navigation": "^2.0.0",
+        "@bma98/fractal-ui": "^2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
+        "react-native": "*",
         "react-native-safe-area-context": "3.2.0",
         "react-native-screens": "^3.4.0",
-        "react-native-svg": "^12.1.1",
+        "react-native-svg": "*",
         "react-router-dom": "^5.2.0",
         "react-router-native": "^5.2.0",
         "react-native-url-polyfill": "^1.3.0"
