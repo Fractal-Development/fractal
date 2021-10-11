@@ -17,14 +17,12 @@ import { useControllableState } from '../../../hooks/useControllableState';
 import { getColorAccessibilityProps } from './accessibility/getColorAccessibilityProps';
 const ColorPicker = forwardRef((_a, ref) => {
     var { colors, onColorChange, defaultValue, value } = _a, others = __rest(_a, ["colors", "onColorChange", "defaultValue", "value"]);
-    const finalDefaultValue = defaultValue ? defaultValue : colors[0];
+    const finalDefaultValue = defaultValue || colors[0];
     const [activeColor, setActiveColor] = useControllableState(value, finalDefaultValue, onColorChange);
     const { spacings } = useTheme();
     const handleColorChange = (_active, color) => setActiveColor(color);
-    const renderColorToggle = (color) => {
-        return (React.createElement(ColorToggle, Object.assign({ backgroundColor: color, key: color, onActiveChange: handleColorChange, active: activeColor === color, margin: spacings.xs }, getColorAccessibilityProps(activeColor === color))));
-    };
-    return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, justifyContent: 'space-around', flexWrap: 'wrap' }, others), colors.map(renderColorToggle)));
+    const renderColorToggle = (color) => (React.createElement(ColorToggle, Object.assign({ backgroundColor: color, key: color, onActiveChange: handleColorChange, active: activeColor === color, margin: spacings.xs }, getColorAccessibilityProps(activeColor === color))));
+    return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, justifyContent: "space-around", flexWrap: "wrap" }, others), colors.map(renderColorToggle)));
 });
 ColorPicker.displayName = 'ColorPicker';
 export { ColorPicker };

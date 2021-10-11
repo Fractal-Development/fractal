@@ -19,7 +19,7 @@ const ModalContent = forwardRef((_a, ref) => {
             document.body.style.overflow = 'scroll';
         };
     }, []);
-    return (React.createElement(Layer, Object.assign({ ref: ref, position: 'fixed', top: 0, right: 0, bottom: 0, left: 0, zIndex: 2 }, others), children));
+    return (React.createElement(Layer, Object.assign({ ref: ref, position: "fixed", top: 0, right: 0, bottom: 0, left: 0, zIndex: 2 }, others), children));
 });
 ModalContent.displayName = 'ModalContent';
 export { ModalContent };

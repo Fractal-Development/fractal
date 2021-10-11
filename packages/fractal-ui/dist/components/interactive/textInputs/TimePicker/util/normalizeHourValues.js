@@ -4,9 +4,7 @@ export function normalizeHourValues(values) {
         if (value.length === 1) {
             return [id, `0${value}`];
         }
-        else {
-            return item;
-        }
+        return item;
     });
 }
 //# sourceMappingURL=normalizeHourValues.js.map

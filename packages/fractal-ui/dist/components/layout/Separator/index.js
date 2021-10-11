@@ -16,7 +16,7 @@ import { getSeparatorAccessibilityProps } from './accessibility/getSeparatorAcce
 const Separator = forwardRef((_a, ref) => {
     var { isAtBackgroundLevel } = _a, others = __rest(_a, ["isAtBackgroundLevel"]);
     const { colors } = useTheme();
-    return (React.createElement(Layer, Object.assign({ ref: ref, height: 1, width: '100%', backgroundColor: isAtBackgroundLevel ? colors.placeholder : colors.background }, others, getSeparatorAccessibilityProps())));
+    return (React.createElement(Layer, Object.assign({ ref: ref, height: 1, width: "100%", backgroundColor: isAtBackgroundLevel ? colors.placeholder : colors.background }, others, getSeparatorAccessibilityProps())));
 });
 Separator.displayName = 'Separator';
 export { Separator };

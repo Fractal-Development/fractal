@@ -19,7 +19,7 @@ const IconTextField = forwardRef((_a, ref) => {
     const { spacings, sizes, colors, borderRadius } = useTheme();
     const paddingLeft = leftImage != null ? spacings.xs : undefined;
     const paddingRight = rightImage != null ? spacings.xs : undefined;
-    return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, paddingLeft: spacings.xs, paddingRight: spacings.xs, borderRadius: borderRadius.s, height: sizes.textFieldHeight, backgroundColor: colors.textField, justifyContent: 'space-evenly', alignItems: 'center' }, others),
+    return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, paddingLeft: spacings.xs, paddingRight: spacings.xs, borderRadius: borderRadius.s, height: sizes.textFieldHeight, backgroundColor: colors.textField, justifyContent: "space-evenly", alignItems: "center" }, others),
         leftImage != null ? (React.createElement(Layer, { flexShrink: 0, height: sizes.textFieldIconSize, width: sizes.textFieldIconSize }, leftImage(colors.placeholder, sizes.textFieldIconSize))) : null,
         React.createElement(BaseTextField, Object.assign({ ref: inputRef, paddingLeft: paddingLeft, paddingRight: paddingRight, flex: 1, value: value, color: colors.text, placeholderTextColor: colors.placeholder, fontSize: 14, onChangeText: onChangeText, placeholder: placeholder }, getIconTextFieldAccessibilityProps(), textFieldProps)),
         rightImage != null ? (React.createElement(Layer, { flexShrink: 0, height: sizes.textFieldIconSize, width: sizes.textFieldIconSize }, rightImage(colors.placeholder, sizes.textFieldIconSize))) : null));

@@ -19,7 +19,7 @@ const TextFieldButton = forwardRef((_a, ref) => {
     const { sizes, spacings, borderRadius, colors } = useTheme();
     return (React.createElement(TouchableOpacity, Object.assign({ ref: ref, flexDirection: 'row', justifyContent: 'center', paddingLeft: spacings.s, paddingRight: spacings.s, borderRadius: borderRadius.s, height: sizes.textFieldHeight, backgroundColor: colors.textField }, others),
         React.createElement(Layer, { flexGrow: 1, height: '100%', justifyContent: 'center' },
-            React.createElement(Text, { variant: 'normal', color: value == '' ? colors.placeholder : colors.text, alignSelf: 'flex-start', fontSize: 14, fontWeight: 400, numberOfLines: 1 }, value == '' ? placeholder : value)),
+            React.createElement(Text, { variant: 'normal', color: value === '' ? colors.placeholder : colors.text, alignSelf: 'flex-start', fontSize: 14, fontWeight: 400, numberOfLines: 1 }, value === '' ? placeholder : value)),
         rightImage != null ? React.createElement(Layer, { alignSelf: 'center' }, rightImage) : null));
 });
 TextFieldButton.displayName = 'TextFieldButton';

@@ -20,6 +20,12 @@ const StyledLayer = styled(motion.div) `
     ${extractBorderProps};
     ${extractShadowProps};
     ${extractWebProps};
+
+    &:focus {
+        outline-color: initial;
+        outline-style: none;
+        outline-width: initial;
+    }
 `;
 const Layer = forwardRef((_a, ref) => {
     var { from, currentVariant, animate, transition = { type: 'spring' } } = _a, others = __rest(_a, ["from", "currentVariant", "animate", "transition"]);

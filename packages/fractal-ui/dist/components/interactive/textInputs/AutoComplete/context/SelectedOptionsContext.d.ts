@@ -1,5 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
-import { ReactElement } from 'react';
+import React, { Dispatch, SetStateAction, ReactElement } from 'react';
 export declare type SelectedOptionsType = Array<unknown>;
 export declare type SelectedOptionsContextType = [SelectedOptionsType, Dispatch<SetStateAction<SelectedOptionsType>>];
 export declare const SelectedOptionsContext: React.Context<SelectedOptionsContextType>;

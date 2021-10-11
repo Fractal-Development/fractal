@@ -21,9 +21,7 @@ const styleVariants = {
 export function ChipList(_a) {
     var { data, getLabel, onItemPress } = _a, others = __rest(_a, ["data", "getLabel", "onItemPress"]);
     const { spacings, colors, borderRadius } = useTheme();
-    const renderItem = (item) => {
-        return (React.createElement(Chip, { key: item.id, animate: styleVariants.visible, exit: styleVariants.hidden, marginRight: spacings.s, marginBottom: spacings.s, onCrossButtonPress: () => onItemPress(item), text: getLabel(item) }));
-    };
+    const renderItem = (item) => (React.createElement(Chip, { key: item.id, animate: styleVariants.visible, exit: styleVariants.hidden, marginRight: spacings.s, marginBottom: spacings.s, onCrossButtonPress: () => onItemPress(item), text: getLabel(item) }));
     return (React.createElement(ScrollWrapper, Object.assign({ padding: spacings.s, marginTop: spacings.s, marginBottom: spacings.s, borderRadius: borderRadius.s, backgroundColor: colors.background }, others),
         React.createElement(AnimatePresence, null, data.map(renderItem))));
 }

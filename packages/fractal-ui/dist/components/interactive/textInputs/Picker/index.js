@@ -26,7 +26,7 @@ export function Picker(_a) {
         const label = item[1];
         return React.createElement(PickerItem, { color: colors.black, label: label, value: value, key: value });
     }, [colors.black]);
-    return (React.createElement(HorizontalLayer, Object.assign({ justifyContent: 'space-between', alignItems: 'center', position: 'relative', borderRadius: borderRadius.s, height: sizes.textFieldHeight, backgroundColor: colors.textField, pointerEvents: disabled ? 'none' : 'auto', paddingLeft: spacings.s, paddingRight: spacings.s }, others),
+    return (React.createElement(HorizontalLayer, Object.assign({ justifyContent: 'space-between', alignItems: "center", position: 'relative', borderRadius: borderRadius.s, height: sizes.textFieldHeight, backgroundColor: colors.textField, pointerEvents: disabled ? 'none' : 'auto', paddingLeft: spacings.s, paddingRight: spacings.s }, others),
         React.createElement(BasePicker, Object.assign({ borderWidth: 0, backgroundColor: 'transparent', color: colors.text, selectedValue: currentValue, dropdownIconColor: colors.placeholder, onValueChange: handleValueChange, mode: 'dropdown', fontSize: 14, flex: 1 }, getPickerAccessibilityProps()), items.map(renderItem)),
         React.createElement(Layer, { alignSelf: 'center', position: 'absolute', right: 0, marginRight: spacings.s }, rightImage ? rightImage(colors.placeholder, 21) : React.createElement(ChevronDownIcon, { width: 21, fill: colors.placeholder }))));
 }

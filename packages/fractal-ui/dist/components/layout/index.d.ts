@@ -2,7 +2,6 @@ export * from './grids';
 export * from './Layer';
 export * from './Layer/types';
 export * from './SafeAreaLayer';
-export * from './SafeAreaLayer';
 export * from './ScrollView';
 export * from './Background';
 export * from './HorizontalLayer';

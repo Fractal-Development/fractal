@@ -24,6 +24,6 @@ export function ColorTabList(_a) {
     }, [onItemPress]);
     return (React.createElement(Layer, Object.assign({}, others),
         React.createElement(ScrollView, { showsHorizontalScrollIndicator: false, horizontal: true }, tabs.map((props, index) => (React.createElement(ColorTab, Object.assign({ key: index }, props, { onPress: handlePress, index: index, active: index === activeIndex }))))),
-        React.createElement(Box, { borderTopLeftRadius: activeIndex != 0 ? borderRadius.m : 0, borderTopRightRadius: borderRadius.m, width: '100%', flex: 1, animate: { backgroundColor: tabColor }, transition: { type: 'timing' } }, children(activeIndex))));
+        React.createElement(Box, { borderTopLeftRadius: activeIndex !== 0 ? borderRadius.m : 0, borderTopRightRadius: borderRadius.m, width: '100%', flex: 1, animate: { backgroundColor: tabColor }, transition: { type: 'timing' } }, children(activeIndex))));
 }
 //# sourceMappingURL=ColorTabList.js.map

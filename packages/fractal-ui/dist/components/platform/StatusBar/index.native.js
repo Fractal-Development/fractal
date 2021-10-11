@@ -6,8 +6,6 @@ export function StatusBar() {
     if (Platform.OS === 'android') {
         return React.createElement(RNStatusBar, { barStyle: 'light-content' });
     }
-    else {
-        return React.createElement(RNStatusBar, { barStyle: currentThemeIdentifier === 'light' ? 'dark-content' : 'light-content' });
-    }
+    return React.createElement(RNStatusBar, { barStyle: currentThemeIdentifier === 'light' ? 'dark-content' : 'light-content' });
 }
 //# sourceMappingURL=index.native.js.map

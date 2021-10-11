@@ -7,7 +7,7 @@ export function useDragAndDropEventHandlers(handleFiles) {
     const fileDrop = useCallback((dragEvent) => {
         handlePreventDefault(dragEvent);
         setDragFocused(false);
-        const files = dragEvent.dataTransfer.files;
+        const { files } = dragEvent.dataTransfer;
         if (files.length > 0) {
             handleFiles(files);
         }

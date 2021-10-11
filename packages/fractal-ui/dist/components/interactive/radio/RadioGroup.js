@@ -21,9 +21,7 @@ const RadioGroup = forwardRef((_a, ref) => {
     const handleChange = (value) => setActiveValue(value);
     // Memoizing the callback is hard because it depends on the active value, so it will be re generated everytime it changes.
     // It makes more sense to create a new component that depends only on primitives, and memoize that.
-    const renderRadioButton = (item, index) => {
-        return (React.createElement(RadioGroupItem, { key: item.value, item: item, isLastItem: index === radioButtons.length - 1, flexDirection: flexDirection, active: item.value == activeValue, handleChange: handleChange }));
-    };
+    const renderRadioButton = (item, index) => (React.createElement(RadioGroupItem, { key: item.value, item: item, isLastItem: index === radioButtons.length - 1, flexDirection: flexDirection, active: item.value === activeValue, handleChange: handleChange }));
     return (React.createElement(Layer, Object.assign({ ref: ref }, others, getRadioGroupAccessibilityProps()), radioButtons.map(renderRadioButton)));
 });
 RadioGroup.displayName = 'RadioGroup';

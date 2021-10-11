@@ -14,15 +14,10 @@ import { AutoSizeRecyclerView } from './AutoSizeRecyclerView';
 import { LayoutProvider } from './RecyclerView';
 export function HorizontalFlatList(_a) {
     var { rowHeight, rowWidth } = _a, others = __rest(_a, ["rowHeight", "rowWidth"]);
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(() => {
-            return 0;
-        }, (_, dim) => {
-            dim.height = rowHeight;
-            dim.width = rowWidth;
-            return;
-        });
-    }, [rowWidth, rowHeight]);
+    const layoutProvider = useMemo(() => new LayoutProvider(() => 0, (_, dim) => {
+        dim.height = rowHeight;
+        dim.width = rowWidth;
+    }), [rowWidth, rowHeight]);
     return React.createElement(AutoSizeRecyclerView, Object.assign({ isHorizontal: true, layoutProvider: layoutProvider }, others));
 }
 //# sourceMappingURL=HorizontalFlatList.js.map

@@ -22,9 +22,7 @@ export function useAcceptedFiles(acceptedTypes, maxFileSize, maxNumberFiles, onC
                 const filesLength = maxNumberFiles - acceptedFiles.length;
                 return getValidFiles(files, filesLength);
             }
-            else {
-                return [];
-            }
+            return [];
         }
         return getValidFiles(files, files.length);
     }, [acceptedFiles.length, getValidFiles, maxNumberFiles]);

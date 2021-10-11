@@ -171,7 +171,7 @@ export const textVariants = {
         fontFamily: systemFont
     }
 };
-//11
+// 11
 export const lightNavigationBarTheme = {
     title: {
         fontSize: 16,

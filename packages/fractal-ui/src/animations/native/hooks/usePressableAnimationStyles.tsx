@@ -50,7 +50,7 @@ export function usePressableAnimationStyles({
     };
 
     const tapStyles = useAnimatedStyle(() => {
-        const styles = {
+        const styles: any = {
             transform: []
         };
 

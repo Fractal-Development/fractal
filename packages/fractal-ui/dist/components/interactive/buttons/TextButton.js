@@ -22,7 +22,7 @@ const TextButton = forwardRef((_a, ref) => {
     const color = (_b = textProps === null || textProps === void 0 ? void 0 : textProps.color) !== null && _b !== void 0 ? _b : colors[colorName];
     return (React.createElement(TouchableOpacity, Object.assign({ ref: ref, opacity: disabled ? 0.5 : 1, disabled: disabled }, others, getTextButtonAccessibilityProps(children)),
         leftIcon && leftIcon(color),
-        children && (React.createElement(Text, Object.assign({ fontWeight: 500, variant: 'textButton', color: color }, textProps), children)),
+        children && (React.createElement(Text, Object.assign({ fontWeight: 500, variant: "textButton", color: color }, textProps), children)),
         rightIcon && rightIcon(color)));
 });
 TextButton.displayName = 'TextButton';

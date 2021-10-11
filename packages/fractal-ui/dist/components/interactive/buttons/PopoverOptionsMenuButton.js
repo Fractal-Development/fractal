@@ -16,11 +16,9 @@ export function PopoverOptionsMenuButton({ options, onOptionPress, customIcon, m
         hideOptions();
     };
     const renderMenu = () => (React.createElement(Box, Object.assign({ padding: 0 }, menuContainerProps), options.map((option, index) => (React.createElement(TouchableOpacity, { key: `${option}_${index}`, padding: spacings.s, onPress: () => handleOptionPress(option) },
-        React.createElement(Text, { variant: 'normal', style: { textAlign: 'left' } }, option))))));
-    return (React.createElement(Popover, { placement: 'bottom', active: optionsVisible, onRequestClose: hideOptions, popoverChildren: renderMenu, usePortal: usePortal }, children
+        React.createElement(Text, { variant: "normal", style: { textAlign: 'left' } }, option))))));
+    return (React.createElement(Popover, { placement: "bottom", active: optionsVisible, onRequestClose: hideOptions, popoverChildren: renderMenu, usePortal: usePortal }, children
         ? (ref) => children(ref, showOptions)
-        : (ref) => (React.createElement(CircularIconButton, { ref: ref, variant: 'content', reduceColor: true, onPress: showOptions }, customIcon
-            ? customIcon
-            : (color) => (React.createElement(ThreeDotsHorizontalIcon, { height: sizes.textFieldIconSize, width: sizes.textFieldIconSize, fill: color }))))));
+        : (ref) => (React.createElement(CircularIconButton, { ref: ref, variant: "content", reduceColor: true, onPress: showOptions }, customIcon || ((color) => (React.createElement(ThreeDotsHorizontalIcon, { height: sizes.textFieldIconSize, width: sizes.textFieldIconSize, fill: color })))))));
 }
 //# sourceMappingURL=PopoverOptionsMenuButton.js.map

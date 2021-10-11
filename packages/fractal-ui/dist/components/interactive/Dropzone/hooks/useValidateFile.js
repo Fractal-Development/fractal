@@ -8,8 +8,6 @@ export function useValidateFile(acceptedTypes, maxFileSize) {
         }
         return true;
     }, [maxFileSize]);
-    return useCallback((fileType, fileSize) => {
-        return validateFileType(fileType) && validateFileSize(fileSize);
-    }, [validateFileSize, validateFileType]);
+    return useCallback((fileType, fileSize) => validateFileType(fileType) && validateFileSize(fileSize), [validateFileSize, validateFileType]);
 }
 //# sourceMappingURL=useValidateFile.js.map

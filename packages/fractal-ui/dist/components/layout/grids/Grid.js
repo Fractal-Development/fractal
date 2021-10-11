@@ -18,7 +18,7 @@ const Grid = forwardRef((_a, ref) => {
     const isRow = () => {
         let row = false;
         Children.forEach(children, (child) => {
-            if (child && child.type == GridRow)
+            if (child && child.type === GridRow)
                 row = true;
         });
         return row;

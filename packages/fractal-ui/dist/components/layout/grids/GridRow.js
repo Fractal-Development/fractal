@@ -6,9 +6,7 @@ import { getGridRowAccessibilityProps } from './accessibility/getGridRowAccessib
 const StyledGrid = styled(Layer) `
     ${extractGridItemProps};
 `;
-const GridRow = forwardRef((props, ref) => {
-    return React.createElement(StyledGrid, Object.assign({ ref: ref, flexDirection: 'row' }, props, getGridRowAccessibilityProps()));
-});
+const GridRow = forwardRef((props, ref) => React.createElement(StyledGrid, Object.assign({ ref: ref, flexDirection: "row" }, props, getGridRowAccessibilityProps())));
 GridRow.displayName = 'GridRow';
 export { GridRow };
 //# sourceMappingURL=GridRow.js.map

@@ -6,9 +6,7 @@ export function useButtonColors(variant, reduceColor = false) {
         if (variant === 'content') {
             return 'text';
         }
-        else {
-            return reduceColor ? `${variant}InteractiveColor` : 'white';
-        }
+        return reduceColor ? `${variant}InteractiveColor` : 'white';
     })();
     const pressedColorName = reduceColor && variant !== 'content' ? `${variant}InteractiveColor200` : `${variant}InteractiveColor600`;
     const backgroundColor = colors[backgroundColorName];

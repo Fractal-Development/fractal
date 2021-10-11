@@ -18,7 +18,7 @@ export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', accep
     const { spacings } = useTheme();
     const pickFile = () => __awaiter(this, void 0, void 0, function* () {
         const result = yield DocumentPicker.getDocumentAsync({ type: acceptedTypes === null || acceptedTypes === void 0 ? void 0 : acceptedTypes.join(',') });
-        if (result.type == 'success') {
+        if (result.type === 'success') {
             onSelectFile({ name: result.name, size: result.size, uri: result.uri, type: '' });
         }
     });

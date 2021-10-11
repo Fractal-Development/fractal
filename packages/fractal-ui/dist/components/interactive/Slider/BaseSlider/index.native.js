@@ -16,6 +16,6 @@ import { useTheme } from '../../../../context';
 export function BaseSlider(_a) {
     var { step = 0.001, defaultValue, value } = _a, others = __rest(_a, ["step", "defaultValue", "value"]);
     const { colors } = useTheme();
-    return (React.createElement(Slider, Object.assign({ minimumTrackTintColor: colors.mainInteractiveColor, maximumTrackTintColor: Platform.OS == 'android' ? colors.label : colors.placeholder, thumbTintColor: Platform.OS == 'android' ? colors.mainInteractiveColor : colors.white, step: step, style: { height: 20 }, value: value || defaultValue }, others)));
+    return (React.createElement(Slider, Object.assign({ minimumTrackTintColor: colors.mainInteractiveColor, maximumTrackTintColor: Platform.OS === 'android' ? colors.label : colors.placeholder, thumbTintColor: Platform.OS === 'android' ? colors.mainInteractiveColor : colors.white, step: step, style: { height: 20 }, value: value || defaultValue }, others)));
 }
 //# sourceMappingURL=index.native.js.map

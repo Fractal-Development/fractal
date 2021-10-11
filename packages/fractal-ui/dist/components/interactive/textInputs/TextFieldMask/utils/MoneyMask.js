@@ -2,7 +2,7 @@ import { Masker } from './Masker';
 export class MoneyMask {
     static getMoneyValue(newValue, oldValue) {
         let sanitized = newValue;
-        if (sanitized.length == oldValue.length - 1) {
+        if (sanitized.length === oldValue.length - 1) {
             sanitized = Masker.removeNotNumbers(sanitized);
         }
         const masked = Masker.toMoney(sanitized);
@@ -12,9 +12,7 @@ export class MoneyMask {
         if (index > 0) {
             return text.substring(0, index) + char + text.substring(index, text.length);
         }
-        else {
-            return char + text;
-        }
+        return char + text;
     }
     static getRawValue(maskedValue) {
         let normalized = Masker.removeNotNumbers(maskedValue);

@@ -19,6 +19,6 @@ export function MultiSelectInput(_a) {
     return (React.createElement(Layer, Object.assign({}, layerProps),
         React.createElement(AutoComplete, { value: inputValue, multiple: true, options: options, getOptionLabel: getOptionLabel, placeholder: placeholder, onSelect: onSelect, controllableSelectedOptions: controllableSelectedOptions, onChangeText: onChangeText, onSubmitEditing: onSubmitEditing }),
         React.createElement(ChipList, Object.assign({ zIndex: -1, data: controllableSelectedOptions, getLabel: getOptionLabel, onItemPress: onDeletePress }, chipListStyle)),
-        enableClearButton ? React.createElement(Button, { zIndex: -1, variant: 'warning', onPress: onClearPress, text: clearButtonText }) : null));
+        enableClearButton ? React.createElement(Button, { zIndex: -1, variant: "warning", onPress: onClearPress, text: clearButtonText }) : null));
 }
 //# sourceMappingURL=MultiSelectInput.js.map

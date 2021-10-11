@@ -15,7 +15,7 @@ const BaseButton = forwardRef((_a, ref) => {
     var { pressedBackgroundColor, backgroundColor, whileHover, whileTap } = _a, others = __rest(_a, ["pressedBackgroundColor", "backgroundColor", "whileHover", "whileTap"]);
     const hoverStyles = Object.assign({ backgroundColor: pressedBackgroundColor }, whileHover);
     const tapStyles = Object.assign({ scale: 0.9, backgroundColor: pressedBackgroundColor }, whileTap);
-    return (React.createElement(Pressable, Object.assign({ ref: ref, animate: { backgroundColor: backgroundColor }, backgroundColor: backgroundColor, whileHover: hoverStyles, whileTap: tapStyles }, others)));
+    return (React.createElement(Pressable, Object.assign({ ref: ref, animate: { backgroundColor }, backgroundColor: backgroundColor, whileHover: hoverStyles, whileTap: tapStyles }, others)));
 });
 BaseButton.displayName = 'BaseButton';
 export { BaseButton };

@@ -1,4 +1,4 @@
-import { DragAndDropEventHandlers, fileInputProps, FractalFile } from '../types';
+import { DragAndDropEventHandlers, FileInputProps, FractalFile } from '../types';
 /**
  * custom hook for create and manage a Dropzone
  *
@@ -14,5 +14,5 @@ export declare function useDropzone(acceptedTypes: Array<string> | undefined, pi
     openFileDialog: () => void;
     removeFile: (fileIndex: number) => void;
     containerProps: DragAndDropEventHandlers;
-    fileInputProps: fileInputProps;
+    fileInputProps: FileInputProps;
 };

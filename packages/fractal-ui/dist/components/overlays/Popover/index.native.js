@@ -21,9 +21,7 @@ const Popover = forwardRef((_a, ref) => {
     const [anchorViewLayout, setAnchorViewLayout] = useState({ x: 0, y: 0, height: 0, width: 0 });
     const [popoverViewLayout, setPopoverViewLayout] = useState({ x: 0, y: 0, height: 0, width: 0 });
     const anchorRef = useRef();
-    const styles = useMemo(() => {
-        return getNativePlacementOffsetStyle(anchorViewLayout, popoverViewLayout, placement);
-    }, [anchorViewLayout, placement, popoverViewLayout]);
+    const styles = useMemo(() => getNativePlacementOffsetStyle(anchorViewLayout, popoverViewLayout, placement), [anchorViewLayout, placement, popoverViewLayout]);
     const onPopoverLayout = useCallback(({ nativeEvent: { layout } }) => {
         setPopoverViewLayout(layout);
     }, []);

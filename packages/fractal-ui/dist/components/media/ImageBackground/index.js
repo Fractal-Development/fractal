@@ -14,8 +14,8 @@ import { Layer } from '../../layout';
 import { Image } from '../Image';
 const ImageBackground = forwardRef((_a, ref) => {
     var { children, resizeMode, source, width, height } = _a, others = __rest(_a, ["children", "resizeMode", "source", "width", "height"]);
-    return (React.createElement(Layer, Object.assign({ ref: ref, position: 'relative', overflow: 'hidden', width: width, height: height }, others),
-        React.createElement(Image, { width: width, height: height, resizeMode: resizeMode, source: source, position: 'absolute', label: 'Background' }),
+    return (React.createElement(Layer, Object.assign({ ref: ref, position: "relative", overflow: "hidden", width: width, height: height }, others),
+        React.createElement(Image, { width: width, height: height, resizeMode: resizeMode, source: source, position: "absolute", label: "Background" }),
         React.createElement(Layer, { zIndex: 1 }, children)));
 });
 ImageBackground.displayName = 'ImageBackground';

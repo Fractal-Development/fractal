@@ -6,6 +6,7 @@ const StyledScrollView = styled(Layer) `
     overflow-y: ${(props) => (props.horizontal ? 'hidden' : 'scroll')};
 `;
 export function ScrollView(props) {
-    return React.createElement(StyledScrollView, Object.assign({ flexDirection: props.horizontal ? 'row' : 'column' }, props));
+    const { horizontal } = props;
+    return React.createElement(StyledScrollView, Object.assign({ flexDirection: horizontal ? 'row' : 'column' }, props));
 }
 //# sourceMappingURL=index.js.map

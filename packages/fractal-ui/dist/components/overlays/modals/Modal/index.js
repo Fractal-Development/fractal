@@ -15,7 +15,7 @@ import { ModalPortal } from './ModalPortal';
 import { ModalContent } from './ModalContent';
 const Modal = forwardRef((_a, ref) => {
     var { visible, onExitComplete } = _a, others = __rest(_a, ["visible", "onExitComplete"]);
-    delete others['onDismiss'];
+    delete others.onDismiss;
     return (React.createElement(ModalPortal, null,
         React.createElement(AnimatePresence, { onExitComplete: onExitComplete }, visible ? React.createElement(ModalContent, Object.assign({ ref: ref, key: 'ModalContent' }, others)) : null)));
 });

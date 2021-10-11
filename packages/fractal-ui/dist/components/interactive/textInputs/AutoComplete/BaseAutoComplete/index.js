@@ -19,7 +19,7 @@ export function BaseAutoComplete(_a) {
     var { suggestionsVisible, hideSuggestions, filteredData, getLabel, onItemPress, multiple, value, onChangeText, onSearch } = _a, searchBarProps = __rest(_a, ["suggestionsVisible", "hideSuggestions", "filteredData", "getLabel", "onItemPress", "multiple", "value", "onChangeText", "onSearch"]);
     const { spacings } = useTheme();
     useEffect(() => {
-        if (filteredData.length == 0) {
+        if (filteredData.length === 0) {
             hideSuggestions();
         }
     }, [filteredData.length, hideSuggestions]);

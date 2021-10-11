@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Message } from './Message';
 import { BugIcon } from '../../../assets';
 import { Layer } from '../../layout';
@@ -17,10 +17,11 @@ export class ErrorMessage extends React.Component {
             onError(error, info.componentStack);
     }
     render() {
-        if (this.state.hasError) {
-            return (React.createElement(Message, Object.assign({ messageType: 'danger', title: this.state.errorTitle, description: this.state.errorMessage, icon: this.renderErrorIcon }, this.props)));
+        const { hasError, errorTitle, errorMessage } = this.state;
+        if (hasError) {
+            return (React.createElement(Message, Object.assign({ messageType: 'danger', title: errorTitle, description: errorMessage, icon: this.renderErrorIcon }, this.props)));
         }
-        return React.createElement(Layer, Object.assign({}, this.props), this.props.children);
+        return React.createElement(Layer, Object.assign({}, this.props));
     }
 }
 //# sourceMappingURL=ErrorMessage.js.map

@@ -12,8 +12,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
-import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../../sharedProps';
 import { TouchableOpacity as RNTouchableOpacity } from 'react-native';
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../../sharedProps';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';
 const MotiTouchableOpacity = motify(RNTouchableOpacity)();
 const StyledTouchableOpacity = styled(MotiTouchableOpacity) `

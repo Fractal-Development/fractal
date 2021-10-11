@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useSizeValue } from '@bma98/size-class';
 import { SuggestionItem, SUGGESTION_ITEM_HEIGHT } from '../SuggestionItem';
 import { DataProvider, VerticalFlatList, Layer } from '../../../../layout';
 import { useTheme } from '../../../../../context';
-import { useSizeValue } from '@bma98/size-class';
-const dataProvider = new DataProvider((rowOne, rowTwo) => {
-    return rowOne !== rowTwo;
-});
+const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne !== rowTwo);
 export function SuggestionsList({ filteredData, getLabel, onItemPress, multiple }) {
     const { spacings } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(filteredData));

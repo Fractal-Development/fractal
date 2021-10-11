@@ -18,7 +18,7 @@ const CheckMarkRow = forwardRef((_a, ref) => {
     var { title, isSelected } = _a, others = __rest(_a, ["title", "isSelected"]);
     const { spacings } = useTheme();
     return (React.createElement(BaseRow, Object.assign({ ref: ref }, others),
-        React.createElement(HorizontalLayer, { alignItems: 'center', flex: 1, marginRight: spacings.s },
+        React.createElement(HorizontalLayer, { alignItems: "center", flex: 1, marginRight: spacings.s },
             React.createElement(Check, { value: isSelected, label: title }))));
 });
 CheckMarkRow.displayName = 'CheckMarkRow';

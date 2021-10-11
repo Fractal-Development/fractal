@@ -16,8 +16,8 @@ import { getImageAccessibilityProps } from './accessibility/getImageAccessibilit
 const Image = forwardRef((_a, ref) => {
     var { label, source, resizeMode, width, height } = _a, others = __rest(_a, ["label", "source", "resizeMode", "width", "height"]);
     const getBackgroundSize = useCallback(() => {
-        if ((resizeMode == 'center' || resizeMode == 'repeat') && width != null && height != null) {
-            if (typeof width == 'string') {
+        if ((resizeMode === 'center' || resizeMode === 'repeat') && width != null && height != null) {
+            if (typeof width === 'string') {
                 return `${width} ${height}`;
             }
             return width < height ? `${width}px` : `${height}px`;

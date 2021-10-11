@@ -11,9 +11,9 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
-import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { Image as RNImage } from 'react-native';
 import { motify } from '@motify/core';
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 const MotiImage = motify(RNImage)();
 const StyledImage = styled(MotiImage) `
@@ -26,7 +26,7 @@ const StyledImage = styled(MotiImage) `
 const Image = forwardRef((_a, ref) => {
     var { source, resizeMode, currentVariant, variants } = _a, others = __rest(_a, ["source", "resizeMode", "currentVariant", "variants"]);
     const variantState = useVariantState(currentVariant, variants);
-    return (React.createElement(StyledImage, Object.assign({ ref: ref, state: variantState, source: typeof source == 'string' ? { uri: source } : source, resizeMode: resizeMode }, others)));
+    return (React.createElement(StyledImage, Object.assign({ ref: ref, state: variantState, source: typeof source === 'string' ? { uri: source } : source, resizeMode: resizeMode }, others)));
 });
 Image.displayName = 'Image';
 export { Image };

@@ -12,8 +12,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
-import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../../sharedProps';
 import { Pressable as RNPressable } from 'react-native';
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../../sharedProps';
 import { usePressableAnimationStyles } from '../../../../animations/native/hooks/usePressableAnimationStyles';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';
 const MotiPressable = motify(RNPressable)();

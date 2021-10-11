@@ -26,7 +26,7 @@ const ToggleButton = forwardRef((_a, ref) => {
         setActive(!active);
         onPress === null || onPress === void 0 ? void 0 : onPress();
     };
-    return (React.createElement(BaseButton, Object.assign({ ref: ref, height: sizes.interactiveItemHeight, width: '100%', pressedBackgroundColor: pressedColor, borderRadius: borderRadius.m, justifyContent: 'center', alignItems: 'center', onPress: handleButtonPress, opacity: disabled ? 0.5 : 1, pointerEvents: disabled ? 'none' : undefined, variants: {
+    return (React.createElement(BaseButton, Object.assign({ ref: ref, height: sizes.interactiveItemHeight, width: "100%", pressedBackgroundColor: pressedColor, borderRadius: borderRadius.m, justifyContent: 'center', alignItems: 'center', onPress: handleButtonPress, opacity: disabled ? 0.5 : 1, pointerEvents: disabled ? 'none' : undefined, variants: {
             active: {
                 backgroundColor
             },

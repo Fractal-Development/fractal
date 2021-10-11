@@ -9,8 +9,8 @@ function getElementViewportOffset(element, offset = 0) {
     };
 }
 export function alignWebPopoverIfRequired(style, anchorElement, popoverWidth, popoverHeight, placement) {
-    const offsetHeight = anchorElement.offsetHeight;
-    const offsetWidth = anchorElement.offsetWidth;
+    const { offsetHeight } = anchorElement;
+    const { offsetWidth } = anchorElement;
     const offset = getElementViewportOffset(anchorElement, 0);
     const isVertical = placement === 'top' || placement === 'bottom';
     const offsetPopoverWidth = isVertical ? popoverWidth / 2 : popoverWidth;

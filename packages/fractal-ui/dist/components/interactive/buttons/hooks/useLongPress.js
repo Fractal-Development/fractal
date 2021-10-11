@@ -1,7 +1,5 @@
 import { useCallback, useRef } from 'react';
-const isTouchEvent = (event) => {
-    return 'touches' in event;
-};
+const isTouchEvent = (event) => 'touches' in event;
 const preventDefault = (event) => {
     if (!isTouchEvent(event))
         return;
@@ -19,7 +17,9 @@ export const useLongPress = (callback, options = {}) => {
         timeout.current = setTimeout(() => callback === null || callback === void 0 ? void 0 : callback(), delay);
     }, [callback, delay, shouldPreventDefault]);
     const clear = useCallback(() => {
-        timeout.current && clearTimeout(timeout.current);
+        if (timeout.current) {
+            clearTimeout(timeout.current);
+        }
         if (shouldPreventDefault && target.current) {
             target.current.removeEventListener('touchend', preventDefault);
         }

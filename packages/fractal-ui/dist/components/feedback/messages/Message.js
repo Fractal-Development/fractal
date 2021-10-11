@@ -22,8 +22,8 @@ const Message = forwardRef((_a, ref) => {
     return (React.createElement(Layer, Object.assign({ ref: ref, padding: spacings.m, borderRadius: borderRadius.m, backgroundColor: colors[backgroundColor] }, others),
         React.createElement(HorizontalLayer, { alignItems: 'center', marginBottom: spacings.xs },
             icon != null ? icon(colors[textVariant]) : null,
-            React.createElement(Text, { marginLeft: icon != null ? spacings.s : undefined, variant: 'title', color: colors[titleVariant] }, title)),
-        React.createElement(Text, { variant: 'normal', color: colors[textVariant] }, description)));
+            React.createElement(Text, { marginLeft: icon != null ? spacings.s : undefined, variant: "title", color: colors[titleVariant] }, title)),
+        React.createElement(Text, { variant: "normal", color: colors[textVariant] }, description)));
 });
 Message.displayName = 'Message';
 export { Message };

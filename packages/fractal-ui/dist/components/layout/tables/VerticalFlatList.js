@@ -16,15 +16,10 @@ import { AutoSizeRecyclerView } from './AutoSizeRecyclerView';
 export function VerticalFlatList(_a) {
     var { rowHeight } = _a, others = __rest(_a, ["rowHeight"]);
     const width = useSizeValue('width');
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(() => {
-            return 0;
-        }, (_, dim) => {
-            dim.height = rowHeight;
-            dim.width = width;
-            return;
-        });
-    }, [width, rowHeight]);
+    const layoutProvider = useMemo(() => new LayoutProvider(() => 0, (_, dim) => {
+        dim.height = rowHeight;
+        dim.width = width;
+    }), [width, rowHeight]);
     return React.createElement(AutoSizeRecyclerView, Object.assign({ layoutProvider: layoutProvider }, others));
 }
 //# sourceMappingURL=VerticalFlatList.js.map

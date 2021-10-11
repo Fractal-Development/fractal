@@ -11,9 +11,9 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
-import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractTextProps } from '../../../../sharedProps';
 import { TextInput } from 'react-native';
 import { motify } from '@motify/core';
+import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractTextProps } from '../../../../sharedProps';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';
 const MotiTextInput = motify(TextInput)();
 const StyledTextInput = styled(MotiTextInput) `

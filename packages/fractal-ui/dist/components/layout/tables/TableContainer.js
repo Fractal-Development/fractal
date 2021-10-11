@@ -24,7 +24,7 @@ const TableContainer = forwardRef((_a, ref) => {
     const labelColorName = getColorName(labelColorVariant);
     const labelColor = colors[labelColorName];
     return (React.createElement(Box, Object.assign({ ref: ref }, getTableContainerAccessibilityProps(), others),
-        React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: 'space-between', alignItems: 'center' },
+        React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: 'space-between', alignItems: "center" },
             React.createElement(Text, { variant: titleTextVariant, color: titleColor, flex: 1 }, title),
             React.createElement(Text, { variant: labelTextVariant, color: labelColor }, label)),
         children));

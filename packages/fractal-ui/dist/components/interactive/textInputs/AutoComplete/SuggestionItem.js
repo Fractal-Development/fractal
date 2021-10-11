@@ -6,7 +6,7 @@ import { useSelectedOptions } from './context/hooks/useSelectedOptions';
 export const SUGGESTION_ITEM_HEIGHT = 46;
 export function SuggestionItem({ label, itemData, isMultiple, addSeparator, onPress }) {
     const [selectedOptions, setSelectedOptions] = useSelectedOptions();
-    const isSelected = selectedOptions.find((element) => element.id == itemData.id) != undefined;
+    const isSelected = selectedOptions.find((element) => element.id === itemData.id) !== undefined;
     const addSelectedOption = (option) => {
         onPress();
         setSelectedOptions([...selectedOptions, option]);
@@ -16,7 +16,7 @@ export function SuggestionItem({ label, itemData, isMultiple, addSeparator, onPr
         setSelectedOptions([option]);
     };
     const removeSelectedOption = (option) => {
-        setSelectedOptions(selectedOptions.filter((item) => item.id != option.id));
+        setSelectedOptions(selectedOptions.filter((item) => item.id !== option.id));
     };
     const onOptionPress = () => {
         if (isMultiple) {
