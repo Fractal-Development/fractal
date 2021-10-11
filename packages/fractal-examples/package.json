@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-examples",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Example components on how to use Fractal UI in small fragments.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -14,18 +14,18 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-charts": "2.0.0",
-        "@bma98/fractal-media": "2.0.0",
-        "@bma98/fractal-messaging": "2.0.0",
-        "@bma98/fractal-navigation": "2.0.0",
-        "@bma98/fractal-navigation-router": "2.0.0",
-        "@bma98/fractal-ui": "2.0.0",
-        "@bma98/fractal-auth-screen": "2.0.0",
+        "@bma98/fractal-charts": "^2.0.0",
+        "@bma98/fractal-media": "^2.0.0",
+        "@bma98/fractal-messaging": "^2.0.0",
+        "@bma98/fractal-navigation": "^2.0.0",
+        "@bma98/fractal-navigation-router": "^2.0.0",
+        "@bma98/fractal-ui": "^2.0.0",
+        "@bma98/fractal-auth-screen": "^2.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
-        "react-native-svg": "^12.1.1"
+        "react-native": "*",
+        "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
         "react-dom": {
