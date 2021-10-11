@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-navigation",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Navigation Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -18,9 +18,9 @@
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
+        "react-native": "*",
         "react-native-screens": "^3.4.0",
-        "react-native-svg": "^12.1.1",
+        "react-native-svg": "*",
         "react-native-safe-area-context": "3.2.0"
     },
     "peerDependenciesMeta": {
