@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
-import { LayoutProvider, DataProvider, AutoSizeRecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
+import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
+import { AutoSizer } from './AutoSizer';
 import { MessageListProps, MinimalMessageData } from './types';
 import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
@@ -74,6 +75,10 @@ export function MessageList<T extends MinimalMessageData>({
         });
     }, []);
 
+    const handleResize = () => {
+        scrollToEnd();
+    };
+
     useEffect(() => {
         scrollToEnd();
     }, [dataProviderState, scrollToEnd]);
@@ -97,14 +102,21 @@ export function MessageList<T extends MinimalMessageData>({
     return (
         <Layer flex={1} {...layerProps}>
             {messages.length > 0 && (
-                <AutoSizeRecyclerView
-                    ref={listView}
-                    key={width}
-                    layoutProvider={layoutProvider}
-                    dataProvider={dataProviderState}
-                    rowRenderer={renderBubbleMessage}
-                    initialRenderIndex={messages.length - 1}
-                />
+                <AutoSizer onResize={handleResize}>
+                    {({ height, width }) => (
+                        <RecyclerView
+                            ref={listView}
+                            canChangeSize
+                            style={{ height, width }}
+                            key={width}
+                            layoutProvider={layoutProvider}
+                            dataProvider={dataProviderState}
+                            rowRenderer={renderBubbleMessage}
+                            initialRenderIndex={messages.length - 1}
+                            scrollViewProps={{ showsVerticalScrollIndicator: false }}
+                        />
+                    )}
+                </AutoSizer>
             )}
         </Layer>
     );

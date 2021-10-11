@@ -1,5 +1,5 @@
 import React from 'react';
-import { PaddingLayer, AnimatePresence } from '@bma98/fractal-ui';
+import { PaddingLayer } from '@bma98/fractal-ui';
 import { MessageInput } from './MessageInput';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
@@ -29,21 +29,16 @@ export function ChatContent<T extends MinimalMessageData>({
                     messageActions={messageActions}
                     getBubbleColor={getBubbleColor}
                 />
-                <AnimatePresence>
-                    {isLoading ? (
-                        <ChatLoadingIndicator show />
-                    ) : (
-                        <MessageInput
-                            placeholder={placeholder}
-                            useForegroundVariant
-                            buttonVariant={messageInputButtonVariant}
-                            onSend={onSend}
-                            from={{ opacity: 0, scale: 0 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0 }}
-                        />
-                    )}
-                </AnimatePresence>
+                {isLoading ? (
+                    <ChatLoadingIndicator show />
+                ) : (
+                    <MessageInput
+                        placeholder={placeholder}
+                        useForegroundVariant
+                        buttonVariant={messageInputButtonVariant}
+                        onSend={onSend}
+                    />
+                )}
             </PaddingLayer>
         </KeyboardAvoidingView>
     );
