@@ -23,10 +23,10 @@
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
-        "react-native-gesture-handler": "~1.10.3",
-        "react-native-reanimated": "~2.1.0",
-        "react-native-svg": "^12.1.1",
+        "react-native": "*",
+        "react-native-gesture-handler": "*",
+        "react-native-reanimated": "^2.1.0",
+        "react-native-svg": "*",
         "react-virtualized-auto-sizer": "^1.0.5"
     },
     "peerDependenciesMeta": {
