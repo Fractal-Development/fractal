@@ -18,8 +18,8 @@
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
-        "react-native": "~0.63.4",
-        "react-native-gesture-handler": "~1.10.3"
+        "react-native": "*",
+        "react-native-gesture-handler": "*"
     },
     "dependencies": {
         "@bma98/fractal-media": "2.0.0",
