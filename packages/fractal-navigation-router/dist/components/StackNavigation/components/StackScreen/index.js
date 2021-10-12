@@ -23,9 +23,9 @@ function StackScreenWebContent({ path = '/', navBarConfig, children }) {
         children));
 }
 export function StackScreen(_a) {
-    var { navBarConfig } = _a, others = __rest(_a, ["navBarConfig"]);
+    var { navBarConfig, children } = _a, others = __rest(_a, ["navBarConfig", "children"]);
     return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute' }, others),
         React.createElement(StackScreenWebContainer, Object.assign({}, others),
-            React.createElement(StackScreenWebContent, Object.assign({}, others, { navBarConfig: navBarConfig })))));
+            React.createElement(StackScreenWebContent, Object.assign({}, others, { navBarConfig: navBarConfig }), children))));
 }
 //# sourceMappingURL=index.js.map
