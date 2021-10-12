@@ -75,10 +75,6 @@ export function MessageList<T extends MinimalMessageData>({
         });
     }, []);
 
-    const handleResize = () => {
-        scrollToEnd();
-    };
-
     useEffect(() => {
         scrollToEnd();
     }, [dataProviderState, scrollToEnd]);
@@ -102,7 +98,7 @@ export function MessageList<T extends MinimalMessageData>({
     return (
         <Layer flex={1} {...layerProps}>
             {messages.length > 0 && (
-                <AutoSizer onResize={handleResize}>
+                <AutoSizer onResize={scrollToEnd}>
                     {({ height, width }) => (
                         <RecyclerView
                             ref={listView}
