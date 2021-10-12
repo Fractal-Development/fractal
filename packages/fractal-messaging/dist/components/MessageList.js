@@ -10,8 +10,9 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
-import { LayoutProvider, DataProvider, AutoSizeRecyclerView, useTheme, Layer } from '@bma98/fractal-ui';
+import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
+import { AutoSizer } from './AutoSizer';
 import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
@@ -74,6 +75,6 @@ export function MessageList(_a) {
     const renderBubbleMessage = useCallback((_, data) => {
         return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
     }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
-    return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps), messages.length > 0 && (React.createElement(AutoSizeRecyclerView, { ref: listView, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1 }))));
+    return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
 }
 //# sourceMappingURL=MessageList.js.map

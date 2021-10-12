@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import { PaddingLayer, AnimatePresence } from '@bma98/fractal-ui';
+import { PaddingLayer } from '@bma98/fractal-ui';
 import { MessageInput } from './MessageInput';
 import { MessageList } from './MessageList';
 import { KeyboardAvoidingView } from './KeyboardAvoidingView';
@@ -20,6 +20,6 @@ export function ChatContent(_a) {
     return (React.createElement(KeyboardAvoidingView, Object.assign({}, keyboardAvoidingViewProps),
         React.createElement(PaddingLayer, Object.assign({ flex: 1 }, layerProps),
             React.createElement(MessageList, { messages: messages, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }),
-            React.createElement(AnimatePresence, null, isLoading ? (React.createElement(ChatLoadingIndicator, { show: true })) : (React.createElement(MessageInput, { placeholder: placeholder, useForegroundVariant: true, buttonVariant: messageInputButtonVariant, onSend: onSend, from: { opacity: 0, scale: 0 }, animate: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0 } }))))));
+            isLoading ? (React.createElement(ChatLoadingIndicator, { show: true })) : (React.createElement(MessageInput, { placeholder: placeholder, useForegroundVariant: true, buttonVariant: messageInputButtonVariant, onSend: onSend })))));
 }
 //# sourceMappingURL=ChatContent.js.map
