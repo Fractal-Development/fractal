@@ -4,7 +4,6 @@ import {
     useTheme,
     HorizontalLayer,
     Avatar,
-    Text,
     LayerProps,
     OptionsButton,
     ImageProps,
@@ -12,6 +11,7 @@ import {
     TouchableOpacity
 } from '@bma98/fractal-ui';
 import { LoveToggleButton } from './LoveToggleButton';
+import { EllipsizeText } from './EllipsizeText';
 
 interface MediaContentRowProps extends Omit<LayerProps, 'children'> {
     imageSource: ImageProps['source'];
@@ -48,9 +48,15 @@ export function MediaContentRow({
                 <HorizontalLayer alignItems={'center'} minHeight={48}>
                     <TouchableOpacity onPress={onPress} flex={1} flexDirection={'row'}>
                         <Avatar source={imageSource} size={48} />
-                        <Layer marginLeft={spacings.s} height={48} flexGrow={1} justifyContent={subtitle ? 'space-between' : 'center'}>
-                            <Text variant={'normal'}>{title}</Text>
-                            {subtitle && <Text variant={'smallLabel'}>{subtitle}</Text>}
+                        <Layer
+                            minWidth={0}
+                            marginLeft={spacings.s}
+                            height={48}
+                            flex={1}
+                            justifyContent={subtitle ? 'space-between' : 'center'}
+                        >
+                            <EllipsizeText variant={'normal'}>{title}</EllipsizeText>
+                            {subtitle && <EllipsizeText variant={'smallLabel'}>{subtitle}</EllipsizeText>}
                         </Layer>
                     </TouchableOpacity>
                     <Layer>
