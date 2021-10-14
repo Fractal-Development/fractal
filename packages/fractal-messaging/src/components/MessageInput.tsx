@@ -8,10 +8,11 @@ interface MessageInputProps extends Partial<Omit<LayerProps, 'children'>> {
     onChangeText?: (text: string) => void;
     placeholder?: string;
     useForegroundVariant?: boolean;
+    inputRef?: any;
 }
 
 const MessageInput = forwardRef(
-    ({ onSend, useForegroundVariant, buttonVariant = 'success', ...others }: MessageInputProps, ref: any): JSX.Element => {
+    ({ onSend, useForegroundVariant, buttonVariant = 'success', inputRef, ...others }: MessageInputProps, ref: any): JSX.Element => {
         const renderIcon = useCallback((color: string, size: number) => <SendIcon height={size} width={size} fill={color} />, []);
         const [message, setMessage] = useState('');
 
@@ -25,6 +26,7 @@ const MessageInput = forwardRef(
         return (
             <ButtonTextField
                 ref={ref}
+                inputRef={inputRef}
                 value={message}
                 buttonVariant={buttonVariant}
                 buttonImage={renderIcon}
