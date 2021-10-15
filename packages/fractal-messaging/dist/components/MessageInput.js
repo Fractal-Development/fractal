@@ -13,7 +13,7 @@ import React, { forwardRef, useCallback, useState } from 'react';
 import { ButtonTextField } from '@bma98/fractal-ui';
 import { SendIcon } from '../assets/SendIcon';
 const MessageInput = forwardRef((_a, ref) => {
-    var { onSend, useForegroundVariant, buttonVariant = 'success' } = _a, others = __rest(_a, ["onSend", "useForegroundVariant", "buttonVariant"]);
+    var { onSend, useForegroundVariant, buttonVariant = 'success', inputRef } = _a, others = __rest(_a, ["onSend", "useForegroundVariant", "buttonVariant", "inputRef"]);
     const renderIcon = useCallback((color, size) => React.createElement(SendIcon, { height: size, width: size, fill: color }), []);
     const [message, setMessage] = useState('');
     const handleSendMessage = useCallback(() => {
@@ -22,7 +22,7 @@ const MessageInput = forwardRef((_a, ref) => {
             setMessage('');
         }
     }, [message, onSend]);
-    return (React.createElement(ButtonTextField, Object.assign({ ref: ref, value: message, buttonVariant: buttonVariant, buttonImage: renderIcon, onButtonPress: handleSendMessage, onSubmitEditing: handleSendMessage, onChangeText: setMessage, useForegroundVariant: useForegroundVariant }, others)));
+    return (React.createElement(ButtonTextField, Object.assign({ ref: ref, inputRef: inputRef, value: message, buttonVariant: buttonVariant, buttonImage: renderIcon, onButtonPress: handleSendMessage, onSubmitEditing: handleSendMessage, onChangeText: setMessage, useForegroundVariant: useForegroundVariant }, others)));
 });
 MessageInput.displayName = 'MessageInput';
 export { MessageInput };
