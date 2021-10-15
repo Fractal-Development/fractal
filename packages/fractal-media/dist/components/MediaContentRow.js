@@ -10,8 +10,9 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import { Layer, useTheme, HorizontalLayer, Avatar, Text, OptionsButton, Separator, TouchableOpacity } from '@bma98/fractal-ui';
+import { Layer, useTheme, HorizontalLayer, Avatar, OptionsButton, Separator, TouchableOpacity } from '@bma98/fractal-ui';
 import { LoveToggleButton } from './LoveToggleButton';
+import { EllipsizeText } from './EllipsizeText';
 export function MediaContentRow(_a) {
     var { imageSource, title, subtitle, addSeparator, enableLoveButton, onHeartPress, isLoved, checkedLoveColor, showOptionsButton, onOptionsPress, onPress } = _a, layerProps = __rest(_a, ["imageSource", "title", "subtitle", "addSeparator", "enableLoveButton", "onHeartPress", "isLoved", "checkedLoveColor", "showOptionsButton", "onOptionsPress", "onPress"]);
     const { spacings } = useTheme();
@@ -20,9 +21,9 @@ export function MediaContentRow(_a) {
             React.createElement(HorizontalLayer, { alignItems: 'center', minHeight: 48 },
                 React.createElement(TouchableOpacity, { onPress: onPress, flex: 1, flexDirection: 'row' },
                     React.createElement(Avatar, { source: imageSource, size: 48 }),
-                    React.createElement(Layer, { marginLeft: spacings.s, height: 48, flexGrow: 1, justifyContent: subtitle ? 'space-between' : 'center' },
-                        React.createElement(Text, { variant: 'normal' }, title),
-                        subtitle && React.createElement(Text, { variant: 'smallLabel' }, subtitle))),
+                    React.createElement(Layer, { minWidth: 0, marginLeft: spacings.s, height: 48, flex: 1, justifyContent: subtitle ? 'space-between' : 'center' },
+                        React.createElement(EllipsizeText, { variant: 'normal' }, title),
+                        subtitle && React.createElement(EllipsizeText, { variant: 'smallLabel' }, subtitle))),
                 React.createElement(Layer, null, enableLoveButton ? (React.createElement(LoveToggleButton, { onPress: onHeartPress, checked: isLoved, checkedColor: checkedLoveColor })) : showOptionsButton ? (React.createElement(OptionsButton, { onPress: onOptionsPress })) : null))),
         addSeparator ? React.createElement(Separator, null) : null));
 }
