@@ -37,13 +37,19 @@ export function ChatLoadingIndicator({ show, ...layerProps }: ChatLoadingIndicat
                     style={bulletStyle}
                     from={loadingCircleVariants.start}
                     animate={loadingCircleVariants.end}
-                    transition={loadingCircleTransition}
+                    transition={{
+                        ...loadingCircleTransition,
+                        delay: 0.3
+                    }}
                 />
                 <Layer
                     style={bulletStyle}
                     from={loadingCircleVariants.start}
                     animate={loadingCircleVariants.end}
-                    transition={loadingCircleTransition}
+                    transition={{
+                        ...loadingCircleTransition,
+                        delay: 0.6
+                    }}
                 />
             </Layer>
         </Layer>
