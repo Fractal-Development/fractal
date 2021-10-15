@@ -9,7 +9,7 @@ export const loadingCircleVariants = {
     }
 };
 export const loadingCircleTransition = {
-    duration: 0.5,
+    duration: 0.6,
     yoyo: Infinity,
     ease: 'easeInOut'
 };

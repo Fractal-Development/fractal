@@ -8,6 +8,6 @@ export const loadingCircleVariants = {
 };
 export const loadingCircleTransition = {
     loop: true,
-    duration: 1000
+    duration: 600
 };
 //# sourceMappingURL=index.native.js.map
