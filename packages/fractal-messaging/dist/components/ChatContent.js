@@ -20,6 +20,6 @@ export function ChatContent(_a) {
     return (React.createElement(KeyboardAvoidingView, Object.assign({}, keyboardAvoidingViewProps),
         React.createElement(PaddingLayer, Object.assign({ flex: 1 }, layerProps),
             React.createElement(MessageList, { messages: messages, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }),
-            isLoading ? (React.createElement(ChatLoadingIndicator, { show: true })) : (React.createElement(MessageInput, { placeholder: placeholder, useForegroundVariant: true, buttonVariant: messageInputButtonVariant, onSend: onSend })))));
+            isLoading ? (React.createElement(ChatLoadingIndicator, null)) : (React.createElement(MessageInput, { placeholder: placeholder, useForegroundVariant: true, buttonVariant: messageInputButtonVariant, onSend: onSend })))));
 }
 //# sourceMappingURL=ChatContent.js.map
