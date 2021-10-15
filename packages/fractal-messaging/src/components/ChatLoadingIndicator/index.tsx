@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layer, LayerProps } from '@bma98/fractal-ui';
-import { loadingCircleTransition, loadingCircleVariants } from './config';
+import { loadingCircleTransition, loadingCircleTransitionThree, loadingCircleTransitionTwo, loadingCircleVariants } from './config';
 
 const bulletStyle = {
     backgroundColor: '#999999',
@@ -37,19 +37,13 @@ export function ChatLoadingIndicator({ show, ...layerProps }: ChatLoadingIndicat
                     style={bulletStyle}
                     from={loadingCircleVariants.start}
                     animate={loadingCircleVariants.end}
-                    transition={{
-                        ...loadingCircleTransition,
-                        delay: 0.3
-                    }}
+                    transition={loadingCircleTransitionTwo}
                 />
                 <Layer
                     style={bulletStyle}
                     from={loadingCircleVariants.start}
                     animate={loadingCircleVariants.end}
-                    transition={{
-                        ...loadingCircleTransition,
-                        delay: 0.6
-                    }}
+                    transition={loadingCircleTransitionThree}
                 />
             </Layer>
         </Layer>

@@ -14,3 +14,13 @@ export const loadingCircleTransition = {
     yoyo: Infinity,
     ease: 'easeInOut'
 };
+
+export const loadingCircleTransitionTwo = {
+    ...loadingCircleTransition,
+    delay: 0.3
+};
+
+export const loadingCircleTransitionThree = {
+    ...loadingCircleTransition,
+    delay: 0.6
+};
