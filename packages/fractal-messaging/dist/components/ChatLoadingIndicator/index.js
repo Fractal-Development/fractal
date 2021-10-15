@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import { Layer } from '@bma98/fractal-ui';
-import { loadingCircleTransition, loadingCircleVariants } from './config';
+import { loadingCircleTransition, loadingCircleTransitionThree, loadingCircleTransitionTwo, loadingCircleVariants } from './config';
 const bulletStyle = {
     backgroundColor: '#999999',
     height: 10,
@@ -25,7 +25,7 @@ export function ChatLoadingIndicator(_a) {
     return show ? (React.createElement(Layer, Object.assign({ height: 40, width: 60, justifyContent: 'center' }, layerProps),
         React.createElement(Layer, { backgroundColor: '#ffffff', padding: 8, borderRadius: 20, flexDirection: 'row', from: loadingCircleVariants.start, animate: loadingCircleVariants.end, exit: loadingCircleVariants.start },
             React.createElement(Layer, { style: bulletStyle, from: loadingCircleVariants.start, animate: loadingCircleVariants.end, transition: loadingCircleTransition }),
-            React.createElement(Layer, { style: bulletStyle, from: loadingCircleVariants.start, animate: loadingCircleVariants.end, transition: Object.assign(Object.assign({}, loadingCircleTransition), { delay: 0.3 }) }),
-            React.createElement(Layer, { style: bulletStyle, from: loadingCircleVariants.start, animate: loadingCircleVariants.end, transition: Object.assign(Object.assign({}, loadingCircleTransition), { delay: 0.6 }) })))) : null;
+            React.createElement(Layer, { style: bulletStyle, from: loadingCircleVariants.start, animate: loadingCircleVariants.end, transition: loadingCircleTransitionTwo }),
+            React.createElement(Layer, { style: bulletStyle, from: loadingCircleVariants.start, animate: loadingCircleVariants.end, transition: loadingCircleTransitionThree })))) : null;
 }
 //# sourceMappingURL=index.js.map

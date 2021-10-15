@@ -13,3 +13,15 @@ export declare const loadingCircleTransition: {
     yoyo: number;
     ease: string;
 };
+export declare const loadingCircleTransitionTwo: {
+    delay: number;
+    duration: number;
+    yoyo: number;
+    ease: string;
+};
+export declare const loadingCircleTransitionThree: {
+    delay: number;
+    duration: number;
+    yoyo: number;
+    ease: string;
+};
