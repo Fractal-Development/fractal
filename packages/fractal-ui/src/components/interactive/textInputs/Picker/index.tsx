@@ -24,7 +24,7 @@ export function Picker({ items, onChange, value, defaultValue, disabled, rightIm
     return (
         <HorizontalLayer
             justifyContent='space-between'
-            alignItems="center"
+            alignItems='center'
             position='relative'
             borderRadius={borderRadius.s}
             height={sizes.textFieldHeight}
@@ -44,11 +44,14 @@ export function Picker({ items, onChange, value, defaultValue, disabled, rightIm
                 mode='dropdown'
                 fontSize={14}
                 flex={1}
+                height='100%'
+                flexDirection='row'
+                alignItems='center'
                 {...getPickerAccessibilityProps()}
             >
                 {items.map(renderItem)}
             </BasePicker>
-            <Layer alignSelf='center' position='absolute' right={0} marginRight={spacings.s}>
+            <Layer pointerEvents='none' alignSelf='center' position='absolute' right={0} marginRight={spacings.s}>
                 {rightImage ? rightImage(colors.placeholder, 21) : <ChevronDownIcon width={21} fill={colors.placeholder} />}
             </Layer>
         </HorizontalLayer>
