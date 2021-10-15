@@ -11,13 +11,9 @@ const bulletStyle = {
     marginRight: 2
 };
 
-interface ChatLoadingIndicatorProps extends LayerProps {
-    show: boolean;
-}
-
-export function ChatLoadingIndicator({ show, ...layerProps }: ChatLoadingIndicatorProps): JSX.Element | null {
-    return show ? (
-        <Layer height={40} width={60} justifyContent={'center'} {...layerProps}>
+export function ChatLoadingIndicator(props: LayerProps): JSX.Element | null {
+    return (
+        <Layer height={40} width={60} justifyContent={'center'} {...props}>
             <Layer
                 backgroundColor={'#ffffff'}
                 padding={8}
@@ -47,5 +43,5 @@ export function ChatLoadingIndicator({ show, ...layerProps }: ChatLoadingIndicat
                 />
             </Layer>
         </Layer>
-    ) : null;
+    );
 }

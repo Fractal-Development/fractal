@@ -30,7 +30,7 @@ export function ChatContent<T extends MinimalMessageData>({
                     getBubbleColor={getBubbleColor}
                 />
                 {isLoading ? (
-                    <ChatLoadingIndicator show />
+                    <ChatLoadingIndicator />
                 ) : (
                     <MessageInput
                         placeholder={placeholder}
