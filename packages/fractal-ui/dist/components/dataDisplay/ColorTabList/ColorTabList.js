@@ -14,9 +14,9 @@ import { Box, Layer, ScrollView } from '../../layout';
 import { useTheme } from '../../../context';
 import { ColorTab } from './ColorTab';
 export function ColorTabList(_a) {
-    var { children, tabs, onItemPress } = _a, others = __rest(_a, ["children", "tabs", "onItemPress"]);
+    var { children, tabs, defaultActiveIndex, onItemPress } = _a, others = __rest(_a, ["children", "tabs", "defaultActiveIndex", "onItemPress"]);
     const { borderRadius } = useTheme();
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
     const { tabColor } = tabs[activeIndex];
     const handlePress = useCallback((index) => {
         setActiveIndex(index);
