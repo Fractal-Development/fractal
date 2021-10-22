@@ -5,13 +5,14 @@ import { ColorTab, ColorTabProps } from './ColorTab';
 
 export interface ColorTabListProps extends LayerProps {
     tabs: Array<ColorTabProps>;
+    defaultActiveIndex: number;
     children: (index: number) => ReactElement;
     onItemPress?: (index?: number) => void;
 }
 
-export function ColorTabList({ children, tabs, onItemPress, ...others }: ColorTabListProps): ReactElement {
+export function ColorTabList({ children, tabs, defaultActiveIndex, onItemPress, ...others }: ColorTabListProps): ReactElement {
     const { borderRadius } = useTheme();
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
     const { tabColor } = tabs[activeIndex];
 
     const handlePress = useCallback(
