@@ -3,7 +3,7 @@ import { LayerProps } from '../../layout';
 import { ColorTabProps } from './ColorTab';
 export interface ColorTabListProps extends LayerProps {
     tabs: Array<ColorTabProps>;
-    defaultActiveIndex: number;
+    defaultActiveIndex?: number;
     children: (index: number) => ReactElement;
     onItemPress?: (index?: number) => void;
 }
