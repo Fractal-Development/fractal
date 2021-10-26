@@ -19,6 +19,7 @@ import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
 import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
+import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;
@@ -65,10 +66,16 @@ export function MainExample(): JSX.Element {
                                     <ChipFragmentScreen />
                                 </StackScreen>
                                 <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.authScreen.name} />}
-                                    path={screens.authScreen.path}
+                                    navBarConfig={<NavigationBarConfig title={screens.authScreenFragment.name} />}
+                                    path={screens.authScreenFragment.path}
                                 >
                                     <AuthenticationScreenFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.chatFragment.name} />}
+                                    path={screens.chatFragment.path}
+                                >
+                                    <ChatContentFragmentScreen />
                                 </StackScreen>
                             </StackNavigator>
                         </TabBarInsetsLayer>

@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Layer, Text, useTheme } from '@bma98/fractal-ui';
-import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
-
-const defaultMessages: Array<MinimalMessageData> = [
+import { ChatContent } from '@bma98/fractal-messaging';
+const defaultMessages = [
     {
         id: '1',
         senderType: 'bot',
@@ -61,39 +60,24 @@ const defaultMessages: Array<MinimalMessageData> = [
         audio: 'https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Podington_Bear_-_Rubber_Robot.mp3'
     }
 ];
-
-export function ChatContentExample(): JSX.Element {
+export function ChatContentFragment() {
     const { spacings } = useTheme();
     const [messages, setMessages] = useState(defaultMessages);
-
-    const handleFavoriteMessage = (message: MinimalMessageData) => {
-        const newMessage = { ...message, favorite: message.favorite ? false : true };
+    const handleFavoriteMessage = (message) => {
+        const newMessage = Object.assign(Object.assign({}, message), { favorite: message.favorite ? false : true });
         setMessages((currentMessages) => {
             return currentMessages.map((messageItem) => (messageItem.id === message.id ? newMessage : messageItem));
         });
     };
-
-    const handleSendMessage = (message: string) => {
+    const handleSendMessage = (message) => {
         const newId = messages.length;
-
         setMessages((currentMessages) => {
             return [...currentMessages, { id: newId.toString(), senderType: 'user', text: message }];
         });
     };
-
-    return (
-        <Fragment>
-            <Text variant={'title'} marginBottom={spacings.m}>
-                Chat Content Example
-            </Text>
-            <Layer height={600}>
-                <ChatContent
-                    messages={messages}
-                    onFavoritePress={handleFavoriteMessage}
-                    onSharePress={(message) => console.log('sharePress: ', message)}
-                    onSend={handleSendMessage}
-                />
-            </Layer>
-        </Fragment>
-    );
+    return (React.createElement(Fragment, null,
+        React.createElement(Text, { variant: 'title', marginBottom: spacings.m }, "Chat Content Example"),
+        React.createElement(Layer, { height: 600 },
+            React.createElement(ChatContent, { messages: messages, onFavoritePress: handleFavoriteMessage, onSharePress: (message) => console.log('sharePress: ', message), onSend: handleSendMessage }))));
 }
+//# sourceMappingURL=ChatContentFragment.js.map

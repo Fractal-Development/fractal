@@ -1,1 +1,1 @@
-export * from './ChatContentExample';
+export * from './ChatContentFragment';

@@ -9,6 +9,7 @@ import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
 import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
+import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 function renderReactIcon(color, size) {
     return React.createElement(ReactIcon, { fill: color, height: size, width: size });
 }
@@ -30,8 +31,10 @@ export function MainExample() {
                                 React.createElement(RecyclerViewFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.chipFragment.name }), path: screens.chipFragment.path },
                                 React.createElement(ChipFragmentScreen, null)),
-                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.authScreen.name }), path: screens.authScreen.path },
-                                React.createElement(AuthenticationScreenFragmentScreen, null))))),
+                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.authScreenFragment.name }), path: screens.authScreenFragment.path },
+                                React.createElement(AuthenticationScreenFragmentScreen, null)),
+                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.chatFragment.name }), path: screens.chatFragment.path },
+                                React.createElement(ChatContentFragmentScreen, null))))),
                 React.createElement(TabScreen, { path: routes.credits },
                     React.createElement(TabBarInsetsLayer, null,
                         React.createElement(PaddingLayer, null,

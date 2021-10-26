@@ -1,2 +1,2 @@
-export * from './ChatContentExample';
+export * from './ChatContentFragment';
 //# sourceMappingURL=index.js.map

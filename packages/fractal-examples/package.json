@@ -16,7 +16,7 @@
     "peerDependencies": {
         "@bma98/fractal-charts": "^2.0.0",
         "@bma98/fractal-media": "^2.0.0",
-        "@bma98/fractal-messaging": "^2.0.0",
+        "@bma98/fractal-messaging": "^2.0.8",
         "@bma98/fractal-navigation": "^2.0.0",
         "@bma98/fractal-navigation-router": "^2.0.0",
         "@bma98/fractal-ui": "^2.0.0",
