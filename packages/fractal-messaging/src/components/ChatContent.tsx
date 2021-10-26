@@ -1,6 +1,5 @@
 import React from 'react';
 import { PaddingLayer } from '@bma98/fractal-ui';
-import { MessageInput } from './MessageInput';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
 import { KeyboardAvoidingView } from './KeyboardAvoidingView';
@@ -13,7 +12,7 @@ export function ChatContent<T extends MinimalMessageData>({
     messageActions,
     getBubbleColor,
     onSend,
-    placeholder = 'Escribe aquí...',
+    placeholder,
     isLoading,
     keyboardAvoidingViewProps,
     messageInputButtonVariant = 'alternative',
@@ -28,17 +27,11 @@ export function ChatContent<T extends MinimalMessageData>({
                     onSharePress={onSharePress}
                     messageActions={messageActions}
                     getBubbleColor={getBubbleColor}
+                    placeholder={placeholder}
+                    messageInputButtonVariant={messageInputButtonVariant}
+                    onSend={onSend}
                 />
-                {isLoading ? (
-                    <ChatLoadingIndicator />
-                ) : (
-                    <MessageInput
-                        placeholder={placeholder}
-                        useForegroundVariant
-                        buttonVariant={messageInputButtonVariant}
-                        onSend={onSend}
-                    />
-                )}
+                {isLoading && <ChatLoadingIndicator />}
             </PaddingLayer>
         </KeyboardAvoidingView>
     );

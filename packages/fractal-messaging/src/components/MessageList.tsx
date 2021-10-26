@@ -7,10 +7,16 @@ import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
+import { MessageInput } from './MessageInput';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
-    return rowOne !== rowTwo;
+    return rowOne.id !== rowTwo.id;
 });
+
+enum MessageViewTypes {
+    Message,
+    MessageInput
+}
 
 export function MessageList<T extends MinimalMessageData>({
     messages,
@@ -18,15 +24,28 @@ export function MessageList<T extends MinimalMessageData>({
     onSharePress,
     messageActions,
     getBubbleColor,
+    placeholder,
+    messageInputButtonVariant,
+    onSend,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
     const listView = useRef<any>();
-    const { spacings } = useTheme();
+    const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messages));
     const width = useSizeValue('width');
     const { height: chatMessageHeight } = useChatMessageSize();
     const getTextHeight = useGetTextHeight((width - spacings.m * 2) * 0.75 - (spacings.m * 2 + 6));
     const heights: Array<number | undefined> = messages.map(() => undefined);
+
+    const scrollToEnd = useCallback(
+        () =>
+            setTimeout(() => {
+                if (listView.current) {
+                    listView.current.scrollToEnd();
+                }
+            }),
+        []
+    );
 
     const messageHeightCalculator = useCallback(
         (message: T): number => {
@@ -43,57 +62,66 @@ export function MessageList<T extends MinimalMessageData>({
         [chatMessageHeight, getTextHeight, spacings.m]
     );
 
+    const rowRenderer = useCallback(
+        (type, data) => {
+            switch (type) {
+                case MessageViewTypes.Message:
+                    return (
+                        <ChatMessage
+                            message={data}
+                            key={data.id}
+                            onFavoritePress={onFavoritePress}
+                            onSharePress={onSharePress}
+                            messageActions={messageActions}
+                            getBubbleColor={getBubbleColor}
+                        />
+                    );
+                default:
+                    return (
+                        <MessageInput
+                            placeholder={placeholder}
+                            useForegroundVariant
+                            buttonVariant={messageInputButtonVariant}
+                            onSend={onSend}
+                        />
+                    );
+            }
+        },
+        [getBubbleColor, messageActions, onFavoritePress, onSharePress, placeholder, messageInputButtonVariant, onSend]
+    );
+
     const layoutProvider = useMemo(() => {
         return new LayoutProvider(
-            () => {
-                return 0;
+            (index) => {
+                return index === messages.length - 1 ? MessageViewTypes.MessageInput : MessageViewTypes.Message;
             },
             (_, dim, index) => {
-                let height = heights[index];
-                if (height != null) {
-                    dim.height = height;
+                const isMesageInput = index === messages.length - 1;
+                if (isMesageInput) {
+                    dim.height = sizes.textFieldHeight;
                 } else {
-                    height = messageHeightCalculator(messages[index]);
-                    heights[index] = height;
-                    dim.height = height as number;
+                    let height = heights[index];
+                    if (height != null) {
+                        dim.height = height;
+                    } else {
+                        height = messageHeightCalculator(messages[index]);
+                        heights[index] = height;
+                        dim.height = height as number;
+                    }
                 }
+
                 dim.width = width;
-                return;
             }
         );
-    }, [heights, messageHeightCalculator, messages, width]);
+    }, [heights, messageHeightCalculator, messages, width, sizes.textFieldHeight]);
 
     useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows(messages));
+        setDataProviderState(dataProvider.cloneWithRows([...messages, {}]));
     }, [messages, width]);
-
-    const scrollToEnd = useCallback(() => {
-        setTimeout(() => {
-            if (listView.current) {
-                listView.current.scrollToEnd();
-            }
-        });
-    }, []);
 
     useEffect(() => {
         scrollToEnd();
     }, [dataProviderState, scrollToEnd]);
-
-    const renderBubbleMessage = useCallback(
-        (_, data) => {
-            return (
-                <ChatMessage
-                    message={data}
-                    key={data.id}
-                    onFavoritePress={onFavoritePress}
-                    onSharePress={onSharePress}
-                    messageActions={messageActions}
-                    getBubbleColor={getBubbleColor}
-                />
-            );
-        },
-        [getBubbleColor, messageActions, onFavoritePress, onSharePress]
-    );
 
     return (
         <Layer flex={1} {...layerProps}>
@@ -107,7 +135,7 @@ export function MessageList<T extends MinimalMessageData>({
                             key={width}
                             layoutProvider={layoutProvider}
                             dataProvider={dataProviderState}
-                            rowRenderer={renderBubbleMessage}
+                            rowRenderer={rowRenderer}
                             initialRenderIndex={messages.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
                         />

@@ -17,18 +17,29 @@ import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
+import { MessageInput } from './MessageInput';
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
-    return rowOne !== rowTwo;
+    return rowOne.id !== rowTwo.id;
 });
+var MessageViewTypes;
+(function (MessageViewTypes) {
+    MessageViewTypes[MessageViewTypes["Message"] = 0] = "Message";
+    MessageViewTypes[MessageViewTypes["MessageInput"] = 1] = "MessageInput";
+})(MessageViewTypes || (MessageViewTypes = {}));
 export function MessageList(_a) {
-    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor"]);
+    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, placeholder, messageInputButtonVariant, onSend } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "placeholder", "messageInputButtonVariant", "onSend"]);
     const listView = useRef();
-    const { spacings } = useTheme();
+    const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messages));
     const width = useSizeValue('width');
     const { height: chatMessageHeight } = useChatMessageSize();
     const getTextHeight = useGetTextHeight((width - spacings.m * 2) * 0.75 - (spacings.m * 2 + 6));
     const heights = messages.map(() => undefined);
+    const scrollToEnd = useCallback(() => setTimeout(() => {
+        if (listView.current) {
+            listView.current.scrollToEnd();
+        }
+    }), []);
     const messageHeightCalculator = useCallback((message) => {
         let contentHeight = 0;
         if (message.image || message.video) {
@@ -42,39 +53,42 @@ export function MessageList(_a) {
         }
         return contentHeight + spacings.m * 3;
     }, [chatMessageHeight, getTextHeight, spacings.m]);
+    const rowRenderer = useCallback((type, data) => {
+        switch (type) {
+            case MessageViewTypes.Message:
+                return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
+            default:
+                return (React.createElement(MessageInput, { placeholder: placeholder, useForegroundVariant: true, buttonVariant: messageInputButtonVariant, onSend: onSend }));
+        }
+    }, [getBubbleColor, messageActions, onFavoritePress, onSharePress, placeholder, messageInputButtonVariant, onSend]);
     const layoutProvider = useMemo(() => {
-        return new LayoutProvider(() => {
-            return 0;
+        return new LayoutProvider((index) => {
+            return index === messages.length - 1 ? MessageViewTypes.MessageInput : MessageViewTypes.Message;
         }, (_, dim, index) => {
-            let height = heights[index];
-            if (height != null) {
-                dim.height = height;
+            const isMesageInput = index === messages.length - 1;
+            if (isMesageInput) {
+                dim.height = sizes.textFieldHeight;
             }
             else {
-                height = messageHeightCalculator(messages[index]);
-                heights[index] = height;
-                dim.height = height;
+                let height = heights[index];
+                if (height != null) {
+                    dim.height = height;
+                }
+                else {
+                    height = messageHeightCalculator(messages[index]);
+                    heights[index] = height;
+                    dim.height = height;
+                }
             }
             dim.width = width;
-            return;
         });
-    }, [heights, messageHeightCalculator, messages, width]);
+    }, [heights, messageHeightCalculator, messages, width, sizes.textFieldHeight]);
     useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows(messages));
+        setDataProviderState(dataProvider.cloneWithRows([...messages, {}]));
     }, [messages, width]);
-    const scrollToEnd = useCallback(() => {
-        setTimeout(() => {
-            if (listView.current) {
-                listView.current.scrollToEnd();
-            }
-        });
-    }, []);
     useEffect(() => {
         scrollToEnd();
     }, [dataProviderState, scrollToEnd]);
-    const renderBubbleMessage = useCallback((_, data) => {
-        return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
-    }, [getBubbleColor, messageActions, onFavoritePress, onSharePress]);
-    return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderBubbleMessage, initialRenderIndex: messages.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
+    return (React.createElement(Layer, Object.assign({ flex: 1 }, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: messages.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
 }
 //# sourceMappingURL=MessageList.js.map

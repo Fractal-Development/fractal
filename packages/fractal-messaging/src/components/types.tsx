@@ -32,14 +32,17 @@ export interface ChatMessageProps<T> {
     getBubbleColor?: (message: T) => string;
 }
 
-export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {
-    messages: Array<T>;
-}
-
 export interface ChatContentProps<T extends MinimalMessageData> extends MessageListProps<T> {
     onSend: (message: string) => void;
     placeholder?: string;
     isLoading?: boolean;
     keyboardAvoidingViewProps?: KeyboardAvoidingViewProps;
     messageInputButtonVariant?: ButtonVariant;
+}
+
+export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {
+    messages: Array<T>;
+    placeholder?: string;
+    messageInputButtonVariant?: ButtonVariant;
+    onSend: (message: string) => void;
 }
