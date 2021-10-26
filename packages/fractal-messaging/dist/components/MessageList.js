@@ -92,7 +92,7 @@ export function MessageList(_a) {
         });
     }, [heights, messageHeightCalculator, messages, width, sizes.textFieldHeight]);
     useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows([...messagesWithAccessoryViews, {}]));
+        setDataProviderState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     }, [messagesWithAccessoryViews, width]);
     useEffect(() => {
         scrollToEnd();

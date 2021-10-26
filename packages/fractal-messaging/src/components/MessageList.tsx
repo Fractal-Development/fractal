@@ -115,7 +115,7 @@ export function MessageList<T extends MinimalMessageData>({
     }, [heights, messageHeightCalculator, messages, width, sizes.textFieldHeight]);
 
     useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows([...messagesWithAccessoryViews, {}]));
+        setDataProviderState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     }, [messagesWithAccessoryViews, width]);
 
     useEffect(() => {
