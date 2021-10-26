@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-examples",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Example components on how to use Fractal UI in small fragments.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -16,7 +16,7 @@
     "peerDependencies": {
         "@bma98/fractal-charts": "^2.0.0",
         "@bma98/fractal-media": "^2.0.0",
-        "@bma98/fractal-messaging": "^2.0.8",
+        "@bma98/fractal-messaging": "^2.0.9",
         "@bma98/fractal-navigation": "^2.0.0",
         "@bma98/fractal-navigation-router": "^2.0.0",
         "@bma98/fractal-ui": "^2.0.0",

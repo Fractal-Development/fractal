@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Layer, Text, useTheme } from '@bma98/fractal-ui';
 import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
 
@@ -82,11 +82,11 @@ export function ChatContentFragment(): JSX.Element {
     };
 
     return (
-        <Fragment>
+        <>
             <Text variant={'title'} marginBottom={spacings.m}>
                 Chat Content Example
             </Text>
-            <Layer height={600}>
+            <Layer>
                 <ChatContent
                     messages={messages}
                     onFavoritePress={handleFavoriteMessage}
@@ -94,6 +94,6 @@ export function ChatContentFragment(): JSX.Element {
                     onSend={handleSendMessage}
                 />
             </Layer>
-        </Fragment>
+        </>
     );
 }
