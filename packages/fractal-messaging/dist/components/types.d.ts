@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { ButtonVariant, LayerProps, TouchableOpacityProps } from '@bma98/fractal-ui';
 import { KeyboardAvoidingViewProps } from './KeyboardAvoidingView/types';
+import { ReactElement } from 'hoist-non-react-statics/node_modules/@types/react';
 export interface BubbleTriangleProps {
     color: string;
 }
@@ -32,10 +33,10 @@ export interface ChatContentProps<T extends MinimalMessageData> extends MessageL
     isLoading?: boolean;
     keyboardAvoidingViewProps?: KeyboardAvoidingViewProps;
     messageInputButtonVariant?: ButtonVariant;
+    enableFluidFooter?: boolean;
+    customFooter?: ReactElement | Array<ReactElement>;
 }
 export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {
     messages: Array<T>;
-    placeholder?: string;
-    messageInputButtonVariant?: ButtonVariant;
-    onSend: (message: string) => void;
+    footerComponent?: ReactElement | Array<ReactElement>;
 }

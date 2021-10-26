@@ -4,6 +4,7 @@ import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
 import { KeyboardAvoidingView } from './KeyboardAvoidingView';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';
+import { MessageInput } from '.';
 
 export function ChatContent<T extends MinimalMessageData>({
     messages,
@@ -16,8 +17,17 @@ export function ChatContent<T extends MinimalMessageData>({
     isLoading,
     keyboardAvoidingViewProps,
     messageInputButtonVariant = 'alternative',
+    enableFluidFooter,
+    customFooter,
     ...layerProps
 }: ChatContentProps<T>): JSX.Element {
+    const footer =
+        customFooter ?? isLoading ? (
+            <ChatLoadingIndicator />
+        ) : (
+            <MessageInput placeholder={placeholder} onSend={onSend} buttonVariant={messageInputButtonVariant} />
+        );
+
     return (
         <KeyboardAvoidingView {...keyboardAvoidingViewProps}>
             <PaddingLayer flex={1} {...layerProps}>
@@ -27,11 +37,9 @@ export function ChatContent<T extends MinimalMessageData>({
                     onSharePress={onSharePress}
                     messageActions={messageActions}
                     getBubbleColor={getBubbleColor}
-                    placeholder={placeholder}
-                    messageInputButtonVariant={messageInputButtonVariant}
-                    onSend={onSend}
+                    footerComponent={enableFluidFooter ? footer : undefined}
                 />
-                {isLoading && <ChatLoadingIndicator />}
+                {!enableFluidFooter && footer}
             </PaddingLayer>
         </KeyboardAvoidingView>
     );

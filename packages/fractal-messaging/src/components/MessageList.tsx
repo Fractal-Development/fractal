@@ -7,7 +7,7 @@ import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
-import { MessageInput } from './MessageInput';
+import { Fragment } from 'hoist-non-react-statics/node_modules/@types/react';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne.id !== rowTwo.id;
@@ -15,7 +15,7 @@ const dataProvider = new DataProvider((rowOne, rowTwo) => {
 
 enum MessageViewTypes {
     Message,
-    MessageInput
+    Footer
 }
 
 export function MessageList<T extends MinimalMessageData>({
@@ -24,18 +24,23 @@ export function MessageList<T extends MinimalMessageData>({
     onSharePress,
     messageActions,
     getBubbleColor,
-    placeholder,
-    messageInputButtonVariant,
-    onSend,
+    footerComponent,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
+    const messagesWithAccessoryViews = useMemo(() => {
+        if (footerComponent) {
+            return [...messages, {}];
+        } else {
+            return messages;
+        }
+    }, [messages, footerComponent]);
     const listView = useRef<any>();
     const { spacings, sizes } = useTheme();
-    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messages));
+    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     const width = useSizeValue('width');
     const { height: chatMessageHeight } = useChatMessageSize();
     const getTextHeight = useGetTextHeight((width - spacings.m * 2) * 0.75 - (spacings.m * 2 + 6));
-    const heights: Array<number | undefined> = messages.map(() => undefined);
+    const heights: Array<number | undefined> = messagesWithAccessoryViews.map(() => undefined);
 
     const scrollToEnd = useCallback(
         () =>
@@ -77,37 +82,32 @@ export function MessageList<T extends MinimalMessageData>({
                         />
                     );
                 default:
-                    return (
-                        <MessageInput
-                            placeholder={placeholder}
-                            useForegroundVariant
-                            buttonVariant={messageInputButtonVariant}
-                            onSend={onSend}
-                        />
-                    );
+                    return footerComponent ?? <Fragment />;
             }
         },
-        [getBubbleColor, messageActions, onFavoritePress, onSharePress, placeholder, messageInputButtonVariant, onSend]
+        [getBubbleColor, messageActions, onFavoritePress, onSharePress, footerComponent]
     );
 
     const layoutProvider = useMemo(() => {
         return new LayoutProvider(
             (index) => {
-                return index === messages.length - 1 ? MessageViewTypes.MessageInput : MessageViewTypes.Message;
+                const message = messages[index];
+                return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
             },
-            (_, dim, index) => {
-                const isMesageInput = index === messages.length - 1;
-                if (isMesageInput) {
-                    dim.height = sizes.textFieldHeight;
-                } else {
-                    let height = heights[index];
-                    if (height != null) {
-                        dim.height = height;
-                    } else {
-                        height = messageHeightCalculator(messages[index]);
-                        heights[index] = height;
-                        dim.height = height as number;
-                    }
+            (type, dim, index) => {
+                switch (type) {
+                    case MessageViewTypes.Message:
+                        let height = heights[index];
+                        if (height != null) {
+                            dim.height = height;
+                        } else {
+                            height = messageHeightCalculator(messages[index]);
+                            heights[index] = height;
+                            dim.height = height as number;
+                        }
+                        break;
+                    default:
+                        dim.height = sizes.textFieldHeight;
                 }
 
                 dim.width = width;
@@ -116,8 +116,8 @@ export function MessageList<T extends MinimalMessageData>({
     }, [heights, messageHeightCalculator, messages, width, sizes.textFieldHeight]);
 
     useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows([...messages, {}]));
-    }, [messages, width]);
+        setDataProviderState(dataProvider.cloneWithRows([...messagesWithAccessoryViews, {}]));
+    }, [messagesWithAccessoryViews, width]);
 
     useEffect(() => {
         scrollToEnd();
@@ -136,7 +136,7 @@ export function MessageList<T extends MinimalMessageData>({
                             layoutProvider={layoutProvider}
                             dataProvider={dataProviderState}
                             rowRenderer={rowRenderer}
-                            initialRenderIndex={messages.length - 1}
+                            initialRenderIndex={messagesWithAccessoryViews.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
                         />
                     )}
