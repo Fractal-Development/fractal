@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Text, useTheme } from '@bma98/fractal-ui';
 import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
 
 const defaultMessages: Array<MinimalMessageData> = [
@@ -63,7 +62,6 @@ const defaultMessages: Array<MinimalMessageData> = [
 ];
 
 export function ChatContentFragment(): JSX.Element {
-    const { spacings } = useTheme();
     const [messages, setMessages] = useState(defaultMessages);
 
     const handleFavoriteMessage = (message: MinimalMessageData) => {
@@ -82,16 +80,11 @@ export function ChatContentFragment(): JSX.Element {
     };
 
     return (
-        <>
-            <Text variant={'title'} marginBottom={spacings.m}>
-                Chat Content Example
-            </Text>
-            <ChatContent
-                messages={messages}
-                onFavoritePress={handleFavoriteMessage}
-                onSharePress={(message) => console.log('sharePress: ', message)}
-                onSend={handleSendMessage}
-            />
-        </>
+        <ChatContent
+            messages={messages}
+            onFavoritePress={handleFavoriteMessage}
+            onSharePress={(message) => console.log('sharePress: ', message)}
+            onSend={handleSendMessage}
+        />
     );
 }
