@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
+import React, { useCallback, useState, useMemo, useEffect, useRef, Fragment } from 'react';
 import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { AutoSizer } from './AutoSizer';
@@ -7,7 +7,6 @@ import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
-import { Fragment } from 'hoist-non-react-statics/node_modules/@types/react';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne.id !== rowTwo.id;
