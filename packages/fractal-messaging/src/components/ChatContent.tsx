@@ -21,7 +21,9 @@ export function ChatContent<T extends MinimalMessageData>({
     ...layerProps
 }: ChatContentProps<T>): JSX.Element {
     const footer =
-        customFooter ?? isLoading ? (
+        customFooter != null ? (
+            customFooter
+        ) : isLoading ? (
             <ChatLoadingIndicator />
         ) : (
             <MessageInput useForegroundVariant placeholder={placeholder} onSend={onSend} buttonVariant={messageInputButtonVariant} />

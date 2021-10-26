@@ -16,7 +16,7 @@ import { ChatLoadingIndicator } from './ChatLoadingIndicator';
 import { MessageInput } from './MessageInput';
 export function ChatContent(_a) {
     var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, onSend, placeholder, isLoading, keyboardAvoidingViewProps, messageInputButtonVariant = 'alternative', enableFluidFooter, customFooter } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "onSend", "placeholder", "isLoading", "keyboardAvoidingViewProps", "messageInputButtonVariant", "enableFluidFooter", "customFooter"]);
-    const footer = (customFooter !== null && customFooter !== void 0 ? customFooter : isLoading) ? (React.createElement(ChatLoadingIndicator, null)) : (React.createElement(MessageInput, { useForegroundVariant: true, placeholder: placeholder, onSend: onSend, buttonVariant: messageInputButtonVariant }));
+    const footer = customFooter != null ? (customFooter) : isLoading ? (React.createElement(ChatLoadingIndicator, null)) : (React.createElement(MessageInput, { useForegroundVariant: true, placeholder: placeholder, onSend: onSend, buttonVariant: messageInputButtonVariant }));
     return (React.createElement(KeyboardAvoidingView, Object.assign({}, keyboardAvoidingViewProps),
         React.createElement(MessageList, Object.assign({}, layerProps, { messages: messages, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor, footerComponent: enableFluidFooter ? footer : undefined })),
         !enableFluidFooter ? footer : undefined));
