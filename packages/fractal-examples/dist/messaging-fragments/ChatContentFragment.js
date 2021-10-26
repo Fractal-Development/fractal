@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layer, Text, useTheme } from '@bma98/fractal-ui';
+import { Text, useTheme } from '@bma98/fractal-ui';
 import { ChatContent } from '@bma98/fractal-messaging';
 const defaultMessages = [
     {
@@ -77,7 +77,6 @@ export function ChatContentFragment() {
     };
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title', marginBottom: spacings.m }, "Chat Content Example"),
-        React.createElement(Layer, null,
-            React.createElement(ChatContent, { messages: messages, onFavoritePress: handleFavoriteMessage, onSharePress: (message) => console.log('sharePress: ', message), onSend: handleSendMessage }))));
+        React.createElement(ChatContent, { messages: messages, onFavoritePress: handleFavoriteMessage, onSharePress: (message) => console.log('sharePress: ', message), onSend: handleSendMessage })));
 }
 //# sourceMappingURL=ChatContentFragment.js.map
