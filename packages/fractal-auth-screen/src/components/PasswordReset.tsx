@@ -24,6 +24,7 @@ export function PasswordReset({
             setShowMessage(true);
             try {
                 await resetPassword(email);
+                toggleLoading();
             } catch (error) {
                 alert(error.message);
                 toggleLoading();
