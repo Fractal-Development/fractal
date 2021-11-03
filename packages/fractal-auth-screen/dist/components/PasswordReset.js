@@ -23,6 +23,7 @@ export function PasswordReset({ emailPlaceholder, resetPasswordText, resetPasswo
             setShowMessage(true);
             try {
                 yield resetPassword(email);
+                toggleLoading();
             }
             catch (error) {
                 alert(error.message);
