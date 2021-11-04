@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, ErrorMessage } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, ErrorBoundaryMessage } from '@bma98/fractal-ui';
 import { BuggyComponent } from './BuggyComponent';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
@@ -16,9 +16,9 @@ export function ErrorMessageFragment(): JSX.Element {
                 Error Message Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <ErrorMessage onError={logErrorToService}>
+                <ErrorBoundaryMessage onError={logErrorToService}>
                     <BuggyComponent />
-                </ErrorMessage>
+                </ErrorBoundaryMessage>
             </Box>
         </>
     );

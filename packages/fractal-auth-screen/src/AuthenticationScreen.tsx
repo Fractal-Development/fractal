@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import {
     Background,
     Box,
-    ErrorMessage,
+    ErrorBoundaryMessage,
     Layer,
     PaddingLayer,
     SocialMediaButtons,
@@ -82,7 +82,7 @@ export function AuthenticationScreen({
                         {logo}
                         <PaddingLayer width={'100%'}>
                             <Box marginBottom={spacings.m}>
-                                <ErrorMessage>
+                                <ErrorBoundaryMessage>
                                     {state === 'signIn' ? (
                                         <SignIn
                                             {...others}
@@ -97,7 +97,7 @@ export function AuthenticationScreen({
                                     ) : (
                                         <PasswordReset {...others} onSignInButtonPress={toggleState} />
                                     )}
-                                </ErrorMessage>
+                                </ErrorBoundaryMessage>
                             </Box>
                             {!removeSocialMediaButtons && (
                                 <SocialMediaButtons
