@@ -6,6 +6,7 @@ interface BaseTextInputProps {
     onChangeText?: (text: string) => void;
     onSubmitEditing?: () => void;
     onFocus?: () => void;
+    onBlur?: () => void;
     secureTextEntry?: boolean;
 }
 
