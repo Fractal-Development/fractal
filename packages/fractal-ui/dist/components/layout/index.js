@@ -12,4 +12,5 @@ export * from './Box';
 export * from './tables';
 export * from './Separator';
 export * from './KeyboardAvoidingLayer';
+export * from './KeyboardAvoidingLayer/types';
 //# sourceMappingURL=index.js.map
