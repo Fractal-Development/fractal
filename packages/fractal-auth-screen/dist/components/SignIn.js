@@ -37,7 +37,6 @@ export function SignIn({ emailPlaceholder, passwordPlaceholder, onPasswordResetB
         React.createElement(Button, { loading: loading, text: signInText, variant: 'main', marginBottom: spacings.m, onPress: handleEmailSignIn }),
         React.createElement(TextButton, { onPress: onPasswordResetButtonPress, alignSelf: 'center', variant: 'main', marginBottom: spacings.m }, forgotPasswordText),
         !removeSignUpButton && (React.createElement(React.Fragment, null,
-            ' ',
             React.createElement(Separator, { marginBottom: spacings.m }),
             React.createElement(Button, { text: signUpText, variant: 'alternative', onPress: onSignUpButtonPress })))));
 }

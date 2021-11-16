@@ -7,7 +7,7 @@ export function AuthenticationCheck({ loadingComponent, children, redirectCompon
             return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
         })
             .catch((error) => {
-            console.log(error.message);
+            console.error(error.message);
             onCredentialLoadFailed === null || onCredentialLoadFailed === void 0 ? void 0 : onCredentialLoadFailed(error.message);
             setAuthenticationState('accessIsNotAllowed');
         });

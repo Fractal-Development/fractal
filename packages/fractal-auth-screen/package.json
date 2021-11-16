@@ -14,7 +14,7 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "^2.0.0",
+        "@bma98/fractal-ui": "^2.0.11",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -58,7 +58,7 @@
         "prettier": "^2.3.2",
         "typescript": "^4.3.4",
         "utility-types": "^3.10.0",
-        "@bma98/fractal-ui": "2.0.0",
+        "@bma98/fractal-ui": "^2.0.11",
         "react-native-svg": "^12.1.1"
     },
     "keywords": [

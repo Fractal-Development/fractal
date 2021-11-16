@@ -1,4 +1,8 @@
 import { ReactElement } from 'react';
+/**
+ * TODO:
+ * Add a way to change the authenticationState with props for listener based authentication.
+ */
 export interface CredentialValidatorProps {
     key: string;
     checkIfShouldAllowAccess: () => Promise<boolean>;
