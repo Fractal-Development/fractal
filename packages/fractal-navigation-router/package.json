@@ -14,7 +14,7 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-navigation": "^2.0.0",
+        "@bma98/fractal-navigation": "^2.0.5",
         "@bma98/fractal-ui": "^2.0.0",
         "react": "*",
         "react-dom": "*",
@@ -58,7 +58,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-navigation": "2.0.0",
+        "@bma98/fractal-navigation": "^2.0.5",
         "@bma98/fractal-ui": "2.0.0",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",

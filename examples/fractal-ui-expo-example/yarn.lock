@@ -1046,10 +1046,10 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@bma98/fractal-auth-screen@^2.0.0":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-auth-screen/-/fractal-auth-screen-2.0.4.tgz#a7284ff03791afc19c258328794b0a23f23cee20"
-  integrity sha512-4YxE9oSz/rUybwETL/QdtfAB7WcszOz6IStD208zZRo0GTNUvb8hYH59/sS1V41hcnRajDDx8zoujJtADFkJNw==
+"@bma98/fractal-auth-screen@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-auth-screen/-/fractal-auth-screen-2.0.7.tgz#755dbd74b77e83a8533f92de9f2730dda89e902c"
+  integrity sha512-kYDVrnCCky6DvcX60CMHtQogu6bc+fqhbewp+GfwKwh4NtXyZJah2ZZuCOMx8sxYFAgvADEZes5WHVU6YUX25Q==
 
 "@bma98/fractal-charts@^2.0.0":
   version "2.0.1"
@@ -1076,10 +1076,10 @@
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
-"@bma98/fractal-messaging@^2.0.16":
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.16.tgz#9b56dbf089af3b48be5dd64ee7c5235ab0b92412"
-  integrity sha512-OBOF8d/z2kfbOxIl884U/wM1iA3lIpU7dkxT30Ud9Huz6V7hfly/TDm0hQ83kIhBDPQAiRHJSpGvu1fzKiFTEA==
+"@bma98/fractal-messaging@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.17.tgz#de0ac2f88728264b81101a689e5ebb2a1fc68886"
+  integrity sha512-L2CH6pRn9xZiRU2E+a7niM1cCoR+uzKRKYs81YDvxay6BVqqXbMTss0EAmmrQQ3qlSqDStYuwSm/dl+hLhAcFQ==
   dependencies:
     "@bma98/fractal-media" "^2.0.4"
     "@bma98/size-class" "^2.2.4"
@@ -1091,10 +1091,10 @@
   resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.2.tgz#ab80df7f5a8683e9e609d4e2426007231ba5e5de"
   integrity sha512-YpREsB4MENHkUHWf6gBcut57lnNZwSMMiQXV4xmxF3t7qt0SL+bnDjarwMCh6GHzlWzPwVZqwXzpW3xOjYOmjw==
 
-"@bma98/fractal-navigation@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.4.tgz#81b39173cee267c72e3bb796aa11ab007004da6e"
-  integrity sha512-YCIiQ3tvsH+LfFNhoV4JFPRS50v9zYiauVtosuWFoa4QuWrhOpJl12U41IP9VZg4w0RrdFHEwzCX0vxOkHhUEw==
+"@bma98/fractal-navigation@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.5.tgz#37c7b01a55a464cecca9fe80e0e6a76bfd026474"
+  integrity sha512-zoTVbfTXmo9+4bNLmvDEMtMyVQ511U2wHhC7Oj8t0qNPe3lY3gjYlG5s4EDlTRzqf0R3ldYOv+1RnDyrmwsB6Q==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
