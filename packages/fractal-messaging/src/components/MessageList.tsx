@@ -44,7 +44,7 @@ export function MessageList<T extends MinimalMessageData>({
     const scrollToEnd = useCallback(
         () =>
             setTimeout(() => {
-                if (listView.current) {
+                if (listView.current && listView.current._initComplete) {
                     listView.current.scrollToEnd();
                 }
             }),

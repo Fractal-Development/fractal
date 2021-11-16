@@ -43,7 +43,7 @@ export function MessageList(_a) {
     const getTextHeight = useGetTextHeight((width - spacings.m * 2) * 0.75 - (spacings.m * 2 + 6));
     const heights = messagesWithAccessoryViews.map(() => undefined);
     const scrollToEnd = useCallback(() => setTimeout(() => {
-        if (listView.current) {
+        if (listView.current && listView.current._initComplete) {
             listView.current.scrollToEnd();
         }
     }), []);
