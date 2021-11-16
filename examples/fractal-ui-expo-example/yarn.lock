@@ -1068,28 +1068,20 @@
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-media@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.0.tgz#dd4d224afe2ee275f4df2f9c52482383bc330dbc"
-  integrity sha512-hkfmNUy2ioobUl7bjBkHvVPvTdXc8OE5IV7lStcpoH4QAISAsPOMDg38Ur2zScvV3FdInWeflVv4iFp67+Bi9w==
+"@bma98/fractal-media@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.4.tgz#caef1150c3280ff5eddcc71999598bb8135f2aa5"
+  integrity sha512-zgVeOO7ICbf9GqMMC5rx7nCYvyet/ott65Z/AmLAdy4QfA3Rrhlr2BGQLAeSDw9HobPbtd1n3GYQZCBbmtToAQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
-"@bma98/fractal-media@^2.0.0":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.3.tgz#f273b7d41fde126794fe16fa0698037df85e0edc"
-  integrity sha512-hAUa+w3u1Gq45+7LC5kA2v2HAf4WaARVd2GkDrMsbCKrtMGkC8LHEWet8Hjg95CmWI7Jxqi0BaG3xjqm7CkPgw==
+"@bma98/fractal-messaging@^2.0.16":
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.16.tgz#9b56dbf089af3b48be5dd64ee7c5235ab0b92412"
+  integrity sha512-OBOF8d/z2kfbOxIl884U/wM1iA3lIpU7dkxT30Ud9Huz6V7hfly/TDm0hQ83kIhBDPQAiRHJSpGvu1fzKiFTEA==
   dependencies:
-    "@bma98/size-class" "^2.2.4"
-    styled-components "^5.3.0"
-
-"@bma98/fractal-messaging@^2.0.12":
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.12.tgz#e5e43816931a9aab32c41096d8a81f3502f99bde"
-  integrity sha512-+GMgw70VN7pzl3D6dd7DVSY/1u66M9ISu19yvOa/MkThR6U5SkiZWMRSlCDSb2iLIRKFTI+zuwQPiVp9uje3yA==
-  dependencies:
-    "@bma98/fractal-media" "2.0.0"
+    "@bma98/fractal-media" "^2.0.4"
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
     text-metrics "^2.0.9"
@@ -1099,17 +1091,17 @@
   resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.2.tgz#ab80df7f5a8683e9e609d4e2426007231ba5e5de"
   integrity sha512-YpREsB4MENHkUHWf6gBcut57lnNZwSMMiQXV4xmxF3t7qt0SL+bnDjarwMCh6GHzlWzPwVZqwXzpW3xOjYOmjw==
 
-"@bma98/fractal-navigation@^2.0.0":
+"@bma98/fractal-navigation@^2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.4.tgz#81b39173cee267c72e3bb796aa11ab007004da6e"
   integrity sha512-YCIiQ3tvsH+LfFNhoV4JFPRS50v9zYiauVtosuWFoa4QuWrhOpJl12U41IP9VZg4w0RrdFHEwzCX0vxOkHhUEw==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-ui@^2.0.5":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.6.tgz#f357d879c4c28189c1729b9ddf41e4f919718e4f"
-  integrity sha512-B1la4AcbGw+Xn0WZgoXhZJ3iJIW6MIqlQnl+znDN+e8sSZT3ueWspla+xHljh2qUbEBv6MsstVnLKAFEccNigA==
+"@bma98/fractal-ui@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.11.tgz#d8d4faccb74711613e46c5955266280931de3e00"
+  integrity sha512-fOzchXHgYhd0ZlV8d6dwGeZXRfVsH4F6J4AJOK22Haimxu3czIqv0VZi1UF9L0UrKl+2gQZbwUAV46nCJhbBJg==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -3975,13 +3967,13 @@ expo-asset@~8.4.3:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-av@~10.1.2:
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-10.1.2.tgz#93d675d441ba663dc634fffb870533b3564de8d8"
-  integrity sha512-uJ3ArN/bJvTFk5uvcj0Vu+OZ2Q8orXtslpCJza+UuT5p5k0nE/KCrfrnH0vbSecI1ZY3G9yYPlNeeWqlMumKqA==
+expo-av@~10.1.3:
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-10.1.3.tgz#a010443d7f82398d789a89824f1d512d8b407e3c"
+  integrity sha512-zYhpYthdQ5UPuhNn3XWaMJu94XyXUNw6WEifRnKH5xUHo0Oy0XrV5JAk8iO+7WDgfGo9oHlgvnSWrMNQsbF80A==
   dependencies:
     "@expo/config-plugins" "^4.0.2"
-    expo-modules-core "~0.4.4"
+    expo-modules-core "~0.4.7"
 
 expo-blur@~10.0.3:
   version "10.0.3"
@@ -4060,6 +4052,14 @@ expo-modules-core@~0.4.4, expo-modules-core@~0.4.5:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-0.4.5.tgz#e5cb160f8c1c3a0921f17c53574fe5a492b7a535"
   integrity sha512-edi17i3QNRmoNmN8mkJc9tKEYo2W4HYqFAXPIRasf4ylW0cGRzesrkRGPM0tOO7mPD880u/5uGoNTdWil+sX9A==
+  dependencies:
+    compare-versions "^3.4.0"
+    invariant "^2.2.4"
+
+expo-modules-core@~0.4.7:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-0.4.8.tgz#6fed03fca9370793b0a4bebc4fe1a44b213ed445"
+  integrity sha512-PElvF9/mw8TZ0FG3cQkQHB1yZEvtSrQ9nh90pINuTwmIUrxC427rgGoPrALsMaX90h94jTkPHODXHuX+Xsl/rg==
   dependencies:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
@@ -7769,10 +7769,10 @@ react-native-youtube-iframe@^2.1.0:
   dependencies:
     events "^3.2.0"
 
-react-native@0.64.2:
-  version "0.64.2"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.64.2.tgz#233b6ed84ac4749c8bc2a2d6cf63577a1c437d18"
-  integrity sha512-Ty/fFHld9DcYsFZujXYdeVjEhvSeQcwuTGXezyoOkxfiGEGrpL/uwUZvMzwShnU4zbbTKDu2PAm/uwuOittRGA==
+react-native@0.64.3:
+  version "0.64.3"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.64.3.tgz#40db6385963b4b17325f9cc86dd19132394b03fc"
+  integrity sha512-2OEU74U0Ek1/WeBzPbg6XDsCfjF/9fhrNX/5TFgEiBKd5mNc9LOZ/OlMmkb7iues/ZZ/oc51SbEfLRQdcW0fVw==
   dependencies:
     "@jest/create-cache-key-function" "^26.5.0"
     "@react-native-community/cli" "^5.0.1-alpha.1"
