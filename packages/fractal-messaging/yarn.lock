@@ -1164,23 +1164,24 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bma98/fractal-media@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.0.tgz#dd4d224afe2ee275f4df2f9c52482383bc330dbc"
-  integrity sha512-hkfmNUy2ioobUl7bjBkHvVPvTdXc8OE5IV7lStcpoH4QAISAsPOMDg38Ur2zScvV3FdInWeflVv4iFp67+Bi9w==
+"@bma98/fractal-media@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.4.tgz#caef1150c3280ff5eddcc71999598bb8135f2aa5"
+  integrity sha512-zgVeOO7ICbf9GqMMC5rx7nCYvyet/ott65Z/AmLAdy4QfA3Rrhlr2BGQLAeSDw9HobPbtd1n3GYQZCBbmtToAQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
-"@bma98/fractal-ui@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.0.tgz#3cc009daa648e4354349623c9da9c821f12906d4"
-  integrity sha512-NaFBP7E/lFuR1GhD3DlZTCqws6KgJOVX6K/2GOYnu5a3HaILOlIJaCN2RbACkZc+k1JJ1DOc4hdU3Wc0Yx0yww==
+"@bma98/fractal-ui@2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.9.tgz#6725df9d1ebd5abf1562e5d2a6ad4209dd71f696"
+  integrity sha512-XR7jPrzpNUaXIiyPcZGP91XW2i6NaGTwk3Xgr7wFIT6IJsK1c7d3RDqNCdg3xTKHlx/ydj5bNnGk+MCBAN4RFA==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
     recyclerlistview "^3.0.5"
     styled-components "^5.3.0"
+    utility-types "^3.10.0"
 
 "@bma98/size-class@^2.2.4":
   version "2.2.4"

@@ -1,9 +1,9 @@
 import React from 'react';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
-import { KeyboardAvoidingView } from './KeyboardAvoidingView';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';
 import { MessageInput } from './MessageInput';
+import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
 
 export function ChatContent<T extends MinimalMessageData>({
     messages,
@@ -30,7 +30,7 @@ export function ChatContent<T extends MinimalMessageData>({
         );
 
     return (
-        <KeyboardAvoidingView {...keyboardAvoidingViewProps}>
+        <KeyboardAvoidingLayer {...keyboardAvoidingViewProps}>
             <MessageList
                 {...layerProps}
                 messages={messages}
@@ -41,6 +41,6 @@ export function ChatContent<T extends MinimalMessageData>({
                 footerComponent={enableFluidFooter ? footer : undefined}
             />
             {!enableFluidFooter ? footer : undefined}
-        </KeyboardAvoidingView>
+        </KeyboardAvoidingLayer>
     );
 }
