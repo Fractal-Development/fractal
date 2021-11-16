@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-messaging",
-    "version": "2.0.14",
+    "version": "2.0.15",
     "description": "Messaging Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -14,7 +14,7 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "2.0.9",
+        "@bma98/fractal-ui": "2.0.10",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -29,7 +29,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-ui": "2.0.9",
+        "@bma98/fractal-ui": "2.0.10",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",

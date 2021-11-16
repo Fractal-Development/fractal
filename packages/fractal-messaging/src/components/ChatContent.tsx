@@ -26,11 +26,13 @@ export function ChatContent<T extends MinimalMessageData>({
         ) : isLoading ? (
             <ChatLoadingIndicator />
         ) : (
-            <MessageInput useForegroundVariant placeholder={placeholder} onSend={onSend} buttonVariant={messageInputButtonVariant} />
+            <KeyboardAvoidingLayer {...keyboardAvoidingViewProps} behavior='padding'>
+                <MessageInput useForegroundVariant placeholder={placeholder} onSend={onSend} buttonVariant={messageInputButtonVariant} />
+            </KeyboardAvoidingLayer>
         );
 
     return (
-        <KeyboardAvoidingLayer {...keyboardAvoidingViewProps}>
+        <>
             <MessageList
                 {...layerProps}
                 messages={messages}
@@ -41,6 +43,6 @@ export function ChatContent<T extends MinimalMessageData>({
                 footerComponent={enableFluidFooter ? footer : undefined}
             />
             {!enableFluidFooter ? footer : undefined}
-        </KeyboardAvoidingLayer>
+        </>
     );
 }
