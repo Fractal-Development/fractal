@@ -11,3 +11,4 @@ export * from './PaddingLayer';
 export * from './Box';
 export * from './tables';
 export * from './Separator';
+export * from './KeyboardAvoidingLayer';
