@@ -21,7 +21,7 @@ const StyledLayer = styled(MotiView)`
     ${extractShadowProps};
 `;
 
-const KeyboardAvoidingLayer = forwardRef((props: KeyboardAvoidingLayerProps): JSX.Element => <StyledLayer {...props} />);
+const KeyboardAvoidingLayer = forwardRef((props: KeyboardAvoidingLayerProps, ref): JSX.Element => <StyledLayer {...props} ref={ref} />);
 
 KeyboardAvoidingLayer.displayName = 'KeyboardAvoidingLayer';
 

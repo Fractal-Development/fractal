@@ -11,7 +11,7 @@ const StyledLayer = styled(MotiView) `
     ${extractBorderProps};
     ${extractShadowProps};
 `;
-const KeyboardAvoidingLayer = forwardRef((props) => React.createElement(StyledLayer, Object.assign({}, props)));
+const KeyboardAvoidingLayer = forwardRef((props, ref) => React.createElement(StyledLayer, Object.assign({}, props, { ref: ref })));
 KeyboardAvoidingLayer.displayName = 'KeyboardAvoidingLayer';
 export { KeyboardAvoidingLayer };
 //# sourceMappingURL=index.native.js.map
