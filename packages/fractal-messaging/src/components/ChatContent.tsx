@@ -26,7 +26,7 @@ export function ChatContent<T extends MinimalMessageData>({
         ) : isLoading ? (
             <ChatLoadingIndicator />
         ) : (
-            <KeyboardAvoidingLayer {...keyboardAvoidingViewProps} behavior='padding'>
+            <KeyboardAvoidingLayer keyboardVerticalOffset={100} {...keyboardAvoidingViewProps}>
                 <MessageInput useForegroundVariant placeholder={placeholder} onSend={onSend} buttonVariant={messageInputButtonVariant} />
             </KeyboardAvoidingLayer>
         );
