@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { KeyboardAvoidingView } from 'react-native';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import { motify } from '@motify/core';
 import styled from 'styled-components/native';
 import { KeyboardAvoidingLayerProps } from './types';
@@ -21,7 +21,11 @@ const StyledLayer = styled(MotiView)`
     ${extractShadowProps};
 `;
 
-const KeyboardAvoidingLayer = forwardRef((props: KeyboardAvoidingLayerProps, ref): JSX.Element => <StyledLayer {...props} ref={ref} />);
+const KeyboardAvoidingLayer = forwardRef(
+    (props: KeyboardAvoidingLayerProps, ref): JSX.Element => (
+        <StyledLayer behavior={Platform.OS === 'ios' ? 'padding' : 'height'} {...props} ref={ref} />
+    )
+);
 
 KeyboardAvoidingLayer.displayName = 'KeyboardAvoidingLayer';
 
