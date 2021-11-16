@@ -1209,15 +1209,16 @@
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-ui@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.0.tgz#3cc009daa648e4354349623c9da9c821f12906d4"
-  integrity sha512-NaFBP7E/lFuR1GhD3DlZTCqws6KgJOVX6K/2GOYnu5a3HaILOlIJaCN2RbACkZc+k1JJ1DOc4hdU3Wc0Yx0yww==
+"@bma98/fractal-ui@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.11.tgz#d8d4faccb74711613e46c5955266280931de3e00"
+  integrity sha512-fOzchXHgYhd0ZlV8d6dwGeZXRfVsH4F6J4AJOK22Haimxu3czIqv0VZi1UF9L0UrKl+2gQZbwUAV46nCJhbBJg==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
     recyclerlistview "^3.0.5"
     styled-components "^5.3.0"
+    utility-types "^3.10.0"
 
 "@bma98/size-class@^2.2.4":
   version "2.2.5"

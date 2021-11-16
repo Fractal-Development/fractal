@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, ErrorMessage } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, ErrorBoundaryMessage } from '@bma98/fractal-ui';
 import { BuggyComponent } from './BuggyComponent';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 function logErrorToService(error, componentStack) {
@@ -10,7 +10,7 @@ export function ErrorMessageFragment() {
     return (React.createElement(React.Fragment, null,
         React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Error Message Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(ErrorMessage, { onError: logErrorToService },
+            React.createElement(ErrorBoundaryMessage, { onError: logErrorToService },
                 React.createElement(BuggyComponent, null)))));
 }
 //# sourceMappingURL=ErrorMessageFragment.js.map
