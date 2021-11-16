@@ -1,5 +1,10 @@
 import { ReactElement, useEffect, useState } from 'react';
 
+/**
+ * TODO:
+ * Add a way to change the authenticationState with props for listener based authentication.
+ */
+
 export interface CredentialValidatorProps {
     key: string;
     checkIfShouldAllowAccess: () => Promise<boolean>;
@@ -26,7 +31,7 @@ export function AuthenticationCheck({
                 return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
             })
             .catch((error) => {
-                console.log(error.message);
+                console.error(error.message);
                 onCredentialLoadFailed?.(error.message);
                 setAuthenticationState('accessIsNotAllowed');
             });

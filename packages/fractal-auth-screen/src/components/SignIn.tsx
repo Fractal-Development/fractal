@@ -59,7 +59,6 @@ export function SignIn({
             </TextButton>
             {!removeSignUpButton && (
                 <>
-                    {' '}
                     <Separator marginBottom={spacings.m} />
                     <Button text={signUpText} variant={'alternative'} onPress={onSignUpButtonPress} />
                 </>
