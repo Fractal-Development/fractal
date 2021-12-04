@@ -1,17 +1,16 @@
 import { ReactElement } from 'react';
-/**
- * TODO:
- * Add a way to change the authenticationState with props for listener based authentication.
- */
+declare type AuthenticationState = 'loading' | 'accessIsAllowed' | 'accessIsNotAllowed';
 export interface CredentialValidatorProps {
     key: string;
-    checkIfShouldAllowAccess: () => Promise<boolean>;
+    checkIfShouldAllowAccess?: () => Promise<boolean>;
     onCredentialLoadFailed?: (error: string) => void;
     children: ReactElement;
     loadingComponent: ReactElement;
     redirectComponent: ReactElement;
+    state?: AuthenticationState;
 }
-export declare function AuthenticationCheck({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed }: CredentialValidatorProps): ReactElement;
+export declare function AuthenticationCheck({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed, state }: CredentialValidatorProps): ReactElement;
 export declare namespace AuthenticationCheck {
     var displayName: string;
 }
+export {};

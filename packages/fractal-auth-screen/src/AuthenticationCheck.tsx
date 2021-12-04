@@ -1,32 +1,30 @@
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect } from 'react';
+import { useControllableState } from '@bma98/fractal-ui';
 
-/**
- * TODO:
- * Add a way to change the authenticationState with props for listener based authentication.
- */
+type AuthenticationState = 'loading' | 'accessIsAllowed' | 'accessIsNotAllowed';
 
 export interface CredentialValidatorProps {
     key: string;
-    checkIfShouldAllowAccess: () => Promise<boolean>;
+    checkIfShouldAllowAccess?: () => Promise<boolean>;
     onCredentialLoadFailed?: (error: string) => void;
     children: ReactElement;
     loadingComponent: ReactElement;
     redirectComponent: ReactElement;
+    state?: AuthenticationState;
 }
-
-type AuthenticationState = 'loading' | 'accessIsAllowed' | 'accessIsNotAllowed';
 
 export function AuthenticationCheck({
     loadingComponent,
     children,
     redirectComponent,
     checkIfShouldAllowAccess,
-    onCredentialLoadFailed
+    onCredentialLoadFailed,
+    state
 }: CredentialValidatorProps): ReactElement {
-    const [authenticationState, setAuthenticationState] = useState<AuthenticationState>('loading');
+    const [authenticationState, setAuthenticationState] = useControllableState<AuthenticationState>(state, 'loading');
 
     useEffect(() => {
-        checkIfShouldAllowAccess()
+        checkIfShouldAllowAccess?.()
             .then((isValid) => {
                 return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
             })
@@ -35,7 +33,7 @@ export function AuthenticationCheck({
                 onCredentialLoadFailed?.(error.message);
                 setAuthenticationState('accessIsNotAllowed');
             });
-    }, [checkIfShouldAllowAccess, onCredentialLoadFailed]);
+    }, [checkIfShouldAllowAccess, onCredentialLoadFailed, setAuthenticationState]);
 
     switch (authenticationState) {
         case 'loading':
