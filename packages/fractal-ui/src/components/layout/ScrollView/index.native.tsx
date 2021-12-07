@@ -22,10 +22,21 @@ const StyledScrollView = styled(MotiScrollView)`
     ${extractShadowProps};
 `;
 
-const ScrollView = forwardRef(({ currentVariant, variants, ...others }: ScrollViewProps, ref: any): JSX.Element => {
-    const variantState = useVariantState(currentVariant, variants);
-    return <StyledScrollView ref={ref} state={variantState} {...others} />;
-});
+const ScrollView = forwardRef(
+    ({ currentVariant, variants, horizontal, flexShrink, flexDirection, ...others }: ScrollViewProps, ref: any): JSX.Element => {
+        const variantState = useVariantState(currentVariant, variants);
+        return (
+            <StyledScrollView
+                ref={ref}
+                state={variantState}
+                horizontal={horizontal}
+                flexDirection={horizontal ? 'row' : flexDirection}
+                flexShrink={horizontal && flexShrink === undefined ? 1 : flexShrink}
+                {...others}
+            />
+        );
+    }
+);
 
 ScrollView.displayName = 'Layer';
 
