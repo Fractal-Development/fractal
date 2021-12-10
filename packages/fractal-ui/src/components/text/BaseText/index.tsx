@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useCallback } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { TextProps } from './types';
@@ -32,20 +32,35 @@ const BaseText = forwardRef(
             whiteSpace = 'pre-wrap',
             wordWrap = 'break-word',
             display = null,
+            onPress,
+            cursor,
             ...others
         }: Omit<TextProps, 'variant'>,
         ref: any
-    ): JSX.Element => (
-        <StyledText
-            ref={ref}
-            initial={currentVariant ? 'from' : from}
-            animate={currentVariant ?? animate}
-            display={display}
-            whiteSpace={whiteSpace}
-            wordWrap={wordWrap}
-            {...others}
-        />
-    )
+    ): JSX.Element => {
+        const handleClick = useCallback(
+            (e) => {
+                if (onPress != null) {
+                    e.stopPropagation();
+                    onPress(e);
+                }
+            },
+            [onPress]
+        );
+        return (
+            <StyledText
+                ref={ref}
+                onClick={handleClick}
+                initial={currentVariant ? 'from' : from}
+                animate={currentVariant ?? animate}
+                display={display}
+                whiteSpace={whiteSpace}
+                wordWrap={wordWrap}
+                cursor={onPress && !cursor ? 'pointer' : cursor}
+                {...others}
+            />
+        );
+    }
 );
 
 BaseText.displayName = 'BaseText';
