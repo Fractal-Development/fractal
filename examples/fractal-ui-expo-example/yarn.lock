@@ -1076,10 +1076,10 @@
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
 
-"@bma98/fractal-messaging@^2.0.17":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.17.tgz#de0ac2f88728264b81101a689e5ebb2a1fc68886"
-  integrity sha512-L2CH6pRn9xZiRU2E+a7niM1cCoR+uzKRKYs81YDvxay6BVqqXbMTss0EAmmrQQ3qlSqDStYuwSm/dl+hLhAcFQ==
+"@bma98/fractal-messaging@^2.0.19":
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.19.tgz#a6b2ffb3dff1e8fd44bd1ac2120e19d5ce6e5bcc"
+  integrity sha512-RlD/0UBv9LYkks3SbQsXd3sWtF4rYbLefb1pWHF3gp6gFN4/746PPZqxP0MdPVto570fy5Mpi09qQaNIVzc4yQ==
   dependencies:
     "@bma98/fractal-media" "^2.0.4"
     "@bma98/size-class" "^2.2.4"
@@ -1091,17 +1091,17 @@
   resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.2.tgz#ab80df7f5a8683e9e609d4e2426007231ba5e5de"
   integrity sha512-YpREsB4MENHkUHWf6gBcut57lnNZwSMMiQXV4xmxF3t7qt0SL+bnDjarwMCh6GHzlWzPwVZqwXzpW3xOjYOmjw==
 
-"@bma98/fractal-navigation@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.5.tgz#37c7b01a55a464cecca9fe80e0e6a76bfd026474"
-  integrity sha512-zoTVbfTXmo9+4bNLmvDEMtMyVQ511U2wHhC7Oj8t0qNPe3lY3gjYlG5s4EDlTRzqf0R3ldYOv+1RnDyrmwsB6Q==
+"@bma98/fractal-navigation@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.6.tgz#661ea14bc3814e40a8253c1cecdd1473be892b33"
+  integrity sha512-Xs82rVDK1/lF3/c8vCOfPMGjvmkcly0XeTOG2DGV6hYUh1pcVkH390DZ5qt+8g/uhuUorr7nVDH81FDSidgWcw==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-ui@^2.0.17":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.17.tgz#40035b18886d6dd751bae65c90f026288a91fb9b"
-  integrity sha512-tKivBgzhI5pnBKB8w0DAnd0y+KWWYerods3ABaTj8yktYjjSdgmmIXT/X3wJbjefkvJgyoGhYX/XQSrlWpXipw==
+"@bma98/fractal-ui@^2.0.19":
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.19.tgz#39fddbf542d243221e7e2f66925f4a8788ea2cbd"
+  integrity sha512-BlBjw8UKS+PV7sSsnDOUW1yWUkUYWFkv9Pqt197gRQT4nJbkCGUXr1cNG3btLcy/q0jNX2qpOmBm4pCJ504njw==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
