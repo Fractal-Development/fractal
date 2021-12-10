@@ -1,5 +1,5 @@
 import { getUserSelectAccessibilityProp } from './utils/getUserSelectAccessibilityProp';
-export function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable, textAlign, textOverflow, whiteSpace }) {
+export function extractTextProps({ fontSize, fontWeight, fontFamily, color, fontStyle, selectable, textAlign, textOverflow, whiteSpace, wordWrap }) {
     return `
         ${fontSize != null ? `font-size: ${fontSize}px` : ''};
         ${fontWeight != null ? `font-weight: ${fontWeight}` : ''};
@@ -10,6 +10,7 @@ export function extractTextProps({ fontSize, fontWeight, fontFamily, color, font
         ${textAlign != null ? `text-align: ${textAlign}` : ''};
         ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''};
         ${whiteSpace != null ? `white-space: ${whiteSpace}` : ''};
+        ${wordWrap != null ? `word-wrap: ${wordWrap}` : ''};
     `;
 }
 //# sourceMappingURL=TextProps.js.map

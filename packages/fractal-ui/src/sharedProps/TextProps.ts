@@ -10,6 +10,7 @@ export interface FractalTextProps {
     textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
     textOverflow?: 'ellipsis';
     whiteSpace?: 'normal' | 'nowrap' | 'pre' | 'pre-wrap' | 'pre-line' | 'inherit' | 'initial' | 'unset';
+    wordWrap?: 'normal' | 'break-word' | 'initial' | 'inherit';
 }
 
 export function extractTextProps({
@@ -21,7 +22,8 @@ export function extractTextProps({
     selectable,
     textAlign,
     textOverflow,
-    whiteSpace
+    whiteSpace,
+    wordWrap
 }: FractalTextProps): string {
     return `
         ${fontSize != null ? `font-size: ${fontSize}px` : ''};
@@ -33,5 +35,6 @@ export function extractTextProps({
         ${textAlign != null ? `text-align: ${textAlign}` : ''};
         ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''};
         ${whiteSpace != null ? `white-space: ${whiteSpace}` : ''};
+        ${wordWrap != null ? `word-wrap: ${wordWrap}` : ''};
     `;
 }

@@ -24,8 +24,27 @@ const StyledText = styled(motion.span as any)`
 `;
 
 const BaseText = forwardRef(
-    ({ from, currentVariant, animate, display = null, ...others }: Omit<TextProps, 'variant'>, ref: any): JSX.Element => (
-        <StyledText ref={ref} initial={currentVariant ? 'from' : from} animate={currentVariant ?? animate} display={display} {...others} />
+    (
+        {
+            from,
+            currentVariant,
+            animate,
+            whiteSpace = 'pre-wrap',
+            wordWrap = 'break-word',
+            display = null,
+            ...others
+        }: Omit<TextProps, 'variant'>,
+        ref: any
+    ): JSX.Element => (
+        <StyledText
+            ref={ref}
+            initial={currentVariant ? 'from' : from}
+            animate={currentVariant ?? animate}
+            display={display}
+            whiteSpace={whiteSpace}
+            wordWrap={wordWrap}
+            {...others}
+        />
     )
 );
 

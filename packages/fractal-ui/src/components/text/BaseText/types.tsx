@@ -1,5 +1,5 @@
 import { RequiredKeys } from 'utility-types';
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import { AnimationProps, FractalSharedStyleProps, FractalTextProps } from '../../../sharedProps';
 import { FractalThemeTextVariants } from '../../../themes';
 
@@ -28,7 +28,7 @@ interface DefaultTexProps {
 }
 
 export interface TextProps extends FractalSharedStyleProps, AnimationProps, DefaultTexProps, FractalTextProps {
-    children?: string | number | ReactElement | Array<ReactElement>;
+    children?: ReactNode | Array<ReactNode>;
     style?: any;
     variant?: RequiredKeys<FractalThemeTextVariants>;
 }
