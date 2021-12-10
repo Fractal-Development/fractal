@@ -25,8 +25,13 @@ const StyledText = styled(MotiText)`
     ${extractTextProps};
 `;
 
+function deleteIncompatibleProperties(object: Partial<TextProps>) {
+    delete object.wordWrap;
+}
+
 const BaseText = forwardRef(({ currentVariant, variants, textOverflow, ...others }: TextProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);
+    deleteIncompatibleProperties(others);
     return <StyledText ellipsizeMode={textOverflow != null ? 'tail' : undefined} ref={ref} state={variantState} {...others} />;
 });
 
