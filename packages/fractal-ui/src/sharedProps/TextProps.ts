@@ -30,7 +30,7 @@ export function extractTextProps({
         ${fontWeight != null ? `font-weight: ${fontWeight}` : ''};
         ${color != null ? `color: ${color}` : ''};
         ${fontFamily != null ? `font-family: ${fontFamily}` : ''};
-        ${fontStyle != null ? `font-family: ${fontStyle}` : ''};
+        ${fontStyle != null ? `font-style: ${fontStyle}` : ''};
         ${getUserSelectAccessibilityProp(selectable)};
         ${textAlign != null ? `text-align: ${textAlign}` : ''};
         ${textOverflow != null ? `text-overflow: ${textOverflow}` : ''};
