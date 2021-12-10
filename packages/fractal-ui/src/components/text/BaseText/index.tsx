@@ -23,7 +23,11 @@ const StyledText = styled(motion.span as any)`
     ${extractTextProps};
 `;
 
-const BaseText = forwardRef(({ from, currentVariant, animate, ...others }: Omit<TextProps, 'variant'>, ref: any): JSX.Element => <StyledText ref={ref} initial={currentVariant ? 'from' : from} animate={currentVariant ?? animate} {...others} />);
+const BaseText = forwardRef(
+    ({ from, currentVariant, animate, display = null, ...others }: Omit<TextProps, 'variant'>, ref: any): JSX.Element => (
+        <StyledText ref={ref} initial={currentVariant ? 'from' : from} animate={currentVariant ?? animate} display={display} {...others} />
+    )
+);
 
 BaseText.displayName = 'BaseText';
 

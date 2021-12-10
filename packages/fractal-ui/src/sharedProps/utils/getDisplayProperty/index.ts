@@ -1,3 +1,3 @@
-export function getDisplayProperty(display?: string): string {
-    return `display: ${display ?? 'flex'}`;
+export function getDisplayProperty(display?: string | null): string {
+    return display === null ? '' : `display: ${display ?? 'flex'}`;
 }
