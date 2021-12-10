@@ -1,1 +1,1 @@
-export declare function getDisplayProperty(display?: string): string;
+export declare function getDisplayProperty(display?: string | null): string;

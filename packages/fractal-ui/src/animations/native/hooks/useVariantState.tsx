@@ -6,7 +6,7 @@ export function useVariantState(
     currentVariant: string | undefined,
     variants: FractalVariants | undefined = { from: {} }
 ): UseAnimationState<any> | undefined {
-    const animationState = useAnimationState<FractalVariants>(variants);
+    const animationState = useAnimationState(variants as any);
 
     useEffect(() => {
         if (currentVariant && variants) {
