@@ -55,6 +55,7 @@ export const SimpleTabBarItem = memo(
                     textAlign='center'
                     justifyContent={justifyContent}
                     color={color}
+                    wordWrap='normal'
                 >
                     {title}
                 </Text>
