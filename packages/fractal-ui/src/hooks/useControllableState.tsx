@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export function useControllableState<T>(value?: T, defaultValue?: T | (() => T), onChange?: (value: T) => void): [T, (valu: T) => void] {
+export function useControllableState<T>(value?: T, defaultValue?: T | (() => T), onChange?: (value: T) => void): [T, (value: T) => void] {
     const [internalState, setInternalState] = useState(defaultValue as T);
 
     const isControlled = value !== undefined;
