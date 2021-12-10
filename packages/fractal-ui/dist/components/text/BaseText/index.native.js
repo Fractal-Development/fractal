@@ -24,9 +24,13 @@ const StyledText = styled(MotiText) `
     ${extractShadowProps};
     ${extractTextProps};
 `;
+function deleteIncompatibleProperties(object) {
+    delete object.wordWrap;
+}
 const BaseText = forwardRef((_a, ref) => {
     var { currentVariant, variants, textOverflow } = _a, others = __rest(_a, ["currentVariant", "variants", "textOverflow"]);
     const variantState = useVariantState(currentVariant, variants);
+    deleteIncompatibleProperties(others);
     return React.createElement(StyledText, Object.assign({ ellipsizeMode: textOverflow != null ? 'tail' : undefined, ref: ref, state: variantState }, others));
 });
 BaseText.displayName = 'BaseText';
