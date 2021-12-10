@@ -1,12 +1,12 @@
 import React, { useCallback, useState, useMemo, useEffect, useRef, Fragment } from 'react';
 import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
-import { useSizeValue } from '@bma98/size-class';
 import { AutoSizer } from './AutoSizer';
 import { MessageListProps, MinimalMessageData } from './types';
 import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
+import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index.native';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne.id !== rowTwo.id;
@@ -15,6 +15,10 @@ const dataProvider = new DataProvider((rowOne, rowTwo) => {
 enum MessageViewTypes {
     Message,
     Footer
+}
+
+function getMaxBubbleWidth(width: number, paddingHorizontal: number) {
+    return (width - paddingHorizontal * 2) * 0.75;
 }
 
 export function MessageList<T extends MinimalMessageData>({
@@ -34,11 +38,13 @@ export function MessageList<T extends MinimalMessageData>({
         }
     }, [messages, footerComponent]);
     const listView = useRef<any>();
+    const containerRef = useRef<any>();
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
-    const width = useSizeValue('width');
+    const [containerWidth, handleOnLayoutForContainer] = useGetContainerWidth(containerRef);
+    const [maxContentWidth, setMaxContentWidth] = useState(getMaxBubbleWidth(containerWidth, spacings.m) - (spacings.m * 2 + 6));
     const { height: chatMessageHeight } = useChatMessageSize();
-    const getTextHeight = useGetTextHeight((width - spacings.m * 2) * 0.75 - (spacings.m * 2 + 6));
+    const getTextHeight = useGetTextHeight(maxContentWidth);
     const heights: Array<number | undefined> = messagesWithAccessoryViews.map(() => undefined);
 
     const scrollToEnd = useCallback(
@@ -109,21 +115,27 @@ export function MessageList<T extends MinimalMessageData>({
                         dim.height = sizes.textFieldHeight;
                 }
 
-                dim.width = width;
+                dim.width = containerWidth;
             }
         );
-    }, [heights, messageHeightCalculator, messages, width, sizes.textFieldHeight]);
+    }, [heights, messageHeightCalculator, messages, containerWidth, sizes.textFieldHeight]);
 
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
-    }, [messagesWithAccessoryViews, width]);
+    }, [messagesWithAccessoryViews, maxContentWidth]);
 
     useEffect(() => {
         scrollToEnd();
     }, [dataProviderState, scrollToEnd]);
 
+    useEffect(() => {
+        if (containerRef.current?.clientWidth != null) {
+            setMaxContentWidth(getMaxBubbleWidth(containerRef.current?.clientWidth, spacings.m));
+        }
+    }, [containerRef.current?.clientWidth, spacings.m]);
+
     return (
-        <Layer flex={1} {...layerProps}>
+        <Layer flex={1} ref={containerRef} onLayout={handleOnLayoutForContainer} {...layerProps}>
             {messages.length > 0 && (
                 <AutoSizer onResize={scrollToEnd}>
                     {({ height, width }) => (
