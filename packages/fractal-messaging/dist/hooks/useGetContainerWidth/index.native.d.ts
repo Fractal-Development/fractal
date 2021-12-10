@@ -1,1 +1,1 @@
-export declare function useGetContainerWidth(_: any): [number, (event: any) => void];
+export declare function useGetContainerWidth(): [number, unknown];

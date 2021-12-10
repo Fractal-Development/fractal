@@ -10,6 +10,6 @@ export function useGetContainerWidth(containerRef) {
             setContainerWidth((_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth);
         }
     }, [(_a = containerRef.current) === null || _a === void 0 ? void 0 : _a.clientWidth, containerRef]);
-    return [containerWidth, undefined];
+    return [containerWidth, {}];
 }
 //# sourceMappingURL=index.js.map

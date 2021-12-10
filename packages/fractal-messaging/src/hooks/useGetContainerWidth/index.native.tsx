@@ -1,7 +1,7 @@
 import { useSizeValue } from '@bma98/size-class';
 import { useCallback, useState } from 'react';
 
-export function useGetContainerWidth(_): [number, (event) => void] {
+export function useGetContainerWidth(): [number, unknown] {
     const width = useSizeValue('width');
     const [containerWidth, setContainerWidth] = useState(width);
 
@@ -9,5 +9,10 @@ export function useGetContainerWidth(_): [number, (event) => void] {
         setContainerWidth(event.nativeEvent.layout.width);
     }, []);
 
-    return [containerWidth, handleOnLayoutForContainer];
+    return [
+        containerWidth,
+        {
+            onLayout: handleOnLayoutForContainer
+        }
+    ];
 }

@@ -1,7 +1,7 @@
 import { useSizeValue } from '@bma98/size-class';
 import { MutableRefObject, useEffect, useState } from 'react';
 
-export function useGetContainerWidth(containerRef: MutableRefObject<any>): [number, ((event) => void) | undefined] {
+export function useGetContainerWidth(containerRef: MutableRefObject<any>): [number, unknown] {
     const width = useSizeValue('width');
     const [containerWidth, setContainerWidth] = useState(width);
 
@@ -11,5 +11,5 @@ export function useGetContainerWidth(containerRef: MutableRefObject<any>): [numb
         }
     }, [containerRef.current?.clientWidth, containerRef]);
 
-    return [containerWidth, undefined];
+    return [containerWidth, {}];
 }

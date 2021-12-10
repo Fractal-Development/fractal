@@ -16,7 +16,7 @@ import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
-import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index.native';
+import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index';
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne.id !== rowTwo.id;
 });
@@ -43,7 +43,7 @@ export function MessageList(_a) {
     const containerRef = useRef();
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
-    const [containerWidth, handleOnLayoutForContainer] = useGetContainerWidth(containerRef);
+    const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);
     const [maxContentWidth, setMaxContentWidth] = useState(getMaxBubbleWidth(containerWidth, spacings.m) - (spacings.m * 2 + 6));
     const { height: chatMessageHeight } = useChatMessageSize();
     const getTextHeight = useGetTextHeight(maxContentWidth);
@@ -109,6 +109,6 @@ export function MessageList(_a) {
             setMaxContentWidth(getMaxBubbleWidth((_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m));
         }
     }, [(_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m]);
-    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef, onLayout: handleOnLayoutForContainer }, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
+    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
 }
 //# sourceMappingURL=MessageList.js.map

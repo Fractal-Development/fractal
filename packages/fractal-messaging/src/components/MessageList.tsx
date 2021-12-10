@@ -6,7 +6,7 @@ import { ChatMessage } from './ChatMessage';
 import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
-import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index.native';
+import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => {
     return rowOne.id !== rowTwo.id;
@@ -41,7 +41,7 @@ export function MessageList<T extends MinimalMessageData>({
     const containerRef = useRef<any>();
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
-    const [containerWidth, handleOnLayoutForContainer] = useGetContainerWidth(containerRef);
+    const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);
     const [maxContentWidth, setMaxContentWidth] = useState(getMaxBubbleWidth(containerWidth, spacings.m) - (spacings.m * 2 + 6));
     const { height: chatMessageHeight } = useChatMessageSize();
     const getTextHeight = useGetTextHeight(maxContentWidth);
@@ -135,7 +135,7 @@ export function MessageList<T extends MinimalMessageData>({
     }, [containerRef.current?.clientWidth, spacings.m]);
 
     return (
-        <Layer flex={1} ref={containerRef} onLayout={handleOnLayoutForContainer} {...layerProps}>
+        <Layer flex={1} ref={containerRef} {...containerLayoutProps} {...layerProps}>
             {messages.length > 0 && (
                 <AutoSizer onResize={scrollToEnd}>
                     {({ height, width }) => (
