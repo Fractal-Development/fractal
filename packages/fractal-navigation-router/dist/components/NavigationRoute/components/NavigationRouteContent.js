@@ -22,7 +22,7 @@ export function NavigationRouteContent(_a) {
     const activityState = useScreenActivityState(path, isTabScreen !== null && isTabScreen !== void 0 ? isTabScreen : false);
     const [initialRenderDone] = useIsInitialRenderDone(activityState);
     const contentStyle = useNavigationRouteStyles(style);
-    return (React.createElement(Screen, Object.assign({ width: '100%', flex: 1, activityState: activityState, active: activityState, stackPresentation: stackPresentation, style: contentStyle }, others),
+    return (React.createElement(Screen, Object.assign({ width: "100%", flex: 1, activityState: activityState, active: activityState, stackPresentation: stackPresentation, style: contentStyle }, others),
         React.createElement(StackPresentationTypeProvider, { stackPresentation: stackPresentation },
             React.createElement(Route, { path: path }, initialRenderDone ? renderChildren : null))));
 }

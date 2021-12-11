@@ -10,13 +10,13 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { Children, useEffect, useRef } from 'react';
+import { NavigationBarInsetsProvider } from '@bma98/fractal-navigation';
 import { useLocation } from '../../../../router';
 import { ScreenStack } from '../ScreenStack';
 import { filterMatchingChildren } from './util/filterMatchingChildren';
 import { useIsRouteActive } from '../../../../hooks';
 import { StackNavigatorRootPathProvider } from '../../context';
 import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
-import { NavigationBarInsetsProvider } from '@bma98/fractal-navigation';
 export function StackNavigator(_a) {
     var { path = '', children, style } = _a, others = __rest(_a, ["path", "children", "style"]);
     const { pathname } = useLocation();

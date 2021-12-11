@@ -7,11 +7,9 @@ export function StackScreenWebContainer({ isTabScreen, path = '/', stackPresenta
     if (stackPresentation === 'push' && !isTabScreen && !isRootRoute) {
         return React.createElement(StackScreenWebPushContainer, null, children);
     }
-    else if (stackPresentation === 'modal') {
+    if (stackPresentation === 'modal') {
         return activityState > 0 ? React.createElement(StackScreenWebModalContainer, null, children) : null;
     }
-    else {
-        return React.createElement(React.Fragment, null, children);
-    }
+    return React.createElement(React.Fragment, null, children);
 }
 //# sourceMappingURL=index.js.map

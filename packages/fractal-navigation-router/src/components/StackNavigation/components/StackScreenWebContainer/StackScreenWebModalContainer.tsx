@@ -1,6 +1,6 @@
 import React, { ReactNode, useCallback, useState } from 'react';
-import { useHistory } from '../../../../router';
 import { Background, MiddleCellModal } from '@bma98/fractal-ui';
+import { useHistory } from '../../../../router';
 import { StackNavigationGoBackAnimatedProvider } from '../../context/StackNavigationGoBackAnimatedProvider';
 
 interface StackScreenModalProps {
@@ -17,7 +17,7 @@ export function StackScreenWebModalContainer({ children }: StackScreenModalProps
 
     return (
         <StackNavigationGoBackAnimatedProvider goBackAnimated={goBackAnimated}>
-            <MiddleCellModal position={'relative'} visible={visible} onDismiss={goBackAnimated} onExitComplete={goBack}>
+            <MiddleCellModal position="relative" visible={visible} onDismiss={goBackAnimated} onExitComplete={goBack}>
                 <Background>{children}</Background>
             </MiddleCellModal>
         </StackNavigationGoBackAnimatedProvider>

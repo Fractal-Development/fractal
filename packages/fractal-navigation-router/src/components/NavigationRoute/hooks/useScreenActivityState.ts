@@ -7,7 +7,7 @@ export function useScreenActivityState(path: string, isTabScreen: boolean): 2 | 
 
     if (isRouteActive) {
         return isRouteActiveAndExact || isTabScreen ? 2 : 1;
-    } else {
+    } 
         return 0;
-    }
+    
 }

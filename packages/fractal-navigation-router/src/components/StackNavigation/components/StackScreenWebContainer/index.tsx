@@ -15,9 +15,9 @@ export function StackScreenWebContainer({
 
     if (stackPresentation === 'push' && !isTabScreen && !isRootRoute) {
         return <StackScreenWebPushContainer>{children}</StackScreenWebPushContainer>;
-    } else if (stackPresentation === 'modal') {
+    } if (stackPresentation === 'modal') {
         return activityState > 0 ? <StackScreenWebModalContainer>{children}</StackScreenWebModalContainer> : null;
-    } else {
+    } 
         return <>{children}</>;
-    }
+    
 }

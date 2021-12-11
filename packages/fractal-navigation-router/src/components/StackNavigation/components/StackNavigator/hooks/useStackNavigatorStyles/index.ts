@@ -1,3 +1,3 @@
-export function useStackNavigatorStyles(style: any) {
+export function useStackNavigatorStyles(style: unknown): any {
     return style;
 }

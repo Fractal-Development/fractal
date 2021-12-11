@@ -1,1 +1,1 @@
-export declare function useStackNavigatorStyles(style: any): any;
+export declare function useStackNavigatorStyles(style: unknown): any;

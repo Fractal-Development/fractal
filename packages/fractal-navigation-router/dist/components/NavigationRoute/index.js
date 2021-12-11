@@ -10,15 +10,13 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useEffect } from 'react';
-import { NavigationRouteContent } from './components/NavigationRouteContent';
 import { useTheme } from '@bma98/fractal-ui';
+import { NavigationRouteContent } from './components/NavigationRouteContent';
 export function NavigationRoute(_a) {
     var { onDismissed } = _a, others = __rest(_a, ["onDismissed"]);
     const theme = useTheme();
-    useEffect(() => {
-        return () => {
-            onDismissed === null || onDismissed === void 0 ? void 0 : onDismissed();
-        };
+    useEffect(() => () => {
+        onDismissed === null || onDismissed === void 0 ? void 0 : onDismissed();
     }, [onDismissed]);
     return (React.createElement(NavigationRouteContent, Object.assign({ backgroundColor: others.stackPresentation === 'push' ? theme.colors.background : 'transparent' }, others)));
 }

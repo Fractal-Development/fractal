@@ -6,8 +6,6 @@ export function useScreenActivityState(path, isTabScreen) {
     if (isRouteActive) {
         return isRouteActiveAndExact || isTabScreen ? 2 : 1;
     }
-    else {
-        return 0;
-    }
+    return 0;
 }
 //# sourceMappingURL=useScreenActivityState.js.map

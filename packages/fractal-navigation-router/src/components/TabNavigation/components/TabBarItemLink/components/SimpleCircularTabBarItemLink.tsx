@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { SimpleCircularTabBarItem, SimpleTabBarItemProps } from '@bma98/fractal-navigation';
-import { ReactElement } from 'react';
 import { useIsRouteActive } from '../../../../../hooks/useIsRouteActive';
 import { useGoToTab } from '../hooks/useGoToTab';
 

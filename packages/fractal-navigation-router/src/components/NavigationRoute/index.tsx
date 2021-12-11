@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
+import { useTheme } from '@bma98/fractal-ui';
 import { NavigationRouteContent } from './components/NavigationRouteContent';
 import { NavigationRouteProps } from './types/NavigationRouteProps';
-import { useTheme } from '@bma98/fractal-ui';
 
 export function NavigationRoute({ onDismissed, ...others }: NavigationRouteProps): JSX.Element | null {
     const theme = useTheme();
 
-    useEffect(() => {
-        return () => {
+    useEffect(() => () => {
             onDismissed?.();
-        };
-    }, [onDismissed]);
+        }, [onDismissed]);
 
     return (
         <NavigationRouteContent

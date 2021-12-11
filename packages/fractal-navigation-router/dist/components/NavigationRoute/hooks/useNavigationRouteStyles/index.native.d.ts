@@ -1,1 +1,1 @@
-export declare function useNavigationRouteStyles(style: any): any;
+export declare function useNavigationRouteStyles(style: unknown): any;

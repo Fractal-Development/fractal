@@ -1,3 +1,3 @@
-export function useNavigationRouteStyles(style: any): any {
+export function useNavigationRouteStyles(style: unknown): any {
     return style;
 }

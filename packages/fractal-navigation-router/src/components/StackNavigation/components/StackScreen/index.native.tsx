@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Platform, StatusBar } from 'react-native';
+import { NativeNavigationBar, NavigationBar } from '@bma98/fractal-navigation';
 import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationRouteProps';
 import { NavigationRoute } from '../../../NavigationRoute';
-import { NativeNavigationBar, NavigationBar } from '@bma98/fractal-navigation';
 import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 import { useGoBackAnimated } from '../../hooks/useGoBackAnimated';
 
@@ -22,7 +22,7 @@ export function StackScreen({ children, navBarConfig, stackPresentation = 'push'
             left={0}
             right={0}
             bottom={0}
-            position={'absolute'}
+            position="absolute"
             {...others}
             onDismissed={goBack}
             stackPresentation={stackPresentation}

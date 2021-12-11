@@ -1,11 +1,11 @@
 import React, { Children, useEffect, useRef } from 'react';
+import { NavigationBarInsetsProvider } from '@bma98/fractal-navigation';
 import { useLocation } from '../../../../router';
 import { ScreenStack, ScreenStackProps } from '../ScreenStack';
 import { filterMatchingChildren } from './util/filterMatchingChildren';
 import { useIsRouteActive } from '../../../../hooks';
 import { StackNavigatorRootPathProvider } from '../../context';
 import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
-import { NavigationBarInsetsProvider } from '@bma98/fractal-navigation';
 
 export interface StackNavigatorProps extends Omit<ScreenStackProps, 'children'> {
     children: Array<JSX.Element> | JSX.Element;

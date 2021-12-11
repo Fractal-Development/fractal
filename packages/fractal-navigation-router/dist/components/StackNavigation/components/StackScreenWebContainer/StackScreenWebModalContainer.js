@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { useHistory } from '../../../../router';
 import { Background, MiddleCellModal } from '@bma98/fractal-ui';
+import { useHistory } from '../../../../router';
 import { StackNavigationGoBackAnimatedProvider } from '../../context/StackNavigationGoBackAnimatedProvider';
 export function StackScreenWebModalContainer({ children }) {
     const { goBack } = useHistory();
@@ -9,7 +9,7 @@ export function StackScreenWebModalContainer({ children }) {
         setVisible(false);
     }, [setVisible]);
     return (React.createElement(StackNavigationGoBackAnimatedProvider, { goBackAnimated: goBackAnimated },
-        React.createElement(MiddleCellModal, { position: 'relative', visible: visible, onDismiss: goBackAnimated, onExitComplete: goBack },
+        React.createElement(MiddleCellModal, { position: "relative", visible: visible, onDismiss: goBackAnimated, onExitComplete: goBack },
             React.createElement(Background, null, children))));
 }
 //# sourceMappingURL=StackScreenWebModalContainer.js.map

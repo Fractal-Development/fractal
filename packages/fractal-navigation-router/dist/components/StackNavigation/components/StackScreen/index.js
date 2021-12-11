@@ -10,8 +10,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import { NavigationRoute } from '../../../NavigationRoute';
 import { NavigationBar } from '@bma98/fractal-navigation';
+import { NavigationRoute } from '../../../NavigationRoute';
 import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
 import { useGoBackAnimated } from '../../hooks/useGoBackAnimated';
 import { StackScreenWebContainer } from '../StackScreenWebContainer';
@@ -24,7 +24,7 @@ function StackScreenWebContent({ path = '/', navBarConfig, children }) {
 }
 export function StackScreen(_a) {
     var { navBarConfig, children } = _a, others = __rest(_a, ["navBarConfig", "children"]);
-    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: 'absolute' }, others),
+    return (React.createElement(NavigationRoute, Object.assign({ top: 0, left: 0, right: 0, bottom: 0, position: "absolute" }, others),
         React.createElement(StackScreenWebContainer, Object.assign({}, others),
             React.createElement(StackScreenWebContent, Object.assign({}, others, { navBarConfig: navBarConfig }), children))));
 }

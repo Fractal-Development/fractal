@@ -2,12 +2,7 @@ import React, { createContext, ReactNode, Dispatch, SetStateAction, useState } f
 
 export type TabBarItemsHistoryContextType = [Map<string, string>, Dispatch<SetStateAction<Map<string, string>>>];
 
-export const TabBarItemsHistoryContext = createContext<TabBarItemsHistoryContextType>([
-    new Map(),
-    () => {
-        return;
-    }
-]);
+export const TabBarItemsHistoryContext = createContext<TabBarItemsHistoryContextType>([new Map(), () => {}]);
 
 interface TabBarItemsHistoryProviderProps {
     children: ReactNode;
