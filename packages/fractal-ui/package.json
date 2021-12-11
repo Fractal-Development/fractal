@@ -106,7 +106,7 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-unused-imports": "^1.1.5",
         "expo-blur": "^10.0.3",
-       "expo-document-picker": "^10.0.3",
+        "expo-document-picker": "^10.0.3",
         "expo-module-scripts": "^2.0.0",
         "moti": "^0.16.1",
         "prettier": "^2.3.2",
