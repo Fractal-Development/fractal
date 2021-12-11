@@ -9,11 +9,9 @@ const variants = {
     animate: { opacity: 1 },
     exit: { opacity: 0 }
 };
-const PlayPauseIcon = memo(({ tintColor, isPlaying }) => {
-    return (React.createElement(AnimatePresence, null, isPlaying ? (React.createElement(Layer, { from: variants.initial, animate: variants.animate, exit: variants.exit },
-        React.createElement(PauseIcon, { fill: tintColor, width: ICON_SIZE, height: ICON_SIZE }))) : (React.createElement(Layer, { paddingLeft: 2, from: variants.initial, animate: variants.animate, exit: variants.exit },
-        React.createElement(PlayIcon, { fill: tintColor, width: ICON_SIZE, height: ICON_SIZE })))));
-});
+const PlayPauseIcon = memo(({ tintColor, isPlaying }) => (React.createElement(AnimatePresence, null, isPlaying ? (React.createElement(Layer, { from: variants.initial, animate: variants.animate, exit: variants.exit },
+    React.createElement(PauseIcon, { fill: tintColor, width: ICON_SIZE, height: ICON_SIZE }))) : (React.createElement(Layer, { paddingLeft: 2, from: variants.initial, animate: variants.animate, exit: variants.exit },
+    React.createElement(PlayIcon, { fill: tintColor, width: ICON_SIZE, height: ICON_SIZE }))))));
 PlayPauseIcon.displayName = 'PlayPauseIcon';
 export { PlayPauseIcon };
 //# sourceMappingURL=PlayPauseIcon.js.map

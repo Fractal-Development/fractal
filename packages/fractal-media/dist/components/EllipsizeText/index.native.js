@@ -13,6 +13,6 @@ import React from 'react';
 import { Text } from '@bma98/fractal-ui';
 export function EllipsizeText(_a) {
     var { variant } = _a, others = __rest(_a, ["variant"]);
-    return React.createElement(Text, Object.assign({ variant: variant }, others, { numberOfLines: 1, ellipsizeMode: 'tail' }));
+    return React.createElement(Text, Object.assign({ variant: variant }, others, { numberOfLines: 1, ellipsizeMode: "tail" }));
 }
 //# sourceMappingURL=index.native.js.map

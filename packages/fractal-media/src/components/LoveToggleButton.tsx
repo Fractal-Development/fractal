@@ -22,7 +22,7 @@ export function LoveToggleButton({
     const uncheckedColor = uncheckedColorProp ?? colors.placeholder;
 
     return (
-        <BaseButton width={size} height={size} alignItems='center' justifyContent={'center'} onPress={onPress}>
+        <BaseButton width={size} height={size} alignItems='center' justifyContent="center" onPress={onPress}>
             <HeartIcon fill={checked ? checkedColor : uncheckedColor} width={size} height={size} />
         </BaseButton>
     );

@@ -32,7 +32,7 @@ export function useAudioWebEffects(
         const onLoadedData = (): void => {
             if (audioRef.current) {
                 const { duration } = audioRef.current;
-                if (!isNaN(duration)) setDuration(duration * 1000);
+                if (!Number.isNaN(duration)) setDuration(duration * 1000);
             }
         };
 

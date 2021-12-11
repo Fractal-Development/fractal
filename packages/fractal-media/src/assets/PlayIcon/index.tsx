@@ -1,7 +1,6 @@
 import React, { memo, SVGProps } from 'react';
 
-const PlayIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
-    return (
+const PlayIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => (
         <svg focusable={false} width='20' height='22' viewBox='0 0 20 22' {...props}>
             <g fillRule='evenodd' stroke='none' strokeWidth='1'>
                 <g fillRule='nonzero' transform='translate(-244 -133)'>
@@ -13,8 +12,7 @@ const PlayIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
                 </g>
             </g>
         </svg>
-    );
-});
+    ));
 
 PlayIcon.displayName = 'PlayIcon';
 

@@ -15,10 +15,10 @@ import { YouTubeVideoPlayer } from './YouTubeVideoPlayer';
 import { Video } from './Video';
 export function OmniPlayer(_a) {
     var { source, width, height } = _a, layerProps = __rest(_a, ["source", "width", "height"]);
-    const isYouTubeVideo = typeof source == 'string' && MATCH_URL_YOUTUBE.test(source);
+    const isYouTubeVideo = typeof source === 'string' && MATCH_URL_YOUTUBE.test(source);
     if (isYouTubeVideo) {
         return React.createElement(YouTubeVideoPlayer, Object.assign({ source: source, width: width, height: height }, layerProps));
     }
-    return React.createElement(Video, { source: source, resizeMode: 'contain', useNativeControls: true, style: Object.assign({ width, height }, layerProps) });
+    return React.createElement(Video, { source: source, resizeMode: "contain", useNativeControls: true, style: Object.assign({ width, height }, layerProps) });
 }
 //# sourceMappingURL=OmniPlayer.js.map

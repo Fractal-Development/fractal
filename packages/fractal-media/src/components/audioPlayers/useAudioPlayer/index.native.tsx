@@ -36,7 +36,7 @@ export function useAudioPlayer<T extends MinimalTrackData>(
     const loadNewSoundAsync = useCallback(
         async (newTrackIndex: number, shouldPlay: boolean, positionMillis?: number): Promise<void> => {
             const { audioSrc } = playList[newTrackIndex];
-            const source = typeof audioSrc == 'string' ? { uri: audioSrc } : audioSrc;
+            const source = typeof audioSrc === 'string' ? { uri: audioSrc } : audioSrc;
             try {
                 if (audioRef.current) {
                     await audioRef.current.unloadAsync();
@@ -119,7 +119,7 @@ export function useAudioPlayer<T extends MinimalTrackData>(
     }, [currentTime, isPlaying, loadNewSoundAsync, trackIndex]);
 
     useEffect(() => {
-        if (controllableTrackIndex != undefined) {
+        if (controllableTrackIndex != null) {
             setTrackIndex(controllableTrackIndex);
         }
     }, [controllableTrackIndex]);

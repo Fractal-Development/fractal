@@ -5,10 +5,10 @@ export function RateToggleButton({ onChangeRate }) {
     const { colors, borderRadius } = useTheme();
     const toggleRate = useCallback(() => {
         let newRate = 1;
-        if (rate == 1) {
+        if (rate === 1) {
             newRate = 1.5;
         }
-        if (rate == 1.5) {
+        if (rate === 1.5) {
             newRate = 2;
         }
         setRate(newRate);

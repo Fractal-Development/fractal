@@ -11,10 +11,10 @@ export function RateToggleButton({ onChangeRate }: RateToggleButtonProps): JSX.E
 
     const toggleRate = useCallback(() => {
         let newRate = 1;
-        if (rate == 1) {
+        if (rate === 1) {
             newRate = 1.5;
         }
-        if (rate == 1.5) {
+        if (rate === 1.5) {
             newRate = 2;
         }
         setRate(newRate);
@@ -26,12 +26,12 @@ export function RateToggleButton({ onChangeRate }: RateToggleButtonProps): JSX.E
             backgroundColor={colors.mainInteractiveColor}
             width={36}
             height={24}
-            alignItems={'center'}
-            justifyContent={'center'}
+            alignItems='center'
+            justifyContent='center'
             borderRadius={borderRadius.m}
             onPress={toggleRate}
         >
-            <Text variant={'normal'} color={'white'} fontSize={12}>{`${rate}x`}</Text>
+            <Text variant='normal' color='white' fontSize={12}>{`${rate}x`}</Text>
         </BaseButton>
     );
 }

@@ -10,7 +10,7 @@ export function useCheckIfShouldGoToNextTrack(
     resetPosition: () => Promise<void>
 ): () => void {
     return useCallback(async () => {
-        const isLastIndex = trackIndex == tracksLength - 1;
+        const isLastIndex = trackIndex === tracksLength - 1;
         if (!isLastIndex || (isLastIndex && enableRepeatPlayback)) {
             toNextTrack();
         } else {

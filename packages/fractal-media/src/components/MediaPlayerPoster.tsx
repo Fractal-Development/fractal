@@ -9,7 +9,7 @@ export interface MediaPlayerPosterProps extends ImageBackgroundProps {
 
 export function MediaPlayerPoster({ onPlayPress, playerButtonSize, ...others }: MediaPlayerPosterProps): JSX.Element {
     return (
-        <ImageBackground alignItems={'center'} justifyContent={'center'} {...others}>
+        <ImageBackground alignItems="center" justifyContent="center" {...others}>
             <MediaPlayerButton onPress={onPlayPress} size={playerButtonSize} />
         </ImageBackground>
     );

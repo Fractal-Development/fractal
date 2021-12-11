@@ -1,7 +1,6 @@
 import React, { memo, SVGProps } from 'react';
 
-const ShuffleIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
-    return (
+const ShuffleIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => (
         <svg focusable={false} width='18' height='14' viewBox='0 0 18 14' {...props}>
             <g fillRule='evenodd' stroke='none' strokeWidth='1'>
                 <g fillRule='nonzero' transform='translate(-152 -137)'>
@@ -13,8 +12,7 @@ const ShuffleIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
                 </g>
             </g>
         </svg>
-    );
-});
+    ));
 
 ShuffleIcon.displayName = 'ShuffleIcon';
 

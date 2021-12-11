@@ -34,7 +34,7 @@ export function useAudioPlayer(tracks, controllableTrackIndex, shufflePlayback, 
     }, []);
     const loadNewSoundAsync = useCallback((newTrackIndex, shouldPlay, positionMillis) => __awaiter(this, void 0, void 0, function* () {
         const { audioSrc } = playList[newTrackIndex];
-        const source = typeof audioSrc == 'string' ? { uri: audioSrc } : audioSrc;
+        const source = typeof audioSrc === 'string' ? { uri: audioSrc } : audioSrc;
         try {
             if (audioRef.current) {
                 yield audioRef.current.unloadAsync();
@@ -92,7 +92,7 @@ export function useAudioPlayer(tracks, controllableTrackIndex, shufflePlayback, 
         yield loadNewSoundAsync(trackIndex, isPlaying, currentTime);
     }), [currentTime, isPlaying, loadNewSoundAsync, trackIndex]);
     useEffect(() => {
-        if (controllableTrackIndex != undefined) {
+        if (controllableTrackIndex != null) {
             setTrackIndex(controllableTrackIndex);
         }
     }, [controllableTrackIndex]);

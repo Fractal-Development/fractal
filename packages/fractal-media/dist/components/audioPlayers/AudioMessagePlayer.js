@@ -35,7 +35,7 @@ export function AudioMessagePlayer(_a) {
         yield setRateManually(rate);
     }), [setRateManually]);
     return (React.createElement(Layer, Object.assign({}, layerProps),
-        React.createElement(HorizontalLayer, { alignItems: 'center' },
+        React.createElement(HorizontalLayer, { alignItems: "center" },
             React.createElement(PlayPauseButton, { isPlaying: isPlaying, onPress: handlePlayPause }),
             React.createElement(AudioProgressBar, { duration: duration, currentTime: currentTime, isPlaying: isPlaying, onTimeUpdate: handleUpdateTime, timeLabelsSpacing: spacings.xs, flex: 1, marginLeft: spacings.s, marginRight: spacings.s }),
             React.createElement(RateToggleButton, { onChangeRate: handleUpdateRate }))));

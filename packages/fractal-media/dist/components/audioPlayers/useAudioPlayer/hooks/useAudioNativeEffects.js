@@ -27,12 +27,10 @@ export function useAudioNativeEffects(audioRef, checkIfShouldGoToNextTrack, hand
             checkIfShouldGoToNextTrack();
         }
     }, [checkIfShouldGoToNextTrack, didJustFinish, setDidJustFinish]);
-    useEffect(() => {
-        return () => {
-            var _a;
-            (_a = audioRef.current) === null || _a === void 0 ? void 0 : _a.unloadAsync();
-            audioRef.current = undefined;
-        };
+    useEffect(() => () => {
+        var _a;
+        (_a = audioRef.current) === null || _a === void 0 ? void 0 : _a.unloadAsync();
+        audioRef.current = undefined;
     }, [audioRef]);
 }
 //# sourceMappingURL=useAudioNativeEffects.js.map

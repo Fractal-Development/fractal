@@ -14,7 +14,7 @@ import { ImageBackground } from '@bma98/fractal-ui';
 import { MediaPlayerButton } from './MediaPlayerButton';
 export function MediaPlayerPoster(_a) {
     var { onPlayPress, playerButtonSize } = _a, others = __rest(_a, ["onPlayPress", "playerButtonSize"]);
-    return (React.createElement(ImageBackground, Object.assign({ alignItems: 'center', justifyContent: 'center' }, others),
+    return (React.createElement(ImageBackground, Object.assign({ alignItems: "center", justifyContent: "center" }, others),
         React.createElement(MediaPlayerButton, { onPress: onPlayPress, size: playerButtonSize })));
 }
 //# sourceMappingURL=MediaPlayerPoster.js.map

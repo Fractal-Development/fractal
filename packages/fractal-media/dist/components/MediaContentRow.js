@@ -18,12 +18,12 @@ export function MediaContentRow(_a) {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
         React.createElement(Layer, Object.assign({}, layerProps),
-            React.createElement(HorizontalLayer, { alignItems: 'center', minHeight: 48 },
-                React.createElement(TouchableOpacity, { onPress: onPress, flex: 1, flexDirection: 'row' },
+            React.createElement(HorizontalLayer, { alignItems: "center", minHeight: 48 },
+                React.createElement(TouchableOpacity, { onPress: onPress, flex: 1, flexDirection: "row" },
                     React.createElement(Avatar, { source: imageSource, size: 48 }),
                     React.createElement(Layer, { minWidth: 0, marginLeft: spacings.s, height: 48, flex: 1, justifyContent: subtitle ? 'space-between' : 'center' },
-                        React.createElement(EllipsizeText, { variant: 'normal' }, title),
-                        subtitle && React.createElement(EllipsizeText, { variant: 'smallLabel' }, subtitle))),
+                        React.createElement(EllipsizeText, { variant: "normal" }, title),
+                        subtitle && React.createElement(EllipsizeText, { variant: "smallLabel" }, subtitle))),
                 React.createElement(Layer, null, enableLoveButton ? (React.createElement(LoveToggleButton, { onPress: onHeartPress, checked: isLoved, checkedColor: checkedLoveColor })) : showOptionsButton ? (React.createElement(OptionsButton, { onPress: onOptionsPress })) : null))),
         addSeparator ? React.createElement(Separator, null) : null));
 }

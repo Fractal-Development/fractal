@@ -10,14 +10,14 @@ export function AudioControlButton({ onPress, variant }: ControlButtonProps): JS
     const { colors } = useTheme();
     return (
         <BaseButton
-            alignItems={'center'}
-            justifyContent={'center'}
+            alignItems='center'
+            justifyContent='center'
             width={36}
             height={36}
             onPress={onPress}
             {...getControlButtonAccessibilityProps(variant)}
         >
-            {variant == 'previous' ? (
+            {variant === 'previous' ? (
                 <PreviousIcon fill={colors.text} width={SMALL_ICON_SIZE} height={SMALL_ICON_SIZE} />
             ) : (
                 <NextIcon fill={colors.text} width={SMALL_ICON_SIZE} height={SMALL_ICON_SIZE} />

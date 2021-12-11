@@ -21,7 +21,7 @@ export function useAudioWebEffects(audioRef, audioSrc, setIsPlaying, setCurrentT
         const onLoadedData = () => {
             if (audioRef.current) {
                 const { duration } = audioRef.current;
-                if (!isNaN(duration))
+                if (!Number.isNaN(duration))
                     setDuration(duration * 1000);
             }
         };

@@ -11,11 +11,11 @@ export interface OmniPlayerProps extends Omit<LayerProps, 'children' | 'width' |
 }
 
 export function OmniPlayer({ source, width, height, ...layerProps }: OmniPlayerProps): JSX.Element {
-    const isYouTubeVideo = typeof source == 'string' && MATCH_URL_YOUTUBE.test(source);
+    const isYouTubeVideo = typeof source === 'string' && MATCH_URL_YOUTUBE.test(source);
 
     if (isYouTubeVideo) {
         return <YouTubeVideoPlayer source={source as string} width={width} height={height} {...layerProps} />;
     }
 
-    return <Video source={source} resizeMode={'contain'} useNativeControls style={{ width, height, ...layerProps }} />;
+    return <Video source={source} resizeMode="contain" useNativeControls style={{ width, height, ...layerProps }} />;
 }

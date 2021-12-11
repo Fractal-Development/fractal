@@ -9,6 +9,6 @@ export function formatNumberToTime(totalMilliSeconds) {
     totalSeconds = Number(totalSeconds.toFixed(0));
     const minutes = Math.floor(totalSeconds / 60);
     const secondsLeft = totalSeconds - minutes * 60;
-    return minutes + ':' + strPadLeft(secondsLeft, '0', 2);
+    return `${minutes}:${strPadLeft(secondsLeft, '0', 2)}`;
 }
 //# sourceMappingURL=formatNumberToTime.js.map

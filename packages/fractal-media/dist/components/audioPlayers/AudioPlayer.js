@@ -32,8 +32,8 @@ export function AudioPlayer(_a) {
     const handleUpdateTime = useCallback((positionMillis) => __awaiter(this, void 0, void 0, function* () {
         yield setPositionManually(positionMillis);
     }), [setPositionManually]);
-    return (React.createElement(Box, Object.assign({ flexDirection: 'row', justifyContent: 'center', padding: spacings.s }, layerProps, getAudioPlayerAccessibilityProps()),
-        React.createElement(Image, { source: image, width: 120, height: '100%', resizeMode: 'cover', borderRadius: borderRadius.m, label: 'Song Image' }),
+    return (React.createElement(Box, Object.assign({ flexDirection: "row", justifyContent: "center", padding: spacings.s }, layerProps, getAudioPlayerAccessibilityProps()),
+        React.createElement(Image, { source: image, width: 120, height: "100%", resizeMode: "cover", borderRadius: borderRadius.m, label: "Song Image" }),
         React.createElement(Layer, { flex: 1, marginLeft: spacings.s },
             React.createElement(Text, { variant: 'button', color: colors.text, marginBottom: spacings.s }, title),
             React.createElement(AudioProgressBar, { isPlaying: isPlaying, duration: duration, currentTime: currentTime, onTimeUpdate: handleUpdateTime }),

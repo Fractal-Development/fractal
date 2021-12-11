@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { useCallback } from 'react';
 export function useCheckIfShouldGoToNextTrack(trackIndex, tracksLength, enableRepeatPlayback, toNextTrack, setCurrentTime, setIsPlaying, resetPosition) {
     return useCallback(() => __awaiter(this, void 0, void 0, function* () {
-        const isLastIndex = trackIndex == tracksLength - 1;
+        const isLastIndex = trackIndex === tracksLength - 1;
         if (!isLastIndex || (isLastIndex && enableRepeatPlayback)) {
             toNextTrack();
         }

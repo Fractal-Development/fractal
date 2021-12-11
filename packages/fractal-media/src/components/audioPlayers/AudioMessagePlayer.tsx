@@ -30,7 +30,7 @@ export function AudioMessagePlayer({ audioSrc, ...layerProps }: AudioMessagePlay
 
     return (
         <Layer {...layerProps}>
-            <HorizontalLayer alignItems={'center'}>
+            <HorizontalLayer alignItems="center">
                 <PlayPauseButton isPlaying={isPlaying} onPress={handlePlayPause} />
                 <AudioProgressBar
                     duration={duration}

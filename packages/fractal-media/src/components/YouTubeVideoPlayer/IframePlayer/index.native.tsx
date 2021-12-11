@@ -4,6 +4,6 @@ import { IframePlayerProps } from './types';
 
 export function IframePlayer({ videoID, height, width, onReady }: IframePlayerProps): JSX.Element {
     return (
-        <YoutubeIframePlayer forceAndroidAutoplay={true} play={true} videoId={videoID} height={height} width={width} onReady={onReady} />
+        <YoutubeIframePlayer forceAndroidAutoplay play videoId={videoID} height={height} width={width} onReady={onReady} />
     );
 }

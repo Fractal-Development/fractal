@@ -17,8 +17,7 @@ interface PlayPauseIconProps {
     isPlaying: boolean;
 }
 
-const PlayPauseIcon = memo(({ tintColor, isPlaying }: PlayPauseIconProps): JSX.Element => {
-    return (
+const PlayPauseIcon = memo(({ tintColor, isPlaying }: PlayPauseIconProps): JSX.Element => (
         <AnimatePresence>
             {isPlaying ? (
                 <Layer from={variants.initial} animate={variants.animate} exit={variants.exit}>
@@ -30,8 +29,7 @@ const PlayPauseIcon = memo(({ tintColor, isPlaying }: PlayPauseIconProps): JSX.E
                 </Layer>
             )}
         </AnimatePresence>
-    );
-});
+    ));
 
 PlayPauseIcon.displayName = 'PlayPauseIcon';
 

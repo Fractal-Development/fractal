@@ -39,7 +39,7 @@ export function AudioProgressBar(_a) {
     }, [currentTime, isDragging, isPlaying, trackProgress]);
     return (React.createElement(Layer, Object.assign({}, layerProps),
         React.createElement(Slider, { value: trackProgress, minimumValue: 0, step: 1, maximumValue: duration, onSlidingStart: handleSlidingStart, onValueChange: handleValueChange, onSlidingComplete: handleSlidingComplete }),
-        React.createElement(Layer, { flexDirection: 'row', justifyContent: 'space-between', marginTop: timeLabelsSpacing !== null && timeLabelsSpacing !== void 0 ? timeLabelsSpacing : spacings.s },
+        React.createElement(Layer, { flexDirection: "row", justifyContent: "space-between", marginTop: timeLabelsSpacing !== null && timeLabelsSpacing !== void 0 ? timeLabelsSpacing : spacings.s },
             React.createElement(Text, { variant: 'smallLabel', fontSize: 12 }, `${formatNumberToTime(trackProgress)}`),
             React.createElement(Text, { variant: 'smallLabel', fontSize: 12 }, `${formatNumberToTime(duration)}`))));
 }

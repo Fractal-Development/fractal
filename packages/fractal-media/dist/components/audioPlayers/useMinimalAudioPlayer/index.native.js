@@ -25,7 +25,7 @@ export function useMinimalAudioPlayer(audioSrc) {
         }
     }, []);
     const loadSoundAsync = useCallback(() => __awaiter(this, void 0, void 0, function* () {
-        const source = typeof audioSrc == 'string' ? { uri: audioSrc } : audioSrc;
+        const source = typeof audioSrc === 'string' ? { uri: audioSrc } : audioSrc;
         try {
             if (audioRef.current) {
                 yield audioRef.current.unloadAsync();

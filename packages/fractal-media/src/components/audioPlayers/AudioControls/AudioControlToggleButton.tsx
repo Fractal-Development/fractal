@@ -8,7 +8,7 @@ export function AudioControlToggleButton({ active, onPress, variant }: ControlTo
     const { sizes } = useTheme();
     return (
         <RoundedToggleButton
-            variant={'main'}
+            variant="main"
             useGrayVariant
             active={active}
             onPress={onPress}

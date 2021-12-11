@@ -26,7 +26,7 @@ export function YouTubeVideoPlayer({ source, width, height, ...layerProps }: You
     }, []);
 
     return (
-        <Layer overflow='hidden' position={'relative'} backgroundColor={'black'} width={width} height={height} {...layerProps}>
+        <Layer overflow='hidden' position="relative" backgroundColor="black" width={width} height={height} {...layerProps}>
             <AnimatePresence>
                 {enabledIFrame ? (
                     <IframePlayer videoID={videoID ?? ''} width={width} height={height} onReady={handleReady} />

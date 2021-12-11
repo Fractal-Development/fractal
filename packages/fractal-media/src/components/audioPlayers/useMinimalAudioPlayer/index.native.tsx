@@ -22,7 +22,7 @@ export function useMinimalAudioPlayer(audioSrc: AudioSource): MinimalAudioPlayer
     }, []);
 
     const loadSoundAsync = useCallback(async (): Promise<void> => {
-        const source = typeof audioSrc == 'string' ? { uri: audioSrc } : audioSrc;
+        const source = typeof audioSrc === 'string' ? { uri: audioSrc } : audioSrc;
         try {
             if (audioRef.current) {
                 await audioRef.current.unloadAsync();
