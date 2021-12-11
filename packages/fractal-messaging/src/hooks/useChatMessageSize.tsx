@@ -12,5 +12,13 @@ export function useChatMessageSize(): {
             height: 126
         };
     }
+
+    if (sizeType == 'medium') {
+        return {
+            width: 434,
+            height: 260
+        };
+    }
+
     return { width: 600, height: 360 };
 }
