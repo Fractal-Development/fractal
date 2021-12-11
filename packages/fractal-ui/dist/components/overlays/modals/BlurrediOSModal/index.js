@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 export function BlurrediOSModal(props) {
     console.log('BlurrediOSModal should only be used on iOS, not on Web or Android', props);

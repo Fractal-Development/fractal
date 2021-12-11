@@ -1,6 +1,6 @@
 export interface NativeFileInfo {
     type: string;
-    size: number;
+    size: number | undefined;
     name: string;
     uri: string;
 }

@@ -30,8 +30,8 @@ export function UploadedFileItem({ file, onDeletePress }: UploadedFileItemProps)
     const isImageFile = validateFileType(file.type);
     const [imageSource, setImageSource] = useState<string>();
 
-    const formatFileSize = useCallback((size: number) => {
-        if (size === 0) return '0 Bytes';
+    const formatFileSize = useCallback((size: number | undefined) => {
+        if (size === 0 || size == null) return '0 Bytes';
         const k = 1024;
         const sizes = ['bytes', 'kB', 'MB', 'GB', 'TB'];
         const i = Math.floor(Math.log(size) / Math.log(k));

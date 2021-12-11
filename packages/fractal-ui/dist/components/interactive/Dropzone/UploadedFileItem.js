@@ -21,7 +21,7 @@ export function UploadedFileItem({ file, onDeletePress }) {
     const isImageFile = validateFileType(file.type);
     const [imageSource, setImageSource] = useState();
     const formatFileSize = useCallback((size) => {
-        if (size === 0)
+        if (size === 0 || size == null)
             return '0 Bytes';
         const k = 1024;
         const sizes = ['bytes', 'kB', 'MB', 'GB', 'TB'];

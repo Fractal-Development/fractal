@@ -4,7 +4,7 @@ import { useValidateFileType } from './useValidateFileType';
 export function useValidateFile(
     acceptedTypes: Array<string> | undefined,
     maxFileSize: number | undefined
-): (fileType: string, fileSize: number) => boolean {
+): (fileType: string, fileSize: number | undefined) => boolean {
     const validateFileType = useValidateFileType(acceptedTypes);
 
     const validateFileSize = useCallback(
