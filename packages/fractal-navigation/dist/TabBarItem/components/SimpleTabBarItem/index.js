@@ -10,11 +10,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { memo, useCallback } from 'react';
+import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
+import { Layer, spacings, Text, useTheme } from '@bma98/fractal-ui';
 import { useSimpleTabBarItemColor } from './hooks/useSimpleTabBarItemColor';
 import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContainer';
-import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../../TabBar/hooks/useTabBarPosition';
-import { Layer, spacings, Text, useTheme } from '@bma98/fractal-ui';
 import { justifyContent } from './util/justifyContent';
 const tabBarItemCompactVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 2 };
@@ -27,13 +27,11 @@ export const SimpleTabBarItem = memo((_a) => {
     const tabBarPosition = useTabBarPosition();
     const { tabBar } = useTheme();
     const textWidth = tabBarPosition !== 'bottom' ? tabBar.iOSHorizontalWidth - spacings.m : undefined;
-    const renderItem = useCallback((size) => {
-        return children(color, size);
-    }, [color, children]);
+    const renderItem = useCallback((size) => children(color, size), [color, children]);
     const spacerSize = getValueForLargeSizeType(widthSizeType, tabBarPosition !== 'bottom' ? tabBarItemLargeVerticalSpacerSize : tabBarItemLargeHorizontalSpacerSize, tabBarPosition !== 'bottom' ? tabBarItemCompactVerticalSpacerSize : tabBarItemCompactHorizontalSpacerSize);
     return (React.createElement(SimpleTabBarItemContainer, Object.assign({ tabIdentifier: tabIdentifier, onTabPress: onTabPress, icon: renderItem }, others),
         React.createElement(Layer, Object.assign({}, spacerSize)),
-        React.createElement(Text, Object.assign({}, tabBar.tabBarItemText, { numberOfLines: 1, overflow: 'hidden', width: textWidth, display: 'block', variant: 'label', textOverflow: 'ellipsis', textAlign: 'center', justifyContent: justifyContent, color: color, wordWrap: 'normal' }), title)));
+        React.createElement(Text, Object.assign({}, tabBar.tabBarItemText, { numberOfLines: 1, overflow: "hidden", width: textWidth, display: 'block', variant: 'label', textOverflow: 'ellipsis', textAlign: 'center', justifyContent: justifyContent, color: color, wordWrap: 'normal' }), title)));
 });
 SimpleTabBarItem.displayName = 'SimpleTabBarItem';
 //# sourceMappingURL=index.js.map

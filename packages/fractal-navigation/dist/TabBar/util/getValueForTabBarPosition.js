@@ -6,6 +6,8 @@ export function getValueForTabBarPosition(position, bottom, left, right) {
             return left;
         case 'right':
             return right;
+        default:
+            return bottom;
     }
 }
 //# sourceMappingURL=getValueForTabBarPosition.js.map

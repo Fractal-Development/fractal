@@ -1,5 +1,5 @@
-import { getValueForTabBarPosition } from '../util';
 import { useMemo } from 'react';
+import { getValueForTabBarPosition } from '../util';
 import { useTabBarSafeAreaSizeForPosition } from './useTabBarSafeAreaSizeForPosition';
 import { useTabBarIsHidden } from './useTabBarIsHidden';
 const bottomSide = { bottom: 0 };
@@ -15,8 +15,6 @@ export function useTabBarPositionLayoutProps(tabBarPosition) {
     const translateSize = safeAreaSize + 20;
     const translateY = tabBarIsHidden ? getValueForTabBarPosition(tabBarPosition, translateSize, 0, 0) : 0;
     const translateX = tabBarIsHidden ? getValueForTabBarPosition(tabBarPosition, 0, -1 * translateSize, translateSize) : 0;
-    return useMemo(() => {
-        return Object.assign({ width, height, flexDirection, translateY, translateX }, absolutePositionValue);
-    }, [width, height, flexDirection, absolutePositionValue, translateY, translateX]);
+    return useMemo(() => (Object.assign({ width, height, flexDirection, translateY, translateX }, absolutePositionValue)), [width, height, flexDirection, absolutePositionValue, translateY, translateX]);
 }
 //# sourceMappingURL=useTabBarPositionLayoutProps.js.map

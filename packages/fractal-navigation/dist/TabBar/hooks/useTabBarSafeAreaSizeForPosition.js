@@ -10,6 +10,8 @@ export function useTabBarSafeAreaSizeForPosition(tabBarPosition) {
             return safeAreaInsets.left + size;
         case 'bottom':
             return safeAreaInsets.bottom + size;
+        default:
+            return safeAreaInsets.bottom + size;
     }
 }
 //# sourceMappingURL=useTabBarSafeAreaSizeForPosition.js.map

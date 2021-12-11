@@ -5,12 +5,7 @@ const cleanEdgeInsets = {
     bottom: 0,
     left: 0
 };
-export const TabBarInsetsContext = createContext([
-    cleanEdgeInsets,
-    () => {
-        return;
-    }
-]);
+export const TabBarInsetsContext = createContext([cleanEdgeInsets, () => { }]);
 export function TabBarInsetsProvider({ children }) {
     const handleState = useState(cleanEdgeInsets);
     return React.createElement(TabBarInsetsContext.Provider, { value: handleState }, children);

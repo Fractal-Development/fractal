@@ -10,11 +10,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { useContext, useEffect } from 'react';
+import { SafeAreaLayer } from '@bma98/fractal-ui';
+import { useValueForLargeSizeType } from '@bma98/size-class';
 import { useSetTabBarInsets } from '../hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from '../context/TabBarPositionProvider';
 import { TabBarBackground } from './TabBarBackground';
-import { SafeAreaLayer } from '@bma98/fractal-ui';
-import { useValueForLargeSizeType } from '@bma98/size-class';
 export function TabBar(_a) {
     var { tabBarPosition, logo, children } = _a, others = __rest(_a, ["tabBarPosition", "logo", "children"]);
     const [, setTabBarPosition] = useContext(TabBarPositionContext);
