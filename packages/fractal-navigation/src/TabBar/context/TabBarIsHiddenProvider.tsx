@@ -2,12 +2,7 @@ import React, { createContext, Dispatch, ReactNode, SetStateAction, useState } f
 
 export type TabBarIsHiddenContextType = [boolean, Dispatch<SetStateAction<boolean>>];
 
-export const TabBarIsHiddenContext = createContext<TabBarIsHiddenContextType>([
-    false,
-    () => {
-        return;
-    }
-]);
+export const TabBarIsHiddenContext = createContext<TabBarIsHiddenContextType>([false, () => {}]);
 
 interface TabBarIsHiddenProviderProps {
     children: ReactNode;

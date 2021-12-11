@@ -1,9 +1,9 @@
 import React, { memo, useCallback } from 'react';
+import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
+import { Layer, LayerProps, spacings, Text, useTheme } from '@bma98/fractal-ui';
 import { useSimpleTabBarItemColor } from './hooks/useSimpleTabBarItemColor';
 import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContainer';
-import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
 import { useTabBarPosition } from '../../../TabBar/hooks/useTabBarPosition';
-import { Layer, LayerProps, spacings, Text, useTheme } from '@bma98/fractal-ui';
 import { SharedTabItemProps } from '../../types/SharedTabItemProps';
 import { justifyContent } from './util/justifyContent';
 
@@ -29,9 +29,7 @@ export const SimpleTabBarItem = memo(
         const textWidth = tabBarPosition !== 'bottom' ? tabBar.iOSHorizontalWidth - spacings.m : undefined;
 
         const renderItem = useCallback(
-            (size: number) => {
-                return children(color, size);
-            },
+            (size: number) => children(color, size),
             [color, children]
         );
 
@@ -47,7 +45,7 @@ export const SimpleTabBarItem = memo(
                 <Text
                     {...tabBar.tabBarItemText}
                     numberOfLines={1}
-                    overflow={'hidden'}
+                    overflow="hidden"
                     width={textWidth}
                     display='block'
                     variant='label'

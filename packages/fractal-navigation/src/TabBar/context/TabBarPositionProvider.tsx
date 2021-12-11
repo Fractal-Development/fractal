@@ -3,12 +3,7 @@ import { TabBarPosition } from '../types';
 
 export type TabBarPositionContextType = [TabBarPosition, Dispatch<SetStateAction<TabBarPosition>>];
 
-export const TabBarPositionContext = createContext<TabBarPositionContextType>([
-    'bottom',
-    () => {
-        return;
-    }
-]);
+export const TabBarPositionContext = createContext<TabBarPositionContextType>(['bottom', () => {}]);
 
 interface TabBarPositionProviderProps {
     children: ReactNode;

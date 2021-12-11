@@ -4,12 +4,7 @@ import { cleanEdgeInsets } from './util/cleanEdgeInsets';
 
 export type NavigationBarInsetsContextType = [EdgeInsets, Dispatch<SetStateAction<EdgeInsets>>];
 
-export const NavigationBarInsetsContext = createContext<NavigationBarInsetsContextType>([
-    cleanEdgeInsets,
-    () => {
-        return;
-    }
-]);
+export const NavigationBarInsetsContext = createContext<NavigationBarInsetsContextType>([cleanEdgeInsets, () => {}]);
 
 interface NavigationBarInsetsProviderProps {
     children: ReactNode;

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import { TabBarProps } from '../types';
 import { useValueForLargeSizeType } from '@bma98/size-class';
+import { TabBarProps } from '../types';
 import { CenteredTabBar } from './CenteredTabBar';
 
 export function ResponsiveSideCenteredTabBar(props: Omit<TabBarProps, 'tabBarPosition'>): ReactElement {

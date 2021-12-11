@@ -8,9 +8,9 @@ export function NavigationBarButton(props: NavigationBarButtonProps): JSX.Elemen
 
     return (
         <TextButton
-            flexDirection={'row'}
-            justifyContent={'center'}
-            alignItems={'center'}
+            flexDirection="row"
+            justifyContent="center"
+            alignItems="center"
             {...props}
             variant='main'
             textProps={navigationBar.textButton}

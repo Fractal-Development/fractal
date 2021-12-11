@@ -10,12 +10,7 @@ const cleanEdgeInsets: EdgeInsets = {
     left: 0
 };
 
-export const TabBarInsetsContext = createContext<TabBarInsetsContextType>([
-    cleanEdgeInsets,
-    () => {
-        return;
-    }
-]);
+export const TabBarInsetsContext = createContext<TabBarInsetsContextType>([cleanEdgeInsets, () => {}]);
 
 interface TabBarInsetsProviderProps {
     children: ReactNode;

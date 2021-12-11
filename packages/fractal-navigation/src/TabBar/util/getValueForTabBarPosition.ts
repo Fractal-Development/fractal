@@ -8,5 +8,7 @@ export function getValueForTabBarPosition<T>(position: TabBarPosition, bottom: T
             return left;
         case 'right':
             return right;
+        default:
+            return bottom;
     }
 }

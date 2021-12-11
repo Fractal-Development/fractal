@@ -17,6 +17,8 @@ export function useTabBarSafeAreaPadding(tabBarPosition: TabBarPosition): TabBar
                 return { paddingLeft: safeAreaInsets.left, paddingTop: spacings.m };
             case 'right':
                 return { paddingRight: safeAreaInsets.right, paddingTop: spacings.m };
+            default:
+                return { paddingBottom: safeAreaInsets.bottom };
         }
     }, [safeAreaInsets, tabBarPosition, spacings]);
 }

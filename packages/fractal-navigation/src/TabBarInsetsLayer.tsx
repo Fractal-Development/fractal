@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import { useTabBarInsets } from './TabBar';
 import { LayerProps, SafeAreaLayer } from '@bma98/fractal-ui';
+import { useTabBarInsets } from './TabBar';
 
 export function TabBarInsetsLayer(props: LayerProps): ReactElement {
     const tabBarInsets = useTabBarInsets();
