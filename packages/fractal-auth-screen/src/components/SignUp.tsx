@@ -42,9 +42,7 @@ export function SignUp({
 
     return (
         <>
-            {children ? (
-                children
-            ) : (
+            {children || (
                 <>
                     <IconTextField
                         value={email}
@@ -61,17 +59,17 @@ export function SignUp({
                         marginBottom={spacings.m}
                         textFieldProps={textFieldProps}
                     />
-                    <Button loading={loading} text={signUpText} variant={'main'} marginBottom={spacings.m} onPress={handleEmailSignUp} />
+                    <Button loading={loading} text={signUpText} variant="main" marginBottom={spacings.m} onPress={handleEmailSignUp} />
                 </>
             )}
-            <Text marginBottom={spacings.m} variant={'label'} textAlign={'center'}>
+            <Text marginBottom={spacings.m} variant="label" textAlign="center">
                 {`${byAcceptingTerms}`}
             </Text>
-            <HorizontalLayer marginBottom={spacings.m} justifyContent={'center'} flexWrap={'wrap'}>
+            <HorizontalLayer marginBottom={spacings.m} justifyContent="center" flexWrap="wrap">
                 <TouchableOpacity onPress={onTermsButtonPressed} marginRight={4}>
                     <Text style={{ color: colors.mainInteractiveColor }}>{termsAndConditions}</Text>
                 </TouchableOpacity>
-                <Text variant={'label'} marginRight={4}>
+                <Text variant="label" marginRight={4}>
                     {and}
                 </Text>
                 <TouchableOpacity onPress={onPrivacyButtonPressed}>
@@ -79,7 +77,7 @@ export function SignUp({
                 </TouchableOpacity>
             </HorizontalLayer>
             <Separator marginBottom={spacings.m} />
-            <Button text={signInText} variant={'alternative'} onPress={onSignInButtonPress} />
+            <Button text={signInText} variant="alternative" onPress={onSignInButtonPress} />
         </>
     );
 }

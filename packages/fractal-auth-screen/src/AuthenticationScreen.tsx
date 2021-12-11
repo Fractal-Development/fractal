@@ -47,7 +47,6 @@ export function AuthenticationScreen({
         try {
             await handleGoogleSignIn?.();
         } catch (error) {
-            console.log(error.message);
             setGoogleLoading(false);
         }
     }, [handleGoogleSignIn]);
@@ -57,7 +56,6 @@ export function AuthenticationScreen({
         try {
             await handleFacebookSignIn?.();
         } catch (error) {
-            console.log(error.message);
             setFacebookLoading(false);
         }
     }, [handleFacebookSignIn]);
@@ -67,7 +65,6 @@ export function AuthenticationScreen({
         try {
             await handleAppleSignIn?.();
         } catch (error) {
-            console.log(error.message);
             setAppleLoading(false);
         }
     }, [handleAppleSignIn]);
@@ -76,11 +73,11 @@ export function AuthenticationScreen({
         <Background>
             {background}
             <ScrollView>
-                <Layer alignItems={'center'}>
+                <Layer alignItems='center'>
                     <SafeAreaLayer />
-                    <Layer flex={1} maxWidth={600} alignItems={'center'} width={'100%'}>
+                    <Layer flex={1} maxWidth={600} alignItems='center' width='100%'>
                         {logo}
-                        <PaddingLayer width={'100%'}>
+                        <PaddingLayer width='100%'>
                             <Box marginBottom={spacings.m}>
                                 <ErrorBoundaryMessage>
                                     {state === 'signIn' ? (
@@ -101,7 +98,7 @@ export function AuthenticationScreen({
                             </Box>
                             {!removeSocialMediaButtons && (
                                 <SocialMediaButtons
-                                    width={'100%'}
+                                    width='100%'
                                     onApplePress={handleAppleButtonPress}
                                     onGooglePress={handleGoogleButtonPress}
                                     onFacebookPress={handleFacebookButtonPress}

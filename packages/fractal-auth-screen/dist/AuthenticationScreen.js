@@ -42,7 +42,6 @@ export function AuthenticationScreen(_a) {
             yield (handleGoogleSignIn === null || handleGoogleSignIn === void 0 ? void 0 : handleGoogleSignIn());
         }
         catch (error) {
-            console.log(error.message);
             setGoogleLoading(false);
         }
     }), [handleGoogleSignIn]);
@@ -52,7 +51,6 @@ export function AuthenticationScreen(_a) {
             yield (handleFacebookSignIn === null || handleFacebookSignIn === void 0 ? void 0 : handleFacebookSignIn());
         }
         catch (error) {
-            console.log(error.message);
             setFacebookLoading(false);
         }
     }), [handleFacebookSignIn]);
@@ -62,7 +60,6 @@ export function AuthenticationScreen(_a) {
             yield (handleAppleSignIn === null || handleAppleSignIn === void 0 ? void 0 : handleAppleSignIn());
         }
         catch (error) {
-            console.log(error.message);
             setAppleLoading(false);
         }
     }), [handleAppleSignIn]);

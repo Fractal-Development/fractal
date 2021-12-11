@@ -33,9 +33,9 @@ export function PasswordReset({ emailPlaceholder, resetPasswordText, resetPasswo
     });
     return (React.createElement(React.Fragment, null,
         React.createElement(IconTextField, { value: email, onChangeText: setEmail, placeholder: emailPlaceholder, leftImage: renderEmailIcon, marginBottom: spacings.m }),
-        showMessage && !loading ? (React.createElement(Message, { icon: renderLockIcon, messageType: 'success', title: resetPasswordText, description: resetPasswordDescriptionText, marginBottom: spacings.m })) : null,
-        React.createElement(Button, { loading: loading, text: resetPasswordText, variant: 'warning', marginBottom: spacings.m, onPress: handlePasswordReset }),
+        showMessage && !loading ? (React.createElement(Message, { icon: renderLockIcon, messageType: "success", title: resetPasswordText, description: resetPasswordDescriptionText, marginBottom: spacings.m })) : null,
+        React.createElement(Button, { loading: loading, text: resetPasswordText, variant: "warning", marginBottom: spacings.m, onPress: handlePasswordReset }),
         React.createElement(Separator, { marginBottom: spacings.m }),
-        React.createElement(TextButton, { onPress: onSignInButtonPress, alignSelf: 'center', variant: 'main' }, signInText)));
+        React.createElement(TextButton, { onPress: onSignInButtonPress, alignSelf: "center", variant: "main" }, signInText)));
 }
 //# sourceMappingURL=PasswordReset.js.map

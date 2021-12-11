@@ -44,7 +44,7 @@ export function PasswordReset({
             {showMessage && !loading ? (
                 <Message
                     icon={renderLockIcon}
-                    messageType={'success'}
+                    messageType="success"
                     title={resetPasswordText}
                     description={resetPasswordDescriptionText}
                     marginBottom={spacings.m}
@@ -53,12 +53,12 @@ export function PasswordReset({
             <Button
                 loading={loading}
                 text={resetPasswordText}
-                variant={'warning'}
+                variant="warning"
                 marginBottom={spacings.m}
                 onPress={handlePasswordReset}
             />
             <Separator marginBottom={spacings.m} />
-            <TextButton onPress={onSignInButtonPress} alignSelf={'center'} variant={'main'}>
+            <TextButton onPress={onSignInButtonPress} alignSelf="center" variant="main">
                 {signInText}
             </TextButton>
         </>

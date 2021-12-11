@@ -25,11 +25,8 @@ export function AuthenticationCheck({
 
     useEffect(() => {
         checkIfShouldAllowAccess?.()
-            .then((isValid) => {
-                return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
-            })
+            .then((isValid) => setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed'))
             .catch((error) => {
-                console.error(error.message);
                 onCredentialLoadFailed?.(error.message);
                 setAuthenticationState('accessIsNotAllowed');
             });
@@ -42,6 +39,8 @@ export function AuthenticationCheck({
             return children;
         case 'accessIsNotAllowed':
             return redirectComponent;
+        default:
+            return loadingComponent;
     }
 }
 

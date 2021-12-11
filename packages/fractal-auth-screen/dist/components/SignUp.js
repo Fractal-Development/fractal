@@ -32,18 +32,18 @@ export function SignUp({ emailPlaceholder, passwordPlaceholder, signInText, sign
         }
     });
     return (React.createElement(React.Fragment, null,
-        children ? (children) : (React.createElement(React.Fragment, null,
+        children || (React.createElement(React.Fragment, null,
             React.createElement(IconTextField, { value: email, onChangeText: setEmail, placeholder: emailPlaceholder, leftImage: renderEmailIcon, marginBottom: spacings.m }),
             React.createElement(IconTextField, { value: password, onChangeText: setPassword, placeholder: passwordPlaceholder, leftImage: renderLockIcon, marginBottom: spacings.m, textFieldProps: textFieldProps }),
-            React.createElement(Button, { loading: loading, text: signUpText, variant: 'main', marginBottom: spacings.m, onPress: handleEmailSignUp }))),
-        React.createElement(Text, { marginBottom: spacings.m, variant: 'label', textAlign: 'center' }, `${byAcceptingTerms}`),
-        React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: 'center', flexWrap: 'wrap' },
+            React.createElement(Button, { loading: loading, text: signUpText, variant: "main", marginBottom: spacings.m, onPress: handleEmailSignUp }))),
+        React.createElement(Text, { marginBottom: spacings.m, variant: "label", textAlign: "center" }, `${byAcceptingTerms}`),
+        React.createElement(HorizontalLayer, { marginBottom: spacings.m, justifyContent: "center", flexWrap: "wrap" },
             React.createElement(TouchableOpacity, { onPress: onTermsButtonPressed, marginRight: 4 },
                 React.createElement(Text, { style: { color: colors.mainInteractiveColor } }, termsAndConditions)),
-            React.createElement(Text, { variant: 'label', marginRight: 4 }, and),
+            React.createElement(Text, { variant: "label", marginRight: 4 }, and),
             React.createElement(TouchableOpacity, { onPress: onPrivacyButtonPressed },
                 React.createElement(Text, { style: { color: colors.mainInteractiveColor } }, privacyPolicy))),
         React.createElement(Separator, { marginBottom: spacings.m }),
-        React.createElement(Button, { text: signInText, variant: 'alternative', onPress: onSignInButtonPress })));
+        React.createElement(Button, { text: signInText, variant: "alternative", onPress: onSignInButtonPress })));
 }
 //# sourceMappingURL=SignUp.js.map

@@ -3,10 +3,7 @@ import { useControllableState } from '@bma98/fractal-ui';
 export function AuthenticationCheck({ loadingComponent, children, redirectComponent, checkIfShouldAllowAccess, onCredentialLoadFailed, state }) {
     const [authenticationState, setAuthenticationState] = useControllableState(state, 'loading');
     useEffect(() => {
-        checkIfShouldAllowAccess === null || checkIfShouldAllowAccess === void 0 ? void 0 : checkIfShouldAllowAccess().then((isValid) => {
-            return setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed');
-        }).catch((error) => {
-            console.error(error.message);
+        checkIfShouldAllowAccess === null || checkIfShouldAllowAccess === void 0 ? void 0 : checkIfShouldAllowAccess().then((isValid) => setAuthenticationState(isValid ? 'accessIsAllowed' : 'accessIsNotAllowed')).catch((error) => {
             onCredentialLoadFailed === null || onCredentialLoadFailed === void 0 ? void 0 : onCredentialLoadFailed(error.message);
             setAuthenticationState('accessIsNotAllowed');
         });
@@ -18,6 +15,8 @@ export function AuthenticationCheck({ loadingComponent, children, redirectCompon
             return children;
         case 'accessIsNotAllowed':
             return redirectComponent;
+        default:
+            return loadingComponent;
     }
 }
 AuthenticationCheck.displayName = 'AuthenticationCheck';
