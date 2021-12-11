@@ -10,16 +10,16 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
+import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
 import { MessageList } from './MessageList';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';
 import { MessageInput } from './MessageInput';
-import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
 export function ChatContent(_a) {
-    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, onSend, placeholder, isLoading, keyboardAvoidingViewProps, messageInputButtonVariant = 'alternative', enableFluidFooter, customFooter } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "onSend", "placeholder", "isLoading", "keyboardAvoidingViewProps", "messageInputButtonVariant", "enableFluidFooter", "customFooter"]);
+    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, onSend, placeholder, isLoading, keyboardAvoidingViewProps, messageInputButtonVariant = 'alternative', enableFluidFooter, customFooter, rowRenderer } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "onSend", "placeholder", "isLoading", "keyboardAvoidingViewProps", "messageInputButtonVariant", "enableFluidFooter", "customFooter", "rowRenderer"]);
     const footer = customFooter != null ? (customFooter) : isLoading ? (React.createElement(ChatLoadingIndicator, null)) : (React.createElement(KeyboardAvoidingLayer, Object.assign({ keyboardVerticalOffset: 100 }, keyboardAvoidingViewProps),
         React.createElement(MessageInput, { useForegroundVariant: true, placeholder: placeholder, onSend: onSend, buttonVariant: messageInputButtonVariant })));
     return (React.createElement(React.Fragment, null,
-        React.createElement(MessageList, Object.assign({}, layerProps, { messages: messages, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor, footerComponent: enableFluidFooter ? footer : undefined })),
+        React.createElement(MessageList, Object.assign({}, layerProps, { messages: messages, rowRenderer: rowRenderer, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor, footerComponent: enableFluidFooter ? footer : undefined })),
         !enableFluidFooter ? footer : undefined));
 }
 //# sourceMappingURL=ChatContent.js.map

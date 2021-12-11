@@ -13,12 +13,12 @@ const bulletStyle = {
 
 export function ChatLoadingIndicator(props: LayerProps): JSX.Element | null {
     return (
-        <Layer height={40} width={60} justifyContent={'center'} {...props}>
+        <Layer height={40} width={60} justifyContent="center" {...props}>
             <Layer
-                backgroundColor={'#ffffff'}
+                backgroundColor="#ffffff"
                 padding={8}
                 borderRadius={20}
-                flexDirection={'row'}
+                flexDirection="row"
                 from={loadingCircleVariants.start}
                 animate={loadingCircleVariants.end}
                 exit={loadingCircleVariants.start}

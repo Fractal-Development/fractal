@@ -7,7 +7,7 @@ export function useGetTextHeight(containerWidth: number): (text: string) => numb
             const newText = text.trimEnd();
             let fullWidth = 0;
             [...newText].forEach((letter) => {
-                if (letterSizes[letter] != undefined) {
+                if (letterSizes[letter] != null) {
                     fullWidth += letterSizes[letter];
                 } else {
                     fullWidth += 8.3;

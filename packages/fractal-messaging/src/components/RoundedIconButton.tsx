@@ -13,17 +13,17 @@ export function RoundedIconButton({ iconName, color, onPress }: RoundedIconButto
     const { sizes, shadows } = useTheme();
     return (
         <BaseButton
-            backgroundColor={'rgb(255, 255, 255)'}
+            backgroundColor='rgb(255, 255, 255)'
             width={sizes.interactiveItemHeight}
             height={sizes.interactiveItemHeight}
             borderRadius={sizes.interactiveItemHeight / 2}
             boxShadow={shadows.mainShadow}
-            justifyContent={'center'}
-            alignItems={'center'}
+            justifyContent='center'
+            alignItems='center'
             onPress={onPress}
         >
-            {iconName == 'star' && <StarIcon width={20} height={20} fill={color} />}
-            {iconName == 'upload' && <UploadIcon width={20} height={20} fill={color} />}
+            {iconName === 'star' && <StarIcon width={20} height={20} fill={color} />}
+            {iconName === 'upload' && <UploadIcon width={20} height={20} fill={color} />}
         </BaseButton>
     );
 }

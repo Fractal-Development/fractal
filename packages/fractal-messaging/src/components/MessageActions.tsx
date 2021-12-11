@@ -11,9 +11,9 @@ export function MessageActions<T extends MinimalMessageData>({ message, onFavori
 
     return (
         <Layer padding={spacings.m}>
-            <RoundedIconButton iconName={'star'} color={message.favorite ? '#ffc107' : '#999999'} onPress={handleFavorite} />
+            <RoundedIconButton iconName="star" color={message.favorite ? '#ffc107' : '#999999'} onPress={handleFavorite} />
             <Layer height={spacings.m} />
-            <RoundedIconButton iconName={'upload'} color={'#999999'} onPress={handleShare} />
+            <RoundedIconButton iconName="upload" color="#999999" onPress={handleShare} />
         </Layer>
     );
 }

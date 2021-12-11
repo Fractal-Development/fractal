@@ -17,7 +17,7 @@ const MessageInput = forwardRef((_a, ref) => {
     const renderIcon = useCallback((color, size) => React.createElement(SendIcon, { height: size, width: size, fill: color }), []);
     const [message, setMessage] = useState('');
     const handleSendMessage = useCallback(() => {
-        if (message != '') {
+        if (message !== '') {
             onSend(message);
             setMessage('');
         }

@@ -17,7 +17,7 @@ const MessageInput = forwardRef(
         const [message, setMessage] = useState('');
 
         const handleSendMessage = useCallback(() => {
-            if (message != '') {
+            if (message !== '') {
                 onSend(message);
                 setMessage('');
             }

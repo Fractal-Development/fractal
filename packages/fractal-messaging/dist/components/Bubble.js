@@ -40,7 +40,7 @@ const Bubble = forwardRef((_a, ref) => {
     return (React.createElement(Layer, Object.assign({ ref: ref, maxWidth: '75%', alignSelf: arrowPosition === 'left' ? 'flex-start' : 'flex-end' }, others),
         React.createElement(TouchableOpacity, { position: 'relative', paddingLeft: arrowPosition === 'left' ? 6 : 0, paddingRight: arrowPosition === 'right' ? 6 : 0, flexDirection: 'row', onLongPress: onLongPress, onPress: onPress },
             React.createElement(Layer, { padding: spacings.m, backgroundColor: color, borderRadius: borderRadius.m, borderTopLeftRadius: arrowPosition === 'left' ? 0 : borderRadius.m, borderTopRightRadius: arrowPosition === 'right' ? 0 : borderRadius.m, boxShadow: shadows.mainShadow, width: '100%' }, children),
-            arrowPosition == 'left' ? React.createElement(BubbleTriangleLeft, { color: color }) : React.createElement(BubbleTriangleRight, { color: color }))));
+            arrowPosition === 'left' ? React.createElement(BubbleTriangleLeft, { color: color }) : React.createElement(BubbleTriangleRight, { color: color }))));
 });
 Bubble.displayName = 'Bubble';
 export { Bubble };

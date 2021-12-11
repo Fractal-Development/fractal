@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo, useEffect, useRef, Fragment } from 'react';
+import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
 import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
 import { AutoSizer } from './AutoSizer';
 import { MessageListProps, MinimalMessageData } from './types';
@@ -8,9 +8,7 @@ import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
 import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index';
 
-const dataProvider = new DataProvider((rowOne, rowTwo) => {
-    return rowOne.id !== rowTwo.id;
-});
+const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne.id !== rowTwo.id);
 
 enum MessageViewTypes {
     Message,
@@ -34,9 +32,8 @@ export function MessageList<T extends MinimalMessageData>({
     const messagesWithAccessoryViews = useMemo(() => {
         if (footerComponent) {
             return [...messages, {}];
-        } else {
-            return messages;
         }
+        return messages;
     }, [messages, footerComponent]);
     const listView = useRef<any>();
     const containerRef = useRef<any>();
@@ -88,38 +85,40 @@ export function MessageList<T extends MinimalMessageData>({
                         />
                     );
                 default:
-                    return footerComponent ?? <Fragment />;
+                    return footerComponent ?? <></>;
             }
         },
         [getBubbleColor, messageActions, onFavoritePress, onSharePress, footerComponent]
     );
 
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(
-            (index) => {
-                const message = messages[index];
-                return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
-            },
-            (type, dim, index) => {
-                switch (type) {
-                    case MessageViewTypes.Message:
-                        let height = heights[index];
-                        if (height != null) {
-                            dim.height = height;
-                        } else {
-                            height = messageHeightCalculator(messages[index]);
-                            heights[index] = height;
-                            dim.height = height as number;
-                        }
-                        break;
-                    default:
-                        dim.height = sizes.textFieldHeight;
-                }
+    const layoutProvider = useMemo(
+        () =>
+            new LayoutProvider(
+                (index) => {
+                    const message = messages[index];
+                    return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
+                },
+                (type, dim, index) => {
+                    switch (type) {
+                        case MessageViewTypes.Message:
+                            let height = heights[index];
+                            if (height != null) {
+                                dim.height = height;
+                            } else {
+                                height = messageHeightCalculator(messages[index]);
+                                heights[index] = height;
+                                dim.height = height as number;
+                            }
+                            break;
+                        default:
+                            dim.height = sizes.textFieldHeight;
+                    }
 
-                dim.width = containerWidth;
-            }
-        );
-    }, [heights, messageHeightCalculator, messages, containerWidth, sizes.textFieldHeight]);
+                    dim.width = containerWidth;
+                }
+            ),
+        [heights, messageHeightCalculator, messages, containerWidth, sizes.textFieldHeight]
+    );
 
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
@@ -147,7 +146,7 @@ export function MessageList<T extends MinimalMessageData>({
                             key={width}
                             layoutProvider={layoutProvider}
                             dataProvider={dataProviderState}
-                            rowRenderer={rowRenderer ? rowRenderer : renderChatMessage}
+                            rowRenderer={rowRenderer || renderChatMessage}
                             initialRenderIndex={messagesWithAccessoryViews.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
                         />

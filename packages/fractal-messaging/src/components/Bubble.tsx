@@ -31,12 +31,12 @@ const Bubble = forwardRef(({ children, arrowPosition, color, onPress, onLongPres
     const { shadows, spacings, borderRadius } = useTheme();
 
     return (
-        <Layer ref={ref} maxWidth={'75%'} alignSelf={arrowPosition === 'left' ? 'flex-start' : 'flex-end'} {...others}>
+        <Layer ref={ref} maxWidth='75%' alignSelf={arrowPosition === 'left' ? 'flex-start' : 'flex-end'} {...others}>
             <TouchableOpacity
-                position={'relative'}
+                position='relative'
                 paddingLeft={arrowPosition === 'left' ? 6 : 0}
                 paddingRight={arrowPosition === 'right' ? 6 : 0}
-                flexDirection={'row'}
+                flexDirection='row'
                 onLongPress={onLongPress}
                 onPress={onPress}
             >
@@ -47,11 +47,11 @@ const Bubble = forwardRef(({ children, arrowPosition, color, onPress, onLongPres
                     borderTopLeftRadius={arrowPosition === 'left' ? 0 : borderRadius.m}
                     borderTopRightRadius={arrowPosition === 'right' ? 0 : borderRadius.m}
                     boxShadow={shadows.mainShadow}
-                    width={'100%'}
+                    width='100%'
                 >
                     {children}
                 </Layer>
-                {arrowPosition == 'left' ? <BubbleTriangleLeft color={color} /> : <BubbleTriangleRight color={color} />}
+                {arrowPosition === 'left' ? <BubbleTriangleLeft color={color} /> : <BubbleTriangleRight color={color} />}
             </TouchableOpacity>
         </Layer>
     );

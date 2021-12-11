@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useCallback, useState, useMemo, useEffect, useRef, Fragment } from 'react';
+import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
 import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
 import { AutoSizer } from './AutoSizer';
 import { ChatMessage } from './ChatMessage';
@@ -17,9 +17,7 @@ import { useGetTextHeight } from '../hooks/useGetTextHeight';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
 import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index';
-const dataProvider = new DataProvider((rowOne, rowTwo) => {
-    return rowOne.id !== rowTwo.id;
-});
+const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne.id !== rowTwo.id);
 var MessageViewTypes;
 (function (MessageViewTypes) {
     MessageViewTypes[MessageViewTypes["Message"] = 0] = "Message";
@@ -30,14 +28,12 @@ function getMaxBubbleWidth(width, paddingHorizontal) {
 }
 export function MessageList(_a) {
     var _b;
-    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, footerComponent } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "footerComponent"]);
+    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, footerComponent, rowRenderer } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "footerComponent", "rowRenderer"]);
     const messagesWithAccessoryViews = useMemo(() => {
         if (footerComponent) {
             return [...messages, {}];
         }
-        else {
-            return messages;
-        }
+        return messages;
     }, [messages, footerComponent]);
     const listView = useRef();
     const containerRef = useRef();
@@ -66,37 +62,35 @@ export function MessageList(_a) {
         }
         return contentHeight + spacings.m * 3;
     }, [chatMessageHeight, getTextHeight, spacings.m]);
-    const rowRenderer = useCallback((type, data) => {
+    const renderChatMessage = useCallback((type, data) => {
         switch (type) {
             case MessageViewTypes.Message:
                 return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
             default:
-                return footerComponent !== null && footerComponent !== void 0 ? footerComponent : React.createElement(Fragment, null);
+                return footerComponent !== null && footerComponent !== void 0 ? footerComponent : React.createElement(React.Fragment, null);
         }
     }, [getBubbleColor, messageActions, onFavoritePress, onSharePress, footerComponent]);
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider((index) => {
-            const message = messages[index];
-            return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
-        }, (type, dim, index) => {
-            switch (type) {
-                case MessageViewTypes.Message:
-                    let height = heights[index];
-                    if (height != null) {
-                        dim.height = height;
-                    }
-                    else {
-                        height = messageHeightCalculator(messages[index]);
-                        heights[index] = height;
-                        dim.height = height;
-                    }
-                    break;
-                default:
-                    dim.height = sizes.textFieldHeight;
-            }
-            dim.width = containerWidth;
-        });
-    }, [heights, messageHeightCalculator, messages, containerWidth, sizes.textFieldHeight]);
+    const layoutProvider = useMemo(() => new LayoutProvider((index) => {
+        const message = messages[index];
+        return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
+    }, (type, dim, index) => {
+        switch (type) {
+            case MessageViewTypes.Message:
+                let height = heights[index];
+                if (height != null) {
+                    dim.height = height;
+                }
+                else {
+                    height = messageHeightCalculator(messages[index]);
+                    heights[index] = height;
+                    dim.height = height;
+                }
+                break;
+            default:
+                dim.height = sizes.textFieldHeight;
+        }
+        dim.width = containerWidth;
+    }), [heights, messageHeightCalculator, messages, containerWidth, sizes.textFieldHeight]);
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     }, [messagesWithAccessoryViews, maxContentWidth]);
@@ -109,6 +103,6 @@ export function MessageList(_a) {
             setMaxContentWidth(getMaxBubbleWidth((_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m));
         }
     }, [(_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m]);
-    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
+    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer || renderChatMessage, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
 }
 //# sourceMappingURL=MessageList.js.map

@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useCallback, ReactNode } from 'react';
+import React, { useState, useCallback, ReactNode } from 'react';
 import { Layer, Popover, useTheme } from '@bma98/fractal-ui';
 import { Bubble } from './Bubble';
 import { ChatMessageProps, MinimalMessageData } from './types';
@@ -51,24 +51,24 @@ export function ChatMessage<T extends MinimalMessageData>({
     }, [handleFavorite, handleShare, message, messageActions]);
 
     return (
-        <Fragment>
+        <>
             <Popover
-                placement={'right'}
+                placement='right'
                 active={popoverVisible}
                 onRequestClose={hidePopover}
                 popoverChildren={renderPopoverChildren}
-                modalBackgroundColor={'rgba(0, 0, 0, 0.15)'}
+                modalBackgroundColor='rgba(0, 0, 0, 0.15)'
                 usePortal
-                display={'flex'}
+                display='flex'
             >
                 {(ref) => (
                     <Bubble
                         ref={ref}
-                        arrowPosition={message.senderType == 'bot' ? 'left' : 'right'}
+                        arrowPosition={message.senderType === 'bot' ? 'left' : 'right'}
                         color={
                             getBubbleColor
                                 ? getBubbleColor(message)
-                                : message.senderType == 'bot'
+                                : message.senderType === 'bot'
                                 ? colors.foreground
                                 : colors.mainInteractiveColor
                         }
@@ -81,13 +81,13 @@ export function ChatMessage<T extends MinimalMessageData>({
                         ) : message.video ? (
                             <MessageVideo source={message.video} />
                         ) : (
-                            <MessageText text={message.text} color={message.senderType == 'bot' ? colors.text : colors.white} />
+                            <MessageText text={message.text} color={message.senderType === 'bot' ? colors.text : colors.white} />
                         )}
                         {children?.(message)}
                     </Bubble>
                 )}
             </Popover>
             <Layer marginBottom={spacings.m} />
-        </Fragment>
+        </>
     );
 }

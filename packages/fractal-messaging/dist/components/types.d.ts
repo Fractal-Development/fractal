@@ -24,6 +24,7 @@ export interface ChatMessageProps<T> {
     onSharePress?: (message: T) => void;
     messageActions?: (message: T) => ReactNode;
     getBubbleColor?: (message: T) => string;
+    children?: (message: T) => ReactNode;
 }
 export interface ChatContentProps<T extends MinimalMessageData> extends MessageListProps<T> {
     onSend: (message: string) => void;
@@ -37,4 +38,5 @@ export interface ChatContentProps<T extends MinimalMessageData> extends MessageL
 export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {
     messages: Array<T>;
     footerComponent?: ReactElement | Array<ReactElement>;
+    rowRenderer?: (type: string | number, data: any, index: number) => JSX.Element;
 }

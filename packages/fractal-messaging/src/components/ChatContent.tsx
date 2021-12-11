@@ -1,9 +1,9 @@
 import React from 'react';
+import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';
 import { MessageInput } from './MessageInput';
-import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
 
 export function ChatContent<T extends MinimalMessageData>({
     messages,

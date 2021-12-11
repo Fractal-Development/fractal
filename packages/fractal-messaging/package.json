@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-messaging",
-    "version": "2.0.19",
+    "version": "2.0.20",
     "description": "Messaging Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -9,27 +9,45 @@
     "source": "src/index.tsx",
     "scripts": {
         "build": "expo-module build",
-        "clean": "rm -rf ./dist",
-        "lint": "eslint src/ --fix",
+        "clean-build": "rm -rf ./dist",
+        "lint": "eslint 'src/**/*.ts*' --fix",
         "expo-module": "expo-module"
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "2.0.11",
+        "@bma98/fractal-ui": "^2.0.20",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
         "react-native": "*",
+        "react-native-svg": "*",
         "react-native-gesture-handler": "*"
     },
+    "peerDependenciesMeta": {
+        "react-dom": {
+            "optional": true
+        },
+        "react-is": {
+            "optional": true
+        },
+        "react-native": {
+            "optional": true
+        },
+        "react-native-gesture-handler": {
+            "optional": true
+        },
+        "react-native-svg": {
+            "optional": true
+        }
+    },
     "dependencies": {
-        "@bma98/fractal-media": "^2.0.4",
+        "@bma98/fractal-media": "^2.0.5",
         "@bma98/size-class": "^2.2.4",
         "styled-components": "^5.3.0",
         "text-metrics": "^2.0.9"
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-ui": "2.0.11",
+        "@bma98/fractal-ui": "^2.0.20",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
@@ -39,15 +57,15 @@
         "@typescript-eslint/parser": "^4.15.1",
         "babel-eslint": "^10.1.0",
         "eslint": "^7.29.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-typescript": "^14.0.1",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-config-standard": "^16.0.3",
-        "eslint-config-standard-react": "^11.0.1",
-        "eslint-plugin-import": "^2.23.4",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-promise": "^5.1.0",
-        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-unused-imports": "^1.1.5",
         "expo-module-scripts": "^2.0.0",
         "prettier": "^2.3.2",
         "react-native-svg": "^12.1.1",
