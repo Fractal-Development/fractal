@@ -14,11 +14,9 @@ export function ChartContainer({
 }: ChartContainerProps): JSX.Element {
     const rotation = useSharedValue(0);
 
-    const animatedStyle = useAnimatedStyle(() => {
-        return {
+    const animatedStyle = useAnimatedStyle(() => ({
             transform: [{ rotate: `${rotation.value}deg` }]
-        };
-    });
+        }));
 
     const onLayout = useCallback(
         (event: LayoutChangeEvent) => {
@@ -36,6 +34,7 @@ export function ChartContainer({
         if (rotate) {
             runOnUI(() => {
                 'worklet';
+
                 rotation.value = withSpring(rotate, { damping: 12, stiffness: 90 });
             })();
         }

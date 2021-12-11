@@ -1,11 +1,11 @@
 import React from 'react';
 import * as d3Scale from 'd3-scale';
 import * as array from 'd3-array';
+import { useTheme } from '@bma98/fractal-ui';
 import { YAxisProps } from '../../types';
 import { useDimensions } from '../../hooks/useDimensions';
 import { ChartContainer } from '../ChartContainer';
 import { YAxisContent } from './YAxisContent.tsx';
-import { useTheme } from '@bma98/fractal-ui';
 
 export function YAxis({
     numberOfTicks = 10,
@@ -40,7 +40,7 @@ export function YAxis({
 
     const domain = [min || extent[0], max || extent[1]];
 
-    //invert range to support svg coordinate system
+    // invert range to support svg coordinate system
     const y = getY(domain);
 
     const ticks = y.ticks(numberOfTicks);

@@ -127,7 +127,7 @@ export interface QuadrantIcon {
 }
 export interface QuadrantChartProps extends Omit<LayerProps, 'children'>, QuadrantIcon {
     data: [number, number, number, number];
-    showIconInQuadrant: QuadrantVariant;
+    showIconInQuadrant?: QuadrantVariant;
     colors: QuadrantChartColors;
     positiveYAxisLabel: string;
     negativeYAxisLabel: string;

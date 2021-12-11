@@ -15,11 +15,9 @@ import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnUI } from 
 export function ChartContainer(_a) {
     var { style, contentStyle, onChangeDimensions, rotate, children } = _a, layerProps = __rest(_a, ["style", "contentStyle", "onChangeDimensions", "rotate", "children"]);
     const rotation = useSharedValue(0);
-    const animatedStyle = useAnimatedStyle(() => {
-        return {
-            transform: [{ rotate: `${rotation.value}deg` }]
-        };
-    });
+    const animatedStyle = useAnimatedStyle(() => ({
+        transform: [{ rotate: `${rotation.value}deg` }]
+    }));
     const onLayout = useCallback((event) => {
         const { nativeEvent: { layout: { height, width } } } = event;
         onChangeDimensions({ height, width });

@@ -29,9 +29,9 @@ export function QuadrantChart({
                 <HorizontalLayer flex={1}>
                     <VerticalTextLayer text={positiveYAxisLabel} textColor={colors.text} />
                     <Quadrant
-                        variant={'first'}
+                        variant='first'
                         frequency={data[0]}
-                        showIcon={showIconInQuadrant == 'first'}
+                        showIcon={showIconInQuadrant === 'first'}
                         label={firstQuadrantLabel}
                         colors={colors}
                         renderQuadrantIcon={renderQuadrantIcon}
@@ -39,9 +39,9 @@ export function QuadrantChart({
                     />
                     <VerticalDashed />
                     <Quadrant
-                        variant={'second'}
+                        variant='second'
                         frequency={data[1]}
-                        showIcon={showIconInQuadrant == 'second'}
+                        showIcon={showIconInQuadrant === 'second'}
                         label={secondQuadrantLabel}
                         colors={colors}
                         renderQuadrantIcon={renderQuadrantIcon}
@@ -52,9 +52,9 @@ export function QuadrantChart({
                 <HorizontalLayer flex={1}>
                     <VerticalTextLayer text={negativeYAxisLabel} textColor={colors.text} />
                     <Quadrant
-                        variant={'third'}
+                        variant='third'
                         frequency={data[2]}
-                        showIcon={showIconInQuadrant == 'third'}
+                        showIcon={showIconInQuadrant === 'third'}
                         label={thirdQuadrantLabel}
                         colors={colors}
                         renderQuadrantIcon={renderQuadrantIcon}
@@ -62,9 +62,9 @@ export function QuadrantChart({
                     />
                     <VerticalDashed />
                     <Quadrant
-                        variant={'fourth'}
+                        variant='fourth'
                         frequency={data[3]}
-                        showIcon={showIconInQuadrant == 'fourth'}
+                        showIcon={showIconInQuadrant === 'fourth'}
                         label={fourthQuadrantLabel}
                         colors={colors}
                         renderQuadrantIcon={renderQuadrantIcon}
@@ -73,13 +73,13 @@ export function QuadrantChart({
                 </HorizontalLayer>
             </Layer>
             <HorizontalLayer paddingLeft={24}>
-                <Layer flex={1} alignItems={'center'}>
+                <Layer flex={1} alignItems='center'>
                     <CenteredText width={100} marginTop={4} color={colors.text}>
                         {negativeXAxisLabel}
                     </CenteredText>
                 </Layer>
                 <VerticalDashed />
-                <Layer flex={1} alignItems={'center'}>
+                <Layer flex={1} alignItems='center'>
                     <CenteredText width={100} marginTop={4} color={colors.text}>
                         {positiveXAxisLabel}
                     </CenteredText>

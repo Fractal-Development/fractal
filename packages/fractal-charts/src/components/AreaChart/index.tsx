@@ -50,7 +50,7 @@ export function AreaChart({
     const xExtent = array.extent([...xValues]);
 
     const { top = 0, bottom = 0, left = 0, right = 0 } = contentInset;
-    //invert range to support svg coordinate system
+    // invert range to support svg coordinate system
     const y = yScale()
         .domain([yMin || Number(yExtent[0]), yMax || Number(yExtent[1])])
         .range([height - bottom, top])

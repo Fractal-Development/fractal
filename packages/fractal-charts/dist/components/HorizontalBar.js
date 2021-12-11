@@ -20,7 +20,7 @@ export function HorizontalBar(_a) {
         }
     }, [percentage]);
     return (React.createElement(Layer, Object.assign({}, layerProps),
-        React.createElement(HorizontalLayer, { backgroundColor: colors.background, height: barHeight, flexShrink: 1, overflow: 'hidden', borderRadius: barBorderRadius !== null && barBorderRadius !== void 0 ? barBorderRadius : borderRadius.m },
+        React.createElement(HorizontalLayer, { backgroundColor: colors.background, height: barHeight, flexShrink: 1, overflow: "hidden", borderRadius: barBorderRadius !== null && barBorderRadius !== void 0 ? barBorderRadius : borderRadius.m },
             React.createElement(HorizontalLayer, { flex: percentage, backgroundColor: colors.bar, borderRadius: barBorderRadius !== null && barBorderRadius !== void 0 ? barBorderRadius : borderRadius.m }))));
 }
 //# sourceMappingURL=HorizontalBar.js.map

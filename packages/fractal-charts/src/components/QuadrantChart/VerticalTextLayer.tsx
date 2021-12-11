@@ -10,9 +10,9 @@ interface VerticalTextLayerProps {
 
 export function VerticalTextLayer({ text, textColor }: VerticalTextLayerProps): JSX.Element {
     return (
-        <Layer height={130} width={24} position={'relative'}>
+        <Layer height={130} width={24} position="relative">
             <VerticalLayer>
-                <Layer flex={1} alignItems={'center'}>
+                <Layer flex={1} alignItems="center">
                     <CenteredText color={textColor}>{text}</CenteredText>
                 </Layer>
             </VerticalLayer>

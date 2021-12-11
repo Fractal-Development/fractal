@@ -1,11 +1,11 @@
 import React from 'react';
 import * as d3Scale from 'd3-scale';
 import * as array from 'd3-array';
+import { useTheme } from '@bma98/fractal-ui';
 import { XAxisProps } from '../../types';
 import { useDimensions } from '../../hooks/useDimensions';
 import { ChartContainer } from '../ChartContainer';
 import { XAxisContent } from './XAxisContent';
-import { useTheme } from '@bma98/fractal-ui';
 
 export function XAxis({
     contentInset = {},

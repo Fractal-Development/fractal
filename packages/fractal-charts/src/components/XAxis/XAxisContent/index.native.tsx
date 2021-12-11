@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 import Svg, { G, Text as SVGText, TSpan } from 'react-native-svg';
 import { XAxisContentProps } from './types';
@@ -6,13 +6,13 @@ import { XAxisContentProps } from './types';
 export function XAxisContent({ width, height, textProps, ticks, formatLabel, x, color }: XAxisContentProps): JSX.Element {
     const renderLabelText = (value: number, index: number): JSX.Element => {
         const text = formatLabel(value, index);
-        const words = typeof text == 'string' ? text.split(' ') : [text];
+        const words = typeof text === 'string' ? text.split(' ') : [text];
         return (
             <SVGText
-                textAnchor={'middle'}
+                textAnchor='middle'
                 originX={x(value)}
-                alignmentBaseline={'hanging'}
-                fontWeight={'bold'}
+                alignmentBaseline='hanging'
+                fontWeight='bold'
                 {...textProps}
                 fill={color}
                 key={index}
@@ -20,7 +20,7 @@ export function XAxisContent({ width, height, textProps, ticks, formatLabel, x, 
             >
                 {words[0]}
                 {words.length >= 2 && (
-                    <TSpan x={x(value)} dy='10' fontWeight={'normal'}>
+                    <TSpan x={x(value)} dy='10' fontWeight='normal'>
                         {words[1]}
                     </TSpan>
                 )}
@@ -28,8 +28,8 @@ export function XAxisContent({ width, height, textProps, ticks, formatLabel, x, 
         );
     };
     return (
-        <Fragment>
-            {/*invisible text to allow for parent resizing*/}
+        <>
+            {/* invisible text to allow for parent resizing */}
             <Text
                 style={{
                     opacity: 0,
@@ -59,6 +59,6 @@ export function XAxisContent({ width, height, textProps, ticks, formatLabel, x, 
                     </G>
                 </Svg>
             )}
-        </Fragment>
+        </>
     );
 }

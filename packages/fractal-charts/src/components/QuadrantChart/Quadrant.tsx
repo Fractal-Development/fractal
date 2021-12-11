@@ -22,22 +22,20 @@ export function Quadrant({ label, frequency, variant, showIcon, colors, renderQu
     const chunkFrequencyArray = chunkArray(frequencyArray, 8);
 
     const renderDot = (index: number): JSX.Element => {
-        const isLastIndex = index == frequency - 1;
+        const isLastIndex = index === frequency - 1;
         return <Dot key={`dot-${index}`} color={tintColor} addSpacing={!isLastIndex} />;
     };
 
     return (
         <Layer flex={1} backgroundColor={themeColors.background} padding={spacings.xs} {...others}>
             <HorizontalLayer flex={1}>
-                {chunkFrequencyArray.map((dots, index) => {
-                    return (
-                        <Layer key={`${index}`} marginRight={4}>
-                            {dots.map(renderDot)}
-                        </Layer>
-                    );
-                })}
+                {chunkFrequencyArray.map((dots, index) => (
+                    <Layer key={`${index}`} marginRight={4}>
+                        {dots.map(renderDot)}
+                    </Layer>
+                ))}
                 {showIcon && (
-                    <Layer flex={1} justifyContent={'center'} alignItems={'center'}>
+                    <Layer flex={1} justifyContent='center' alignItems='center'>
                         {renderQuadrantIcon?.(tintColor, ICON_SIZE, variant)}
                     </Layer>
                 )}

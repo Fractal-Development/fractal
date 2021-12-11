@@ -1,15 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 import Svg, { G, Text as SVGText, TSpan } from 'react-native-svg';
 export function XAxisContent({ width, height, textProps, ticks, formatLabel, x, color }) {
     const renderLabelText = (value, index) => {
         const text = formatLabel(value, index);
-        const words = typeof text == 'string' ? text.split(' ') : [text];
+        const words = typeof text === 'string' ? text.split(' ') : [text];
         return (React.createElement(SVGText, Object.assign({ textAnchor: 'middle', originX: x(value), alignmentBaseline: 'hanging', fontWeight: 'bold' }, textProps, { fill: color, key: index, x: x(value) }),
             words[0],
             words.length >= 2 && (React.createElement(TSpan, { x: x(value), dy: '10', fontWeight: 'normal' }, words[1]))));
     };
-    return (React.createElement(Fragment, null,
+    return (React.createElement(React.Fragment, null,
         React.createElement(Text, { style: {
                 opacity: 0,
                 fontSize: textProps === null || textProps === void 0 ? void 0 : textProps.fontSize,

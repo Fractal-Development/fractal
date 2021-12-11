@@ -11,10 +11,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 function Horizontal({ ticks = [], y }) {
-    return (React.createElement("g", null, ticks.map((tick, index) => (React.createElement("line", { key: `h-${index}`, x1: '0%', x2: '100%', y1: y === null || y === void 0 ? void 0 : y(tick), y2: y === null || y === void 0 ? void 0 : y(tick), strokeWidth: 1, stroke: 'rgba(0,0,0,0.2)' })))));
+    return (React.createElement("g", null, ticks.map((tick, index) => (React.createElement("line", { key: `h-${index}`, x1: "0%", x2: "100%", y1: y === null || y === void 0 ? void 0 : y(tick), y2: y === null || y === void 0 ? void 0 : y(tick), strokeWidth: 1, stroke: "rgba(0,0,0,0.2)" })))));
 }
 function Vertical({ ticks = [], x }) {
-    return (React.createElement("g", null, ticks.map((tick, index) => (React.createElement("line", { key: index, y1: '0%', y2: '100%', x1: x === null || x === void 0 ? void 0 : x(tick), x2: x === null || x === void 0 ? void 0 : x(tick), strokeWidth: 1, stroke: 'rgba(0,0,0,0.2)' })))));
+    return (React.createElement("g", null, ticks.map((tick, index) => (React.createElement("line", { key: index, y1: "0%", y2: "100%", x1: x === null || x === void 0 ? void 0 : x(tick), x2: x === null || x === void 0 ? void 0 : x(tick), strokeWidth: 1, stroke: "rgba(0,0,0,0.2)" })))));
 }
 function Both(props) {
     return (React.createElement("g", null,
@@ -26,10 +26,10 @@ export function Grid(_a) {
     if (direction === 'VERTICAL') {
         return React.createElement(Vertical, Object.assign({}, others));
     }
-    else if (direction === 'HORIZONTAL') {
+    if (direction === 'HORIZONTAL') {
         return React.createElement(Horizontal, Object.assign({}, others));
     }
-    else if (direction === 'BOTH') {
+    if (direction === 'BOTH') {
         return React.createElement(Both, Object.assign({}, others));
     }
     return null;

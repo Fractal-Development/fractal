@@ -22,14 +22,12 @@ export function Quadrant(_a) {
     const frequencyArray = Array.from(Array(frequency).keys());
     const chunkFrequencyArray = chunkArray(frequencyArray, 8);
     const renderDot = (index) => {
-        const isLastIndex = index == frequency - 1;
+        const isLastIndex = index === frequency - 1;
         return React.createElement(Dot, { key: `dot-${index}`, color: tintColor, addSpacing: !isLastIndex });
     };
     return (React.createElement(Layer, Object.assign({ flex: 1, backgroundColor: themeColors.background, padding: spacings.xs }, others),
         React.createElement(HorizontalLayer, { flex: 1 },
-            chunkFrequencyArray.map((dots, index) => {
-                return (React.createElement(Layer, { key: `${index}`, marginRight: 4 }, dots.map(renderDot)));
-            }),
+            chunkFrequencyArray.map((dots, index) => (React.createElement(Layer, { key: `${index}`, marginRight: 4 }, dots.map(renderDot)))),
             showIcon && (React.createElement(Layer, { flex: 1, justifyContent: 'center', alignItems: 'center' }, renderQuadrantIcon === null || renderQuadrantIcon === void 0 ? void 0 : renderQuadrantIcon(tintColor, ICON_SIZE, variant)))),
         React.createElement(CenteredText, { fontSize: 12, color: colors.text }, label)));
 }

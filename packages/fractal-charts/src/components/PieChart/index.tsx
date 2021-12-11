@@ -40,7 +40,7 @@ export function PieChart({
     const pieSlices = createPie(data);
 
     useEffect(() => {
-        if (selectedSliceIndex != undefined) {
+        if (selectedSliceIndex !== undefined) {
             const selectedSlice = pieSlices[selectedSliceIndex];
             const middleAngle = (selectedSlice.startAngle + selectedSlice.endAngle) / 2;
             setRotateValue(radiansToDegrees(middleAngle));
@@ -48,7 +48,7 @@ export function PieChart({
     }, [pieSlices, selectedSliceIndex]);
 
     return (
-        <ChartContainer style={style} onChangeDimensions={setDimensions} rotate={-rotateValue} overflow={'hidden'} {...layerProps}>
+        <ChartContainer style={style} onChangeDimensions={setDimensions} rotate={-rotateValue} overflow='hidden' {...layerProps}>
             <PieChartContent width={width} height={height} data={data} pieSlices={pieSlices} createArc={createArc} />
         </ChartContainer>
     );

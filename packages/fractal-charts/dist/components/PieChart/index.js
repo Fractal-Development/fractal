@@ -33,7 +33,7 @@ export function PieChart(_a) {
         .endAngle(endAngle);
     const pieSlices = createPie(data);
     useEffect(() => {
-        if (selectedSliceIndex != undefined) {
+        if (selectedSliceIndex !== undefined) {
             const selectedSlice = pieSlices[selectedSliceIndex];
             const middleAngle = (selectedSlice.startAngle + selectedSlice.endAngle) / 2;
             setRotateValue(radiansToDegrees(middleAngle));

@@ -26,7 +26,7 @@ export function HorizontalBar({ percentage, colors, barHeight = 54, barBorderRad
                 backgroundColor={colors.background}
                 height={barHeight}
                 flexShrink={1}
-                overflow={'hidden'}
+                overflow="hidden"
                 borderRadius={barBorderRadius ?? borderRadius.m}
             >
                 <HorizontalLayer flex={percentage} backgroundColor={colors.bar} borderRadius={barBorderRadius ?? borderRadius.m} />

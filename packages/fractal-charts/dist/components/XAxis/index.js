@@ -12,10 +12,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import * as d3Scale from 'd3-scale';
 import * as array from 'd3-array';
+import { useTheme } from '@bma98/fractal-ui';
 import { useDimensions } from '../../hooks/useDimensions';
 import { ChartContainer } from '../ChartContainer';
 import { XAxisContent } from './XAxisContent';
-import { useTheme } from '@bma98/fractal-ui';
 export function XAxis(_a) {
     var { contentInset = {}, xAccessor = ({ index }) => index, scale = d3Scale.scaleLinear, formatLabel = (value) => value, style, data, numberOfTicks, textProps, min, max, color } = _a, layerProps = __rest(_a, ["contentInset", "xAccessor", "scale", "formatLabel", "style", "data", "numberOfTicks", "textProps", "min", "max", "color"]);
     const [dimensions, setDimensions] = useDimensions();

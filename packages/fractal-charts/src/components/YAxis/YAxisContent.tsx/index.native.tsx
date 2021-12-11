@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 import Svg, { G, Text as SVGText } from 'react-native-svg';
 import { YAxisContentProps } from './types';
 
 export function YAxisContent({ width, height, ticks, textProps, formatLabel, y, color }: YAxisContentProps): JSX.Element {
     return (
-        <Fragment>
+        <>
             <Text
                 style={{
                     opacity: 0,
@@ -31,26 +31,24 @@ export function YAxisContent({ width, height, ticks, textProps, formatLabel, y, 
                             // don't render labels if width isn't measured yet,
                             // causes rendering issues
                             height > 0 &&
-                                ticks.map((value, index) => {
-                                    return (
-                                        <SVGText
-                                            originY={y(value)}
-                                            textAnchor={'middle'}
-                                            x={'50%'}
-                                            alignmentBaseline={'middle'}
-                                            fill={color}
-                                            {...textProps}
-                                            key={y(value)}
-                                            y={y(value)}
-                                        >
-                                            {formatLabel(value, index)}
-                                        </SVGText>
-                                    );
-                                })
+                                ticks.map((value, index) => (
+                                    <SVGText
+                                        originY={y(value)}
+                                        textAnchor='middle'
+                                        x='50%'
+                                        alignmentBaseline='middle'
+                                        fill={color}
+                                        {...textProps}
+                                        key={y(value)}
+                                        y={y(value)}
+                                    >
+                                        {formatLabel(value, index)}
+                                    </SVGText>
+                                ))
                         }
                     </G>
                 </Svg>
             )}
-        </Fragment>
+        </>
     );
 }

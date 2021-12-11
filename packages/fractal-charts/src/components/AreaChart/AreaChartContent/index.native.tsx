@@ -22,19 +22,17 @@ export function AreaChartContent({
         <Svg style={{ height, width }}>
             <Grid ticks={ticks} y={y} />
             <Path fill={gradientConfig ? 'url(#gradient)' : areaColor} d={paths.path ?? undefined} />
-            <Path d={paths.line ?? undefined} stroke={lineColor ?? areaColor} strokeWidth={lineWidth} fill={'none'} />
+            <Path d={paths.line ?? undefined} stroke={lineColor ?? areaColor} strokeWidth={lineWidth} fill="none" />
             <G>
-                {coordinates.map((dot) => {
-                    return (
+                {coordinates.map((dot) => (
                         <Circle
                             key={`dot-${dot.x}-${dot.y}`}
                             cx={x?.(dot.x)}
                             cy={y(dot.y)}
                             r={dotRadius ?? 3}
                             fill={lineColor ?? areaColor}
-                        ></Circle>
-                    );
-                })}
+                         />
+                    ))}
             </G>
             {gradientConfig && (
                 <LinearGradient

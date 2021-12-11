@@ -40,7 +40,7 @@ export function ChartContainer(_a) {
             handleDimensions({ width, height });
         }
     }, [handleDimensions, height]);
-    return (React.createElement(Layer, Object.assign({ position: 'relative', zIndex: 0, ref: resizedContainerRef, style: style, height: height }, layerProps),
-        React.createElement(Layer, { position: 'relative', zIndex: 0, animate: { rotate: rotate }, style: Object.assign({ flex: 1 }, contentStyle) }, children)));
+    return (React.createElement(Layer, Object.assign({ position: "relative", zIndex: 0, ref: resizedContainerRef, style: style, height: height }, layerProps),
+        React.createElement(Layer, { position: "relative", zIndex: 0, animate: { rotate }, style: Object.assign({ flex: 1 }, contentStyle) }, children)));
 }
 //# sourceMappingURL=index.js.map
