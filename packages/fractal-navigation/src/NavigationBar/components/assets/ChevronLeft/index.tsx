@@ -7,3 +7,5 @@ export const ChevronLeft = memo((props: SVGProps<SVGSVGElement>): JSX.Element =>
         </svg>
     );
 });
+
+ChevronLeft.displayName = 'ChevronLeft';

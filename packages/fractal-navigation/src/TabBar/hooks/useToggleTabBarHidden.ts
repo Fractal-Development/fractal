@@ -6,5 +6,5 @@ export function useToggleTabBarHidden(): () => void {
 
     return useCallback(() => {
         setTabBarIsHidden((current) => !current);
-    }, []);
+    }, [setTabBarIsHidden]);
 }
