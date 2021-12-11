@@ -4,10 +4,10 @@ import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleText
 export function SocialMediaButtonsFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Social Media Buttons Fragment"),
-        React.createElement(Layer, { alignItems: 'center', marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(SocialMediaButtons, { width: '100%', marginTop: spacings.s, marginBottom: spacings.xl, onGooglePress: () => console.log('Google button pressed'), onFacebookPress: () => console.log('Facebook button pressed'), onApplePress: () => console.log('Apple button pressed') }),
-            React.createElement(Text, Object.assign({ variant: 'normal', alignItems: 'center' }, getTitleTextAccessibilityProps(2)), "Social Media Buttons without Apple button"),
-            React.createElement(SocialMediaButtons, { width: '100%', removeAppleButton: true, marginTop: spacings.s, marginBottom: spacings.xl, onGooglePress: () => console.log('Google button pressed'), onFacebookPress: () => console.log('Facebook button pressed'), onApplePress: () => console.log('Apple button pressed') }))));
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Social Media Buttons Fragment"),
+        React.createElement(Layer, { alignItems: "center", marginTop: spacings.s, marginBottom: spacings.xl },
+            React.createElement(SocialMediaButtons, { width: "100%", marginTop: spacings.s, marginBottom: spacings.xl, onGooglePress: () => console.log('Google button pressed'), onFacebookPress: () => console.log('Facebook button pressed'), onApplePress: () => console.log('Apple button pressed') }),
+            React.createElement(Text, Object.assign({ variant: "normal", alignItems: "center" }, getTitleTextAccessibilityProps(2)), "Social Media Buttons without Apple button"),
+            React.createElement(SocialMediaButtons, { width: "100%", removeAppleButton: true, marginTop: spacings.s, marginBottom: spacings.xl, onGooglePress: () => console.log('Google button pressed'), onFacebookPress: () => console.log('Facebook button pressed'), onApplePress: () => console.log('Apple button pressed') }))));
 }
 //# sourceMappingURL=SocialMediaButtonsFragment.js.map

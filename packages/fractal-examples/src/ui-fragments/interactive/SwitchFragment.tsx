@@ -8,7 +8,7 @@ export function SwitchFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Switch Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

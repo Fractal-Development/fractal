@@ -10,15 +10,15 @@ function Table() {
     useEffect(() => {
         setDataProviderState(dataProvider.cloneWithRows(tableDummyData));
     }, [width]);
-    return (React.createElement(TableContainer, { title: 'Fixed Row Height', flex: 1 },
-        React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
+    return (React.createElement(TableContainer, { title: "Fixed Row Height", flex: 1 },
+        React.createElement(SearchBar, { placeholder: "Buscar", buttonText: "Buscar", marginBottom: spacings.lg, enableSearchButton: true }),
         React.createElement(Layer, { flex: 1 },
             React.createElement(VerticalFlatList, { key: width, rowHeight: sizes.baseRowHeight, dataProvider: dataProviderState, rowRenderer: rowRenderer }))));
 }
 export function VerticalFlatListFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Vertical FlatList Fragment"),
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Vertical FlatList Fragment"),
         React.createElement(Layer, { height: 500, marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Layer, { flex: 1 },
                 React.createElement(Table, null)))));

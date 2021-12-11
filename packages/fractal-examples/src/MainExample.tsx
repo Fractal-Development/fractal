@@ -11,10 +11,10 @@ import {
     Route,
     Redirect
 } from '@bma98/fractal-navigation-router';
+import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
-import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
@@ -47,7 +47,7 @@ export function MainExample(): JSX.Element {
                         <TabBarInsetsLayer>
                             <StackNavigator path={routes.components}>
                                 <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={'Fragments'} largeTitle />}
+                                    navBarConfig={<NavigationBarConfig title="Fragments" largeTitle />}
                                     isRootRoute
                                     path={routes.components}
                                 >

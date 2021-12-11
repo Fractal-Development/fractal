@@ -7,7 +7,7 @@ export function RadioGroupFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Radio Group Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

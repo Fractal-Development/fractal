@@ -7,12 +7,12 @@ export function AvatarFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Avatar Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Box marginBottom={spacings.s} flexDirection={'row'}>
-                    <Avatar source={'https://picsum.photos/id/370/200'} label={'Avatar'} />
+                <Box marginBottom={spacings.s} flexDirection="row">
+                    <Avatar source="https://picsum.photos/id/370/200" label="Avatar" />
                 </Box>
             </Layer>
         </>

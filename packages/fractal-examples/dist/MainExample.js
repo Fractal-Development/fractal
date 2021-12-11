@@ -1,10 +1,10 @@
 import React from 'react';
 import { FractalAppRoot, PaddingLayer, Text } from '@bma98/fractal-ui';
 import { NavigationBarConfig, NavigationRouter, SimpleTabBarItemLink, StackNavigator, StackScreen, TabNavigator, TabScreen, Route, Redirect } from '@bma98/fractal-navigation-router';
+import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
-import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
@@ -25,7 +25,7 @@ export function MainExample() {
                 React.createElement(TabScreen, { path: routes.components },
                     React.createElement(TabBarInsetsLayer, null,
                         React.createElement(StackNavigator, { path: routes.components },
-                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: 'Fragments', largeTitle: true }), isRootRoute: true, path: routes.components },
+                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: "Fragments", largeTitle: true }), isRootRoute: true, path: routes.components },
                                 React.createElement(RootScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.recyclerViewFragment.name }), path: screens.recyclerViewFragment.path },
                                 React.createElement(RecyclerViewFragmentScreen, null)),

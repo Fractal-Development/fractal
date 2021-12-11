@@ -11,23 +11,19 @@ function TitleRow() {
 export function RecyclerViewFragment() {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(() => {
-            return 0;
-        }, (_, dim, index) => {
-            let height = heights[index];
-            if (height != null) {
-                dim.height = height;
-            }
-            else {
-                height = itemHeightCalculator();
-                heights[index] = height;
-                dim.height = height;
-            }
-            dim.width = width;
-            return;
-        });
-    }, [width]);
+    const layoutProvider = useMemo(() => new LayoutProvider(() => 0, (_, dim, index) => {
+        let height = heights[index];
+        if (height != null) {
+            dim.height = height;
+        }
+        else {
+            height = itemHeightCalculator();
+            heights[index] = height;
+            dim.height = height;
+        }
+        dim.width = width;
+        return;
+    }), [width]);
     return (React.createElement(Box, { flex: 1 },
         React.createElement(TitleRow, null),
         React.createElement(Layer, { flex: 1 },

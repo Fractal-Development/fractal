@@ -6,10 +6,10 @@ export function BlurredModalFragment() {
     const [blurredModalVisible, setBlurredModalVisible] = useState(false);
     const toggleBlurredModal = () => setBlurredModalVisible((currentValue) => !currentValue);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Blurred Modal Fragment"),
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Blurred Modal Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Button, { variant: 'main', text: 'Show Blurred Modal', onPress: toggleBlurredModal }),
-            React.createElement(BlurrediOSModal, { visible: blurredModalVisible, dismissText: 'Done', onDismiss: toggleBlurredModal },
+            React.createElement(BlurrediOSModal, { visible: blurredModalVisible, dismissText: "Done", onDismiss: toggleBlurredModal },
                 React.createElement(Box, { margin: spacings.m },
                     React.createElement(Button, { variant: 'warning', text: 'Dismiss Modal', onPress: toggleBlurredModal }))))));
 }

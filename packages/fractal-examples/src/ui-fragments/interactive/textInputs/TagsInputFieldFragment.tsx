@@ -19,10 +19,8 @@ export function TagsInputFieldFragment(): JSX.Element {
     ]);
     const [selectedTags, setSelectedTags] = useState<Array<Tag>>([]);
 
-    const handleSubmitEditing = () => {
-        if (tag != '') {
-            addNewTag(tag);
-        }
+    const addSelectedTag = (tag: Tag) => {
+        setSelectedTags((currentTags) => [...currentTags, tag]);
     };
 
     const addNewTag = (tag: string) => {
@@ -32,8 +30,10 @@ export function TagsInputFieldFragment(): JSX.Element {
         setTag('');
     };
 
-    const addSelectedTag = (tag: Tag) => {
-        setSelectedTags((currentTags) => [...currentTags, tag]);
+    const handleSubmitEditing = () => {
+        if (tag !== '') {
+            addNewTag(tag);
+        }
     };
 
     const clearTags = () => {
@@ -50,15 +50,15 @@ export function TagsInputFieldFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Multi Select Input Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl} {...getMultiSelectInputAccessibilityProps()}>
                 <MultiSelectInput
                     height={240}
                     enableClearButton
-                    placeholder={'Escribe y da enter'}
-                    clearButtonText={'Limpiar'}
+                    placeholder='Escribe y da enter'
+                    clearButtonText='Limpiar'
                     options={tags}
                     inputValue={tag}
                     controllableSelectedOptions={selectedTags}

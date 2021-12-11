@@ -10,7 +10,7 @@ export function BottomCellModalFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Bottom Cell Modal Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

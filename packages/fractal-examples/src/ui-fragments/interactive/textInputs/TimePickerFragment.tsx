@@ -7,7 +7,7 @@ export function TimePickerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Time Picker Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

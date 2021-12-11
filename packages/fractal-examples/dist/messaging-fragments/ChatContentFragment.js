@@ -62,16 +62,12 @@ const defaultMessages = [
 export function ChatContentFragment() {
     const [messages, setMessages] = useState(defaultMessages);
     const handleFavoriteMessage = (message) => {
-        const newMessage = Object.assign(Object.assign({}, message), { favorite: message.favorite ? false : true });
-        setMessages((currentMessages) => {
-            return currentMessages.map((messageItem) => (messageItem.id === message.id ? newMessage : messageItem));
-        });
+        const newMessage = Object.assign(Object.assign({}, message), { favorite: !message.favorite });
+        setMessages((currentMessages) => currentMessages.map((messageItem) => (messageItem.id === message.id ? newMessage : messageItem)));
     };
     const handleSendMessage = (message) => {
         const newId = messages.length;
-        setMessages((currentMessages) => {
-            return [...currentMessages, { id: newId.toString(), senderType: 'user', text: message }];
-        });
+        setMessages((currentMessages) => [...currentMessages, { id: newId.toString(), senderType: 'user', text: message }]);
     };
     return (React.createElement(ChatContent, { messages: messages, onFavoritePress: handleFavoriteMessage, onSharePress: (message) => console.log('sharePress: ', message), onSend: handleSendMessage }));
 }

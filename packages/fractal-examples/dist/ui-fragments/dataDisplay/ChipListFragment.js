@@ -11,11 +11,9 @@ export function ChipListFragment() {
         { id: '4', value: 'tag 5' }
     ];
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Chip List Fragment"),
-        React.createElement(Layer, { flexDirection: 'row', marginTop: spacings.s, marginBottom: spacings.xl },
-            React.createElement(ChipList, { data: tags, getLabel: (item) => {
-                    return item.value;
-                }, onItemPress: (item) => {
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Chip List Fragment"),
+        React.createElement(Layer, { flexDirection: "row", marginTop: spacings.s, marginBottom: spacings.xl },
+            React.createElement(ChipList, { data: tags, getLabel: (item) => item.value, onItemPress: (item) => {
                     console.log(item);
                 } }))));
 }

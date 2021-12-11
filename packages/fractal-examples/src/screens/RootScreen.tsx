@@ -12,9 +12,9 @@ import {
 } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
 import { useHistory } from '@bma98/fractal-navigation-router';
+import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 import { dataProvider } from '../ui-fragments/layout/tables/util/tableHelpers';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
-import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 
 export function RootScreen(): ReactElement {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(screensArray));
@@ -22,18 +22,14 @@ export function RootScreen(): ReactElement {
     const { sizes, spacings } = useTheme();
     const history = useHistory();
 
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(
-            () => {
-                return 0;
-            },
+    const layoutProvider = useMemo(() => new LayoutProvider(
+            () => 0,
             (_, dim) => {
                 dim.height = sizes.baseRowHeight;
                 dim.width = width;
                 return;
             }
-        );
-    }, [width, sizes.baseRowHeight]);
+        ), [width, sizes.baseRowHeight]);
 
     const rowRenderer = useCallback(
         (_, data: Screen, index: number | undefined) => {
@@ -54,7 +50,7 @@ export function RootScreen(): ReactElement {
         <NavigationBarInsetsLayer>
             <PaddingLayer flex={1}>
                 <TableContainer title='Table Container' flex={1}>
-                    <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
+                    <SearchBar placeholder="Buscar" buttonText="Buscar" marginBottom={spacings.lg} enableSearchButton />
                     <Layer flex={1}>
                         <AutoSizeRecyclerView layoutProvider={layoutProvider} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
                     </Layer>

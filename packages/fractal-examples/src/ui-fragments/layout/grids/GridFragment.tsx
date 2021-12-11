@@ -7,7 +7,7 @@ export function GridFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Grid Fragment
             </Text>
             <Box height={300} marginTop={spacings.s} marginBottom={spacings.xl}>

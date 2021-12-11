@@ -7,11 +7,11 @@ export function BadgeFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Bagde Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Badge variant={'success'}>Some message</Badge>
+                <Badge variant="success">Some message</Badge>
             </Box>
         </>
     );

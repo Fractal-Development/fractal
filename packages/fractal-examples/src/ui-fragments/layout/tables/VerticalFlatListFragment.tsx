@@ -14,8 +14,8 @@ function Table(): JSX.Element {
     }, [width]);
 
     return (
-        <TableContainer title={'Fixed Row Height'} flex={1}>
-            <SearchBar placeholder={'Buscar'} buttonText={'Buscar'} marginBottom={spacings.lg} enableSearchButton />
+        <TableContainer title="Fixed Row Height" flex={1}>
+            <SearchBar placeholder="Buscar" buttonText="Buscar" marginBottom={spacings.lg} enableSearchButton />
             <Layer flex={1}>
                 <VerticalFlatList key={width} rowHeight={sizes.baseRowHeight} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
             </Layer>
@@ -28,7 +28,7 @@ export function VerticalFlatListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Vertical FlatList Fragment
             </Text>
             <Layer height={500} marginTop={spacings.s} marginBottom={spacings.xl}>

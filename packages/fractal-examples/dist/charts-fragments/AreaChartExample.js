@@ -8,10 +8,10 @@ const xAxisHeight = 30;
 const xLabels = ['04 Jun', '11 Jun', '18 Jun', '25 Jun', '02 Jul', '09 Jul', '16 Jul', '23 Jul', '30 Jul', '6 Ago', '13 Ago'];
 export function AreaChartExample() {
     const { spacings } = useTheme();
-    return (React.createElement(Box, { height: 220, marginBottom: spacings.m, flexDirection: 'row' },
+    return (React.createElement(Box, { height: 220, marginBottom: spacings.m, flexDirection: "row" },
         React.createElement(YAxis, { data: areaData, marginBottom: xAxisHeight, contentInset: verticalContentInset, textProps: textProps }),
         React.createElement(Layer, { flex: 1, marginLeft: 10 },
-            React.createElement(AreaChart, { flex: 1, contentInset: verticalContentInset, areaColor: 'rgb(134, 65, 244)', gradientConfig: {
+            React.createElement(AreaChart, { flex: 1, contentInset: verticalContentInset, areaColor: "rgb(134, 65, 244)", gradientConfig: {
                     startColor: 'rgb(134, 65, 244)',
                     startOpacity: 0.8,
                     endColor: 'rgb(134, 65, 244)',

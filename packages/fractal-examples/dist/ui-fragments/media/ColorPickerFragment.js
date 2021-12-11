@@ -5,7 +5,7 @@ export function ColorPickerFragment() {
     const { colors, spacings } = useTheme();
     const [selectedColor, setSelectedColor] = useState(colors.successInteractiveColor);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Color Picker Fragment"),
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Color Picker Fragment"),
         React.createElement(Box, { marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(ColorPicker, { value: selectedColor, defaultValue: selectedColor, onColorChange: (color) => setSelectedColor(color), colors: [
                     colors.mainInteractiveColor,

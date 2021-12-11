@@ -10,7 +10,7 @@ export function SliderFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Slider Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
@@ -21,7 +21,7 @@ export function SliderFragment(): JSX.Element {
                     onSlidingComplete={handleSliderValue}
                     onSlidingStart={() => console.log('Slide started')}
                 />
-                <Text variant={'normal'}>{`Value: ${sliderValue}`}</Text>
+                <Text variant="normal">{`Value: ${sliderValue}`}</Text>
             </Box>
         </>
     );

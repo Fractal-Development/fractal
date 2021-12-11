@@ -20,11 +20,8 @@ export function RecyclerViewFragment(): JSX.Element {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
     const width = useSizeValue('width');
 
-    const layoutProvider = useMemo(() => {
-        return new LayoutProvider(
-            () => {
-                return 0;
-            },
+    const layoutProvider = useMemo(() => new LayoutProvider(
+            () => 0,
             (_, dim, index) => {
                 let height = heights[index];
                 if (height != null) {
@@ -37,8 +34,7 @@ export function RecyclerViewFragment(): JSX.Element {
                 dim.width = width;
                 return;
             }
-        );
-    }, [width]);
+        ), [width]);
 
     return (
         <Box flex={1}>

@@ -1,9 +1,7 @@
 import React, { ReactElement } from 'react';
 import { AuthenticationScreen } from '@bma98/fractal-auth-screen';
 
-const fakeFunction = async () => {
-    return;
-};
+const fakeFunction = async () => {};
 
 export function AuthenticationScreenFragment(): ReactElement {
     return (

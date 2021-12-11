@@ -7,7 +7,7 @@ import { QuadrantChartExample } from './QuadrantChartExample';
 
 export function ChartsExamples(): JSX.Element {
     const { spacings } = useTheme();
-    const randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7);
+    const randomColor = () => `#${((Math.random() * 0xffffff) << 0).toString(16)}000000`.slice(0, 7);
 
     const pieData = [
         {
@@ -26,19 +26,19 @@ export function ChartsExamples(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} marginBottom={spacings.m}>
+            <Text variant='title' marginBottom={spacings.m}>
                 Pie Chart Example
             </Text>
             <PieChartExample data={pieData} />
-            <Text variant={'title'} marginBottom={spacings.m}>
+            <Text variant='title' marginBottom={spacings.m}>
                 Area Chart Example
             </Text>
             <AreaChartExample />
-            <Text variant={'title'} marginBottom={spacings.m}>
+            <Text variant='title' marginBottom={spacings.m}>
                 Quadrant Chart Example
             </Text>
             <QuadrantChartExample />
-            <Text variant={'title'} marginBottom={spacings.m}>
+            <Text variant='title' marginBottom={spacings.m}>
                 Horizontal Bar Example
             </Text>
             <Box marginBottom={spacings.m}>

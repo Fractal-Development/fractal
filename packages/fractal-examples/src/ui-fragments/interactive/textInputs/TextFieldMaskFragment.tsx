@@ -7,19 +7,19 @@ export function TextFieldMaskFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Text Field Mask Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <TextFieldMask
-                    type={'money'}
-                    placeholder={'Monto'}
+                    type="money"
+                    placeholder="Monto"
                     marginBottom={spacings.s}
                     onChangeText={(maskedText, rawText) => console.log({ maskedText, rawText })}
                 />
                 <TextFieldMask
-                    type={'phone'}
-                    placeholder={'Numero telefono'}
+                    type="phone"
+                    placeholder="Numero telefono"
                     onChangeText={(maskedText, rawText) => console.log({ maskedText, rawText })}
                 />
             </Box>

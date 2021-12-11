@@ -1,7 +1,6 @@
 import React, { memo, SVGProps } from 'react';
 
-const CalmFaceIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
-    return (
+const CalmFaceIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => (
         <svg focusable={false} viewBox='0 0 68.044 68.045' {...props}>
             <g>
                 <g>
@@ -10,8 +9,7 @@ const CalmFaceIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => {
                 </g>
             </g>
         </svg>
-    );
-});
+    ));
 
 CalmFaceIcon.displayName = 'CalmFaceIcon';
 

@@ -5,19 +5,19 @@ import { CalmFaceIcon, ExcitedFaceIcon, FrustratedFaceIcon, DiscouragedFaceIcon 
 export function QuadrantChartExample() {
     const { spacings } = useTheme();
     const renderIcon = (color, size, activeQuadrant) => {
-        if (activeQuadrant == 'first') {
+        if (activeQuadrant === 'first') {
             return React.createElement(CalmFaceIcon, { fill: color, width: size, height: size });
         }
-        if (activeQuadrant == 'second') {
+        if (activeQuadrant === 'second') {
             return React.createElement(ExcitedFaceIcon, { fill: color, width: size, height: size });
         }
-        if (activeQuadrant == 'third') {
+        if (activeQuadrant === 'third') {
             return React.createElement(FrustratedFaceIcon, { fill: color, width: size, height: size });
         }
         return React.createElement(DiscouragedFaceIcon, { fill: color, width: size, height: size });
     };
     return (React.createElement(Box, { marginBottom: spacings.m, maxWidth: 400 },
-        React.createElement(QuadrantChart, { height: 300, data: [24, 1, 2, 3], positiveYAxisLabel: 'Sí acepto', negativeYAxisLabel: 'No acepto', positiveXAxisLabel: 'Sí puedo cambiar', negativeXAxisLabel: 'No puedo cambiar', firstQuadrantLabel: 'Tranquilidad/Paz', secondQuadrantLabel: 'Entusiasmo/Alegría', thirdQuadrantLabel: 'Frustración/Enojo', fourthQuadrantLabel: 'Desánimo/Apatía', renderQuadrantIcon: renderIcon, showIconInQuadrant: 'first', colors: {
+        React.createElement(QuadrantChart, { height: 300, data: [24, 1, 2, 3], positiveYAxisLabel: 'S\u00ED acepto', negativeYAxisLabel: 'No acepto', positiveXAxisLabel: 'S\u00ED puedo cambiar', negativeXAxisLabel: 'No puedo cambiar', firstQuadrantLabel: 'Tranquilidad/Paz', secondQuadrantLabel: 'Entusiasmo/Alegr\u00EDa', thirdQuadrantLabel: 'Frustraci\u00F3n/Enojo', fourthQuadrantLabel: 'Des\u00E1nimo/Apat\u00EDa', renderQuadrantIcon: renderIcon, showIconInQuadrant: 'first', colors: {
                 firstQuadrant: '#fec201',
                 secondQuadrant: '#00a5b5',
                 thirdQuadrant: '#fd4e15',

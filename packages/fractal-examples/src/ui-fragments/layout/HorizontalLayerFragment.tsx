@@ -8,22 +8,22 @@ export function HorizontalLayerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Horizontal Layer Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
                 <HorizontalLayer
                     height={150}
-                    borderStyle={'solid'}
+                    borderStyle="solid"
                     borderWidth={2}
                     borderColor={colors.black}
                     {...getHorizontalLayerAccessibilityProps()}
                 >
-                    <Box alignItems={'center'} justifyContent={'center'} width={'50%'}>
-                        <Text variant={'subtitle'}>Horizontal Layer</Text>
+                    <Box alignItems="center" justifyContent="center" width="50%">
+                        <Text variant="subtitle">Horizontal Layer</Text>
                     </Box>
-                    <Box alignItems={'center'} justifyContent={'center'} width={'50%'}>
-                        <Text variant={'subtitle'}>Horizontal Layer</Text>
+                    <Box alignItems="center" justifyContent="center" width="50%">
+                        <Text variant="subtitle">Horizontal Layer</Text>
                     </Box>
                 </HorizontalLayer>
             </Layer>

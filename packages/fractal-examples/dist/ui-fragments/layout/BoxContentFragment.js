@@ -6,10 +6,10 @@ import { getTextAccessibilityProps } from './accessibility/getTextAccessibilityP
 export function BoxContentFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Box Fragment"),
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Box Fragment"),
         React.createElement(Box, Object.assign({ marginTop: spacings.s, marginBottom: spacings.xl }, getBoxAccessibilityProps()),
-            React.createElement(Text, Object.assign({ variant: 'normal', marginBottom: spacings.m }, getTextAccessibilityProps()), "Use it to separate your components into blocks."),
+            React.createElement(Text, Object.assign({ variant: "normal", marginBottom: spacings.m }, getTextAccessibilityProps()), "Use it to separate your components into blocks."),
             React.createElement(Separator, { marginBottom: spacings.m }),
-            React.createElement(Text, Object.assign({ variant: 'normal' }, getTextAccessibilityProps()), "Like this."))));
+            React.createElement(Text, Object.assign({ variant: "normal" }, getTextAccessibilityProps()), "Like this."))));
 }
 //# sourceMappingURL=BoxContentFragment.js.map

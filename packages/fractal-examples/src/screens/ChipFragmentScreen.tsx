@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
-import { ChipFragment } from '../ui-fragments';
 import { PaddingLayer } from '@bma98/fractal-ui';
+import { ChipFragment } from '../ui-fragments';
 
 export function ChipFragmentScreen(): ReactElement {
     return (

@@ -14,7 +14,7 @@ function Table() {
 export function HorizontalFlatListFragment() {
     const { spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Horizontal FlatList Fragment"),
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Horizontal FlatList Fragment"),
         React.createElement(Box, { height: 120, marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(Table, null))));
 }

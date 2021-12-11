@@ -16,16 +16,14 @@ const rowRendererHorizontalTable = (_: any, __: any, index: number | undefined) 
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
     return (
         <PaddingLayer backgroundColor={colors.contentInteractiveColor}>
-            <Box alignItems={'center'} justifyContent={'center'}>
-                <Text variant={'normal'}>{text}</Text>
+            <Box alignItems="center" justifyContent="center">
+                <Text variant="normal">{text}</Text>
             </Box>
         </PaddingLayer>
     );
 };
 
-const dataProvider = new DataProvider((rowOne, rowTwo) => {
-    return rowOne !== rowTwo;
-});
+const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne !== rowTwo);
 
 function randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);

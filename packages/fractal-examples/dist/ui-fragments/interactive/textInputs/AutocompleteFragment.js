@@ -3,7 +3,7 @@ import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, C
 function PopoverContent() {
     const { spacings } = useTheme();
     return (React.createElement(Box, { marginTop: spacings.m },
-        React.createElement(Button, { variant: 'alternative', text: 'Pasion' })));
+        React.createElement(Button, { variant: "alternative", text: "Pasion" })));
 }
 export function AutocompleteFragment() {
     const { spacings } = useTheme();
@@ -49,11 +49,11 @@ export function AutocompleteFragment() {
     };
     return (React.createElement(React.Fragment, null,
         React.createElement(Box, { marginTop: spacings.m, marginBottom: spacings.m },
-            React.createElement(AutoComplete, { placeholder: 'Escribe aquí', options: top20Films, onChangeText: (text) => console.log(`New text is ${text}`), getOptionLabel: (option) => option.title, onSelect: handleSelect }),
+            React.createElement(AutoComplete, { placeholder: "Escribe aqu\u00ED", options: top20Films, onChangeText: (text) => console.log(`New text is ${text}`), getOptionLabel: (option) => option.title, onSelect: handleSelect }),
             React.createElement(Layer, { height: spacings.m }),
             React.createElement(HorizontalLayer, null,
                 React.createElement(Layer, { flex: 1 },
-                    React.createElement(AutoComplete, { placeholder: 'AutoComplete and other component', options: top20Films, onChangeText: (text) => console.log(`New text is ${text}`), getOptionLabel: (option) => option.title, onSelect: handleSelect })),
-                React.createElement(Popover, { active: active, onRequestClose: deactivate, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => (React.createElement(CircularIconButton, { ref: ref, onPress: toggleActive, variant: 'success', marginLeft: spacings.s }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color }))))))));
+                    React.createElement(AutoComplete, { placeholder: "AutoComplete and other component", options: top20Films, onChangeText: (text) => console.log(`New text is ${text}`), getOptionLabel: (option) => option.title, onSelect: handleSelect })),
+                React.createElement(Popover, { active: active, onRequestClose: deactivate, popoverChildren: () => React.createElement(PopoverContent, null) }, (ref) => (React.createElement(CircularIconButton, { ref: ref, onPress: toggleActive, variant: "success", marginLeft: spacings.s }, (color) => React.createElement(LoadIcon, { height: 24, width: 24, fill: color }))))))));
 }
 //# sourceMappingURL=AutocompleteFragment.js.map

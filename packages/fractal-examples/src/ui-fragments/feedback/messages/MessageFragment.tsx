@@ -7,14 +7,14 @@ export function MessageFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Message Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <Message
-                    title={'Some message'}
-                    messageType={'alternative'}
-                    description={'You can use it to show any message'}
+                    title="Some message"
+                    messageType="alternative"
+                    description="You can use it to show any message"
                     icon={(color) => <LoadIcon fill={color} />}
                 />
             </Box>

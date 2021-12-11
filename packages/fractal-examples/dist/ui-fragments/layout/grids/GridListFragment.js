@@ -4,7 +4,7 @@ import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleText
 export function GridListFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Grid List Fragment"),
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Grid List Fragment"),
         React.createElement(GridList, { data: ['One', 'Two', 'Three', 'Four'], numColumns: 2, backgroundColor: colors.warningInteractiveColor, marginTop: spacings.s, marginBottom: spacings.xl, renderItem: () => React.createElement(Box, { margin: 4, height: 60, minWidth: 30 }) })));
 }
 //# sourceMappingURL=GridListFragment.js.map

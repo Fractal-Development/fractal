@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { AudioMessagePlayerExample } from './AudioMessagePlayerExample';
 import { AudioPlayerExample } from './AudioPlayerExample';
 import { MediaContentRowExample } from './MediaContentRowExample';
@@ -6,7 +6,7 @@ import { MediaPlayerButtonExample } from './MediaPlayerButtonExample';
 import { VideoPlayerExample } from './VideoPlayerExample';
 import { YouTubeVideoPlayerExample } from './YouTubeVideoPlayerExample';
 export function MediaExamples() {
-    return (React.createElement(Fragment, null,
+    return (React.createElement(React.Fragment, null,
         React.createElement(AudioPlayerExample, null),
         React.createElement(AudioMessagePlayerExample, null),
         React.createElement(VideoPlayerExample, null),

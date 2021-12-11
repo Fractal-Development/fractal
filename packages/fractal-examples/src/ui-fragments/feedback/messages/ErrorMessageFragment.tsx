@@ -12,7 +12,7 @@ export function ErrorMessageFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Error Message Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

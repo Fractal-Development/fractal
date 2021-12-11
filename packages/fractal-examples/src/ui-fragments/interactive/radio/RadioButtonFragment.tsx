@@ -8,13 +8,13 @@ export function RadioButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Radio Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <RadioButton
-                    label={'Radio Button'}
-                    value={'Button 1'}
+                    label="Radio Button"
+                    value="Button 1"
                     active={activeButton}
                     onPress={() => setActiveButton((active) => !active)}
                 />

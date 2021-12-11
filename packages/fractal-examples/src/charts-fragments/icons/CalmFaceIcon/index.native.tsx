@@ -1,8 +1,7 @@
 import React, { memo } from 'react';
 import Svg, { SvgProps, Path, G } from 'react-native-svg';
 
-const CalmFaceIcon = memo((props: SvgProps): JSX.Element => {
-    return (
+const CalmFaceIcon = memo((props: SvgProps): JSX.Element => (
         <Svg focusable={false} viewBox='0 0 68.044 68.045' {...props}>
             <G>
                 <G>
@@ -11,8 +10,7 @@ const CalmFaceIcon = memo((props: SvgProps): JSX.Element => {
                 </G>
             </G>
         </Svg>
-    );
-});
+    ));
 
 CalmFaceIcon.displayName = 'CalmFaceIcon';
 

@@ -22,10 +22,10 @@ export function IconsFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Icons Fragment
             </Text>
-            <Box flexDirection={'row'} flexWrap={'wrap'} justifyContent={'space-around'} marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Box flexDirection="row" flexWrap="wrap" justifyContent="space-around" marginTop={spacings.s} marginBottom={spacings.xl}>
                 <AppleIcon height={24} width={24} fill={colors.black} />
                 <BugIcon height={24} width={24} fill={colors.black} />
                 <CheckIcon height={24} width={24} fill={colors.black} />

@@ -7,7 +7,7 @@ export function PickerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Picker Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
@@ -21,7 +21,7 @@ export function PickerFragment(): JSX.Element {
                         ['4', 'Cuatro'],
                         ['5', 'Cinco']
                     ]}
-                    defaultValue={'3'}
+                    defaultValue="3"
                     marginBottom={spacings.s}
                 />
                 <Picker
@@ -33,7 +33,7 @@ export function PickerFragment(): JSX.Element {
                         ['4', 'Cuatro'],
                         ['5', 'Cinco']
                     ]}
-                    defaultValue={'3'}
+                    defaultValue="3"
                     disabled
                 />
             </Box>

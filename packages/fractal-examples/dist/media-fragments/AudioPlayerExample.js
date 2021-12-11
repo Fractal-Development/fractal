@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text, useTheme } from '@bma98/fractal-ui';
 import { AudioPlayer } from '@bma98/fractal-media';
 export function AudioPlayerExample() {
     const { spacings } = useTheme();
-    return (React.createElement(Fragment, null,
+    return (React.createElement(React.Fragment, null,
         React.createElement(Text, { variant: 'title', marginBottom: spacings.m }, "Audio Player Example"),
         React.createElement(AudioPlayer, { tracks: [
                 {

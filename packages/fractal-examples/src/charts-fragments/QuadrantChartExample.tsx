@@ -6,13 +6,13 @@ import { CalmFaceIcon, ExcitedFaceIcon, FrustratedFaceIcon, DiscouragedFaceIcon 
 export function QuadrantChartExample(): JSX.Element {
     const { spacings } = useTheme();
     const renderIcon = (color: string, size: number, activeQuadrant: QuadrantVariant): JSX.Element => {
-        if (activeQuadrant == 'first') {
+        if (activeQuadrant === 'first') {
             return <CalmFaceIcon fill={color} width={size} height={size} />;
         }
-        if (activeQuadrant == 'second') {
+        if (activeQuadrant === 'second') {
             return <ExcitedFaceIcon fill={color} width={size} height={size} />;
         }
-        if (activeQuadrant == 'third') {
+        if (activeQuadrant === 'third') {
             return <FrustratedFaceIcon fill={color} width={size} height={size} />;
         }
         return <DiscouragedFaceIcon fill={color} width={size} height={size} />;
@@ -23,16 +23,16 @@ export function QuadrantChartExample(): JSX.Element {
             <QuadrantChart
                 height={300}
                 data={[24, 1, 2, 3]}
-                positiveYAxisLabel={'Sí acepto'}
-                negativeYAxisLabel={'No acepto'}
-                positiveXAxisLabel={'Sí puedo cambiar'}
-                negativeXAxisLabel={'No puedo cambiar'}
-                firstQuadrantLabel={'Tranquilidad/Paz'}
-                secondQuadrantLabel={'Entusiasmo/Alegría'}
-                thirdQuadrantLabel={'Frustración/Enojo'}
-                fourthQuadrantLabel={'Desánimo/Apatía'}
+                positiveYAxisLabel='Sí acepto'
+                negativeYAxisLabel='No acepto'
+                positiveXAxisLabel='Sí puedo cambiar'
+                negativeXAxisLabel='No puedo cambiar'
+                firstQuadrantLabel='Tranquilidad/Paz'
+                secondQuadrantLabel='Entusiasmo/Alegría'
+                thirdQuadrantLabel='Frustración/Enojo'
+                fourthQuadrantLabel='Desánimo/Apatía'
                 renderQuadrantIcon={renderIcon}
-                showIconInQuadrant={'first'}
+                showIconInQuadrant='first'
                 colors={{
                     firstQuadrant: '#fec201',
                     secondQuadrant: '#00a5b5',

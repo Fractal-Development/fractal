@@ -1,3 +1,3 @@
 export * from './ErrorMessageFragment';
-export * from './/MessageFragment';
+export * from "./MessageFragment";
 //# sourceMappingURL=index.js.map

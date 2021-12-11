@@ -20,15 +20,13 @@ export function ChipListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant={'title'} {...getTitleTextAccessibilityProps(1)}>
+            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
                 Chip List Fragment
             </Text>
-            <Layer flexDirection={'row'} marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Layer flexDirection="row" marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ChipList
                     data={tags}
-                    getLabel={(item) => {
-                        return item.value;
-                    }}
+                    getLabel={(item) => item.value}
                     onItemPress={(item) => {
                         console.log(item);
                     }}

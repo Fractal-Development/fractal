@@ -5,7 +5,7 @@ function PopoverContent(): JSX.Element {
     const { spacings } = useTheme();
     return (
         <Box marginTop={spacings.m}>
-            <Button variant={'alternative'} text={'Pasion'} />
+            <Button variant="alternative" text="Pasion" />
         </Box>
     );
 }
@@ -66,7 +66,7 @@ export function AutocompleteFragment(): JSX.Element {
         <>
             <Box marginTop={spacings.m} marginBottom={spacings.m}>
                 <AutoComplete
-                    placeholder={'Escribe aquí'}
+                    placeholder="Escribe aquí"
                     options={top20Films}
                     onChangeText={(text) => console.log(`New text is ${text}`)}
                     getOptionLabel={(option) => option.title}
@@ -76,7 +76,7 @@ export function AutocompleteFragment(): JSX.Element {
                 <HorizontalLayer>
                     <Layer flex={1}>
                         <AutoComplete
-                            placeholder={'AutoComplete and other component'}
+                            placeholder="AutoComplete and other component"
                             options={top20Films}
                             onChangeText={(text) => console.log(`New text is ${text}`)}
                             getOptionLabel={(option) => option.title}
@@ -85,7 +85,7 @@ export function AutocompleteFragment(): JSX.Element {
                     </Layer>
                     <Popover active={active} onRequestClose={deactivate} popoverChildren={() => <PopoverContent />}>
                         {(ref) => (
-                            <CircularIconButton ref={ref} onPress={toggleActive} variant={'success'} marginLeft={spacings.s}>
+                            <CircularIconButton ref={ref} onPress={toggleActive} variant="success" marginLeft={spacings.s}>
                                 {(color) => <LoadIcon height={24} width={24} fill={color} />}
                             </CircularIconButton>
                         )}

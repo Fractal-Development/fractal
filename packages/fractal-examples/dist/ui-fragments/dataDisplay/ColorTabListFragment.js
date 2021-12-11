@@ -4,12 +4,12 @@ import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAcc
 export function ColorTabListFragment() {
     const { colors, spacings } = useTheme();
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, Object.assign({ variant: 'title' }, getTitleTextAccessibilityProps(1)), "Color Tab List Fragment"),
-        React.createElement(Layer, { flexDirection: 'row', marginTop: spacings.s, marginBottom: spacings.xl },
+        React.createElement(Text, Object.assign({ variant: "title" }, getTitleTextAccessibilityProps(1)), "Color Tab List Fragment"),
+        React.createElement(Layer, { flexDirection: "row", marginTop: spacings.s, marginBottom: spacings.xl },
             React.createElement(ColorTabList, { tabs: [
                     { tabColor: colors.contentInteractiveColor100, text: 'Tab 1' },
                     { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
                     { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
-                ], onItemPress: (index) => console.log(index) }, () => React.createElement(Text, { variant: 'normal' }, "Tab Content")))));
+                ], onItemPress: (index) => console.log(index) }, () => React.createElement(Text, { variant: "normal" }, "Tab Content")))));
 }
 //# sourceMappingURL=ColorTabListFragment.js.map

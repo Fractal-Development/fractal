@@ -12,10 +12,8 @@ export function TagsInputFieldFragment() {
         { id: '3', value: 'few' }
     ]);
     const [selectedTags, setSelectedTags] = useState([]);
-    const handleSubmitEditing = () => {
-        if (tag != '') {
-            addNewTag(tag);
-        }
+    const addSelectedTag = (tag) => {
+        setSelectedTags((currentTags) => [...currentTags, tag]);
     };
     const addNewTag = (tag) => {
         const newTag = { id: `${tags.length}`, value: tag };
@@ -23,8 +21,10 @@ export function TagsInputFieldFragment() {
         addSelectedTag(newTag);
         setTag('');
     };
-    const addSelectedTag = (tag) => {
-        setSelectedTags((currentTags) => [...currentTags, tag]);
+    const handleSubmitEditing = () => {
+        if (tag !== '') {
+            addNewTag(tag);
+        }
     };
     const clearTags = () => {
         setSelectedTags([]);

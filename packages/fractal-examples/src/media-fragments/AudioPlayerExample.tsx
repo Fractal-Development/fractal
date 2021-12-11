@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text, useTheme } from '@bma98/fractal-ui';
 import { AudioPlayer } from '@bma98/fractal-media';
 
@@ -6,8 +6,8 @@ export function AudioPlayerExample(): JSX.Element {
     const { spacings } = useTheme();
 
     return (
-        <Fragment>
-            <Text variant={'title'} marginBottom={spacings.m}>
+        <>
+            <Text variant='title' marginBottom={spacings.m}>
                 Audio Player Example
             </Text>
             <AudioPlayer
@@ -31,6 +31,6 @@ export function AudioPlayerExample(): JSX.Element {
                 ]}
                 marginBottom={spacings.m}
             />
-        </Fragment>
+        </>
     );
 }
