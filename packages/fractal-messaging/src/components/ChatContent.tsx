@@ -18,6 +18,7 @@ export function ChatContent<T extends MinimalMessageData>({
     messageInputButtonVariant = 'alternative',
     enableFluidFooter,
     customFooter,
+    rowRenderer,
     ...layerProps
 }: ChatContentProps<T>): JSX.Element {
     const footer =
@@ -36,6 +37,7 @@ export function ChatContent<T extends MinimalMessageData>({
             <MessageList
                 {...layerProps}
                 messages={messages}
+                rowRenderer={rowRenderer}
                 onFavoritePress={onFavoritePress}
                 onSharePress={onSharePress}
                 messageActions={messageActions}

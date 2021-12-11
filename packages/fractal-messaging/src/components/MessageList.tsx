@@ -28,6 +28,7 @@ export function MessageList<T extends MinimalMessageData>({
     messageActions,
     getBubbleColor,
     footerComponent,
+    rowRenderer,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
     const messagesWithAccessoryViews = useMemo(() => {
@@ -72,7 +73,7 @@ export function MessageList<T extends MinimalMessageData>({
         [chatMessageHeight, getTextHeight, spacings.m]
     );
 
-    const rowRenderer = useCallback(
+    const renderChatMessage = useCallback(
         (type, data) => {
             switch (type) {
                 case MessageViewTypes.Message:
@@ -146,7 +147,7 @@ export function MessageList<T extends MinimalMessageData>({
                             key={width}
                             layoutProvider={layoutProvider}
                             dataProvider={dataProviderState}
-                            rowRenderer={rowRenderer}
+                            rowRenderer={rowRenderer ? rowRenderer : renderChatMessage}
                             initialRenderIndex={messagesWithAccessoryViews.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
                         />

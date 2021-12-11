@@ -13,7 +13,8 @@ export function ChatMessage<T extends MinimalMessageData>({
     onFavoritePress,
     onSharePress,
     messageActions,
-    getBubbleColor
+    getBubbleColor,
+    children
 }: ChatMessageProps<T>): JSX.Element {
     const { colors, spacings } = useTheme();
     const [popoverVisible, setPopoverVisible] = useState(false);
@@ -82,6 +83,7 @@ export function ChatMessage<T extends MinimalMessageData>({
                         ) : (
                             <MessageText text={message.text} color={message.senderType == 'bot' ? colors.text : colors.white} />
                         )}
+                        {children?.(message)}
                     </Bubble>
                 )}
             </Popover>
