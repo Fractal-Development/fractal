@@ -1201,62 +1201,62 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bma98/fractal-auth-screen@^2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-auth-screen/-/fractal-auth-screen-2.0.7.tgz#755dbd74b77e83a8533f92de9f2730dda89e902c"
-  integrity sha512-kYDVrnCCky6DvcX60CMHtQogu6bc+fqhbewp+GfwKwh4NtXyZJah2ZZuCOMx8sxYFAgvADEZes5WHVU6YUX25Q==
+"@bma98/fractal-auth-screen@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-auth-screen/-/fractal-auth-screen-2.0.9.tgz#dbf3745f626e89befd4434a80d406776f40b19a4"
+  integrity sha512-dYrd6QMBlvjjhQPj7ytHIQoQ+/PMgYGvBtGOZ72tbMevCJ99QuPQDOiQGRxc8v0pyIui8BOL1aW7KoV3YmVaZg==
 
-"@bma98/fractal-charts@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-charts/-/fractal-charts-2.0.1.tgz#a8941aa8d120bb98d80256d204c54565488073bc"
-  integrity sha512-S/DhpcBzQVgqrxlOmOWrPjyy1veag2NhAB1R/dj4fyVLvcoKUCqs1FHixy6BeA28lufNxkvSiVXBVyOU7YQDxA==
+"@bma98/fractal-charts@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-charts/-/fractal-charts-2.0.2.tgz#f2bb868c599874e629fe24ec52ace5fbd73f7da3"
+  integrity sha512-ey4pXa2isCx/ySktlPG//M+7sdZj2TYA1zC69vyhfED/EDfWMId/SyPA+EqdqExN9en4BPZX+9GH2fms6cKRLw==
   dependencies:
-    "@types/node" "^16.3.2"
     d3-array "2.3.3"
     d3-scale "3.3.0"
     d3-shape "^3.0.1"
 
-"@bma98/fractal-examples@^2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.8.tgz#d2cc2ae3c1d16a7da53722aa197a6d9419aca9b4"
-  integrity sha512-QBArXXdjUORFW4aXscxZDdmpeMQX45Ugt2moY2CktcC+O26rqIvawQVFfi/muh2XJGAD7cNsRj4BlBrmDgTJcg==
+"@bma98/fractal-examples@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.9.tgz#e83fdbd8fd81edec67ea1379bda407031016acd5"
+  integrity sha512-SBX2xyEFqG8o1Gws/kIdawAiV3so84QbJLc9rl55JoQkkwpNyo0h/0BMn1EwAQ/0KFICCbZuUlRKyq6FnhE5KQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-media@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.4.tgz#caef1150c3280ff5eddcc71999598bb8135f2aa5"
-  integrity sha512-zgVeOO7ICbf9GqMMC5rx7nCYvyet/ott65Z/AmLAdy4QfA3Rrhlr2BGQLAeSDw9HobPbtd1n3GYQZCBbmtToAQ==
+"@bma98/fractal-media@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.5.tgz#76455a493908f99215885bd0302008a540647082"
+  integrity sha512-14KQMQD2tu03n8ogPF9dIZUX3wpEkwB81dNo16SLk/JDQGSb39hraOvlE/js+QuYUvf43YhiOHqm+jTvH8QSVQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
+    framer-motion "^4.1.17"
     styled-components "^5.3.0"
 
-"@bma98/fractal-messaging@^2.0.17":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.17.tgz#de0ac2f88728264b81101a689e5ebb2a1fc68886"
-  integrity sha512-L2CH6pRn9xZiRU2E+a7niM1cCoR+uzKRKYs81YDvxay6BVqqXbMTss0EAmmrQQ3qlSqDStYuwSm/dl+hLhAcFQ==
+"@bma98/fractal-messaging@^2.0.20":
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.20.tgz#aa3fdb34924baf396579660ea7e14de3b4ff4e61"
+  integrity sha512-Zri97J6KYPj8G7pQqRVvDlSstjTyMkJ6LRmKs4VJReAuCLSkKQjxSq6OgGib5+PrscCe0qfT5qKkd+O5r54qsA==
   dependencies:
-    "@bma98/fractal-media" "^2.0.4"
+    "@bma98/fractal-media" "^2.0.5"
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
     text-metrics "^2.0.9"
 
-"@bma98/fractal-navigation-router@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.1.tgz#191f386322156f0cd8560be797cad40663e8f85e"
-  integrity sha512-enuZfiSS9ztkXGSn9l0MKTjR9mmJoEbThG1o+OKgYxo5lrlLEil8pyYu5mENCnSskR6NQ/NlVdDBl9lP42IHHw==
+"@bma98/fractal-navigation-router@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.3.tgz#f89a5999aeb75b79577a1557b97e3c4b163d8835"
+  integrity sha512-syAAZN6a0AA/QXKM+NWv+oQhbHSBD6qQyeWjVPPTbB2xgLTa0LM/c07H/j2HIh2334bkOoOSHG41wU6BVUkbfw==
 
-"@bma98/fractal-navigation@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.5.tgz#37c7b01a55a464cecca9fe80e0e6a76bfd026474"
-  integrity sha512-zoTVbfTXmo9+4bNLmvDEMtMyVQ511U2wHhC7Oj8t0qNPe3lY3gjYlG5s4EDlTRzqf0R3ldYOv+1RnDyrmwsB6Q==
+"@bma98/fractal-navigation@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.9.tgz#d9532c06b2c338741d783524afc692f0a8707d9a"
+  integrity sha512-LUcyCdEqxQpbWCeiWkjVePbaKNmXFdccqaatjOGhIrpmszJbdfMchiS6CymSnAq3X7i84B7exzfmlegeQbCEfQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-ui@^2.0.11":
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.11.tgz#d8d4faccb74711613e46c5955266280931de3e00"
-  integrity sha512-fOzchXHgYhd0ZlV8d6dwGeZXRfVsH4F6J4AJOK22Haimxu3czIqv0VZi1UF9L0UrKl+2gQZbwUAV46nCJhbBJg==
+"@bma98/fractal-ui@^2.0.20":
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.20.tgz#0daacbdbf8ebb28eca96d4d8e1600258d15c94ec"
+  integrity sha512-YpMLOZMHhidb/z3KwqDpALDkcfOcA6DNdkCyhrk09IBpIpf2fcvtiBC+mT8YH5iorOi5gZ9wpz9yFvjLaC1fKA==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -1945,7 +1945,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
-"@types/node@*", "@types/node@^16.3.2":
+"@types/node@*":
   version "16.10.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.10.3.tgz#7a8f2838603ea314d1d22bb3171d899e15c57bd5"
   integrity sha512-ho3Ruq+fFnBrZhUYI46n/bV2GjwzSkwuT4dTf0GkuNFmnb8nq4ny2z9JEVemFi6bdEJanHLlYfy9c6FN9B9McQ==
