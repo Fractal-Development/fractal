@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react';
-import { ButtonVariant, KeyboardAvoidingLayerProps, LayerProps, TouchableOpacityProps } from '@bma98/fractal-ui';
+import { ButtonVariant, KeyboardAvoidingLayerProps, LayerProps, TouchableOpacityProps, ParseShape } from '@bma98/fractal-ui';
 
 export interface BubbleTriangleProps {
     color: string;
@@ -30,6 +30,7 @@ export interface ChatMessageProps<T> {
     messageActions?: (message: T) => ReactNode;
     getBubbleColor?: (message: T) => string;
     children?: (message: T) => ReactNode;
+    parsePatterns?: Array<ParseShape>;
 }
 
 export interface ChatContentProps<T extends MinimalMessageData> extends MessageListProps<T> {
@@ -42,8 +43,14 @@ export interface ChatContentProps<T extends MinimalMessageData> extends MessageL
     customFooter?: ReactElement | Array<ReactElement>;
 }
 
-export interface MessageListProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'message'>, Omit<LayerProps, 'children'> {
+export interface RowRendererProps<T extends MinimalMessageData> extends Omit<ChatMessageProps<T>, 'children'> {
+    index: number;
+}
+
+export interface MessageListProps<T extends MinimalMessageData>
+    extends Omit<ChatMessageProps<T>, 'message' | 'children'>,
+        Omit<LayerProps, 'children'> {
     messages: Array<T>;
     footerComponent?: ReactElement | Array<ReactElement>;
-    rowRenderer?: (type: string | number, data: any, index: number) => JSX.Element;
+    rowRenderer?: (props: RowRendererProps<T>) => JSX.Element;
 }

@@ -47,7 +47,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-ui": "^2.0.20",
+        "@bma98/fractal-ui": "^2.0.21",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",

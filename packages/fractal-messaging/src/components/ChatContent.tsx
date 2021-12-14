@@ -19,6 +19,7 @@ export function ChatContent<T extends MinimalMessageData>({
     enableFluidFooter,
     customFooter,
     rowRenderer,
+    parsePatterns,
     ...layerProps
 }: ChatContentProps<T>): JSX.Element {
     const footer =
@@ -38,6 +39,7 @@ export function ChatContent<T extends MinimalMessageData>({
                 {...layerProps}
                 messages={messages}
                 rowRenderer={rowRenderer}
+                parsePatterns={parsePatterns}
                 onFavoritePress={onFavoritePress}
                 onSharePress={onSharePress}
                 messageActions={messageActions}

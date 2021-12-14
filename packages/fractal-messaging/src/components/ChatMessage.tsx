@@ -1,12 +1,8 @@
 import React, { useState, useCallback, ReactNode } from 'react';
 import { Layer, Popover, useTheme } from '@bma98/fractal-ui';
-import { Bubble } from './Bubble';
 import { ChatMessageProps, MinimalMessageData } from './types';
-import { MessageImage } from './MessageImage';
-import { MessageAudio } from './MessageAudio';
-import { MessageVideo } from './MessageVideo';
-import { MessageText } from './MessageText';
 import { MessageActions } from './MessageActions';
+import { BaseChatMessage } from './BaseChatMessage';
 
 export function ChatMessage<T extends MinimalMessageData>({
     message,
@@ -14,9 +10,10 @@ export function ChatMessage<T extends MinimalMessageData>({
     onSharePress,
     messageActions,
     getBubbleColor,
-    children
+    children,
+    parsePatterns
 }: ChatMessageProps<T>): JSX.Element {
-    const { colors, spacings } = useTheme();
+    const { spacings } = useTheme();
     const [popoverVisible, setPopoverVisible] = useState(false);
 
     const showPopover = useCallback(() => {
@@ -62,29 +59,15 @@ export function ChatMessage<T extends MinimalMessageData>({
                 display='flex'
             >
                 {(ref) => (
-                    <Bubble
+                    <BaseChatMessage
                         ref={ref}
-                        arrowPosition={message.senderType === 'bot' ? 'left' : 'right'}
-                        color={
-                            getBubbleColor
-                                ? getBubbleColor(message)
-                                : message.senderType === 'bot'
-                                ? colors.foreground
-                                : colors.mainInteractiveColor
-                        }
+                        message={message}
+                        getBubbleColor={getBubbleColor}
+                        parsePatterns={parsePatterns}
                         onLongPress={showPopover}
                     >
-                        {message.image ? (
-                            <MessageImage source={message.image} />
-                        ) : message.audio ? (
-                            <MessageAudio source={message.audio} />
-                        ) : message.video ? (
-                            <MessageVideo source={message.video} />
-                        ) : (
-                            <MessageText text={message.text} color={message.senderType === 'bot' ? colors.text : colors.white} />
-                        )}
-                        {children?.(message)}
-                    </Bubble>
+                        {children}
+                    </BaseChatMessage>
                 )}
             </Popover>
             <Layer marginBottom={spacings.m} />

@@ -27,6 +27,7 @@ export function MessageList<T extends MinimalMessageData>({
     getBubbleColor,
     footerComponent,
     rowRenderer,
+    parsePatterns,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
     const messagesWithAccessoryViews = useMemo(() => {
@@ -37,6 +38,7 @@ export function MessageList<T extends MinimalMessageData>({
     }, [messages, footerComponent]);
     const listView = useRef<any>();
     const containerRef = useRef<any>();
+    const messagesLength = useRef<number>(messages.length);
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);
@@ -82,13 +84,37 @@ export function MessageList<T extends MinimalMessageData>({
                             onSharePress={onSharePress}
                             messageActions={messageActions}
                             getBubbleColor={getBubbleColor}
+                            parsePatterns={parsePatterns}
                         />
                     );
                 default:
                     return footerComponent ?? <></>;
             }
         },
-        [getBubbleColor, messageActions, onFavoritePress, onSharePress, footerComponent]
+        [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent]
+    );
+
+    const customChatMessageRenderer = useCallback(
+        (type, data, index) => {
+            switch (type) {
+                case MessageViewTypes.Message:
+                    if (rowRenderer) {
+                        return rowRenderer({
+                            message: data,
+                            index,
+                            onFavoritePress,
+                            onSharePress,
+                            messageActions,
+                            getBubbleColor,
+                            parsePatterns
+                        });
+                    }
+                    return null;
+                default:
+                    return footerComponent ?? <></>;
+            }
+        },
+        [footerComponent, getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]
     );
 
     const layoutProvider = useMemo(
@@ -125,8 +151,14 @@ export function MessageList<T extends MinimalMessageData>({
     }, [messagesWithAccessoryViews, maxContentWidth]);
 
     useEffect(() => {
-        scrollToEnd();
-    }, [dataProviderState, scrollToEnd]);
+        const handlescrollToEnd = async () => {
+            await scrollToEnd();
+            messagesLength.current = messages.length;
+        };
+        if (messagesLength.current !== messages.length) {
+            handlescrollToEnd();
+        }
+    }, [dataProviderState, messages.length, scrollToEnd]);
 
     useEffect(() => {
         if (containerRef.current?.clientWidth != null) {
@@ -146,7 +178,7 @@ export function MessageList<T extends MinimalMessageData>({
                             key={width}
                             layoutProvider={layoutProvider}
                             dataProvider={dataProviderState}
-                            rowRenderer={rowRenderer || renderChatMessage}
+                            rowRenderer={customChatMessageRenderer || renderChatMessage}
                             initialRenderIndex={messagesWithAccessoryViews.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
                         />
