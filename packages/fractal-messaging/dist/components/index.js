@@ -1,5 +1,6 @@
 export * from './AutoSizer';
 export * from './ChatLoadingIndicator';
+export * from './BaseChatMessage';
 export * from './Bubble';
 export * from './ChatContent';
 export * from './ChatMessage';

@@ -1,3 +1,12 @@
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -28,7 +37,7 @@ function getMaxBubbleWidth(width, paddingHorizontal) {
 }
 export function MessageList(_a) {
     var _b;
-    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, footerComponent, rowRenderer } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "footerComponent", "rowRenderer"]);
+    var { messages, onFavoritePress, onSharePress, messageActions, getBubbleColor, footerComponent, rowRenderer, parsePatterns } = _a, layerProps = __rest(_a, ["messages", "onFavoritePress", "onSharePress", "messageActions", "getBubbleColor", "footerComponent", "rowRenderer", "parsePatterns"]);
     const messagesWithAccessoryViews = useMemo(() => {
         if (footerComponent) {
             return [...messages, {}];
@@ -37,6 +46,7 @@ export function MessageList(_a) {
     }, [messages, footerComponent]);
     const listView = useRef();
     const containerRef = useRef();
+    const messagesLength = useRef(messages.length);
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);
@@ -65,11 +75,30 @@ export function MessageList(_a) {
     const renderChatMessage = useCallback((type, data) => {
         switch (type) {
             case MessageViewTypes.Message:
-                return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor }));
+                return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor, parsePatterns: parsePatterns }));
             default:
                 return footerComponent !== null && footerComponent !== void 0 ? footerComponent : React.createElement(React.Fragment, null);
         }
-    }, [getBubbleColor, messageActions, onFavoritePress, onSharePress, footerComponent]);
+    }, [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent]);
+    const customChatMessageRenderer = useCallback((type, data, index) => {
+        switch (type) {
+            case MessageViewTypes.Message:
+                if (rowRenderer) {
+                    return rowRenderer({
+                        message: data,
+                        index,
+                        onFavoritePress,
+                        onSharePress,
+                        messageActions,
+                        getBubbleColor,
+                        parsePatterns
+                    });
+                }
+                return null;
+            default:
+                return footerComponent !== null && footerComponent !== void 0 ? footerComponent : React.createElement(React.Fragment, null);
+        }
+    }, [footerComponent, getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]);
     const layoutProvider = useMemo(() => new LayoutProvider((index) => {
         const message = messages[index];
         return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
@@ -95,14 +124,20 @@ export function MessageList(_a) {
         setDataProviderState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     }, [messagesWithAccessoryViews, maxContentWidth]);
     useEffect(() => {
-        scrollToEnd();
-    }, [dataProviderState, scrollToEnd]);
+        const handlescrollToEnd = () => __awaiter(this, void 0, void 0, function* () {
+            yield scrollToEnd();
+            messagesLength.current = messages.length;
+        });
+        if (messagesLength.current !== messages.length) {
+            handlescrollToEnd();
+        }
+    }, [dataProviderState, messages.length, scrollToEnd]);
     useEffect(() => {
         var _a, _b;
         if (((_a = containerRef.current) === null || _a === void 0 ? void 0 : _a.clientWidth) != null) {
             setMaxContentWidth(getMaxBubbleWidth((_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m));
         }
     }, [(_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m]);
-    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer || renderChatMessage, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
+    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: customChatMessageRenderer || renderChatMessage, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
 }
 //# sourceMappingURL=MessageList.js.map

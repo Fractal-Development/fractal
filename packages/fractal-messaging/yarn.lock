@@ -1188,10 +1188,10 @@
     framer-motion "^4.1.17"
     styled-components "^5.3.0"
 
-"@bma98/fractal-ui@^2.0.20":
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.20.tgz#0daacbdbf8ebb28eca96d4d8e1600258d15c94ec"
-  integrity sha512-YpMLOZMHhidb/z3KwqDpALDkcfOcA6DNdkCyhrk09IBpIpf2fcvtiBC+mT8YH5iorOi5gZ9wpz9yFvjLaC1fKA==
+"@bma98/fractal-ui@^2.0.21":
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.21.tgz#0f8b855ba70675c2f65026a250ab15cd49df05a2"
+  integrity sha512-q1EXllSWLnYMzHiOBxRB3eknkx/frApAoZDdO5cb4A0RDjBD8jGFB1Uv++a5RvcU/CjzQ+l7KnjDdj+Gs3EOww==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
