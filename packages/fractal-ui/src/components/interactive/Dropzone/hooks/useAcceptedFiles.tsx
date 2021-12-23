@@ -3,7 +3,6 @@ import { DropzoneProps, FractalFile, NativeFileInfo } from '../types';
 import { useValidateFile } from './useValidateFile';
 
 export function useAcceptedFiles(
-    acceptedTypes: Array<string> | undefined,
     maxFileSize: number | undefined,
     maxNumberFiles: number | undefined,
     onChangeAcceptedFiles: DropzoneProps['onChangeAcceptedFiles']
@@ -13,7 +12,7 @@ export function useAcceptedFiles(
     removeFile: (fileIndex: number) => void
 ] {
     const [acceptedFiles, setAcceptedFiles] = useState<Array<FractalFile>>([]);
-    const validateFile = useValidateFile(acceptedTypes, maxFileSize);
+    const validateFile = useValidateFile(maxFileSize);
 
     const updateAcceptedFiles = useCallback(
         (newFiles: Array<FractalFile>) => {
@@ -27,7 +26,7 @@ export function useAcceptedFiles(
         (files: FileList | Array<NativeFileInfo>, endIndex: number): Array<FractalFile> => {
             let validFiles: Array<FractalFile> = [];
             for (let i = 0; i < endIndex; i++) {
-                if (validateFile(files[i].type, files[i].size)) {
+                if (validateFile(files[i].size)) {
                     validFiles = [...validFiles, files[i]];
                 }
             }
@@ -42,9 +41,8 @@ export function useAcceptedFiles(
                 if (acceptedFiles.length < maxNumberFiles) {
                     const filesLength = maxNumberFiles - acceptedFiles.length;
                     return getValidFiles(files, filesLength);
-                } 
-                    return [];
-                
+                }
+                return [];
             }
 
             return getValidFiles(files, files.length);

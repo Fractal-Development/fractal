@@ -1,13 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { HorizontalLayer, Layer } from '../../layout';
 import { Image } from '../../media/Image';
-import { useValidateFileType } from './hooks/useValidateFileType';
 import { FractalFile, isNativeFileInfo } from './types';
 import { Text } from '../../text';
 import { useTheme } from '../../../context';
 import { CrossButton } from '../buttons/CrossButton';
 import { FileIcon } from '../../../assets';
-import { fileTypes } from './fileTypes';
 
 const PREVIEW_SIZE = 44;
 
@@ -26,8 +24,7 @@ export interface UploadedFileItemProps {
 
 export function UploadedFileItem({ file, onDeletePress }: UploadedFileItemProps): JSX.Element {
     const { spacings, colors } = useTheme();
-    const validateFileType = useValidateFileType([fileTypes.images]);
-    const isImageFile = validateFileType(file.type);
+    const isImageFile = file.type.startsWith('image/') && file.type !== 'image/svg+xml';
     const [imageSource, setImageSource] = useState<string>();
 
     const formatFileSize = useCallback((size: number | undefined) => {

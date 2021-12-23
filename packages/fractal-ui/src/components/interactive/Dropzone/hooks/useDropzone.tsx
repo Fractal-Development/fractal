@@ -1,5 +1,6 @@
 import { useRef, ChangeEvent, useCallback } from 'react';
-import { DragAndDropEventHandlers, FileInputProps, FractalFile } from '../types';
+import { getMIMETypes } from '../fileTypes/getMIMETypes';
+import { DragAndDropEventHandlers, FileInputProps, FileTypes, FractalFile } from '../types';
 import { useAcceptedFiles } from './useAcceptedFiles';
 import { useDragAndDropEventHandlers } from './useDragAndDropEventHandlers';
 
@@ -14,7 +15,7 @@ import { useDragAndDropEventHandlers } from './useDragAndDropEventHandlers';
  */
 
 export function useDropzone(
-    acceptedTypes: Array<string> | undefined,
+    acceptedTypes: Array<keyof FileTypes> | Array<string> | undefined,
     pickMultipleFiles: boolean | undefined,
     maxNumberFiles: number | undefined,
     maxFileSize: number | undefined,
@@ -28,12 +29,8 @@ export function useDropzone(
     fileInputProps: FileInputProps;
 } {
     const fileInputRef = useRef<HTMLInputElement>(null);
-    const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(
-        acceptedTypes,
-        maxFileSize,
-        maxNumberFiles,
-        onChangeAcceptedFiles
-    );
+    const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(maxFileSize, maxNumberFiles, onChangeAcceptedFiles);
+
     const { dragFocused, onDragEnter, onDragLeave, onDragOver, onDrop } = useDragAndDropEventHandlers(setAcceptedFiles);
 
     const openFileDialog = useCallback(() => {
@@ -64,7 +61,7 @@ export function useDropzone(
         },
         fileInputProps: {
             ref: fileInputRef,
-            accept: acceptedTypes?.join(','),
+            accept: getMIMETypes(acceptedTypes)?.join(','),
             multiple: pickMultipleFiles,
             type: 'file',
             onChange: handlePickedFiles

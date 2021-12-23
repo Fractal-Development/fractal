@@ -1,13 +1,7 @@
 import { useCallback } from 'react';
-import { useValidateFileType } from './useValidateFileType';
 
-export function useValidateFile(
-    acceptedTypes: Array<string> | undefined,
-    maxFileSize: number | undefined
-): (fileType: string, fileSize: number | undefined) => boolean {
-    const validateFileType = useValidateFileType(acceptedTypes);
-
-    const validateFileSize = useCallback(
+export function useValidateFile(maxFileSize: number | undefined): (fileSize: number | undefined) => boolean {
+    return useCallback(
         (fileSize: number) => {
             if (maxFileSize && fileSize > maxFileSize) {
                 return false;
@@ -15,10 +9,5 @@ export function useValidateFile(
             return true;
         },
         [maxFileSize]
-    );
-
-    return useCallback(
-        (fileType: string, fileSize: number) => validateFileType(fileType) && validateFileSize(fileSize),
-        [validateFileSize, validateFileType]
     );
 }
