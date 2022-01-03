@@ -1,9 +1,7 @@
 import React, { createContext, ReactNode, useState, Dispatch, SetStateAction, useEffect } from 'react';
 import { usePlatformColorScheme } from '../hooks/usePlatformColorScheme';
 
-const placeholderFunction = () => {
-    
-};
+const placeholderFunction = () => {};
 
 export type ThemeIdentifierType = 'light' | 'dark';
 

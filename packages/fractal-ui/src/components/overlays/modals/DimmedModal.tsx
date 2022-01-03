@@ -14,7 +14,8 @@ const pressableAnimationStyles = {
     animate: { opacity: 0.6 }
 };
 
-const DimmedModal = forwardRef(({ visible, onDismiss, onExitComplete, ...others }: ModalProps, ref: any): JSX.Element => (
+const DimmedModal = forwardRef(
+    ({ visible, onDismiss, onExitComplete, ...others }: ModalProps, ref: any): JSX.Element => (
         <Modal
             ref={ref}
             visible={visible}
@@ -38,7 +39,8 @@ const DimmedModal = forwardRef(({ visible, onDismiss, onExitComplete, ...others 
             />
             <SafeAreaLayer zIndex={1000} {...others} />
         </Modal>
-    ));
+    )
+);
 
 DimmedModal.displayName = 'DimmedModal';
 

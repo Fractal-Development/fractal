@@ -59,16 +59,16 @@ export function DropBox({
             position='relative'
             minHeight={sizes.interactiveItemHeight}
             padding={spacings.xs}
-            borderStyle="dashed"
+            borderStyle='dashed'
             borderRadius={borderRadius.m}
             borderWidth={1}
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="row"
+            justifyContent='center'
+            alignItems='center'
+            flexDirection='row'
             variants={variants}
             currentVariant={dragFocused ? 'focus' : 'from'}
         >
-            <Layer position="absolute" top={0} bottom={0} left={0} right={0} overflow='hidden' {...dropContainerProps} />
+            <Layer position='absolute' top={0} bottom={0} left={0} right={0} overflow='hidden' {...dropContainerProps} />
             <FileInput {...fileInputProps} />
             <LoadIcon width={24} height={24} fill={colors.text} />
             <Layer width={spacings.xs} />

@@ -13,16 +13,18 @@ export const SegmentsSeparators = ({ values, selectedIndex }: Props): JSX.Elemen
 
     return (
         <Layer
-            position="absolute"
+            position='absolute'
             top={0}
             left={0}
             right={0}
             bottom={0}
-            flexDirection="row"
-            alignItems="center"
-            justifyContent="space-evenly"
+            flexDirection='row'
+            alignItems='center'
+            justifyContent='space-evenly'
         >
-            {[...Array.from(new Array(values - 1).keys())].map((value) => <Layer key={value} width={1} height="50%" backgroundColor={hide(value) ? 'transparent' : colors.placeholder} />)}
+            {[...Array.from(new Array(values - 1).keys())].map((value) => (
+                <Layer key={value} width={1} height='50%' backgroundColor={hide(value) ? 'transparent' : colors.placeholder} />
+            ))}
         </Layer>
     );
 };

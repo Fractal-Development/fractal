@@ -20,18 +20,18 @@ const ColorPicker = forwardRef(({ colors, onColorChange, defaultValue, value, ..
     const handleColorChange = (_active: boolean, color: string) => setActiveColor(color);
 
     const renderColorToggle = (color: string) => (
-            <ColorToggle
-                backgroundColor={color}
-                key={color}
-                onActiveChange={handleColorChange}
-                active={activeColor === color}
-                margin={spacings.xs}
-                {...getColorAccessibilityProps(activeColor === color)}
-            />
-        );
+        <ColorToggle
+            backgroundColor={color}
+            key={color}
+            onActiveChange={handleColorChange}
+            active={activeColor === color}
+            margin={spacings.xs}
+            {...getColorAccessibilityProps(activeColor === color)}
+        />
+    );
 
     return (
-        <HorizontalLayer ref={ref} justifyContent="space-around" flexWrap="wrap" {...others}>
+        <HorizontalLayer ref={ref} justifyContent='space-around' flexWrap='wrap' {...others}>
             {colors.map(renderColorToggle)}
         </HorizontalLayer>
     );

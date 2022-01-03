@@ -7,7 +7,6 @@ export function StatusBar(): JSX.Element {
 
     if (Platform.OS === 'android') {
         return <RNStatusBar barStyle='light-content' />;
-    } 
-        return <RNStatusBar barStyle={currentThemeIdentifier === 'light' ? 'dark-content' : 'light-content'} />;
-    
+    }
+    return <RNStatusBar barStyle={currentThemeIdentifier === 'light' ? 'dark-content' : 'light-content'} />;
 }

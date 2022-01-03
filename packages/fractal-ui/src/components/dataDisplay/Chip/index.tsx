@@ -13,15 +13,15 @@ const Chip = forwardRef(({ text, children, onCrossButtonPress, ...others }: Chip
         <Box
             ref={ref}
             maxWidth={200}
-            flexDirection="row"
-            alignItems="center"
-            justifyContent="center"
+            flexDirection='row'
+            alignItems='center'
+            justifyContent='center'
             padding={spacings.xs}
             {...getChipAccessibilityProps(text)}
             {...others}
         >
             {text != null ? (
-                <Text variant='normal' overflow="hidden" numberOfLines={1}>
+                <Text variant='normal' overflow='hidden' numberOfLines={1}>
                     {text}
                 </Text>
             ) : null}

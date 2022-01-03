@@ -26,7 +26,7 @@ export function BaseSwitch({ value, onValueChange }: BaseSwitchProps): JSX.Eleme
 
     return (
         <Pressable
-            flexDirection="row"
+            flexDirection='row'
             height={24}
             width={40}
             borderRadius={12}

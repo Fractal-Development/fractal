@@ -50,8 +50,8 @@ const BaseSegmentedControl = forwardRef(
         return (
             <Layer
                 ref={ref}
-                overflow="hidden"
-                position="relative"
+                overflow='hidden'
+                position='relative'
                 height={sizes.segmentedControlSize}
                 backgroundColor={backgroundColor ?? colors.background}
                 borderRadius={borderRadius.s}
@@ -62,18 +62,18 @@ const BaseSegmentedControl = forwardRef(
                 <SegmentsContainer>
                     {values &&
                         values.map((value, index) => (
-                                <SegmentedControlTab
-                                    selected={selectedIndex === index}
-                                    key={index}
-                                    value={value}
-                                    tintColor={tintColor}
-                                    textStyle={textStyle}
-                                    activeTextStyle={activeTextStyle}
-                                    onSelect={() => {
-                                        onTabPress(index);
-                                    }}
-                                />
-                            ))}
+                            <SegmentedControlTab
+                                selected={selectedIndex === index}
+                                key={index}
+                                value={value}
+                                tintColor={tintColor}
+                                textStyle={textStyle}
+                                activeTextStyle={activeTextStyle}
+                                onSelect={() => {
+                                    onTabPress(index);
+                                }}
+                            />
+                        ))}
                 </SegmentsContainer>
                 {selectedIndex != null && segmentWidth ? (
                     <Slider boxShadow={shadows.mainShadow} borderRadius={borderRadius.s} style={sliderStyle} />

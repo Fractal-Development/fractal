@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, SetStateAction, useState, useEffect, useCallback , ReactElement } from 'react';
+import React, { createContext, Dispatch, SetStateAction, useState, useEffect, useCallback, ReactElement } from 'react';
 
 export type SelectedOptionsType = Array<unknown>;
 

@@ -87,8 +87,8 @@ export function BaseSegmentedControlTab({
         <Tap noDivider={hideDivider ?? selected} whileTap={selected ? { scale: 0.95 } : { opacity: 0.6 }}>
             <Button
                 margin={0}
-                width="100%"
-                height="100%"
+                width='100%'
+                height='100%'
                 type='button'
                 onClick={onSelect}
                 {...getSegmentedControlButtonAccessibilityProps(selected)}
@@ -101,7 +101,7 @@ export function BaseSegmentedControlTab({
                         borderRadius={borderRadius.s}
                     />
                 )}
-                <Layer position="relative" zIndex={2} alignItems="center">
+                <Layer position='relative' zIndex={2} alignItems='center'>
                     <Text fontFamily={fontFamily} fontSize={fontSize} color={color} fontWeight={fontWeight} fontStyle={fontStyle}>
                         {value}
                     </Text>

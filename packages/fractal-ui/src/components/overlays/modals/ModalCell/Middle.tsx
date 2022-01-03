@@ -20,10 +20,10 @@ function MiddleCellSharedStyles(props: LayerProps): JSX.Element {
 }
 
 export function MiddleCellDesktop(props: LayerProps): JSX.Element {
-    return <MiddleCellSharedStyles maxWidth={550} maxHeight={550} width="60%" height="60%" {...props} />;
+    return <MiddleCellSharedStyles maxWidth={550} maxHeight={550} width='60%' height='60%' {...props} />;
 }
 
 export function MiddleCellPhone(props: LayerProps): JSX.Element {
     const { spacings } = useTheme();
-    return <MiddleCellSharedStyles alignSelf="stretch" flex={1} margin={spacings.m} {...props} />;
+    return <MiddleCellSharedStyles alignSelf='stretch' flex={1} margin={spacings.m} {...props} />;
 }

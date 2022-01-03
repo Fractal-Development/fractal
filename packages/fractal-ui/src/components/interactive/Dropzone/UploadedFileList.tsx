@@ -12,10 +12,10 @@ interface UploadedFileListProps {
 export function UploadedFileList({ files, removeFile }: UploadedFileListProps): JSX.Element {
     const renderItem = useCallback(
         (file: File, index: number): JSX.Element => (
-                <Fragment key={`${index}`}>
-                    <UploadedFileItem file={file} onDeletePress={() => removeFile(index)} />
-                </Fragment>
-            ),
+            <Fragment key={`${index}`}>
+                <UploadedFileItem file={file} onDeletePress={() => removeFile(index)} />
+            </Fragment>
+        ),
         [removeFile]
     );
 

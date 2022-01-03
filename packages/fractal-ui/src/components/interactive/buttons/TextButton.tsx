@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Text , TextProps } from '../../text';
+import { Text, TextProps } from '../../text';
 import { AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
 import { useTheme } from '../../../context';
 import { ButtonVariant } from './types';
@@ -33,7 +33,7 @@ const TextButton = forwardRef(
             >
                 {leftIcon && leftIcon(color)}
                 {children && (
-                    <Text fontWeight={500} variant="textButton" color={color} {...textProps}>
+                    <Text fontWeight={500} variant='textButton' color={color} {...textProps}>
                         {children}
                     </Text>
                 )}

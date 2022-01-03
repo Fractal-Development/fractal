@@ -1,3 +1,1 @@
-export function startFractalApp(): void {
-    
-}
+export function startFractalApp(): void {}

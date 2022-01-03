@@ -1,5 +1,5 @@
 import React, { useState, forwardRef } from 'react';
-import { LayerProps , Layer } from '../../layout';
+import { LayerProps, Layer } from '../../layout';
 import { Pressable } from '../../interactive';
 import { CheckIcon } from '../../../assets';
 
@@ -53,13 +53,13 @@ const ColorToggle = forwardRef(({ onActiveChange, backgroundColor, active, ...ot
             width={40}
             height={40}
             borderRadius={20}
-            justifyContent="center"
-            alignItems="center"
+            justifyContent='center'
+            alignItems='center'
             backgroundColor={backgroundColor}
             {...others}
         >
             <Layer from={variant} animate={variant} variants={styleVariants}>
-                <CheckIcon height={24} width={24} fill="white" />
+                <CheckIcon height={24} width={24} fill='white' />
             </Layer>
         </Pressable>
     );

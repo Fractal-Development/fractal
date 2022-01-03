@@ -9,7 +9,8 @@ export interface DetailsRowProps extends BaseRowProps {
     details: string;
 }
 
-const DetailsRow = forwardRef(({ title, details, ...others }: DetailsRowProps, ref: any): JSX.Element => (
+const DetailsRow = forwardRef(
+    ({ title, details, ...others }: DetailsRowProps, ref: any): JSX.Element => (
         <BaseRow ref={ref} {...others}>
             <HorizontalLayer>
                 <Layer flexGrow={1}>
@@ -20,7 +21,8 @@ const DetailsRow = forwardRef(({ title, details, ...others }: DetailsRowProps, r
                 </Text>
             </HorizontalLayer>
         </BaseRow>
-    ));
+    )
+);
 
 DetailsRow.displayName = 'DetailsRow';
 

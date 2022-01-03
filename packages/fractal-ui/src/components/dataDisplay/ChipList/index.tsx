@@ -21,16 +21,16 @@ export function ChipList<T extends IDEnabled>({ data, getLabel, onItemPress, ...
     const { spacings, colors, borderRadius } = useTheme();
 
     const renderItem = (item: T): JSX.Element => (
-            <Chip
-                key={item.id}
-                animate={styleVariants.visible}
-                exit={styleVariants.hidden}
-                marginRight={spacings.s}
-                marginBottom={spacings.s}
-                onCrossButtonPress={() => onItemPress(item)}
-                text={getLabel(item)}
-            />
-        );
+        <Chip
+            key={item.id}
+            animate={styleVariants.visible}
+            exit={styleVariants.hidden}
+            marginRight={spacings.s}
+            marginBottom={spacings.s}
+            onCrossButtonPress={() => onItemPress(item)}
+            text={getLabel(item)}
+        />
+    );
 
     return (
         <ScrollWrapper

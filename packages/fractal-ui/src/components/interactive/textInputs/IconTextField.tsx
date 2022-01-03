@@ -32,8 +32,8 @@ const IconTextField = forwardRef(
                 borderRadius={borderRadius.s}
                 height={sizes.textFieldHeight}
                 backgroundColor={colors.textField}
-                justifyContent="space-evenly"
-                alignItems="center"
+                justifyContent='space-evenly'
+                alignItems='center'
                 {...others}
             >
                 {leftImage != null ? (

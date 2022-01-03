@@ -7,11 +7,13 @@ export type GoogleButtonProps = Partial<Omit<ButtonProps, 'variant'>> & {
     loading?: boolean;
 };
 
-const GoogleButton = forwardRef((props: GoogleButtonProps, ref: any): JSX.Element => (
-        <Button reduceColor addShadow ref={ref} variant="content" {...getGoogleButtonAccessibilityProps()} {...props}>
+const GoogleButton = forwardRef(
+    (props: GoogleButtonProps, ref: any): JSX.Element => (
+        <Button reduceColor addShadow ref={ref} variant='content' {...getGoogleButtonAccessibilityProps()} {...props}>
             <GoogleIcon height={24} />
         </Button>
-    ));
+    )
+);
 
 GoogleButton.displayName = 'GoogleButton';
 

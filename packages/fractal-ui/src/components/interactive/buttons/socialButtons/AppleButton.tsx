@@ -15,7 +15,7 @@ const AppleButton = forwardRef((props: AppleButtonProps, ref: any): JSX.Element 
             ref={ref}
             addShadow
             backgroundColor='#000000'
-            pressedBackgroundColor="#111111"
+            pressedBackgroundColor='#111111'
             {...getAppleButtonAccessibilityProps()}
             {...props}
         >

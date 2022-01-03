@@ -42,7 +42,7 @@ export function AutoCompleteModal<T extends IDEnabled>({
                 </PaddingLayer>
                 <SuggestionsList multiple={multiple} filteredData={filteredData} getLabel={getLabel} onItemPress={onItemPress} />
                 <PaddingLayer>
-                    <Button variant="main" text={doneText} onPress={hideModal} />
+                    <Button variant='main' text={doneText} onPress={hideModal} />
                 </PaddingLayer>
             </Box>
         </MiddleCellModal>

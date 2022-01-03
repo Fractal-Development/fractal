@@ -6,25 +6,22 @@ export function useToggleButtonColors(variant: ButtonVariant, active = false, us
     const backgroundColorName = (() => {
         if (active) {
             return variant === 'content' ? `${variant}InteractiveColor600` : `${variant}InteractiveColor100`;
-        } 
-            return 'background';
-        
+        }
+        return 'background';
     })();
 
     const foregroundColorName = (() => {
         if (active) {
             return variant === 'content' ? 'text' : `${variant}InteractiveColor`;
-        } 
-            return useGrayVariant ? `placeholder` : 'text';
-        
+        }
+        return useGrayVariant ? `placeholder` : 'text';
     })();
 
     const pressedColorName = (() => {
         if (active) {
             return variant === 'content' ? `${variant}InteractiveColor800` : `${variant}InteractiveColor200`;
-        } 
-            return `background`;
-        
+        }
+        return `background`;
     })();
 
     const backgroundColor = colors[backgroundColorName];

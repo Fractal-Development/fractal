@@ -25,7 +25,10 @@ const Popover = forwardRef(
         const [popoverViewLayout, setPopoverViewLayout] = useState<LayoutRectangle>({ x: 0, y: 0, height: 0, width: 0 });
         const anchorRef = useRef<View>();
 
-        const styles = useMemo(() => getNativePlacementOffsetStyle(anchorViewLayout, popoverViewLayout, placement), [anchorViewLayout, placement, popoverViewLayout]);
+        const styles = useMemo(
+            () => getNativePlacementOffsetStyle(anchorViewLayout, popoverViewLayout, placement),
+            [anchorViewLayout, placement, popoverViewLayout]
+        );
 
         const onPopoverLayout = useCallback(({ nativeEvent: { layout } }: LayoutChangeEvent) => {
             setPopoverViewLayout(layout);

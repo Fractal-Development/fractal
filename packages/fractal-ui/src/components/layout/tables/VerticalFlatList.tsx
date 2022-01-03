@@ -10,14 +10,17 @@ export interface VerticalFlatListProps extends Omit<RecyclerViewProps, 'layoutPr
 export function VerticalFlatList({ rowHeight, ...others }: VerticalFlatListProps): ReactElement {
     const width = useSizeValue('width');
 
-    const layoutProvider = useMemo(() => new LayoutProvider(
-            () => 0,
-            (_, dim) => {
-                dim.height = rowHeight;
-                dim.width = width;
-                
-            }
-        ), [width, rowHeight]);
+    const layoutProvider = useMemo(
+        () =>
+            new LayoutProvider(
+                () => 0,
+                (_, dim) => {
+                    dim.height = rowHeight;
+                    dim.width = width;
+                }
+            ),
+        [width, rowHeight]
+    );
 
     return <AutoSizeRecyclerView layoutProvider={layoutProvider} {...others} />;
 }

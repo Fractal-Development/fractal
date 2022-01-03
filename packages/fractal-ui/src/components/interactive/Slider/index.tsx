@@ -19,20 +19,20 @@ const Slider = forwardRef(
         }: SliderProps,
         ref: any
     ): JSX.Element => (
-            <Layer ref={ref} {...layerProps}>
-                <BaseSlider
-                    defaultValue={defaultValue}
-                    minimumValue={minimumValue}
-                    maximumValue={maximumValue}
-                    onValueChange={onValueChange}
-                    onSlidingStart={onSlidingStart}
-                    onSlidingComplete={onSlidingComplete}
-                    step={step}
-                    name={name}
-                    value={value}
-                />
-            </Layer>
-        )
+        <Layer ref={ref} {...layerProps}>
+            <BaseSlider
+                defaultValue={defaultValue}
+                minimumValue={minimumValue}
+                maximumValue={maximumValue}
+                onValueChange={onValueChange}
+                onSlidingStart={onSlidingStart}
+                onSlidingComplete={onSlidingComplete}
+                step={step}
+                name={name}
+                value={value}
+            />
+        </Layer>
+    )
 );
 
 Slider.displayName = 'Slider';

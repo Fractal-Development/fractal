@@ -56,7 +56,7 @@ const ButtonTextField = forwardRef(
         };
 
         return (
-            <HorizontalLayer ref={ref} alignItems="center" height={sizes.textFieldHeight} {...layerProps}>
+            <HorizontalLayer ref={ref} alignItems='center' height={sizes.textFieldHeight} {...layerProps}>
                 <IconTextField
                     value={text}
                     flex={1}

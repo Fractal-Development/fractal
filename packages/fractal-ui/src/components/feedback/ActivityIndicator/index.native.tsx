@@ -9,11 +9,13 @@ const StyledRNActivityIndicator = styled(RNActivityIndicator)`
     height: 100%;
 `;
 
-const ActivityIndicator = forwardRef(({ color, ...others }: ActivityIndicatorProps, ref: any): JSX.Element => (
+const ActivityIndicator = forwardRef(
+    ({ color, ...others }: ActivityIndicatorProps, ref: any): JSX.Element => (
         <Layer ref={ref} {...others}>
             <StyledRNActivityIndicator color={color} size='large' />
         </Layer>
-    ));
+    )
+);
 
 ActivityIndicator.displayName = 'ActivityIndicator';
 

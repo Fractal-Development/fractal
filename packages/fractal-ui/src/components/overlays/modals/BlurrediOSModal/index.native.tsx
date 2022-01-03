@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { BlurView } from 'expo-blur';
-import { View , Dimensions } from 'react-native';
+import { View, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { TextButton } from '../../../interactive/buttons/TextButton';
@@ -27,10 +27,10 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
             ref={ref}
             visible={visible}
             onDismiss={onDismiss}
-            pointerEvents="box-none"
-            height="100%"
-            width="100%"
-            justifyContent="flex-end"
+            pointerEvents='box-none'
+            height='100%'
+            width='100%'
+            justifyContent='flex-end'
             {...others}
         >
             <Pressable flex={1} onPress={onDismiss} />
@@ -51,7 +51,7 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
                         bottom={0}
                         left={0}
                         right={0}
-                        position="absolute"
+                        position='absolute'
                         style={{ opacity: 0.1 }}
                         backgroundColor={themeIdentifier === 'light' ? 'black' : 'white'}
                     />
@@ -64,7 +64,7 @@ const BlurrediOSModal = forwardRef(({ children, onDismiss, dismissText, visible,
                         height={48}
                         paddingRight={spacings.m}
                     >
-                        <TextButton variant="main" textProps={{ variant: 'label', fontWeight: 600 }} onPress={onDismiss}>
+                        <TextButton variant='main' textProps={{ variant: 'label', fontWeight: 600 }} onPress={onDismiss}>
                             {dismissText}
                         </TextButton>
                     </Layer>
