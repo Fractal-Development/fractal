@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 import { PaddingLayer } from '@bma98/fractal-ui';
-import { ChatContentFragment } from '../messaging-fragments';
+import { ChatContentFragment } from '../fragments/messaging-fragments';
 export function ChatContentFragmentScreen() {
     return (React.createElement(NavigationBarInsetsLayer, null,
         React.createElement(PaddingLayer, { flex: 1 },

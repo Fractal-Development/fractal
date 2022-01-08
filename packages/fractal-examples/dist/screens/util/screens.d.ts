@@ -3,11 +3,19 @@ export interface Screen {
     path: string;
 }
 export declare const screens: {
-    recyclerViewFragment: {
+    chipFragment: {
         name: string;
         path: string;
     };
-    chipFragment: {
+    chipListFragment: {
+        name: string;
+        path: string;
+    };
+    colorTabListFragment: {
+        name: string;
+        path: string;
+    };
+    recyclerViewFragment: {
         name: string;
         path: string;
     };
@@ -21,6 +29,12 @@ export declare const screens: {
     };
 };
 export declare const screensArray: ({
+    name: string;
+    path: string;
+} | {
+    name: string;
+    path: string;
+} | {
     name: string;
     path: string;
 } | {

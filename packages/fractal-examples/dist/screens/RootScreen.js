@@ -3,7 +3,7 @@ import { Layer, LayoutProvider, PaddingLayer, SearchBar, TableContainer, Touchab
 import { useSizeValue } from '@bma98/size-class';
 import { useHistory } from '@bma98/fractal-navigation-router';
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
-import { dataProvider } from '../ui-fragments/layout/tables/util/tableHelpers';
+import { dataProvider } from '../fragments/ui-fragments/layout/tables/util/tableHelpers';
 import { lastScreenIndex, screensArray } from './util/screens';
 export function RootScreen() {
     const [dataProviderState] = useState(dataProvider.cloneWithRows(screensArray));
@@ -25,7 +25,7 @@ export function RootScreen() {
     return (React.createElement(NavigationBarInsetsLayer, null,
         React.createElement(PaddingLayer, { flex: 1 },
             React.createElement(TableContainer, { title: 'Table Container', flex: 1 },
-                React.createElement(SearchBar, { placeholder: "Buscar", buttonText: "Buscar", marginBottom: spacings.lg, enableSearchButton: true }),
+                React.createElement(SearchBar, { placeholder: 'Buscar', buttonText: 'Buscar', marginBottom: spacings.lg, enableSearchButton: true }),
                 React.createElement(Layer, { flex: 1 },
                     React.createElement(AutoSizeRecyclerView, { layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: rowRenderer }))))));
 }
