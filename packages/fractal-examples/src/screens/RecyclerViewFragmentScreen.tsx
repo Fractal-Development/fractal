@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 import { PaddingLayer } from '@bma98/fractal-ui';
-import { RecyclerViewFragment } from '../ui-fragments';
+import { RecyclerViewFragment } from '../fragments/ui-fragments';
 
 export function RecyclerViewFragmentScreen(): ReactElement {
     return (

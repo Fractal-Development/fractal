@@ -14,12 +14,14 @@ import {
 import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
-import { ChipFragmentScreen } from './screens/ChipFragmentScreen';
+import { ChipFragmentScreen } from './screens/ui-screens/dataDisplay/ChipFragmentScreen';
 import { ReactIcon } from './assets/ReactIcon';
 import { routes } from './screens/util/routes';
 import { screens } from './screens/util/screens';
 import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
 import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
+import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
+import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;
@@ -47,23 +49,35 @@ export function MainExample(): JSX.Element {
                         <TabBarInsetsLayer>
                             <StackNavigator path={routes.components}>
                                 <StackScreen
-                                    navBarConfig={<NavigationBarConfig title="Fragments" largeTitle />}
+                                    navBarConfig={<NavigationBarConfig title='Fragments' largeTitle />}
                                     isRootRoute
                                     path={routes.components}
                                 >
                                     <RootScreen />
                                 </StackScreen>
                                 <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.recyclerViewFragment.name} />}
-                                    path={screens.recyclerViewFragment.path}
-                                >
-                                    <RecyclerViewFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
                                     navBarConfig={<NavigationBarConfig title={screens.chipFragment.name} />}
                                     path={screens.chipFragment.path}
                                 >
                                     <ChipFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.chipListFragment.name} />}
+                                    path={screens.chipListFragment.path}
+                                >
+                                    <ChipListFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.colorTabListFragment.name} />}
+                                    path={screens.colorTabListFragment.path}
+                                >
+                                    <ColorTabListFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.recyclerViewFragment.name} />}
+                                    path={screens.recyclerViewFragment.path}
+                                >
+                                    <RecyclerViewFragmentScreen />
                                 </StackScreen>
                                 <StackScreen
                                     navBarConfig={<NavigationBarConfig title={screens.authScreenFragment.name} />}

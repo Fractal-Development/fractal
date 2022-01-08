@@ -1,13 +1,13 @@
 import React, { ReactElement } from 'react';
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 import { PaddingLayer } from '@bma98/fractal-ui';
-import { ChatContentFragment } from '../fragments/messaging-fragments';
+import { ChipFragment } from '../../../fragments/ui-fragments';
 
-export function ChatContentFragmentScreen(): ReactElement {
+export function ChipFragmentScreen(): ReactElement {
     return (
         <NavigationBarInsetsLayer>
             <PaddingLayer flex={1}>
-                <ChatContentFragment />
+                <ChipFragment />
             </PaddingLayer>
         </NavigationBarInsetsLayer>
     );
