@@ -5,7 +5,7 @@
     "dependencies": {
         "@bma98/fractal-auth-screen": "^2.0.9",
         "@bma98/fractal-charts": "^2.0.2",
-        "@bma98/fractal-examples": "^2.0.9",
+        "@bma98/fractal-examples": "^2.0.10",
         "@bma98/fractal-media": "^2.0.5",
         "@bma98/fractal-messaging": "^2.0.20",
         "@bma98/fractal-navigation": "^2.0.9",

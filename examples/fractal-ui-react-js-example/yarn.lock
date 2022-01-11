@@ -1215,10 +1215,10 @@
     d3-scale "3.3.0"
     d3-shape "^3.0.1"
 
-"@bma98/fractal-examples@^2.0.9":
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.9.tgz#e83fdbd8fd81edec67ea1379bda407031016acd5"
-  integrity sha512-SBX2xyEFqG8o1Gws/kIdawAiV3so84QbJLc9rl55JoQkkwpNyo0h/0BMn1EwAQ/0KFICCbZuUlRKyq6FnhE5KQ==
+"@bma98/fractal-examples@^2.0.10":
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.10.tgz#67fe456efee8e898b0a0548d033bb389b62e7c52"
+  integrity sha512-81r1SM/kR6gIeFOGQqA+45KjmvAWKC2iEg0Dy0tBqCYV5VUvUdbZodLiU5bg5WOZj2EhGWUmmU8NhjeFN1iITA==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
