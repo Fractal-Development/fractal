@@ -1215,10 +1215,10 @@
     d3-scale "3.3.0"
     d3-shape "^3.0.1"
 
-"@bma98/fractal-examples@^2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.10.tgz#67fe456efee8e898b0a0548d033bb389b62e7c52"
-  integrity sha512-81r1SM/kR6gIeFOGQqA+45KjmvAWKC2iEg0Dy0tBqCYV5VUvUdbZodLiU5bg5WOZj2EhGWUmmU8NhjeFN1iITA==
+"@bma98/fractal-examples@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.12.tgz#1ab9e7c048bcb78b9de9c7604069bf8f91d1806c"
+  integrity sha512-Z2ihucx9BErndOrr6B7jx9jo6vMGLEHTRqKPRj68kxZC5pGPRY8FJ+zkU7yQqKluImGEEZLfBkSYheCMQASHZA==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
@@ -1231,10 +1231,10 @@
     framer-motion "^4.1.17"
     styled-components "^5.3.0"
 
-"@bma98/fractal-messaging@^2.0.20":
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.20.tgz#aa3fdb34924baf396579660ea7e14de3b4ff4e61"
-  integrity sha512-Zri97J6KYPj8G7pQqRVvDlSstjTyMkJ6LRmKs4VJReAuCLSkKQjxSq6OgGib5+PrscCe0qfT5qKkd+O5r54qsA==
+"@bma98/fractal-messaging@^2.0.23":
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.23.tgz#7d6345efe2522f5a3967a84fd32e514bf62d72d8"
+  integrity sha512-yrML/Tu9JC1nVi72+4uROqBJIRnmnsGiogts6OBqj4K/msjkRwn9cfU2yzsFDETcNblsORTx4TWM/1kPLI6K6w==
   dependencies:
     "@bma98/fractal-media" "^2.0.5"
     "@bma98/size-class" "^2.2.4"
@@ -1253,10 +1253,10 @@
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-ui@^2.0.20":
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.20.tgz#0daacbdbf8ebb28eca96d4d8e1600258d15c94ec"
-  integrity sha512-YpMLOZMHhidb/z3KwqDpALDkcfOcA6DNdkCyhrk09IBpIpf2fcvtiBC+mT8YH5iorOi5gZ9wpz9yFvjLaC1fKA==
+"@bma98/fractal-ui@^2.0.22":
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.22.tgz#c4fe3e81771ae5aebe5560fab3c03caff075ba47"
+  integrity sha512-KelFY0R5GH9hmVWRggNeC7/TydLV4fuPKz3Wughex+u/zChLQHMDY5IiNGlYyh7j37wQXdT03WDDcI7EdB951Q==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"

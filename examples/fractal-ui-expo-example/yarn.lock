@@ -1046,62 +1046,62 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@bma98/fractal-auth-screen@^2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-auth-screen/-/fractal-auth-screen-2.0.8.tgz#15f151fc26eec2d30e561b40ec50a9f763029249"
-  integrity sha512-oaQ0ckMwvyd75kon/652h3zIzd0I8rBSrel3CgPL2ba7/NPBSpltlezUXAniBroxaMaEXpB2E0emz7MQmiVwLw==
+"@bma98/fractal-auth-screen@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-auth-screen/-/fractal-auth-screen-2.0.9.tgz#dbf3745f626e89befd4434a80d406776f40b19a4"
+  integrity sha512-dYrd6QMBlvjjhQPj7ytHIQoQ+/PMgYGvBtGOZ72tbMevCJ99QuPQDOiQGRxc8v0pyIui8BOL1aW7KoV3YmVaZg==
 
-"@bma98/fractal-charts@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-charts/-/fractal-charts-2.0.1.tgz#a8941aa8d120bb98d80256d204c54565488073bc"
-  integrity sha512-S/DhpcBzQVgqrxlOmOWrPjyy1veag2NhAB1R/dj4fyVLvcoKUCqs1FHixy6BeA28lufNxkvSiVXBVyOU7YQDxA==
+"@bma98/fractal-charts@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-charts/-/fractal-charts-2.0.2.tgz#f2bb868c599874e629fe24ec52ace5fbd73f7da3"
+  integrity sha512-ey4pXa2isCx/ySktlPG//M+7sdZj2TYA1zC69vyhfED/EDfWMId/SyPA+EqdqExN9en4BPZX+9GH2fms6cKRLw==
   dependencies:
-    "@types/node" "^16.3.2"
     d3-array "2.3.3"
     d3-scale "3.3.0"
     d3-shape "^3.0.1"
 
-"@bma98/fractal-examples@^2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.8.tgz#d2cc2ae3c1d16a7da53722aa197a6d9419aca9b4"
-  integrity sha512-QBArXXdjUORFW4aXscxZDdmpeMQX45Ugt2moY2CktcC+O26rqIvawQVFfi/muh2XJGAD7cNsRj4BlBrmDgTJcg==
+"@bma98/fractal-examples@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-examples/-/fractal-examples-2.0.12.tgz#1ab9e7c048bcb78b9de9c7604069bf8f91d1806c"
+  integrity sha512-Z2ihucx9BErndOrr6B7jx9jo6vMGLEHTRqKPRj68kxZC5pGPRY8FJ+zkU7yQqKluImGEEZLfBkSYheCMQASHZA==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-media@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.4.tgz#caef1150c3280ff5eddcc71999598bb8135f2aa5"
-  integrity sha512-zgVeOO7ICbf9GqMMC5rx7nCYvyet/ott65Z/AmLAdy4QfA3Rrhlr2BGQLAeSDw9HobPbtd1n3GYQZCBbmtToAQ==
+"@bma98/fractal-media@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-media/-/fractal-media-2.0.5.tgz#76455a493908f99215885bd0302008a540647082"
+  integrity sha512-14KQMQD2tu03n8ogPF9dIZUX3wpEkwB81dNo16SLk/JDQGSb39hraOvlE/js+QuYUvf43YhiOHqm+jTvH8QSVQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
+    framer-motion "^4.1.17"
     styled-components "^5.3.0"
 
-"@bma98/fractal-messaging@^2.0.19":
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.19.tgz#a6b2ffb3dff1e8fd44bd1ac2120e19d5ce6e5bcc"
-  integrity sha512-RlD/0UBv9LYkks3SbQsXd3sWtF4rYbLefb1pWHF3gp6gFN4/746PPZqxP0MdPVto570fy5Mpi09qQaNIVzc4yQ==
+"@bma98/fractal-messaging@^2.0.23":
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-messaging/-/fractal-messaging-2.0.23.tgz#7d6345efe2522f5a3967a84fd32e514bf62d72d8"
+  integrity sha512-yrML/Tu9JC1nVi72+4uROqBJIRnmnsGiogts6OBqj4K/msjkRwn9cfU2yzsFDETcNblsORTx4TWM/1kPLI6K6w==
   dependencies:
-    "@bma98/fractal-media" "^2.0.4"
+    "@bma98/fractal-media" "^2.0.5"
     "@bma98/size-class" "^2.2.4"
     styled-components "^5.3.0"
     text-metrics "^2.0.9"
 
-"@bma98/fractal-navigation-router@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.2.tgz#ab80df7f5a8683e9e609d4e2426007231ba5e5de"
-  integrity sha512-YpREsB4MENHkUHWf6gBcut57lnNZwSMMiQXV4xmxF3t7qt0SL+bnDjarwMCh6GHzlWzPwVZqwXzpW3xOjYOmjw==
+"@bma98/fractal-navigation-router@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation-router/-/fractal-navigation-router-2.0.3.tgz#f89a5999aeb75b79577a1557b97e3c4b163d8835"
+  integrity sha512-syAAZN6a0AA/QXKM+NWv+oQhbHSBD6qQyeWjVPPTbB2xgLTa0LM/c07H/j2HIh2334bkOoOSHG41wU6BVUkbfw==
 
-"@bma98/fractal-navigation@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.6.tgz#661ea14bc3814e40a8253c1cecdd1473be892b33"
-  integrity sha512-Xs82rVDK1/lF3/c8vCOfPMGjvmkcly0XeTOG2DGV6hYUh1pcVkH390DZ5qt+8g/uhuUorr7nVDH81FDSidgWcw==
+"@bma98/fractal-navigation@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-navigation/-/fractal-navigation-2.0.9.tgz#d9532c06b2c338741d783524afc692f0a8707d9a"
+  integrity sha512-LUcyCdEqxQpbWCeiWkjVePbaKNmXFdccqaatjOGhIrpmszJbdfMchiS6CymSnAq3X7i84B7exzfmlegeQbCEfQ==
   dependencies:
     "@bma98/size-class" "^2.2.4"
 
-"@bma98/fractal-ui@^2.0.19":
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.19.tgz#39fddbf542d243221e7e2f66925f4a8788ea2cbd"
-  integrity sha512-BlBjw8UKS+PV7sSsnDOUW1yWUkUYWFkv9Pqt197gRQT4nJbkCGUXr1cNG3btLcy/q0jNX2qpOmBm4pCJ504njw==
+"@bma98/fractal-ui@^2.0.22":
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/@bma98/fractal-ui/-/fractal-ui-2.0.22.tgz#c4fe3e81771ae5aebe5560fab3c03caff075ba47"
+  integrity sha512-KelFY0R5GH9hmVWRggNeC7/TydLV4fuPKz3Wughex+u/zChLQHMDY5IiNGlYyh7j37wQXdT03WDDcI7EdB951Q==
   dependencies:
     "@bma98/size-class" "^2.2.4"
     framer-motion "^4.1.17"
@@ -1680,7 +1680,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
-"@types/node@*", "@types/node@^16.3.2":
+"@types/node@*":
   version "16.11.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
   integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
