@@ -13,6 +13,7 @@ import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
 import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
 import { ActivityIndicatorFragmentScreen } from './screens/ui-screens/feedback/ActivityIndicatorFragmentScreen';
+import { ErrorMessageFragmentScreen } from './screens/ui-screens/feedback/ErrorMessageFragmentScreen';
 function renderReactIcon(color, size) {
     return React.createElement(ReactIcon, { fill: color, height: size, width: size });
 }
@@ -36,6 +37,8 @@ export function MainExample() {
                                 React.createElement(ChipListFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.activityIndicatorFragmentScreen.name }), path: screens.activityIndicatorFragmentScreen.path },
                                 React.createElement(ActivityIndicatorFragmentScreen, null)),
+                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.errorMessageFragmentScreen.name }), path: screens.errorMessageFragmentScreen.path },
+                                React.createElement(ErrorMessageFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.colorTabListFragment.name }), path: screens.colorTabListFragment.path },
                                 React.createElement(ColorTabListFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.recyclerViewFragment.name }), path: screens.recyclerViewFragment.path },

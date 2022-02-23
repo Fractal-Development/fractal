@@ -23,6 +23,7 @@ import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
 import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
 import { ActivityIndicatorFragmentScreen } from './screens/ui-screens/feedback/ActivityIndicatorFragmentScreen';
+import { ErrorMessageFragmentScreen } from './screens/ui-screens/feedback/ErrorMessageFragmentScreen';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;
@@ -73,6 +74,12 @@ export function MainExample(): JSX.Element {
                                     path={screens.activityIndicatorFragmentScreen.path}
                                 >
                                     <ActivityIndicatorFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.errorMessageFragmentScreen.name} />}
+                                    path={screens.errorMessageFragmentScreen.path}
+                                >
+                                    <ErrorMessageFragmentScreen />
                                 </StackScreen>
                                 <StackScreen
                                     navBarConfig={<NavigationBarConfig title={screens.colorTabListFragment.name} />}
