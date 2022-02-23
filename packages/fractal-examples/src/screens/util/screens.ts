@@ -18,6 +18,14 @@ export const screens = {
         name: 'Color Tab List Fragment',
         path: routes.component.replace(':component', 'color_tab_list_fragment_screen')
     },
+    activityIndicatorFragmentScreen: {
+        name: 'Activity Indicator Fragment',
+        path: routes.component.replace(':component', 'activity_indicator_fragmen_screen')
+    },
+    errorMessageFragmentScreen: {
+        name: 'Error Message Fragment Screen',
+        path: routes.component.replace(':component', 'error_message_fragment_screen')
+    },
     recyclerViewFragment: {
         name: 'Recycler View Fragment',
         path: routes.component.replace(':component', 'recycler_view_fragment_screen')

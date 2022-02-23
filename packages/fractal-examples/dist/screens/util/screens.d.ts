@@ -15,6 +15,14 @@ export declare const screens: {
         name: string;
         path: string;
     };
+    activityIndicatorFragmentScreen: {
+        name: string;
+        path: string;
+    };
+    errorMessageFragmentScreen: {
+        name: string;
+        path: string;
+    };
     recyclerViewFragment: {
         name: string;
         path: string;
@@ -29,6 +37,12 @@ export declare const screens: {
     };
 };
 export declare const screensArray: ({
+    name: string;
+    path: string;
+} | {
+    name: string;
+    path: string;
+} | {
     name: string;
     path: string;
 } | {

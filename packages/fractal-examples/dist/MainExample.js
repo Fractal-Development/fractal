@@ -12,6 +12,7 @@ import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScre
 import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
 import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
+import { ActivityIndicatorFragmentScreen } from './screens/ui-screens/feedback/ActivityIndicatorFragmentScreen';
 function renderReactIcon(color, size) {
     return React.createElement(ReactIcon, { fill: color, height: size, width: size });
 }
@@ -21,7 +22,7 @@ function MainTabBar() {
         React.createElement(SimpleTabBarItemLink, { path: routes.credits, title: 'Credits' }, renderReactIcon)));
 }
 export function MainExample() {
-    return (React.createElement(FractalAppRoot, { handleThemeManually: true },
+    return (React.createElement(FractalAppRoot, null,
         React.createElement(NavigationRouter, null,
             React.createElement(TabNavigator, { tabBar: React.createElement(MainTabBar, null) },
                 React.createElement(TabScreen, { path: routes.components },
@@ -33,6 +34,8 @@ export function MainExample() {
                                 React.createElement(ChipFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.chipListFragment.name }), path: screens.chipListFragment.path },
                                 React.createElement(ChipListFragmentScreen, null)),
+                            React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.activityIndicatorFragmentScreen.name }), path: screens.activityIndicatorFragmentScreen.path },
+                                React.createElement(ActivityIndicatorFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.colorTabListFragment.name }), path: screens.colorTabListFragment.path },
                                 React.createElement(ColorTabListFragmentScreen, null)),
                             React.createElement(StackScreen, { navBarConfig: React.createElement(NavigationBarConfig, { title: screens.recyclerViewFragment.name }), path: screens.recyclerViewFragment.path },

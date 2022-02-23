@@ -22,6 +22,7 @@ import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScre
 import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
 import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
+import { ActivityIndicatorFragmentScreen } from './screens/ui-screens/feedback/ActivityIndicatorFragmentScreen';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;
@@ -42,7 +43,7 @@ function MainTabBar(): ReactElement {
 
 export function MainExample(): JSX.Element {
     return (
-        <FractalAppRoot handleThemeManually>
+        <FractalAppRoot>
             <NavigationRouter>
                 <TabNavigator tabBar={<MainTabBar />}>
                     <TabScreen path={routes.components}>
@@ -66,6 +67,12 @@ export function MainExample(): JSX.Element {
                                     path={screens.chipListFragment.path}
                                 >
                                     <ChipListFragmentScreen />
+                                </StackScreen>
+                                <StackScreen
+                                    navBarConfig={<NavigationBarConfig title={screens.activityIndicatorFragmentScreen.name} />}
+                                    path={screens.activityIndicatorFragmentScreen.path}
+                                >
+                                    <ActivityIndicatorFragmentScreen />
                                 </StackScreen>
                                 <StackScreen
                                     navBarConfig={<NavigationBarConfig title={screens.colorTabListFragment.name} />}
