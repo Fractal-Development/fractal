@@ -38,7 +38,7 @@ export function MessageList<T extends MinimalMessageData>({
     }, [messages, footerComponent]);
     const listView = useRef<any>();
     const containerRef = useRef<any>();
-    const messagesLength = useRef<number>(messages.length);
+    const messagesLength = useRef<number>(0);
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);

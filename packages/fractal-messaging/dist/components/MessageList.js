@@ -46,7 +46,7 @@ export function MessageList(_a) {
     }, [messages, footerComponent]);
     const listView = useRef();
     const containerRef = useRef();
-    const messagesLength = useRef(messages.length);
+    const messagesLength = useRef(0);
     const { spacings, sizes } = useTheme();
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(messagesWithAccessoryViews));
     const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);
