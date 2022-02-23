@@ -72,15 +72,7 @@ export function MessageList(_a) {
         }
         return contentHeight + spacings.m * 3;
     }, [chatMessageHeight, getTextHeight, spacings.m]);
-    const renderChatMessage = useCallback((type, data) => {
-        switch (type) {
-            case MessageViewTypes.Message:
-                return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor, parsePatterns: parsePatterns }));
-            default:
-                return footerComponent !== null && footerComponent !== void 0 ? footerComponent : React.createElement(React.Fragment, null);
-        }
-    }, [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent]);
-    const customChatMessageRenderer = useCallback((type, data, index) => {
+    const renderChatMessage = useCallback((type, data, index) => {
         switch (type) {
             case MessageViewTypes.Message:
                 if (rowRenderer) {
@@ -94,11 +86,11 @@ export function MessageList(_a) {
                         parsePatterns
                     });
                 }
-                return null;
+                return (React.createElement(ChatMessage, { message: data, key: data.id, onFavoritePress: onFavoritePress, onSharePress: onSharePress, messageActions: messageActions, getBubbleColor: getBubbleColor, parsePatterns: parsePatterns }));
             default:
                 return footerComponent !== null && footerComponent !== void 0 ? footerComponent : React.createElement(React.Fragment, null);
         }
-    }, [footerComponent, getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]);
+    }, [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent, rowRenderer]);
     const layoutProvider = useMemo(() => new LayoutProvider((index) => {
         const message = messages[index];
         return message != null ? MessageViewTypes.Message : MessageViewTypes.Footer;
@@ -138,6 +130,6 @@ export function MessageList(_a) {
             setMaxContentWidth(getMaxBubbleWidth((_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m));
         }
     }, [(_b = containerRef.current) === null || _b === void 0 ? void 0 : _b.clientWidth, spacings.m]);
-    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: customChatMessageRenderer || renderChatMessage, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
+    return (React.createElement(Layer, Object.assign({ flex: 1, ref: containerRef }, containerLayoutProps, layerProps), messages.length > 0 && (React.createElement(AutoSizer, { onResize: scrollToEnd }, ({ height, width }) => (React.createElement(RecyclerView, { ref: listView, canChangeSize: true, style: { height, width }, key: width, layoutProvider: layoutProvider, dataProvider: dataProviderState, rowRenderer: renderChatMessage, initialRenderIndex: messagesWithAccessoryViews.length - 1, scrollViewProps: { showsVerticalScrollIndicator: false } }))))));
 }
 //# sourceMappingURL=MessageList.js.map

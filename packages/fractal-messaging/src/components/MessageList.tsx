@@ -73,9 +73,20 @@ export function MessageList<T extends MinimalMessageData>({
     );
 
     const renderChatMessage = useCallback(
-        (type, data) => {
+        (type, data, index) => {
             switch (type) {
                 case MessageViewTypes.Message:
+                    if (rowRenderer) {
+                        return rowRenderer({
+                            message: data,
+                            index,
+                            onFavoritePress,
+                            onSharePress,
+                            messageActions,
+                            getBubbleColor,
+                            parsePatterns
+                        });
+                    }
                     return (
                         <ChatMessage
                             message={data}
@@ -91,30 +102,7 @@ export function MessageList<T extends MinimalMessageData>({
                     return footerComponent ?? <></>;
             }
         },
-        [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent]
-    );
-
-    const customChatMessageRenderer = useCallback(
-        (type, data, index) => {
-            switch (type) {
-                case MessageViewTypes.Message:
-                    if (rowRenderer) {
-                        return rowRenderer({
-                            message: data,
-                            index,
-                            onFavoritePress,
-                            onSharePress,
-                            messageActions,
-                            getBubbleColor,
-                            parsePatterns
-                        });
-                    }
-                    return null;
-                default:
-                    return footerComponent ?? <></>;
-            }
-        },
-        [footerComponent, getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]
+        [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent, rowRenderer]
     );
 
     const layoutProvider = useMemo(
@@ -178,7 +166,7 @@ export function MessageList<T extends MinimalMessageData>({
                             key={width}
                             layoutProvider={layoutProvider}
                             dataProvider={dataProviderState}
-                            rowRenderer={customChatMessageRenderer || renderChatMessage}
+                            rowRenderer={renderChatMessage}
                             initialRenderIndex={messagesWithAccessoryViews.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
                         />
