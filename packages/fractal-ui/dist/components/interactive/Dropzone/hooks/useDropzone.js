@@ -1,4 +1,5 @@
 import { useRef, useCallback } from 'react';
+import { getMIMETypes } from '../fileTypes/getMIMETypes';
 import { useAcceptedFiles } from './useAcceptedFiles';
 import { useDragAndDropEventHandlers } from './useDragAndDropEventHandlers';
 /**
@@ -11,8 +12,9 @@ import { useDragAndDropEventHandlers } from './useDragAndDropEventHandlers';
  * @param onChangeAcceptedFiles callback fired when the accepted files changes
  */
 export function useDropzone(acceptedTypes, pickMultipleFiles, maxNumberFiles, maxFileSize, onChangeAcceptedFiles) {
+    var _a;
     const fileInputRef = useRef(null);
-    const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(acceptedTypes, maxFileSize, maxNumberFiles, onChangeAcceptedFiles);
+    const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(maxFileSize, maxNumberFiles, onChangeAcceptedFiles);
     const { dragFocused, onDragEnter, onDragLeave, onDragOver, onDrop } = useDragAndDropEventHandlers(setAcceptedFiles);
     const openFileDialog = useCallback(() => {
         if (fileInputRef.current) {
@@ -38,7 +40,7 @@ export function useDropzone(acceptedTypes, pickMultipleFiles, maxNumberFiles, ma
         },
         fileInputProps: {
             ref: fileInputRef,
-            accept: acceptedTypes === null || acceptedTypes === void 0 ? void 0 : acceptedTypes.join(','),
+            accept: (_a = getMIMETypes(acceptedTypes)) === null || _a === void 0 ? void 0 : _a.join(','),
             multiple: pickMultipleFiles,
             type: 'file',
             onChange: handlePickedFiles

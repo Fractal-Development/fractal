@@ -1,3 +1,2 @@
-export function startFractalApp() {
-}
+export function startFractalApp() { }
 //# sourceMappingURL=index.js.map

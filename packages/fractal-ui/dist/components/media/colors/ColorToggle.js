@@ -46,9 +46,9 @@ const ColorToggle = forwardRef((_a, ref) => {
             handleUncontrolledActiveToggle();
         }
     };
-    return (React.createElement(Pressable, Object.assign({ ref: ref, onPress: handlePress, width: 40, height: 40, borderRadius: 20, justifyContent: "center", alignItems: "center", backgroundColor: backgroundColor }, others),
+    return (React.createElement(Pressable, Object.assign({ ref: ref, onPress: handlePress, width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', backgroundColor: backgroundColor }, others),
         React.createElement(Layer, { from: variant, animate: variant, variants: styleVariants },
-            React.createElement(CheckIcon, { height: 24, width: 24, fill: "white" }))));
+            React.createElement(CheckIcon, { height: 24, width: 24, fill: 'white' }))));
 });
 ColorToggle.displayName = 'ColorToggle';
 export { ColorToggle };

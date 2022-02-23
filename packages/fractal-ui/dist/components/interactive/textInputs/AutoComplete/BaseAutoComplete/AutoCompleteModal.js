@@ -29,6 +29,6 @@ export function AutoCompleteModal(_a) {
                 React.createElement(SearchBar, Object.assign({ inputRef: searchInputRef, value: value, onSearch: onSearch, onChangeText: onChangeText }, searchBarProps))),
             React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress }),
             React.createElement(PaddingLayer, null,
-                React.createElement(Button, { variant: "main", text: doneText, onPress: hideModal })))));
+                React.createElement(Button, { variant: 'main', text: doneText, onPress: hideModal })))));
 }
 //# sourceMappingURL=AutoCompleteModal.js.map

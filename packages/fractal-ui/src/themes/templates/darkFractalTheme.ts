@@ -25,6 +25,11 @@ export const darkColors = {
 
 export const darkNavigationBarTheme: FractalThemeNavigationBar = {
     ...lightNavigationBarTheme,
+    title: {
+        fontSize: 16,
+        fontWeight: 600,
+        color: 'white'
+    },
     backgroundColor: black.base
 };
 

@@ -62,9 +62,9 @@ const Slider = styled(motion.div) `
 export function BaseSegmentedControlTab({ onSelect, selected, value, hideDivider, fontFamily, fontSize, color, fontWeight, fontStyle, tintColor }) {
     const { borderRadius, colors, shadows } = useTheme();
     return (React.createElement(Tap, { noDivider: hideDivider !== null && hideDivider !== void 0 ? hideDivider : selected, whileTap: selected ? { scale: 0.95 } : { opacity: 0.6 } },
-        React.createElement(Button, Object.assign({ margin: 0, width: "100%", height: "100%", type: 'button', onClick: onSelect }, getSegmentedControlButtonAccessibilityProps(selected)),
+        React.createElement(Button, Object.assign({ margin: 0, width: '100%', height: '100%', type: 'button', onClick: onSelect }, getSegmentedControlButtonAccessibilityProps(selected)),
             selected && (React.createElement(Slider, { layoutId: 'SegmentedControlActive', backgroundColor: tintColor !== null && tintColor !== void 0 ? tintColor : colors.foreground, boxShadow: shadows.mainShadow, borderRadius: borderRadius.s })),
-            React.createElement(Layer, { position: "relative", zIndex: 2, alignItems: "center" },
+            React.createElement(Layer, { position: 'relative', zIndex: 2, alignItems: 'center' },
                 React.createElement(Text, { fontFamily: fontFamily, fontSize: fontSize, color: color, fontWeight: fontWeight, fontStyle: fontStyle }, value)))));
 }
 //# sourceMappingURL=index.js.map

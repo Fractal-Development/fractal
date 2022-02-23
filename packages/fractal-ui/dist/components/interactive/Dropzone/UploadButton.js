@@ -14,12 +14,14 @@ import { useTheme } from '../../../context';
 import { Button } from '../buttons/Button';
 import { HorizontalLayer } from '../../layout';
 import { Text } from '../../text';
+import { getMIMETypes } from './fileTypes/getMIMETypes';
 export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', acceptedTypes }) {
     const { spacings } = useTheme();
     const pickFile = () => __awaiter(this, void 0, void 0, function* () {
-        const result = yield DocumentPicker.getDocumentAsync({ type: acceptedTypes === null || acceptedTypes === void 0 ? void 0 : acceptedTypes.join(',') });
+        var _a;
+        const result = yield DocumentPicker.getDocumentAsync({ type: getMIMETypes(acceptedTypes) });
         if (result.type === 'success') {
-            onSelectFile({ name: result.name, size: result.size, uri: result.uri, type: '' });
+            onSelectFile({ name: result.name, size: result.size, uri: result.uri, type: (_a = result.mimeType) !== null && _a !== void 0 ? _a : '' });
         }
     });
     return (React.createElement(Button, { variant: 'main', onPress: pickFile },

@@ -4,7 +4,7 @@ import { useAcceptedFiles } from './hooks/useAcceptedFiles';
 import { UploadButton } from './UploadButton';
 import { UploadedFileList } from './UploadedFileList';
 export function Dropzone({ text, acceptedTypes, maxNumberFiles, maxFileSize, onChangeAcceptedFiles }) {
-    const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(acceptedTypes, maxFileSize, maxNumberFiles, onChangeAcceptedFiles);
+    const [acceptedFiles, setAcceptedFiles, removeFile] = useAcceptedFiles(maxFileSize, maxNumberFiles, onChangeAcceptedFiles);
     const handleSelectFile = (fileInfo) => {
         setAcceptedFiles([fileInfo]);
     };

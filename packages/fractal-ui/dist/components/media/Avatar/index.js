@@ -13,7 +13,7 @@ import React, { forwardRef } from 'react';
 import { Image } from '../Image';
 const Avatar = forwardRef((_a, ref) => {
     var { size = 64 } = _a, others = __rest(_a, ["size"]);
-    return React.createElement(Image, Object.assign({ ref: ref, width: size, height: size, borderRadius: size / 2 }, others));
+    return (React.createElement(Image, Object.assign({ ref: ref, width: size, height: size, borderRadius: size / 2 }, others)));
 });
 Avatar.displayName = 'Avatar';
 export { Avatar };

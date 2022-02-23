@@ -20,7 +20,11 @@ export const darkColors = {
     contentInteractiveColor800: black.base200,
     contentInteractiveColor900: black.base100
 };
-export const darkNavigationBarTheme = Object.assign(Object.assign({}, lightNavigationBarTheme), { backgroundColor: black.base });
+export const darkNavigationBarTheme = Object.assign(Object.assign({}, lightNavigationBarTheme), { title: {
+        fontSize: 16,
+        fontWeight: 600,
+        color: 'white'
+    }, backgroundColor: black.base });
 export const darkTabBarTheme = Object.assign(Object.assign({}, lightTabBarTheme), { backgroundColor: black.base });
 export const darkFractalTheme = createFractalTheme({
     colors: Object.assign({}, darkColors),

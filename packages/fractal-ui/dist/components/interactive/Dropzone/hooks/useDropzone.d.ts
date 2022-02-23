@@ -1,4 +1,4 @@
-import { DragAndDropEventHandlers, FileInputProps, FractalFile } from '../types';
+import { DragAndDropEventHandlers, FileInputProps, FileTypes, FractalFile } from '../types';
 /**
  * custom hook for create and manage a Dropzone
  *
@@ -8,7 +8,7 @@ import { DragAndDropEventHandlers, FileInputProps, FractalFile } from '../types'
  * @param maxFileSize 	maximum file size (in bytes).
  * @param onChangeAcceptedFiles callback fired when the accepted files changes
  */
-export declare function useDropzone(acceptedTypes: Array<string> | undefined, pickMultipleFiles: boolean | undefined, maxNumberFiles: number | undefined, maxFileSize: number | undefined, onChangeAcceptedFiles: (acceptedFiles: Array<File>) => void): {
+export declare function useDropzone(acceptedTypes: Array<keyof FileTypes> | Array<string> | undefined, pickMultipleFiles: boolean | undefined, maxNumberFiles: number | undefined, maxFileSize: number | undefined, onChangeAcceptedFiles: (acceptedFiles: Array<File>) => void): {
     acceptedFiles: Array<FractalFile>;
     dragFocused: boolean;
     openFileDialog: () => void;

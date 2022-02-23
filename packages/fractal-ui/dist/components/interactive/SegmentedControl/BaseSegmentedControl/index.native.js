@@ -41,7 +41,7 @@ const BaseSegmentedControl = forwardRef((_a, ref) => {
     var { selectedIndex, values, tintColor, backgroundColor, textStyle, activeTextStyle, onTabPress } = _a, layerProps = __rest(_a, ["selectedIndex", "values", "tintColor", "backgroundColor", "textStyle", "activeTextStyle", "onTabPress"]);
     const { colors, shadows, borderRadius, sizes } = useTheme();
     const { segmentWidth, handleLayout, sliderStyle } = useSegmentManager(values.length, selectedIndex, tintColor || colors.foreground);
-    return (React.createElement(Layer, Object.assign({ ref: ref, overflow: "hidden", position: "relative", height: sizes.segmentedControlSize, backgroundColor: backgroundColor !== null && backgroundColor !== void 0 ? backgroundColor : colors.background, borderRadius: borderRadius.s, onLayout: handleLayout }, layerProps),
+    return (React.createElement(Layer, Object.assign({ ref: ref, overflow: 'hidden', position: 'relative', height: sizes.segmentedControlSize, backgroundColor: backgroundColor !== null && backgroundColor !== void 0 ? backgroundColor : colors.background, borderRadius: borderRadius.s, onLayout: handleLayout }, layerProps),
         !backgroundColor && !tintColor && React.createElement(SegmentsSeparators, { values: values.length, selectedIndex: selectedIndex }),
         React.createElement(SegmentsContainer, null, values &&
             values.map((value, index) => (React.createElement(SegmentedControlTab, { selected: selectedIndex === index, key: index, value: value, tintColor: tintColor, textStyle: textStyle, activeTextStyle: activeTextStyle, onSelect: () => {

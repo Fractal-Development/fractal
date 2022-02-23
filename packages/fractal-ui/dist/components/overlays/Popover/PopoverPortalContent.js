@@ -20,7 +20,7 @@ const PopoverPortalContent = forwardRef((_a, ref) => {
     return (React.createElement(Layer, Object.assign({ ref: ref }, others),
         children(anchorRef),
         React.createElement(ModalPortal, null,
-            React.createElement(AnimatePresence, null, active ? (React.createElement(Layer, Object.assign({ ref: popoverRef, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: "absolute", zIndex: 2, style: placementOffsetStyle }, popoverContainerProps),
+            React.createElement(AnimatePresence, null, active ? (React.createElement(Layer, Object.assign({ ref: popoverRef, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: 'absolute', zIndex: 2, style: placementOffsetStyle }, popoverContainerProps),
                 React.createElement(OutsideClickListener, { onOutsideClick: onRequestClose }, popoverChildren(anchorWidth)))) : null))));
 });
 PopoverPortalContent.displayName = 'PopoverPortalContent';

@@ -31,7 +31,7 @@ const ButtonTextField = forwardRef((_a, ref) => {
     const handleSubmitEditing = () => {
         onSubmitEditing === null || onSubmitEditing === void 0 ? void 0 : onSubmitEditing(text);
     };
-    return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, alignItems: "center", height: sizes.textFieldHeight }, layerProps),
+    return (React.createElement(HorizontalLayer, Object.assign({ ref: ref, alignItems: 'center', height: sizes.textFieldHeight }, layerProps),
         React.createElement(IconTextField, Object.assign({ value: text, flex: 1, placeholder: placeholder, leftImage: leftImage, rightImage: rightImage, textFieldProps: Object.assign(Object.assign({}, textFieldProps), { onSubmitEditing: (_b = textFieldProps === null || textFieldProps === void 0 ? void 0 : textFieldProps.onSubmitEditing) !== null && _b !== void 0 ? _b : handleSubmitEditing }), inputRef: inputRef, paddingLeft: spacings.xs, onChangeText: handleChangeText, backgroundColor: useForegroundVariant ? colors.foreground : colors.background }, getButtonTextFieldAccessibilityProps(buttonAriaLabel))),
         React.createElement(Layer, { marginLeft: showButton ? spacings.m : undefined }, showButton ? (React.createElement(Button, Object.assign({ ariaLabel: buttonAriaLabel, variant: buttonVariant, onPress: handlePress, text: buttonText }, getButtonIconAccessibilityProps(buttonAriaLabel)), buttonText == null && buttonImage ? buttonImage(colors.white, 22) : null)) : null)));
 });

@@ -18,7 +18,7 @@ export function BaseSwitch({ value, onValueChange }) {
         active: { backgroundColor: colors.mainInteractiveColor },
         inactive: { backgroundColor: colors.placeholder }
     };
-    return (React.createElement(Pressable, Object.assign({ flexDirection: "row", height: 24, width: 40, borderRadius: 12, paddingLeft: 2, paddingRight: 2, onPress: onPress, alignItems: 'center', 
+    return (React.createElement(Pressable, Object.assign({ flexDirection: 'row', height: 24, width: 40, borderRadius: 12, paddingLeft: 2, paddingRight: 2, onPress: onPress, alignItems: 'center', 
         // from={'inactive'}
         currentVariant: value ? 'active' : 'inactive', variants: backgroundVariants }, getSwitchAccessibilityProps(value)),
         React.createElement(Layer

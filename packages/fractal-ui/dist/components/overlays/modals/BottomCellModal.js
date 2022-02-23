@@ -14,8 +14,8 @@ import { DimmedModal } from './DimmedModal';
 import { ModalCell } from './ModalCell';
 const BottomCellModal = forwardRef((_a, ref) => {
     var { visible, onDismiss, onExitComplete } = _a, others = __rest(_a, ["visible", "onDismiss", "onExitComplete"]);
-    return (React.createElement(DimmedModal, { ref: ref, pointerEvents: "box-none", visible: visible, onDismiss: onDismiss, height: "100%", width: "100%", justifyContent: "flex-end", alignItems: "center", onExitComplete: onExitComplete },
-        React.createElement(ModalCell, Object.assign({}, others, { variant: "bottom" }))));
+    return (React.createElement(DimmedModal, { ref: ref, pointerEvents: 'box-none', visible: visible, onDismiss: onDismiss, height: '100%', width: '100%', justifyContent: 'flex-end', alignItems: 'center', onExitComplete: onExitComplete },
+        React.createElement(ModalCell, Object.assign({}, others, { variant: 'bottom' }))));
 });
 BottomCellModal.displayName = 'BottomCellModal';
 export { BottomCellModal };

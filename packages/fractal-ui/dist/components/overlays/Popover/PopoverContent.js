@@ -17,9 +17,9 @@ import { styleVariants } from './utils/styleVariants';
 const PopoverContent = forwardRef((_a, ref) => {
     var { active, anchorRef, popoverRef, anchorWidth, placementOffsetStyle, popoverChildren, popoverContainerProps, onRequestClose, children } = _a, others = __rest(_a, ["active", "anchorRef", "popoverRef", "anchorWidth", "placementOffsetStyle", "popoverChildren", "popoverContainerProps", "onRequestClose", "children"]);
     return (React.createElement(OutsideClickListener, { onOutsideClick: onRequestClose },
-        React.createElement(Layer, Object.assign({ ref: ref, position: "relative", display: "inline-block" }, others),
+        React.createElement(Layer, Object.assign({ ref: ref, position: 'relative', display: 'inline-block' }, others),
             children(anchorRef),
-            React.createElement(AnimatePresence, null, active ? (React.createElement(Layer, Object.assign({ ref: popoverRef, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: "absolute", zIndex: 2000, style: placementOffsetStyle }, popoverContainerProps), popoverChildren(anchorWidth))) : null))));
+            React.createElement(AnimatePresence, null, active ? (React.createElement(Layer, Object.assign({ ref: popoverRef, from: styleVariants.initial, animate: styleVariants.visible, exit: styleVariants.initial, position: 'absolute', zIndex: 2000, style: placementOffsetStyle }, popoverContainerProps), popoverChildren(anchorWidth))) : null))));
 });
 PopoverContent.displayName = 'PopoverContent';
 export { PopoverContent };

@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useValidateFile } from './useValidateFile';
-export function useAcceptedFiles(acceptedTypes, maxFileSize, maxNumberFiles, onChangeAcceptedFiles) {
+export function useAcceptedFiles(maxFileSize, maxNumberFiles, onChangeAcceptedFiles) {
     const [acceptedFiles, setAcceptedFiles] = useState([]);
-    const validateFile = useValidateFile(acceptedTypes, maxFileSize);
+    const validateFile = useValidateFile(maxFileSize);
     const updateAcceptedFiles = useCallback((newFiles) => {
         setAcceptedFiles(newFiles);
         onChangeAcceptedFiles(newFiles);
@@ -10,7 +10,7 @@ export function useAcceptedFiles(acceptedTypes, maxFileSize, maxNumberFiles, onC
     const getValidFiles = useCallback((files, endIndex) => {
         let validFiles = [];
         for (let i = 0; i < endIndex; i++) {
-            if (validateFile(files[i].type, files[i].size)) {
+            if (validateFile(files[i].size)) {
                 validFiles = [...validFiles, files[i]];
             }
         }

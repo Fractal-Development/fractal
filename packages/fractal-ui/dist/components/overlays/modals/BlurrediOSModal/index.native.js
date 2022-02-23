@@ -29,16 +29,16 @@ const BlurrediOSModal = forwardRef((_a, ref) => {
     const themeIdentifier = useThemeIdentifier();
     const window = Dimensions.get('window');
     const modalContentHeight = (window.height * 35) / 100;
-    return (React.createElement(Modal, Object.assign({ ref: ref, visible: visible, onDismiss: onDismiss, pointerEvents: "box-none", height: "100%", width: "100%", justifyContent: "flex-end" }, others),
+    return (React.createElement(Modal, Object.assign({ ref: ref, visible: visible, onDismiss: onDismiss, pointerEvents: 'box-none', height: '100%', width: '100%', justifyContent: 'flex-end' }, others),
         React.createElement(Pressable, { flex: 1, onPress: onDismiss }),
         React.createElement(MotiView, { style: { height: '35%' }, transition: {
                 type: 'timing',
                 duration: 330
             }, from: { translateY: modalContentHeight }, animate: { translateY: 0 }, exit: { translateY: modalContentHeight }, exitTransition: { type: 'timing', duration: 360 } },
             React.createElement(StyledBlurView, { intensity: 100, tint: themeIdentifier },
-                React.createElement(Layer, { top: 0, bottom: 0, left: 0, right: 0, position: "absolute", style: { opacity: 0.1 }, backgroundColor: themeIdentifier === 'light' ? 'black' : 'white' }),
+                React.createElement(Layer, { top: 0, bottom: 0, left: 0, right: 0, position: 'absolute', style: { opacity: 0.1 }, backgroundColor: themeIdentifier === 'light' ? 'black' : 'white' }),
                 React.createElement(Layer, { justifyContent: 'center', alignItems: 'flex-end', borderTopWidth: 0.5, borderColor: colors.placeholder, backgroundColor: colors.background, height: 48, paddingRight: spacings.m },
-                    React.createElement(TextButton, { variant: "main", textProps: { variant: 'label', fontWeight: 600 }, onPress: onDismiss }, dismissText)),
+                    React.createElement(TextButton, { variant: 'main', textProps: { variant: 'label', fontWeight: 600 }, onPress: onDismiss }, dismissText)),
                 React.createElement(SafeAreaLayer, { justifyContent: 'center' }, children)))));
 });
 BlurrediOSModal.displayName = 'BlurrediOSModal';
