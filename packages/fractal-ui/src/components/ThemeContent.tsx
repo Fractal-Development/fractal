@@ -5,7 +5,6 @@ import { PlatformAppearanceDetails } from './platform';
 
 export interface ThemeContentProps {
     children: ReactNode;
-    handleThemeManually?: boolean;
     lightTheme?: FractalTheme;
     darkTheme?: FractalTheme;
 }

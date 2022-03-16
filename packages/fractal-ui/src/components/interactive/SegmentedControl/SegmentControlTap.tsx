@@ -3,7 +3,7 @@ import { useTheme } from '../../../context';
 import { SegmentedControlTabProps } from './types';
 import { BaseSegmentedControlTab } from './BaseSegmentedControlTab';
 
-export const SegmentedControlTab = ({
+export function SegmentedControlTab({
     onSelect,
     value,
     selected,
@@ -11,7 +11,7 @@ export const SegmentedControlTab = ({
     hideDivider,
     textStyle = {},
     activeTextStyle = {}
-}: SegmentedControlTabProps): JSX.Element => {
+}: SegmentedControlTabProps): JSX.Element {
     const { colors } = useTheme();
     const { color: textColor, fontSize, fontFamily, fontWeight, fontStyle } = textStyle;
 
@@ -49,4 +49,4 @@ export const SegmentedControlTab = ({
             fontStyle={selected ? activeFontStyle : fontStyle}
         />
     );
-};
+}

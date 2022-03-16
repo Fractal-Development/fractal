@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useTheme } from '../../../../../context';
 import { Box } from '../../../../layout/Box';
 import { Popover } from '../../../../overlays/Popover';
@@ -26,25 +26,25 @@ export function BaseAutoComplete<T extends IDEnabled>({
         }
     }, [filteredData.length, hideSuggestions]);
 
+    const popoverChildren = useCallback(
+        (anchorWidth: number) => (
+            <Box
+                width={anchorWidth}
+                marginTop={spacings.s}
+                padding={0}
+                paddingTop={spacings.xs}
+                paddingBottom={spacings.xs}
+                maxHeight={240}
+                overflow='scroll'
+            >
+                <SuggestionsList multiple={multiple} filteredData={filteredData} getLabel={getLabel} onItemPress={onItemPress} />
+            </Box>
+        ),
+        [spacings, filteredData, getLabel, onItemPress, multiple]
+    );
+
     return (
-        <Popover
-            placement='bottom'
-            active={suggestionsVisible}
-            onRequestClose={hideSuggestions}
-            popoverChildren={(anchorWidth: number) => (
-                <Box
-                    width={anchorWidth}
-                    marginTop={spacings.s}
-                    padding={0}
-                    paddingTop={spacings.xs}
-                    paddingBottom={spacings.xs}
-                    maxHeight={240}
-                    overflow='scroll'
-                >
-                    <SuggestionsList multiple={multiple} filteredData={filteredData} getLabel={getLabel} onItemPress={onItemPress} />
-                </Box>
-            )}
-        >
+        <Popover placement='bottom' active={suggestionsVisible} onRequestClose={hideSuggestions} popoverChildren={popoverChildren}>
             {(ref) => (
                 <SearchBar
                     ref={ref}

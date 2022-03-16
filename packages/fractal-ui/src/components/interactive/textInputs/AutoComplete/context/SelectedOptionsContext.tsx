@@ -1,12 +1,10 @@
-import React, { createContext, Dispatch, SetStateAction, useState, useEffect, useCallback, ReactElement } from 'react';
+import React, { createContext, Dispatch, SetStateAction, useState, useEffect, useCallback, ReactElement, useMemo } from 'react';
 
 export type SelectedOptionsType = Array<unknown>;
 
 export type SelectedOptionsContextType = [SelectedOptionsType, Dispatch<SetStateAction<SelectedOptionsType>>];
 
-const defaultValue: any = [];
-
-export const SelectedOptionsContext = createContext<SelectedOptionsContextType>(defaultValue);
+export const SelectedOptionsContext = createContext<SelectedOptionsContextType>([[], () => {}]);
 
 interface SelectedOptionsProviderProps {
     children: ReactElement;
@@ -52,5 +50,7 @@ export function SelectedOptionsProvider({
         }
     }, [controllableSelectedOptions]);
 
-    return <SelectedOptionsContext.Provider value={[selectedOptions, updateValue]}>{children}</SelectedOptionsContext.Provider>;
+    const value: SelectedOptionsContextType = useMemo(() => [selectedOptions, updateValue], [selectedOptions, updateValue]);
+
+    return <SelectedOptionsContext.Provider value={value}>{children}</SelectedOptionsContext.Provider>;
 }

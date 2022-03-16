@@ -7,7 +7,7 @@ interface Props {
     selectedIndex?: number;
 }
 
-export const SegmentsSeparators = ({ values, selectedIndex }: Props): JSX.Element => {
+export function SegmentsSeparators({ values, selectedIndex }: Props): JSX.Element {
     const { colors } = useTheme();
     const hide = (value: number) => selectedIndex === value || selectedIndex === value + 1;
 
@@ -27,4 +27,4 @@ export const SegmentsSeparators = ({ values, selectedIndex }: Props): JSX.Elemen
             ))}
         </Layer>
     );
-};
+}

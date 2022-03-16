@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-escape */
 import React from 'react';
 import { Text } from '../Text';
 import TextExtraction from './TextExtraction';
@@ -11,7 +10,7 @@ export const PATTERNS = {
 };
 
 export function RichText(props: RichTextProps): JSX.Element {
-    const { parse, childrenProps, ...remainder } = props;
+    const { parse, childrenProps, ...others } = props;
     const getPatterns = (): CustomParseShape[] => {
         if (parse === undefined) {
             return [];
@@ -44,5 +43,5 @@ export function RichText(props: RichTextProps): JSX.Element {
         });
     };
 
-    return <Text {...remainder}>{getParsedText()}</Text>;
+    return <Text {...others}>{getParsedText()}</Text>;
 }

@@ -3,7 +3,9 @@ import { ThemeIdentifierProvider } from '../context/ThemeIdentifierContext';
 import { ThemeContent, ThemeContentProps } from '../components/ThemeContent';
 import { startFractalApp } from '../executionEnvironment';
 
-export type FractalAppRootProps = ThemeContentProps;
+export type FractalAppRootProps = ThemeContentProps & {
+    handleThemeManually?: boolean;
+};
 
 export function FractalAppRoot(props: FractalAppRootProps): JSX.Element {
     const { handleThemeManually = false } = props;

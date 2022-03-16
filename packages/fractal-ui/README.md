@@ -10,7 +10,7 @@ yarn add @bma98/fractal-ui
 
 ### Peer Dependencies
 
-Depending on the platforms that you want to support, we have different peer-dependencies that you should install for `fractal-ui` to work as expected. We are aware that we might be using too many dependencies for some people's taste, but the thing is that most of our projects were using this before hand already, and we are trying to reduce the need of configuration so we are adding this by default.
+Depending on the platforms that you want to support, we have different peer-dependencies that you should install for `fractal-ui` to work as expected. We are aware that we might be using too many dependencies for some people's taste, but the thing is that most of our projects were using this before anyways, and we are trying to reduce the need of configuration so we are adding this by default.
 
 We have other dependencies that are used by all platforms so we manage that automatically.
 
