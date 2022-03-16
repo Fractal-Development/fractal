@@ -6,7 +6,7 @@ UI Components easy to customize for apps made by Fractal.
 
 ### Installation
 
-yarn add @bma98/fractal-ui
+`yarn add @bma98/fractal-ui`
 
 ### Peer Dependencies
 
@@ -58,7 +58,9 @@ We have other dependencies that are used by all platforms so we manage that auto
 
 ### Is there more configuration needed?
 
-For Expo/React Native no, and depending on your set up for React.JS or Next.JS you might need to transpile our modules too, check out our examples in this same repo to see a small project using `fractal-ui`.
+Remember to add `import 'react-native-reanimated'` at the beginning of your application if you are using react native.
+
+Depending on your set up for React.JS or Next.JS you might need to transpile our modules too, check out our examples in this same repo to see a small project using `fractal-ui`.
 
 ### Is it a problem if we do not use the exact same React version?
 
