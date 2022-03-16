@@ -17,37 +17,41 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### Expo(Web, iOS and Android)
 
 ```
-"@react-native-community/datetimepicker": "^3.5.2",
-"@react-native-community/slider": "^3.0.3",
-"@react-native-picker/picker": "^1.16.3",
-"expo-blur": "^9.0.3",
-"expo-document-picker": "^9.1.2",
-"react": "16.13.1",
-"react-native": "~0.63.4",
-"react-native-reanimated": "~2.1.0",
-"react-native-svg": "^12.1.1",
-"react-virtualized-auto-sizer": "^1.0.5"
+"@motify/core": "^0.17.1",
+"@react-native-community/datetimepicker": "^6.0.1",
+"@react-native-community/slider": "^4.2.1",
+"@react-native-picker/picker": "^2.1.0",
+"expo-blur": "^11.0.0",
+"expo-document-picker": "^10.1.3",
+"moti": "^0.17.1",
+"react": "17.0.2",
+"react-native": "~0.67.3",
+"react-native-reanimated": "^2.4.1",
+"react-native-svg": "^12.3.0",
+"react-virtualized-auto-sizer": "^1.0.6"
 ```
 
 #### React Native(iOS and Android only)
 
 ```
-"@react-native-community/datetimepicker": "^3.5.2",
-"@react-native-community/slider": "^3.0.3",
-"@react-native-picker/picker": "^1.16.3",
-"expo-blur": "^9.0.3",
-"expo-document-picker": "^9.1.2",
-"react": "16.13.1",
-"react-native": "~0.63.4",
-"react-native-reanimated": "~2.1.0",
-"react-native-svg": "^12.1.1"
+"@motify/core": "^0.17.1",
+"@react-native-community/datetimepicker": "^6.0.1",
+"@react-native-community/slider": "^4.2.1",
+"@react-native-picker/picker": "^2.1.0",
+"expo-blur": "^11.0.0",
+"expo-document-picker": "^10.1.3",
+"moti": "^0.17.1",
+"react": "17.0.2",
+"react-native": "~0.67.3",
+"react-native-reanimated": "^2.4.1",
+"react-native-svg": "^12.3.0",
 ```
 
 #### React.JS or Next.JS(Web only)
 
 ```
-"react": "16.13.1",
-"react-virtualized-auto-sizer": "^1.0.5"
+"react": "17.0.2",
+"react-virtualized-auto-sizer": "^1.0.6"
 ```
 
 ### Is there more configuration needed?
@@ -56,4 +60,4 @@ For Expo/React Native no, and depending on your set up for React.JS or Next.JS y
 
 ### Is it a problem if we do not use the exact same React version?
 
-Most of the time no, we are only using this version as is the one that Expo supports, but you should be fine using any other version of React as long as it is backwards compatible.
+Most of the time no, we are only trying to always use the latest version, but you should be fine using any other version of React.
