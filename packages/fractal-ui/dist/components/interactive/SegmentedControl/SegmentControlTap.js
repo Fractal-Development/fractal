@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../../../context';
 import { BaseSegmentedControlTab } from './BaseSegmentedControlTab';
-export const SegmentedControlTab = ({ onSelect, value, selected, tintColor, hideDivider, textStyle = {}, activeTextStyle = {} }) => {
+export function SegmentedControlTab({ onSelect, value, selected, tintColor, hideDivider, textStyle = {}, activeTextStyle = {} }) {
     const { colors } = useTheme();
     const { color: textColor, fontSize, fontFamily, fontWeight, fontStyle } = textStyle;
     const { color: activeColor, fontSize: activeFontSize, fontFamily: activeFontFamily, fontWeight: activeFontWeight, fontStyle: activeFontStyle } = activeTextStyle;
@@ -16,5 +16,5 @@ export const SegmentedControlTab = ({ onSelect, value, selected, tintColor, hide
     };
     const color = getColor();
     return (React.createElement(BaseSegmentedControlTab, { value: value, selected: selected, hideDivider: hideDivider, onSelect: onSelect, tintColor: tintColor, fontFamily: selected ? activeFontFamily : fontFamily, fontSize: selected ? activeFontSize : fontSize, color: selected ? activeColor || color : color, fontWeight: selected ? activeFontWeight || '700' : fontWeight, fontStyle: selected ? activeFontStyle : fontStyle }));
-};
+}
 //# sourceMappingURL=SegmentControlTap.js.map

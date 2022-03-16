@@ -9,7 +9,6 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-/* eslint-disable no-useless-escape */
 import React from 'react';
 import { Text } from '../Text';
 import TextExtraction from './TextExtraction';
@@ -20,7 +19,7 @@ export const PATTERNS = {
     email: /\S+@\S+\.\S+/
 };
 export function RichText(props) {
-    const { parse, childrenProps } = props, remainder = __rest(props, ["parse", "childrenProps"]);
+    const { parse, childrenProps } = props, others = __rest(props, ["parse", "childrenProps"]);
     const getPatterns = () => {
         if (parse === undefined) {
             return [];
@@ -50,6 +49,6 @@ export function RichText(props) {
             return React.createElement(Text, Object.assign({ key: `parsedText-${index}`, style: Object.assign(Object.assign({}, parentStyle), style) }, childrenProps, remainder));
         });
     };
-    return React.createElement(Text, Object.assign({}, remainder), getParsedText());
+    return React.createElement(Text, Object.assign({}, others), getParsedText());
 }
 //# sourceMappingURL=index.js.map

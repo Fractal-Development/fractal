@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useTheme } from '../../../../../context';
 import { Box } from '../../../../layout/Box';
 import { Popover } from '../../../../overlays/Popover';
@@ -23,7 +23,8 @@ export function BaseAutoComplete(_a) {
             hideSuggestions();
         }
     }, [filteredData.length, hideSuggestions]);
-    return (React.createElement(Popover, { placement: 'bottom', active: suggestionsVisible, onRequestClose: hideSuggestions, popoverChildren: (anchorWidth) => (React.createElement(Box, { width: anchorWidth, marginTop: spacings.s, padding: 0, paddingTop: spacings.xs, paddingBottom: spacings.xs, maxHeight: 240, overflow: 'scroll' },
-            React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress }))) }, (ref) => (React.createElement(SearchBar, Object.assign({ ref: ref, value: value, ariaLabel: 'Autocomplete', onSearch: onSearch, onChangeText: onChangeText }, searchBarProps)))));
+    const popoverChildren = useCallback((anchorWidth) => (React.createElement(Box, { width: anchorWidth, marginTop: spacings.s, padding: 0, paddingTop: spacings.xs, paddingBottom: spacings.xs, maxHeight: 240, overflow: 'scroll' },
+        React.createElement(SuggestionsList, { multiple: multiple, filteredData: filteredData, getLabel: getLabel, onItemPress: onItemPress }))), [spacings, filteredData, getLabel, onItemPress, multiple]);
+    return (React.createElement(Popover, { placement: 'bottom', active: suggestionsVisible, onRequestClose: hideSuggestions, popoverChildren: popoverChildren }, (ref) => (React.createElement(SearchBar, Object.assign({ ref: ref, value: value, ariaLabel: 'Autocomplete', onSearch: onSearch, onChangeText: onChangeText }, searchBarProps)))));
 }
 //# sourceMappingURL=index.js.map

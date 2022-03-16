@@ -1,6 +1,5 @@
-import React, { createContext, useState, useEffect, useCallback } from 'react';
-const defaultValue = [];
-export const SelectedOptionsContext = createContext(defaultValue);
+import React, { createContext, useState, useEffect, useCallback, useMemo } from 'react';
+export const SelectedOptionsContext = createContext([[], () => { }]);
 export function SelectedOptionsProvider({ children, controllableSelectedOptions, onSelect, multiple }) {
     const [selectedOptions, setSelectedOptions] = useState(controllableSelectedOptions !== null && controllableSelectedOptions !== void 0 ? controllableSelectedOptions : []);
     const isControlled = controllableSelectedOptions !== undefined;
@@ -23,6 +22,7 @@ export function SelectedOptionsProvider({ children, controllableSelectedOptions,
             setSelectedOptions(controllableSelectedOptions);
         }
     }, [controllableSelectedOptions]);
-    return React.createElement(SelectedOptionsContext.Provider, { value: [selectedOptions, updateValue] }, children);
+    const value = useMemo(() => [selectedOptions, updateValue], [selectedOptions, updateValue]);
+    return React.createElement(SelectedOptionsContext.Provider, { value: value }, children);
 }
 //# sourceMappingURL=SelectedOptionsContext.js.map
