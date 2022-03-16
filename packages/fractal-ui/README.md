@@ -28,7 +28,8 @@ We have other dependencies that are used by all platforms so we manage that auto
 "react-native": "~0.67.3",
 "react-native-reanimated": "^2.4.1",
 "react-native-svg": "^12.3.0",
-"react-virtualized-auto-sizer": "^1.0.6"
+"react-virtualized-auto-sizer": "^1.0.6",
+"react-native-gesture-handler": "^2.3.2"
 ```
 
 #### React Native(iOS and Android only)
@@ -45,6 +46,7 @@ We have other dependencies that are used by all platforms so we manage that auto
 "react-native": "~0.67.3",
 "react-native-reanimated": "^2.4.1",
 "react-native-svg": "^12.3.0",
+"react-native-gesture-handler": "^2.3.2"
 ```
 
 #### React.JS or Next.JS(Web only)
