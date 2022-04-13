@@ -3,22 +3,12 @@ import { KeyboardAvoidingView, Platform } from 'react-native';
 import { motify } from '@motify/core';
 import styled from 'styled-components/native';
 import { KeyboardAvoidingLayerProps } from './types';
-import {
-    extractBackgroundProps,
-    extractBorderProps,
-    extractDimensionProps,
-    extractDisplayProps,
-    extractShadowProps
-} from '../../../sharedProps';
+import { SharedStyles } from '../../../sharedProps/SharedStyles';
 
 const MotiView = motify(KeyboardAvoidingView)();
 
 const StyledLayer = styled(MotiView)`
-    ${extractBackgroundProps};
-    ${extractDimensionProps};
-    ${extractDisplayProps};
-    ${extractBorderProps};
-    ${extractShadowProps};
+    ${SharedStyles};
 `;
 
 const KeyboardAvoidingLayer = forwardRef(

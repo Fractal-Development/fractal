@@ -2,24 +2,14 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { ScrollView as RNScrollView } from 'react-native';
-import {
-    extractBackgroundProps,
-    extractBorderProps,
-    extractDimensionProps,
-    extractDisplayProps,
-    extractShadowProps
-} from '../../../sharedProps';
 import { ScrollViewProps } from './types';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
+import { SharedStyles } from '../../../sharedProps/SharedStyles';
 
 const MotiScrollView = motify(RNScrollView)();
 
 const StyledScrollView = styled(MotiScrollView)`
-    ${extractBackgroundProps};
-    ${extractDimensionProps};
-    ${extractDisplayProps};
-    ${extractBorderProps};
-    ${extractShadowProps};
+    ${SharedStyles};
 `;
 
 const ScrollView = forwardRef(

@@ -13,16 +13,16 @@ import React, { forwardRef, useCallback, useMemo, useState } from 'react';
 import { Pressable } from '../Pressable';
 const BaseButton = forwardRef((_a, ref) => {
     var { whileTap, pressedBackgroundColor, onPressIn, onPressOut, backgroundColor } = _a, others = __rest(_a, ["whileTap", "pressedBackgroundColor", "onPressIn", "onPressOut", "backgroundColor"]);
-    const [currentVariant, setCurrentVariant] = useState('default');
+    const [currentVariant, setCurrentVariant] = useState('from');
     const variants = useMemo(() => ({
         tapped: Object.assign({ scale: 0.9, backgroundColor: pressedBackgroundColor }, whileTap),
-        default: {
+        from: {
             scale: 1.0,
             backgroundColor
         }
     }), [pressedBackgroundColor, backgroundColor, whileTap]);
     const togglePress = useCallback(() => {
-        setCurrentVariant((variant) => (variant === 'tapped' ? 'default' : 'tapped'));
+        setCurrentVariant((variant) => (variant === 'tapped' ? 'from' : 'tapped'));
     }, []);
     const handlePressIn = useCallback(() => {
         togglePress();

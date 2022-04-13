@@ -13,15 +13,11 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { View } from 'react-native';
-import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps } from '../../../sharedProps';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
+import { SharedStyles } from '../../../sharedProps/SharedStyles';
 const MotiView = motify(View)();
 const StyledLayer = styled(MotiView) `
-    ${extractBackgroundProps};
-    ${extractDimensionProps};
-    ${extractDisplayProps};
-    ${extractBorderProps};
-    ${extractShadowProps};
+    ${SharedStyles};
 `;
 const Layer = forwardRef((_a, ref) => {
     var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);

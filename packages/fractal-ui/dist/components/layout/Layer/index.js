@@ -11,16 +11,12 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { extractBackgroundProps, extractBorderProps, extractDimensionProps, extractDisplayProps, extractShadowProps, extractWebProps } from '../../../sharedProps';
-const StyledLayer = styled(motion.div) `
-    ${extractBackgroundProps};
-    ${extractDimensionProps};
-    ${extractDisplayProps};
-    ${extractBorderProps};
-    ${extractShadowProps};
-    ${extractWebProps};
-
+import { isValidMotionProp, motion } from 'framer-motion';
+import { SharedStyles } from '../../../sharedProps/SharedStyles';
+const StyledLayer = styled(motion.div).withConfig({
+    shouldForwardProp: isValidMotionProp
+}) `
+    ${SharedStyles};
     &:focus {
         outline-color: initial;
         outline-style: none;

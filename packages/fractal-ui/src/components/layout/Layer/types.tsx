@@ -1,7 +1,8 @@
 import { ReactNode, RefObject } from 'react';
-import { AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
+import { AnimationProps } from '../../../sharedProps';
+import { SharedStylesProps } from '../../../sharedProps/SharedStyles';
 
-export interface LayerProps extends FractalSharedStyleProps, AnimationProps {
+export interface LayerProps extends SharedStylesProps, AnimationProps {
     children?: ReactNode | Array<ReactNode>;
     style?: any;
     onLayout?: (event: any) => void;

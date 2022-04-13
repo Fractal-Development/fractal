@@ -2,24 +2,14 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { View } from 'react-native';
-import {
-    extractBackgroundProps,
-    extractBorderProps,
-    extractDimensionProps,
-    extractDisplayProps,
-    extractShadowProps
-} from '../../../sharedProps';
 import { LayerProps } from './types';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
+import { SharedStyles } from '../../../sharedProps/SharedStyles';
 
 const MotiView = motify(View)();
 
 const StyledLayer = styled(MotiView)`
-    ${extractBackgroundProps};
-    ${extractDimensionProps};
-    ${extractDisplayProps};
-    ${extractBorderProps};
-    ${extractShadowProps};
+    ${SharedStyles};
 `;
 
 const Layer = forwardRef(({ currentVariant, variants, ...others }: LayerProps, ref: any): JSX.Element => {

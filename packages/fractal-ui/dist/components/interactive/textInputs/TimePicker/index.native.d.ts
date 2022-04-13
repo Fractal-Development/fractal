@@ -1,2 +1,2 @@
 import { DatePickerProps } from '../DatePicker/types/DatePickerProps';
-export declare function TimePicker(props: Omit<DatePickerProps, 'mode'>): JSX.Element;
+export declare function TimePicker(props: DatePickerProps): JSX.Element;

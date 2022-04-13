@@ -4,7 +4,7 @@ import { Pressable } from '../Pressable';
 
 const BaseButton = forwardRef(
     ({ whileTap, pressedBackgroundColor, onPressIn, onPressOut, backgroundColor, ...others }: BaseButtonProps, ref: any): JSX.Element => {
-        const [currentVariant, setCurrentVariant] = useState('default');
+        const [currentVariant, setCurrentVariant] = useState('from');
         const variants = useMemo(
             () => ({
                 tapped: {
@@ -12,7 +12,7 @@ const BaseButton = forwardRef(
                     backgroundColor: pressedBackgroundColor,
                     ...whileTap
                 },
-                default: {
+                from: {
                     scale: 1.0,
                     backgroundColor
                 }
@@ -21,7 +21,7 @@ const BaseButton = forwardRef(
         );
 
         const togglePress = useCallback(() => {
-            setCurrentVariant((variant) => (variant === 'tapped' ? 'default' : 'tapped'));
+            setCurrentVariant((variant) => (variant === 'tapped' ? 'from' : 'tapped'));
         }, []);
 
         const handlePressIn = useCallback(() => {

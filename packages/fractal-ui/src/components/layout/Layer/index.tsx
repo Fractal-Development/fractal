@@ -1,31 +1,19 @@
-import React, { forwardRef, FunctionComponent } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import {
-    extractBackgroundProps,
-    extractBorderProps,
-    extractDimensionProps,
-    extractDisplayProps,
-    extractShadowProps,
-    extractWebProps,
-    WebAnimationProps
-} from '../../../sharedProps';
+import { isValidMotionProp, motion } from 'framer-motion';
 import { LayerProps } from './types';
+import { SharedStyles } from '../../../sharedProps/SharedStyles';
 
-const StyledLayer = styled(motion.div as any)`
-    ${extractBackgroundProps};
-    ${extractDimensionProps};
-    ${extractDisplayProps};
-    ${extractBorderProps};
-    ${extractShadowProps};
-    ${extractWebProps};
-
+const StyledLayer = styled(motion.div as any).withConfig({
+    shouldForwardProp: isValidMotionProp
+})`
+    ${SharedStyles};
     &:focus {
         outline-color: initial;
         outline-style: none;
         outline-width: initial;
     }
-` as FunctionComponent<WebAnimationProps>;
+`;
 
 const Layer = forwardRef(
     ({ from, currentVariant, animate, transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => (
