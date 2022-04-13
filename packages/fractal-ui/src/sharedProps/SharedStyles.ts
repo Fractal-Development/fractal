@@ -16,7 +16,7 @@ import {
     BorderProps
 } from 'styled-system';
 import { css } from 'styled-components';
-import { LayoutProps as FramerProps, MotionProps } from 'framer-motion';
+import { isValidMotionProp, LayoutProps as FramerProps, MotionProps } from 'framer-motion';
 
 export type SharedStylesProps = SpaceProps &
     LayoutProps &
@@ -40,3 +40,8 @@ export const SharedStyles = css`
     ${typography};
     ${border};
 `;
+
+export function shouldForwardProp(key: string): boolean {
+    if (key === 'children') return true;
+    return isValidMotionProp(key);
+}

@@ -12,9 +12,9 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { SharedStyles } from '../../../sharedProps/SharedStyles';
+import { SharedStyles, shouldForwardProp } from '../../../sharedProps/SharedStyles';
 const StyledLayer = styled(motion.div).withConfig({
-// shouldForwardProp: isValidMotionProp
+    shouldForwardProp
 }) `
     ${SharedStyles};
     &:focus {

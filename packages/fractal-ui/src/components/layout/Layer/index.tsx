@@ -2,10 +2,10 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { LayerProps } from './types';
-import { SharedStyles } from '../../../sharedProps/SharedStyles';
+import { SharedStyles, shouldForwardProp } from '../../../sharedProps/SharedStyles';
 
 const StyledLayer = styled(motion.div as any).withConfig({
-    // shouldForwardProp: isValidMotionProp
+    shouldForwardProp
 })`
     ${SharedStyles};
     &:focus {
