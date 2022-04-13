@@ -10,7 +10,6 @@ import {
     extractShadowProps
 } from '../../../../sharedProps';
 import { PressableProps } from './types';
-import { usePressableAnimationStyles } from '../../../../animations/native/hooks/usePressableAnimationStyles';
 import { useVariantState } from '../../../../animations/native/hooks/useVariantState';
 
 const MotiPressable = motify(RNPressable)();
@@ -23,21 +22,9 @@ const StyledPressable = styled(MotiPressable)`
     ${extractShadowProps};
 `;
 
-const Pressable = forwardRef(({ style, currentVariant, variants, ...others }: PressableProps, ref: any): JSX.Element => {
-    const [tapStyles, handlePressIn, handlePressOut] = usePressableAnimationStyles(others);
+const Pressable = forwardRef(({ currentVariant, variants, ...others }: PressableProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);
-
-    return (
-        <StyledPressable
-            ref={ref}
-            padding={0}
-            state={variantState}
-            onPressIn={handlePressIn}
-            onPressOut={handlePressOut}
-            style={[tapStyles, style]}
-            {...others}
-        />
-    );
+    return <StyledPressable ref={ref} padding={0} state={variantState} {...others} />;
 });
 
 Pressable.displayName = 'Pressable';

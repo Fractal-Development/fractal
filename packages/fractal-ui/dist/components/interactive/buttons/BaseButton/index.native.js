@@ -9,12 +9,30 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useCallback, useMemo, useState } from 'react';
 import { Pressable } from '../Pressable';
 const BaseButton = forwardRef((_a, ref) => {
-    var { whileTap, pressedBackgroundColor } = _a, others = __rest(_a, ["whileTap", "pressedBackgroundColor"]);
-    const tapStyles = Object.assign({ scale: 0.9, backgroundColor: pressedBackgroundColor }, whileTap);
-    return React.createElement(Pressable, Object.assign({ ref: ref, whileTap: tapStyles }, others));
+    var { whileTap, pressedBackgroundColor, onPressIn, onPressOut, backgroundColor } = _a, others = __rest(_a, ["whileTap", "pressedBackgroundColor", "onPressIn", "onPressOut", "backgroundColor"]);
+    const [currentVariant, setCurrentVariant] = useState('default');
+    const variants = useMemo(() => ({
+        tapped: Object.assign({ scale: 0.9, backgroundColor: pressedBackgroundColor }, whileTap),
+        default: {
+            scale: 1.0,
+            backgroundColor
+        }
+    }), [pressedBackgroundColor, backgroundColor, whileTap]);
+    const togglePress = useCallback(() => {
+        setCurrentVariant((variant) => (variant === 'tapped' ? 'default' : 'tapped'));
+    }, []);
+    const handlePressIn = useCallback(() => {
+        togglePress();
+        onPressIn === null || onPressIn === void 0 ? void 0 : onPressIn();
+    }, [togglePress, onPressIn]);
+    const handlePressOut = useCallback(() => {
+        togglePress();
+        onPressOut === null || onPressOut === void 0 ? void 0 : onPressOut();
+    }, [togglePress, onPressOut]);
+    return (React.createElement(Pressable, Object.assign({ ref: ref, variants: variants, currentVariant: currentVariant, backgroundColor: backgroundColor, onPressIn: handlePressIn, onPressOut: handlePressOut }, others)));
 });
 BaseButton.displayName = 'BaseButton';
 export { BaseButton };

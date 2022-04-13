@@ -20,11 +20,24 @@ export interface ButtonProps extends FractalSharedStyleProps, AnimationProps {
     ariaLabel?: string;
     disabled?: boolean;
     loading?: boolean;
+    activityIndicatorColor?: string;
 }
 
 const Button = forwardRef(
     (
-        { variant = 'main', disabled, loading, ariaLabel, children, text, addShadow, onPress, reduceColor, ...others }: ButtonProps,
+        {
+            variant = 'main',
+            disabled,
+            loading,
+            ariaLabel,
+            children,
+            text,
+            addShadow,
+            onPress,
+            reduceColor,
+            activityIndicatorColor,
+            ...others
+        }: ButtonProps,
         ref: any
     ): JSX.Element => {
         const { borderRadius, sizes, shadows, spacings, colors } = useTheme();
@@ -58,7 +71,7 @@ const Button = forwardRef(
             >
                 {loading ? (
                     <ActivityIndicator
-                        color={colors.white}
+                        color={activityIndicatorColor ?? colors.white}
                         height={sizes.loadingComponentHeightForButton}
                         width={sizes.loadingComponentHeightForButton}
                     />

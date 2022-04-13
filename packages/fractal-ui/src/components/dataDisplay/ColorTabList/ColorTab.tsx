@@ -15,6 +15,11 @@ interface InternalColorTabProps extends ColorTabProps {
     onPress: (index: number) => void;
 }
 
+const variants = {
+    active: { opacity: 1, scale: 1 },
+    inactive: { opacity: 0.6, scale: 0.8 }
+};
+
 export function ColorTab({ tabColor, text, active, onPress, index }: InternalColorTabProps): ReactElement {
     const { borderRadius, colors, spacings, sizes } = useTheme();
     const handlePress = useCallback(() => {
@@ -26,7 +31,8 @@ export function ColorTab({ tabColor, text, active, onPress, index }: InternalCol
             onPress={handlePress}
             backgroundColor={colors.foreground}
             height={sizes.colorTabListItemHeight}
-            animate={{ opacity: active ? 1 : 0.6, scale: active ? 1 : 0.8 }}
+            currentVariant={active ? 'active' : 'inactive'}
+            variants={variants}
             borderRadius={borderRadius.m}
             borderBottomRightRadius={active ? 0 : borderRadius.m}
             borderBottomLeftRadius={active ? 0 : borderRadius.m}

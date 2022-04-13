@@ -17,7 +17,7 @@ import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibil
 import { useButtonColors } from './hooks/useButtonColors';
 import { ActivityIndicator } from '../../feedback';
 const Button = forwardRef((_a, ref) => {
-    var { variant = 'main', disabled, loading, ariaLabel, children, text, addShadow, onPress, reduceColor } = _a, others = __rest(_a, ["variant", "disabled", "loading", "ariaLabel", "children", "text", "addShadow", "onPress", "reduceColor"]);
+    var { variant = 'main', disabled, loading, ariaLabel, children, text, addShadow, onPress, reduceColor, activityIndicatorColor } = _a, others = __rest(_a, ["variant", "disabled", "loading", "ariaLabel", "children", "text", "addShadow", "onPress", "reduceColor", "activityIndicatorColor"]);
     const { borderRadius, sizes, shadows, spacings, colors } = useTheme();
     const [pressed, setPressed] = useState(false);
     const [backgroundColor, foregroundColor, pressedColor] = useButtonColors(variant, reduceColor);
@@ -27,7 +27,7 @@ const Button = forwardRef((_a, ref) => {
             onPress === null || onPress === void 0 ? void 0 : onPress();
         }
     };
-    return (React.createElement(BaseButton, Object.assign({ ref: ref, height: sizes.interactiveItemHeight, backgroundColor: backgroundColor, pressedBackgroundColor: pressedColor, borderRadius: borderRadius.m, boxShadow: addShadow ? shadows.mainShadow : undefined, justifyContent: 'center', alignItems: 'center', paddingRight: spacings.s, paddingLeft: spacings.s, onPress: handleButtonPress, opacity: disabled || loading ? 0.5 : 1, pointerEvents: disabled || loading ? 'none' : undefined }, getButtonAccessibilityProps(pressed, false, text !== null && text !== void 0 ? text : ariaLabel), others), loading ? (React.createElement(ActivityIndicator, { color: colors.white, height: sizes.loadingComponentHeightForButton, width: sizes.loadingComponentHeightForButton })) : (React.createElement(React.Fragment, null,
+    return (React.createElement(BaseButton, Object.assign({ ref: ref, height: sizes.interactiveItemHeight, backgroundColor: backgroundColor, pressedBackgroundColor: pressedColor, borderRadius: borderRadius.m, boxShadow: addShadow ? shadows.mainShadow : undefined, justifyContent: 'center', alignItems: 'center', paddingRight: spacings.s, paddingLeft: spacings.s, onPress: handleButtonPress, opacity: disabled || loading ? 0.5 : 1, pointerEvents: disabled || loading ? 'none' : undefined }, getButtonAccessibilityProps(pressed, false, text !== null && text !== void 0 ? text : ariaLabel), others), loading ? (React.createElement(ActivityIndicator, { color: activityIndicatorColor !== null && activityIndicatorColor !== void 0 ? activityIndicatorColor : colors.white, height: sizes.loadingComponentHeightForButton, width: sizes.loadingComponentHeightForButton })) : (React.createElement(React.Fragment, null,
         typeof children === 'function' ? children === null || children === void 0 ? void 0 : children(foregroundColor) : children,
         text != null ? (React.createElement(Text, { variant: 'button', color: foregroundColor }, text)) : null))));
 });
