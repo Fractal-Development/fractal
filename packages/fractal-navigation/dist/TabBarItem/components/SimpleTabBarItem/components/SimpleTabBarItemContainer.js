@@ -20,10 +20,10 @@ export const SimpleTabBarItemContainer = memo((_a) => {
     const [widthSizeType] = useWidthSizeGroup();
     const tabBarPosition = useTabBarPosition();
     const flexDirection = tabBarPosition !== 'bottom' ? 'column' : getValueForLargeSizeType(widthSizeType, 'row', 'column');
-    const flexGrow = tabBarPosition === 'bottom' ? 1 : undefined;
+    const flex = tabBarPosition === 'bottom' ? 1 : undefined;
     const marginBottom = tabBarPosition !== 'bottom' ? spacings.m : undefined;
     const handlePress = useTabPress(tabIdentifier, onTabPress);
-    return (React.createElement(Pressable, Object.assign({ flexGrow: flexGrow, flexDirection: flexDirection, marginBottom: marginBottom, justifyContent: 'center', alignItems: 'center', minHeight: tabBar.iOSVerticalHeight - 1, minWidth: tabBar.iOSHorizontalWidth - 1, cursor: 'pointer', onPress: handlePress }, others),
+    return (React.createElement(Pressable, Object.assign({ flex: flex, flexDirection: flexDirection, marginBottom: marginBottom, justifyContent: 'center', alignItems: 'center', minHeight: tabBar.iOSVerticalHeight - 1, minWidth: tabBar.iOSHorizontalWidth - 1, cursor: 'pointer', onPress: handlePress }, others),
         icon(24),
         children));
 });
