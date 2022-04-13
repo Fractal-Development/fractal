@@ -14,10 +14,10 @@ import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { View } from 'react-native';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
-import { SharedStyles } from '../../../sharedProps/SharedStyles';
+import { FractalSharedCss } from '../../../sharedProps';
 const MotiView = motify(View)();
 const StyledLayer = styled(MotiView) `
-    ${SharedStyles};
+    ${FractalSharedCss};
 `;
 const Layer = forwardRef((_a, ref) => {
     var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);

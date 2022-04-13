@@ -14,10 +14,10 @@ import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { ScrollView as RNScrollView } from 'react-native';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
-import { SharedStyles } from '../../../sharedProps/SharedStyles';
+import { FractalSharedCss } from '../../../sharedProps';
 const MotiScrollView = motify(RNScrollView)();
 const StyledScrollView = styled(MotiScrollView) `
-    ${SharedStyles};
+    ${FractalSharedCss};
 `;
 const ScrollView = forwardRef((_a, ref) => {
     var { currentVariant, variants, horizontal, flexShrink, flexDirection } = _a, others = __rest(_a, ["currentVariant", "variants", "horizontal", "flexShrink", "flexDirection"]);

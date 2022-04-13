@@ -14,10 +14,10 @@ import styled from 'styled-components/native';
 import { motify } from '@motify/core';
 import { SafeAreaView } from 'react-native';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
-import { SharedStyles } from '../../../sharedProps/SharedStyles';
+import { FractalSharedCss } from '../../../sharedProps';
 const MotiSafeAreaView = motify(SafeAreaView)();
 const StyledSafeAreaLayer = styled(MotiSafeAreaView) `
-    ${SharedStyles};
+    ${FractalSharedCss};
 `;
 const SafeAreaLayer = forwardRef((_a, ref) => {
     var { currentVariant, variants } = _a, others = __rest(_a, ["currentVariant", "variants"]);

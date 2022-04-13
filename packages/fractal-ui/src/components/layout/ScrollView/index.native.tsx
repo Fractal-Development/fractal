@@ -4,12 +4,12 @@ import { motify } from '@motify/core';
 import { ScrollView as RNScrollView } from 'react-native';
 import { ScrollViewProps } from './types';
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
-import { SharedStyles } from '../../../sharedProps/SharedStyles';
+import { FractalSharedCss } from '../../../sharedProps';
 
 const MotiScrollView = motify(RNScrollView)();
 
 const StyledScrollView = styled(MotiScrollView)`
-    ${SharedStyles};
+    ${FractalSharedCss};
 `;
 
 const ScrollView = forwardRef(
