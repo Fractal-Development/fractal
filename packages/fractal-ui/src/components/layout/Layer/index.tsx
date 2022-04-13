@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { isValidMotionProp, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { LayerProps } from './types';
 import { SharedStyles } from '../../../sharedProps/SharedStyles';
 
 const StyledLayer = styled(motion.div as any).withConfig({
-    shouldForwardProp: isValidMotionProp
+    // shouldForwardProp: isValidMotionProp
 })`
     ${SharedStyles};
     &:focus {
@@ -16,7 +16,7 @@ const StyledLayer = styled(motion.div as any).withConfig({
 `;
 
 const Layer = forwardRef(
-    ({ from, currentVariant, animate, transition = { type: 'spring' }, ...others }: LayerProps, ref: any): JSX.Element => (
+    ({ from, currentVariant, animate, transition = { type: 'spring' }, children, ...others }: LayerProps, ref: any): JSX.Element => (
         <StyledLayer
             ref={ref}
             flexDirection='column'
@@ -24,7 +24,9 @@ const Layer = forwardRef(
             animate={currentVariant ?? animate}
             transition={transition}
             {...others}
-        />
+        >
+            {children}
+        </StyledLayer>
     )
 );
 

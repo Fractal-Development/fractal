@@ -11,10 +11,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { isValidMotionProp, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { SharedStyles } from '../../../sharedProps/SharedStyles';
 const StyledLayer = styled(motion.div).withConfig({
-    shouldForwardProp: isValidMotionProp
+// shouldForwardProp: isValidMotionProp
 }) `
     ${SharedStyles};
     &:focus {
@@ -24,8 +24,8 @@ const StyledLayer = styled(motion.div).withConfig({
     }
 `;
 const Layer = forwardRef((_a, ref) => {
-    var { from, currentVariant, animate, transition = { type: 'spring' } } = _a, others = __rest(_a, ["from", "currentVariant", "animate", "transition"]);
-    return (React.createElement(StyledLayer, Object.assign({ ref: ref, flexDirection: 'column', initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate, transition: transition }, others)));
+    var { from, currentVariant, animate, transition = { type: 'spring' }, children } = _a, others = __rest(_a, ["from", "currentVariant", "animate", "transition", "children"]);
+    return (React.createElement(StyledLayer, Object.assign({ ref: ref, flexDirection: 'column', initial: currentVariant ? 'from' : from, animate: currentVariant !== null && currentVariant !== void 0 ? currentVariant : animate, transition: transition }, others), children));
 });
 Layer.displayName = 'Layer';
 export { Layer };
