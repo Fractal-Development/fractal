@@ -7,10 +7,10 @@ export function ColorTabListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Color Tab List Fragment
             </Text>
-            <Layer flexDirection="row" marginTop={spacings.s} marginBottom={spacings.xl}>
+            <Layer flexDirection='row' marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ColorTabList
                     tabs={[
                         { tabColor: colors.contentInteractiveColor100, text: 'Tab 1' },
@@ -18,8 +18,9 @@ export function ColorTabListFragment(): JSX.Element {
                         { tabColor: colors.successInteractiveColor, text: 'Tab 3' }
                     ]}
                     onItemPress={(index) => console.log(index)}
+                    width='100%'
                 >
-                    {() => <Text variant="normal">Tab Content</Text>}
+                    {() => <Text variant='normal'>Tab Content</Text>}
                 </ColorTabList>
             </Layer>
         </>

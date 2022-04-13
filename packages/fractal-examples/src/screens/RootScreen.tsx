@@ -17,7 +17,7 @@ import { dataProvider } from '../fragments/ui-fragments/layout/tables/util/table
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
 
 export function RootScreen(): ReactElement {
-    const [dataProviderState] = useState(dataProvider.cloneWithRows(screensArray));
+    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(screensArray));
     const width = useSizeValue('width');
     const { sizes, spacings } = useTheme();
     const history = useHistory();
@@ -50,11 +50,25 @@ export function RootScreen(): ReactElement {
         [history]
     );
 
+    const handleSearch = (search: string) => {
+        if (search === '') {
+            setDataProviderState(dataProvider.cloneWithRows(screensArray));
+        } else {
+            setDataProviderState(dataProvider.cloneWithRows(screensArray.filter((row) => row.name.includes(search))));
+        }
+    };
+
     return (
         <NavigationBarInsetsLayer>
             <PaddingLayer flex={1}>
                 <TableContainer title='Table Container' flex={1}>
-                    <SearchBar placeholder='Buscar' buttonText='Buscar' marginBottom={spacings.lg} enableSearchButton />
+                    <SearchBar
+                        placeholder='Buscar'
+                        buttonText='Buscar'
+                        marginBottom={spacings.lg}
+                        enableSearchButton
+                        onSearch={handleSearch}
+                    />
                     <Layer flex={1}>
                         <AutoSizeRecyclerView layoutProvider={layoutProvider} dataProvider={dataProviderState} rowRenderer={rowRenderer} />
                     </Layer>
