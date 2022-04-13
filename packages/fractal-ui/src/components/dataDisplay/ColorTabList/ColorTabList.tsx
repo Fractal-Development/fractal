@@ -29,7 +29,7 @@ export function ColorTabList({ children, tabs, defaultActiveIndex = 0, onItemPre
                 {tabs.map((props, index) => (
                     <ColorTab key={index} {...props} onPress={handlePress} index={index} active={index === activeIndex} />
                 ))}
-                <Box height={sizes.colorTabListItemHeight} width={spacings.s} />
+                <Layer height={sizes.colorTabListItemHeight} width={spacings.s} />
             </ScrollView>
             <Box
                 borderTopLeftRadius={activeIndex !== 0 ? borderRadius.m : 0}
