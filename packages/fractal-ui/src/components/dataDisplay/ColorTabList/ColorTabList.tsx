@@ -11,7 +11,7 @@ export interface ColorTabListProps extends LayerProps {
 }
 
 export function ColorTabList({ children, tabs, defaultActiveIndex = 0, onItemPress, ...others }: ColorTabListProps): ReactElement {
-    const { borderRadius } = useTheme();
+    const { borderRadius, spacings, sizes } = useTheme();
     const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
     const { tabColor } = tabs[activeIndex];
 
@@ -29,6 +29,7 @@ export function ColorTabList({ children, tabs, defaultActiveIndex = 0, onItemPre
                 {tabs.map((props, index) => (
                     <ColorTab key={index} {...props} onPress={handlePress} index={index} active={index === activeIndex} />
                 ))}
+                <Box height={sizes.colorTabListItemHeight} width={spacings.s} />
             </ScrollView>
             <Box
                 borderTopLeftRadius={activeIndex !== 0 ? borderRadius.m : 0}

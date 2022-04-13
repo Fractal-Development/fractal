@@ -15,7 +15,7 @@ import { useTheme } from '../../../context';
 import { ColorTab } from './ColorTab';
 export function ColorTabList(_a) {
     var { children, tabs, defaultActiveIndex = 0, onItemPress } = _a, others = __rest(_a, ["children", "tabs", "defaultActiveIndex", "onItemPress"]);
-    const { borderRadius } = useTheme();
+    const { borderRadius, spacings, sizes } = useTheme();
     const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
     const { tabColor } = tabs[activeIndex];
     const handlePress = useCallback((index) => {
@@ -23,7 +23,9 @@ export function ColorTabList(_a) {
         onItemPress === null || onItemPress === void 0 ? void 0 : onItemPress(index);
     }, [onItemPress]);
     return (React.createElement(Layer, Object.assign({}, others),
-        React.createElement(ScrollView, { showsHorizontalScrollIndicator: false, horizontal: true }, tabs.map((props, index) => (React.createElement(ColorTab, Object.assign({ key: index }, props, { onPress: handlePress, index: index, active: index === activeIndex }))))),
+        React.createElement(ScrollView, { showsHorizontalScrollIndicator: false, horizontal: true },
+            tabs.map((props, index) => (React.createElement(ColorTab, Object.assign({ key: index }, props, { onPress: handlePress, index: index, active: index === activeIndex })))),
+            React.createElement(Box, { height: sizes.colorTabListItemHeight, width: spacings.s })),
         React.createElement(Box, { borderTopLeftRadius: activeIndex !== 0 ? borderRadius.m : 0, borderTopRightRadius: borderRadius.m, width: '100%', flex: 1, animate: { backgroundColor: tabColor }, transition: { type: 'timing' } }, children(activeIndex))));
 }
 //# sourceMappingURL=ColorTabList.js.map
