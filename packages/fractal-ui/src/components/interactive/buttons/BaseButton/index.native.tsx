@@ -9,11 +9,13 @@ const BaseButton = forwardRef(
             () => ({
                 tapped: {
                     scale: 0.9,
+                    opacity: 0.8,
                     backgroundColor: pressedBackgroundColor,
                     ...whileTap
                 },
                 from: {
                     scale: 1.0,
+                    opacity: 1.0,
                     backgroundColor
                 }
             }),
