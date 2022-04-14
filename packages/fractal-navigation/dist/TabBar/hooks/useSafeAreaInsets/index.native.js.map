@@ -1,1 +1,0 @@
-{"version":3,"file":"index.native.js","sourceRoot":"","sources":["../../../../src/TabBar/hooks/useSafeAreaInsets/index.native.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,IAAI,wBAAwB,EAAE,MAAM,gCAAgC,CAAC;AAG/F,MAAM,UAAU,iBAAiB;IAC7B,OAAO,wBAAwB,EAAE,CAAC;AACtC,CAAC"}

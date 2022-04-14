@@ -1,1 +1,0 @@
-{"version":3,"file":"useNavigationBarInsets.js","sourceRoot":"","sources":["../../../src/NavigationBar/hooks/useNavigationBarInsets.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AAEnC,OAAO,EAAE,0BAA0B,EAAE,MAAM,wCAAwC,CAAC;AAEpF,MAAM,UAAU,sBAAsB;IAClC,OAAO,UAAU,CAAC,0BAA0B,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC"}
