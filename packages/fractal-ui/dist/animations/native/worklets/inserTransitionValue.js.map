@@ -1,1 +1,0 @@
-{"version":3,"file":"inserTransitionValue.js","sourceRoot":"","sources":["../../../../src/animations/native/worklets/inserTransitionValue.ts"],"names":[],"mappings":"AAIA,MAAM,UAAU,qBAAqB,CACjC,cAAyB,EACzB,YAAuD,EACvD,KAAuB;IAEvB,SAAS,CAAC;IAEV,IAAI,KAAK,IAAI,IAAI,EAAE;QACf,cAAc,CAAC,YAAY,CAAC,GAAG,KAAK,CAAC;KACxC;AACL,CAAC"}

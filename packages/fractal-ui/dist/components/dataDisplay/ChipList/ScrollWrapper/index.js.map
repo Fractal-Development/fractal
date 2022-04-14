@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../../src/components/dataDisplay/ChipList/ScrollWrapper/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,KAAK,EAAc,MAAM,iBAAiB,CAAC;AAEpD,MAAM,UAAU,aAAa,CAAC,KAAiB;IAC3C,OAAO,oBAAC,KAAK,kBAAC,QAAQ,EAAC,QAAQ,EAAC,aAAa,EAAC,KAAK,EAAC,QAAQ,EAAC,MAAM,IAAK,KAAK,EAAI,CAAC;AACtF,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"getChipAccessibilityProps.js","sourceRoot":"","sources":["../../../../../src/components/dataDisplay/Chip/accessibility/getChipAccessibilityProps.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,yBAAyB,CAAC,IAAa;IACnD,OAAO;QACH,QAAQ,EAAE,CAAC;QACX,YAAY,EAAE,QAAQ,IAAI,EAAE;KAC/B,CAAC;AACN,CAAC"}
