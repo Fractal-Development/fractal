@@ -1,1 +1,0 @@
-{"version":3,"file":"chunkArray.js","sourceRoot":"","sources":["../../../../src/components/QuadrantChart/utils/chunkArray.tsx"],"names":[],"mappings":"AAAA,MAAM,UAAU,UAAU,CAAI,YAAsB,EAAE,SAAiB;IACnE,MAAM,OAAO,GAAoB,EAAE,CAAC;IAEpC,OAAO,YAAY,CAAC,MAAM,EAAE;QACxB,OAAO,CAAC,IAAI,CAAC,YAAY,CAAC,MAAM,CAAC,CAAC,EAAE,SAAS,CAAC,CAAC,CAAC;KACnD;IAED,OAAO,OAAO,CAAC;AACnB,CAAC"}
