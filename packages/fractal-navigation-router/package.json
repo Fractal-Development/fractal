@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-navigation-router",
-    "version": "2.2.4",
+    "version": "2.2.7",
     "description": "Router based on React Router that works on ReactJS and React Native.",
     "author": "BrandonMA",
     "license": "MIT",
