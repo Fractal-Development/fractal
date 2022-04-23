@@ -1,0 +1,47 @@
+{
+  "changelog": {
+    "repo": "cdmbase/lerna-bootstrap",
+    "labels": {
+      "tag: breaking change": ":boom: Breaking Change",
+      "tag: new feature": ":rocket: New Feature",
+      "tag: bug fix": ":bug: Bug Fix",
+      "tag: polish": ":nail_care: Polish",
+      "tag: documentation": "Documentation",
+      "tag: internal": ":house: Internal"
+    }
+  },
+  "command": {
+    "publish": {
+      "registry": "https://registry.npmjs.org",
+      "graphType": "all",
+      "allowBranch": [
+        "publish",
+        "devpublish"
+      ],
+      "message": "chore(release): publish [skip ci]\n",
+      "ignoreChanges": [
+        "**/__fixtures__/**",
+        "**/__tests__/**",
+        "**/*.md",
+        "**/example/**"
+      ]
+    },
+    "version": {
+      "allowBranch": [
+        "master",
+        "develop",
+        "publish",
+        "devpublish"
+      ],
+      "conventionalCommits": true,
+      "message": "chore: release package(s)"
+    }
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*",
+    "examples/*"
+  ],
+  "version": "1.0.2"
+}

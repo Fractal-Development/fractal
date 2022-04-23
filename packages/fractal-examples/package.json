@@ -1,88 +1,59 @@
 {
-    "name": "@bma98/fractal-examples",
-    "version": "2.2.5",
-    "description": "Example components on how to use Fractal UI in small fragments.",
-    "author": "BrandonMA",
-    "license": "MIT",
-    "main": "dist/index.js",
-    "types": "./dist/index.d.ts",
-    "source": "src/index.tsx",
-    "scripts": {
-        "build": "expo-module build",
-        "clean-build": "rm -rf ./dist",
-        "lint": "eslint 'src/**/*.ts*' --fix",
-        "expo-module": "expo-module"
+  "name": "@bma98/fractal-examples",
+  "version": "2.2.5",
+  "description": "Example components on how to use Fractal UI in small fragments.",
+  "keywords": [
+    "Javascript",
+    "React",
+    "React native",
+    "UI Library"
+  ],
+  "license": "MIT",
+  "author": "BrandonMA",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "source": "src/index.tsx",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean-build": "rm -rf ./dist",
+    "expo-module": "expo-module",
+    "lint": "eslint 'src/**/*.ts*' --fix"
+  },
+  "dependencies": {
+    "@bma98/fractal-auth-screen": "link:../fractal-auth-screen",
+    "@bma98/fractal-charts": "link:../fractal-charts",
+    "@bma98/fractal-media": "link:../fractal-media",
+    "@bma98/fractal-messaging": "link:../fractal-messaging",
+    "@bma98/fractal-navigation": "link:../fractal-navigation",
+    "@bma98/fractal-navigation-router": "link:../fractal-navigation-router",
+    "@bma98/fractal-ui": "link:../fractal-ui",
+    "@bma98/size-class": "^2.2.4"
+  },
+  "devDependencies": {
+    "expo-module-scripts": "^2.0.0",
+    "react-native-svg": "^12.1.1",
+    "utility-types": "^3.10.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-is": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
     },
-    "peerDependencies": {
-        "@bma98/fractal-charts": "^2.0.2",
-        "@bma98/fractal-media": "^2.0.5",
-        "@bma98/fractal-messaging": "^2.0.20",
-        "@bma98/fractal-navigation": "^2.0.9",
-        "@bma98/fractal-navigation-router": "^2.0.3",
-        "@bma98/fractal-ui": "^2.0.20",
-        "@bma98/fractal-auth-screen": "2.0.9",
-        "react": "*",
-        "react-dom": "*",
-        "react-is": "*",
-        "react-native": "*",
-        "react-native-svg": "*"
+    "react-is": {
+      "optional": true
     },
-    "peerDependenciesMeta": {
-        "react-dom": {
-            "optional": true
-        },
-        "react-is": {
-            "optional": true
-        },
-        "react-native": {
-            "optional": true
-        },
-        "react-native-svg": {
-            "optional": true
-        }
+    "react-native": {
+      "optional": true
     },
-    "dependencies": {
-        "@bma98/size-class": "^2.2.4"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@bma98/fractal-charts": "^2.0.2",
-        "@bma98/fractal-media": "^2.0.5",
-        "@bma98/fractal-messaging": "^2.0.20",
-        "@bma98/fractal-navigation": "^2.0.9",
-        "@bma98/fractal-navigation-router": "^2.0.3",
-        "@bma98/fractal-ui": "^2.0.20",
-        "@bma98/fractal-auth-screen": "2.0.9",
-        "@types/react": "~16.14.8",
-        "@types/react-dom": "^17.0.8",
-        "@types/react-native": "~0.63.52",
-        "@types/styled-components": "^5.1.10",
-        "@typescript-eslint/eslint-plugin": "^4.28.0",
-        "@typescript-eslint/parser": "^4.15.1",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.29.0",
-        "eslint-config-airbnb": "^18.2.1",
-        "eslint-config-airbnb-typescript": "^14.0.1",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.24.2",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-promise": "^5.1.0",
-        "eslint-plugin-react": "^7.26.1",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "eslint-plugin-unused-imports": "^1.1.5",
-        "expo-module-scripts": "^2.0.0",
-        "prettier": "^2.3.2",
-        "react-native-svg": "^12.1.1",
-        "typescript": "^4.3.4",
-        "utility-types": "^3.10.0",
-        "@types/react-router-dom": "^5.1.5",
-        "@types/react-router-native": "^5.1.0"
-    },
-    "keywords": [
-        "Javascript",
-        "React",
-        "React native",
-        "UI Library"
-    ],
-    "sideEffects": false
+    "react-native-svg": {
+      "optional": true
+    }
+  }
 }

@@ -7,11 +7,11 @@
         "eject": "expo eject"
     },
     "dependencies": {
-        "@bma98/fractal-charts": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-charts?master",
-        "@bma98/fractal-examples": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-examples?master",
-        "@bma98/fractal-media": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-media?master",
-        "@bma98/fractal-messaging": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-messaging?master",
-        "@bma98/fractal-ui": "https://gitpkg.now.sh/BrandonMA/fractal/packages/fractal-ui?master",
+        "@bma98/fractal-charts": "link:../../packages/fractal-charts",
+        "@bma98/fractal-examples": "link:../../packages/fractal-examples",
+        "@bma98/fractal-media": "link:../../packages/fractal-media",
+        "@bma98/fractal-messaging": "link:../../packages/fractal-messaging",
+        "@bma98/fractal-ui": "link:../../packages/fractal-ui",
         "@bma98/size-class": "^2.2.4",
         "@react-native-community/datetimepicker": "^3.5.2",
         "@react-native-community/slider": "^3.0.3",
@@ -41,12 +41,6 @@
         "recyclerlistview": "^3.0.5"
     },
     "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@types/react": "~16.9.35",
-        "@types/react-native": "~0.63.2",
-        "@types/styled-components": "^5.1.11",
-        "@types/styled-components-react-native": "^5.1.1",
-        "typescript": "~4.0.0"
     },
     "resolutions": {
         "d3-array": "2.3.3"

@@ -1,0 +1,150 @@
+{
+  "name": "fractal",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "CDMBase LLC",
+    "email": "none@cdmbase.com"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "examples/*"
+    ]
+  },
+  "scripts": {
+    "prebootstrap": "lerna run prepare",
+    "bootstrap": "yarn && yarn lerna",
+    "postbootstrap": "yarn build",
+    "build": "yarn build:packages",
+    "build:clean": "lerna exec yarn build:clean",
+    "build:packages": "lerna run build --ignore *example",
+    "build:packages:watch": "lerna run build:lib:watch --ignore *example --stream",
+    "check-updates": "lerna exec ./node_modules/.bin/npm-check-updates -- -u",
+    "clean": "lerna clean --yes && yarn build:clean && rimraf node_modules",
+    "clean:force": "rimraf package-lock.json yarn.lock && yarn clean",
+    "clean:install": "yarn clean:force && yarn git:pull && yarn bootstrap",
+    "cli": "node tools/cli",
+    "commit": "git cz",
+    "compile": "lerna exec -- yarn compile",
+    "coverage": "jest --coverage",
+    "postcoverage": "remap-istanbul --input coverage/coverage.raw.json --type lcovonly --output coverage/lcov.info",
+    "db:migrate": "knex migrate:latest --cwd . --knexfile ./servers/backend-server/knexfile.js",
+    "db:migrate:rollback": "knex migrate:rollback  --cwd . --knexfile ./servers/backend-server/knexfile.js",
+    "db:seed": "yarn db:migrate && knex seed:run  --cwd . --knexfile ./servers/backend-server/knexfile.js",
+    "predevpublish": "git checkout devpublish && git pull origin devpublish && git merge -s recursive -X theirs develop -m 'merge from develop' && yarn gitcommit && node tools/update-dependency-version.js && yarn gitcommit",
+    "devpublish": "lerna publish prerelease --ignore-scripts --exact",
+    "postdevpublish": "git checkout develop",
+    "devpublish:auto": "yarn devpublish -- --yes",
+    "devpublish:force": "yarn devpublish:forceManual -- --yes",
+    "devpublish:forceManual": "yarn devpublish -- --force-publish=*",
+    "devpublish:push": "yarn predevpublish && git push origin devpublish && yarn postdevpublish",
+    "format": "yarn lint --fix",
+    "format:md": "yarn lint:md --fix",
+    "generateGraphql": "graphql-codegen",
+    "generateGraphql:watch": "yarn generateGraphql -- --watch",
+    "git:pull": "git pull origin $(git rev-parse --abbrev-ref HEAD)",
+    "gitcommit": "git add -A && git diff --staged --quiet || git commit -am 'auto publish [skip ci] \r\n'",
+    "husky-skip": "cross-env HUSKY_SKIP_HOOKS=1",
+    "jest": "./node_modules/.bin/jest",
+    "lerna": "lerna bootstrap",
+    "prelernapublish": "git checkout publish && git pull origin publish  && git merge -s recursive -X theirs master  -m 'merge from master' && yarn gitcommit && node tools/update-dependency-version.js && yarn gitcommit",
+    "lernapublish": "lerna publish --ignore-scripts --cd-version=patch",
+    "postlernapublish": "git checkout master",
+    "lint": "eslint --ext js --ext ts --ext tsx --ext md",
+    "lint:ci": "yarn lint . --format junit",
+    "lint:fix": "yarn lint -- --fix",
+    "lint:md": "markdownlint",
+    "lintx": "yarn lint ./packages/**/src/**/*.ts ./packages-modules/**/src/**/*.ts",
+    "packages": "lerna exec --no-sort --ignore *server --ignore *device --ignore *browser-extension",
+    "prodBuild": "cross-env NODE_ENV=production babel-node --presets es2015 tools/webpack.run",
+    "publish": "yarn lernapublish",
+    "publish:auto": "yarn lernapublish --yes",
+    "publish:force": "yarn publish:forceManual --yes",
+    "publish:forceManual": "yarn lernapublish --force-publish=*",
+    "publish:push": "yarn prelernapublish && git push origin publish && yarn postlernapublish",
+    "start": "cross-env NODE_ENV=development ENV_FILE=../../config/development/dev.env yarn zen:watch",
+    "start:envSSR": "cross-env SSR=true NODE_ENV=development ENV_FILE=../../config/development/dev.env yarn zen:watch",
+    "start:test": "cross-env NODE_ENV=test ENV_FILE=../../config/test/test.env zen watch",
+    "test": "cross-env ENV_FILE=config/test/test.env yarn packages -- --scope @admin-layout/chakra-design-pro  yarn test",
+    "posttest": "yarn lint",
+    "test:watch": "npm test -- --watch",
+    "pretravis": "yarn compile",
+    "travis": "istanbul cover -x \"*.test.js\" _mocha -- --timeout 5000 --full-trace ./test/tests.js",
+    "posttravis": "yarn lint",
+    "watch": "yarn packages -- --stream --parallel 'webpack --watch'",
+    "watch-packages": "lerna exec --no-sort --parallel  --scope @admin-layout/platform* --scope @admin-layout/ant-ui --scope @admin-layout/assets --scope @admin-layout/ant-design-pro --scope @admin-layout/client --stream --parallel 'webpack --watch'",
+    "zen:build": "cross-env NODE_ENV=production zen build",
+    "zen:exp": "zen exp",
+    "zen:watch": "zen  watch -x",
+    "zen:watch:debug": "yarn zen:watch -- -v"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.md": [
+      "yarn format:md",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "resolutions": {
+    "@apollo/client": "~3.3.21",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "chokidar": "^3.4.0",
+    "jest-runtime": "^26.6.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native-gesture-handler": "~2.1.0"
+  },
+  "dependencies": {
+    "@container-stack/mailing-api-server": "0.0.26-71",
+    "dataloader": "^2.0.0",
+    "graphql": "^14.7.0",
+    "graphql-tag": "^2.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.2",
+    "@babel/core": "^7.17.7",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@types/react-native": "~0.67.3",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-router-native": "^5.1.0",
+    "@types/react-virtualized-auto-sizer": "^1.0.1",
+    "@types/styled-components": "^5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unused-imports": "^1.1.5",
+    "expo-module-scripts": "^2.0.0",
+    "lerna": "4.0.0",
+    "prettier": "^2.6.0",
+    "react-native-svg": "^12.1.1",
+    "typescript": "~4.3.5",
+    "utility-types": "^3.10.0"
+  },
+  "engines": {
+    "node": ">=14.17.3 < 17.0.0",
+    "yarn": ">=1.22"
+  }
+}
