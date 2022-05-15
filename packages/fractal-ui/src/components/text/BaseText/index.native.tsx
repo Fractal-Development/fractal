@@ -16,7 +16,7 @@ import { useVariantState } from '../../../animations/native/hooks/useVariantStat
 
 const MotiText = motify(Text)();
 
-const StyledText = styled(MotiText)`
+const StyledText = styled(MotiText as any)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

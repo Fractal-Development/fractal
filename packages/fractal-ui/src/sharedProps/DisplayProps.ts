@@ -1,27 +1,6 @@
+import { FractalSharedStyleProps } from './FractalSharedStyleProps';
 import { getDisplayProperty } from './utils/getDisplayProperty';
 import { getFlexProperty } from './utils/getFlexProperty';
-
-export interface DisplayProps {
-    flex?: 'none' | 'auto' | number;
-    display?: 'flow' | 'table' | 'flex' | 'grid' | 'ruby' | 'subgrid' | 'block' | 'inline' | 'none' | 'inline-block' | null;
-    flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
-    justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly';
-    alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
-    alignSelf?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
-    alignContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'stretch';
-    flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
-    flexBasis?: number | string;
-    flexGrow?: number;
-    flexShrink?: number;
-    position?: 'relative' | 'absolute' | 'fixed';
-    top?: number;
-    right?: number;
-    bottom?: number;
-    left?: number;
-    zIndex?: number;
-    opacity?: number;
-    overflow?: 'scroll' | 'hidden';
-}
 
 export function extractDisplayProps({
     flex,
@@ -43,7 +22,7 @@ export function extractDisplayProps({
     zIndex = 0,
     opacity,
     overflow
-}: DisplayProps): string {
+}: FractalSharedStyleProps): string {
     return `
         ${getDisplayProperty(display)};
         ${flexDirection != null ? `flex-direction: ${flexDirection}` : ''};

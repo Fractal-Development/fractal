@@ -8,7 +8,7 @@ import { FractalSharedCss } from '../../../sharedProps';
 
 const MotiView = motify(View)();
 
-const StyledLayer = styled(MotiView)`
+const StyledLayer = styled(MotiView as any)`
     ${FractalSharedCss};
 `;
 

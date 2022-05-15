@@ -14,13 +14,13 @@
         "expo-module": "expo-module"
     },
     "peerDependencies": {
+        "@bma98/fractal-auth-screen": "2.0.9",
         "@bma98/fractal-charts": "^2.0.2",
         "@bma98/fractal-media": "^2.0.5",
         "@bma98/fractal-messaging": "^2.0.20",
         "@bma98/fractal-navigation": "^2.0.9",
         "@bma98/fractal-navigation-router": "^2.0.3",
         "@bma98/fractal-ui": "^2.0.20",
-        "@bma98/fractal-auth-screen": "2.0.9",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -46,16 +46,18 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
+        "@bma98/fractal-auth-screen": "2.0.9",
         "@bma98/fractal-charts": "^2.0.2",
         "@bma98/fractal-media": "^2.0.5",
         "@bma98/fractal-messaging": "^2.0.20",
         "@bma98/fractal-navigation": "^2.0.9",
         "@bma98/fractal-navigation-router": "^2.0.3",
         "@bma98/fractal-ui": "^2.0.20",
-        "@bma98/fractal-auth-screen": "2.0.9",
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
+        "@types/react-router-dom": "^5.1.5",
+        "@types/react-router-native": "^5.1.0",
         "@types/styled-components": "^5.1.10",
         "@typescript-eslint/eslint-plugin": "^4.28.0",
         "@typescript-eslint/parser": "^4.15.1",
@@ -74,9 +76,7 @@
         "prettier": "^2.3.2",
         "react-native-svg": "^12.1.1",
         "typescript": "^4.3.4",
-        "utility-types": "^3.10.0",
-        "@types/react-router-dom": "^5.1.5",
-        "@types/react-router-native": "^5.1.0"
+        "utility-types": "^3.10.0"
     },
     "keywords": [
         "Javascript",

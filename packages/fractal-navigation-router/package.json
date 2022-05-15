@@ -23,9 +23,9 @@
         "react-native-safe-area-context": "^3.3.2",
         "react-native-screens": "^3.10.1",
         "react-native-svg": "*",
+        "react-native-url-polyfill": "^1.3.0",
         "react-router-dom": "^5.2.0",
-        "react-router-native": "^5.2.0",
-        "react-native-url-polyfill": "^1.3.0"
+        "react-router-native": "^5.2.0"
     },
     "peerDependenciesMeta": {
         "react-dom": {
@@ -37,22 +37,22 @@
         "react-native": {
             "optional": true
         },
-        "react-native-svg": {
+        "react-native-safe-area-context": {
             "optional": true
         },
         "react-native-screens": {
             "optional": true
         },
-        "react-native-safe-area-context": {
+        "react-native-svg": {
+            "optional": true
+        },
+        "react-native-url-polyfill": {
             "optional": true
         },
         "react-router-dom": {
             "optional": true
         },
         "react-router-native": {
-            "optional": true
-        },
-        "react-native-url-polyfill": {
             "optional": true
         }
     },

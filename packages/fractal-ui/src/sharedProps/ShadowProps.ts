@@ -1,8 +1,6 @@
-export interface ShadowProps {
-    boxShadow?: string;
-}
+import { FractalSharedStyleProps } from './FractalSharedStyleProps';
 
-export function extractShadowProps({ boxShadow }: ShadowProps): string {
+export function extractShadowProps({ boxShadow }: FractalSharedStyleProps): string {
     return `
         ${boxShadow != null ? `box-shadow: ${boxShadow}` : ''};
     `;

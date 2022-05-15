@@ -14,7 +14,7 @@ import { useVariantState } from '../../../animations/native/hooks/useVariantStat
 
 const MotiImage = motify(RNImage)();
 
-const StyledImage = styled(MotiImage)`
+const StyledImage = styled(MotiImage as any)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

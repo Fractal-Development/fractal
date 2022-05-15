@@ -16,7 +16,7 @@ const StyledPicker = styled(Picker)`
     ${extractDisplayProps};
     ${extractBorderProps};
     ${extractTextProps};
-` as typeof Picker;
+` as unknown as typeof Picker;
 
 const BasePicker = forwardRef((props: BasePickerProps, ref: any): JSX.Element => <StyledPicker ref={ref} {...props} />);
 

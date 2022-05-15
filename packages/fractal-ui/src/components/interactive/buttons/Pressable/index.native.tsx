@@ -14,7 +14,7 @@ import { useVariantState } from '../../../../animations/native/hooks/useVariantS
 
 const MotiPressable = motify(RNPressable)();
 
-const StyledPressable = styled(MotiPressable)`
+const StyledPressable = styled(MotiPressable as any)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

@@ -1,23 +1,4 @@
-export interface DimensionProps {
-    width?: string | number;
-    maxWidth?: string | number;
-    minWidth?: string | number;
-    height?: string | number;
-    maxHeight?: string | number;
-    minHeight?: string | number;
-    // Padding
-    padding?: number;
-    paddingTop?: number;
-    paddingBottom?: number;
-    paddingRight?: number;
-    paddingLeft?: number;
-    // Margin
-    margin?: number;
-    marginTop?: number;
-    marginBottom?: number;
-    marginRight?: number;
-    marginLeft?: number;
-}
+import { FractalSharedStyleProps } from './FractalSharedStyleProps';
 
 export function extractDimensionProps({
     height,
@@ -36,7 +17,7 @@ export function extractDimensionProps({
     marginLeft,
     marginRight,
     marginTop
-}: DimensionProps): string {
+}: FractalSharedStyleProps): string {
     return `
         ${height != null ? `height: ${typeof height === 'number' ? `${height}px` : height}` : ''};
         ${minHeight != null ? `min-height: ${typeof minHeight === 'number' ? `${minHeight}px` : minHeight}` : ''};

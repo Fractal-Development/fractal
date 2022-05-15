@@ -1,8 +1,6 @@
-export interface BackgroundProps {
-    backgroundColor?: string;
-}
+import { FractalSharedStyleProps } from './FractalSharedStyleProps';
 
-export function extractBackgroundProps({ backgroundColor }: BackgroundProps): string {
+export function extractBackgroundProps({ backgroundColor }: FractalSharedStyleProps): string {
     return `
         background-color: ${backgroundColor ?? 'transparent'};
     `;

@@ -1,0 +1,22 @@
+{
+    "name": "@bma98/fractal",
+    "version": "2.4.0",
+    "description": "UI Components easy to customize for apps that support Electron/React Web/React Native",
+    "author": "BrandonMA",
+    "license": "MIT",
+    "keywords": [
+        "Javascript",
+        "React",
+        "React native",
+        "UI Library"
+    ],
+    "sideEffects": false,
+    "workspaces": [
+        "examples/*",
+        "packages/*"
+    ],
+    "packageManager": "yarn@3.2.0",
+    "resolutions": {
+        "@types/react": "^17.0.40"
+    }
+}

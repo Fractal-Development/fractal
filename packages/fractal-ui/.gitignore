@@ -93,5 +93,6 @@ buck-out/
 # Expo
 .expo/*
 web-build/
+.yarn/*
 
 # @end expo-cli

@@ -14,7 +14,7 @@ import { useVariantState } from '../../../../animations/native/hooks/useVariantS
 
 const MotiTouchableOpacity = motify(RNTouchableOpacity)();
 
-const StyledTouchableOpacity = styled(MotiTouchableOpacity)`
+const StyledTouchableOpacity = styled(MotiTouchableOpacity as any)`
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

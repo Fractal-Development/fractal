@@ -8,7 +8,7 @@ import { FractalSharedCss } from '../../../sharedProps';
 
 const MotiScrollView = motify(RNScrollView)();
 
-const StyledScrollView = styled(MotiScrollView)`
+const StyledScrollView = styled(MotiScrollView as any)`
     ${FractalSharedCss};
 `;
 

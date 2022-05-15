@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { LayerProps } from '../../../../layout';
-import { FractalTextProps } from '../../../../../sharedProps';
+import { TextStyleProps } from '../../../../../sharedProps';
 
 type ItemValue = number | string;
 
@@ -15,6 +15,6 @@ interface BasicPickerProps {
     dropdownIconColor?: string;
 }
 
-export interface BasePickerProps extends Partial<Omit<LayerProps, 'children'>>, BasicPickerProps, FractalTextProps {
+export interface BasePickerProps extends Partial<Omit<LayerProps, 'children'>>, BasicPickerProps, TextStyleProps {
     children: ReactNode;
 }

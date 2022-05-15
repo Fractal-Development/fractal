@@ -1,4 +1,4 @@
-import { FractalTextProps, PlaceholderProps, FractalSharedStyleProps, AnimationProps } from '../../../../sharedProps';
+import { PlaceholderProps, FractalSharedStyleProps, AnimationProps, TextStyleProps } from '../../../../sharedProps';
 
 interface BaseTextInputProps {
     value?: string;
@@ -10,6 +10,6 @@ interface BaseTextInputProps {
     secureTextEntry?: boolean;
 }
 
-export interface TextFieldProps extends FractalSharedStyleProps, AnimationProps, BaseTextInputProps, FractalTextProps, PlaceholderProps {
+export interface TextFieldProps extends FractalSharedStyleProps, AnimationProps, BaseTextInputProps, TextStyleProps, PlaceholderProps {
     style?: any;
 }

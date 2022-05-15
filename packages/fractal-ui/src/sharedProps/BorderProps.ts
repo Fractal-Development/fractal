@@ -1,17 +1,4 @@
-export interface BorderProps {
-    borderRadius?: number;
-    borderTopLeftRadius?: number;
-    borderTopRightRadius?: number;
-    borderBottomLeftRadius?: number;
-    borderBottomRightRadius?: number;
-    borderWidth?: number;
-    borderTopWidth?: number;
-    borderBottomWidth?: number;
-    borderLeftWidth?: number;
-    borderRightWidth?: number;
-    borderColor?: string;
-    borderStyle?: 'solid' | 'dotted' | 'dashed';
-}
+import { FractalSharedStyleProps } from './FractalSharedStyleProps';
 
 export function extractBorderProps({
     borderRadius,
@@ -26,7 +13,7 @@ export function extractBorderProps({
     borderRightWidth,
     borderColor,
     borderStyle
-}: BorderProps): string {
+}: FractalSharedStyleProps): string {
     return `
         ${borderRadius != null ? `border-radius: ${borderRadius}px` : ''};
         ${borderTopLeftRadius != null ? `border-top-left-radius: ${borderTopLeftRadius}px` : ''};

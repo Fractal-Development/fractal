@@ -1,17 +1,5 @@
+import { FractalSharedStyleProps } from './FractalSharedStyleProps';
 import { getUserSelectAccessibilityProp } from './utils/getUserSelectAccessibilityProp';
-
-export interface FractalTextProps {
-    fontSize?: number;
-    fontWeight?: number | string;
-    color?: string;
-    fontFamily?: string;
-    fontStyle?: 'italic' | 'normal';
-    selectable?: boolean;
-    textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
-    textOverflow?: 'ellipsis';
-    whiteSpace?: 'normal' | 'nowrap' | 'pre' | 'pre-wrap' | 'pre-line' | 'inherit' | 'initial' | 'unset';
-    wordWrap?: 'normal' | 'break-word' | 'initial' | 'inherit';
-}
 
 export function extractTextProps({
     fontSize,
@@ -24,7 +12,7 @@ export function extractTextProps({
     textOverflow,
     whiteSpace,
     wordWrap
-}: FractalTextProps): string {
+}: FractalSharedStyleProps): string {
     return `
         ${fontSize != null ? `font-size: ${fontSize}px` : ''};
         ${fontWeight != null ? `font-weight: ${fontWeight}` : ''};

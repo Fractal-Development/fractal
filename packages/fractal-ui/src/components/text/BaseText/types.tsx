@@ -1,6 +1,6 @@
 import { RequiredKeys } from 'utility-types';
 import { ReactNode } from 'react';
-import { AnimationProps, FractalSharedStyleProps, FractalTextProps } from '../../../sharedProps';
+import { AnimationProps, FractalSharedStyleProps, TextStyleProps } from '../../../sharedProps';
 import { FractalThemeTextVariants } from '../../../themes';
 
 interface DefaultTexProps {
@@ -27,7 +27,7 @@ interface DefaultTexProps {
     android_hyphenationFrequency?: 'normal' | 'none' | 'full' | 'high' | 'balanced';
 }
 
-export interface TextProps extends FractalSharedStyleProps, AnimationProps, DefaultTexProps, FractalTextProps {
+export interface TextProps extends FractalSharedStyleProps, AnimationProps, DefaultTexProps, TextStyleProps {
     children?: ReactNode | Array<ReactNode>;
     style?: any;
     variant?: RequiredKeys<FractalThemeTextVariants>;

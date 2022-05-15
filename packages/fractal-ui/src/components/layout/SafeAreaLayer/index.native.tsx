@@ -8,7 +8,7 @@ import { FractalSharedCss } from '../../../sharedProps';
 
 const MotiSafeAreaView = motify(SafeAreaView)();
 
-const StyledSafeAreaLayer = styled(MotiSafeAreaView)`
+const StyledSafeAreaLayer = styled(MotiSafeAreaView as any)`
     ${FractalSharedCss};
 `;
 
