@@ -8,7 +8,7 @@ import { PickerItem } from './PickerItem';
 import { PickerProps } from './types/PickerProps';
 import { getPickerAccessibilityProps } from '../accessibility/getPickerAccessibilityProps';
 
-export function Picker({ items, onChange, value, defaultValue, disabled, rightImage, ...others }: PickerProps): JSX.Element {
+export function Picker({ items, onChange, value, defaultValue = 'placeholder', disabled, rightImage, placeholder,  ...others }: PickerProps): JSX.Element {
     const [currentValue, handleValueChange] = usePickerState(defaultValue, items, value, onChange);
     const { colors, sizes, borderRadius, spacings } = useTheme();
 
@@ -49,6 +49,7 @@ export function Picker({ items, onChange, value, defaultValue, disabled, rightIm
                 alignItems='center'
                 {...getPickerAccessibilityProps()}
             >
+                {placeholder && (<PickerItem color={colors.black} label={placeholder} value={'placeholder'} enabled={false} />)}
                 {items.map(renderItem)}
             </BasePicker>
             <Layer pointerEvents='none' alignSelf='center' position='absolute' right={0} marginRight={spacings.s}>

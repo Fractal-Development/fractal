@@ -10,7 +10,7 @@ export function usePickerState(
     const isControlled = valueProp !== undefined;
     const initialIndex = getInitialPickerIndex(initialValue, items);
     const [currentValue, setCurrentValue] = useState(initialValue ?? items[0][0]);
-    const [indexState, setIndexState] = useState(initialIndex);
+    const [indexState, setIndexState] = useState(initialIndex > -1 ? initialIndex : 0);
     const value: string = isControlled ? (valueProp as string) : currentValue;
     const index = isControlled ? getInitialPickerIndex(valueProp, items) : indexState;
 
