@@ -13,3 +13,4 @@ export * from './TextField';
 export * from './ButtonTextField';
 export * from './TextFieldButton';
 export * from './MultiSelectInput';
+export * from './PasswordField';
