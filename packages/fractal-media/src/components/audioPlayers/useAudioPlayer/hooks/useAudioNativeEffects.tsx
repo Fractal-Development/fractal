@@ -27,8 +27,11 @@ export function useAudioNativeEffects(
         }
     }, [checkIfShouldGoToNextTrack, didJustFinish, setDidJustFinish]);
 
-    useEffect(() => () => {
+    useEffect(
+        () => () => {
             audioRef.current?.unloadAsync();
             audioRef.current = undefined;
-        }, [audioRef]);
+        },
+        [audioRef]
+    );
 }

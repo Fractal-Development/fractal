@@ -25,7 +25,7 @@ We have other dependencies that are used by all platforms so we manage that auto
 "react": "16.13.1",
 "react-native": "~0.63.4",
 "react-native-reanimated": "~2.1.0",
-"react-native-svg": "^12.1.1",
+"react-native-svg": "^12.3.0",
 "react-virtualized-auto-sizer": "^1.0.5"
 ```
 

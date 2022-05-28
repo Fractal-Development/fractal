@@ -22,7 +22,7 @@ export function NavigationRouteContent({
 
     return (
         <Screen
-            width="100%"
+            width='100%'
             flex={1}
             activityState={activityState}
             active={activityState}

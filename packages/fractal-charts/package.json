@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-charts",
-    "version": "2.2.5",
+    "version": "3.0.0",
     "description": "Charts and Graphs Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -9,21 +9,26 @@
     "source": "src/index.tsx",
     "scripts": {
         "build": "expo-module build",
-        "clean-build": "rm -rf ./dist",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
         "lint": "eslint 'src/**/*.ts*' --fix",
-        "expo-module": "expo-module"
+        "expo-module": "expo-module",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "^2.0.20",
+        "@bma98/fractal-ui": "*",
+        "expo": "*",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
         "react-native": "*",
         "react-native-gesture-handler": "*",
-        "react-native-reanimated": "^2.3.0",
+        "react-native-reanimated": "^2.8.0",
         "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
+        "expo": {
+            "optional": true
+        },
         "react-dom": {
             "optional": true
         },
@@ -50,7 +55,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@bma98/fractal-ui": "^2.0.20",
+        "@bma98/fractal-ui": "^3.0.0",
         "@types/d3-array": "^3.0.1",
         "@types/d3-scale": "^4.0.1",
         "@types/d3-shape": "^3.0.0",
@@ -72,10 +77,11 @@
         "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-unused-imports": "^1.1.5",
+        "expo": "^45.0.0",
         "expo-module-scripts": "^2.0.0",
         "prettier": "^2.3.2",
-        "react-native-reanimated": "^2.3.0",
-        "react-native-svg": "^12.1.1",
+        "react-native-reanimated": "^2.8.0",
+        "react-native-svg": "^12.3.0",
         "typescript": "^4.3.4",
         "utility-types": "^3.10.0"
     },

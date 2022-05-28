@@ -28,10 +28,7 @@ export const SimpleTabBarItem = memo(
 
         const textWidth = tabBarPosition !== 'bottom' ? tabBar.iOSHorizontalWidth - spacings.m : undefined;
 
-        const renderItem = useCallback(
-            (size: number) => children(color, size),
-            [color, children]
-        );
+        const renderItem = useCallback((size: number) => children(color, size), [color, children]);
 
         const spacerSize = getValueForLargeSizeType(
             widthSizeType,
@@ -45,7 +42,7 @@ export const SimpleTabBarItem = memo(
                 <Text
                     {...tabBar.tabBarItemText}
                     numberOfLines={1}
-                    overflow="hidden"
+                    overflow='hidden'
                     width={textWidth}
                     display='block'
                     variant='label'

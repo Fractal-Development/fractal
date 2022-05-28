@@ -8,15 +8,18 @@ export function useTabBarSizeForPosition(position: TabBarPosition, hidden?: bool
 
     if (hidden) {
         return 0;
-    } if (Platform.OS === 'ios' && position === 'bottom') {
+    }
+    if (Platform.OS === 'ios' && position === 'bottom') {
         return tabBar.iOSVerticalHeight;
-    } if (Platform.OS === 'ios' && (position === 'left' || position === 'right')) {
+    }
+    if (Platform.OS === 'ios' && (position === 'left' || position === 'right')) {
         return tabBar.iOSHorizontalWidth;
-    } if (position === 'bottom') {
+    }
+    if (position === 'bottom') {
         return tabBar.verticalHeight;
-    } if (position === 'left' || position === 'right') {
+    }
+    if (position === 'left' || position === 'right') {
         return tabBar.horizontalWidth;
-    } 
-        return 0;
-    
+    }
+    return 0;
 }

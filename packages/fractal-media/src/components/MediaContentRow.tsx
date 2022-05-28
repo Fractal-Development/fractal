@@ -45,8 +45,8 @@ export function MediaContentRow({
     return (
         <>
             <Layer {...layerProps}>
-                <HorizontalLayer alignItems="center" minHeight={48}>
-                    <TouchableOpacity onPress={onPress} flex={1} flexDirection="row">
+                <HorizontalLayer alignItems='center' minHeight={48}>
+                    <TouchableOpacity onPress={onPress} flex={1} flexDirection='row'>
                         <Avatar source={imageSource} size={48} />
                         <Layer
                             minWidth={0}
@@ -55,8 +55,8 @@ export function MediaContentRow({
                             flex={1}
                             justifyContent={subtitle ? 'space-between' : 'center'}
                         >
-                            <EllipsizeText variant="normal">{title}</EllipsizeText>
-                            {subtitle && <EllipsizeText variant="smallLabel">{subtitle}</EllipsizeText>}
+                            <EllipsizeText variant='normal'>{title}</EllipsizeText>
+                            {subtitle && <EllipsizeText variant='smallLabel'>{subtitle}</EllipsizeText>}
                         </Layer>
                     </TouchableOpacity>
                     <Layer>

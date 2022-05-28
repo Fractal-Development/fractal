@@ -6,7 +6,7 @@ function PopoverContent(): JSX.Element {
     const { spacings } = useTheme();
     return (
         <Box marginTop={spacings.m}>
-            <Button variant="alternative" text="Pasion" />
+            <Button variant='alternative' text='Pasion' />
         </Box>
     );
 }
@@ -15,24 +15,25 @@ export function SearchBarFragment(): JSX.Element {
     const { spacings } = useTheme();
     const [active, setActive] = useState(false);
     const toggleActive = () => setActive((active) => !active);
+    const popoverChildren = () => <PopoverContent />;
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Search Bar Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <SearchBar
-                    placeholder="Search Bar"
-                    buttonVariant="main"
+                    placeholder='Search Bar'
+                    buttonVariant='main'
                     onChangeText={(text) => console.log(`New text ${text}`)}
                     onSearch={(query: string) => console.log('Query: ', query)}
                     marginBottom={spacings.m}
                 />
                 <SearchBar
                     enableSearchButton
-                    placeholder="Search Bar with button"
-                    buttonVariant="main"
+                    placeholder='Search Bar with button'
+                    buttonVariant='main'
                     onChangeText={(text) => console.log(`New text ${text}`)}
                     onSearch={(query: string) => console.log('Query: ', query)}
                     marginBottom={spacings.m}
@@ -40,15 +41,15 @@ export function SearchBarFragment(): JSX.Element {
                 <HorizontalLayer>
                     <SearchBar
                         enableSearchButton
-                        placeholder="Search Bar with button and other component"
-                        buttonVariant="main"
+                        placeholder='Search Bar with button and other component'
+                        buttonVariant='main'
                         flex={1}
                         onChangeText={(text) => console.log(`New text ${text}`)}
                         onSearch={(query: string) => console.log('Query: ', query)}
                     />
-                    <Popover active={active} onRequestClose={toggleActive} popoverChildren={() => <PopoverContent />}>
+                    <Popover active={active} onRequestClose={toggleActive} popoverChildren={popoverChildren}>
                         {(ref) => (
-                            <CircularIconButton ref={ref} onPress={toggleActive} variant="success" marginLeft={spacings.s}>
+                            <CircularIconButton ref={ref} onPress={toggleActive} variant='success' marginLeft={spacings.s}>
                                 {(color) => <LoadIcon height={24} width={24} fill={color} />}
                             </CircularIconButton>
                         )}

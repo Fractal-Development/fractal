@@ -6,7 +6,7 @@ function Horizontal<T>({ ticks = [], y }: GridProps<T>): JSX.Element {
     return (
         <G>
             {ticks.map((tick, index) => (
-                <Line key={`${index}`} x1="0%" x2="100%" y1={y?.(tick)} y2={y?.(tick)} strokeWidth={1} stroke="rgba(0,0,0,0.2)" />
+                <Line key={`${index}`} x1='0%' x2='100%' y1={y?.(tick)} y2={y?.(tick)} strokeWidth={1} stroke='rgba(0,0,0,0.2)' />
             ))}
         </G>
     );
@@ -16,7 +16,7 @@ function Vertical<T>({ ticks = [], x }: GridProps<T>): JSX.Element {
     return (
         <G>
             {ticks.map((tick, index) => (
-                <Line key={index} y1="0%" y2="100%" x1={x?.(tick)} x2={x?.(tick)} strokeWidth={1} stroke="rgba(0,0,0,0.2)" />
+                <Line key={index} y1='0%' y2='100%' x1={x?.(tick)} x2={x?.(tick)} strokeWidth={1} stroke='rgba(0,0,0,0.2)' />
             ))}
         </G>
     );
@@ -34,9 +34,11 @@ function Both<T>(props: GridProps<T>): JSX.Element {
 export function Grid<T>({ direction = 'HORIZONTAL', ...others }: GridProps<T>): JSX.Element | null {
     if (direction === 'VERTICAL') {
         return <Vertical {...others} />;
-    } if (direction === 'HORIZONTAL') {
+    }
+    if (direction === 'HORIZONTAL') {
         return <Horizontal {...others} />;
-    } if (direction === 'BOTH') {
+    }
+    if (direction === 'BOTH') {
         return <Both {...others} />;
     }
     return null;

@@ -1,22 +1,57 @@
 {
-    "name": "@bma98/fractal",
-    "version": "2.4.0",
-    "description": "UI Components easy to customize for apps that support Electron/React Web/React Native",
-    "author": "BrandonMA",
-    "license": "MIT",
-    "keywords": [
-        "Javascript",
-        "React",
-        "React native",
-        "UI Library"
+  "name": "fractal-turborepo",
+  "version": "2.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
     ],
-    "sideEffects": false,
-    "workspaces": [
-        "examples/*",
-        "packages/*"
-    ],
-    "packageManager": "yarn@3.2.0",
-    "resolutions": {
-        "@types/react": "^17.0.40"
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/react-native"
+    ]
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "yarn clean:turbo && yarn clean:watchman",
+    "clean:turbo": "yarn turbo run clean && rm -rf node_modules",
+    "clean:watchman": "watchman watch-del-all && yarn cache clean"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "turbo": {
+    "baseBranch": "origin/master",
+    "pipeline": {
+      "build": {
+        "outputs": [
+          "dist/**",
+          ".next/**",
+          "public/dist/**"
+        ],
+        "dependsOn": ["^build"]
+      },
+      "test": {
+        "dependsOn": ["^build"],
+        "outputs": [
+          "coverage/**"
+        ]
+      },
+      "lint": {
+        "outputs": []
+      },
+      "clean": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
     }
+  }
 }

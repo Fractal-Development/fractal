@@ -38,6 +38,7 @@ module.exports = {
         'no-useless-return': 'off',
         'no-useless-escape': 'off',
         'react/destructuring-assignment': 'off',
-        'class-methods-use-this': 'off'
+        'class-methods-use-this': 'off',
+        'react/jsx-no-useless-fragment': 'off'
     }
 };

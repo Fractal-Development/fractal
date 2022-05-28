@@ -53,14 +53,14 @@ export function SignIn({
                 marginBottom={spacings.m}
                 textFieldProps={textFieldProps}
             />
-            <Button loading={loading} text={signInText} variant="main" marginBottom={spacings.m} onPress={handleEmailSignIn} />
-            <TextButton onPress={onPasswordResetButtonPress} alignSelf="center" variant="main" marginBottom={spacings.m}>
+            <Button loading={loading} text={signInText} variant='main' marginBottom={spacings.m} onPress={handleEmailSignIn} />
+            <TextButton onPress={onPasswordResetButtonPress} alignSelf='center' variant='main' marginBottom={spacings.m}>
                 {forgotPasswordText}
             </TextButton>
             {!removeSignUpButton && (
                 <>
                     <Separator marginBottom={spacings.m} />
-                    <Button text={signUpText} variant="alternative" onPress={onSignUpButtonPress} />
+                    <Button text={signUpText} variant='alternative' onPress={onSignUpButtonPress} />
                 </>
             )}
         </>

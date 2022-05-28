@@ -48,7 +48,7 @@ export function AudioProgressBar({
                 onValueChange={handleValueChange}
                 onSlidingComplete={handleSlidingComplete}
             />
-            <Layer flexDirection="row" justifyContent="space-between" marginTop={timeLabelsSpacing ?? spacings.s}>
+            <Layer flexDirection='row' justifyContent='space-between' marginTop={timeLabelsSpacing ?? spacings.s}>
                 <Text variant='smallLabel' fontSize={12}>{`${formatNumberToTime(trackProgress)}`}</Text>
                 <Text variant='smallLabel' fontSize={12}>{`${formatNumberToTime(duration)}`}</Text>
             </Layer>

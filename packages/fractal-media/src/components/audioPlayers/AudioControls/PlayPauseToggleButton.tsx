@@ -6,7 +6,7 @@ import { getPlayPauseButtonAccessibilityProps } from '../accessibility/getPlayPa
 
 export function PlayPauseToggleButton({ active, onPress }: Omit<ControlToggleButtonProps, 'variant'>): JSX.Element {
     return (
-        <RoundedToggleButton active={active} onPress={onPress} variant="main" {...getPlayPauseButtonAccessibilityProps()}>
+        <RoundedToggleButton active={active} onPress={onPress} variant='main' {...getPlayPauseButtonAccessibilityProps()}>
             {(tintColor: string) => <PlayPauseIcon tintColor={tintColor} isPlaying={!active} />}
         </RoundedToggleButton>
     );

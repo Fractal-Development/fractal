@@ -1,6 +1,7 @@
 import React, { memo, SVGProps } from 'react';
 
-const PreviousIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => (
+const PreviousIcon = memo(
+    (props: SVGProps<SVGSVGElement>): JSX.Element => (
         <svg focusable={false} width='16' height='16' viewBox='0 0 16 16' {...props}>
             <g fillRule='evenodd' stroke='none' strokeWidth='1'>
                 <g fillRule='nonzero' transform='translate(-196 -136)'>
@@ -15,7 +16,8 @@ const PreviousIcon = memo((props: SVGProps<SVGSVGElement>): JSX.Element => (
                 </g>
             </g>
         </svg>
-    ));
+    )
+);
 
 PreviousIcon.displayName = 'PreviousIcon';
 

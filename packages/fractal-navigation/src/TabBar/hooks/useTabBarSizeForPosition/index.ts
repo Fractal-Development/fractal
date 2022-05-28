@@ -6,11 +6,12 @@ export function useTabBarSizeForPosition(position: TabBarPosition, hidden?: bool
 
     if (hidden) {
         return 0;
-    } if (position === 'bottom') {
+    }
+    if (position === 'bottom') {
         return tabBar.verticalHeight;
-    } if (position === 'left' || position === 'right') {
+    }
+    if (position === 'left' || position === 'right') {
         return tabBar.horizontalWidth;
-    } 
-        return 0;
-    
+    }
+    return 0;
 }

@@ -15,8 +15,8 @@ export function ChartContainer({
     const rotation = useSharedValue(0);
 
     const animatedStyle = useAnimatedStyle(() => ({
-            transform: [{ rotate: `${rotation.value}deg` }]
-        }));
+        transform: [{ rotate: `${rotation.value}deg` }]
+    }));
 
     const onLayout = useCallback(
         (event: LayoutChangeEvent) => {

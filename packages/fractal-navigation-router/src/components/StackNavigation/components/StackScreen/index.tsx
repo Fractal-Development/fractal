@@ -24,7 +24,7 @@ function StackScreenWebContent({ path = '/', navBarConfig, children }: StackScre
 
 export function StackScreen({ navBarConfig, children, ...others }: StackScreenProps): ReactElement {
     return (
-        <NavigationRoute top={0} left={0} right={0} bottom={0} position="absolute" {...others}>
+        <NavigationRoute top={0} left={0} right={0} bottom={0} position='absolute' {...others}>
             <StackScreenWebContainer {...others}>
                 <StackScreenWebContent {...others} navBarConfig={navBarConfig}>
                     {children}

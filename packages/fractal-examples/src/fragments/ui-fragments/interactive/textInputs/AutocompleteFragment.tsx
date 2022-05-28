@@ -63,8 +63,7 @@ export function AutocompleteFragment(): JSX.Element {
     };
 
     return (
-        <>
-            <Box marginTop={spacings.m} marginBottom={spacings.m}>
+        <Box marginTop={spacings.m} marginBottom={spacings.m}>
                 <AutoComplete
                     placeholder="Escribe aquí"
                     options={top20Films}
@@ -92,6 +91,5 @@ export function AutocompleteFragment(): JSX.Element {
                     </Popover>
                 </HorizontalLayer>
             </Box>
-        </>
     );
 }

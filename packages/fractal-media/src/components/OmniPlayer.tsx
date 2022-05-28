@@ -3,6 +3,7 @@ import { LayerProps } from '@bma98/fractal-ui';
 import { MATCH_URL_YOUTUBE } from '../patterns';
 import { YouTubeVideoPlayer } from './YouTubeVideoPlayer';
 import { Video } from './Video';
+import { ResizeMode } from '../types';
 
 export interface OmniPlayerProps extends Omit<LayerProps, 'children' | 'width' | 'height'> {
     source: number | string;
@@ -17,5 +18,5 @@ export function OmniPlayer({ source, width, height, ...layerProps }: OmniPlayerP
         return <YouTubeVideoPlayer source={source as string} width={width} height={height} {...layerProps} />;
     }
 
-    return <Video source={source} resizeMode="contain" useNativeControls style={{ width, height, ...layerProps }} />;
+    return <Video source={source} resizeMode={ResizeMode.CONTAIN} useNativeControls style={{ width, height, ...layerProps }} />;
 }

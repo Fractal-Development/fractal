@@ -25,49 +25,46 @@ export function PopoverFragment(): JSX.Element {
     const [isLeftPopoverVisible, setLeftPopoverVisible] = useState(false);
     const toggleLeftPopover = () => setLeftPopoverVisible((current) => !current);
 
+    const popoverChildren = () => <PopoverContent marginTop={spacings.m} />;
+
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 PopoverView Fragment
             </Text>
-            <Box marginTop={spacings.m} alignItems="center">
+            <Box marginTop={spacings.m} alignItems='center'>
                 <Popover
-                    placement="bottom"
+                    placement='bottom'
                     active={isBottomPopoverVisible}
                     onRequestClose={toggleBottomPopover}
-                    popoverChildren={() => <PopoverContent marginTop={spacings.m} />}
+                    popoverChildren={popoverChildren}
                 >
-                    {(ref) => <Button ref={ref} variant="main" width={220} onPress={toggleBottomPopover} text="Bottom" />}
+                    {(ref) => <Button ref={ref} variant='main' width={220} onPress={toggleBottomPopover} text='Bottom' />}
                 </Popover>
             </Box>
-            <Box marginTop={spacings.m} alignItems="center">
-                <Popover
-                    placement="top"
-                    active={isTopPopoverVisible}
-                    onRequestClose={toggleTopPopover}
-                    popoverChildren={() => <PopoverContent marginBottom={spacings.m} />}
-                >
-                    {(ref) => <Button ref={ref} variant="main" width={220} onPress={toggleTopPopover} text="Top" />}
+            <Box marginTop={spacings.m} alignItems='center'>
+                <Popover placement='top' active={isTopPopoverVisible} onRequestClose={toggleTopPopover} popoverChildren={popoverChildren}>
+                    {(ref) => <Button ref={ref} variant='main' width={220} onPress={toggleTopPopover} text='Top' />}
                 </Popover>
             </Box>
             <Box marginTop={spacings.m}>
                 <Popover
-                    placement="right"
+                    placement='right'
                     active={isRightPopoverVisible}
                     onRequestClose={toggleRightPopover}
-                    popoverChildren={() => <PopoverContent marginLeft={spacings.m} />}
+                    popoverChildren={popoverChildren}
                 >
-                    {(ref) => <Button ref={ref} variant="main" width={120} onPress={toggleRightPopover} text="Right" />}
+                    {(ref) => <Button ref={ref} variant='main' width={120} onPress={toggleRightPopover} text='Right' />}
                 </Popover>
             </Box>
-            <Box marginTop={spacings.m} marginBottom={spacings.m} alignItems="flex-end">
+            <Box marginTop={spacings.m} marginBottom={spacings.m} alignItems='flex-end'>
                 <Popover
-                    placement="left"
+                    placement='left'
                     active={isLeftPopoverVisible}
                     onRequestClose={toggleLeftPopover}
-                    popoverChildren={() => <PopoverContent marginRight={spacings.m} />}
+                    popoverChildren={popoverChildren}
                 >
-                    {(ref) => <Button ref={ref} variant="main" width={120} onPress={toggleLeftPopover} text="Left" />}
+                    {(ref) => <Button ref={ref} variant='main' width={120} onPress={toggleLeftPopover} text='Left' />}
                 </Popover>
             </Box>
         </>

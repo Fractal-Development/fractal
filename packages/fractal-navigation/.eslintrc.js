@@ -35,6 +35,7 @@ module.exports = {
         'no-nested-ternary': 'off',
         'react/require-default-props': 'off',
         'no-plusplus': 'off',
-        'no-useless-return': 'off'
+        'no-useless-return': 'off',
+        'react/jsx-no-useless-fragment': 'off'
     }
 };

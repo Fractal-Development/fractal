@@ -20,6 +20,7 @@ export function AuthenticationScreenFragment(): ReactElement {
             and='and'
             termsAndConditions='Terms and Conditions'
             privacyPolicy='Privacy Policy'
+            removeAppleButton={false}
         />
     );
 }

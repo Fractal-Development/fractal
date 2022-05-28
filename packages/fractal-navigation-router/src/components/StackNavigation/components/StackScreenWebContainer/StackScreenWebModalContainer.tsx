@@ -17,7 +17,7 @@ export function StackScreenWebModalContainer({ children }: StackScreenModalProps
 
     return (
         <StackNavigationGoBackAnimatedProvider goBackAnimated={goBackAnimated}>
-            <MiddleCellModal position="relative" visible={visible} onDismiss={goBackAnimated} onExitComplete={goBack}>
+            <MiddleCellModal position='relative' visible={visible} onDismiss={goBackAnimated} onExitComplete={goBack}>
                 <Background>{children}</Background>
             </MiddleCellModal>
         </StackNavigationGoBackAnimatedProvider>

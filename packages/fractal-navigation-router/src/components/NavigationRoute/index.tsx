@@ -6,9 +6,12 @@ import { NavigationRouteProps } from './types/NavigationRouteProps';
 export function NavigationRoute({ onDismissed, ...others }: NavigationRouteProps): JSX.Element | null {
     const theme = useTheme();
 
-    useEffect(() => () => {
+    useEffect(
+        () => () => {
             onDismissed?.();
-        }, [onDismissed]);
+        },
+        [onDismissed]
+    );
 
     return (
         <NavigationRouteContent
