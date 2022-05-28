@@ -10,7 +10,8 @@
     "nohoist": [
       "**/react",
       "**/react-dom",
-      "**/react-native"
+      "**/react-native",
+      "**/react-native-codegen"
     ]
   },
   "scripts": {
@@ -25,6 +26,9 @@
   "devDependencies": {
     "prettier": "^2.5.1",
     "turbo": "latest"
+  },
+  "resolutions": {
+    "@types/react": "~17.0.21"
   },
   "turbo": {
     "baseBranch": "origin/master",
