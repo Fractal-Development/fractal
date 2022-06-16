@@ -1,11 +1,7 @@
 import React, { useCallback, useState } from 'react';
-import { Button, IconTextField, Separator, TextButton, useTheme } from '@bma98/fractal-ui';
-import { renderLockIcon, renderEmailIcon } from './util';
+import { Button, IconTextField, PasswordField, Separator, TextButton, useTheme } from '@bma98/fractal-ui';
+import { renderEmailIcon } from './util';
 import { SignInProps } from './types';
-
-const textFieldProps = {
-    secureTextEntry: true
-};
 
 export function SignIn({
     emailPlaceholder,
@@ -45,14 +41,7 @@ export function SignIn({
                 leftImage={renderEmailIcon}
                 marginBottom={spacings.m}
             />
-            <IconTextField
-                value={password}
-                onChangeText={setPassword}
-                placeholder={passwordPlaceholder}
-                leftImage={renderLockIcon}
-                marginBottom={spacings.m}
-                textFieldProps={textFieldProps}
-            />
+            <PasswordField value={password} onChangeText={setPassword} placeholder={passwordPlaceholder} marginBottom={spacings.m} />
             <Button loading={loading} text={signInText} variant='main' marginBottom={spacings.m} onPress={handleEmailSignIn} />
             <TextButton onPress={onPasswordResetButtonPress} alignSelf='center' variant='main' marginBottom={spacings.m}>
                 {forgotPasswordText}
