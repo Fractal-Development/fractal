@@ -8,9 +8,9 @@ const StyledOption = styled(motion.option as any)`
     ${extractTextProps};
 ` as typeof motion.option;
 
-export function PickerItem({ color, label, value }: PickerItemProps): JSX.Element {
+export function PickerItem({ color, label, value, enabled = true }: PickerItemProps): JSX.Element {
     return (
-        <StyledOption color={color} value={value} label={label}>
+        <StyledOption color={color} value={value} {...!enabled && { disabled: true, selected: true, hidden: true }}>
             {label}
         </StyledOption>
     );

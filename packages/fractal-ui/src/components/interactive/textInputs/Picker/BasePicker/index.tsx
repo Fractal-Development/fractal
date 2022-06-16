@@ -36,6 +36,7 @@ const BasePicker = forwardRef(({ from, onValueChange, enabled, selectedValue, ..
     return (
         <StyledSelect
             ref={ref}
+            required
             disabled={enabled === false ? true : undefined}
             onChange={handleChange}
             value={selectedValue}
