@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Text, TouchableOpacity, IconTextField, PasswordField, Separator, useTheme, HorizontalLayer } from '@bma98/fractal-ui';
-import { renderEmailIcon } from './util';
+import { renderEmailIcon, renderLockIcon } from './util';
 import { SignUpProps } from './types';
 
 export function SignUp({
@@ -51,6 +51,7 @@ export function SignUp({
                         value={password}
                         onChangeText={setPassword}
                         placeholder={passwordPlaceholder}
+                        leftImage={renderLockIcon}
                         marginBottom={spacings.m}
                     />
                     <Button loading={loading} text={signUpText} variant='main' marginBottom={spacings.m} onPress={handleEmailSignUp} />
