@@ -5,7 +5,7 @@ export interface BubbleTriangleProps {
     color: string;
 }
 
-export interface BubbleProps extends BubbleTriangleProps, TouchableOpacityProps {
+export interface BubbleProps extends BubbleTriangleProps, Omit<TouchableOpacityProps, 'color'> {
     arrowPosition: 'left' | 'right';
 }
 

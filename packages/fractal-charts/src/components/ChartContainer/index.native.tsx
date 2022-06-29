@@ -4,6 +4,8 @@ import { Layer } from '@bma98/fractal-ui';
 import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnUI } from 'react-native-reanimated';
 import { ChartContainerProps } from '../../types';
 
+const AnimatedView = Animated.View as unknown as typeof Layer;
+
 export function ChartContainer({
     style,
     contentStyle,
@@ -42,9 +44,9 @@ export function ChartContainer({
 
     return (
         <Layer style={style} {...layerProps}>
-            <Animated.View style={[{ flex: 1, ...contentStyle }, animatedStyle]} onLayout={onLayout}>
+            <AnimatedView style={[{ flex: 1, ...contentStyle }, animatedStyle]} onLayout={onLayout}>
                 {children}
-            </Animated.View>
+            </AnimatedView>
         </Layer>
     );
 }
