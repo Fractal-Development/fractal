@@ -30,7 +30,7 @@ const Pressable = forwardRef(
         <StyledPressable
             ref={ref}
             flexDirection='column'
-            initial={currentVariant ? 'from' : from}
+            initial={currentVariant ?? animate}
             animate={currentVariant ?? animate}
             transition={transition}
             onClick={onPress}
