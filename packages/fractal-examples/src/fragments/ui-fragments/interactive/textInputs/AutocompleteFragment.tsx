@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
 
-function PopoverContent(): JSX.Element {
+function PopoverContent() {
     const { spacings } = useTheme();
     return (
         <Box marginTop={spacings.m}>
-            <Button variant="alternative" text="Pasion" />
+            <Button variant='alternative' text='Pasion' />
         </Box>
     );
 }
@@ -64,32 +64,32 @@ export function AutocompleteFragment(): JSX.Element {
 
     return (
         <Box marginTop={spacings.m} marginBottom={spacings.m}>
-                <AutoComplete
-                    placeholder="Escribe aquí"
-                    options={top20Films}
-                    onChangeText={(text) => console.log(`New text is ${text}`)}
-                    getOptionLabel={(option) => option.title}
-                    onSelect={handleSelect}
-                />
-                <Layer height={spacings.m} />
-                <HorizontalLayer>
-                    <Layer flex={1}>
-                        <AutoComplete
-                            placeholder="AutoComplete and other component"
-                            options={top20Films}
-                            onChangeText={(text) => console.log(`New text is ${text}`)}
-                            getOptionLabel={(option) => option.title}
-                            onSelect={handleSelect}
-                        />
-                    </Layer>
-                    <Popover active={active} onRequestClose={deactivate} popoverChildren={() => <PopoverContent />}>
-                        {(ref) => (
-                            <CircularIconButton ref={ref} onPress={toggleActive} variant="success" marginLeft={spacings.s}>
-                                {(color) => <LoadIcon height={24} width={24} fill={color} />}
-                            </CircularIconButton>
-                        )}
-                    </Popover>
-                </HorizontalLayer>
-            </Box>
+            <AutoComplete
+                placeholder='Escribe aquí'
+                options={top20Films}
+                onChangeText={(text) => console.log(`New text is ${text}`)}
+                getOptionLabel={(option) => option.title}
+                onSelect={handleSelect}
+            />
+            <Layer height={spacings.m} />
+            <HorizontalLayer>
+                <Layer flex={1}>
+                    <AutoComplete
+                        placeholder='AutoComplete and other component'
+                        options={top20Films}
+                        onChangeText={(text) => console.log(`New text is ${text}`)}
+                        getOptionLabel={(option) => option.title}
+                        onSelect={handleSelect}
+                    />
+                </Layer>
+                <Popover active={active} onRequestClose={deactivate} popoverChildren={PopoverContent}>
+                    {(ref) => (
+                        <CircularIconButton ref={ref} onPress={toggleActive} variant='success' marginLeft={spacings.s}>
+                            {(color) => <LoadIcon height={24} width={24} fill={color} />}
+                        </CircularIconButton>
+                    )}
+                </Popover>
+            </HorizontalLayer>
+        </Box>
     );
 }
