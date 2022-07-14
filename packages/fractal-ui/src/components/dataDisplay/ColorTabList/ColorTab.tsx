@@ -31,6 +31,7 @@ export function ColorTab({ tabColor, text, active, onPress, index }: InternalCol
             onPress={handlePress}
             backgroundColor={colors.foreground}
             height={sizes.colorTabListItemHeight}
+            from={active ? variants.active : variants.inactive}
             currentVariant={active ? 'active' : 'inactive'}
             variants={variants}
             borderRadius={borderRadius.m}
