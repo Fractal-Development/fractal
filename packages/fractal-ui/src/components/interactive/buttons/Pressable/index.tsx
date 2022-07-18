@@ -26,11 +26,11 @@ const StyledPressable = styled(motion.button as any)`
 `;
 
 const Pressable = forwardRef(
-    ({ from, currentVariant, animate, onPress, transition = { type: 'spring' }, ...others }: PressableProps, ref: any): JSX.Element => (
+    ({ currentVariant, animate, onPress, transition = { type: 'spring' }, ...others }: PressableProps, ref: any): JSX.Element => (
         <StyledPressable
             ref={ref}
             flexDirection='column'
-            initial={currentVariant ? from : 'from'}
+            initial={currentVariant ?? 'from'}
             animate={currentVariant ?? animate}
             transition={transition}
             onClick={onPress}
