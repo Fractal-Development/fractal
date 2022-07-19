@@ -8,9 +8,10 @@ interface LeftCircularTabBarItemProps {
 }
 
 export function LeftCircularTabBarItem({ onPress }: LeftCircularTabBarItemProps): JSX.Element {
-    const { tabBar, colors } = useTheme();
+    const { tabBar } = useTheme();
+
     return (
-        <Layer flexDirection='row' backgroundColor={colors.background}>
+        <Layer flexDirection='row'>
             <Layer flex={1} backgroundColor={tabBar.backgroundColor} />
             <Layer width={61} height={75}>
                 <LeftShapeIcon fill={tabBar.backgroundColor} />
