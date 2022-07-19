@@ -21,7 +21,7 @@ interface CircularItemTabBarProps extends TabBarProps {
 }
 
 export function CircularItemTabBar(props: CircularItemTabBarProps): JSX.Element {
-    const { tabBar } = useTheme();
+    const { tabBar, colors } = useTheme();
     const { tabBarPosition, logo, circularItemPath, tabBarItemsBeforeCirularItem, tabBarItemsAfterCirularItem } = props;
     const logoForLargeSizeType = useValueForLargeSizeType('width', logo, undefined);
     const tabBarItemContainerStyle = useValueForLargeSizeType<{ flexDirection?: 'row' }>('width', {}, { flexDirection: 'row' });
@@ -29,7 +29,7 @@ export function CircularItemTabBar(props: CircularItemTabBarProps): JSX.Element 
         tabBarPosition === 'bottom' ? tabBar.shadow : tabBarPosition === 'left' ? tabBar.leftPositionShadow : tabBar.rightPositionShadow;
 
     return (
-        <TabBar boxShadow={undefined} paddingTop={0} {...props}>
+        <TabBar paddingTop={0} boxShadow={undefined} backgroundColor={colors.transparent} {...props}>
             <Layer
                 flex={1}
                 justifyContent='flex-end'
