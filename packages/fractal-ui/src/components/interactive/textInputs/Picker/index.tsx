@@ -18,7 +18,8 @@ export function Picker({
     placeholder,
     ...others
 }: PickerProps): JSX.Element {
-    const [currentValue, handleValueChange] = usePickerState(defaultValue, items, value, onChange);
+    const finalItems: Array<[string, string]> = placeholder ? [['placeholder', placeholder], ...items] : items;
+    const [currentValue, handleValueChange] = usePickerState(defaultValue, finalItems, value, onChange);
     const { colors, sizes, borderRadius, spacings } = useTheme();
 
     const renderItem = useCallback(
@@ -48,7 +49,7 @@ export function Picker({
                 backgroundColor='transparent'
                 color={colors.text}
                 selectedValue={currentValue}
-                dropdownIconColor={colors.placeholder}
+                dropdownIconColor={colors.textField}
                 onValueChange={handleValueChange}
                 mode='dropdown'
                 fontSize={14}
