@@ -10,7 +10,7 @@ const StyledOption = styled(motion.option as any)`
 
 export function PickerItem({ color, label, value, enabled = true }: PickerItemProps): JSX.Element {
     return (
-        <StyledOption color={color} value={value} {...!enabled && { disabled: true, selected: true, hidden: true }}>
+        <StyledOption color={color} value={value} {...(!enabled && { disabled: true, hidden: true })}>
             {label}
         </StyledOption>
     );
