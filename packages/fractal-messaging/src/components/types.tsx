@@ -31,6 +31,7 @@ export interface ChatMessageProps<T> {
     getBubbleColor?: (message: T) => string;
     children?: (message: T) => ReactNode;
     parsePatterns?: Array<ParseShape>;
+    containerWidth?: number;
 }
 
 export interface ChatContentProps<T extends MinimalMessageData> extends MessageListProps<T> {

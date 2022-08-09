@@ -11,7 +11,8 @@ export function ChatMessage<T extends MinimalMessageData>({
     messageActions,
     getBubbleColor,
     children,
-    parsePatterns
+    parsePatterns,
+    containerWidth
 }: ChatMessageProps<T>): JSX.Element {
     const { spacings } = useTheme();
     const [popoverVisible, setPopoverVisible] = useState(false);
@@ -57,6 +58,7 @@ export function ChatMessage<T extends MinimalMessageData>({
                 modalBackgroundColor='rgba(0, 0, 0, 0.15)'
                 usePortal
                 display='flex'
+                width={containerWidth}
             >
                 {(ref) => (
                     <BaseChatMessage

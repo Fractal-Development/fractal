@@ -58,6 +58,53 @@ const defaultMessages: Array<MinimalMessageData> = [
         id: '11',
         senderType: 'bot',
         audio: 'https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Podington_Bear_-_Rubber_Robot.mp3'
+    },
+    {
+        id: '12',
+        senderType: 'bot',
+        text: 'Bueno, te explico: Básicamente hay tres estilos de liderazo que debieras poder utilizar según la situación para lograr resultados a traves de otras personas: \n\nLiderazgo directivo para mostrar rumbo \n\nLiderazgo Democrático para aprovechar las ideas de todos \n \nLiderazgo Desarrollador para incrementar la capacidad del equipo'
+    },
+    {
+        id: '13',
+        senderType: 'user',
+        text: 'Recomendación:\nAsegúrate que entiende que tus propuestas le ayudarán a hacer las cosas más rápido, mejor y que podrá tener el control. Eso será música para sus oidos.'
+    },
+    {
+        id: '14',
+        senderType: 'user',
+        text: `Hello this is an example of the ParsedText: \nlinks like: \nhttps://www.google.com/ or https://www.facebook.com are clickable and phone number 444-555-6666 can call too. But you can also do more with this package, for example Bob will change style and David too. foo@gmail.com And the magic number is 42! #react #react-native`
+    },
+    { id: '15', senderType: 'bot', text: 'Este es un mensaje simple con un link: https://www.youtube.com/' },
+    { id: '16', senderType: 'user', text: 'Poder dar y recibir retroalimentación abiertamente' },
+    {
+        id: '17',
+        senderType: 'bot',
+        text: 'Te propongo que dibujes el flujo de información. Especifica quién le debe comunicar a quién, en qué forma y sobre qué temas. Luego junta a las personas involucradas y propón esta forma de asegurar que la información llegue a tiempo a la persona que deba estar enterada. Definan entre todos cuál será el mejor canal de comunicación para cada tipo de tema.'
+    },
+    {
+        id: '18',
+        senderType: 'bot',
+        text: 'Para que la información se comparta se requiere haber acordado el canal de comunicación. Por ejemplo: Teléfono, red social, en juntas, pizarrones, chat de equipo, etc. ¿Cómo sería mejor compartir la información en el caso que planteas? Escríbelo aquí.'
+    },
+    {
+        id: '19',
+        senderType: 'user',
+        text: 'Android problems'
+    },
+    {
+        id: '20',
+        senderType: 'bot',
+        text: '¿Se informaron oportunamente los avances o los cambios?'
+    },
+    {
+        id: '21',
+        senderType: 'bot',
+        text: 'Para enfocarnos en tu conflicto interpersonal, primero dime cómo se llama la persona con quien tuviste ese conflicto.'
+    },
+    {
+        id: '22',
+        senderType: 'bot',
+        text: 'Es importante hacer consciente cómo te has estado sintiendo. Dime Balta, ¿cuál de los siguientes estados de ánimo describe mejor tu sentir?'
     }
 ];
 
