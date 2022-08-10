@@ -1,5 +1,5 @@
 export * from './TabBar';
 export * from './CenteredTabBar';
-export * from './CircularItemTabBar';
+export * from './CircularTabBarItem';
 export * from './ResponsiveSideTabBar';
 export * from './ResponsiveSideCenteredTabBar';
