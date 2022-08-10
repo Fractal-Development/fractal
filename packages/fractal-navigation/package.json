@@ -49,7 +49,6 @@
         }
     },
     "dependencies": {
-        "@bma98/fractal-navigation-router": "^3.0.4",
         "@bma98/size-class": "^2.2.6"
     },
     "devDependencies": {
