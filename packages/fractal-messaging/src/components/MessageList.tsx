@@ -84,7 +84,8 @@ export function MessageList<T extends MinimalMessageData>({
                             onSharePress,
                             messageActions,
                             getBubbleColor,
-                            parsePatterns
+                            parsePatterns,
+                            containerWidth
                         });
                     }
                     return (
@@ -96,13 +97,14 @@ export function MessageList<T extends MinimalMessageData>({
                             messageActions={messageActions}
                             getBubbleColor={getBubbleColor}
                             parsePatterns={parsePatterns}
+                            containerWidth={containerWidth}
                         />
                     );
                 default:
                     return footerComponent ?? <></>;
             }
         },
-        [onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, footerComponent, rowRenderer]
+        [rowRenderer, onFavoritePress, onSharePress, messageActions, getBubbleColor, parsePatterns, containerWidth, footerComponent]
     );
 
     const layoutProvider = useMemo(
@@ -169,6 +171,7 @@ export function MessageList<T extends MinimalMessageData>({
                             rowRenderer={renderChatMessage}
                             initialRenderIndex={messagesWithAccessoryViews.length - 1}
                             scrollViewProps={{ showsVerticalScrollIndicator: false }}
+                            forceNonDeterministicRendering
                         />
                     )}
                 </AutoSizer>
