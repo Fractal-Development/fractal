@@ -1,21 +1,23 @@
-import React, { memo, ReactElement } from 'react';
+import React, { memo, ReactElement, useEffect, useState } from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
 import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import {
     NavigationRouter,
-    Routes,
-    Route,
     SimpleTabBarItemLink,
     TabNavigator,
     TabScreen,
-    ScreenContainer
+    StackNavigator,
+    StackScreen,
+    NavigationBarConfig,
+    useNavigate,
+    useLocation
 } from '@bma98/fractal-navigation-router';
-import { Screen } from 'react-native-screens';
-import { FractalAppRoot, Layer, Text } from '@bma98/fractal-ui';
+import { FractalAppRoot, Layer, Pressable, Text } from '@bma98/fractal-ui';
 
 export const routes = {
     root: '/*',
     components: '/components',
+    componentsDetails: '/components/details',
     test: '/test'
 };
 
@@ -44,20 +46,77 @@ function MainTabBar(): ReactElement {
     );
 }
 
+function FirstScreen() {
+    const navigate = useNavigate();
+    return (
+        <Layer flex={1} justifyContent='center' alignItems='center'>
+            <Pressable
+                onPress={() => {
+                    navigate(routes.componentsDetails);
+                }}
+            >
+                <Text>Welcome to Fractal UI Components</Text>
+            </Pressable>
+        </Layer>
+    );
+}
+
+function SecondScreen() {
+    return (
+        <Layer flex={1} justifyContent='center' alignItems='center'>
+            <Text>Details Screen</Text>
+        </Layer>
+    );
+}
+
+function Tests() {
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        console.log('mount Tests');
+    }, []);
+
+    return (
+        <TabBarInsetsLayer>
+            <Layer flex={1} justifyContent='center' alignItems='center'>
+                <Pressable
+                    onPress={() => {
+                        setCounter((x) => x + 1);
+                    }}
+                >
+                    <Text>Welcome to tests {counter}</Text>
+                </Pressable>
+            </Layer>
+        </TabBarInsetsLayer>
+    );
+}
+
+function LocationShare() {
+    const location = useLocation();
+    console.log(location.pathname);
+    return <></>;
+}
+
 export default function App() {
     return (
         <FractalAppRoot>
             <NavigationRouter>
                 <TabNavigator path={routes.root} initialTabPath={routes.components} tabBar={<MainTabBar />}>
                     <TabScreen path={routes.components}>
-                        <Layer flex={1} justifyContent='center' alignItems='center'>
-                            <Text>Welcome to Fractal UI Components</Text>
-                        </Layer>
+                        <TabBarInsetsLayer>
+                            <LocationShare />
+                            <StackNavigator path={routes.components}>
+                                <StackScreen path={routes.components} navBarConfig={<NavigationBarConfig title={'title'} />}>
+                                    <FirstScreen />
+                                </StackScreen>
+                                <StackScreen path={routes.componentsDetails} navBarConfig={<NavigationBarConfig title={'details'} />}>
+                                    <SecondScreen />
+                                </StackScreen>
+                            </StackNavigator>
+                        </TabBarInsetsLayer>
                     </TabScreen>
                     <TabScreen path={routes.test}>
-                        <Layer flex={1} justifyContent='center' alignItems='center'>
-                            <Text>Welcome to tests</Text>
-                        </Layer>
+                        <Tests />
                     </TabScreen>
                 </TabNavigator>
             </NavigationRouter>
