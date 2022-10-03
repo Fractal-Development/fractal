@@ -72,7 +72,7 @@
         "expo-av": "^11.2.3",
         "expo-module-scripts": "^2.0.0",
         "prettier": "^2.3.2",
-        "react-native-svg": "^12.3.0",
+        "react-native-svg": "^13.2.0",
         "react-native-youtube-iframe": "^2.1.0",
         "typescript": "^4.3.4",
         "utility-types": "^3.10.0"

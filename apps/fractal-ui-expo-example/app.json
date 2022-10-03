@@ -1,5 +1,6 @@
 {
   "expo": {
+    "jsEngine": "hermes",
     "name": "fractal-ui-expo-example",
     "slug": "fractal-ui-expo-example",
     "version": "1.0.0",

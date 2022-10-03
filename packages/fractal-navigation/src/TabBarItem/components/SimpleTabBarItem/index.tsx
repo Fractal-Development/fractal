@@ -13,7 +13,7 @@ const tabBarItemCompactHorizontalSpacerSize = { width: 0, height: 2 };
 const tabBarItemLargeVerticalSpacerSize = { width: 1, height: 4 };
 const tabBarItemLargeHorizontalSpacerSize = { width: 4, height: 1 };
 
-export interface SimpleTabBarItemProps extends SharedTabItemProps, LayerProps {
+export interface SimpleTabBarItemProps extends SharedTabItemProps, Omit<LayerProps, 'children'> {
     title?: string;
     children: (color: string, size: number) => JSX.Element;
     active?: boolean;
