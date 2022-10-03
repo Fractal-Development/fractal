@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useHistory, useLocation } from '../../../../../router';
+import { useNavigate, useLocation } from '../../../../../router';
 import { useTabBarItemsHistory } from '../../../hooks/useTabBarItemsHistory';
 
 // This function will try to preserve the tab state when jumping between multiple ones.
@@ -7,16 +7,16 @@ import { useTabBarItemsHistory } from '../../../hooks/useTabBarItemsHistory';
 // It will update the previous value so when we try to come back it doensn't go to the root path.
 // We use a reference as there is no need to re render if the value changes.
 export function useGoToTab(rootTabItemPath: string, active: boolean): () => void {
-    const history = useHistory();
+    const navigate = useNavigate();
     const [tabBarHistory, setTabBarHistory] = useTabBarItemsHistory();
     const previouslyActiveTabItemPath = tabBarHistory.get(rootTabItemPath);
     const currentPathname = useLocation().pathname;
 
     const goToTab = () => {
         if (previouslyActiveTabItemPath === currentPathname) {
-            history.replace(rootTabItemPath);
+            navigate(rootTabItemPath, { replace: true });
         } else {
-            history.replace(previouslyActiveTabItemPath ?? rootTabItemPath);
+            navigate(previouslyActiveTabItemPath ?? rootTabItemPath, { replace: true });
         }
     };
 

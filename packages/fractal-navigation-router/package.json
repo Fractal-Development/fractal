@@ -26,8 +26,8 @@
         "react-native-screens": "^3.13.1",
         "react-native-svg": "*",
         "react-native-url-polyfill": "^1.3.0",
-        "react-router-dom": "^6.3.0",
-        "react-router-native": "^6.3.0"
+        "react-router-dom": "^6.4.1",
+        "react-router-native": "^6.4.1"
     },
     "peerDependenciesMeta": {
         "expo": {
@@ -68,7 +68,6 @@
         "@types/react": "~16.14.8",
         "@types/react-dom": "^17.0.8",
         "@types/react-native": "~0.63.52",
-        "@types/react-router-dom": "^5.1.5",
         "@types/react-router-native": "^5.1.0",
         "@types/styled-components": "^5.1.10",
         "@typescript-eslint/eslint-plugin": "^4.28.0",
@@ -91,8 +90,8 @@
         "react-native-screens": "^3.13.1",
         "react-native-svg": "^13.2.0",
         "react-native-url-polyfill": "^1.3.0",
-        "react-router-dom": "^5.3.3",
-        "react-router-native": "^5.3.3",
+        "react-router-dom": "^6.4.1",
+        "react-router-native": "^6.4.1",
         "typescript": "^4.3.4",
         "utility-types": "^3.10.0"
     },

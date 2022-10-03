@@ -11,7 +11,7 @@ import {
     SimpleRow
 } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
-import { useHistory } from '@bma98/fractal-navigation-router';
+import { useNavigate } from '@bma98/fractal-navigation-router';
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 import { dataProvider } from '../fragments/ui-fragments/layout/tables/util/tableHelpers';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
@@ -20,7 +20,7 @@ export function RootScreen(): ReactElement {
     const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(screensArray));
     const width = useSizeValue('width');
     const { sizes, spacings } = useTheme();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const layoutProvider = useMemo(
         () =>
@@ -38,7 +38,7 @@ export function RootScreen(): ReactElement {
     const rowRenderer = useCallback(
         (_, data: Screen, index: number | undefined) => {
             const goToItem = () => {
-                history.push(data.path);
+                navigate(data.path);
             };
 
             return (
@@ -47,7 +47,7 @@ export function RootScreen(): ReactElement {
                 </TouchableOpacity>
             );
         },
-        [history]
+        [navigate]
     );
 
     const handleSearch = (search: string) => {

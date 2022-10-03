@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import { Route } from '../../../router';
+import React from 'react';
+import { Route, Routes, useLocation } from '../../../router';
 import { useScreenActivityState } from '../hooks/useScreenActivityState';
 import { useIsInitialRenderDone } from '../../../hooks';
 import { useNavigationRouteStyles } from '../hooks/useNavigationRouteStyles';
@@ -15,10 +15,11 @@ export function NavigationRouteContent({
     stackPresentation = 'push',
     ...others
 }: NavigationRouteProps): JSX.Element | null {
-    const renderChildren = useCallback(() => children, [children]);
     const activityState = useScreenActivityState(path, isTabScreen ?? false);
     const [initialRenderDone] = useIsInitialRenderDone(activityState);
     const contentStyle = useNavigationRouteStyles(style);
+    const route = <Route path={path} element={initialRenderDone ? <>{children}</> : <></>} />;
+    const location = useLocation();
 
     return (
         <Screen
@@ -31,7 +32,7 @@ export function NavigationRouteContent({
             {...others}
         >
             <StackPresentationTypeProvider stackPresentation={stackPresentation}>
-                <Route path={path}>{initialRenderDone ? renderChildren : null}</Route>
+                {isTabScreen ? <Routes location={location}>{route}</Routes> : route}
             </StackPresentationTypeProvider>
         </Screen>
     );
