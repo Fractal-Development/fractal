@@ -1,16 +1,17 @@
-// const path = require('path');
-// const createExpoWebpackConfigAsync = require('@expo/webpack-config');
+const createExpoWebpackConfigAsync = require('../../node_modules/@expo/webpack-config');
+const path = require('path');
 
-// module.exports = async function (env, argv) {
-//     const config = await createExpoWebpackConfigAsync(env, argv);
-//     // TODO: Check if this enables hot reloading
-//     // config.resolve.alias['@bma98/fractal-ui'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-ui');
-//     // config.resolve.alias['@bma98/fractal-auth-screen'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-auth-screen');
-//     // config.resolve.alias['@bma98/fractal-charts'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-charts');
-//     // config.resolve.alias['@bma98/fractal-examples'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-examples');
-//     // config.resolve.alias['@bma98/fractal-messaging'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-messaging');
-//     // config.resolve.alias['@bma98/fractal-navigation'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-navigation');
-//     // config.resolve.alias['@bma98/fractal-navigation-router'] = path.resolve(__dirname, 'node_modules/@bma98/fractal-navigation-router');
-//     // config.resolve.alias['framer-motion'] = path.join(__dirname, `../../node_modules/framer-motion/dist/framer-motion`);
-//     return config;
-// };
+const workspaceRoot = path.resolve(__dirname, '../..');
+const projectRoot = __dirname;
+
+module.exports = async function (env, argv) {
+    const config = await createExpoWebpackConfigAsync(env, argv);
+
+    config.resolve.modules = [path.resolve(projectRoot, 'node_modules'), path.resolve(workspaceRoot, 'node_modules')];
+
+    config.resolve.alias['framer-motion'] = config.resolve.alias['framer-motion'] = path.join(
+        __dirname,
+        `../../node_modules/framer-motion/dist/framer-motion`
+    );
+    return config;
+};

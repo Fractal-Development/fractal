@@ -27,7 +27,8 @@
     "react-native": "0.69.6",
     "@react-native-community/slider": "^4.3.1",
     "expo-device": "^4.3.0",
-    "react-native-svg": "12.3.0"
+    "react-native-svg": "12.4.4",
+    "react-native-reanimated": "~2.9.1"
   },
   "turbo": {
     "baseBranch": "origin/master",
