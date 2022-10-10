@@ -9,13 +9,12 @@ import {
     StackNavigator,
     StackScreen,
     NavigationBarConfig,
-    useNavigate,
-    useLocation
+    useNavigate
 } from '@bma98/fractal-navigation-router';
 import { FractalAppRoot, Layer, Pressable, Text } from '@bma98/fractal-ui';
 
 export const routes = {
-    root: '/*',
+    root: '/',
     components: '/components',
     componentsDetails: '/components/details',
     test: '/test'
@@ -77,23 +76,21 @@ function Tests() {
     }, []);
 
     return (
-        <TabBarInsetsLayer>
-            <Layer flex={1} justifyContent='center' alignItems='center'>
-                <Pressable
-                    onPress={() => {
-                        setCounter((x) => x + 1);
-                    }}
-                >
-                    <Text>Welcome to tests {counter}</Text>
-                </Pressable>
-            </Layer>
-        </TabBarInsetsLayer>
+        <Layer flex={1} justifyContent='center' alignItems='center'>
+            <Pressable
+                onPress={() => {
+                    setCounter((x) => x + 1);
+                }}
+            >
+                <Text>Welcome to tests {counter}</Text>
+            </Pressable>
+        </Layer>
     );
 }
 
 function LocationShare() {
-    const location = useLocation();
-    console.log(location.pathname);
+    // const location = useLocation();
+    // console.log(location.pathname);
     return <></>;
 }
 
@@ -116,7 +113,9 @@ export default function App() {
                         </TabBarInsetsLayer>
                     </TabScreen>
                     <TabScreen path={routes.test}>
-                        <Tests />
+                        <TabBarInsetsLayer>
+                            <Tests />
+                        </TabBarInsetsLayer>
                     </TabScreen>
                 </TabNavigator>
             </NavigationRouter>

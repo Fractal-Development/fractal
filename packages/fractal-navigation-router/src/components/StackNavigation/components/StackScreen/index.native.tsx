@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { Platform, StatusBar } from 'react-native';
 import { NativeNavigationBar, NavigationBar } from '@bma98/fractal-navigation';
-import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationRouteProps';
 import { NavigationRoute } from '../../../NavigationRoute';
-import { useIsRootNavigationBar } from './hooks/useIsRootNavigationBar';
-import { useGoBackAnimated } from '../../hooks/useGoBackAnimated';
+import { useIsRootNavigationBar } from '../../../../hooks/useIsRootNavigationBar';
+import { useGoBackAnimated } from '../../../../hooks/useGoBackAnimated';
+import { NavigationRouteProps } from '../../../NavigationRoute/types';
 
 interface StackScreenProps extends NavigationRouteProps {
     navBarConfig?: ReactElement;

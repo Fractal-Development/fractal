@@ -7,13 +7,16 @@ import {
     extractDimensionProps,
     extractDisplayProps,
     extractShadowProps,
-    extractWebProps
+    extractWebProps,
+    shouldForwardProp
 } from '../../../../sharedProps';
 import { TouchableOpacityProps } from './types';
 import { useLongPress } from '../hooks/useLongPress';
 import { getButtonAccessibilityProps } from '../accessibility/getButtonAccessibilityProps';
 
-const StyledTouchableOpacity = styled(motion.div as any)`
+const StyledTouchableOpacity = styled(motion.div as any).withConfig({
+    shouldForwardProp
+})`
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;

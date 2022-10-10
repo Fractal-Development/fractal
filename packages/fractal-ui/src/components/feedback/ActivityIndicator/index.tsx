@@ -4,13 +4,18 @@ import styled from 'styled-components';
 import { ActivityIndicatorCircleProps, ActivityIndicatorProps } from './types';
 import { Layer } from '../../layout/Layer';
 import { getActivityIndicatorAccessibilityProps } from './accessibility/getActivityIndicatorAccessibilityProps';
+import { shouldForwardProp } from '../../../sharedProps';
 
-const BackgroundCircle = styled(motion.circle)`
+const BackgroundCircle = styled(motion.circle).withConfig({
+    shouldForwardProp
+})`
     stroke: ${({ color }: ActivityIndicatorCircleProps) => color};
     opacity: 0.2;
 `;
 
-const AnimatedSection = styled(motion.circle)`
+const AnimatedSection = styled(motion.circle).withConfig({
+    shouldForwardProp
+})`
     stroke: ${({ color }: ActivityIndicatorCircleProps) => color};
     stroke-dasharray: 80;
     stroke-dashoffset: 60;

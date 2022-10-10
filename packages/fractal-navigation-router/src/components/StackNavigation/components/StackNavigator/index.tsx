@@ -4,8 +4,8 @@ import { useLocation } from '../../../../router';
 import { ScreenStack, ScreenStackProps } from '../ScreenStack';
 import { filterMatchingChildren } from './util/filterMatchingChildren';
 import { useIsRouteActive } from '../../../../hooks';
-import { StackNavigatorRootPathProvider } from '../../context';
-import { useStackNavigatorStyles } from './hooks/useStackNavigatorStyles';
+import { useStackNavigatorStyles } from '../../../../hooks/useStackNavigatorStyles';
+import { StackNavigatorRootPathProvider } from '../../../../context';
 
 export interface StackNavigatorProps extends Omit<ScreenStackProps, 'children'> {
     children: Array<JSX.Element> | JSX.Element;

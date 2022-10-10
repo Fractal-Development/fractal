@@ -1,6 +1,6 @@
 import { useCallback, useContext } from 'react';
 import { StackNavigationGoBackAnimatedContext } from '../context/StackNavigationGoBackAnimatedProvider';
-import { useNavigate } from '../../../router';
+import { useNavigate } from '../router';
 
 export function useGoBackAnimated(): () => void {
     const goBacKAnimated = useContext(StackNavigationGoBackAnimatedContext);

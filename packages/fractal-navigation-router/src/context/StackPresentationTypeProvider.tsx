@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { StackPresentationType } from '../../../types';
+import { StackPresentationType } from '../types';
 
 export const StackPresentationTypeContext = createContext<StackPresentationType | undefined>(undefined);
 

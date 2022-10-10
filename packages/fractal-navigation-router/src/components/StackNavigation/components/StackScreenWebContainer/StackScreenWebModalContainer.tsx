@@ -1,7 +1,7 @@
 import React, { ReactNode, useCallback, useState } from 'react';
 import { Background, MiddleCellModal } from '@bma98/fractal-ui';
 import { useNavigate } from '../../../../router';
-import { StackNavigationGoBackAnimatedProvider } from '../../context/StackNavigationGoBackAnimatedProvider';
+import { StackNavigationGoBackAnimatedProvider } from '../../../../context/StackNavigationGoBackAnimatedProvider';
 
 interface StackScreenModalProps {
     children?: ReactNode;

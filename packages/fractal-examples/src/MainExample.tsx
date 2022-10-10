@@ -7,9 +7,7 @@ import {
     StackNavigator,
     StackScreen,
     TabNavigator,
-    TabScreen,
-    Route,
-    Navigate
+    TabScreen
 } from '@bma98/fractal-navigation-router';
 import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
@@ -46,7 +44,7 @@ export function MainExample(): JSX.Element {
     return (
         <FractalAppRoot>
             <NavigationRouter>
-                <TabNavigator tabBar={<MainTabBar />}>
+                <TabNavigator path={routes.root} initialTabPath={routes.components} tabBar={<MainTabBar />}>
                     <TabScreen path={routes.components}>
                         <TabBarInsetsLayer>
                             <StackNavigator path={routes.components}>
@@ -116,9 +114,6 @@ export function MainExample(): JSX.Element {
                         </TabBarInsetsLayer>
                     </TabScreen>
                 </TabNavigator>
-                <Route path='/'>
-                    <Navigate replace to={routes.components} />
-                </Route>
             </NavigationRouter>
         </FractalAppRoot>
     );
