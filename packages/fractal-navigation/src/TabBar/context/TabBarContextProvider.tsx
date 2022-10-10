@@ -1,5 +1,8 @@
 import React, { ReactElement, ReactNode } from 'react';
-import { TabBarInsetsProvider, SafeAreaProvider, TabBarIsHiddenProvider, TabBarPositionProvider } from '.';
+import { SafeAreaProvider } from './SafeAreaProvider';
+import { TabBarInsetsProvider } from './TabBarInsetsProvider';
+import { TabBarIsHiddenProvider } from './TabBarIsHiddenProvider';
+import { TabBarPositionProvider } from './TabBarPositionProvider';
 
 export interface TabBarContextProviderProps {
     children: ReactNode;
