@@ -1,10 +1,11 @@
 import React, { ReactElement, useCallback, useState } from 'react';
-import { Box, Layer, LayerProps, ScrollView } from '../../layout';
+
 import { useTheme } from '../../../context';
+import { Box, Layer, LayerProps, ScrollView } from '../../layout';
 import { ColorTab, ColorTabProps } from './ColorTab';
 
 export interface ColorTabListProps extends Omit<LayerProps, 'children'> {
-    tabs: Array<ColorTabProps>;
+    tabs: ColorTabProps[];
     defaultActiveIndex?: number;
     children: (index: number) => ReactElement;
     onItemPress?: (index?: number) => void;

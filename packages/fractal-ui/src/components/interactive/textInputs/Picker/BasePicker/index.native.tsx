@@ -1,6 +1,7 @@
-import React, { forwardRef } from 'react';
 import { Picker } from '@react-native-picker/picker';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components/native';
+
 import {
     extractTextProps,
     extractBackgroundProps,

@@ -1,8 +1,9 @@
+import { AnimatePresence } from 'moti';
 import React, { forwardRef } from 'react';
 import { Modal as RNModal } from 'react-native';
-import { AnimatePresence } from '@motify/core';
-import { ModalProps } from './types';
+
 import { Layer } from '../../../layout';
+import { ModalProps } from './types';
 
 const Modal = forwardRef(
     ({ visible, onExitComplete, ...others }: ModalProps, ref: any): JSX.Element => (

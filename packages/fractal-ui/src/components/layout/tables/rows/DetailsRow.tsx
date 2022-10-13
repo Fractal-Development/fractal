@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
-import { Layer } from '../../Layer';
+
 import { Text } from '../../../text';
-import { BaseRow, BaseRowProps } from './BaseRow';
 import { HorizontalLayer } from '../../HorizontalLayer';
+import { Layer } from '../../Layer';
+import { BaseRow, BaseRowProps } from './BaseRow';
 
 export interface DetailsRowProps extends BaseRowProps {
     title: string;

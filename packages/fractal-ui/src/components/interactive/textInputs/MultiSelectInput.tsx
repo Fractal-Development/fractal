@@ -1,21 +1,22 @@
 import React from 'react';
-import { IDEnabled } from './AutoComplete/types';
-import { AutoComplete } from './AutoComplete';
-import { Button } from '../buttons';
-import { Layer, LayerProps } from '../../layout';
+
 import { ChipList } from '../../dataDisplay';
+import { Layer, LayerProps } from '../../layout';
+import { Button } from '../buttons';
+import { AutoComplete } from './AutoComplete';
+import { IDEnabled } from './AutoComplete/types';
 
 interface MultiSelectInputProps<T> extends Omit<LayerProps, 'children'> {
-    options: Array<T>;
+    options: T[];
     getOptionLabel: (option: T) => string;
-    onSelect: (values: Array<T>) => void;
+    onSelect: (values: T[]) => void;
     onDeletePress: (item: T) => void;
     onClearPress?: () => void;
     onChangeText: (text: string) => void;
     onSubmitEditing: () => void;
     clearButtonText?: string;
     inputValue?: string;
-    controllableSelectedOptions: Array<T>;
+    controllableSelectedOptions: T[];
     placeholder?: string;
     enableClearButton?: boolean;
     chipListStyle?: Omit<LayerProps, 'children'>;

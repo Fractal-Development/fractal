@@ -1,5 +1,5 @@
-import { ButtonVariant } from '../types';
 import { useTheme } from '../../../../context';
+import { ButtonVariant } from '../types';
 
 export function useButtonColors(variant: ButtonVariant, reduceColor = false): [string, string, string] {
     const { colors } = useTheme();

@@ -1,10 +1,11 @@
+import { motify } from 'moti';
 import React, { forwardRef } from 'react';
-import styled from 'styled-components/native';
-import { motify } from '@motify/core';
 import { SafeAreaView } from 'react-native';
-import { LayerProps } from '../Layer/types';
+import styled from 'styled-components/native';
+
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 import { FractalSharedCss } from '../../../sharedProps';
+import { LayerProps } from '../Layer/types';
 
 const MotiSafeAreaView = motify(SafeAreaView)();
 

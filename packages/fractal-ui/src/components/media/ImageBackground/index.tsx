@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
-import { ImageBackgroundProps } from './types';
+
 import { Layer } from '../../layout';
 import { Image } from '../Image';
+import { ImageBackgroundProps } from './types';
 
 const ImageBackground = forwardRef(
     ({ children, resizeMode, source, width, height, ...others }: ImageBackgroundProps, ref: any): JSX.Element => (

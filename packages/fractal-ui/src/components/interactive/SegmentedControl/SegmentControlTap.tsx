@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { useTheme } from '../../../context';
-import { SegmentedControlTabProps } from './types';
 import { BaseSegmentedControlTab } from './BaseSegmentedControlTab';
+import { SegmentedControlTabProps } from './types';
 
 export function SegmentedControlTab({
     onSelect,

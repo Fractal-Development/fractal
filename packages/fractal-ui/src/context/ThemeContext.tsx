@@ -1,11 +1,12 @@
 import React, { createContext, ReactNode } from 'react';
+
 import { FractalTheme } from '../themes/FractalTheme';
 import { lightFractalTheme } from '../themes/templates/lightFractalTheme';
 
 export const ThemeContext = createContext<FractalTheme>(lightFractalTheme);
 
 export interface ThemeProviderProps {
-    children: ReactNode | Array<ReactNode>;
+    children: ReactNode | ReactNode[];
     theme: FractalTheme;
 }
 

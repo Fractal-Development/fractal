@@ -1,7 +1,9 @@
+import { motify } from 'moti';
 import React, { forwardRef } from 'react';
-import styled from 'styled-components/native';
 import { ImageBackground as RNImageBackground } from 'react-native';
-import { motify } from '@motify/core';
+import styled from 'styled-components/native';
+
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -10,7 +12,6 @@ import {
     extractShadowProps
 } from '../../../sharedProps';
 import { ImageBackgroundProps } from './types';
-import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
 const MotiImageBackground = motify(RNImageBackground)();
 

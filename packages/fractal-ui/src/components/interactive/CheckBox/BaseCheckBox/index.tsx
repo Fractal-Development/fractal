@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+
 import { Check } from '../Check';
-import { BaseCheckBoxProps } from '../types';
 import { getCheckBoxAccessibilityProps } from '../accessibility/getCheckBoxAccessibilityProps';
+import { BaseCheckBoxProps } from '../types';
 
 const Wrapper = styled(motion.label)`
     cursor: pointer;

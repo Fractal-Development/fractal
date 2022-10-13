@@ -1,4 +1,5 @@
 import { AnimatePresenceProps, Transition } from 'framer-motion';
+
 import { LayerProps } from '../components';
 import { FractalSharedAnimationProps } from './FractalSharedAnimationProps';
 

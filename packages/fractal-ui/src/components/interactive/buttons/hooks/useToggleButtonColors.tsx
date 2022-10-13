@@ -1,5 +1,5 @@
-import { ButtonVariant } from '../types';
 import { useTheme } from '../../../../context';
+import { ButtonVariant } from '../types';
 
 export function useToggleButtonColors(variant: ButtonVariant, active = false, useGrayVariant = false): [string, string, string] {
     const { colors } = useTheme();

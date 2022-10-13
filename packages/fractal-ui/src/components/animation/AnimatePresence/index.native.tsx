@@ -1,1 +1,1 @@
-export { AnimatePresence } from '@motify/core';
+export { AnimatePresence } from 'moti';

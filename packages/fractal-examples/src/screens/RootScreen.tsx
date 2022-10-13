@@ -1,4 +1,5 @@
-import React, { ReactElement, useCallback, useMemo, useState } from 'react';
+import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
+import { useNavigate } from '@bma98/fractal-navigation-router';
 import {
     Layer,
     LayoutProvider,
@@ -11,8 +12,8 @@ import {
     SimpleRow
 } from '@bma98/fractal-ui';
 import { useSizeValue } from '@bma98/size-class';
-import { useNavigate } from '@bma98/fractal-navigation-router';
-import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
+import React, { ReactElement, useCallback, useMemo, useState } from 'react';
+
 import { dataProvider } from '../fragments/ui-fragments/layout/tables/util/tableHelpers';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
 
@@ -29,7 +30,6 @@ export function RootScreen(): ReactElement {
                 (_, dim) => {
                     dim.height = sizes.baseRowHeight;
                     dim.width = width;
-                    return;
                 }
             ),
         [width, sizes.baseRowHeight]

@@ -1,12 +1,13 @@
 import React, { forwardRef, ReactNode, useState } from 'react';
-import { Text } from '../../text';
+
 import { useTheme } from '../../../context';
-import { BaseButton } from './BaseButton';
 import { AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
-import { ButtonVariant } from './types';
+import { ActivityIndicator } from '../../feedback';
+import { Text } from '../../text';
+import { BaseButton } from './BaseButton';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';
 import { useButtonColors } from './hooks/useButtonColors';
-import { ActivityIndicator } from '../../feedback';
+import { ButtonVariant } from './types';
 
 export interface ButtonProps extends FractalSharedStyleProps, AnimationProps {
     style?: any;
@@ -14,7 +15,7 @@ export interface ButtonProps extends FractalSharedStyleProps, AnimationProps {
     text?: string;
     addShadow?: boolean;
     pressedBackgroundColor?: string;
-    children?: ReactNode | Array<ReactNode> | ((color: string) => ReactNode | Array<ReactNode>);
+    children?: ReactNode | ReactNode[] | ((color: string) => ReactNode | ReactNode[]);
     onPress?: () => void;
     reduceColor?: boolean;
     ariaLabel?: string;

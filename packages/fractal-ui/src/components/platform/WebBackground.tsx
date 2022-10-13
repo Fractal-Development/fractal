@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import { useTheme } from '../../context';
 
 export function WebBackground(): null {

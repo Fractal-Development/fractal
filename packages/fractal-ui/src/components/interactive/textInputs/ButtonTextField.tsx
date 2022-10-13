@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react';
+
 import { useTheme } from '../../../context';
 import { useControllableState } from '../../../hooks/useControllableState';
+import { Layer, HorizontalLayer } from '../../layout';
 import { Button, ButtonVariant } from '../buttons';
 import { IconTextField, IconTextFieldProps } from './IconTextField';
-import { getButtonTextFieldAccessibilityProps } from './accessibility/getButtonTextFieldAccessibilityProps';
 import { getButtonIconAccessibilityProps } from './accessibility/getButtonIconAccessibilityProps';
-import { Layer, HorizontalLayer } from '../../layout';
+import { getButtonTextFieldAccessibilityProps } from './accessibility/getButtonTextFieldAccessibilityProps';
 
 export interface ButtonTextFieldProps extends IconTextFieldProps {
     onSubmitEditing?: (text: string) => void;

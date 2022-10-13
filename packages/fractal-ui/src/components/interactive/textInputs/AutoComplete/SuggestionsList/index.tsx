@@ -1,8 +1,9 @@
 import React from 'react';
+
+import { useTheme } from '../../../../../context';
+import { Layer } from '../../../../layout';
 import { SuggestionItem } from '../SuggestionItem';
 import { IDEnabled, SuggestionsListProps } from '../types';
-import { Layer } from '../../../../layout';
-import { useTheme } from '../../../../../context';
 
 export function SuggestionsList<T extends IDEnabled>({
     filteredData,

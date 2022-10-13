@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import { Layer } from '../../layout';
 import { BaseSwitch } from './BaseSwitch';
 import { SwitchProps } from './types';

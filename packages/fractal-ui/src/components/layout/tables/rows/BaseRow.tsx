@@ -1,8 +1,9 @@
 import React, { forwardRef, memo } from 'react';
-import { LayerProps } from '../../Layer/types';
-import { Separator } from '../../Separator';
+
 import { useTheme } from '../../../../context';
 import { Layer } from '../../Layer';
+import { LayerProps } from '../../Layer/types';
+import { Separator } from '../../Separator';
 
 export interface BaseRowProps extends LayerProps {
     addSeparator?: boolean;

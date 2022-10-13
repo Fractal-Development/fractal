@@ -1,4 +1,4 @@
-export function numberToArray(value: number, useZero?: boolean): Array<[string, string]> {
+export function numberToArray(value: number, useZero?: boolean): [string, string][] {
     let counter = value;
     const arrayOfValues = Array<[string, string]>();
 

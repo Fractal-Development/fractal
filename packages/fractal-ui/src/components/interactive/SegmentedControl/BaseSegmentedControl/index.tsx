@@ -1,7 +1,8 @@
-import React, { forwardRef } from 'react';
 import { motion, AnimateSharedLayout } from 'framer-motion';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { BaseSegmentedControlProps } from '../types';
+
+import { useTheme } from '../../../../context';
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -10,8 +11,8 @@ import {
     extractShadowProps,
     extractWebProps
 } from '../../../../sharedProps';
-import { useTheme } from '../../../../context';
 import { SegmentedControlTab } from '../SegmentControlTap';
+import { BaseSegmentedControlProps } from '../types';
 
 const Container = styled(motion.ol as any)`
     list-style: none;

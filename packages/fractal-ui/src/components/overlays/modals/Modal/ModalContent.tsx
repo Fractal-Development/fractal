@@ -1,4 +1,5 @@
 import React, { useEffect, forwardRef, Ref } from 'react';
+
 import { Layer, LayerProps } from '../../../layout';
 
 const ModalContent = forwardRef(({ children, ...others }: LayerProps, ref: Ref<HTMLDivElement>): JSX.Element => {

@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import { Image } from '../Image';
 import { AvatarProps } from './types';
 

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { ThemeIdentifierProvider } from '../context/ThemeIdentifierContext';
+
 import { ThemeContent, ThemeContentProps } from '../components/ThemeContent';
+import { ThemeIdentifierProvider } from '../context/ThemeIdentifierContext';
 import { startFractalApp } from '../executionEnvironment';
 
 export type FractalAppRootProps = ThemeContentProps & {

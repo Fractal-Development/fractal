@@ -1,4 +1,5 @@
 import { MutableRefObject } from 'react';
+
 import { PlacementOffsetStyle, PlacementType } from '../types';
 import { alignWebPopoverIfRequired } from './alignWebPopoverIfRequired';
 

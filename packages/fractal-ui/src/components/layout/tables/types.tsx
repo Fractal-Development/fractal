@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
-import { LayerProps } from '../Layer/types';
+
 import { ButtonVariant } from '../../interactive/buttons/types/ButtonVariant';
+import { LayerProps } from '../Layer/types';
 
 export type TextColorVariant = ButtonVariant | 'text';
 

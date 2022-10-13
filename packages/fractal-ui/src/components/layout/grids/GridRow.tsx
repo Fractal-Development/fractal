@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
+
 import { Layer } from '../Layer';
-import { GridItemProps, extractGridItemProps } from './types';
 import { getGridRowAccessibilityProps } from './accessibility/getGridRowAccessibilityProps';
+import { GridItemProps, extractGridItemProps } from './types';
 
 const StyledGrid = styled(Layer)`
     ${extractGridItemProps};

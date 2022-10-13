@@ -1,8 +1,9 @@
 import React, { Children, forwardRef } from 'react';
+
 import { Layer } from '../Layer';
 import { GridRow } from './GridRow';
-import { GridProps } from './types';
 import { getGridAccessibilityProps } from './accessibility/getGridAccessibilityProps';
+import { GridProps } from './types';
 
 const Grid = forwardRef(({ children, ...others }: GridProps, ref: any): JSX.Element => {
     const isRow = (): boolean => {

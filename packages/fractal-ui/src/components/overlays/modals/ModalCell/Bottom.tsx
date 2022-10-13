@@ -1,6 +1,7 @@
 import React from 'react';
-import { LayerProps } from '../../../layout';
+
 import { useTheme } from '../../../../core';
+import { LayerProps } from '../../../layout';
 import { ModalCellSharedStyles } from './ModalCellSharedStyles';
 
 const bottomCellAnimationStyles = {

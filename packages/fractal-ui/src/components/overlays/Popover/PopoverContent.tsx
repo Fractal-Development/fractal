@@ -1,5 +1,6 @@
-import React, { forwardRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import React, { forwardRef } from 'react';
+
 import { Layer } from '../../layout/Layer';
 import { OutsideClickListener } from './OutsideClickListener';
 import { PopoverPortalContentProps } from './types';

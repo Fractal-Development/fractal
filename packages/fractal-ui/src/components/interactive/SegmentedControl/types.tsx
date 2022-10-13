@@ -27,7 +27,7 @@ export interface BaseSegmentedControlProps extends TextStyleProps, Omit<LayerPro
     /**
      * The labels for the control's segment buttons, in order.
      */
-    values: Array<string>;
+    values: string[];
     /**
      * The index in `props.values` of the segment to be selected.
      */

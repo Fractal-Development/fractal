@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import React, { useCallback, useState } from 'react';
+
+import { useControllableState } from '../../../../hooks/useControllableState';
 import { PickerButton } from '../PickerButton';
 import { DatePickerProps } from './types/DatePickerProps';
-import { useControllableState } from '../../../../hooks/useControllableState';
 
 export function DatePicker({
     value,

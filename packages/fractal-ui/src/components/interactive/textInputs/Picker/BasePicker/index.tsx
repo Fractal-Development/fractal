@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { useCallback, forwardRef } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+
 import {
     extractTextProps,
     extractBackgroundProps,
@@ -9,8 +10,8 @@ import {
     extractBorderProps,
     extractWebProps
 } from '../../../../../sharedProps';
-import { BasePickerProps } from './types';
 import { getBasePickerAccessibilityProps } from '../../accessibility/getBasePickerAccessibilityProps';
+import { BasePickerProps } from './types';
 
 const StyledSelect = styled(motion.select as any)`
     appearance: none;

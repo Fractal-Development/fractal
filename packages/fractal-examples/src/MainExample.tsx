@@ -1,5 +1,4 @@
-import React, { ReactElement } from 'react';
-import { FractalAppRoot, PaddingLayer, Text } from '@bma98/fractal-ui';
+import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
 import {
     NavigationBarConfig,
     NavigationRouter,
@@ -9,19 +8,21 @@ import {
     TabNavigator,
     TabScreen
 } from '@bma98/fractal-navigation-router';
-import { ResponsiveSideTabBar, TabBarInsetsLayer } from '@bma98/fractal-navigation';
+import { FractalAppRoot, PaddingLayer, Text } from '@bma98/fractal-ui';
+import React, { ReactElement } from 'react';
+
+import { ReactIcon } from './assets/ReactIcon';
+import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
+import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ui-screens/dataDisplay/ChipFragmentScreen';
-import { ReactIcon } from './assets/ReactIcon';
-import { routes } from './screens/util/routes';
-import { screens } from './screens/util/screens';
-import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
-import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
 import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
 import { ActivityIndicatorFragmentScreen } from './screens/ui-screens/feedback/ActivityIndicatorFragmentScreen';
 import { ErrorMessageFragmentScreen } from './screens/ui-screens/feedback/ErrorMessageFragmentScreen';
+import { routes } from './screens/util/routes';
+import { screens } from './screens/util/screens';
 
 function renderReactIcon(color, size) {
     return <ReactIcon fill={color} height={size} width={size} />;

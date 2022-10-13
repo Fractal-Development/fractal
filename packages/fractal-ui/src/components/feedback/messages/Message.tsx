@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
-import { Text } from '../../text';
-import { LayerProps, Layer, HorizontalLayer } from '../../layout';
+
 import { useTheme } from '../../../context';
+import { LayerProps, Layer, HorizontalLayer } from '../../layout';
+import { Text } from '../../text';
 
 export interface MessageProps extends Partial<Omit<LayerProps, 'children'>> {
     title: string;

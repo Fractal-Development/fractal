@@ -1,4 +1,4 @@
-export function normalizeHourValues(values: Array<[string, string]>): Array<[string, string]> {
+export function normalizeHourValues(values: [string, string][]): [string, string][] {
     return values.map((item) => {
         const [id, value] = item;
         if (value.length === 1) {

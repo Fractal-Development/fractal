@@ -1,6 +1,7 @@
 import React from 'react';
-import { Message, MessageProps } from './Message';
+
 import { BugIcon } from '../../../assets/BugIcon';
+import { Message, MessageProps } from './Message';
 
 type ErrorMessageProps = Omit<MessageProps, 'messageType' | 'icon'>;
 

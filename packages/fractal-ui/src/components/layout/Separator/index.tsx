@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
-import { LayerProps } from '../Layer/types';
-import { Layer } from '../Layer';
+
 import { useTheme } from '../../../context';
+import { Layer } from '../Layer';
+import { LayerProps } from '../Layer/types';
 import { getSeparatorAccessibilityProps } from './accessibility/getSeparatorAccessibilityProps';
 
 export interface SeparatorProps extends Omit<LayerProps, 'children'> {

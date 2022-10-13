@@ -4,9 +4,9 @@ import { NativeFileInfo } from './FractalFile';
 export interface DropzoneProps {
     text?: string;
     webTextButton?: string;
-    acceptedTypes?: Array<keyof FileTypes> | Array<string>;
+    acceptedTypes?: (keyof FileTypes)[] | string[];
     pickMultipleFiles?: boolean;
     maxNumberFiles?: number;
     maxFileSize?: number; // maximum file size (in bytes)
-    onChangeAcceptedFiles: (acceptedFiles: Array<File | NativeFileInfo>) => void;
+    onChangeAcceptedFiles: (acceptedFiles: (File | NativeFileInfo)[]) => void;
 }

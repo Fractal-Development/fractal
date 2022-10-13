@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
-import { BaseButtonProps } from './types';
+
 import { Pressable } from '../Pressable';
+import { BaseButtonProps } from './types';
 
 const BaseButton = forwardRef(
     ({ pressedBackgroundColor, backgroundColor, whileHover, whileTap, ...others }: BaseButtonProps, ref: any): JSX.Element => {

@@ -1,4 +1,5 @@
 import { Dispatch, MutableRefObject, SetStateAction, useEffect } from 'react';
+
 import { EventSource } from '../types';
 
 export function useCleanEventSource(

@@ -1,9 +1,10 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
+
+import { PopoverContent } from './PopoverContent';
+import { PopoverPortalContent } from './PopoverPortalContent';
 import { PlacementOffsetStyle, PopoverProps } from './types';
 import { getWebPlacementOffsetStyle } from './utils/getWebPlacementOffsetStyle';
 import { getWebPortalPlacementOffsetStyle } from './utils/getWebPortalPlacementOffsetStyle';
-import { PopoverPortalContent } from './PopoverPortalContent';
-import { PopoverContent } from './PopoverContent';
 
 const Popover = forwardRef(
     (

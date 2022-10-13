@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
-import { SegmentedControlProps } from './types';
+
 import { useControllableState } from '../../../hooks/useControllableState';
 import { BaseSegmentedControl } from './BaseSegmentedControl';
+import { SegmentedControlProps } from './types';
 
 const SegmentedControl = forwardRef(
     (
