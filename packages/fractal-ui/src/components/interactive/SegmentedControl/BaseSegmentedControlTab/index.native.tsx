@@ -1,9 +1,10 @@
 import React from 'react';
-import { Layer } from '../../../layout';
-import { TouchableOpacity } from '../../buttons';
-import { Text } from '../../../text';
-import { BaseSegmentedControlTabProps } from '../types';
+
 import { useTheme } from '../../../../context';
+import { Layer } from '../../../layout';
+import { Text } from '../../../text';
+import { TouchableOpacity } from '../../buttons';
+import { BaseSegmentedControlTabProps } from '../types';
 
 export function BaseSegmentedControlTab({
     onSelect,

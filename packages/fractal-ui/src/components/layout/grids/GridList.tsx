@@ -1,7 +1,8 @@
 import React, { forwardRef, useCallback } from 'react';
+
 import { Layer } from '../Layer';
-import { GridListProps } from './types';
 import { getGridListAccessibilityProps } from './accessibility/getGridListAccessibilityProps';
+import { GridListProps } from './types';
 
 function Grid<T>(props: GridListProps<T>, ref: any): JSX.Element {
     const { numColumns, renderItem, data } = props;

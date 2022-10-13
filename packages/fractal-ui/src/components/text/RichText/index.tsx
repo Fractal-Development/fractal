@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Text } from '../Text';
 import TextExtraction from './TextExtraction';
 import { CustomParseShape, isDefaultParseShape, RichTextProps, ParseShape } from './types';

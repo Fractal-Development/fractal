@@ -1,9 +1,10 @@
 import React from 'react';
+
 import { useTheme } from '../../../../context';
-import { Pressable } from '../../buttons';
 import { Layer } from '../../../layout';
-import { BaseSwitchProps } from '../types';
+import { Pressable } from '../../buttons';
 import { getSwitchAccessibilityProps } from '../accessibility/getSwitchAccessibilityProps';
+import { BaseSwitchProps } from '../types';
 
 const styleVariants = {
     start: { translateX: 0, translateY: 0 },

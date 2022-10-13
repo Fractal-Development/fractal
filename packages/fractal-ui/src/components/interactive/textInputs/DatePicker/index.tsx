@@ -1,13 +1,14 @@
 import React, { useCallback, useMemo } from 'react';
+
+import { useTheme } from '../../../../context';
+import { useControllableState } from '../../../../hooks/useControllableState';
+import { Layer, HorizontalLayer } from '../../../layout';
 import { Picker } from '../Picker';
-import { DatePickerProps } from './types/DatePickerProps';
 import { numberToArray } from '../utils/numberToArray';
+import { DatePickerProps } from './types/DatePickerProps';
 import { getDaysInMonth } from './util/getDaysInMonth';
 import { getYearsInRange } from './util/getYearsInRange';
 import { localeMonthNames } from './util/localeMonthNames';
-import { Layer, HorizontalLayer } from '../../../layout';
-import { useTheme } from '../../../../context';
-import { useControllableState } from '../../../../hooks/useControllableState';
 
 export function DatePicker({ value, minDate, maxDate, initialDate = new Date(), onChange, ...others }: DatePickerProps): JSX.Element {
     const { spacings } = useTheme();

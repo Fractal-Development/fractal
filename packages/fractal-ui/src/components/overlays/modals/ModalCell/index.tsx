@@ -1,5 +1,6 @@
-import React from 'react';
 import { useValueForLargeSizeType } from '@bma98/size-class';
+import React from 'react';
+
 import { LayerProps } from '../../../layout/Layer/types';
 import { BottomCellDesktop, BottomCellPhone } from './Bottom';
 import { MiddleCellDesktop, MiddleCellPhone } from './Middle';

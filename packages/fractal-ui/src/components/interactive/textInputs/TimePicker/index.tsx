@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
+
 import { useTheme } from '../../../../context';
+import { useControllableState } from '../../../../hooks/useControllableState';
 import { HorizontalLayer } from '../../../layout';
 import { Picker } from '../Picker';
 import { numberToArray } from '../utils/numberToArray';
 import { TimePickerProps } from './types/TimePickerProps';
 import { normalizeHourValues } from './util/normalizeHourValues';
-import { useControllableState } from '../../../../hooks/useControllableState';
 
 export function TimePicker({ value, onChange, initialDate = new Date(), ...others }: TimePickerProps): JSX.Element {
     initialDate.setSeconds(0);
@@ -14,7 +15,7 @@ export function TimePicker({ value, onChange, initialDate = new Date(), ...other
     const [date, setDate] = useControllableState(value, initialDate, onChange);
 
     const hours = normalizeHourValues(numberToArray(24));
-    const minutes: Array<[string, string]> = normalizeHourValues(numberToArray(59, true));
+    const minutes: [string, string][] = normalizeHourValues(numberToArray(59, true));
 
     const onHoursChange = useCallback(
         (pair) => {

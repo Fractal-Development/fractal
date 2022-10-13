@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '../../../context';
+
 import { ChevronDownIcon } from '../../../assets';
+import { useTheme } from '../../../context';
 import { TextFieldButton, TextFieldButtonProps } from './TextFieldButton';
 
 export interface PickerButtonProps extends Omit<TextFieldButtonProps, 'rightImage'> {

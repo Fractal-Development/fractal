@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
-import { TextFieldProps } from './BaseTextField/types';
-import { HorizontalLayer, LayerProps, Layer } from '../../layout';
+
 import { useTheme } from '../../../context';
+import { HorizontalLayer, LayerProps, Layer } from '../../layout';
 import { BaseTextField } from './BaseTextField';
+import { TextFieldProps } from './BaseTextField/types';
 import { getIconTextFieldAccessibilityProps } from './accessibility/getIconTextFieldAccessibilityProps';
 
 export interface IconTextFieldProps extends Partial<Omit<LayerProps, 'children'>> {

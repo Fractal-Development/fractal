@@ -1,10 +1,11 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
-import { useTheme } from '../../../context';
-import { Chip } from '../Chip';
-import { IDEnabled } from '../../interactive/textInputs/AutoComplete/types';
-import { ScrollWrapper } from './ScrollWrapper';
+
 import { LayerProps } from '../..';
+import { useTheme } from '../../../context';
+import { IDEnabled } from '../../interactive/textInputs/AutoComplete/types';
+import { Chip } from '../Chip';
+import { ScrollWrapper } from './ScrollWrapper';
 
 const styleVariants = {
     hidden: { opacity: 0, scale: 0 },
@@ -12,7 +13,7 @@ const styleVariants = {
 };
 
 interface ChipListProps<T> extends LayerProps {
-    data: Array<T>;
+    data: T[];
     getLabel: (item: T) => string;
     onItemPress: (item: T) => void;
 }

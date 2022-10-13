@@ -1,10 +1,11 @@
 import React from 'react';
+
 import { Layer } from '../../layout';
-import { useDropzone } from './hooks/useDropzone';
-import { DropzoneProps } from './types';
 import { DropBox } from './DropBox';
 import { UploadedFileList } from './UploadedFileList';
 import { getDropzoneAccessibilityProps } from './accessibility/getDropzoneAccessibilityProps';
+import { useDropzone } from './hooks/useDropzone';
+import { DropzoneProps } from './types';
 
 export function Dropzone({
     text,

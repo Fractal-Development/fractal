@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
-import { LayerProps } from '../../../../layout';
+
 import { TextStyleProps } from '../../../../../sharedProps';
+import { LayerProps } from '../../../../layout';
 
 type ItemValue = number | string;
 

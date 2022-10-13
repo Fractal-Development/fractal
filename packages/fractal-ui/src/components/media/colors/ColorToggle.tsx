@@ -1,7 +1,8 @@
 import React, { useState, forwardRef } from 'react';
-import { LayerProps, Layer } from '../../layout';
-import { Pressable } from '../../interactive';
+
 import { CheckIcon } from '../../../assets';
+import { Pressable } from '../../interactive';
+import { LayerProps, Layer } from '../../layout';
 
 export interface ColorToggleProps extends LayerProps {
     onActiveChange?: (active: boolean, color: string) => void;

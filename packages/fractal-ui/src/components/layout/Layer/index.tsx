@@ -1,8 +1,9 @@
+import { motion } from 'framer-motion';
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { LayerProps } from './types';
+
 import { FractalSharedCss, shouldForwardProp } from '../../../sharedProps';
+import { LayerProps } from './types';
 
 const StyledLayer = styled(motion.div as any).withConfig({
     shouldForwardProp

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+
 import { ModalProps } from '../Modal/types';
 
 export interface BlurredModalProps extends ModalProps {

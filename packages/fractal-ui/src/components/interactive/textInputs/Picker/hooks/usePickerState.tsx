@@ -1,9 +1,10 @@
 import { useState, useCallback, useMemo } from 'react';
+
 import { getInitialPickerIndex } from '../util/getInitialPickerIndex';
 
 export function usePickerState(
     initialValue: string | undefined,
-    items: Array<[string, string]>,
+    items: [string, string][],
     valueProp?: string,
     onChange?: (pair: [string, string]) => void
 ): [string, (value: string, index: number) => void, number] {

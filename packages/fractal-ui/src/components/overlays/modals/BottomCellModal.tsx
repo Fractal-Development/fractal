@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
-import { ModalProps } from './Modal/types';
+
 import { DimmedModal } from './DimmedModal';
+import { ModalProps } from './Modal/types';
 import { ModalCell } from './ModalCell';
 
 const BottomCellModal = forwardRef(

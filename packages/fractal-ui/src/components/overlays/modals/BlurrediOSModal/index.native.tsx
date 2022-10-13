@@ -1,11 +1,12 @@
-import React, { forwardRef } from 'react';
+import { motify } from 'moti';
 import { BlurView } from 'expo-blur';
+import React, { forwardRef } from 'react';
 import { View, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
-import { motify } from '@motify/core';
-import { TextButton } from '../../../interactive/buttons/TextButton';
-import { Pressable } from '../../../interactive/buttons/Pressable';
+
 import { useTheme, useThemeIdentifier } from '../../../../context';
+import { Pressable } from '../../../interactive/buttons/Pressable';
+import { TextButton } from '../../../interactive/buttons/TextButton';
 import { Layer, SafeAreaLayer } from '../../../layout';
 import { Modal } from '../Modal';
 import { BlurredModalProps } from './types';

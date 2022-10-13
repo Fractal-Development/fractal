@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { forwardRef, useCallback } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { TextProps } from './types';
+
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -12,6 +12,7 @@ import {
     extractWebProps,
     shouldForwardProp
 } from '../../../sharedProps';
+import { TextProps } from './types';
 
 const StyledText = styled(motion.span as any).withConfig({
     shouldForwardProp

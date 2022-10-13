@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
-import { LayerProps } from './Layer/types';
-import { Background } from './Background';
-import { ActivityIndicator } from '../feedback/ActivityIndicator';
+
 import { useTheme } from '../../context';
+import { ActivityIndicator } from '../feedback/ActivityIndicator';
+import { Background } from './Background';
+import { LayerProps } from './Layer/types';
 
 const LoadingBackground = forwardRef((props: Omit<LayerProps, 'children'>, ref: any): JSX.Element => {
     const { colors } = useTheme();

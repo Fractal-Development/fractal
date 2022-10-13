@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
-import { lightFractalTheme, FractalTheme, darkFractalTheme } from '../themes';
+
 import { useThemeIdentifier, ThemeProvider } from '../context';
+import { lightFractalTheme, FractalTheme, darkFractalTheme } from '../themes';
 import { PlatformAppearanceDetails } from './platform';
 
 export interface ThemeContentProps {

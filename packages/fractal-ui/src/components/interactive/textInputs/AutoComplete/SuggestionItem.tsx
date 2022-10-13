@@ -1,7 +1,8 @@
 import React from 'react';
-import { TouchableOpacity } from '../../buttons';
+
 import { SimpleRow } from '../../../layout/tables';
 import { CheckMarkRow } from '../../../layout/tables/rows/CheckMarkRow';
+import { TouchableOpacity } from '../../buttons';
 import { useSelectedOptions } from './context/hooks/useSelectedOptions';
 import { IDEnabled } from './types';
 

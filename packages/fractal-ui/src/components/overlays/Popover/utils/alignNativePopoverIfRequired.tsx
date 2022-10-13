@@ -1,4 +1,5 @@
 import { Dimensions } from 'react-native';
+
 import { NativePlacementOffsetStyle, LayoutRectangle, PlacementType } from '../types';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');

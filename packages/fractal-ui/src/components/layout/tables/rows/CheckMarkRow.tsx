@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
-import { HorizontalLayer } from '../../HorizontalLayer';
-import { BaseRow, BaseRowProps } from './BaseRow';
+
 import { useTheme } from '../../../../context';
 import { Check } from '../../../interactive/CheckBox/Check';
+import { HorizontalLayer } from '../../HorizontalLayer';
+import { BaseRow, BaseRowProps } from './BaseRow';
 
 export interface CheckMarkRowProps extends BaseRowProps {
     title: string;

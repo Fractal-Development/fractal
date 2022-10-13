@@ -1,4 +1,5 @@
 import { Dispatch, RefObject, SetStateAction, useCallback, useEffect } from 'react';
+
 import { EventSource } from '../types';
 
 export function useSliderTouchEffects(

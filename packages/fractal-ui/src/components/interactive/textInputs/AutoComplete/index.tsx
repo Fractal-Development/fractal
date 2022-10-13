@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { AutoCompleteConsumer } from './AutoCompleteConsumer';
 import { SelectedOptionsProvider } from './context/SelectedOptionsContext';
 import { AutoCompleteProps, IDEnabled } from './types';

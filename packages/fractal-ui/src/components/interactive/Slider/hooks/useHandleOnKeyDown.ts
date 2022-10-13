@@ -1,6 +1,7 @@
 import React, { Dispatch, MutableRefObject, SetStateAction, useCallback, useMemo } from 'react';
-import { clampValue, roundValueToStep } from '../utils';
+
 import { EventSource } from '../types';
+import { clampValue, roundValueToStep } from '../utils';
 
 export function useHandleOnKeyDown(
     maximumValue: number,

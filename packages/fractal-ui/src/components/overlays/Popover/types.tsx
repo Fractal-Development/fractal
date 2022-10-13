@@ -1,4 +1,5 @@
 import { MutableRefObject, ReactNode } from 'react';
+
 import { LayerProps } from '../../layout';
 
 export interface LayoutRectangle {
@@ -17,7 +18,7 @@ export interface PlacementOffsetStyle {
 }
 
 export interface NativePlacementOffsetStyle extends Omit<PlacementOffsetStyle, 'transform'> {
-    transform?: Array<{ translateX: number } | { translateY: number }>;
+    transform?: ({ translateX: number } | { translateY: number })[];
 }
 
 export type PlacementType = 'top' | 'right' | 'bottom' | 'left';
@@ -30,7 +31,7 @@ export interface PopoverProps extends Omit<LayerProps, 'children'> {
     popoverChildren: (anchorWidth?: number) => ReactNode;
     popoverContainerProps?: Omit<LayerProps, 'children'>;
     modalBackgroundColor?: string;
-    children: (anchorRef: any) => ReactNode | Array<ReactNode>;
+    children: (anchorRef: any) => ReactNode | ReactNode[];
 }
 
 export interface PopoverPortalContentProps extends Omit<PopoverProps, 'placement' | 'usePortal'> {

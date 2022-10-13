@@ -1,10 +1,11 @@
 import React, { forwardRef } from 'react';
+
 import { useTheme } from '../../../context';
+import { Text } from '../../text';
 import { Box } from '../Box';
 import { HorizontalLayer } from '../HorizontalLayer';
-import { Text } from '../../text';
-import { TableContainerProps, TextColorVariant } from './types';
 import { getTableContainerAccessibilityProps } from './accessibility/getTableContainerAccessibilityProps';
+import { TableContainerProps, TextColorVariant } from './types';
 
 const TableContainer = forwardRef(
     (

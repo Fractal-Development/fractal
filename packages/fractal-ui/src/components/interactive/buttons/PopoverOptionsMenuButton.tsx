@@ -1,19 +1,20 @@
 import React, { ReactNode, useState } from 'react';
+
 import { ThreeDotsHorizontalIcon } from '../../../assets';
 import { useTheme } from '../../../context';
-import { CircularIconButton } from './CircularIconButton';
-import { TouchableOpacity } from './TouchableOpacity';
 import { Box, LayerProps } from '../../layout';
 import { Popover } from '../../overlays/Popover';
 import { Text } from '../../text';
+import { CircularIconButton } from './CircularIconButton';
+import { TouchableOpacity } from './TouchableOpacity';
 
 interface OptionsMenuButtonProps {
     customIcon?: (color: string) => ReactNode;
-    options: Array<string>;
+    options: string[];
     onOptionPress?: (option: string) => void;
     usePortal?: boolean;
     menuContainerProps?: Omit<LayerProps, 'children'>;
-    children?: (anchorRef: any, showOptions: () => void) => ReactNode | Array<ReactNode>;
+    children?: (anchorRef: any, showOptions: () => void) => ReactNode | ReactNode[];
 }
 
 export function PopoverOptionsMenuButton({

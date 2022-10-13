@@ -14,14 +14,14 @@ interface MatchedPart {
 class TextExtraction {
     text: string;
 
-    patterns: Array<CustomParseShape>;
+    patterns: CustomParseShape[];
 
     /**
      * @param {String} text - Text to be parsed
      * @param {CustomParseShape[]} patterns - Patterns to be used when parsed,
      *                                 any extra attributes, will be returned from parse()
      */
-    constructor(text: string, patterns: Array<CustomParseShape>) {
+    constructor(text: string, patterns: CustomParseShape[]) {
         this.text = text;
         this.patterns = patterns || [];
     }
@@ -92,7 +92,7 @@ class TextExtraction {
         return parsedTexts.filter((t) => !!t.children);
     }
 
-    getMatchedPart = (matchedPattern: CustomParseShape, text: string, matches: Array<string>, index: number): MatchedPart => {
+    getMatchedPart = (matchedPattern: CustomParseShape, text: string, matches: string[], index: number): MatchedPart => {
         const props: {
             [key: string]: any;
         } = {};

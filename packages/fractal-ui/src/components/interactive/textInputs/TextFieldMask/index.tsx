@@ -1,8 +1,9 @@
 import React, { forwardRef, useState } from 'react';
+
 import { TextField } from '../TextField';
+import { getTextFieldMaskAccessibilityProps } from '../accessibility/getTextFieldMaskAccessibilityProps';
 import { useUpdateValue } from './hooks/useUpdateValue';
 import { TextFieldMaskProps } from './types';
-import { getTextFieldMaskAccessibilityProps } from '../accessibility/getTextFieldMaskAccessibilityProps';
 
 const TextFieldMask = forwardRef(({ defaultValue, onChangeText, type, ...others }: TextFieldMaskProps, ref: any): JSX.Element => {
     const updateValue = useUpdateValue(type);

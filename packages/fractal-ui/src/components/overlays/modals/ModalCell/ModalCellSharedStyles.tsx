@@ -1,6 +1,7 @@
 import React from 'react';
-import { Layer, LayerProps } from '../../../layout';
+
 import { useTheme } from '../../../../core';
+import { Layer, LayerProps } from '../../../layout';
 
 export function ModalCellSharedStyles(props: LayerProps): JSX.Element {
     const { borderRadius, colors } = useTheme();

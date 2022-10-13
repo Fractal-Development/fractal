@@ -1,8 +1,0 @@
-build/
-dist/
-node_modules/
-.snapshots/
-*.min.js
-.eslintrc.js
-babel.config.js
-metro.config.js

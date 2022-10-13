@@ -1,12 +1,13 @@
 import React, { forwardRef } from 'react';
 import Reanimated from 'react-native-reanimated';
 import styled from 'styled-components/native';
-import { BaseSegmentedControlProps } from '../types';
-import { SegmentedControlTab } from '../SegmentControlTap';
-import { SegmentsSeparators } from '../SegmentsSeparators';
-import { Layer } from '../../../layout';
+
 import { useTheme } from '../../../../context';
 import { extractBorderProps, extractShadowProps } from '../../../../sharedProps';
+import { Layer } from '../../../layout';
+import { SegmentedControlTab } from '../SegmentControlTap';
+import { SegmentsSeparators } from '../SegmentsSeparators';
+import { BaseSegmentedControlProps } from '../types';
 import { useSegmentManager } from './hooks/useSegmentManager';
 
 const SegmentsContainer = styled.View`

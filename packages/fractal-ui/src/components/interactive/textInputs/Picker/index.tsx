@@ -1,12 +1,13 @@
 import React, { useCallback } from 'react';
-import { usePickerState } from './hooks/usePickerState';
+
+import { ChevronDownIcon } from '../../../../assets';
 import { useTheme } from '../../../../context';
 import { HorizontalLayer, Layer } from '../../../layout';
-import { BasePicker } from './BasePicker';
-import { ChevronDownIcon } from '../../../../assets';
-import { PickerItem } from './PickerItem';
-import { PickerProps } from './types/PickerProps';
 import { getPickerAccessibilityProps } from '../accessibility/getPickerAccessibilityProps';
+import { BasePicker } from './BasePicker';
+import { PickerItem } from './PickerItem';
+import { usePickerState } from './hooks/usePickerState';
+import { PickerProps } from './types/PickerProps';
 
 export function Picker({
     items,
@@ -18,7 +19,7 @@ export function Picker({
     placeholder,
     ...others
 }: PickerProps): JSX.Element {
-    const finalItems: Array<[string, string]> = placeholder ? [['placeholder', placeholder], ...items] : items;
+    const finalItems: [string, string][] = placeholder ? [['placeholder', placeholder], ...items] : items;
     const [currentValue, handleValueChange] = usePickerState(defaultValue, finalItems, value, onChange);
     const { colors, sizes, borderRadius, spacings } = useTheme();
 

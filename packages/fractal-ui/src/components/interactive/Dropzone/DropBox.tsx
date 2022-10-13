@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
+
 import { LoadIcon } from '../../../assets/LoadIcon';
 import { useTheme } from '../../../context/hooks/useTheme';
 import { extractTextProps } from '../../../sharedProps/TextProps';

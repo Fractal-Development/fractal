@@ -1,10 +1,11 @@
+import { motify } from 'moti';
 import React, { forwardRef } from 'react';
-import styled from 'styled-components/native';
-import { motify } from '@motify/core';
 import { View } from 'react-native';
-import { LayerProps } from './types';
+import styled from 'styled-components/native';
+
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 import { FractalSharedCss } from '../../../sharedProps';
+import { LayerProps } from './types';
 
 const MotiView = motify(View)();
 

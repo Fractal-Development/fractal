@@ -1,17 +1,18 @@
 import React, { useCallback, useState, useRef } from 'react';
 import styled from 'styled-components';
-import { BaseSliderProps, EventSource } from '../types';
-import { clampValue, valueToPercentage } from '../utils';
+
 import { useTheme } from '../../../../context';
+import { useControllableState } from '../../../../hooks/useControllableState';
 import { extractBackgroundProps, extractShadowProps } from '../../../../sharedProps';
 import { getSliderAccessibilityProps } from '../accessibility/getSliderAccessibilityProps';
 import { getSliderInputAccessibilityProps } from '../accessibility/getSliderInputAccessibilityProps';
-import { useControllableState } from '../../../../hooks/useControllableState';
-import { useHandleSliderMove } from '../hooks/useHandleSliderMove';
-import { useSliderTouchEffects } from '../hooks/useSliderTouchEffects';
+import { useCleanEventSource } from '../hooks/useCleanEventSource';
 import { useHandleOnKeyDown } from '../hooks/useHandleOnKeyDown';
 import { useHandleOnMouseDown } from '../hooks/useHandleOnMouseDown';
-import { useCleanEventSource } from '../hooks/useCleanEventSource';
+import { useHandleSliderMove } from '../hooks/useHandleSliderMove';
+import { useSliderTouchEffects } from '../hooks/useSliderTouchEffects';
+import { BaseSliderProps, EventSource } from '../types';
+import { clampValue, valueToPercentage } from '../utils';
 
 const StyledRange = styled.div`
     position: relative;

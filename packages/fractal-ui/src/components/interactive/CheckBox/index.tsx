@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
-import { Layer } from '../../layout';
-import { CheckBoxProps } from './types';
-import { BaseCheckBox } from './BaseCheckBox';
+
 import { useControllableState } from '../../../hooks/useControllableState';
+import { Layer } from '../../layout';
+import { BaseCheckBox } from './BaseCheckBox';
+import { CheckBoxProps } from './types';
 
 const CheckBox = forwardRef(({ value: valueProp, onValueChange, label, ...layerProps }: CheckBoxProps, ref: any): JSX.Element => {
     const [value, setValue] = useControllableState(valueProp, false, onValueChange);

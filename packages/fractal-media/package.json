@@ -10,7 +10,8 @@
     "scripts": {
         "build": "expo-module build",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-        "lint": "eslint 'src/**/*.ts*' --fix",
+        "lint": "eslint 'src/**/*.ts*'",
+        "lint:fix": " --fix eslint 'src/**/*.ts*'",
         "expo-module": "expo-module",
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
@@ -23,7 +24,7 @@
         "react-is": "*",
         "react-native": "*",
         "react-native-svg": "*",
-        "react-native-webview": "^11.18.2",
+        "react-native-webview": "11.23.0",
         "react-native-youtube-iframe": "^2.2.2"
     },
     "peerDependenciesMeta": {
@@ -49,32 +50,11 @@
         "styled-components": "^5.3.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@bma98/fractal-ui": "^3.0.0",
-        "@types/react": "~16.14.8",
-        "@types/react-dom": "^17.0.8",
-        "@types/react-native": "~0.63.52",
+        "@bma98/fractal-ui": "*",
         "@types/styled-components": "^5.1.10",
-        "@typescript-eslint/eslint-plugin": "^4.28.0",
-        "@typescript-eslint/parser": "^4.15.1",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.29.0",
-        "eslint-config-airbnb": "^18.2.1",
-        "eslint-config-airbnb-typescript": "^14.0.1",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.24.2",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-promise": "^5.1.0",
-        "eslint-plugin-react": "^7.26.1",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "eslint-plugin-unused-imports": "^1.1.5",
-        "expo": "^45.0.0",
         "expo-av": "^11.2.3",
-        "expo-module-scripts": "^2.0.0",
-        "prettier": "^2.3.2",
-        "react-native-svg": "12.3.0",
-        "react-native-youtube-iframe": "^2.1.0",
-        "typescript": "^4.3.4",
+        "react-native-svg": "12.4.4",
+        "react-native-youtube-iframe": "^2.2.2",
         "utility-types": "^3.10.0"
     },
     "keywords": [

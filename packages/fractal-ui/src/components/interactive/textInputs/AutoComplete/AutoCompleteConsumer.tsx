@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { useControllableState } from '../../../../hooks/useControllableState';
 import { BaseAutoComplete } from './BaseAutoComplete';
 import { AutoCompleteProps, IDEnabled } from './types';
@@ -13,7 +14,7 @@ export function AutoCompleteConsumer<T extends IDEnabled>({
 }: Omit<AutoCompleteProps<T>, 'onSelect' | 'controllableSelectedOptions'>): JSX.Element {
     const [suggestionsVisible, setSuggestionsVisible] = useState(false);
     const [userInput, setUserInput] = useControllableState(value, '', onChangeText);
-    const [filteredOptions, setFilteredOptions] = useState<Array<T>>(options);
+    const [filteredOptions, setFilteredOptions] = useState<T[]>(options);
 
     const onOptionPress = (option: T, keepInput?: boolean) => {
         if (!keepInput && multiple) {

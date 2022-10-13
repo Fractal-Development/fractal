@@ -1,5 +1,6 @@
-import React, { forwardRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import React, { forwardRef } from 'react';
+
 import { Layer } from '../../layout/Layer';
 import { ModalPortal } from '../modals/Modal/ModalPortal';
 import { OutsideClickListener } from './OutsideClickListener';

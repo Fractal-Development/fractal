@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import { AppleIcon } from '../../../../assets';
 import { Button, ButtonProps } from '../Button';
 import { getAppleButtonAccessibilityProps } from './accessibility/getAppleButtonAccessibilityProps';
