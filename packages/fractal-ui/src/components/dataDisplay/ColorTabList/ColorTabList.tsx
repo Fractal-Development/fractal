@@ -3,7 +3,7 @@ import { Box, Layer, LayerProps, ScrollView } from '../../layout';
 import { useTheme } from '../../../context';
 import { ColorTab, ColorTabProps } from './ColorTab';
 
-export interface ColorTabListProps extends LayerProps {
+export interface ColorTabListProps extends Omit<LayerProps, 'children'> {
     tabs: Array<ColorTabProps>;
     defaultActiveIndex?: number;
     children: (index: number) => ReactElement;

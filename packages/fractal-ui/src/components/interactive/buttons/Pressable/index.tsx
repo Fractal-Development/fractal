@@ -7,11 +7,14 @@ import {
     extractDimensionProps,
     extractDisplayProps,
     extractShadowProps,
-    extractWebProps
+    extractWebProps,
+    shouldForwardProp
 } from '../../../../sharedProps';
 import { PressableProps } from './types';
 
-const StyledPressable = styled(motion.button as any)`
+const StyledPressable = styled(motion.button as any).withConfig({
+    shouldForwardProp
+})`
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;

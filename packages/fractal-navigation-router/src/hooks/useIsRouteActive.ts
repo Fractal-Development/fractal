@@ -1,10 +1,9 @@
-import { useRouteMatch } from '../router';
+import { useMatch } from '../router';
 
 export function useIsRouteActive(path: string, exact: boolean): boolean {
-    const match = useRouteMatch({
+    const match = useMatch({
         path,
-        exact,
-        strict: exact
+        end: exact
     });
 
     return match != null;

@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
-import { NavigationRouteProps } from '../../../NavigationRoute/types/NavigationRouteProps';
 import { StackScreenWebModalContainer } from './StackScreenWebModalContainer';
-import { useScreenActivityState } from '../../../NavigationRoute/hooks/useScreenActivityState';
+import { useScreenActivityState } from '../../../../hooks/useScreenActivityState';
 import { StackScreenWebPushContainer } from './StackScreenWebPushContainer';
+import { NavigationRouteProps } from '../../../NavigationRoute/types';
 
 export function StackScreenWebContainer({
     isTabScreen,

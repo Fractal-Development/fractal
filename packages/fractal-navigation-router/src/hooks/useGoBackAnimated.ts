@@ -1,10 +1,14 @@
-import { useContext } from 'react';
+import { useCallback, useContext } from 'react';
 import { StackNavigationGoBackAnimatedContext } from '../context/StackNavigationGoBackAnimatedProvider';
-import { useHistory } from '../../../router';
+import { useNavigate } from '../router';
 
 export function useGoBackAnimated(): () => void {
     const goBacKAnimated = useContext(StackNavigationGoBackAnimatedContext);
-    const { goBack } = useHistory();
+    const navigate = useNavigate();
+
+    const goBack = useCallback(() => {
+        navigate(-1);
+    }, [navigate]);
 
     return goBacKAnimated ?? goBack;
 }

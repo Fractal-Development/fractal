@@ -9,10 +9,13 @@ import {
     extractDisplayProps,
     extractShadowProps,
     extractTextProps,
-    extractWebProps
+    extractWebProps,
+    shouldForwardProp
 } from '../../../sharedProps';
 
-const StyledText = styled(motion.span as any)`
+const StyledText = styled(motion.span as any).withConfig({
+    shouldForwardProp
+})`
     user-select: ${({ selectable }: TextProps) => (selectable ? 'auto' : 'none')};
     ${extractBackgroundProps};
     ${extractDimensionProps};
