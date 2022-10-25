@@ -23,7 +23,7 @@
         "react-is": "*",
         "react-native": "*",
         "react-native-gesture-handler": "*",
-        "react-native-reanimated": "^2.10.0",
+        "react-native-reanimated": "~2.9.1",
         "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
@@ -60,8 +60,8 @@
         "@types/d3-scale": "^4.0.1",
         "@types/d3-shape": "^3.0.0",
         "@types/node": "^16.3.2",
-        "@types/styled-components": "^5.1.10",
-        "react-native-reanimated": "^2.10.0",
+        "@types/styled-components": "^5.1.26",
+        "react-native-reanimated": "~2.9.1",
         "react-native-svg": "12.4.4",
         "utility-types": "^3.10.0"
     },

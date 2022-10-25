@@ -4,9 +4,10 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build:web": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
     },
     "dependencies": {
         "@bma98/fractal-auth-screen": "*",

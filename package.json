@@ -14,7 +14,11 @@
         "test": "turbo run test",
         "clean": "yarn clean:turbo && yarn clean:watchman",
         "clean:turbo": "yarn turbo run clean && rm -rf node_modules",
-        "clean:watchman": "watchman watch-del-all && yarn cache clean"
+        "clean:watchman": "watchman watch-del-all && yarn cache clean",
+        "web:expo": "cd apps/fractal-ui-expo-example && yarn web",
+        "web:react": "cd apps/fractal-ui-react-js-example && yarn start",
+        "web:next": "cd apps/fractal-ui-next-js-example && yarn dev",
+        "native": "cd apps/fractal-ui-expo-example && yarn start"
     },
     "devDependencies": {
         "@types/react": "^18.0.17",

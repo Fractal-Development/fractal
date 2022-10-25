@@ -58,7 +58,7 @@
         "@bma98/fractal-navigation": "*",
         "@bma98/fractal-navigation-router": "*",
         "@bma98/fractal-ui": "*",
-        "@types/styled-components": "^5.1.10",
+        "@types/styled-components": "^5.1.26",
         "react-native-svg": "^12.4.4",
         "utility-types": "^3.10.0"
     },
