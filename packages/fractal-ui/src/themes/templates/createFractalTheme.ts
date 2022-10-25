@@ -1,4 +1,5 @@
 import { DeepPartial } from 'utility-types';
+
 import { FractalTheme } from '../FractalTheme';
 import { lightFractalTheme } from './lightFractalTheme';
 

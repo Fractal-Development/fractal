@@ -1,7 +1,8 @@
 import React from 'react';
-import { ModalCellSharedStyles } from './ModalCellSharedStyles';
-import { LayerProps } from '../../../layout';
+
 import { useTheme } from '../../../../core';
+import { LayerProps } from '../../../layout';
+import { ModalCellSharedStyles } from './ModalCellSharedStyles';
 
 const middleCellAnimationStyles = {
     initial: { scale: 0 },

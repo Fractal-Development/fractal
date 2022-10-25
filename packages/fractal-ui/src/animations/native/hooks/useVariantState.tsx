@@ -1,5 +1,6 @@
+import { useAnimationState, UseAnimationState } from 'moti';
 import { useEffect } from 'react';
-import { useAnimationState, UseAnimationState } from '@motify/core';
+
 import { FractalVariants } from '../../../sharedProps/AnimationProps';
 
 export function useVariantState(

@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
+
+import { FileIcon } from '../../../assets';
+import { useTheme } from '../../../context';
 import { HorizontalLayer, Layer } from '../../layout';
 import { Image } from '../../media/Image';
-import { FractalFile, isNativeFileInfo } from './types';
 import { Text } from '../../text';
-import { useTheme } from '../../../context';
 import { CrossButton } from '../buttons/CrossButton';
-import { FileIcon } from '../../../assets';
+import { FractalFile, isNativeFileInfo } from './types';
 
 const PREVIEW_SIZE = 44;
 

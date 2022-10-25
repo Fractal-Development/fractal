@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { Layer } from '../../layout';
 import { ResizeModeProps } from './types';
 

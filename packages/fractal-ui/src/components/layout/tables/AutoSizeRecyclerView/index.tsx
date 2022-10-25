@@ -1,5 +1,6 @@
 import React, { ReactElement, forwardRef } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
+
 import { RecyclerView, RecyclerViewProps } from '../RecyclerView';
 
 const AutoSizeRecyclerView = forwardRef(

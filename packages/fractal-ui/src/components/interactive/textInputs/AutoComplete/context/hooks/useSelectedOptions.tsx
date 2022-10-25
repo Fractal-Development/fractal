@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+
 import { SelectedOptionsContext } from '../SelectedOptionsContext';
 
-export function useSelectedOptions(): [Array<unknown>, (value: Array<unknown>) => void] {
+export function useSelectedOptions(): [unknown[], (value: unknown[]) => void] {
     const handleState = useContext(SelectedOptionsContext);
     return handleState;
 }

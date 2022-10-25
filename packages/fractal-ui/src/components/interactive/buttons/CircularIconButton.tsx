@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
-import { Button, ButtonProps } from './Button';
+
 import { useTheme } from '../../../context';
+import { Button, ButtonProps } from './Button';
 import { getCircularIconButtonAccessibilityProps } from './accessibility/getCircularIconButtonAccessibilityProps';
 import { useCircularButtonColors } from './hooks/useCircularIconButtonColors';
 

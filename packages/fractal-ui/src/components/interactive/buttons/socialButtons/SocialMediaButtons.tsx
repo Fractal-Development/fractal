@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react';
-import { AppleButton } from './AppleButton';
-import { GoogleButton } from './GoogleButton';
-import { FacebookButton } from './FacebookButton';
-import { Layer, LayerProps, HorizontalLayer } from '../../../layout';
+
 import { useTheme } from '../../../../context';
+import { Layer, LayerProps, HorizontalLayer } from '../../../layout';
+import { AppleButton } from './AppleButton';
+import { FacebookButton } from './FacebookButton';
+import { GoogleButton } from './GoogleButton';
 
 export interface SocialMediaButtonsEventsProps {
     onGooglePress?: () => void;

@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { forwardRef, Ref } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { TextFieldProps } from './types';
+
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -12,6 +12,7 @@ import {
     extractPlaceholder
 } from '../../../../sharedProps';
 import { getBaseTextFieldAccessibilityProps } from '../accessibility/getBaseTextFieldAccessibilityProps';
+import { TextFieldProps } from './types';
 
 const StyledTextInput = styled(motion.input as any)`
     outline: none;

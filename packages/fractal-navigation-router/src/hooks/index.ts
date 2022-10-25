@@ -1,6 +1,5 @@
 export * from './useIsInitialRenderDone';
 export * from './useIsRouteActive';
-export * from './useQueryParams';
 export * from './useGoBackAnimated';
 export * from './useStackNavigatorRootPath';
 export * from './useTabBarItemsHistory';

@@ -1,9 +1,10 @@
+import { motify } from 'moti';
 import React, { forwardRef } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
-import { motify } from '@motify/core';
 import styled from 'styled-components/native';
-import { KeyboardAvoidingLayerProps } from './types';
+
 import { FractalSharedCss } from '../../../sharedProps';
+import { KeyboardAvoidingLayerProps } from './types';
 
 const MotiView = motify(KeyboardAvoidingView)();
 

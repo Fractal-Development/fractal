@@ -1,10 +1,11 @@
+import { motify } from 'moti';
 import React, { forwardRef } from 'react';
-import styled from 'styled-components/native';
-import { motify } from '@motify/core';
 import { ScrollView as RNScrollView } from 'react-native';
-import { ScrollViewProps } from './types';
+import styled from 'styled-components/native';
+
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 import { FractalSharedCss } from '../../../sharedProps';
+import { ScrollViewProps } from './types';
 
 const MotiScrollView = motify(RNScrollView)();
 

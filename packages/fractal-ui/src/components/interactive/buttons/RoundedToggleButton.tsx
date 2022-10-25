@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useTheme } from '../../../context';
 import { ToggleButton, ToggleButtonProps } from './ToggleButton';
 import { getRoundedToggleButtonAccessibilityProps } from './accessibility/getRoundedToggleButtonAccessibilityProps';

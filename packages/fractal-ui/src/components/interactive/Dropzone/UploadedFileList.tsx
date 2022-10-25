@@ -1,11 +1,12 @@
-import React, { Fragment, useCallback } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import React, { Fragment, useCallback } from 'react';
+
 import { Layer } from '../../layout';
 import { UploadedFileItem } from './UploadedFileItem';
 import { FractalFile } from './types';
 
 interface UploadedFileListProps {
-    files: Array<FractalFile>;
+    files: FractalFile[];
     removeFile: (fileIndex: number) => void;
 }
 

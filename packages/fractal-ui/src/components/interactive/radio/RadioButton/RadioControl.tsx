@@ -1,5 +1,6 @@
-import React, { useMemo } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import React, { useMemo } from 'react';
+
 import { useTheme } from '../../../../context/hooks/useTheme';
 import { Layer } from '../../../layout/Layer';
 import { Text } from '../../../text';

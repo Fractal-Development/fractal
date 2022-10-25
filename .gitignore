@@ -6,5 +6,18 @@
 .yarn/sdks
 .yarn/versions
 .DS_Store
-/node_modules
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
 .turbo
+**/*/.expo
+
+**/*/.next
+
+**/*/ios
+**/*/android
+
+build/**

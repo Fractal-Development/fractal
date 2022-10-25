@@ -1,61 +1,48 @@
 {
-  "name": "fractal-turborepo",
-  "version": "2.0.0",
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "apps/*"
-    ]
-  },
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --no-cache --parallel --continue",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
-    "clean": "yarn clean:turbo && yarn clean:watchman",
-    "clean:turbo": "yarn turbo run clean && rm -rf node_modules",
-    "clean:watchman": "watchman watch-del-all && yarn cache clean"
-  },
-  "devDependencies": {
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "resolutions": {
-    "@types/react": "^18.0.18",
-    "react": "18.2.0",
-    "react-native": "0.69.6",
-    "@react-native-community/slider": "^4.3.1",
-    "expo-device": "^4.3.0",
-    "react-native-svg": "12.4.4",
-    "react-native-reanimated": "~2.9.1"
-  },
-  "turbo": {
-    "baseBranch": "origin/master",
-    "pipeline": {
-      "build": {
-        "outputs": [
-          "dist/**",
-          ".next/**",
-          "public/dist/**"
-        ],
-        "dependsOn": ["^build"]
-      },
-      "test": {
-        "dependsOn": ["^build"],
-        "outputs": [
-          "coverage/**"
-        ]
-      },
-      "lint": {
-        "outputs": []
-      },
-      "clean": {
-        "outputs": []
-      },
-      "dev": {
-        "cache": false
-      }
+    "name": "fractal-monorepo",
+    "version": "2.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev --no-cache --parallel --continue",
+        "lint": "turbo run lint",
+        "lint:fix": "turbo run lint:fix",
+        "test": "turbo run test",
+        "clean": "yarn clean:turbo && yarn clean:watchman",
+        "clean:turbo": "yarn turbo run clean && rm -rf node_modules",
+        "clean:watchman": "watchman watch-del-all && yarn cache clean",
+        "web:expo": "cd apps/fractal-ui-expo-example && yarn web",
+        "web:react": "cd apps/fractal-ui-react-js-example && yarn start",
+        "web:next": "cd apps/fractal-ui-next-js-example && yarn dev",
+        "native": "cd apps/fractal-ui-expo-example && yarn start"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.17",
+        "@types/react-native": "^0.69.5",
+        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@typescript-eslint/parser": "^5.40.0",
+        "eslint": "^8.25.0",
+        "eslint-config-universe": "^11.1.0",
+        "expo-module-scripts": "^2.1.1",
+        "prettier": "^2.7.1",
+        "turbo": "^1.5.6",
+        "typescript": "^4.7.4"
+    },
+    "resolutions": {
+        "@types/react": "^18.0.17",
+        "react": "18.2.0",
+        "react-native": "0.69.6",
+        "@react-native-community/slider": "4.2.3",
+        "expo-device": "^4.3.0",
+        "react-native-svg": "12.4.4",
+        "react-native-reanimated": "~2.9.1",
+        "framer-motion": "^6.5.1"
+    },
+    "eslintConfig": {
+        "extends": "universe/native"
     }
-  }
 }

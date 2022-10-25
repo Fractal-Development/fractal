@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
-import { SliderProps } from './types';
-import { BaseSlider } from './BaseSlider';
+
 import { Layer } from '../../layout';
+import { BaseSlider } from './BaseSlider';
+import { SliderProps } from './types';
 
 const Slider = forwardRef(
     (

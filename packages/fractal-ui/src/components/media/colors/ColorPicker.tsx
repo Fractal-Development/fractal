@@ -1,12 +1,13 @@
 import React, { forwardRef } from 'react';
+
 import { useTheme } from '../../../context';
+import { useControllableState } from '../../../hooks/useControllableState';
 import { HorizontalLayer, LayerProps } from '../../layout';
 import { ColorToggle } from './ColorToggle';
-import { useControllableState } from '../../../hooks/useControllableState';
 import { getColorAccessibilityProps } from './accessibility/getColorAccessibilityProps';
 
 export interface ColorPickerProps extends Partial<Omit<LayerProps, 'children'>> {
-    colors: Array<string>;
+    colors: string[];
     onColorChange: (color: string) => void;
     defaultValue?: string;
     value?: string;

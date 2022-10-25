@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
 import { useSizeValue } from '@bma98/size-class';
+import React, { useState, useEffect } from 'react';
+
+import { useTheme } from '../../../../../context';
+import { DataProvider, VerticalFlatList, Layer } from '../../../../layout';
 import { SuggestionItem, SUGGESTION_ITEM_HEIGHT } from '../SuggestionItem';
 import { IDEnabled, SuggestionsListProps } from '../types';
-import { DataProvider, VerticalFlatList, Layer } from '../../../../layout';
-import { useTheme } from '../../../../../context';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne !== rowTwo);
 

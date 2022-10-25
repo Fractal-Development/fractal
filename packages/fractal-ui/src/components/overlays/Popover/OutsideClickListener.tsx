@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
+
 import { Layer } from '../../layout';
 
 export function OutsideClickListener({ children, onOutsideClick }: { children: React.ReactNode; onOutsideClick: () => void }): JSX.Element {

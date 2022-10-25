@@ -1,5 +1,6 @@
-import React from 'react';
 import { AnimatePresence } from 'framer-motion';
+import React from 'react';
+
 import { CheckIcon } from '../../../assets';
 import { useTheme } from '../../../context';
 import { Layer } from '../../layout/Layer';

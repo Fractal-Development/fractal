@@ -1,9 +1,10 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 import styled from 'styled-components';
+
+import { getRadioButtonAccessibilityProps } from '../../accessibility/getRadioButtonAccessibilityProps';
 import { BaseRadioButtonProps } from '../../types';
 import { RadioControl } from '../RadioControl';
-import { getRadioButtonAccessibilityProps } from '../../accessibility/getRadioButtonAccessibilityProps';
 
 const Wrapper = styled(motion.label)`
     display: inline-flex;

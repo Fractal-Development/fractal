@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { forwardRef, useState } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+
 import {
     extractBackgroundProps,
     extractBorderProps,
@@ -10,9 +11,9 @@ import {
     extractWebProps,
     shouldForwardProp
 } from '../../../../sharedProps';
-import { TouchableOpacityProps } from './types';
-import { useLongPress } from '../hooks/useLongPress';
 import { getButtonAccessibilityProps } from '../accessibility/getButtonAccessibilityProps';
+import { useLongPress } from '../hooks/useLongPress';
+import { TouchableOpacityProps } from './types';
 
 const StyledTouchableOpacity = styled(motion.div as any).withConfig({
     shouldForwardProp

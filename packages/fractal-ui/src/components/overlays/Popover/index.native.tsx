@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState, forwardRef, useRef } from 'react';
 import { LayoutChangeEvent, View } from 'react-native';
+
 import { Pressable } from '../../interactive/buttons/Pressable';
 import { Layer } from '../../layout';
 import { Modal } from '../modals';
-import { styleVariants } from './utils/styleVariants';
 import { LayoutRectangle, PopoverProps } from './types';
 import { getNativePlacementOffsetStyle } from './utils/getNativePlacementOffsetStyle';
+import { styleVariants } from './utils/styleVariants';
 
 const Popover = forwardRef(
     (

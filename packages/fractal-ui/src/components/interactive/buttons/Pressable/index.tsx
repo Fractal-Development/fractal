@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+
 import {
     extractBackgroundProps,
     extractBorderProps,

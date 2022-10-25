@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import { useTheme } from '../../context';
 import { BaseText } from './BaseText';
 import { TextProps } from './BaseText/types';

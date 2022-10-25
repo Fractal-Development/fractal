@@ -1,11 +1,12 @@
 import React, { useCallback, useState } from 'react';
-import { PickerProps } from './types/PickerProps';
-import { PickerButton } from '../PickerButton';
-import { usePickerState } from './hooks/usePickerState';
+
 import { useTheme } from '../../../../context';
-import { PickerItem } from './PickerItem';
-import { BasePicker } from './BasePicker';
 import { BlurrediOSModal } from '../../../overlays/modals';
+import { PickerButton } from '../PickerButton';
+import { BasePicker } from './BasePicker';
+import { PickerItem } from './PickerItem';
+import { usePickerState } from './hooks/usePickerState';
+import { PickerProps } from './types/PickerProps';
 
 export function Picker({ items, defaultValue, value, onChange, iosDoneText = 'Done', placeholder, ...others }: PickerProps): JSX.Element {
     const [currentValue, onValueChange, index] = usePickerState(defaultValue, items, value, onChange);
@@ -21,7 +22,7 @@ export function Picker({ items, defaultValue, value, onChange, iosDoneText = 'Do
     const handleValueChange = (value: string, index: number) => {
         setHasChanged(true);
         onValueChange(value, index);
-    } 
+    };
 
     const renderItem = useCallback(
         (item) => {
@@ -33,7 +34,7 @@ export function Picker({ items, defaultValue, value, onChange, iosDoneText = 'Do
 
     return (
         <>
-            <PickerButton value={hasChanged ?  items[index][1] :  placeholder || items[index][1]} onPress={toggleModal} {...others} />
+            <PickerButton value={hasChanged ? items[index][1] : placeholder || items[index][1]} onPress={toggleModal} {...others} />
             <BlurrediOSModal dismissText={iosDoneText} visible={modalActive} onDismiss={toggleModal}>
                 <BasePicker selectedValue={currentValue} onValueChange={handleValueChange}>
                     {items.map(renderItem)}

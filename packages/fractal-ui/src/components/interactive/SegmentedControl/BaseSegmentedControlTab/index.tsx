@@ -1,12 +1,13 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { Text } from '../../../text';
-import { BaseSegmentedControlTabProps } from '../types';
+
 import { useTheme } from '../../../../context';
 import { extractDimensionProps, extractBackgroundProps, extractShadowProps, extractBorderProps } from '../../../../sharedProps';
-import { getSegmentedControlButtonAccessibilityProps } from '../accessibility/getSegmentedControlButtonAccessibilityProps';
 import { Layer } from '../../../layout/Layer';
+import { Text } from '../../../text';
+import { getSegmentedControlButtonAccessibilityProps } from '../accessibility/getSegmentedControlButtonAccessibilityProps';
+import { BaseSegmentedControlTabProps } from '../types';
 
 const Button = styled.button`
     position: relative;

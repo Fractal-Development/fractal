@@ -1,17 +1,18 @@
-import React from 'react';
 import * as DocumentPicker from 'expo-document-picker';
+import React from 'react';
+
 import { LoadIcon } from '../../../assets';
 import { useTheme } from '../../../context';
-import { Button } from '../buttons/Button';
 import { HorizontalLayer } from '../../layout';
 import { Text } from '../../text';
-import { FileTypes, NativeFileInfo } from './types';
+import { Button } from '../buttons/Button';
 import { getMIMETypes } from './fileTypes/getMIMETypes';
+import { FileTypes, NativeFileInfo } from './types';
 
 interface UploadButtonProps {
     onSelectFile: (fileInfo: NativeFileInfo) => void;
     text?: string;
-    acceptedTypes?: Array<keyof FileTypes> | Array<string>;
+    acceptedTypes?: (keyof FileTypes)[] | string[];
 }
 
 export function UploadButton({ onSelectFile, text = 'Seleccionar archivo', acceptedTypes }: UploadButtonProps): JSX.Element {

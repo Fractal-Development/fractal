@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { TextInput } from 'react-native';
-import { Button } from '../../../buttons';
+
 import { PaddingLayer, Box } from '../../../../layout';
 import { MiddleCellModal } from '../../../../overlays/modals';
+import { Button } from '../../../buttons';
 import { SearchBar } from '../../SearchBar';
 import { SuggestionsList } from '../SuggestionsList';
 import { AutoCompleteModalProps, IDEnabled } from '../types';

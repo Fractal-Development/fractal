@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
-import { Text } from '../../text';
+
 import { useTheme } from '../../../context';
-import { TouchableOpacity, TouchableOpacityProps } from '../buttons';
 import { Layer } from '../../layout';
+import { Text } from '../../text';
+import { TouchableOpacity, TouchableOpacityProps } from '../buttons';
 
 export interface TextFieldButtonProps extends Partial<Omit<TouchableOpacityProps, 'children'>> {
     value?: string;

@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
-import { TouchableOpacity } from '../../buttons/TouchableOpacity';
+
 import { HorizontalLayer } from '../../../layout/HorizontalLayer';
+import { TouchableOpacity } from '../../buttons/TouchableOpacity';
 import { Check } from '../Check';
 import { BaseCheckBoxProps } from '../types';
 

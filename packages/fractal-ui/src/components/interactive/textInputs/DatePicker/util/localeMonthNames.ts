@@ -1,6 +1,6 @@
 import { getMonthName } from './getMonthName';
 
-export const localeMonthNames: Array<[string, string]> = [
+export const localeMonthNames: [string, string][] = [
     ['0', getMonthName(new Date(2021, 0))],
     ['1', getMonthName(new Date(2021, 1))],
     ['2', getMonthName(new Date(2021, 2))],

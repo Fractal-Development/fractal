@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+
 import { EyeIcon, HiddenEyeIcon } from '../../../assets';
 import { TouchableOpacity } from '../buttons/TouchableOpacity';
 import { IconTextField, IconTextFieldProps } from './IconTextField';

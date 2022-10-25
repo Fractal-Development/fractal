@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import { FacebookIcon } from '../../../../assets';
 import { Button, ButtonProps } from '../Button';
 import { getFacebookButtonAccessibilityProps } from './accessibility/getFacebookButtonAccessibilityProps';

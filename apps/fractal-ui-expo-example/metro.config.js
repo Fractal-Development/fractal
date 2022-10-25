@@ -1,19 +1,19 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
+// Learn more https://docs.expo.dev/guides/monorepos
 const { getDefaultConfig } = require('expo/metro-config');
-const exclusionList = require("metro-config/src/defaults/exclusionList");
-const { getMetroTools } = require("react-native-monorepo-tools");
-const monorepoMetroTools = getMetroTools();
 const path = require('path');
 
+// Find the project and workspace directories
 const projectRoot = __dirname;
+// This can be replaced with `find-yarn-workspace-root`
+const workspaceRoot = path.resolve(projectRoot, '../..');
 
 const config = getDefaultConfig(projectRoot);
 
-config.watchFolders = monorepoMetroTools.watchFolders;
-config.resolver.blockList = exclusionList(monorepoMetroTools.blockList);
-config.resolver.extraNodeModules = {
-    ...monorepoMetroTools.extraNodeModules,
-    'react-native-webview': path.resolve(__dirname + '/node_modules/react-native-webview'),
-};
+// 1. Watch all files within the monorepo
+config.watchFolders = [workspaceRoot];
+// 2. Let Metro know where to resolve packages and in what order
+config.resolver.nodeModulesPaths = [path.resolve(projectRoot, 'node_modules'), path.resolve(workspaceRoot, 'node_modules')];
+// 3. Force Metro to resolve (sub)dependencies only from the `nodeModulesPaths`
+config.resolver.disableHierarchicalLookup = true;
 
 module.exports = config;

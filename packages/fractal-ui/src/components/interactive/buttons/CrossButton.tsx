@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import { CloseIcon } from '../../../assets';
 import { useTheme } from '../../../context';
 import { BaseButton } from './BaseButton';
