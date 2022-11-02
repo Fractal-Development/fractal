@@ -1,12 +1,13 @@
-import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
 import { LayoutProvider, DataProvider, useTheme, Layer, RecyclerView } from '@bma98/fractal-ui';
-import { AutoSizer } from './AutoSizer';
-import { MessageListProps, MinimalMessageData } from './types';
-import { ChatMessage } from './ChatMessage';
-import { useGetTextHeight } from '../hooks/useGetTextHeight';
-import { useChatMessageSize } from '../hooks/useChatMessageSize';
+import React, { useCallback, useState, useMemo, useEffect, useRef } from 'react';
+
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
+import { useChatMessageSize } from '../hooks/useChatMessageSize';
 import { useGetContainerWidth } from '../hooks/useGetContainerWidth/index';
+import { useGetTextHeight } from '../hooks/useGetTextHeight';
+import { AutoSizer } from './AutoSizer';
+import { ChatMessage } from './ChatMessage';
+import { MessageListProps, MinimalMessageData } from './types';
 
 const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne.id !== rowTwo.id);
 
@@ -45,7 +46,7 @@ export function MessageList<T extends MinimalMessageData>({
     const [maxContentWidth, setMaxContentWidth] = useState(getMaxBubbleWidth(containerWidth, spacings.m) - (spacings.m * 2 + 6));
     const { height: chatMessageHeight } = useChatMessageSize();
     const getTextHeight = useGetTextHeight(maxContentWidth);
-    const heights: Array<number | undefined> = messagesWithAccessoryViews.map(() => undefined);
+    const heights: (number | undefined)[] = messagesWithAccessoryViews.map(() => undefined);
 
     const scrollToEnd = useCallback(
         () =>
@@ -117,6 +118,7 @@ export function MessageList<T extends MinimalMessageData>({
                 (type, dim, index) => {
                     switch (type) {
                         case MessageViewTypes.Message:
+                            // eslint-disable-next-line no-case-declarations
                             let height = heights[index];
                             if (height != null) {
                                 dim.height = height;

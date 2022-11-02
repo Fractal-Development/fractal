@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
 import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
+import React, { useState } from 'react';
 
-const defaultMessages: Array<MinimalMessageData> = [
+const defaultMessages: MinimalMessageData[] = [
     {
         id: '1',
         senderType: 'bot',
@@ -128,6 +128,7 @@ export function ChatContentFragment(): JSX.Element {
             onFavoritePress={handleFavoriteMessage}
             onSharePress={(message) => console.log('sharePress: ', message)}
             onSend={handleSendMessage}
+            placeholder='Escribe aquí'
         />
     );
 }

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import { useThemeIdentifier, ThemeProvider } from '../context';
-import { lightFractalTheme, FractalTheme, darkFractalTheme } from '../themes';
+import { lightFractalTheme, FractalTheme, darkFractalTheme, GlobalStyle } from '../themes';
 import { PlatformAppearanceDetails } from './platform';
 
 export interface ThemeContentProps {
@@ -19,6 +19,7 @@ export function ThemeContent({ children, lightTheme, darkTheme }: ThemeContentPr
     return (
         <ThemeProvider theme={theme}>
             <PlatformAppearanceDetails />
+            <GlobalStyle />
             {children}
         </ThemeProvider>
     );

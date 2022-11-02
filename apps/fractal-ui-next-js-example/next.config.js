@@ -13,7 +13,15 @@ const withTM = require('next-transpile-modules')([
 
 const nextConfig = {
     reactStrictMode: true,
-    swcMinify: true
+    swcMinify: true,
+    async rewrites() {
+        return [
+            {
+                source: '/:path*',
+                destination: '/'
+            }
+        ];
+    }
 };
 
 module.exports = withTM(nextConfig);
