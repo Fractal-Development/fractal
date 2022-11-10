@@ -7,3 +7,4 @@ export * from './useScreenActivityState';
 export * from './useNavigationRouteStyles';
 export * from './useIsRootNavigationBar';
 export * from './useStackNavigatorStyles';
+export * from './useFractalRoutesIdentifier';

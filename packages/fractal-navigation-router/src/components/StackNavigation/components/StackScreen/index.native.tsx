@@ -1,16 +1,22 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { Platform, StatusBar } from 'react-native';
 import { NativeNavigationBar, NavigationBar } from '@bma98/fractal-navigation';
 import { NavigationRoute } from '../../../NavigationRoute';
 import { useIsRootNavigationBar } from '../../../../hooks/useIsRootNavigationBar';
 import { useGoBackAnimated } from '../../../../hooks/useGoBackAnimated';
-import { NavigationRouteProps } from '../../../NavigationRoute/types';
+import { Route, Routes } from '../../../../router';
+import { StackScreenProps } from './types';
+import { useFractalRoutesIdentifier } from '../../../../hooks/useFractalRoutesIdentifier';
 
-interface StackScreenProps extends NavigationRouteProps {
-    navBarConfig?: ReactElement;
-}
-
-export function StackScreen({ children, navBarConfig, stackPresentation = 'push', path, ...others }: StackScreenProps): JSX.Element {
+export function StackScreen({
+    children,
+    navBarConfig,
+    stackPresentation = 'push',
+    fractalRoutesIdentifier,
+    path,
+    ...others
+}: StackScreenProps): JSX.Element {
+    const genericRoute = useFractalRoutesIdentifier(fractalRoutesIdentifier);
     const goBack = useGoBackAnimated();
     const isRootNavigationBar = useIsRootNavigationBar(path);
     const isNavigationBarForModal =
@@ -34,7 +40,9 @@ export function StackScreen({ children, navBarConfig, stackPresentation = 'push'
             ) : navBarConfig != null ? (
                 <NativeNavigationBar showBackButton={!isRootNavigationBar} {...navBarConfig.props} goBack={goBack} />
             ) : null}
-            {children}
+            <Routes>
+                <Route path={genericRoute} element={children} />
+            </Routes>
         </NavigationRoute>
     );
 }

@@ -5,13 +5,13 @@ import { StackScreenWebPushContainer } from './StackScreenWebPushContainer';
 import { NavigationRouteProps } from '../../../NavigationRoute/types';
 
 export function StackScreenWebContainer({
-    isTabScreen,
+    isTabScreen = false,
     path = '/',
     stackPresentation = 'push',
     isRootRoute = false,
     children
 }: NavigationRouteProps): ReactElement | null {
-    const activityState = useScreenActivityState(path, isTabScreen ?? false);
+    const activityState = useScreenActivityState(path, isTabScreen);
 
     if (stackPresentation === 'push' && !isTabScreen && !isRootRoute) {
         return <StackScreenWebPushContainer>{children}</StackScreenWebPushContainer>;

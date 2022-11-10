@@ -6,7 +6,8 @@ import {
     StackNavigator,
     StackScreen,
     TabNavigator,
-    TabScreen
+    TabScreen,
+    FractalRoutesProvider
 } from '@bma98/fractal-navigation-router';
 import { FractalAppRoot, PaddingLayer, Text } from '@bma98/fractal-ui';
 import React, { ReactElement } from 'react';
@@ -44,78 +45,89 @@ function MainTabBar(): ReactElement {
 export function MainExample(): JSX.Element {
     return (
         <FractalAppRoot>
-            <NavigationRouter>
-                <TabNavigator path={routes.root} initialTabPath={routes.components} tabBar={<MainTabBar />}>
-                    <TabScreen path={routes.components}>
-                        <TabBarInsetsLayer>
-                            <StackNavigator path={routes.components}>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title='Fragments' largeTitle />}
-                                    isRootRoute
-                                    path={routes.components}
-                                >
-                                    <RootScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.chipFragment.name} />}
-                                    path={screens.chipFragment.path}
-                                >
-                                    <ChipFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.chipListFragment.name} />}
-                                    path={screens.chipListFragment.path}
-                                >
-                                    <ChipListFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.activityIndicatorFragmentScreen.name} />}
-                                    path={screens.activityIndicatorFragmentScreen.path}
-                                >
-                                    <ActivityIndicatorFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.errorMessageFragmentScreen.name} />}
-                                    path={screens.errorMessageFragmentScreen.path}
-                                >
-                                    <ErrorMessageFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.colorTabListFragment.name} />}
-                                    path={screens.colorTabListFragment.path}
-                                >
-                                    <ColorTabListFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.recyclerViewFragment.name} />}
-                                    path={screens.recyclerViewFragment.path}
-                                >
-                                    <RecyclerViewFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.authScreenFragment.name} />}
-                                    path={screens.authScreenFragment.path}
-                                >
-                                    <AuthenticationScreenFragmentScreen />
-                                </StackScreen>
-                                <StackScreen
-                                    navBarConfig={<NavigationBarConfig title={screens.chatFragment.name} />}
-                                    path={screens.chatFragment.path}
-                                >
-                                    <ChatContentFragmentScreen />
-                                </StackScreen>
-                            </StackNavigator>
-                        </TabBarInsetsLayer>
-                    </TabScreen>
-                    <TabScreen path={routes.credits}>
-                        <TabBarInsetsLayer>
-                            <PaddingLayer>
-                                <Text>Empty for now...</Text>
-                            </PaddingLayer>
-                        </TabBarInsetsLayer>
-                    </TabScreen>
-                </TabNavigator>
-            </NavigationRouter>
+            <FractalRoutesProvider routes={routes}>
+                <NavigationRouter>
+                    <TabNavigator path={routes.root} initialTabPath={routes.components} tabBar={<MainTabBar />}>
+                        <TabScreen path={routes.components}>
+                            <TabBarInsetsLayer>
+                                <StackNavigator path={routes.components}>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='components'
+                                        navBarConfig={<NavigationBarConfig title='Fragments' largeTitle />}
+                                        isRootRoute
+                                        path={routes.components}
+                                    >
+                                        <RootScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.chipFragment.name} />}
+                                        path={screens.chipFragment.path}
+                                    >
+                                        <ChipFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.chipListFragment.name} />}
+                                        path={screens.chipListFragment.path}
+                                    >
+                                        <ChipListFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.activityIndicatorFragmentScreen.name} />}
+                                        path={screens.activityIndicatorFragmentScreen.path}
+                                    >
+                                        <ActivityIndicatorFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.errorMessageFragmentScreen.name} />}
+                                        path={screens.errorMessageFragmentScreen.path}
+                                    >
+                                        <ErrorMessageFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.colorTabListFragment.name} />}
+                                        path={screens.colorTabListFragment.path}
+                                    >
+                                        <ColorTabListFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.recyclerViewFragment.name} />}
+                                        path={screens.recyclerViewFragment.path}
+                                    >
+                                        <RecyclerViewFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.authScreenFragment.name} />}
+                                        path={screens.authScreenFragment.path}
+                                    >
+                                        <AuthenticationScreenFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.chatFragment.name} />}
+                                        path={screens.chatFragment.path}
+                                    >
+                                        <ChatContentFragmentScreen />
+                                    </StackScreen>
+                                </StackNavigator>
+                            </TabBarInsetsLayer>
+                        </TabScreen>
+                        <TabScreen path={routes.credits}>
+                            <TabBarInsetsLayer>
+                                <PaddingLayer>
+                                    <Text>Empty for now...</Text>
+                                </PaddingLayer>
+                            </TabBarInsetsLayer>
+                        </TabScreen>
+                    </TabNavigator>
+                </NavigationRouter>
+            </FractalRoutesProvider>
         </FractalAppRoot>
     );
 }
