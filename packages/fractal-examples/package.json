@@ -18,6 +18,7 @@
     "peerDependencies": {
         "@bma98/fractal-auth-screen": "*",
         "@bma98/fractal-charts": "*",
+        "@bma98/fractal-firebase-auth": "*",
         "@bma98/fractal-media": "*",
         "@bma98/fractal-messaging": "*",
         "@bma98/fractal-navigation": "*",
@@ -53,6 +54,7 @@
     "devDependencies": {
         "@bma98/fractal-auth-screen": "*",
         "@bma98/fractal-charts": "*",
+        "@bma98/fractal-firebase-auth": "*",
         "@bma98/fractal-media": "*",
         "@bma98/fractal-messaging": "*",
         "@bma98/fractal-navigation": "*",
