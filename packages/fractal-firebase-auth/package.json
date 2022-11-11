@@ -1,0 +1,86 @@
+{
+    "name": "@bma98/fractal-firebase-auth",
+    "version": "3.0.0",
+    "description": "React Components to use firebase on react with custom logic to manage shared state",
+    "author": "BrandonMA",
+    "license": "MIT",
+    "repository": "BrandonMA/react-firebase-auth",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "expo-module build",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+        "lint": "eslint 'src/**/*.ts*'",
+        "lint:fix": "eslint --fix 'src/**/*.ts*'",
+        "expo-module": "expo-module",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+    },
+    "peerDependencies": {
+        "@bma98/fractal-navigation": "*",
+        "@bma98/fractal-navigation-router": "*",
+        "@bma98/fractal-ui": "*",
+        "@invertase/react-native-apple-authentication": "^2.1.2",
+        "@react-native-firebase/app": "^15.7.0",
+        "@react-native-firebase/auth": "^15.7.0",
+        "@react-native-firebase/firestore": "^15.7.0",
+        "@react-native-firebase/storage": "^15.7.0",
+        "@react-native-google-signin/google-signin": "^7.0.1",
+        "firebase": "^9.10.0",
+        "react": "*",
+        "react-native": "*",
+        "react-native-fbsdk": "^3.0.0"
+    },
+    "peerDependenciesMeta": {
+        "@invertase/react-native-apple-authentication": {
+            "optional": true
+        },
+        "@react-native-firebase/app": {
+            "optional": true
+        },
+        "@react-native-firebase/auth": {
+            "optional": true
+        },
+        "@react-native-firebase/firestore": {
+            "optional": true
+        },
+        "@react-native-firebase/storage": {
+            "optional": true
+        },
+        "@react-native-google-signin/google-signin": {
+            "optional": true
+        },
+        "firebase": {
+            "optional": true
+        },
+        "react-native": {
+            "optional": true
+        },
+        "react-native-svg": {
+            "optional": true
+        },
+        "react-native-fbsdk": {
+            "optional": true
+        }
+    },
+    "dependencies": {
+        "@bma98/firebase-db-manager": "^2.0.0",
+        "@bma98/fractal-auth-screen": "*",
+        "immer": "^9.0.15",
+        "react-native-svg": "12.4.4"
+    },
+    "devDependencies": {
+        "@bma98/fractal-navigation": "*",
+        "@bma98/fractal-navigation-router": "*",
+        "@bma98/fractal-ui": "*",
+        "@invertase/react-native-apple-authentication": "^2.1.2",
+        "@react-native-firebase/app": "^15.7.0",
+        "@react-native-firebase/auth": "^15.7.0",
+        "@react-native-firebase/firestore": "^15.7.0",
+        "@react-native-firebase/storage": "^15.7.0",
+        "@react-native-google-signin/google-signin": "^7.0.1",
+        "firebase": "^9.10.0",
+        "immer": "^9.0.15",
+        "react-native-svg": "12.4.4",
+        "react-native-fbsdk": "^3.0.0"
+    },
+    "sideEffects": false
+}

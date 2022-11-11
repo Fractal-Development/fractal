@@ -1,0 +1,1 @@
+{"version":3,"file":"useAuthenticationState.js","sourceRoot":"","sources":["../../src/hooks/useAuthenticationState.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,0BAA0B,EAAE,MAAM,YAAY,CAAC;AAExD,MAAM,UAAU,sBAAsB;IAClC,MAAM,CAAC,mBAAmB,CAAC,GAAG,UAAU,CAAC,0BAA0B,CAAC,CAAC;IACrE,OAAO,mBAAmB,CAAC;AAC/B,CAAC"}

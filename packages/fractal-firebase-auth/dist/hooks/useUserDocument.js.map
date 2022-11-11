@@ -1,0 +1,1 @@
+{"version":3,"file":"useUserDocument.js","sourceRoot":"","sources":["../../src/hooks/useUserDocument.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AACnC,OAAO,EAAE,mBAAmB,EAAE,MAAM,iCAAiC,CAAC;AAEtE,MAAM,UAAU,eAAe;IAC3B,MAAM,CAAC,IAAI,CAAC,GAAG,UAAU,CAAC,mBAAmB,CAAC,CAAC;IAC/C,OAAO,IAAiC,CAAC;AAC7C,CAAC"}
