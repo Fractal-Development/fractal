@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/firebase/authentication/facebook/index.ts"],"names":[],"mappings":";;;;;;;;;AAAA,OAAO,QAAQ,MAAM,qBAAqB,CAAC;AAC3C,OAAO,sBAAsB,CAAC;AAE9B,MAAM,UAAgB,QAAQ;;QAC1B,MAAM,QAAQ,GAAG,IAAI,QAAQ,CAAC,IAAI,CAAC,oBAAoB,EAAE,CAAC;QAC1D,OAAO,QAAQ,CAAC,IAAI,EAAE,CAAC,kBAAkB,CAAC,QAAQ,CAAC,CAAC;IACxD,CAAC;CAAA"}
