@@ -1,5 +1,6 @@
 import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
 import React, { useState } from 'react';
+import { useOpenURL } from './useOpenURL';
 
 const defaultMessages: MinimalMessageData[] = [
     {
@@ -108,8 +109,14 @@ const defaultMessages: MinimalMessageData[] = [
     }
 ];
 
+const urlTextStyle = {
+    color: 'blue',
+    textDecorationLine: 'underline'
+};
+
 export function ChatContentFragment(): JSX.Element {
     const [messages, setMessages] = useState(defaultMessages);
+    const openURL = useOpenURL();
 
     const handleFavoriteMessage = (message: MinimalMessageData) => {
         const newMessage = { ...message, favorite: !message.favorite };
@@ -129,6 +136,13 @@ export function ChatContentFragment(): JSX.Element {
             onSharePress={(message) => console.log('sharePress: ', message)}
             onSend={handleSendMessage}
             placeholder='Escribe aquí'
+            parsePatterns={[
+                {
+                    type: 'url',
+                    style: urlTextStyle,
+                    onPress: openURL
+                }
+            ]}
         />
     );
 }
