@@ -39,7 +39,7 @@ export function AudioPlayer({ tracks, controllableTrackIndex, ...layerProps }: A
                 <Text variant='button' color={colors.text} marginBottom={spacings.s}>
                     {title}
                 </Text>
-                <AudioProgressBar isPlaying={isPlaying} duration={duration} currentTime={currentTime} onTimeUpdate={handleUpdateTime} />
+                <AudioProgressBar duration={duration} currentTime={currentTime} onTimeUpdate={handleUpdateTime} />
                 <AudioControls
                     isEnableShuffle={enableShufflePlayback}
                     isEnableRepeat={enableRepeatPlayback}

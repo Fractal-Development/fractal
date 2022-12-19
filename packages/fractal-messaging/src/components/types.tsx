@@ -21,6 +21,7 @@ export interface MinimalMessageData {
 
 export interface MessageMediaProps {
     source: number | string;
+    messageID?: string;
 }
 
 export interface ChatMessageProps<T> {

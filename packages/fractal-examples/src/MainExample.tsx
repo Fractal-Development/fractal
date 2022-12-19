@@ -15,6 +15,7 @@ import React, { ReactElement } from 'react';
 import { ReactIcon } from './assets/ReactIcon';
 import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
 import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
+import { MediaExamplesFragmentScreen } from './screens/MediaExamplesFragmentScree';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ui-screens/dataDisplay/ChipFragmentScreen';
@@ -114,6 +115,13 @@ export function MainExample(): JSX.Element {
                                         path={screens.chatFragment.path}
                                     >
                                         <ChatContentFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.mediaFragment.name} />}
+                                        path={screens.mediaFragment.path}
+                                    >
+                                        <MediaExamplesFragmentScreen />
                                     </StackScreen>
                                 </StackNavigator>
                             </TabBarInsetsLayer>

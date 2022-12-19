@@ -2,7 +2,7 @@ import { useState, useRef, useCallback } from 'react';
 import { AudioSource, MinimalAudioPlayerObject } from '../types';
 import { useAudioWebEffects } from '../useAudioPlayer/hooks/useAudioWebEffects';
 
-export function useMinimalAudioPlayer(audioSrc: AudioSource): MinimalAudioPlayerObject {
+export function useMinimalAudioPlayer(audioSrc: AudioSource, _messageID?: string): MinimalAudioPlayerObject {
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);

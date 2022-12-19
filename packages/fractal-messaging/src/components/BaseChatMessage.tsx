@@ -35,7 +35,7 @@ export const BaseChatMessage = forwardRef(
                 {message.image ? (
                     <MessageImage source={message.image} />
                 ) : message.audio ? (
-                    <MessageAudio source={message.audio} />
+                    <MessageAudio messageID={message.id} source={message.audio} />
                 ) : message.video ? (
                     <MessageVideo source={message.video} />
                 ) : (

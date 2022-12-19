@@ -8,11 +8,15 @@ import { AudioSource } from './types';
 
 export interface AudioMessagePlayerProps extends LayerProps {
     audioSrc: AudioSource;
+    messageID?: string;
 }
 
-export function AudioMessagePlayer({ audioSrc, ...layerProps }: AudioMessagePlayerProps): JSX.Element {
+export function AudioMessagePlayer({ audioSrc, messageID, ...layerProps }: AudioMessagePlayerProps): JSX.Element {
     const { spacings } = useTheme();
-    const { currentTime, duration, isPlaying, handlePlayPause, setPositionManually, setRateManually } = useMinimalAudioPlayer(audioSrc);
+    const { currentTime, duration, isPlaying, handlePlayPause, setPositionManually, setRateManually } = useMinimalAudioPlayer(
+        audioSrc,
+        messageID
+    );
 
     const handleUpdateTime = useCallback(
         async (positionMillis: number) => {
@@ -35,7 +39,6 @@ export function AudioMessagePlayer({ audioSrc, ...layerProps }: AudioMessagePlay
                 <AudioProgressBar
                     duration={duration}
                     currentTime={currentTime}
-                    isPlaying={isPlaying}
                     onTimeUpdate={handleUpdateTime}
                     timeLabelsSpacing={spacings.xs}
                     flex={1}

@@ -37,6 +37,10 @@ export const screens = {
     chatFragment: {
         name: 'Chat Content Fragment',
         path: routes.component.replace(':component', 'chat_content_fragment_screen')
+    },
+    mediaFragment: {
+        name: 'Media Fragment',
+        path: routes.component.replace(':component', 'media_fragment_screen')
     }
 };
 

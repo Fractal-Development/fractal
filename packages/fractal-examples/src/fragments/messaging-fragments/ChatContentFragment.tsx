@@ -1,5 +1,6 @@
-import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
 import React, { useState } from 'react';
+import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
+import { AudioMessagePlayerProvider } from '@bma98/fractal-media';
 import { useOpenURL } from './useOpenURL';
 
 const defaultMessages: MinimalMessageData[] = [
@@ -61,9 +62,14 @@ const defaultMessages: MinimalMessageData[] = [
         audio: 'https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Podington_Bear_-_Rubber_Robot.mp3'
     },
     {
-        id: '12',
+        id: '12a',
         senderType: 'bot',
         text: 'Bueno, te explico: Básicamente hay tres estilos de liderazo que debieras poder utilizar según la situación para lograr resultados a traves de otras personas: \n\nLiderazgo directivo para mostrar rumbo \n\nLiderazgo Democrático para aprovechar las ideas de todos \n \nLiderazgo Desarrollador para incrementar la capacidad del equipo'
+    },
+    {
+        id: '12b',
+        senderType: 'bot',
+        audio: 'https://react-native-track-player.js.org/example/Longing.mp3'
     },
     {
         id: '13',
@@ -130,19 +136,21 @@ export function ChatContentFragment(): JSX.Element {
     };
 
     return (
-        <ChatContent
-            messages={messages}
-            onFavoritePress={handleFavoriteMessage}
-            onSharePress={(message) => console.log('sharePress: ', message)}
-            onSend={handleSendMessage}
-            placeholder='Escribe aquí'
-            parsePatterns={[
-                {
-                    type: 'url',
-                    style: urlTextStyle,
-                    onPress: openURL
-                }
-            ]}
-        />
+        <AudioMessagePlayerProvider>
+            <ChatContent
+                messages={messages}
+                onFavoritePress={handleFavoriteMessage}
+                onSharePress={(message) => console.log('sharePress: ', message)}
+                onSend={handleSendMessage}
+                placeholder='Escribe aquí'
+                parsePatterns={[
+                    {
+                        type: 'url',
+                        style: urlTextStyle,
+                        onPress: openURL
+                    }
+                ]}
+            />
+        </AudioMessagePlayerProvider>
     );
 }
