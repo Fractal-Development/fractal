@@ -16,7 +16,9 @@ const whiteListedKeys = [
     'alt',
     'loading',
     'decoding',
-    'cursor'
+    'cursor',
+    'onKeyDown',
+    'type'
 ];
 
 export function shouldForwardProp(key: string): boolean {
