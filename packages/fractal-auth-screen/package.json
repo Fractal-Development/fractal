@@ -1,6 +1,6 @@
 {
     "name": "@bma98/fractal-auth-screen",
-    "version": "3.1.0",
+    "version": "3.1.2",
     "description": "Auth Screen that is authentication method agnostic, it also provides a way to check your routes and redirect that works on any kind of router.",
     "author": "BrandonMA",
     "license": "MIT",
