@@ -16,4 +16,5 @@ export interface AuthenticationScreenProps
     handleGoogleSignIn?: () => Promise<void>;
     handleFacebookSignIn?: () => Promise<void>;
     handleAppleSignIn?: () => Promise<void>;
+    removeEmailFlow?: boolean;
 }

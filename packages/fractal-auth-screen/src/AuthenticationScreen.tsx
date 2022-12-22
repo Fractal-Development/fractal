@@ -24,6 +24,7 @@ export function AuthenticationScreen({
     removeSocialMediaButtons,
     removeSignUpButton,
     children,
+    removeEmailFlow,
     ...others
 }: AuthenticationScreenProps): JSX.Element {
     const [state, setState] = useState<AuthenticationScreenState>('signIn');
@@ -47,6 +48,7 @@ export function AuthenticationScreen({
         try {
             await handleGoogleSignIn?.();
         } catch (error) {
+            console.error(error);
             setGoogleLoading(false);
         }
     }, [handleGoogleSignIn]);
@@ -56,6 +58,7 @@ export function AuthenticationScreen({
         try {
             await handleFacebookSignIn?.();
         } catch (error) {
+            console.error(error);
             setFacebookLoading(false);
         }
     }, [handleFacebookSignIn]);
@@ -65,6 +68,7 @@ export function AuthenticationScreen({
         try {
             await handleAppleSignIn?.();
         } catch (error) {
+            console.error(error);
             setAppleLoading(false);
         }
     }, [handleAppleSignIn]);
@@ -78,24 +82,26 @@ export function AuthenticationScreen({
                     <Layer flex={1} maxWidth={600} alignItems='center' width='100%'>
                         {logo}
                         <PaddingLayer width='100%'>
-                            <Box marginBottom={spacings.m}>
-                                <ErrorBoundaryMessage>
-                                    {state === 'signIn' ? (
-                                        <SignIn
-                                            {...others}
-                                            removeSignUpButton={removeSignUpButton}
-                                            onPasswordResetButtonPress={handlePasswordResetButtonPress}
-                                            onSignUpButtonPress={toggleState}
-                                        />
-                                    ) : state === 'signUp' ? (
-                                        <SignUp {...others} onSignInButtonPress={toggleState}>
-                                            {children}
-                                        </SignUp>
-                                    ) : (
-                                        <PasswordReset {...others} onSignInButtonPress={toggleState} />
-                                    )}
-                                </ErrorBoundaryMessage>
-                            </Box>
+                            {removeEmailFlow ? null : (
+                                <Box marginBottom={spacings.m}>
+                                    <ErrorBoundaryMessage>
+                                        {state === 'signIn' ? (
+                                            <SignIn
+                                                {...others}
+                                                removeSignUpButton={removeSignUpButton}
+                                                onPasswordResetButtonPress={handlePasswordResetButtonPress}
+                                                onSignUpButtonPress={toggleState}
+                                            />
+                                        ) : state === 'signUp' ? (
+                                            <SignUp {...others} onSignInButtonPress={toggleState}>
+                                                {children}
+                                            </SignUp>
+                                        ) : (
+                                            <PasswordReset {...others} onSignInButtonPress={toggleState} />
+                                        )}
+                                    </ErrorBoundaryMessage>
+                                </Box>
+                            )}
                             {!removeSocialMediaButtons && (
                                 <SocialMediaButtons
                                     width='100%'
