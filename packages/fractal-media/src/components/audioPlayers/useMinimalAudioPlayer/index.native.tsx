@@ -4,6 +4,7 @@ import { AudioSource, MinimalAudioPlayerObject } from '../types';
 import { CustomAVPlaybackStatus } from '../useAudioPlayer/types';
 import { useAudioState } from '../useAudioPlayer/hooks/useAudioState';
 import { useAudioMessagePlayerContext } from '../../../context';
+import { numberInRange } from '../utils/numberInRange';
 
 export function useMinimalAudioPlayer(audioSrc: AudioSource, messageID: string = ''): MinimalAudioPlayerObject {
     const [didJustFinish, setDidJustFinish] = useState(false);
@@ -13,7 +14,7 @@ export function useMinimalAudioPlayer(audioSrc: AudioSource, messageID: string =
     const [audio, setAudio] = useAudioState<Audio.Sound>(messageID);
     const [isInsideProvider] = useAudioMessagePlayerContext();
 
-    const isloadedInitialSound = useRef(false);
+    const isLoadedInitialSound = useRef(false);
 
     const onPlaybackStatusUpdate = useCallback((status: CustomAVPlaybackStatus): void => {
         if (status.positionMillis) {
@@ -90,26 +91,30 @@ export function useMinimalAudioPlayer(audioSrc: AudioSource, messageID: string =
     useEffect(() => {
         const loadInitialSoundAsync = async () => {
             if (!audio) {
-                isloadedInitialSound.current = true;
+                isLoadedInitialSound.current = true;
                 await Audio.setAudioModeAsync({
                     playsInSilentModeIOS: true
                 });
                 await loadSoundAsync();
             } else if (audio != null && isInsideProvider) {
-                isloadedInitialSound.current = true;
+                isLoadedInitialSound.current = true;
                 const status = (await audio.getStatusAsync()) as CustomAVPlaybackStatus;
                 audio.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
                 setIsPlaying(status.isPlaying);
-                setCurrentTime(status.positionMillis);
                 if (status.durationMillis) {
                     setDuration(status.durationMillis);
+                    if (!status.isPlaying && numberInRange(status.positionMillis, status.durationMillis - 20, status.durationMillis)) {
+                        resetPosition();
+                    } else {
+                        setCurrentTime(status.positionMillis);
+                    }
                 }
             }
         };
-        if (!isloadedInitialSound.current) {
+        if (!isLoadedInitialSound.current) {
             loadInitialSoundAsync();
         }
-    }, [audio, isInsideProvider, loadSoundAsync, onPlaybackStatusUpdate]);
+    }, [audio, isInsideProvider, loadSoundAsync, onPlaybackStatusUpdate, resetPosition]);
 
     useEffect(() => {
         if (didJustFinish) {

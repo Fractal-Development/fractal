@@ -11,8 +11,13 @@ export function AudioMessagePlayerProvider({ children }: AudioMessagePlayerProvi
 
     useUnmountEffect(async () => {
         for (const instance of Object.values(audioInstances)) {
-            if (instance != null && typeof instance.unloadAsync === 'function') {
-                await instance.unloadAsync();
+            if (instance != null) {
+                if (typeof instance.unloadAsync === 'function') {
+                    await instance.unloadAsync();
+                }
+                if (typeof instance.pause === 'function') {
+                    instance.pause();
+                }
             }
         }
     });
