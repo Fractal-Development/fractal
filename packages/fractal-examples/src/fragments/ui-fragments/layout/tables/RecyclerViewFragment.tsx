@@ -1,9 +1,6 @@
-import React, { useMemo, useState } from 'react';
-import { Layer, LayoutProvider, MemoizedBaseRow, AutoSizeRecyclerView, Text, useTheme, Box } from '@bma98/fractal-ui';
-import { useSizeValue } from '@bma98/size-class';
-import { dataProvider, itemHeightCalculator, rowRenderer, tableDummyData } from './util/tableHelpers';
-
-const heights: Array<number | undefined> = tableDummyData.map(() => undefined);
+import React from 'react';
+import { Layer, MemoizedBaseRow, Text, useTheme, Box, AutoSizeVirtualList } from '@bma98/fractal-ui';
+import { rowRenderer, tableDummyData } from './util/tableHelpers';
 
 function TitleRow(): JSX.Element {
     const { colors } = useTheme();
@@ -17,35 +14,11 @@ function TitleRow(): JSX.Element {
 }
 
 export function RecyclerViewFragment(): JSX.Element {
-    const [dataProviderState] = useState(dataProvider.cloneWithRows(tableDummyData));
-    const width = useSizeValue('width');
-
-    const layoutProvider = useMemo(() => new LayoutProvider(
-            () => 0,
-            (_, dim, index) => {
-                let height = heights[index];
-                if (height != null) {
-                    dim.height = height;
-                } else {
-                    height = itemHeightCalculator();
-                    heights[index] = height;
-                    dim.height = height;
-                }
-                dim.width = width;
-                return;
-            }
-        ), [width]);
-
     return (
         <Box flex={1}>
             <TitleRow />
             <Layer flex={1}>
-                <AutoSizeRecyclerView
-                    layoutProvider={layoutProvider}
-                    dataProvider={dataProviderState}
-                    rowRenderer={rowRenderer}
-                    initialRenderIndex={1000}
-                />
+                <AutoSizeVirtualList data={tableDummyData} renderItem={rowRenderer} estimatedItemSize={122} initialScrollIndex={1000} />
             </Layer>
         </Box>
     );

@@ -14,7 +14,9 @@ import React, { ReactElement } from 'react';
 
 import { ReactIcon } from './assets/ReactIcon';
 import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
+import { AutoCompleteScreen } from './screens/AutoCompleteScreen';
 import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
+import { ListsFragmentScreen } from './screens/ListsFragmentScreen';
 import { MediaExamplesFragmentScreen } from './screens/MediaExamplesFragmentScree';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
@@ -122,6 +124,20 @@ export function MainExample(): JSX.Element {
                                         path={screens.mediaFragment.path}
                                     >
                                         <MediaExamplesFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.listsFragment.name} />}
+                                        path={screens.listsFragment.path}
+                                    >
+                                        <ListsFragmentScreen />
+                                    </StackScreen>
+                                    <StackScreen
+                                        fractalRoutesIdentifier='component'
+                                        navBarConfig={<NavigationBarConfig title={screens.autocompleteFragment.name} />}
+                                        path={screens.autocompleteFragment.path}
+                                    >
+                                        <AutoCompleteScreen />
                                     </StackScreen>
                                 </StackNavigator>
                             </TabBarInsetsLayer>

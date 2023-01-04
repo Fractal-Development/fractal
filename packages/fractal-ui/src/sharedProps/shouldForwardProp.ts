@@ -18,7 +18,13 @@ const whiteListedKeys = [
     'decoding',
     'cursor',
     'onKeyDown',
-    'type'
+    'type',
+    'value',
+    'role',
+    'aria-placeholder',
+    'aria-disabled',
+    'selectable',
+    'aria-label'
 ];
 
 export function shouldForwardProp(key: string): boolean {

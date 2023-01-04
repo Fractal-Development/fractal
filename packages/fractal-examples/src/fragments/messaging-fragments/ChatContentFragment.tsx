@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
+import { ChatContent, ChatLoadingIndicator, MinimalMessageData } from '@bma98/fractal-messaging';
 import { AudioMessagePlayerProvider } from '@bma98/fractal-media';
 import { useOpenURL } from './useOpenURL';
+import { Box, Button, Layer, useTheme } from '@bma98/fractal-ui';
+import { MessageTextField } from './MessageTextField';
 
 const defaultMessages: MinimalMessageData[] = [
     {
@@ -120,8 +122,56 @@ const urlTextStyle = {
     textDecorationLine: 'underline'
 };
 
+const defaultButtons = ['Button One', 'Button Two', 'Button Three', 'Button Four', 'Button Five', 'Button Six'];
+
+const botMessages = [
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis a neque tempor suscipit. Sed ullamcorper feugiat odio, vel porta metus facilisis at. Fusce sed tortor tellus. Aliquam accumsan mi quis lobortis tristique. Praesent id placerat enim, quis pulvinar lacus. Sed ac ornare eros. Maecenas sit amet ipsum sed tortor elementum elementum. Mauris auctor consectetur nunc eget malesuada. Proin purus lacus, placerat sit amet mauris nec, volutpat condimentum risus.',
+    'Nam mauris felis, sollicitudin vel augue ut, aliquam lobortis nisi. Sed turpis sapien, rhoncus consectetur lorem venenatis, porttitor viverra tellus.'
+];
+
+function createWaitPromise(time: number): Promise<void> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, time);
+    });
+}
+
+// TODO: Revisar funcionamiento de onSubmitEditing
+
+function ChatButtons({ buttons, onButtonPress }: { buttons: string[] | null; onButtonPress?: (text: string, index: number) => void }) {
+    const { spacings, sizes } = useTheme();
+    const renderButton = (title: string, index: number) => {
+        const handleButtonPress = () => {
+            onButtonPress?.(title, index);
+        };
+
+        return (
+            <Button
+                key={`${index}`}
+                text={title}
+                onPress={handleButtonPress}
+                marginRight={spacings.s}
+                marginBottom={spacings.s}
+                minHeight={sizes.interactiveItemHeight}
+            />
+        );
+    };
+
+    return (
+        <Box>
+            <Layer flexDirection='row' maxWidth={1360} flexWrap='wrap'>
+                {buttons != null && buttons.map(renderButton)}
+            </Layer>
+        </Box>
+    );
+}
+
 export function ChatContentFragment(): JSX.Element {
     const [messages, setMessages] = useState(defaultMessages);
+    const [isLoading, setIsLoading] = useState(false);
+    const [buttons, setButtons] = useState<string[] | null>(null);
     const openURL = useOpenURL();
 
     const handleFavoriteMessage = (message: MinimalMessageData) => {
@@ -129,11 +179,33 @@ export function ChatContentFragment(): JSX.Element {
         setMessages((currentMessages) => currentMessages.map((messageItem) => (messageItem.id === message.id ? newMessage : messageItem)));
     };
 
-    const handleSendMessage = (message: string) => {
+    const handleSendMessage = async (userMessage: string) => {
         const newId = messages.length;
+        setIsLoading(true);
+        setMessages((currentMessages) => [...currentMessages, { id: newId.toString(), senderType: 'user', text: userMessage }]);
 
-        setMessages((currentMessages) => [...currentMessages, { id: newId.toString(), senderType: 'user', text: message }]);
+        for (const message of botMessages) {
+            await createWaitPromise(2000);
+            setMessages((currentMessages) => {
+                const messageId = currentMessages.length;
+                return [...currentMessages, { id: messageId.toString(), senderType: 'bot', text: message }];
+            });
+        }
+        if (buttons != null) {
+            setButtons(null);
+        } else {
+            setButtons(defaultButtons);
+        }
+        setIsLoading(false);
     };
+
+    const footer = isLoading ? (
+        <ChatLoadingIndicator />
+    ) : buttons != null ? (
+        <ChatButtons buttons={buttons} onButtonPress={handleSendMessage} />
+    ) : (
+        <MessageTextField onSend={handleSendMessage} />
+    );
 
     return (
         <AudioMessagePlayerProvider>
@@ -150,6 +222,8 @@ export function ChatContentFragment(): JSX.Element {
                         onPress: openURL
                     }
                 ]}
+                isLoading={isLoading}
+                customFooter={footer}
             />
         </AudioMessagePlayerProvider>
     );
