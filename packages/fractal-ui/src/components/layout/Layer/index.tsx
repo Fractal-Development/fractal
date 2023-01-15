@@ -17,7 +17,10 @@ const StyledLayer = styled(motion.div as any).withConfig({
 `;
 
 const Layer = forwardRef(
-    ({ from, currentVariant, animate, transition = { type: 'spring' }, children, ...others }: LayerProps, ref: any): JSX.Element => (
+    (
+        { from, currentVariant, animate, transition = { type: 'spring' }, children, layout, onLayout: _onLayout, ...others }: LayerProps,
+        ref: any
+    ): JSX.Element => (
         <StyledLayer
             ref={ref}
             flexDirection='column'
