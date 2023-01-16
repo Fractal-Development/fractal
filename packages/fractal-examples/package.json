@@ -7,6 +7,12 @@
     "main": "dist/index.js",
     "types": "./dist/index.d.ts",
     "source": "src/index.tsx",
+    "files": [
+        "dist",
+        "package.json",
+        "LICENSE",
+        "README.md"
+    ],
     "scripts": {
         "build": "expo-module build",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",

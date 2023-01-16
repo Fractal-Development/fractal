@@ -6,6 +6,12 @@
     "license": "MIT",
     "repository": "BrandonMA/react-firebase-auth",
     "main": "dist/index.js",
+    "files": [
+        "dist",
+        "package.json",
+        "LICENSE",
+        "README.md"
+    ],
     "scripts": {
         "build": "expo-module build",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
