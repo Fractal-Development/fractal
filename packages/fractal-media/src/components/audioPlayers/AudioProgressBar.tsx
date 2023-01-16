@@ -5,7 +5,6 @@ import { formatNumberToTime } from './utils/formatNumberToTime';
 interface AudioProgressBarProps extends LayerProps {
     duration: number;
     currentTime: number;
-    isPlaying: boolean;
     onTimeUpdate: (time: number) => Promise<void>;
     timeLabelsSpacing?: number;
 }
@@ -13,7 +12,6 @@ interface AudioProgressBarProps extends LayerProps {
 export function AudioProgressBar({
     duration,
     currentTime,
-    isPlaying,
     onTimeUpdate,
     timeLabelsSpacing,
     ...layerProps
@@ -32,10 +30,10 @@ export function AudioProgressBar({
     };
 
     useEffect(() => {
-        if (isPlaying && !isDragging) {
+        if (!isDragging && trackProgress !== currentTime) {
             setTrackProgress(currentTime);
         }
-    }, [currentTime, isDragging, isPlaying, trackProgress]);
+    }, [currentTime, isDragging, trackProgress]);
 
     return (
         <Layer {...layerProps}>

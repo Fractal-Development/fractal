@@ -37,6 +37,18 @@ export const screens = {
     chatFragment: {
         name: 'Chat Content Fragment',
         path: routes.component.replace(':component', 'chat_content_fragment_screen')
+    },
+    mediaFragment: {
+        name: 'Media Fragment',
+        path: routes.component.replace(':component', 'media_fragment_screen')
+    },
+    listsFragment: {
+        name: 'Lists Fragment',
+        path: routes.component.replace(':component', 'lists_fragment_screen')
+    },
+    autocompleteFragment: {
+        name: 'Autocomplete Fragment',
+        path: routes.component.replace(':component', 'autocomplete_fragment_screen')
     }
 };
 

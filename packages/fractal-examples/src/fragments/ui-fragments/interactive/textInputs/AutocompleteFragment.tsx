@@ -63,7 +63,7 @@ export function AutocompleteFragment(): JSX.Element {
     };
 
     return (
-        <Box marginTop={spacings.m} marginBottom={spacings.m}>
+        <Box marginTop={spacings.m} marginBottom={spacings.m} flex={1}>
             <AutoComplete
                 placeholder='Escribe aquí'
                 options={top20Films}
@@ -71,8 +71,8 @@ export function AutocompleteFragment(): JSX.Element {
                 getOptionLabel={(option) => option.title}
                 onSelect={handleSelect}
             />
-            <Layer height={spacings.m} />
-            <HorizontalLayer>
+            <Layer height={spacings.m} zIndex={-1} />
+            <HorizontalLayer zIndex={-1}>
                 <Layer flex={1}>
                     <AutoComplete
                         placeholder='AutoComplete and other component'

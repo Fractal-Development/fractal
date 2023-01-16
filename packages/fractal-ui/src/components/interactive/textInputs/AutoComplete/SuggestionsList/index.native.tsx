@@ -1,12 +1,9 @@
-import { useSizeValue } from '@bma98/size-class';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { useTheme } from '../../../../../context';
-import { DataProvider, VerticalFlatList, Layer } from '../../../../layout';
+import { VirtualList, Layer } from '../../../../layout';
 import { SuggestionItem, SUGGESTION_ITEM_HEIGHT } from '../SuggestionItem';
 import { IDEnabled, SuggestionsListProps } from '../types';
-
-const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne !== rowTwo);
 
 export function SuggestionsList<T extends IDEnabled>({
     filteredData,
@@ -16,14 +13,7 @@ export function SuggestionsList<T extends IDEnabled>({
 }: SuggestionsListProps<T>): JSX.Element | null {
     const { spacings } = useTheme();
 
-    const [dataProviderState, setDataProviderState] = useState(dataProvider.cloneWithRows(filteredData));
-    const width = useSizeValue('width');
-
-    useEffect(() => {
-        setDataProviderState(dataProvider.cloneWithRows(filteredData));
-    }, [filteredData, width]);
-
-    const renderItem = (_: string | number, item: T, index: number) => {
+    const renderItem = ({ item, index }: { item: T; index: number }) => {
         const label = getLabel(item);
 
         const handleItemPress = () => {
@@ -45,12 +35,7 @@ export function SuggestionsList<T extends IDEnabled>({
     return (
         <Layer padding={spacings.m} flex={1}>
             {filteredData.length > 0 && (
-                <VerticalFlatList
-                    key={width}
-                    rowHeight={SUGGESTION_ITEM_HEIGHT}
-                    dataProvider={dataProviderState}
-                    rowRenderer={renderItem}
-                />
+                <VirtualList data={filteredData} estimatedItemSize={SUGGESTION_ITEM_HEIGHT} renderItem={renderItem} />
             )}
         </Layer>
     );

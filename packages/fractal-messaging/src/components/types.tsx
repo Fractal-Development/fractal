@@ -21,6 +21,7 @@ export interface MinimalMessageData {
 
 export interface MessageMediaProps {
     source: number | string;
+    messageID?: string;
 }
 
 export interface ChatMessageProps<T> {
@@ -40,7 +41,6 @@ export interface ChatContentProps<T extends MinimalMessageData> extends MessageL
     isLoading?: boolean;
     keyboardAvoidingViewProps?: KeyboardAvoidingLayerProps;
     messageInputButtonVariant?: ButtonVariant;
-    enableFluidFooter?: boolean;
     customFooter?: ReactElement | Array<ReactElement>;
 }
 
@@ -52,6 +52,5 @@ export interface MessageListProps<T extends MinimalMessageData>
     extends Omit<ChatMessageProps<T>, 'message' | 'children'>,
         Omit<LayerProps, 'children'> {
     messages: Array<T>;
-    footerComponent?: ReactElement | Array<ReactElement>;
     rowRenderer?: (props: RowRendererProps<T>) => JSX.Element;
 }

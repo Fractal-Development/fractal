@@ -16,7 +16,6 @@ export function ChatContent<T extends MinimalMessageData>({
     isLoading,
     keyboardAvoidingViewProps,
     messageInputButtonVariant = 'alternative',
-    enableFluidFooter,
     customFooter,
     rowRenderer,
     parsePatterns,
@@ -44,9 +43,8 @@ export function ChatContent<T extends MinimalMessageData>({
                 onSharePress={onSharePress}
                 messageActions={messageActions}
                 getBubbleColor={getBubbleColor}
-                footerComponent={enableFluidFooter ? footer : undefined}
             />
-            {!enableFluidFooter ? footer : undefined}
+            {footer}
         </>
     );
 }

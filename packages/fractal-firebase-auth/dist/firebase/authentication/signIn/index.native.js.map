@@ -1,1 +1,0 @@
-{"version":3,"file":"index.native.js","sourceRoot":"","sources":["../../../../src/firebase/authentication/signIn/index.native.ts"],"names":[],"mappings":";;;;;;;;;AAAA,OAAO,IAAI,MAAM,6BAA6B,CAAC;AAE/C,MAAM,UAAgB,MAAM,CAAC,KAAa,EAAE,QAAgB;;QACxD,MAAM,IAAI,EAAE,CAAC,0BAA0B,CAAC,KAAK,EAAE,QAAQ,CAAC,CAAC;IAC7D,CAAC;CAAA"}

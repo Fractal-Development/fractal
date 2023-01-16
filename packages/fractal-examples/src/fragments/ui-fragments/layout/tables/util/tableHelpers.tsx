@@ -1,29 +1,27 @@
 import React from 'react';
-import { lightFractalTheme, DataProvider, DetailsRow, PaddingLayer, Box, Text, colors } from '@bma98/fractal-ui';
+import { lightFractalTheme, DetailsRow, PaddingLayer, Box, Text, colors } from '@bma98/fractal-ui';
 
-const tableDummyData = Array<number>();
+const tableDummyData: Array<number> = Array.from(Array(1001).keys());
 
-for (let i = 0; i < 1001; i++) {
-    tableDummyData.push(i);
-}
+const tableItemsHeights = tableDummyData.map(() => {
+    return itemHeightCalculator();
+});
 
-const rowRenderer = (_: any, __: any, index: number | undefined) => {
+const rowRenderer = ({ index }) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
-    return <DetailsRow title={text} details={text} addSeparator={index !== tableDummyData.length - 1} />;
+    return <DetailsRow title={text} details={text} height={tableItemsHeights[index]} addSeparator={index !== tableDummyData.length - 1} />;
 };
 
-const rowRendererHorizontalTable = (_: any, __: any, index: number | undefined) => {
+const rowRendererHorizontalTable = ({ index }: { index: number }) => {
     const text = index != null ? `${tableDummyData[index]}` : 'No index';
     return (
         <PaddingLayer backgroundColor={colors.contentInteractiveColor}>
-            <Box alignItems="center" justifyContent="center">
-                <Text variant="normal">{text}</Text>
+            <Box alignItems='center' justifyContent='center'>
+                <Text variant='normal'>{text}</Text>
             </Box>
         </PaddingLayer>
     );
 };
-
-const dataProvider = new DataProvider((rowOne, rowTwo) => rowOne !== rowTwo);
 
 function randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -33,4 +31,4 @@ function itemHeightCalculator(): number {
     return randomIntFromInterval(lightFractalTheme.sizes.baseRowHeight, 200);
 }
 
-export { tableDummyData, rowRenderer, rowRendererHorizontalTable, dataProvider, itemHeightCalculator };
+export { tableDummyData, rowRenderer, rowRendererHorizontalTable, itemHeightCalculator, tableItemsHeights };
