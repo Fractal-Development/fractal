@@ -8,4 +8,5 @@ export interface NavigationBarProps {
     largeTitle?: boolean;
     goBack: () => void;
     backgroundColor?: string;
+    disabledSafeAreaInsets?: boolean;
 }

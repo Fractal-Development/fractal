@@ -5,7 +5,7 @@ export type UserDocumentContextType = [unknown, Dispatch<SetStateAction<unknown>
 export const UserDocumentContext = createContext<UserDocumentContextType>([
     undefined,
     () => {
-        return;
+        return undefined;
     }
 ]);
 

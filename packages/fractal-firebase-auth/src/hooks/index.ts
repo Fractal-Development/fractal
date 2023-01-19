@@ -1,5 +1,6 @@
-export * from './useSubscribeForAuthenticatedUser';
-export * from './useSubscribeForUserDocument';
-export * from './useUserDocument';
 export * from './useAuthenticationState';
-export { useAuthenticateChildren } from './useAuthenticateChildren';
+export * from './useSubscribeForAuthenticatedUser';
+export * from './useSubscribeForFirebaseAuthenticationState';
+export * from './useSubscribeForUserDocument';
+export * from './useSubscribeForUserDocumentState';
+export * from './useUserDocument';

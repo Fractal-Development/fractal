@@ -22,7 +22,6 @@
     },
     "peerDependencies": {
         "@bma98/fractal-navigation": "*",
-        "@bma98/fractal-navigation-router": "*",
         "@bma98/fractal-ui": "*",
         "@invertase/react-native-apple-authentication": "^2.1.2",
         "@react-native-firebase/app": "^15.7.0",
@@ -75,7 +74,6 @@
     },
     "devDependencies": {
         "@bma98/fractal-navigation": "*",
-        "@bma98/fractal-navigation-router": "*",
         "@bma98/fractal-ui": "*",
         "@invertase/react-native-apple-authentication": "^2.1.2",
         "@react-native-firebase/app": "^15.7.0",

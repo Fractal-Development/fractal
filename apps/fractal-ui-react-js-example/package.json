@@ -9,7 +9,6 @@
         "@bma98/fractal-media": "*",
         "@bma98/fractal-messaging": "*",
         "@bma98/fractal-navigation": "*",
-        "@bma98/fractal-navigation-router": "*",
         "@bma98/fractal-ui": "*",
         "@bma98/size-class": "^2.2.6",
         "@testing-library/jest-dom": "^5.16.5",

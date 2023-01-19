@@ -1,14 +1,14 @@
 import { AuthenticationStateProvider, UserDocumentProvider } from '../context';
-import React from 'react';
-import { Authenticate, AuthenticateProps } from './Authenticate';
-import { MinimalUserData } from '../types';
+import React, { ReactNode } from 'react';
 
-export function FirebaseAuthRoot<UserType extends MinimalUserData>(props: AuthenticateProps<UserType>): JSX.Element {
+export interface FirebaseAuthRootProps {
+    children: ReactNode;
+}
+
+export function FirebaseAuthRoot({ children }: FirebaseAuthRootProps): JSX.Element {
     return (
         <AuthenticationStateProvider>
-            <UserDocumentProvider>
-                <Authenticate {...props} />
-            </UserDocumentProvider>
+            <UserDocumentProvider>{children}</UserDocumentProvider>
         </AuthenticationStateProvider>
     );
 }

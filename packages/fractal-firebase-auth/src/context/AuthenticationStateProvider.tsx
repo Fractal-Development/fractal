@@ -6,7 +6,7 @@ export type AuthenticationStateContextType = [AuthenticationState, Dispatch<SetS
 export const AuthenticationStateContext = createContext<AuthenticationStateContextType>([
     createAuthenticationState(),
     () => {
-        return;
+        return undefined;
     }
 ]);
 
