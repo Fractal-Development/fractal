@@ -1,0 +1,38 @@
+{
+    "name": "@bma98/size-class",
+    "version": "2.2.7",
+    "description": "React Native library to improve width and height handling",
+    "author": "BrandonMA",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "source": "src/index.tsx",
+    "files": [
+        "dist",
+        "package.json",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "expo-module build",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+        "lint": "eslint 'src/**/*.ts*'",
+        "lint:fix": "eslint --fix 'src/**/*.ts*'",
+        "expo-module": "expo-module",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+    },
+    "devDependencies": {
+        "expo-device": "~5.0.0",
+        "ua-parser-js": "^0.7.24",
+        "utility-types": "^3.10.0"
+    },
+    "dependencies": {
+        "expo-device": "~5.0.0",
+        "ua-parser-js": "^0.7.24"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "sideEffects": false
+}

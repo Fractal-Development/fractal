@@ -16,7 +16,7 @@ export function useMinimalAudioPlayer(audioSrc: AudioSource, messageID: string =
 
     const isLoadedInitialSound = useRef(false);
 
-    const onPlaybackStatusUpdate = useCallback((status: CustomAVPlaybackStatus): void => {
+    const onPlaybackStatusUpdate = useCallback((status: Partial<CustomAVPlaybackStatus>): void => {
         if (status.positionMillis) {
             setCurrentTime(status.positionMillis);
         }

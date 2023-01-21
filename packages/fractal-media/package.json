@@ -24,13 +24,13 @@
     "peerDependencies": {
         "@bma98/fractal-ui": "*",
         "expo": "*",
-        "expo-av": "^11.2.3",
+        "expo-av": "~13.0.2",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
         "react-native": "*",
         "react-native-svg": "*",
-        "react-native-webview": "11.23.0",
+        "react-native-webview": "11.23.1",
         "react-native-youtube-iframe": "^2.2.2"
     },
     "peerDependenciesMeta": {
@@ -51,15 +51,15 @@
         }
     },
     "dependencies": {
-        "@bma98/size-class": "^2.2.6",
+        "@bma98/size-class": "*",
         "framer-motion": "^6.5.1",
         "styled-components": "^5.3.6"
     },
     "devDependencies": {
         "@bma98/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
-        "expo-av": "^11.2.3",
-        "react-native-svg": "12.4.4",
+        "expo-av": "~13.0.2",
+        "react-native-svg": "13.4.0",
         "react-native-youtube-iframe": "^2.2.2",
         "utility-types": "^3.10.0"
     },

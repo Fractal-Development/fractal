@@ -1,14 +1,14 @@
-import auth from '@react-native-firebase/auth';
+import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { AuthenticationState, createAuthenticationState } from '../../../../types/AuthenticationState';
-import { FirebaseAuthTypes } from '@react-native-firebase/auth';
-import { LoginManager, AccessToken } from 'react-native-fbsdk';
+import { LoginManager, AccessToken } from 'react-native-fbsdk-next';
 
 export async function facebookSignInWithRedirect(): Promise<AuthenticationState> {
     // Attempt login with permissions
     const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
 
     if (result.isCancelled) {
-        throw 'User cancelled the login process';
+        const errorMessage = 'User cancelled the login process';
+        throw errorMessage;
     }
 
     // Once signed in, get the users AccessToken

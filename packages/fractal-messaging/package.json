@@ -53,7 +53,7 @@
     },
     "dependencies": {
         "@bma98/fractal-media": "*",
-        "@bma98/size-class": "^2.2.6",
+        "@bma98/size-class": "*",
         "react-virtualized-auto-sizer": "^1.0.7",
         "styled-components": "^5.3.6",
         "text-metrics": "^3.0.0"
@@ -62,7 +62,7 @@
         "@bma98/fractal-ui": "*",
         "@types/react-virtualized-auto-sizer": "^1.0.1",
         "@types/styled-components": "^5.1.26",
-        "react-native-svg": "12.4.4",
+        "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },
     "keywords": [

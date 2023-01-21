@@ -1,6 +1,7 @@
-import { MainExample } from '@bma98/fractal-examples';
 import React from 'react';
+import { AuthExample } from '@bma98/fractal-examples';
+import { firebaseConfig } from './firebaseConfig';
 
 export default function App() {
-    return <MainExample />;
+    return <AuthExample firebaseConfig={firebaseConfig} />;
 }

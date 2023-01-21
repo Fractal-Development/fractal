@@ -50,7 +50,7 @@
     "devDependencies": {
         "@bma98/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
-        "react-native-svg": "12.4.4",
+        "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },
     "keywords": [

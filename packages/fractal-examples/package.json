@@ -54,7 +54,7 @@
         }
     },
     "dependencies": {
-        "@bma98/size-class": "^2.2.6",
+        "@bma98/size-class": "*",
         "react-router-dom": "^6.4.1",
         "react-router-native": "^6.4.1"
     },
@@ -67,7 +67,7 @@
         "@bma98/fractal-navigation": "*",
         "@bma98/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
-        "react-native-svg": "^12.4.4",
+        "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },
     "keywords": [

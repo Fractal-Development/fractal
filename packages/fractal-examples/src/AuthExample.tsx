@@ -11,10 +11,12 @@ import {
     useAuthenticationState,
     signOut,
     useSubscribeForFirebaseAuthenticationState,
-    useSubscribeForUserDocumentState
+    useSubscribeForUserDocumentState,
+    googleSignInWithPopup,
+    facebookSignInWithPopup
 } from '@bma98/fractal-firebase-auth';
 import { Collection, Database, IDEnabled } from '@bma98/firebase-db-manager';
-import { LoadingBackground, PaddingLayer, Text, Image, ScrollView, Button, FractalAppRoot, Background, Box } from '@bma98/fractal-ui';
+import { LoadingBackground, PaddingLayer, Text, Image, Button, FractalAppRoot, Background, Box, SafeAreaLayer } from '@bma98/fractal-ui';
 import { NavigationRouter, Outlet, Route, Routes, useNavigate } from './router';
 
 export const routes = {
@@ -47,7 +49,7 @@ function Home() {
     };
 
     return (
-        <ScrollView>
+        <SafeAreaLayer>
             <PaddingLayer>
                 <Box>
                     <Text marginBottom={12}>{`Logged In! ${currentUser?.data?.email}`}</Text>
@@ -56,7 +58,7 @@ function Home() {
                     {!loading && firebaseUser != null ? <Text>{firebaseUser.uid}</Text> : <Text>Still getting the user</Text>}
                 </Box>
             </PaddingLayer>
-        </ScrollView>
+        </SafeAreaLayer>
     );
 }
 
@@ -68,12 +70,12 @@ function UserProfile() {
     };
 
     return (
-        <ScrollView>
+        <SafeAreaLayer>
             <PaddingLayer>
                 <Text marginBottom={12}>User Profile</Text>
                 <Button text='Back' onPress={goBack} />
             </PaddingLayer>
-        </ScrollView>
+        </SafeAreaLayer>
     );
 }
 
@@ -153,6 +155,12 @@ function Root(): JSX.Element {
                         signIn={signIn}
                         signUp={signUp}
                         resetPassword={resetPassword}
+                        handleGoogleSignIn={async () => {
+                            await googleSignInWithPopup('359987729942-rqo24jpgn2ss16uu0v48cvvngcsl7k10.apps.googleusercontent.com');
+                        }}
+                        handleFacebookSignIn={async () => {
+                            facebookSignInWithPopup();
+                        }}
                     />
                 }
             />
