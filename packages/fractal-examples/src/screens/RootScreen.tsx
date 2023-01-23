@@ -1,4 +1,4 @@
-import { NavigationBarInsetsLayer, useNavigationBarInsets } from '@bma98/fractal-navigation';
+import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
 import { useNavigate } from '../router';
 import { Layer, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, VirtualList, SimpleRow } from '@bma98/fractal-ui';
 import React, { ReactElement, useCallback, useState } from 'react';
@@ -8,9 +8,6 @@ export function RootScreen(): ReactElement {
     const [screensData, setScreensData] = useState(screensArray);
     const { spacings } = useTheme();
     const navigate = useNavigate();
-    const navigationBarInsets = useNavigationBarInsets();
-
-    console.log(JSON.stringify(navigationBarInsets));
 
     const rowRenderer = useCallback(
         ({ item, index }: { item: Screen; index: number }) => {
