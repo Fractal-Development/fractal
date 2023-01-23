@@ -16,7 +16,7 @@ export function MessageTextField({ onSend }: Props) {
     }, []);
 
     return (
-        <KeyboardAvoidingLayer keyboardVerticalOffset={100}>
+        <KeyboardAvoidingLayer keyboardVerticalOffset={120}>
             <MessageInput inputRef={inputRef} useForegroundVariant placeholder='Escribe aquí' onSend={onSend} buttonVariant='alternative' />
         </KeyboardAvoidingLayer>
     );
