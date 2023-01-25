@@ -1,5 +1,5 @@
-export * from './firestore';
 export * from './batch';
+export * from './firestore';
 export * from './functions';
 export * from './Collection';
 export * from './Database';

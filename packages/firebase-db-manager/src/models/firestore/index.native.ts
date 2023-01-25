@@ -1,5 +1,5 @@
-import firestore from '@react-native-firebase/firestore';
+import nativeFirestore from '@react-native-firebase/firestore';
 
-export default function batch(): ReturnType<typeof firestore> {
-    return firestore();
+export function firestore(): ReturnType<typeof nativeFirestore> {
+    return nativeFirestore();
 }

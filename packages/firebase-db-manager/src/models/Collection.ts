@@ -5,7 +5,7 @@ import produce, { immerable } from 'immer';
 import { ReferenceHolder } from '../types/CollectionData';
 import { Query } from '../types/FirebaseQuery';
 import { Optional } from 'utility-types';
-import batch from './batch';
+import { batch } from './batch';
 
 export class Collection<DataType extends IDEnabled, SubCollections> implements IDEnabled, ReferenceHolder {
     id: string;
