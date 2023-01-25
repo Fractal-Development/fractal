@@ -1,4 +1,4 @@
-import { useTheme, ChipList, Layer, Text, Box } from '@bma98/fractal-ui';
+import { useTheme, ChipList, Layer, Text, Box } from '@fractal/fractal-ui';
 import React from 'react';
 
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';

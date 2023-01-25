@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Switch, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, Switch, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SwitchFragment(): JSX.Element {
@@ -8,7 +8,7 @@ export function SwitchFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Switch Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

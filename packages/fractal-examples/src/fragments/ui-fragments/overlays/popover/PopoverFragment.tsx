@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Button, Text, Popover, LayerProps } from '@bma98/fractal-ui';
+import { useTheme, Box, Button, Text, Popover, LayerProps } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 function PopoverContent(props: LayerProps): JSX.Element {

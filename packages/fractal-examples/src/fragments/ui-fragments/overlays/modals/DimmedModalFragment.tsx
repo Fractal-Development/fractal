@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Button, Text, DimmedModal } from '@bma98/fractal-ui';
+import { useTheme, Box, Button, Text, DimmedModal } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function DimmedModalFragment(): JSX.Element {
@@ -10,7 +10,7 @@ export function DimmedModalFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Dimmed Modal Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

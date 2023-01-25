@@ -1,5 +1,5 @@
 import React, { memo, ReactElement } from 'react';
-import { Layer, useTheme } from '@bma98/fractal-ui';
+import { Layer, useTheme } from '@fractal/fractal-ui';
 import { useSafeAreaInsets } from '../../../../TabBar/hooks';
 
 interface NavigationBarBackgroundProps {

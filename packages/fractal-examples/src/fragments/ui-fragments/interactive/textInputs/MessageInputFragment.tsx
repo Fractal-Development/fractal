@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function MessageInputFragment(): JSX.Element {
@@ -7,7 +7,7 @@ export function MessageInputFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Message Input Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

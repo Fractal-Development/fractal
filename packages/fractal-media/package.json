@@ -1,5 +1,5 @@
 {
-    "name": "@bma98/fractal-media",
+    "name": "@fractal/fractal-media",
     "version": "3.1.0",
     "description": "Media Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
@@ -22,7 +22,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "*",
+        "@fractal/fractal-ui": "*",
         "expo": "*",
         "expo-av": "~13.0.2",
         "react": "*",
@@ -51,12 +51,12 @@
         }
     },
     "dependencies": {
-        "@bma98/size-class": "*",
+        "@fractal/size-class": "*",
         "framer-motion": "^6.5.1",
         "styled-components": "^5.3.6"
     },
     "devDependencies": {
-        "@bma98/fractal-ui": "*",
+        "@fractal/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
         "expo-av": "~13.0.2",
         "react-native-svg": "13.4.0",

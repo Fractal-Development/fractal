@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { BaseButton, Text, useTheme } from '@bma98/fractal-ui';
+import { BaseButton, Text, useTheme } from '@fractal/fractal-ui';
 
 interface RateToggleButtonProps {
     onChangeRate: (rate: number) => void;

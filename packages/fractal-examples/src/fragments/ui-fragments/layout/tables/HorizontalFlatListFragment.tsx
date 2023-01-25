@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, AutoSizeVirtualList, useTheme } from '@bma98/fractal-ui';
+import { Box, Text, AutoSizeVirtualList, useTheme } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { rowRendererHorizontalTable, tableDummyData } from './util/tableHelpers';
 

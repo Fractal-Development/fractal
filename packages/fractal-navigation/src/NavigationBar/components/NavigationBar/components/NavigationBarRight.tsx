@@ -1,5 +1,5 @@
 import React, { memo, ReactElement, ReactNode } from 'react';
-import { Layer } from '@bma98/fractal-ui';
+import { Layer } from '@fractal/fractal-ui';
 
 interface NavigationBarRightProps {
     children?: ReactNode;

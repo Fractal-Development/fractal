@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, CircularIconButton, LoadIcon } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 function PopoverContent(): JSX.Element {

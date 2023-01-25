@@ -1,5 +1,5 @@
 import React, { memo, ReactNode } from 'react';
-import { Layer, Text, useTheme } from '@bma98/fractal-ui';
+import { Layer, Text, useTheme } from '@fractal/fractal-ui';
 import { titleStyle } from './util/titleStyle';
 
 interface NavigationBarCenterProps {

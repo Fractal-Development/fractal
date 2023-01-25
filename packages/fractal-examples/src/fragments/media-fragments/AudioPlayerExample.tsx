@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, useTheme } from '@bma98/fractal-ui';
-import { AudioPlayer } from '@bma98/fractal-media';
+import { Text, useTheme } from '@fractal/fractal-ui';
+import { AudioPlayer } from '@fractal/fractal-media';
 
 export function AudioPlayerExample(): JSX.Element {
     const { spacings } = useTheme();

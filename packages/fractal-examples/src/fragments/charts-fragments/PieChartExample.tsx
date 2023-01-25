@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Box, useTheme, Button, Layer } from '@bma98/fractal-ui';
-import { PieChart, PieChartData } from '@bma98/fractal-charts';
-import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
+import { Box, useTheme, Button, Layer } from '@fractal/fractal-ui';
+import { PieChart, PieChartData } from '@fractal/fractal-charts';
+import { getValueForLargeSizeType, useWidthSizeGroup } from '@fractal/size-class';
 
 interface Props {
     data: Array<PieChartData>;

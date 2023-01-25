@@ -1,4 +1,4 @@
-import { useSizeValue } from '@bma98/size-class';
+import { useSizeValue } from '@fractal/size-class';
 import { MutableRefObject, useEffect, useState } from 'react';
 
 import { useIsMobileOS } from '../useIsMobileOS';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Text, RadioButton } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, RadioButton } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function RadioButtonFragment(): JSX.Element {
@@ -8,13 +8,13 @@ export function RadioButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Radio Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
                 <RadioButton
-                    label="Radio Button"
-                    value="Button 1"
+                    label='Radio Button'
+                    value='Button 1'
                     active={activeButton}
                     onPress={() => setActiveButton((active) => !active)}
                 />

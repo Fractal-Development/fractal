@@ -1,5 +1,5 @@
-import { MessageInput } from '@bma98/fractal-messaging';
-import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
+import { MessageInput } from '@fractal/fractal-messaging';
+import { KeyboardAvoidingLayer } from '@fractal/fractal-ui';
 import React, { useEffect, useRef } from 'react';
 
 interface Props {

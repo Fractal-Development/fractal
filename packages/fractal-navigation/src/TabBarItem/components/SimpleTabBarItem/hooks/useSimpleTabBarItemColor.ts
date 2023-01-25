@@ -1,4 +1,4 @@
-import { useTheme } from '@bma98/fractal-ui';
+import { useTheme } from '@fractal/fractal-ui';
 
 export function useSimpleTabBarItemColor(active: boolean): string {
     const { tabBar, colors } = useTheme();

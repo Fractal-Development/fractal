@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextProps, useTheme } from '@bma98/fractal-ui';
+import { Text, TextProps, useTheme } from '@fractal/fractal-ui';
 
 interface CenteredTextProps extends TextProps {
     style?: any;

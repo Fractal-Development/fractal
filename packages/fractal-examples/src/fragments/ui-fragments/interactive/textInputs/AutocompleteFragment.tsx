@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, Layer, HorizontalLayer, AutoComplete, Popover, Button, CircularIconButton, LoadIcon } from '@fractal/fractal-ui';
 
 function PopoverContent() {
     const { spacings } = useTheme();

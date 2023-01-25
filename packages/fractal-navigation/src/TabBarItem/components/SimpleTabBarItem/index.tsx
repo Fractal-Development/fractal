@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from 'react';
-import { getValueForLargeSizeType, useWidthSizeGroup } from '@bma98/size-class';
-import { Layer, LayerProps, spacings, Text, useTheme } from '@bma98/fractal-ui';
+import { getValueForLargeSizeType, useWidthSizeGroup } from '@fractal/size-class';
+import { Layer, LayerProps, spacings, Text, useTheme } from '@fractal/fractal-ui';
 import { useSimpleTabBarItemColor } from './hooks/useSimpleTabBarItemColor';
 import { SimpleTabBarItemContainer } from './components/SimpleTabBarItemContainer';
 import { useTabBarPosition } from '../../../TabBar/hooks/useTabBarPosition';

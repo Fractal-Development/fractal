@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthenticationReactRouterExample } from '@bma98/fractal-examples';
+import { AuthenticationReactRouterExample } from '@fractal/fractal-examples';
 import { firebaseConfig } from './firebaseConfig';
 
 export default function App() {

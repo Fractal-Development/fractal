@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Text, TableContainer, DetailsRow, SimpleRow } from '@bma98/fractal-ui';
+import { useTheme, Text, TableContainer, DetailsRow, SimpleRow } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 const detailsCardContent: Array<[string, string]> = [

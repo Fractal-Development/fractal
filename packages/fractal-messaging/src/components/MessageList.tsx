@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { Layer, VirtualList } from '@bma98/fractal-ui';
+import { Layer, VirtualList } from '@fractal/fractal-ui';
 import { useGetContainerWidth } from '../hooks/useGetContainerWidth';
 import { ChatMessage } from './ChatMessage';
 import { MessageListProps, MinimalMessageData } from './types';

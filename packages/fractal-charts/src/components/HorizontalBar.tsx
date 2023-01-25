@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Layer, HorizontalLayer, useTheme, LayerProps } from '@bma98/fractal-ui';
+import { Layer, HorizontalLayer, useTheme, LayerProps } from '@fractal/fractal-ui';
 
 export interface HorizontalBarProps extends Omit<LayerProps, 'children'> {
     percentage: number;

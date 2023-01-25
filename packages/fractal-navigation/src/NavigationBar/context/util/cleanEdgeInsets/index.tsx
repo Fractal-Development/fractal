@@ -1,4 +1,4 @@
-import { lightFractalTheme } from '@bma98/fractal-ui';
+import { lightFractalTheme } from '@fractal/fractal-ui';
 import { EdgeInsets } from '../../../../types/EdgeInsets';
 
 export const cleanEdgeInsets: EdgeInsets = {

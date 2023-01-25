@@ -1,5 +1,5 @@
 {
-    "name": "@bma98/size-class",
+    "name": "@fractal/size-class",
     "version": "2.2.7",
     "description": "React Native library to improve width and height handling",
     "author": "BrandonMA",

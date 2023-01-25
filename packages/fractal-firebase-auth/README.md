@@ -10,7 +10,7 @@ Example is web only so be aware of that, you can make it work on native if you e
 
 ### Installation
 
-yarn add @bma98/react-firebase-auth
+yarn add @fractal/react-firebase-auth
 
 ### Peer dependencies
 

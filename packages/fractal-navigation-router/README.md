@@ -1,4 +1,4 @@
-# @bma98/fractal-navigation
+# @fractal/fractal-navigation
 
 ## Description
 
@@ -6,4 +6,4 @@ Navigation Components easy to customize for apps made by Fractal.
 
 ### Installation
 
-yarn add @bma98/fractal-navigation
+yarn add @fractal/fractal-navigation

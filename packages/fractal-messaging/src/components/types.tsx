@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react';
-import { ButtonVariant, KeyboardAvoidingLayerProps, LayerProps, TouchableOpacityProps, ParseShape } from '@bma98/fractal-ui';
+import { ButtonVariant, KeyboardAvoidingLayerProps, LayerProps, TouchableOpacityProps, ParseShape } from '@fractal/fractal-ui';
 
 export interface BubbleTriangleProps {
     color: string;

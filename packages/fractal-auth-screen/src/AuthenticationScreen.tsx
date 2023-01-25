@@ -9,7 +9,7 @@ import {
     ScrollView,
     SafeAreaLayer,
     useTheme
-} from '@bma98/fractal-ui';
+} from '@fractal/fractal-ui';
 import { SignUp, SignIn, PasswordReset, scheduleAnimation, AuthenticationScreenProps } from './components';
 
 type AuthenticationScreenState = 'signIn' | 'signUp' | 'passwordReset';

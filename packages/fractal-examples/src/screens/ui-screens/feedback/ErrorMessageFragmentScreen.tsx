@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
-import { PaddingLayer } from '@bma98/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
+import { PaddingLayer } from '@fractal/fractal-ui';
 import { ErrorMessageFragment } from '../../../fragments/ui-fragments';
 
 export function ErrorMessageFragmentScreen(): ReactElement {

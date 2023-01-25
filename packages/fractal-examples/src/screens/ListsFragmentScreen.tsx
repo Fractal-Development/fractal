@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
-import { PaddingLayer, ScrollView } from '@bma98/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
+import { PaddingLayer, ScrollView } from '@fractal/fractal-ui';
 import { HorizontalFlatListFragment, VerticalFlatListFragment } from '../fragments/ui-fragments';
 
 export function ListsFragmentScreen() {

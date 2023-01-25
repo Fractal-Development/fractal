@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useSetThemeIdentifier, useTheme, Box, Button, Text } from '@bma98/fractal-ui';
+import { useSetThemeIdentifier, useTheme, Box, Button, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from './accessibility/getTitleTextAccessibilityProps';
 
 export function ThemeSwapperFragment(): JSX.Element {
@@ -9,7 +9,7 @@ export function ThemeSwapperFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Theme Swapper Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

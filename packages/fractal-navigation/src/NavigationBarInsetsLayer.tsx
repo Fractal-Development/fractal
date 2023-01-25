@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { LayerProps, SafeAreaLayer } from '@bma98/fractal-ui';
+import { LayerProps, SafeAreaLayer } from '@fractal/fractal-ui';
 import { useNavigationBarInsets } from './NavigationBar/hooks/useNavigationBarInsets';
 
 export function NavigationBarInsetsLayer(props: LayerProps): ReactElement {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Text, useTheme } from '@bma98/fractal-ui';
-import { YouTubeVideoPlayer } from '@bma98/fractal-media';
+import { Box, Text, useTheme } from '@fractal/fractal-ui';
+import { YouTubeVideoPlayer } from '@fractal/fractal-media';
 
 export function YouTubeVideoPlayerExample(): JSX.Element {
     const { spacings } = useTheme();

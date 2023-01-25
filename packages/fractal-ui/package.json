@@ -1,5 +1,5 @@
 {
-    "name": "@bma98/fractal-ui",
+    "name": "@fractal/fractal-ui",
     "version": "3.1.0",
     "description": "UI Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
@@ -86,7 +86,7 @@
         }
     },
     "dependencies": {
-        "@bma98/size-class": "*",
+        "@fractal/size-class": "*",
         "@shopify/flash-list": "1.3.1",
         "@tanstack/react-virtual": "^3.0.0-beta.34",
         "styled-components": "^5.3.6",

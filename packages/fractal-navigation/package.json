@@ -1,5 +1,5 @@
 {
-    "name": "@bma98/fractal-navigation",
+    "name": "@fractal/fractal-navigation",
     "version": "3.1.0",
     "description": "Navigation Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
@@ -22,7 +22,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@bma98/fractal-ui": "*",
+        "@fractal/fractal-ui": "*",
         "expo": "*",
         "react": "*",
         "react-dom": "*",
@@ -56,10 +56,10 @@
         }
     },
     "dependencies": {
-        "@bma98/size-class": "*"
+        "@fractal/size-class": "*"
     },
     "devDependencies": {
-        "@bma98/fractal-ui": "*",
+        "@fractal/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
         "react-native-safe-area-context": "4.4.1",
         "react-native-screens": "~3.18.0",

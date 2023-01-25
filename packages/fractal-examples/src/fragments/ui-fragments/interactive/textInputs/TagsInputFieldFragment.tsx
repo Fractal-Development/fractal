@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, MultiSelectInput, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, MultiSelectInput, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { getMultiSelectInputAccessibilityProps } from './accessibility/getMultiSelectInputAccessibilityProps';
 

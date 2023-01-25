@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
-import { PaddingLayer } from '@bma98/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
+import { PaddingLayer } from '@fractal/fractal-ui';
 import { AutocompleteFragment } from '../fragments/ui-fragments';
 
 export function AutoCompleteScreen() {

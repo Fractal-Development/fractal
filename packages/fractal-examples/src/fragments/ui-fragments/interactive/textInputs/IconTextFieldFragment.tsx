@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, IconTextField, Text, SearchIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, IconTextField, Text, SearchIcon } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function IconTextFieldFragment(): JSX.Element {
@@ -9,7 +9,7 @@ export function IconTextFieldFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Icon Text Field Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, ImageBackgroundProps } from '@bma98/fractal-ui';
+import { ImageBackground, ImageBackgroundProps } from '@fractal/fractal-ui';
 import { MediaPlayerButton } from './MediaPlayerButton';
 
 export interface MediaPlayerPosterProps extends ImageBackgroundProps {

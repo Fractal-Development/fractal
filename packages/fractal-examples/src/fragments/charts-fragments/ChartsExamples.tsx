@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, useTheme, Box } from '@bma98/fractal-ui';
-import { HorizontalBar } from '@bma98/fractal-charts';
+import { Text, useTheme, Box } from '@fractal/fractal-ui';
+import { HorizontalBar } from '@fractal/fractal-charts';
 import { PieChartExample } from './PieChartExample';
 import { AreaChartExample } from './AreaChartExample';
 import { QuadrantChartExample } from './QuadrantChartExample';

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { FractalAppRoot, Layer, PaddingLayer, Text } from '@bma98/fractal-ui';
+import { FractalAppRoot, Layer, PaddingLayer, Text } from '@fractal/fractal-ui';
 import {
     NavigationBarInsetsProvider,
     ResponsiveSideTabBar,
@@ -7,7 +7,7 @@ import {
     SimpleTabBarItemProps,
     TabBarContextProvider,
     TabBarInsetsLayer
-} from '@bma98/fractal-navigation';
+} from '@fractal/fractal-navigation';
 import {
     NavigationRouter,
     Routes,
@@ -18,7 +18,7 @@ import {
     useResolvedPath,
     useMatch,
     StackScreenWrapper
-} from '@bma98/fractal-navigation-router';
+} from '@fractal/fractal-navigation-router';
 
 import { ReactIcon } from './assets/ReactIcon';
 import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';

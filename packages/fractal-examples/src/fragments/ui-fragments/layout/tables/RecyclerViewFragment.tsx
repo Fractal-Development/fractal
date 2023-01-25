@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer, MemoizedBaseRow, Text, useTheme, Box, AutoSizeVirtualList } from '@bma98/fractal-ui';
+import { Layer, MemoizedBaseRow, Text, useTheme, Box, AutoSizeVirtualList } from '@fractal/fractal-ui';
 import { rowRenderer, tableDummyData } from './util/tableHelpers';
 
 function TitleRow(): JSX.Element {

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { useValueForLargeSizeType } from '@bma98/size-class';
+import { useValueForLargeSizeType } from '@fractal/size-class';
 import { TabBarProps } from '../types';
 import { CenteredTabBar } from './CenteredTabBar';
 

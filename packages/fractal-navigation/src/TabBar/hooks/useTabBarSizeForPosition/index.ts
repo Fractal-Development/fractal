@@ -1,4 +1,4 @@
-import { useTheme } from '@bma98/fractal-ui';
+import { useTheme } from '@fractal/fractal-ui';
 import { TabBarPosition } from '../../types';
 
 export function useTabBarSizeForPosition(position: TabBarPosition, hidden?: boolean): number {

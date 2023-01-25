@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, OptionsButton } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, OptionsButton } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function OptionsButtonFragment(): JSX.Element {
@@ -7,7 +7,7 @@ export function OptionsButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Options Button Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

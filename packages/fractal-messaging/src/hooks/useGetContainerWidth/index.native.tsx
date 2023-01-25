@@ -1,4 +1,4 @@
-import { useSizeValue } from '@bma98/size-class';
+import { useSizeValue } from '@fractal/size-class';
 import { useCallback, useState } from 'react';
 
 export function useGetContainerWidth(): [number, unknown] {

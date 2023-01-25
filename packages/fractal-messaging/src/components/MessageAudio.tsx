@@ -1,5 +1,5 @@
 import React from 'react';
-import { AudioMessagePlayer } from '@bma98/fractal-media';
+import { AudioMessagePlayer } from '@fractal/fractal-media';
 import { MessageMediaProps } from './types';
 import { MESSAGE_AUDIO_HEIGHT } from '../constants';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';

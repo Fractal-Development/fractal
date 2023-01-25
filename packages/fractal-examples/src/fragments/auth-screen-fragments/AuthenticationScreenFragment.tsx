@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { AuthenticationScreen } from '@bma98/fractal-auth-screen';
+import { AuthenticationScreen } from '@fractal/fractal-auth-screen';
 
 const fakeFunction = async () => {};
 

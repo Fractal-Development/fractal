@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Text, useTheme } from '@bma98/fractal-ui';
-import { AudioMessagePlayer } from '@bma98/fractal-media';
+import { Box, Text, useTheme } from '@fractal/fractal-ui';
+import { AudioMessagePlayer } from '@fractal/fractal-media';
 
 export function AudioMessagePlayerExample(): JSX.Element {
     const { spacings } = useTheme();

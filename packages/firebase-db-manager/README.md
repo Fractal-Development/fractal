@@ -1,4 +1,4 @@
-# @bma98/firebase-db-manager
+# @fractal/firebase-db-manager
 
 ## Description
 
@@ -12,7 +12,7 @@ Example is web only so be aware of that, you can make it work on native if you e
 
 ### Installation
 
-yarn add @bma98/firebase-db-manager
+yarn add @fractal/firebase-db-manager
 
 ### Peer dependencies
 

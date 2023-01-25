@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Button } from '@bma98/fractal-ui';
+import { Button } from '@fractal/fractal-ui';
 
 export function BuggyComponent(): JSX.Element {
     const [showError, setShowError] = useState(false);

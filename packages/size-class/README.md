@@ -1,4 +1,4 @@
-# @bma98/size-class
+# @fractal/size-class
 
 React Native library to handle different sizes inspired on iOS size classes.
 
@@ -8,10 +8,7 @@ React Native library to handle different sizes inspired on iOS size classes.
 
 There are 4 possible values for a Size(enum).
 
-Compact(phone).
-Medium(Half an iPad).
-Large(11 inch iPad).
-Extra Large(12.9 iPad).
+Compact(phone). Medium(Half an iPad). Large(11 inch iPad). Extra Large(12.9 iPad).
 
 ## DeviceType
 

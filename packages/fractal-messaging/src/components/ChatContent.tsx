@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardAvoidingLayer } from '@bma98/fractal-ui';
+import { KeyboardAvoidingLayer } from '@fractal/fractal-ui';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';

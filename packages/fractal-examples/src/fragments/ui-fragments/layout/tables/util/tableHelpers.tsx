@@ -1,5 +1,5 @@
 import React from 'react';
-import { lightFractalTheme, DetailsRow, PaddingLayer, Box, Text, colors } from '@bma98/fractal-ui';
+import { lightFractalTheme, DetailsRow, PaddingLayer, Box, Text, colors } from '@fractal/fractal-ui';
 
 const tableDummyData: Array<number> = Array.from(Array(1001).keys());
 

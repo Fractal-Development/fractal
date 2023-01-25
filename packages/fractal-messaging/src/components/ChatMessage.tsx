@@ -1,5 +1,5 @@
 import React, { useState, useCallback, ReactNode } from 'react';
-import { Layer, Popover, useTheme } from '@bma98/fractal-ui';
+import { Layer, Popover, useTheme } from '@fractal/fractal-ui';
 import { ChatMessageProps, MinimalMessageData } from './types';
 import { MessageActions } from './MessageActions';
 import { BaseChatMessage } from './BaseChatMessage';

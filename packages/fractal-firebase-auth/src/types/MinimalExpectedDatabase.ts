@@ -1,4 +1,4 @@
-import { Database, Collection } from '@bma98/firebase-db-manager';
+import { Database, Collection } from '@fractal/firebase-db-manager';
 import { MinimalUserData } from './MinimalUser';
 
 type UsersCollection<T extends MinimalUserData, S> = Collection<T, S>;
