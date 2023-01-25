@@ -1,2 +1,2 @@
-export * from './AuthExample';
+export * from './AuthenticationReactRouterExample';
 export * from './MainExample';

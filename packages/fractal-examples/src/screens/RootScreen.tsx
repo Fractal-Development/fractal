@@ -1,5 +1,5 @@
 import { NavigationBarInsetsLayer } from '@bma98/fractal-navigation';
-import { useNavigate } from '../router';
+import { useNavigate } from '@bma98/fractal-navigation-router';
 import { Layer, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, VirtualList, SimpleRow } from '@bma98/fractal-ui';
 import React, { ReactElement, useCallback, useState } from 'react';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';

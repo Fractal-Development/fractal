@@ -7,6 +7,7 @@ const withTM = require('next-transpile-modules')([
     '@bma98/fractal-media',
     '@bma98/fractal-messaging',
     '@bma98/fractal-navigation',
+    '@bma98/firebase-db-manager',
     'd3-shape',
     'd3-path'
 ]);
