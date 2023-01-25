@@ -1,8 +1,7 @@
-import { DimensionType, HeightSizeClass, WidthSizeClass } from '../types';
-import { useSizeValue } from './useSizeValue';
-import { useDeviceType } from './useDeviceType';
-import { SizeGroup } from '../types';
-import { getSizeType } from '../util/getSizeType';
+import { DimensionType, HeightSizeClass, WidthSizeClass, SizeGroup } from '../../types';
+import { useSizeValue } from '../useSizeValue';
+import { useDeviceType } from '../useDeviceType';
+import { getSizeType } from '../../util/getSizeType';
 
 export function useSizeGroup(dimensionType: DimensionType): SizeGroup {
     const deviceType = useDeviceType();

@@ -27,12 +27,12 @@
         "utility-types": "^3.10.0"
     },
     "dependencies": {
-        "expo-device": "~5.0.0",
         "ua-parser-js": "^0.7.24"
     },
     "peerDependencies": {
         "react": "*",
-        "react-dom": "*"
+        "react-dom": "*",
+        "expo-device": "~5.0.0"
     },
     "sideEffects": false
 }
