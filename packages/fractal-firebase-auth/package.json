@@ -67,7 +67,7 @@
         }
     },
     "dependencies": {
-        "@bma98/firebase-db-manager": "^2.0.0",
+        "@bma98/firebase-db-manager": "*",
         "@bma98/fractal-auth-screen": "*",
         "immer": "^9.0.15",
         "react-native-svg": "13.4.0"

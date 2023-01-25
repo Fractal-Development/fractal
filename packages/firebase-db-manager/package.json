@@ -1,0 +1,64 @@
+{
+    "name": "@bma98/firebase-db-manager",
+    "version": "2.0.0",
+    "description": "Firebase wrapper to have more self explenatory methods.",
+    "author": "BrandonMA",
+    "license": "MIT",
+    "repository": "BrandonMA/firebase-db-manager",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "source": "src/index.tsx",
+    "files": [
+        "dist",
+        "package.json",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "expo-module build",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+        "lint": "eslint 'src/**/*.ts*'",
+        "lint:fix": "eslint --fix 'src/**/*.ts*'",
+        "expo-module": "expo-module",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+    },
+    "peerDependencies": {
+        "@react-native-firebase/app": "^16.5.0",
+        "@react-native-firebase/firestore": "^16.5.0",
+        "@react-native-firebase/functions": "^16.5.0",
+        "@react-native-firebase/storage": "^16.5.0",
+        "firebase": "^9.10.0"
+    },
+    "peerDependenciesMeta": {
+        "@react-native-firebase/app": {
+            "optional": true
+        },
+        "@react-native-firebase/firestore": {
+            "optional": true
+        },
+        "@react-native-firebase/functions": {
+            "optional": true
+        },
+        "@react-native-firebase/storage": {
+            "optional": true
+        },
+        "firebase": {
+            "optional": true
+        }
+    },
+    "dependencies": {
+        "immer": "^9.0.15",
+        "uuid": "^3.4.0"
+    },
+    "devDependencies": {
+        "@react-native-firebase/app": "^16.5.0",
+        "@react-native-firebase/firestore": "^16.5.0",
+        "@react-native-firebase/functions": "^16.5.0",
+        "@react-native-firebase/storage": "^16.5.0",
+        "@types/uuid": "^7.0.3",
+        "firebase": "^9.10.0",
+        "immer": "^9.0.15",
+        "utility-types": "^3.10.0"
+    },
+    "sideEffects": false
+}
