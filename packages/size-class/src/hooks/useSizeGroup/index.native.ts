@@ -1,11 +1,3 @@
-import { DimensionType, HeightSizeClass, WidthSizeClass, SizeGroup } from '../../types';
-import { useSizeValue } from '../useSizeValue';
-import { useDeviceType } from '../useDeviceType';
-import { getSizeType } from '../../util/getSizeType';
+import { useExpensiveSizeGroup } from '../useExpensiveSizeGroup';
 
-export function useSizeGroup(dimensionType: DimensionType): SizeGroup {
-    const deviceType = useDeviceType();
-    const sizeValue = useSizeValue(dimensionType);
-    const sizeType = getSizeType(deviceType, sizeValue, dimensionType === 'width' ? WidthSizeClass : HeightSizeClass);
-    return [sizeType, deviceType, sizeValue];
-}
+export const useSizeGroup = useExpensiveSizeGroup;

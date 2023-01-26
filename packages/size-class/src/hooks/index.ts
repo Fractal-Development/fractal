@@ -5,3 +5,4 @@ export * from './useValueForCompactSizeType';
 export * from './useValueForLargeSizeType';
 export * from './useSizeValue';
 export * from './useDeviceType';
+export * from './useExpensiveSizeGroup';

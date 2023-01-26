@@ -7,18 +7,19 @@ import canUseDOM from '../../util/canUseDom';
 // So you can use this hook freely
 // Just be aware of not using it if resizing is too frequent.
 
-function capitalize(text): string {
+function capitalize(text: string): string {
     if (typeof text !== 'string') return '';
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 export function useSizeValue(dimensionType: DimensionType): number {
     const propertyName = `inner${capitalize(dimensionType)}`;
-    const [dimension, setDimension] = useState(canUseDOM() ? window[propertyName] ?? 0 : 0);
+    const [dimension, setDimension] = useState<number>(canUseDOM() ? window[propertyName] ?? 0 : 0);
 
     const onChange = useCallback(
-        (event) => {
-            setDimension(event.target[propertyName]);
+        (event: UIEvent) => {
+            const dimensionValue = Number(event.target?.[propertyName]);
+            setDimension(dimensionValue);
         },
         [propertyName]
     );
