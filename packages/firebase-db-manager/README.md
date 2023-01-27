@@ -16,6 +16,6 @@ yarn add @fractal/firebase-db-manager
 
 ### Peer dependencies
 
-yarn add @react-native-firebase/app @react-native-firebase/firestore @react-native-firebase/storage firebase
+yarn add @react-native-firebase/app @react-native-firebase/firestore "@react-native-firebase/functions @react-native-firebase/storage firebase
 
 They are not included on the library itself as you may be using different versions for other libraries(or any other reason for this matter). If we add them to the library, if you have a different version, let's say firebase 7.9.0, init is not gonna work.

@@ -17,43 +17,44 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### Expo(Web, iOS and Android)
 
 ```
-"@motify/core": "^0.17.1",
-"@react-native-community/datetimepicker": "^6.0.1",
-"@react-native-community/slider": "^4.2.1",
-"@react-native-picker/picker": "^2.1.0",
-"expo-blur": "^11.0.0",
-"expo-document-picker": "^10.1.3",
-"moti": "^0.17.1",
-"react": "17.0.2",
-"react-native": "~0.67.3",
-"react-native-reanimated": "^2.4.1",
-"react-native-svg": "12.3.0",
-"react-virtualized-auto-sizer": "^1.0.6",
-"react-native-gesture-handler": "^2.3.2"
+"@react-native-community/datetimepicker": "6.5.2",
+"@react-native-community/slider": "4.2.4",
+"@react-native-picker/picker": "2.4.8",
+"expo-blur": "~12.0.1",
+"expo-document-picker": "~11.0.1",
+"moti": "^0.21.0",
+"react": "18.1.0",
+"react-native": "0.70.5",
+"react-native-reanimated": "~2.12.0",
+"react-native-svg": "13.4.0",
+"react-virtualized-auto-sizer": "^1.0.7"
+"react-native-gesture-handler": "~2.8.0",
+"framer-motion": "^6.5.1",
 ```
 
 #### React Native(iOS and Android only)
 
 ```
-"@motify/core": "^0.17.1",
-"@react-native-community/datetimepicker": "^6.0.1",
-"@react-native-community/slider": "^4.2.1",
-"@react-native-picker/picker": "^2.1.0",
-"expo-blur": "^11.0.0",
-"expo-document-picker": "^10.1.3",
-"moti": "^0.17.1",
-"react": "17.0.2",
-"react-native": "~0.67.3",
-"react-native-reanimated": "^2.4.1",
-"react-native-svg": "12.3.0",
-"react-native-gesture-handler": "^2.3.2"
+"@react-native-community/datetimepicker": "6.5.2",
+"@react-native-community/slider": "4.2.4",
+"@react-native-picker/picker": "2.4.8",
+"expo-blur": "~12.0.1",
+"expo-document-picker": "~11.0.1",
+"moti": "^0.21.0",
+"react": "18.1.0",
+"react-native": "0.70.5",
+"react-native-reanimated": "~2.12.0",
+"react-native-svg": "13.4.0",
+"react-virtualized-auto-sizer": "^1.0.7"
+"react-native-gesture-handler": "~2.8.0",
+"framer-motion": "^6.5.1",
 ```
 
 #### React.JS or Next.JS(Web only)
 
 ```
-"react": "17.0.2",
-"react-virtualized-auto-sizer": "^1.0.6"
+"react": "18.1.0",
+"react-virtualized-auto-sizer": "^1.0.7"
 ```
 
 ### Is there more configuration needed?
