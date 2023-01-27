@@ -49,11 +49,6 @@ export function AudioPlayerExample(): JSX.Element {
                         audioSrc: 'https://react-native-track-player.js.org/example/Rhythm%20City%20(Demo).mp3'
                     },
                     {
-                        title: 'Whip',
-                        image: 'https://react-native-track-player.js.org/example/hls/whip/whip.jpeg',
-                        audioSrc: 'https://react-native-track-player.js.org/example/hls/whip/playlist.m3u8'
-                    },
-                    {
                         title: 'Smooth Jazz 24/7',
                         image: 'https://react-native-track-player.js.org/example/smooth-jazz-24-7.jpeg',
                         audioSrc: 'https://ais-sa5.cdnstream1.com/b75154_128mp3'
