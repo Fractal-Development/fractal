@@ -17,7 +17,7 @@
         "@fractal/fractal-messaging": "*",
         "@fractal/fractal-ui": "*",
         "@fractal/size-class": "*",
-        "framer-motion": "^7.5.1",
+        "framer-motion": "^6.5.1",
         "next": "12.3.1",
         "next-transpile-modules": "^9.0.0",
         "react": "18.2.0",
