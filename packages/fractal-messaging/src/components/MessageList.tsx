@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import { Layer, VirtualList } from '@fractal/fractal-ui';
-import { useGetContainerWidth } from '../hooks/useGetContainerWidth';
 import { ChatMessage } from './ChatMessage';
 import { MessageListProps, MinimalMessageData } from './types';
 
@@ -17,7 +16,6 @@ export function MessageList<T extends MinimalMessageData>({
     const listView = useRef<VirtualList<T>>(null);
     const containerRef = useRef<any>();
     const messagesLength = useRef<number>(0);
-    const [containerWidth, containerLayoutProps] = useGetContainerWidth(containerRef);
 
     useEffect(() => {
         if (messagesLength.current !== messages.length) {
@@ -39,8 +37,7 @@ export function MessageList<T extends MinimalMessageData>({
                     onSharePress,
                     messageActions,
                     getBubbleColor,
-                    parsePatterns,
-                    containerWidth
+                    parsePatterns
                 });
             }
             return (
@@ -52,15 +49,14 @@ export function MessageList<T extends MinimalMessageData>({
                     messageActions={messageActions}
                     getBubbleColor={getBubbleColor}
                     parsePatterns={parsePatterns}
-                    containerWidth={containerWidth}
                 />
             );
         },
-        [containerWidth, getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]
+        [getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]
     );
 
     return (
-        <Layer flex={1} ref={containerRef} {...containerLayoutProps} {...layerProps}>
+        <Layer flex={1} ref={containerRef} {...layerProps}>
             {messages.length > 0 && (
                 <VirtualList
                     ref={listView}
