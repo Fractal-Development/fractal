@@ -28,7 +28,12 @@ const whiteListedKeys = [
     'aria-placeholder',
     'aria-disabled',
     'selectable',
-    'aria-label'
+    'aria-label',
+    'autoCapitalize',
+    'inputMode',
+    'dir',
+    'rows',
+    'readOnly'
 ];
 
 export function shouldForwardProp(key: string): boolean {
