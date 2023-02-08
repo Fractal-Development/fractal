@@ -1,4 +1,5 @@
 export * from './audioPlayers';
+export * from './ImageZoom';
 export * from './Video';
 export * from './YouTubeVideoPlayer';
 export * from './LoveToggleButton';
