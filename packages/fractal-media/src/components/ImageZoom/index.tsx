@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useRef, useState } from 'react';
-import { Button, HorizontalLayer, Image, ImageSourcePropType, Layer } from '@fractal/fractal-ui';
+import { HorizontalLayer, Image, ImageSourcePropType, Layer, SearchIcon, Text, TouchableOpacity, useTheme } from '@fractal/fractal-ui';
 import { motion } from 'framer-motion';
 
 type ImageZoomProps = {
@@ -13,11 +13,13 @@ type ImageZoomProps = {
 };
 
 const ImageZoom = memo(({ imageSrc }: ImageZoomProps) => {
+    const { colors, sizes } = useTheme();
     const containerRef = useRef<HTMLDivElement>(null);
     const constraintsRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 1, height: 2 });
     const [scale, setScale] = useState<number>(1);
     const canDrag = scale > 1;
+    const canZoom = scale < 3;
 
     const width = dimensions.width * scale;
     const height = dimensions.height * scale;
@@ -33,13 +35,13 @@ const ImageZoom = memo(({ imageSrc }: ImageZoomProps) => {
 
     const zoomIn = () => {
         setScale((currentScale) => {
-            return currentScale - 0.4;
+            return Math.round(currentScale + 0.4);
         });
     };
 
     const zoomOut = () => {
         setScale((currentScale) => {
-            return currentScale + 0.4;
+            return Math.round(currentScale - 0.4);
         });
     };
 
@@ -54,7 +56,6 @@ const ImageZoom = memo(({ imageSrc }: ImageZoomProps) => {
                 <motion.div
                     animate={!canDrag ? { y: 0, x: 0 } : undefined}
                     drag={canDrag}
-                    onDoubleClick={zoomIn}
                     dragConstraints={constraintsRef}
                     whileDrag={{
                         cursor: 'move'
@@ -68,8 +69,41 @@ const ImageZoom = memo(({ imageSrc }: ImageZoomProps) => {
                 </motion.div>
             </Layer>
             <HorizontalLayer position='absolute' right={0} bottom={10} left={0} alignItems='center' justifyContent='center'>
-                <Button text='-' onPress={zoomIn} disabled={!canDrag} />
-                <Button text='+' onPress={zoomOut} />
+                <TouchableOpacity
+                    width={sizes.interactiveItemHeight}
+                    height={sizes.interactiveItemHeight}
+                    backgroundColor='#00000077'
+                    alignItems='center'
+                    justifyContent='center'
+                    onPress={zoomOut}
+                    disabled={!canDrag}
+                >
+                    <Text fontSize={22} color={colors.white}>
+                        -
+                    </Text>
+                </TouchableOpacity>
+                <Layer
+                    width={sizes.interactiveItemHeight}
+                    height={sizes.interactiveItemHeight}
+                    backgroundColor='#00000077'
+                    alignItems='center'
+                    justifyContent='center'
+                >
+                    <SearchIcon fill={colors.white} width={20} height={20} />
+                </Layer>
+                <TouchableOpacity
+                    width={sizes.interactiveItemHeight}
+                    height={sizes.interactiveItemHeight}
+                    alignItems='center'
+                    justifyContent='center'
+                    backgroundColor='#00000077'
+                    onPress={zoomIn}
+                    disabled={!canZoom}
+                >
+                    <Text fontSize={22} color={colors.white}>
+                        +
+                    </Text>
+                </TouchableOpacity>
             </HorizontalLayer>
         </Layer>
     );
