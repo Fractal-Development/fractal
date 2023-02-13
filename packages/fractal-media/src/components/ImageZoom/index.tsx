@@ -6,15 +6,22 @@ type ImageZoomProps = {
     imageSrc: ImageSourcePropType;
     onRequestClose: () => void;
     onZoom: (scaled: boolean) => void;
-    onLongPress: (image: ImageSourcePropType) => void;
+    onLongPress?: (image: ImageSourcePropType) => void;
     delayLongPress: number;
     swipeToCloseEnabled?: boolean;
     doubleTapToZoomEnabled?: boolean;
+    containerWidth?: number;
+    containerHeight?: number;
 };
 
-const ImageZoom = memo(({ imageSrc }: ImageZoomProps) => {
+function round(number: number) {
+    return Number(number.toFixed(1));
+}
+
+const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidth, containerHeight }: ImageZoomProps) => {
     const { colors, sizes } = useTheme();
     const containerRef = useRef<HTMLDivElement>(null);
+    const [containerDimensions, setContainerDimensions] = useState({ width: 1, height: 2 });
     const constraintsRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 1, height: 2 });
     const [scale, setScale] = useState<number>(1);
@@ -26,37 +33,36 @@ const ImageZoom = memo(({ imageSrc }: ImageZoomProps) => {
 
     useEffect(() => {
         if (containerRef.current != null) {
-            const {
-                current: { clientWidth, clientHeight }
-            } = containerRef;
+            const { current } = containerRef;
+            const clientWidth = containerWidth ?? current.clientWidth;
+            const clientHeight = containerHeight ?? current.clientHeight;
             setDimensions({ width: clientWidth, height: clientHeight });
+            setContainerDimensions({ width: clientWidth, height: clientHeight });
         }
-    }, []);
+    }, [containerHeight, containerWidth]);
 
     const zoomIn = () => {
-        setScale((currentScale) => {
-            return Math.round(currentScale + 0.4);
-        });
+        if (canZoom) {
+            setScale((currentScale) => {
+                return round(currentScale + 0.4);
+            });
+        }
     };
 
     const zoomOut = () => {
         setScale((currentScale) => {
-            return Math.round(currentScale - 0.4);
+            return round(currentScale - 0.4);
         });
     };
 
     return (
         <Layer ref={containerRef} flex={1}>
-            <Layer
-                ref={constraintsRef}
-                height={containerRef.current?.clientHeight}
-                width={containerRef.current?.clientWidth}
-                overflow='hidden'
-            >
+            <Layer ref={constraintsRef} height={containerDimensions.height} width={containerDimensions.width} overflow='hidden'>
                 <motion.div
                     animate={!canDrag ? { y: 0, x: 0 } : undefined}
                     drag={canDrag}
                     dragConstraints={constraintsRef}
+                    onDoubleClick={doubleTapToZoomEnabled ? zoomIn : undefined}
                     whileDrag={{
                         cursor: 'move'
                     }}

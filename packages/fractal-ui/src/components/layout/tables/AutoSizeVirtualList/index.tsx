@@ -3,7 +3,10 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 import { VirtualList } from '../VirtualList';
 import { VirtualListProps } from '../VirtualList/types';
 
-function AutoSizeVirtualListRender<TItem>({ customWebContainerStyle, ...others }: VirtualListProps<TItem>, ref?: any): ReactElement {
+const AutoSizeVirtualListRender = <TItem extends unknown>(
+    { customWebContainerStyle, ...others }: VirtualListProps<TItem>,
+    ref?: any
+): ReactElement => {
     return (
         <AutoSizer>
             {({ height, width }) => (
@@ -11,7 +14,7 @@ function AutoSizeVirtualListRender<TItem>({ customWebContainerStyle, ...others }
             )}
         </AutoSizer>
     );
-}
+};
 
 const AutoSizeVirtualList = forwardRef(AutoSizeVirtualListRender);
 
