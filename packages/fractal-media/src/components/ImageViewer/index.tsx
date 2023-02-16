@@ -1,22 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { AnimatePresence, ImageSourcePropType, Layer, Text, TouchableOpacity } from '@fractal/fractal-ui';
+import { AnimatePresence, Layer, TouchableOpacity } from '@fractal/fractal-ui';
 import { motion } from 'framer-motion';
 import { ImageZoom } from '../ImageZoom';
-
-type Props = {
-    images: ImageSourcePropType[];
-    keyExtractor?: (imageSrc: ImageSourcePropType, index: number) => string;
-    imageIndex: number;
-    onRequestClose: () => void;
-    onLongPress?: (image: ImageSourcePropType) => void;
-    onImageIndexChange?: (imageIndex: number) => void;
-    backgroundColor?: string;
-    swipeToCloseEnabled?: boolean;
-    doubleTapToZoomEnabled?: boolean;
-    delayLongPress?: number;
-    header?: (props: { imageIndex: number }) => JSX.Element;
-    footer?: (props: { imageIndex: number }) => JSX.Element;
-};
+import { ChevronLeft, ChevronRight } from '../../assets';
+import { ImageVieweProps } from './ImageVieweProps';
 
 const DEFAULT_DELAY_LONG_PRESS = 800;
 
@@ -43,21 +30,30 @@ const variants = {
 
 export function ImageViewer({
     images,
+    imageIndex,
+    onImageIndexChange,
     onRequestClose,
-    onLongPress,
+    onLongPress = () => {},
     backgroundColor = '#000',
     swipeToCloseEnabled,
     doubleTapToZoomEnabled,
-    delayLongPress = DEFAULT_DELAY_LONG_PRESS
-}: Props) {
-    const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+    delayLongPress = DEFAULT_DELAY_LONG_PRESS,
+    header,
+    footer
+}: ImageVieweProps) {
+    const [currentImageIndex, setCurrentImageIndex] = useState<number>(imageIndex);
     const [direction, setDirection] = useState<1 | -1>(1);
     const containerRef = useRef<HTMLDivElement>(null);
+
+    const hideLeft = currentImageIndex === 0;
+    const hideRight = currentImageIndex === images.length - 1;
 
     const paginate = (newDirection: 1 | -1) => {
         const newImageIndex = currentImageIndex + newDirection;
         if (newImageIndex >= 0 && newImageIndex < images.length) {
-            setCurrentImageIndex(currentImageIndex + newDirection);
+            const newImageIndex = currentImageIndex + newDirection;
+            setCurrentImageIndex(newImageIndex);
+            onImageIndexChange?.(newImageIndex);
             setDirection(newDirection);
         }
     };
@@ -101,44 +97,54 @@ export function ImageViewer({
                         />
                     </motion.div>
                 </AnimatePresence>
-                <TouchableOpacity
-                    position='absolute'
-                    left={10}
-                    backgroundColor='white'
-                    justifyContent='center'
-                    alignItems='center'
-                    height={40}
-                    width={40}
-                    borderRadius={20}
-                    style={{ top: 'calc(50% - 20px)' }}
-                    zIndex={2}
-                    onPress={() => {
-                        paginate(-1);
-                    }}
-                >
-                    <Text fontWeight='bold' fontSize={18} color='black' style={{ transform: 'scale(-1)' }}>
-                        ‣
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    position='absolute'
-                    right={10}
-                    backgroundColor='white'
-                    justifyContent='center'
-                    alignItems='center'
-                    height={40}
-                    width={40}
-                    borderRadius={20}
-                    style={{ top: 'calc(50% - 20px)' }}
-                    zIndex={2}
-                    onPress={() => {
-                        paginate(1);
-                    }}
-                >
-                    <Text fontWeight='bold' fontSize={18} color='black'>
-                        ‣
-                    </Text>
-                </TouchableOpacity>
+                {header != null ? (
+                    <Layer zIndex={2} position='absolute' top={0} right={0} left={0}>
+                        {header({ imageIndex: currentImageIndex })}
+                    </Layer>
+                ) : null}
+                {footer != null ? (
+                    <Layer zIndex={2} position='absolute' bottom={0} right={0} left={0}>
+                        {footer({ imageIndex: currentImageIndex })}
+                    </Layer>
+                ) : null}
+                {hideLeft ? null : (
+                    <TouchableOpacity
+                        position='absolute'
+                        left={10}
+                        backgroundColor='white'
+                        justifyContent='center'
+                        alignItems='center'
+                        height={40}
+                        width={40}
+                        borderRadius={20}
+                        style={{ top: 'calc(50% - 20px)' }}
+                        zIndex={2}
+                        onPress={() => {
+                            paginate(-1);
+                        }}
+                    >
+                        <ChevronLeft fill='black' width={24} height={24} />
+                    </TouchableOpacity>
+                )}
+                {hideRight ? null : (
+                    <TouchableOpacity
+                        position='absolute'
+                        right={10}
+                        backgroundColor='white'
+                        justifyContent='center'
+                        alignItems='center'
+                        height={40}
+                        width={40}
+                        borderRadius={20}
+                        style={{ top: 'calc(50% - 20px)' }}
+                        zIndex={2}
+                        onPress={() => {
+                            paginate(1);
+                        }}
+                    >
+                        <ChevronRight fill='black' width={24} height={24} />
+                    </TouchableOpacity>
+                )}
             </Layer>
         </Layer>
     );

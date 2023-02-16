@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaLayer, TouchableOpacity, Text } from '@fractal/fractal-ui';
 
 type Props = {
-    onRequestClose: () => void;
+    onRequestClose?: () => void;
 };
 
 export const ImageDefaultHeader = ({ onRequestClose }: Props) => (

@@ -8,7 +8,7 @@ import { createCache } from '../utils';
 const CACHE_SIZE = 50;
 const imageDimensionsCache = createCache(CACHE_SIZE);
 
-const useImageDimensions = (image: ImageSourcePropType): Dimensions | null => {
+export function useImageDimensions(image: ImageSourcePropType): Dimensions | null {
     const [dimensions, setDimensions] = useState<Dimensions | null>(null);
 
     const getImageDimensions = (image: ImageSourcePropType): Promise<Dimensions> => {
@@ -71,6 +71,4 @@ const useImageDimensions = (image: ImageSourcePropType): Dimensions | null => {
     }, [image]);
 
     return dimensions;
-};
-
-export default useImageDimensions;
+}

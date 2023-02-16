@@ -1,17 +1,20 @@
 import { ImageSourcePropType } from '@fractal/fractal-ui';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Image } from 'react-native';
 
-const useImagePrefetch = (images: ImageSourcePropType[]) => {
-    useEffect(() => {
-        images.forEach((image) => {
-            if (typeof image === 'string') {
-                return Image.prefetch(image);
-            }
-            return undefined;
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-};
+export function useImagePrefetch(images: ImageSourcePropType[]) {
+    const isMounted = useRef<boolean>(false);
 
-export default useImagePrefetch;
+    useEffect(() => {
+        if (!isMounted.current) {
+            images.forEach((image) => {
+                if (typeof image === 'string') {
+                    return Image.prefetch(image);
+                }
+                return undefined;
+            });
+        } else {
+            isMounted.current = true;
+        }
+    }, [images]);
+}

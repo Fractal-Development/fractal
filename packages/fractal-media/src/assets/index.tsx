@@ -1,3 +1,5 @@
+export * from './ChevronLeft';
+export * from './ChevronRight';
 export * from './HeartIcon';
 export * from './NextIcon';
 export * from './PauseIcon';

@@ -1,14 +1,10 @@
 import React, { useCallback, useRef, useState, memo } from 'react';
-
 import { Animated, ScrollView, Dimensions, NativeScrollEvent, NativeSyntheticEvent, NativeMethods } from 'react-native';
-
-import useImageDimensions from '../../hooks/useImageDimensions';
-import usePanResponder from '../../hooks/usePanResponder';
-
+import styled from 'styled-components/native';
+import { useImageDimensions, usePanResponder } from '../../hooks';
 import { getImageStyles, getImageTransform } from '../../utils';
 import { ImageLoading } from './ImageLoading';
-import styled from 'styled-components/native';
-import { ImageSourcePropType } from '@fractal/fractal-ui';
+import { ImageZoomProps } from './ImageZoomProps';
 
 const SWIPE_CLOSE_OFFSET = 75;
 const SWIPE_CLOSE_VELOCITY = 1.75;
@@ -21,16 +17,6 @@ const StyledScrollView = styled(ScrollView)`
     height: ${SCREEN_HEIGHT}px;
 `;
 
-type Props = {
-    imageSrc: ImageSourcePropType;
-    onRequestClose: () => void;
-    onZoom: (isZoomed: boolean) => void;
-    onLongPress: (image: ImageSourcePropType) => void;
-    delayLongPress: number;
-    swipeToCloseEnabled?: boolean;
-    doubleTapToZoomEnabled?: boolean;
-};
-
 const ImageZoom = memo(
     ({
         imageSrc,
@@ -38,9 +24,9 @@ const ImageZoom = memo(
         onRequestClose,
         onLongPress,
         delayLongPress,
-        swipeToCloseEnabled = true,
+        swipeToCloseEnabled = false,
         doubleTapToZoomEnabled = true
-    }: Props) => {
+    }: ImageZoomProps) => {
         const imageContainer = useRef<ScrollView & NativeMethods>(null);
         const imageDimensions = useImageDimensions(imageSrc);
         const [translate, scale] = getImageTransform(imageDimensions, SCREEN);
@@ -57,8 +43,7 @@ const ImageZoom = memo(
                     });
                 }
             },
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-            [imageContainer]
+            [onZoom]
         );
 
         const onLongPressHandler = useCallback(() => {
@@ -86,7 +71,7 @@ const ImageZoom = memo(
             const offsetY = nativeEvent?.contentOffset?.y ?? 0;
 
             if ((Math.abs(velocityY) > SWIPE_CLOSE_VELOCITY && offsetY > SWIPE_CLOSE_OFFSET) || offsetY > SCREEN_HEIGHT / 2) {
-                onRequestClose();
+                onRequestClose?.();
             }
         };
 

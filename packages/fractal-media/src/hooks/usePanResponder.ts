@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useRef, useState } from 'react';
+import { useMemo, useEffect, useRef } from 'react';
 import {
     Animated,
     Dimensions,
@@ -29,18 +29,18 @@ type Props = {
     delayLongPress: number;
 };
 
-const usePanResponder = ({
+export function usePanResponder({
     initialScale,
     initialTranslate,
     onZoom,
     doubleTapToZoomEnabled,
     onLongPress,
     delayLongPress
-}: Props): Readonly<[GestureResponderHandlers, Animated.Value, Animated.ValueXY]> => {
+}: Props): Readonly<[GestureResponderHandlers, Animated.Value, Animated.ValueXY]> {
     const longPressHandlerRef = useRef<NodeJS.Timeout | null>(null);
 
     const meaningfulShift = MIN_DIMENSION * 0.01;
-    const [scaleValue] = useState(new Animated.Value(initialScale));
+    const scaleValue = useMemo(() => new Animated.Value(initialScale), [initialScale]);
     const translateValue = new Animated.ValueXY(initialTranslate);
 
     const imageDimensions = getImageDimensionsByTranslate(initialTranslate, SCREEN);
@@ -351,6 +351,4 @@ const usePanResponder = ({
     const panResponder = useMemo(() => createPanResponder(handlers), [handlers]);
 
     return [panResponder.panHandlers, scaleValue, translateValue];
-};
-
-export default usePanResponder;
+}

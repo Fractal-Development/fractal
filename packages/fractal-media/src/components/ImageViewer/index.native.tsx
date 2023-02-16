@@ -1,33 +1,16 @@
 import React, { useCallback, useRef, useEffect, useState } from 'react';
 import { Animated, Dimensions, StyleSheet, VirtualizedList } from 'react-native';
 import { ImageSourcePropType, Layer } from '@fractal/fractal-ui';
-import { ImageZoom } from '..';
-import useAnimatedComponents from '../../hooks/useAnimatedComponents';
-import useImageIndexChange from '../../hooks/useImageIndexChange';
-import useRequestClose from '../../hooks/useRequestClose';
-import { ImageDefaultHeader } from './ImageDefaultHeader';
-
-type Props = {
-    images: ImageSourcePropType[];
-    keyExtractor?: (imageSrc: ImageSourcePropType, index: number) => string;
-    imageIndex: number;
-    onRequestClose: () => void;
-    onLongPress?: (image: ImageSourcePropType) => void;
-    onImageIndexChange?: (imageIndex: number) => void;
-    backgroundColor?: string;
-    swipeToCloseEnabled?: boolean;
-    doubleTapToZoomEnabled?: boolean;
-    delayLongPress?: number;
-    header?: (props: { imageIndex: number }) => JSX.Element;
-    footer?: (props: { imageIndex: number }) => JSX.Element;
-};
+import { ImageZoom } from '../ImageZoom';
+import { useAnimatedComponents, useImageIndexChange } from '../../hooks';
+import { ImageVieweProps } from './ImageVieweProps';
 
 const DEFAULT_BG_COLOR = '#000';
 const DEFAULT_DELAY_LONG_PRESS = 800;
 const SCREEN = Dimensions.get('screen');
 const SCREEN_WIDTH = SCREEN.width;
 
-function ImageViewing({
+function ImageViewerBase({
     images,
     keyExtractor,
     imageIndex,
@@ -40,10 +23,9 @@ function ImageViewing({
     delayLongPress = DEFAULT_DELAY_LONG_PRESS,
     header,
     footer
-}: Props) {
+}: ImageVieweProps) {
     const imageList = useRef<VirtualizedList<ImageSourcePropType>>(null);
     const [scrollEnabled, setScrollEnabled] = useState(true);
-    const [opacity, onRequestCloseEnhanced] = useRequestClose(onRequestClose);
     const [currentImageIndex, onScroll] = useImageIndexChange(imageIndex, SCREEN);
     const [headerTransform, footerTransform, toggleBarsVisible] = useAnimatedComponents();
 
@@ -51,8 +33,7 @@ function ImageViewing({
         if (onImageIndexChange) {
             onImageIndexChange(currentImageIndex);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentImageIndex]);
+    }, [currentImageIndex, onImageIndexChange]);
 
     const onZoom = useCallback(
         (isScaled: boolean) => {
@@ -63,14 +44,12 @@ function ImageViewing({
     );
 
     return (
-        <Layer flex={1} backgroundColor={backgroundColor} opacity={opacity}>
-            <Animated.View style={[styles.header, { transform: headerTransform }]}>
-                {header != null ? (
-                    header({ imageIndex: currentImageIndex })
-                ) : (
-                    <ImageDefaultHeader onRequestClose={onRequestCloseEnhanced} />
-                )}
-            </Animated.View>
+        <Layer flex={1} backgroundColor={backgroundColor}>
+            {header != null ? (
+                <Animated.View style={[styles.header, { transform: headerTransform }]}>
+                    {header({ imageIndex: currentImageIndex })}
+                </Animated.View>
+            ) : null}
             <VirtualizedList
                 ref={imageList}
                 data={images}
@@ -93,7 +72,7 @@ function ImageViewing({
                     <ImageZoom
                         onZoom={onZoom}
                         imageSrc={imageSrc}
-                        onRequestClose={onRequestCloseEnhanced}
+                        onRequestClose={onRequestClose}
                         onLongPress={onLongPress}
                         delayLongPress={delayLongPress}
                         swipeToCloseEnabled={swipeToCloseEnabled}
@@ -106,20 +85,16 @@ function ImageViewing({
                 }
                 scrollEnabled={scrollEnabled}
             />
-            {footer != null && (
+            {footer != null ? (
                 <Animated.View style={[styles.footer, { transform: footerTransform }]}>
                     {footer({ imageIndex: currentImageIndex })}
                 </Animated.View>
-            )}
+            ) : null}
         </Layer>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#000'
-    },
     header: {
         position: 'absolute',
         width: '100%',
@@ -134,6 +109,6 @@ const styles = StyleSheet.create({
     }
 });
 
-const EnhancedImageViewing = (props: Props) => <ImageViewing key={props.imageIndex} {...props} />;
+const ImageViewer = (props: ImageVieweProps) => <ImageViewerBase key={props.imageIndex} {...props} />;
 
-export { EnhancedImageViewing };
+export { ImageViewer };

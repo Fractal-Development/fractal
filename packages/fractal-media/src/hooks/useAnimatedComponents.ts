@@ -6,7 +6,7 @@ const ANIMATION_CONFIG = {
     useNativeDriver: true
 };
 
-const useAnimatedComponents = () => {
+export function useAnimatedComponents() {
     const headerTranslate = new Animated.ValueXY(INITIAL_POSITION);
     const footerTranslate = new Animated.ValueXY(INITIAL_POSITION);
 
@@ -34,6 +34,4 @@ const useAnimatedComponents = () => {
     const footerTransform = footerTranslate.getTranslateTransform();
 
     return [headerTransform, footerTransform, toggleVisible] as const;
-};
-
-export default useAnimatedComponents;
+}

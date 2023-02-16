@@ -1,26 +1,21 @@
-import React, { memo, useEffect, useRef, useState } from 'react';
-import { HorizontalLayer, Image, ImageSourcePropType, Layer, SearchIcon, Text, TouchableOpacity, useTheme } from '@fractal/fractal-ui';
-import { motion } from 'framer-motion';
-
-type ImageZoomProps = {
-    imageSrc: ImageSourcePropType;
-    onRequestClose: () => void;
-    onZoom: (scaled: boolean) => void;
-    onLongPress?: (image: ImageSourcePropType) => void;
-    delayLongPress: number;
-    swipeToCloseEnabled?: boolean;
-    doubleTapToZoomEnabled?: boolean;
-    containerWidth?: number;
-    containerHeight?: number;
-};
+import React, { memo, MouseEvent, useEffect, useRef, useState } from 'react';
+import { HorizontalLayer, Image, Layer, SearchIcon, Text, TouchableOpacity, useTheme } from '@fractal/fractal-ui';
+import { motion, useAnimationControls } from 'framer-motion';
+import { ImageZoomProps } from './ImageZoomProps';
 
 function round(number: number) {
     return Number(number.toFixed(1));
 }
 
 const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidth, containerHeight }: ImageZoomProps) => {
-    const { colors, sizes } = useTheme();
+    const { colors, sizes, spacings } = useTheme();
+    const controls = useAnimationControls();
     const containerRef = useRef<HTMLDivElement>(null);
+    const [flexStyles, setFlexStyles] = useState<{ [key: string]: string } | undefined>({
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    });
     const [containerDimensions, setContainerDimensions] = useState({ width: 1, height: 2 });
     const constraintsRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 1, height: 2 });
@@ -41,11 +36,23 @@ const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidt
         }
     }, [containerHeight, containerWidth]);
 
-    const zoomIn = () => {
-        if (canZoom) {
-            setScale((currentScale) => {
-                return round(currentScale + 0.4);
+    const zoomIn = (event?: MouseEvent<HTMLDivElement>) => {
+        const newScale = round(scale + 0.4);
+        if (event != null) {
+            const { clientX, clientY } = event;
+            const x = (clientX / 2) * newScale;
+            const y = (clientY / 2) * newScale;
+            controls.start({ x: -x, y: -y });
+            setFlexStyles(undefined);
+        } else {
+            setFlexStyles({
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
             });
+        }
+        if (canZoom) {
+            setScale(newScale);
         }
     };
 
@@ -55,14 +62,28 @@ const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidt
         });
     };
 
+    useEffect(() => {
+        if (!canDrag) {
+            controls.start({ x: 0, y: 0 });
+        }
+    }, [canDrag, controls]);
+
     return (
         <Layer ref={containerRef} flex={1}>
-            <Layer ref={constraintsRef} height={containerDimensions.height} width={containerDimensions.width} overflow='hidden'>
+            <motion.div
+                ref={constraintsRef}
+                onDoubleClick={doubleTapToZoomEnabled ? zoomIn : undefined}
+                style={{
+                    height: containerDimensions.height,
+                    width: containerDimensions.width,
+                    overflow: 'hidden',
+                    ...flexStyles
+                }}
+            >
                 <motion.div
-                    animate={!canDrag ? { y: 0, x: 0 } : undefined}
+                    animate={controls}
                     drag={canDrag}
                     dragConstraints={constraintsRef}
-                    onDoubleClick={doubleTapToZoomEnabled ? zoomIn : undefined}
                     whileDrag={{
                         cursor: 'move'
                     }}
@@ -73,7 +94,7 @@ const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidt
                 >
                     <Image height={height} width={width} source={imageSrc} resizeMode='contain' />
                 </motion.div>
-            </Layer>
+            </motion.div>
             <HorizontalLayer position='absolute' right={0} bottom={10} left={0} alignItems='center' justifyContent='center'>
                 <TouchableOpacity
                     width={sizes.interactiveItemHeight}
@@ -83,6 +104,8 @@ const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidt
                     justifyContent='center'
                     onPress={zoomOut}
                     disabled={!canDrag}
+                    borderTopLeftRadius={spacings.xs}
+                    borderBottomLeftRadius={spacings.xs}
                 >
                     <Text fontSize={22} color={colors.white}>
                         -
@@ -105,6 +128,8 @@ const ImageZoom = memo(({ imageSrc, doubleTapToZoomEnabled = true, containerWidt
                     backgroundColor='#00000077'
                     onPress={zoomIn}
                     disabled={!canZoom}
+                    borderTopRightRadius={spacings.xs}
+                    borderBottomRightRadius={spacings.xs}
                 >
                     <Text fontSize={22} color={colors.white}>
                         +

@@ -1,14 +1,10 @@
 import React, { useCallback, useRef, useState, memo } from 'react';
-
 import { Animated, Dimensions, ScrollView, View, NativeScrollEvent, NativeSyntheticEvent, TouchableWithoutFeedback } from 'react-native';
-
-import useDoubleTapToZoom from '../../hooks/useDoubleTapToZoom';
-import useImageDimensions from '../../hooks/useImageDimensions';
-
+import { useDoubleTapToZoom, useImageDimensions } from '../../hooks';
 import { getImageStyles, getImageTransform } from '../../utils';
 import { ImageLoading } from './ImageLoading';
 import styled from 'styled-components/native';
-import { ImageSourcePropType } from '@fractal/fractal-ui';
+import { ImageZoomProps } from './ImageZoomProps';
 
 const SWIPE_CLOSE_OFFSET = 75;
 const SWIPE_CLOSE_VELOCITY = 1.55;
@@ -21,16 +17,6 @@ const StyledScrollView = styled(ScrollView)`
     height: ${SCREEN_HEIGHT}px;
 `;
 
-type Props = {
-    imageSrc: ImageSourcePropType;
-    onRequestClose: () => void;
-    onZoom: (scaled: boolean) => void;
-    onLongPress: (image: ImageSourcePropType) => void;
-    delayLongPress: number;
-    swipeToCloseEnabled?: boolean;
-    doubleTapToZoomEnabled?: boolean;
-};
-
 const ImageZoom = memo(
     ({
         imageSrc,
@@ -38,9 +24,9 @@ const ImageZoom = memo(
         onRequestClose,
         onLongPress,
         delayLongPress,
-        swipeToCloseEnabled = true,
+        swipeToCloseEnabled = false,
         doubleTapToZoomEnabled = true
-    }: Props) => {
+    }: ImageZoomProps) => {
         const scrollViewRef = useRef<ScrollView>(null);
         const [loaded, setLoaded] = useState(false);
         const [scaled, setScaled] = useState(false);
@@ -69,11 +55,10 @@ const ImageZoom = memo(
                 setScaled(scaled);
 
                 if (!scaled && swipeToCloseEnabled && Math.abs(velocityY) > SWIPE_CLOSE_VELOCITY) {
-                    onRequestClose();
+                    onRequestClose?.();
                 }
             },
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-            [scaled]
+            [onRequestClose, onZoom, swipeToCloseEnabled]
         );
 
         const onScroll = ({ nativeEvent }: NativeSyntheticEvent<NativeScrollEvent>) => {

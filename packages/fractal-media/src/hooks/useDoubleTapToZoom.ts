@@ -9,7 +9,7 @@ let lastTapTS: number | null = null;
  * This is iOS only.
  * Same functionality for Android implemented inside usePanResponder hook.
  */
-function useDoubleTapToZoom(scrollViewRef: React.RefObject<ScrollView>, scaled: boolean, screen: Dimensions) {
+export function useDoubleTapToZoom(scrollViewRef: React.RefObject<ScrollView>, scaled: boolean, screen: Dimensions) {
     const handleDoubleTap = useCallback(
         (event: NativeSyntheticEvent<NativeTouchEvent>) => {
             const nowTS = new Date().getTime();
@@ -42,11 +42,8 @@ function useDoubleTapToZoom(scrollViewRef: React.RefObject<ScrollView>, scaled: 
                 lastTapTS = nowTS;
             }
         },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [scaled]
+        [scaled, screen.height, screen.width, scrollViewRef]
     );
 
     return handleDoubleTap;
 }
-
-export default useDoubleTapToZoom;
