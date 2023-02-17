@@ -12,6 +12,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "dependencies": {
+        "@expo/webpack-config": "^0.17.2",
         "@fractal/fractal-auth-screen": "*",
         "@fractal/fractal-charts": "*",
         "@fractal/fractal-examples": "*",
@@ -21,7 +22,6 @@
         "@fractal/fractal-navigation": "*",
         "@fractal/fractal-navigation-router": "*",
         "@fractal/fractal-ui": "*",
-        "@expo/webpack-config": "^0.17.2",
         "@react-native-community/datetimepicker": "6.5.2",
         "@react-native-community/slider": "4.2.4",
         "@react-native-firebase/app": "^16.5.0",
