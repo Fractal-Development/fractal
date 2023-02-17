@@ -7,6 +7,7 @@ import { BaseChatMessage } from './BaseChatMessage';
 export function ChatMessage<T extends MinimalMessageData>({
     message,
     onFavoritePress,
+    onMessagePress,
     onSharePress,
     messageActions,
     getBubbleColor,
@@ -40,6 +41,10 @@ export function ChatMessage<T extends MinimalMessageData>({
         [hidePopover, onSharePress]
     );
 
+    const handleMessagePress = () => {
+        onMessagePress?.(message);
+    };
+
     const renderPopoverChildren = useCallback((): ReactNode => {
         if (messageActions) {
             return messageActions(message);
@@ -65,6 +70,7 @@ export function ChatMessage<T extends MinimalMessageData>({
                         getBubbleColor={getBubbleColor}
                         parsePatterns={parsePatterns}
                         onLongPress={showPopover}
+                        onPress={handleMessagePress}
                     >
                         {children}
                     </BaseChatMessage>

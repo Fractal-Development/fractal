@@ -8,13 +8,14 @@ import { MessageVideo } from './MessageVideo';
 import { MessageText } from './MessageText';
 
 interface BaseChatMessageProps<T extends MinimalMessageData>
-    extends Omit<ChatMessageProps<T>, 'onFavoritePress' | 'onSharePress' | 'messageActions'> {
+    extends Omit<ChatMessageProps<T>, 'onFavoritePress' | 'onSharePress' | 'messageActions' | 'onMessagePress'> {
     onLongPress?: () => void;
+    onPress?: () => void;
 }
 
 export const BaseChatMessage = forwardRef(
     <T extends MinimalMessageData>(
-        { message, getBubbleColor, children, parsePatterns, onLongPress }: BaseChatMessageProps<T>,
+        { message, getBubbleColor, children, parsePatterns, onLongPress, onPress }: BaseChatMessageProps<T>,
         ref: any
     ): JSX.Element => {
         const { colors } = useTheme();
@@ -31,6 +32,7 @@ export const BaseChatMessage = forwardRef(
                         : colors.mainInteractiveColor
                 }
                 onLongPress={onLongPress}
+                onPress={onPress}
             >
                 {message.image ? (
                     <MessageImage source={message.image} />

@@ -6,6 +6,7 @@ import { MessageListProps, MinimalMessageData } from './types';
 export function MessageList<T extends MinimalMessageData>({
     messages,
     onFavoritePress,
+    onMessagePress,
     onSharePress,
     messageActions,
     getBubbleColor,
@@ -34,6 +35,7 @@ export function MessageList<T extends MinimalMessageData>({
                     message: item,
                     index,
                     onFavoritePress,
+                    onMessagePress,
                     onSharePress,
                     messageActions,
                     getBubbleColor,
@@ -45,6 +47,7 @@ export function MessageList<T extends MinimalMessageData>({
                     message={item}
                     key={item.id}
                     onFavoritePress={onFavoritePress}
+                    onMessagePress={onMessagePress}
                     onSharePress={onSharePress}
                     messageActions={messageActions}
                     getBubbleColor={getBubbleColor}
@@ -52,7 +55,7 @@ export function MessageList<T extends MinimalMessageData>({
                 />
             );
         },
-        [getBubbleColor, messageActions, onFavoritePress, onSharePress, parsePatterns, rowRenderer]
+        [getBubbleColor, messageActions, onFavoritePress, onMessagePress, onSharePress, parsePatterns, rowRenderer]
     );
 
     return (

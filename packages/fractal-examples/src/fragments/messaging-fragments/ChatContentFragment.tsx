@@ -29,6 +29,11 @@ const defaultMessages: MinimalMessageData[] = [
         text: 'Lorem Ipsum has been the bob'
     },
     {
+        id: '4a',
+        senderType: 'bot',
+        image: 'https://picsum.photos/id/7/1920/1280'
+    },
+    {
         id: '5',
         senderType: 'bot',
         text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
@@ -46,7 +51,7 @@ const defaultMessages: MinimalMessageData[] = [
     {
         id: '8',
         senderType: 'bot',
-        image: 'https://picsum.photos/id/237/200/160'
+        image: 'https://picsum.photos/id/237/1920/1280'
     },
     {
         id: '9',
