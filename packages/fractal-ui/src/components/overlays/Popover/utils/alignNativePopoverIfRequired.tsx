@@ -34,7 +34,7 @@ export function alignNativePopoverIfRequired(
     if (isOverflowingTop) {
         style = {
             left: style.left,
-            top: anchorLayoutRectangle.y + anchorLayoutRectangle.height,
+            top: anchorLayoutRectangle.y + anchorLayoutRectangle.height - popoverLayoutRectangle.height / 2,
             transform: isVertical ? style.transform : []
         };
     }
