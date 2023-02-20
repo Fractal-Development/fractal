@@ -38,8 +38,10 @@ export function ChatContent<T extends MinimalMessageData>({
             </KeyboardAvoidingLayer>
         );
     const showImageModalViewer = (message: T) => {
-        updateImageIndex(message);
-        setIsVisibleImageViewer(true);
+        if (message.image != null) {
+            updateImageIndex(message);
+            setIsVisibleImageViewer(true);
+        }
     };
 
     const hideImageModalViewer = () => {
