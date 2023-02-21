@@ -6,6 +6,7 @@
     "license": "MIT",
     "repository": "BrandonMA/firebase-db-manager",
     "main": "./dist/index.js",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "source": "src/index.tsx",
     "files": [

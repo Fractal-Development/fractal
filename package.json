@@ -18,6 +18,7 @@
         "web:expo": "cd apps/fractal-ui-expo-example && yarn web",
         "web:react": "cd apps/fractal-ui-react-js-example && yarn start",
         "web:next": "cd apps/fractal-ui-next-js-example && yarn dev",
+        "web:vite": "cd apps/fractal-ui-vite-example && yarn dev",
         "native": "cd apps/fractal-ui-expo-example && yarn start"
     },
     "devDependencies": {

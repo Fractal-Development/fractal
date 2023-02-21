@@ -6,6 +6,9 @@
     "license": "MIT",
     "repository": "BrandonMA/react-firebase-auth",
     "main": "dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "source": "src/index.tsx",
     "files": [
         "dist",
         "package.json",
