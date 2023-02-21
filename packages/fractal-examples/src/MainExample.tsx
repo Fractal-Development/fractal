@@ -86,7 +86,7 @@ function TabLayout() {
 
 export function MainExample(): JSX.Element {
     return (
-        <FractalAppRoot handleThemeManually>
+        <FractalAppRoot>
             <NavigationRouter>
                 <Routes>
                     <Route path='/' element={<TabLayout />}>
