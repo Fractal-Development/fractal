@@ -27,7 +27,6 @@ const whiteListedKeys = [
     'role',
     'aria-placeholder',
     'aria-disabled',
-    'selectable',
     'aria-label',
     'autoCapitalize',
     'inputMode',
