@@ -30,6 +30,7 @@ export class ErrorBoundaryMessage extends React.Component<ErrorMessageProps, Sta
 
     render(): React.ReactNode {
         const { hasError, errorTitle, errorMessage } = this.state;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { onError, ...layerProps } = this.props;
 
         if (hasError) {
