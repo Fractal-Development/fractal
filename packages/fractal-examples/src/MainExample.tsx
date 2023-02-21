@@ -25,7 +25,7 @@ import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScre
 import { AutoCompleteScreen } from './screens/AutoCompleteScreen';
 import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
 import { ListsFragmentScreen } from './screens/ListsFragmentScreen';
-import { MediaExamplesFragmentScreen } from './screens/MediaExamplesFragmentScree';
+import { MediaExamplesFragmentScreen } from './screens/MediaExamplesFragmentScreen';
 import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
 import { RootScreen } from './screens/RootScreen';
 import { ChipFragmentScreen } from './screens/ui-screens/dataDisplay/ChipFragmentScreen';
