@@ -6,21 +6,21 @@ import { AreaChartExample } from './AreaChartExample';
 import { QuadrantChartExample } from './QuadrantChartExample';
 
 export function ChartsExamples(): JSX.Element {
-    const { spacings } = useTheme();
-    const randomColor = () => `#${((Math.random() * 0xffffff) << 0).toString(16)}000000`.slice(0, 7);
+    const { spacings, colors } = useTheme();
+    //const randomColor = () => `#${((Math.random() * 0xffffff) << 0).toString(16)}000000`.slice(0, 7);
 
     const pieData = [
         {
             value: 50,
-            color: randomColor()
+            color: colors.mainInteractiveColor
         },
         {
             value: 10,
-            color: randomColor()
+            color: colors.alternativeInteractiveColor
         },
         {
             value: 40,
-            color: randomColor()
+            color: colors.successInteractiveColor
         }
     ];
 

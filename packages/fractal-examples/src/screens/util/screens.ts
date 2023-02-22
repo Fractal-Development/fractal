@@ -47,6 +47,10 @@ export const screens = {
     autocompleteFragment: {
         name: 'Autocomplete Fragment',
         path: 'autocomplete_fragment_screen'
+    },
+    chartsFragment: {
+        name: 'Charts Fragment',
+        path: 'charts_fragment'
     }
 };
 

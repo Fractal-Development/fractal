@@ -21,19 +21,22 @@ import {
 } from '@fractal/fractal-navigation-router';
 
 import { ReactIcon } from './assets/ReactIcon';
-import { AuthenticationScreenFragmentScreen } from './screens/AuthenticationScreenFragmentScreen';
-import { AutoCompleteScreen } from './screens/AutoCompleteScreen';
-import { ChatContentFragmentScreen } from './screens/ChatContentFragmentScreen';
-import { ListsFragmentScreen } from './screens/ListsFragmentScreen';
-import { MediaExamplesFragmentScreen } from './screens/MediaExamplesFragmentScreen';
-import { RecyclerViewFragmentScreen } from './screens/RecyclerViewFragmentScreen';
-import { RootScreen } from './screens/RootScreen';
-import { ChipFragmentScreen } from './screens/ui-screens/dataDisplay/ChipFragmentScreen';
-import { ChipListFragmentScreen } from './screens/ui-screens/dataDisplay/ChipListFragmentScreen';
-import { ColorTabListFragmentScreen } from './screens/ui-screens/dataDisplay/ColorTabListFragmentScreen';
-import { ActivityIndicatorFragmentScreen } from './screens/ui-screens/feedback/ActivityIndicatorFragmentScreen';
-import { ErrorMessageFragmentScreen } from './screens/ui-screens/feedback/ErrorMessageFragmentScreen';
-import { screens } from './screens/util/screens';
+import {
+    AuthenticationScreenFragmentScreen,
+    AutoCompleteScreen,
+    ChatContentFragmentScreen,
+    ListsFragmentScreen,
+    MediaExamplesFragmentScreen,
+    RecyclerViewFragmentScreen,
+    RootScreen,
+    ChipListFragmentScreen,
+    ColorTabListFragmentScreen,
+    ActivityIndicatorFragmentScreen,
+    ErrorMessageFragmentScreen,
+    screens,
+    ChipFragmentScreen,
+    ChartsExamplesScreen
+} from './screens';
 
 interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
     to: string;
@@ -246,6 +249,19 @@ export function MainExample(): JSX.Element {
                                         }}
                                     >
                                         <AutoCompleteScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.chartsFragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.chartsFragment.name
+                                        }}
+                                    >
+                                        <ChartsExamplesScreen />
                                     </StackScreenWrapper>
                                 }
                             />

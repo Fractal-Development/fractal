@@ -6,7 +6,7 @@ import { HorizontalFlatListFragment, VerticalFlatListFragment } from '../fragmen
 export function ListsFragmentScreen() {
     return (
         <NavigationBarInsetsLayer>
-            <ScrollView>
+            <ScrollView flex={1}>
                 <PaddingLayer>
                     <HorizontalFlatListFragment />
                     <VerticalFlatListFragment />

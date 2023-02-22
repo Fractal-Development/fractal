@@ -1,14 +1,14 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
 import { PaddingLayer, ScrollView } from '@fractal/fractal-ui';
-import { MediaExamples } from '../fragments/media-fragments';
+import { ChartsExamples } from '../fragments/charts-fragments';
 
-export function MediaExamplesFragmentScreen(): ReactElement {
+export function ChartsExamplesScreen() {
     return (
         <NavigationBarInsetsLayer>
             <ScrollView flex={1}>
                 <PaddingLayer>
-                    <MediaExamples />
+                    <ChartsExamples />
                 </PaddingLayer>
             </ScrollView>
         </NavigationBarInsetsLayer>

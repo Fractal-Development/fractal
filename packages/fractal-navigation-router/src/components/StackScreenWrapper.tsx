@@ -18,7 +18,7 @@ export function StackScreenWrapper({ navBarProps, children }: StackScreenWrapper
     return (
         <>
             <NavigationBar goBack={goBack} {...navBarProps} />
-            <Layer flex={1} backgroundColor={colors.background}>
+            <Layer backgroundColor={colors.background} flexGrow={1} flexBasis={1}>
                 {children}
             </Layer>
         </>
