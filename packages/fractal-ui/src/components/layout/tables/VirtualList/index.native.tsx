@@ -14,8 +14,16 @@ export class VirtualList<TItem> extends React.PureComponent<VirtualListProps<TIt
     }
 
     render() {
-        const { data, renderItem, estimatedItemSize, horizontal, initialScrollIndex, keyExtractor, nativeContentContainerStyle } =
-            this.props;
+        const {
+            data,
+            renderItem,
+            estimatedItemSize,
+            horizontal,
+            initialScrollIndex,
+            keyExtractor,
+            nativeContentContainerStyle,
+            nestedScrollEnabled
+        } = this.props;
 
         return (
             <FlashList
@@ -27,6 +35,7 @@ export class VirtualList<TItem> extends React.PureComponent<VirtualListProps<TIt
                 initialScrollIndex={initialScrollIndex}
                 keyExtractor={keyExtractor}
                 contentContainerStyle={nativeContentContainerStyle}
+                nestedScrollEnabled={nestedScrollEnabled}
             />
         );
     }

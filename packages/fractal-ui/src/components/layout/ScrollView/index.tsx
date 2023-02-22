@@ -23,7 +23,13 @@ const StyledScrollView = styled(Layer)`
     }
 `;
 
-export function ScrollView({ horizontal, showsHorizontalScrollIndicator = true, ...others }: ScrollViewProps): JSX.Element {
+export function ScrollView({
+    horizontal,
+    showsHorizontalScrollIndicator = true,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    nestedScrollEnabled,
+    ...others
+}: ScrollViewProps): JSX.Element {
     return (
         <StyledScrollView
             horizontal={horizontal}

@@ -25,4 +25,8 @@ export interface VirtualListProps<TItem> {
     keyExtractor?: (item: TItem, index: number) => string;
     customWebContainerStyle?: CSSProperties;
     nativeContentContainerStyle?: ContentStyle;
+    /**
+     * Enables nested scrolling for Android API level 21+. Nested scrolling is supported by default on iOS.
+     */
+    nestedScrollEnabled?: boolean;
 }

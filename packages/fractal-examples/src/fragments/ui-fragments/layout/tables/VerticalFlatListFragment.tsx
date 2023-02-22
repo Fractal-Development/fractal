@@ -20,7 +20,7 @@ function Table(): JSX.Element {
         <TableContainer title='Fixed Row Height' flex={1}>
             <SearchBar placeholder='Buscar' buttonText='Buscar' marginBottom={spacings.lg} enableSearchButton />
             <Layer flex={1}>
-                <VirtualList data={tableDummyData} estimatedItemSize={sizes.baseRowHeight} renderItem={rowRenderer} />
+                <VirtualList nestedScrollEnabled data={tableDummyData} estimatedItemSize={sizes.baseRowHeight} renderItem={rowRenderer} />
             </Layer>
         </TableContainer>
     );
