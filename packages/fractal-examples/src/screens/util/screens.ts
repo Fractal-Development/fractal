@@ -51,6 +51,46 @@ export const screens = {
     chartsFragment: {
         name: 'Charts Fragment',
         path: 'charts_fragment'
+    },
+    buttons_fragment: {
+        name: 'Buttons Fragment',
+        path: 'buttons_fragmen'
+    },
+    radio_button_fragment: {
+        name: 'Radio Button Fragment',
+        path: 'radio_button_fragment'
+    },
+    text_inputs_fragment: {
+        name: 'Text Inputs Fragment',
+        path: 'text_inputs_fragment'
+    },
+    interactive_fragment: {
+        name: 'Interactive Fragment',
+        path: 'interactive_fragment'
+    },
+    layout_fragment: {
+        name: 'Layout Fragment',
+        path: 'layout_fragment'
+    },
+    content_media_fragment: {
+        name: 'Content Media Fragment',
+        path: 'content_media_fragment'
+    },
+    overlays_fragment: {
+        name: 'Overlays Fragment',
+        path: 'overlays_fragment'
+    },
+    texts_fragment: {
+        name: 'Texts Fragment',
+        path: 'texts_fragment'
+    },
+    icons_fragment: {
+        name: 'Icons Fragment',
+        path: 'icons_fragment'
+    },
+    theme_wapper_fragment: {
+        name: 'Theme Swapper Fragment',
+        path: 'theme_wapper_fragment'
     }
 };
 

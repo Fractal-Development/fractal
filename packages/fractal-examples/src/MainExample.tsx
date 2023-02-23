@@ -35,7 +35,17 @@ import {
     ErrorMessageFragmentScreen,
     screens,
     ChipFragmentScreen,
-    ChartsExamplesScreen
+    ChartsExamplesScreen,
+    ButtonsFragmentScreen,
+    RadioButtonFragmentScreen,
+    TextInputsFragmentScreen,
+    InteractiveFragmentScreen,
+    LayoutFragmentScreen,
+    ContentMediaFragmentScreen,
+    OverlaysFragmentScreen,
+    TextsFragmentScreen,
+    IconsFragmentScreen,
+    ThemeSwapperFragmentScreen
 } from './screens';
 
 interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
@@ -262,6 +272,136 @@ export function MainExample(): JSX.Element {
                                         }}
                                     >
                                         <ChartsExamplesScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.buttons_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.buttons_fragment.name
+                                        }}
+                                    >
+                                        <ButtonsFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.radio_button_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.radio_button_fragment.name
+                                        }}
+                                    >
+                                        <RadioButtonFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.text_inputs_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.text_inputs_fragment.name
+                                        }}
+                                    >
+                                        <TextInputsFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.interactive_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.interactive_fragment.name
+                                        }}
+                                    >
+                                        <InteractiveFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.layout_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.layout_fragment.name
+                                        }}
+                                    >
+                                        <LayoutFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.content_media_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.content_media_fragment.name
+                                        }}
+                                    >
+                                        <ContentMediaFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.overlays_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.overlays_fragment.name
+                                        }}
+                                    >
+                                        <OverlaysFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.texts_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.texts_fragment.name
+                                        }}
+                                    >
+                                        <TextsFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.icons_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.icons_fragment.name
+                                        }}
+                                    >
+                                        <IconsFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.theme_wapper_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.theme_wapper_fragment.name
+                                        }}
+                                    >
+                                        <ThemeSwapperFragmentScreen />
                                     </StackScreenWrapper>
                                 }
                             />
