@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { FractalAppRoot, Layer, PaddingLayer, Text } from '@fractal/fractal-ui';
+import { FractalAppRoot, Layer, PaddingLayer, Text, Background } from '@fractal/fractal-ui';
 import {
     NavigationBarInsetsProvider,
     ResponsiveSideTabBar,
@@ -269,9 +269,11 @@ export function MainExample(): JSX.Element {
                         <Route
                             path='credits'
                             element={
-                                <PaddingLayer>
-                                    <Text>Empty for now...</Text>
-                                </PaddingLayer>
+                                <Background>
+                                    <PaddingLayer>
+                                        <Text>Empty for now...</Text>
+                                    </PaddingLayer>
+                                </Background>
                             }
                         />
                     </Route>
