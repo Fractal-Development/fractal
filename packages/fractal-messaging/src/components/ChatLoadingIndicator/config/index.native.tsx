@@ -1,3 +1,4 @@
+import { MotiTransition } from 'moti';
 export const loadingCircleVariants = {
     start: {
         opacity: 0,
@@ -8,10 +9,11 @@ export const loadingCircleVariants = {
         scale: 1
     }
 };
-export const loadingCircleTransition = {
+export const loadingCircleTransition: MotiTransition = {
     loop: true,
-    duration: 600,
-    type: 'timing'
+    duration: 900,
+    type: 'timing',
+    delay: 0
 };
 
 export const loadingCircleTransitionTwo = {
