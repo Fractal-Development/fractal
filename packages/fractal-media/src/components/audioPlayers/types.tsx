@@ -15,4 +15,5 @@ export interface MinimalAudioPlayerObject {
     handlePlayPause: () => void;
     setPositionManually: (time: number) => Promise<void>;
     setRateManually: (time: number) => Promise<void>;
+    loading: boolean;
 }

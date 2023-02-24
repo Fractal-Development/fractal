@@ -137,6 +137,7 @@ export function useMinimalAudioPlayer(audioSrc: AudioSource, messageID: string =
         isPlaying,
         handlePlayPause,
         setPositionManually,
-        setRateManually
+        setRateManually,
+        loading: !isLoadedInitialSound.current
     };
 }
