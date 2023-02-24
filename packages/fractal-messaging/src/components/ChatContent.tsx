@@ -7,6 +7,7 @@ import { ChatLoadingIndicator } from './ChatLoadingIndicator';
 import { MessageInput } from './MessageInput';
 import { useImagesSource } from '../hooks/useImagesSource';
 import { ImageCounter } from './ImageCounter';
+import { ChatFooterContainer } from './ChatFooterContainer';
 
 export function ChatContent<T extends MinimalMessageData>({
     messages,
@@ -30,12 +31,21 @@ export function ChatContent<T extends MinimalMessageData>({
     const footer =
         customFooter != null ? (
             customFooter
-        ) : isLoading ? (
-            <ChatLoadingIndicator />
         ) : (
-            <KeyboardAvoidingLayer keyboardVerticalOffset={100} {...keyboardAvoidingViewProps}>
-                <MessageInput useForegroundVariant placeholder={placeholder} onSend={onSend} buttonVariant={messageInputButtonVariant} />
-            </KeyboardAvoidingLayer>
+            <ChatFooterContainer>
+                {isLoading ? (
+                    <ChatLoadingIndicator />
+                ) : (
+                    <KeyboardAvoidingLayer keyboardVerticalOffset={100} {...keyboardAvoidingViewProps}>
+                        <MessageInput
+                            useForegroundVariant
+                            placeholder={placeholder}
+                            onSend={onSend}
+                            buttonVariant={messageInputButtonVariant}
+                        />
+                    </KeyboardAvoidingLayer>
+                )}
+            </ChatFooterContainer>
         );
     const showImageModalViewer = (message: T) => {
         if (message.image != null) {

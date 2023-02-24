@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { Layer, VirtualList } from '@fractal/fractal-ui';
+import { Layer, useTheme, VirtualList } from '@fractal/fractal-ui';
 import { ChatMessage } from './ChatMessage';
 import { MessageListProps, MinimalMessageData } from './types';
 
@@ -14,6 +14,7 @@ export function MessageList<T extends MinimalMessageData>({
     parsePatterns,
     ...layerProps
 }: MessageListProps<T>): JSX.Element {
+    const { spacings } = useTheme();
     const listView = useRef<VirtualList<T>>(null);
     const containerRef = useRef<any>();
     const messagesLength = useRef<number>(0);
@@ -67,6 +68,8 @@ export function MessageList<T extends MinimalMessageData>({
                     renderItem={renderChatMessage}
                     estimatedItemSize={200}
                     initialScrollIndex={messages.length - 1}
+                    nativeContentContainerStyle={{ paddingTop: spacings.m }}
+                    customWebContainerStyle={{ paddingTop: spacings.m }}
                 />
             )}
         </Layer>

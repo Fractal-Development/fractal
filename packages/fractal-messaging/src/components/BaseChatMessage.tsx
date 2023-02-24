@@ -18,7 +18,7 @@ export const BaseChatMessage = forwardRef(
         { message, getBubbleColor, children, parsePatterns, onLongPress, onPress }: BaseChatMessageProps<T>,
         ref: any
     ): JSX.Element => {
-        const { colors } = useTheme();
+        const { colors, spacings } = useTheme();
 
         return (
             <Bubble
@@ -33,6 +33,8 @@ export const BaseChatMessage = forwardRef(
                 }
                 onLongPress={onLongPress}
                 onPress={onPress}
+                marginLeft={spacings.m}
+                marginRight={spacings.m}
             >
                 {message.image ? (
                     <MessageImage source={message.image} />

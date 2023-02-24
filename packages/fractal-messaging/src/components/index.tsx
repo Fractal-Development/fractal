@@ -3,6 +3,7 @@ export * from './ChatLoadingIndicator';
 export * from './BaseChatMessage';
 export * from './Bubble';
 export * from './ChatContent';
+export * from './ChatFooterContainer';
 export * from './ChatMessage';
 export * from './MessageActions';
 export * from './MessageAudio';

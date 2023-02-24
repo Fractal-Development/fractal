@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer, LayerProps } from '@fractal/fractal-ui';
+import { Layer, LayerProps, useTheme } from '@fractal/fractal-ui';
 import { loadingCircleTransition, loadingCircleTransitionThree, loadingCircleTransitionTwo, loadingCircleVariants } from './config';
 
 const bulletStyle = {
@@ -12,10 +12,11 @@ const bulletStyle = {
 };
 
 export function ChatLoadingIndicator(props: LayerProps): JSX.Element | null {
+    const { colors } = useTheme();
     return (
         <Layer height={40} width={60} justifyContent='center' {...props}>
             <Layer
-                backgroundColor='#ffffff'
+                backgroundColor={colors.foreground}
                 padding={8}
                 borderRadius={20}
                 flexDirection='row'
