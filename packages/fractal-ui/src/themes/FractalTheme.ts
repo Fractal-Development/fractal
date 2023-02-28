@@ -148,6 +148,7 @@ export interface FractalTheme {
     borderRadius: FractalThemeBorderRadius;
     sizes: FractalThemeSizes;
     shadows: FractalThemeShadows;
+    elevation: number;
     textVariants: FractalThemeTextVariants;
     navigationBar: FractalThemeNavigationBar;
     tabBar: FractalThemeTabBar;

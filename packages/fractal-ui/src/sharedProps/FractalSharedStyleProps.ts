@@ -40,6 +40,7 @@ export interface WebProps {
 }
 export interface ShadowProps {
     boxShadow?: string;
+    elevation?: number;
 }
 
 export interface BorderProps {
