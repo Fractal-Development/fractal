@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import { useThemeIdentifier, ThemeProvider } from '../context';
+import { useThemeIdentifier, ThemeProvider, AlertProvider } from '../context';
 import { lightFractalTheme, FractalTheme, darkFractalTheme, GlobalStyle } from '../themes';
 import { PlatformAppearanceDetails } from './platform';
 
@@ -20,7 +20,7 @@ export function ThemeContent({ children, lightTheme, darkTheme }: ThemeContentPr
         <ThemeProvider theme={theme}>
             <PlatformAppearanceDetails />
             <GlobalStyle />
-            {children}
+            <AlertProvider>{children}</AlertProvider>
         </ThemeProvider>
     );
 }

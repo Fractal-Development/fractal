@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { useTheme } from '../../context';
+import { useTheme } from '../../context/hooks/useTheme';
 import { LayerProps } from './Layer/types';
 import { PaddingLayer } from './PaddingLayer';
 

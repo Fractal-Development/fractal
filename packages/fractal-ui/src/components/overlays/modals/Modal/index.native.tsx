@@ -2,7 +2,7 @@ import { AnimatePresence } from 'moti';
 import React, { forwardRef } from 'react';
 import { Modal as RNModal } from 'react-native';
 
-import { Layer } from '../../../layout';
+import { Layer } from '../../../layout/Layer';
 import { ModalProps } from './types';
 
 const Modal = forwardRef(
