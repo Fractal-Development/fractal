@@ -91,6 +91,10 @@ export const screens = {
     theme_wapper_fragment: {
         name: 'Theme Swapper Fragment',
         path: 'theme_wapper_fragment'
+    },
+    alert_fragment: {
+        name: 'Alert Fragment',
+        path: 'alert_fragment'
     }
 };
 

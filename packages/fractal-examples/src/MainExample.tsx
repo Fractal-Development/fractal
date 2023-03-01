@@ -45,7 +45,8 @@ import {
     OverlaysFragmentScreen,
     TextsFragmentScreen,
     IconsFragmentScreen,
-    ThemeSwapperFragmentScreen
+    ThemeSwapperFragmentScreen,
+    AlertFragmentScreen
 } from './screens';
 
 interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
@@ -402,6 +403,19 @@ export function MainExample(): JSX.Element {
                                         }}
                                     >
                                         <ThemeSwapperFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.alert_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.alert_fragment.name
+                                        }}
+                                    >
+                                        <AlertFragmentScreen />
                                     </StackScreenWrapper>
                                 }
                             />
