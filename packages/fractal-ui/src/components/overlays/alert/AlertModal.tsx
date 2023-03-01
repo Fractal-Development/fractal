@@ -6,6 +6,7 @@ import { DimmedModal } from '../modals/DimmedModal';
 import { Text } from '../../text/Text';
 import { PaddingLayer } from '../../layout/PaddingLayer';
 import { HorizontalLayer } from '../../layout/HorizontalLayer';
+import { useTheme } from '../../../context/hooks/useTheme';
 
 interface AlertModalProps {
     visible: boolean;
@@ -22,6 +23,7 @@ export function AlertModal({
     message,
     buttons = [{ text: 'Ok', style: 'default', onPress: () => {} }]
 }: AlertModalProps) {
+    const { spacings } = useTheme();
     const validButtons = buttons.splice(0, 3).reverse();
     const [firstButton, secondButton, thirdButton] = validButtons;
     const getButtonVariantForAlertButtonStyle = (style: AlertButton['style']): 'main' | 'danger' | 'content' => {
@@ -48,10 +50,10 @@ export function AlertModal({
         <DimmedModal visible={visible} onDismiss={onDismiss}>
             <PaddingLayer marginTop={48} alignItems='center'>
                 <Box maxWidth={448} style={{ width: '100%' }}>
-                    <Text fontWeight='bold' marginBottom={8}>
+                    <Text fontWeight='bold' marginBottom={spacings.s}>
                         {title}
                     </Text>
-                    <Text marginBottom={16}>{message}</Text>
+                    <Text marginBottom={spacings.m}>{message}</Text>
                     <HorizontalLayer justifyContent={thirdButton != null ? 'space-between' : 'flex-end'}>
                         {thirdButton != null ? (
                             <Button
@@ -66,7 +68,7 @@ export function AlertModal({
                                     text={secondButton.text}
                                     onPress={handleButtonPress(secondButton)}
                                     variant={getButtonVariantForAlertButtonStyle(secondButton.style)}
-                                    marginRight={8}
+                                    marginRight={spacings.s}
                                 />
                             ) : null}
                             <Button
