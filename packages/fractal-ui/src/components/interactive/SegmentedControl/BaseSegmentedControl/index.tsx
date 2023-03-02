@@ -1,4 +1,4 @@
-import { motion, AnimateSharedLayout } from 'framer-motion';
+import { motion, LayoutGroup } from 'framer-motion';
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
@@ -9,12 +9,15 @@ import {
     extractDimensionProps,
     extractDisplayProps,
     extractShadowProps,
-    extractWebProps
+    extractWebProps,
+    shouldForwardProp
 } from '../../../../sharedProps';
 import { SegmentedControlTab } from '../SegmentControlTap';
 import { BaseSegmentedControlProps } from '../types';
 
-const Container = styled(motion.ol as any)`
+const Container = styled(motion.ol as any).withConfig({
+    shouldForwardProp
+})`
     list-style: none;
     ${extractBackgroundProps};
     ${extractDimensionProps};
@@ -41,7 +44,7 @@ const BaseSegmentedControl = forwardRef(
         const { colors, borderRadius, sizes } = useTheme();
 
         return (
-            <AnimateSharedLayout>
+            <LayoutGroup>
                 <Container
                     ref={ref}
                     tabIndex={0}
@@ -75,7 +78,7 @@ const BaseSegmentedControl = forwardRef(
                         />
                     ))}
                 </Container>
-            </AnimateSharedLayout>
+            </LayoutGroup>
         );
     }
 );

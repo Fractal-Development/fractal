@@ -6,7 +6,10 @@ export function SliderFragment(): JSX.Element {
     const { spacings } = useTheme();
     const [sliderValue, setSliderValue] = useState(0);
 
-    const handleSliderValue = (value: number) => setSliderValue(value);
+    const handleSliderValue = (value: number) => {
+        console.log('Slide complete');
+        setSliderValue(value);
+    };
 
     return (
         <>

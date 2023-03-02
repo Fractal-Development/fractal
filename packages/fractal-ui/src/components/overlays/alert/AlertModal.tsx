@@ -24,8 +24,9 @@ export function AlertModal({
     buttons = [{ text: 'Ok', style: 'default', onPress: () => {} }]
 }: AlertModalProps) {
     const { spacings } = useTheme();
-    const validButtons = buttons.splice(0, 3).reverse();
+    const validButtons = [...buttons].splice(0, 3).reverse();
     const [firstButton, secondButton, thirdButton] = validButtons;
+
     const getButtonVariantForAlertButtonStyle = (style: AlertButton['style']): 'main' | 'danger' | 'content' => {
         switch (style) {
             case 'cancel':

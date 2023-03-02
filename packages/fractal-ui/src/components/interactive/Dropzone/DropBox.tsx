@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { LoadIcon } from '../../../assets/LoadIcon';
 import { useTheme } from '../../../context/hooks/useTheme';
+import { shouldForwardProp } from '../../../sharedProps/shouldForwardProp';
 import { extractTextProps } from '../../../sharedProps/TextProps';
 import { Layer } from '../../layout/Layer';
 import { DropBoxProps } from './types';
@@ -12,7 +13,9 @@ const FileInput = styled.input`
     display: none;
 `;
 
-const StyledText = styled(motion.span)`
+const StyledText = styled(motion.span).withConfig({
+    shouldForwardProp
+})`
     ${extractTextProps};
 `;
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChatContent, ChatLoadingIndicator, MinimalMessageData } from '@fractal/fractal-messaging';
+import { ChatContent, ChatFooterContainer, ChatLoadingIndicator, MinimalMessageData } from '@fractal/fractal-messaging';
 import { AudioMessagePlayerProvider } from '@fractal/fractal-media';
 import { useOpenURL } from './useOpenURL';
-import { Box, Button, Layer, useTheme } from '@fractal/fractal-ui';
+import { Box, Button, colors, Layer, useTheme } from '@fractal/fractal-ui';
 import { MessageTextField } from './MessageTextField';
 
 const defaultMessages: MinimalMessageData[] = [
@@ -146,7 +146,7 @@ function createWaitPromise(time: number): Promise<void> {
 // TODO: Revisar funcionamiento de onSubmitEditing
 
 function ChatButtons({ buttons, onButtonPress }: { buttons: string[] | null; onButtonPress?: (text: string, index: number) => void }) {
-    const { spacings, sizes } = useTheme();
+    const { spacings, sizes, borderRadius } = useTheme();
     const renderButton = (title: string, index: number) => {
         const handleButtonPress = () => {
             onButtonPress?.(title, index);
@@ -166,7 +166,7 @@ function ChatButtons({ buttons, onButtonPress }: { buttons: string[] | null; onB
 
     return (
         <Box>
-            <Layer flexDirection='row' maxWidth={1360} flexWrap='wrap'>
+            <Layer flexDirection='row' maxWidth={1360} flexWrap='wrap' backgroundColor={colors.background} borderRadius={borderRadius.m}>
                 {buttons != null && buttons.map(renderButton)}
             </Layer>
         </Box>
@@ -204,12 +204,16 @@ export function ChatContentFragment(): JSX.Element {
         setIsLoading(false);
     };
 
-    const footer = isLoading ? (
-        <ChatLoadingIndicator />
-    ) : buttons != null ? (
-        <ChatButtons buttons={buttons} onButtonPress={handleSendMessage} />
-    ) : (
-        <MessageTextField onSend={handleSendMessage} />
+    const footer = (
+        <ChatFooterContainer>
+            {isLoading ? (
+                <ChatLoadingIndicator />
+            ) : buttons != null ? (
+                <ChatButtons buttons={buttons} onButtonPress={handleSendMessage} />
+            ) : (
+                <MessageTextField onSend={handleSendMessage} />
+            )}
+        </ChatFooterContainer>
     );
 
     return (

@@ -3,7 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { useTheme } from '../../../../context';
-import { extractDimensionProps, extractBackgroundProps, extractShadowProps, extractBorderProps } from '../../../../sharedProps';
+import {
+    extractDimensionProps,
+    extractBackgroundProps,
+    extractShadowProps,
+    extractBorderProps,
+    shouldForwardProp
+} from '../../../../sharedProps';
 import { Layer } from '../../../layout/Layer';
 import { Text } from '../../../text';
 import { getSegmentedControlButtonAccessibilityProps } from '../accessibility/getSegmentedControlButtonAccessibilityProps';
@@ -28,7 +34,9 @@ interface TabProps {
     noDivider: boolean;
 }
 
-const Tap = styled(motion.li)`
+const Tap = styled(motion.li).withConfig({
+    shouldForwardProp
+})`
     position: relative;
     margin-bottom: 0;
     line-height: 1;
@@ -54,7 +62,9 @@ const Tap = styled(motion.li)`
     }
 `;
 
-const Slider = styled(motion.div as any)`
+const Slider = styled(motion.div as any).withConfig({
+    shouldForwardProp
+})`
     position: absolute;
     top: 0;
     right: 0;
