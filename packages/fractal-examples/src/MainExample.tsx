@@ -46,7 +46,8 @@ import {
     TextsFragmentScreen,
     IconsFragmentScreen,
     ThemeSwapperFragmentScreen,
-    AlertFragmentScreen
+    AlertFragmentScreen,
+    ToastFragmentScreen
 } from './screens';
 
 interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
@@ -416,6 +417,19 @@ export function MainExample(): JSX.Element {
                                         }}
                                     >
                                         <AlertFragmentScreen />
+                                    </StackScreenWrapper>
+                                }
+                            />
+                            <Route
+                                path={screens.toast_fragment.path}
+                                element={
+                                    <StackScreenWrapper
+                                        navBarProps={{
+                                            showBackButton: true,
+                                            title: screens.toast_fragment.name
+                                        }}
+                                    >
+                                        <ToastFragmentScreen />
                                     </StackScreenWrapper>
                                 }
                             />

@@ -95,6 +95,10 @@ export const screens = {
     alert_fragment: {
         name: 'Alert Fragment',
         path: 'alert_fragment'
+    },
+    toast_fragment: {
+        name: 'Toast Fragment',
+        path: 'toast_fragment'
     }
 };
 

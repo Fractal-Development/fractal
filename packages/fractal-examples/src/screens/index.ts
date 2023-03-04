@@ -1,4 +1,3 @@
-export * from './AlertFragmentScreen';
 export * from './AuthenticationScreenFragmentScreen';
 export * from './AutoCompleteScreen';
 export * from './ChartsExamplesScreen';
@@ -17,7 +16,7 @@ export * from './ui-screens/feedback/ErrorMessageFragmentScreen';
 export * from './ui-screens/interactive';
 export * from './ui-screens/layout/LayoutFragmentScreen';
 export * from './ui-screens/media/ContentMediaFragmentScreen';
-export * from './ui-screens/overlays/OverlaysFragmentScreen';
+export * from './ui-screens/overlays';
 export * from './ui-screens/text/TextsFragmentScreen';
 export * from './util/routes';
 export * from './util/screens';

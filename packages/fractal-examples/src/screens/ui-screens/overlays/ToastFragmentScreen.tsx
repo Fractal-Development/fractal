@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
 import { PaddingLayer } from '@fractal/fractal-ui';
-import { AlertFragment } from '../fragments/ui-fragments';
+import { ToastFragment } from '../../../fragments/ui-fragments/overlays/toast/ToastFragment';
 
-export function AlertFragmentScreen() {
+export function ToastFragmentScreen() {
     return (
         <NavigationBarInsetsLayer>
             <PaddingLayer>
-                <AlertFragment />
+                <ToastFragment />
             </PaddingLayer>
         </NavigationBarInsetsLayer>
     );
