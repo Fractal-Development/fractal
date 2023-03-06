@@ -20,7 +20,8 @@
         "lint": "eslint 'src/**/*.ts*'",
         "lint:fix": "eslint --fix 'src/**/*.ts*'",
         "expo-module": "expo-module",
-        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
+        "test": "jest"
     },
     "peerDependencies": {
         "@react-native-community/datetimepicker": "6.5.2",
@@ -108,6 +109,10 @@
         "react-native-gesture-handler": "~2.8.0",
         "react-native-reanimated": "~2.12.0",
         "react-native-svg": "13.4.0"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node"
     },
     "keywords": [
         "Javascript",
