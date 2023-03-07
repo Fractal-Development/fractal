@@ -21,3 +21,5 @@ yarn-error.log
 **/*/android
 
 build/**
+# testing
+/coverage

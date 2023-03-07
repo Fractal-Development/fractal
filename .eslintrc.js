@@ -1,5 +1,9 @@
 module.exports = {
     extends: ['universe/native'],
+    env: {
+        'jest/globals': true
+    },
+    plugins: ['jest'],
     rules: {
         'prettier/prettier': [
             'error',
