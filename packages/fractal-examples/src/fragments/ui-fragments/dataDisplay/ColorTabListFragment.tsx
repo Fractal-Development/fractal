@@ -14,19 +14,19 @@ export function ColorTabListFragment(): JSX.Element {
             <Layer flexDirection='row' marginTop={spacings.s} marginBottom={spacings.xl}>
                 <ColorTabList
                     tabs={[
-                        { tabColor: colors.contentInteractiveColor100, text: 'Tab 1' },
+                        { tabColor: colors.black, text: 'Tab 1' },
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 2' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 3' },
-                        { tabColor: colors.contentInteractiveColor100, text: 'Tab 4' },
+                        { tabColor: colors.black, text: 'Tab 4' },
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 5' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 6' },
-                        { tabColor: colors.contentInteractiveColor100, text: 'Tab 7' },
+                        { tabColor: colors.black, text: 'Tab 7' },
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 8' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 9' },
-                        { tabColor: colors.contentInteractiveColor100, text: 'Tab 10' },
+                        { tabColor: colors.black, text: 'Tab 10' },
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 11' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 12' },
-                        { tabColor: colors.contentInteractiveColor100, text: 'Tab 13' },
+                        { tabColor: colors.black, text: 'Tab 13' },
                         { tabColor: colors.mainInteractiveColor, text: 'Tab 14' },
                         { tabColor: colors.successInteractiveColor, text: 'Tab 15' }
                     ]}

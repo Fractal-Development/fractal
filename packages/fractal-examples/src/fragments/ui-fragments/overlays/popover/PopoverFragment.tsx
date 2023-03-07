@@ -76,20 +76,20 @@ export function PopoverFragment(): JSX.Element {
                 <Popover
                     placement='right'
                     active={isRightPopoverVisible}
-                    onRequestClose={showModalRightPopover}
+                    onRequestClose={hideModalRightPopover}
                     popoverChildren={popoverChildren}
                 >
-                    {(ref) => <Button ref={ref} variant='main' width={120} onPress={hideModalRightPopover} text='Right' />}
+                    {(ref) => <Button ref={ref} variant='main' width={120} onPress={showModalRightPopover} text='Right' />}
                 </Popover>
             </Box>
             <Box marginTop={spacings.m} marginBottom={spacings.m} alignItems='flex-end'>
                 <Popover
                     placement='left'
                     active={isLeftPopoverVisible}
-                    onRequestClose={showModalLeftPopover}
+                    onRequestClose={hideModalLeftPopover}
                     popoverChildren={popoverChildren}
                 >
-                    {(ref) => <Button ref={ref} variant='main' width={120} onPress={hideModalLeftPopover} text='Left' />}
+                    {(ref) => <Button ref={ref} variant='main' width={120} onPress={showModalLeftPopover} text='Left' />}
                 </Popover>
             </Box>
         </>
