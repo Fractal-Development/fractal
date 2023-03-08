@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import { Layer, useTheme, VirtualList } from '@fractal/fractal-ui';
-import { ChatMessage } from './ChatMessage';
-import { MessageListProps, MinimalMessageData } from './types';
+import { ChatMessage } from '../ChatMessage';
+import { MessageListProps, MinimalMessageData } from '../types';
 
 export function MessageList<T extends MinimalMessageData>({
     messages,
@@ -16,7 +16,6 @@ export function MessageList<T extends MinimalMessageData>({
 }: MessageListProps<T>): JSX.Element {
     const { spacings } = useTheme();
     const listView = useRef<VirtualList<T>>(null);
-    const containerRef = useRef<any>();
     const messagesLength = useRef<number>(0);
 
     useEffect(() => {
@@ -25,7 +24,7 @@ export function MessageList<T extends MinimalMessageData>({
                 listView.current?.scrollToEnd();
                 messagesLength.current = messages.length;
                 clearTimeout(timeout);
-            }, 500);
+            }, 200);
         }
     }, [messages.length]);
 
@@ -60,7 +59,7 @@ export function MessageList<T extends MinimalMessageData>({
     );
 
     return (
-        <Layer flex={1} ref={containerRef} {...layerProps}>
+        <Layer flex={1} {...layerProps}>
             {messages.length > 0 && (
                 <VirtualList
                     ref={listView}
