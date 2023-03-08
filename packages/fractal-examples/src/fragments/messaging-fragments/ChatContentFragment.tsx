@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChatContent, ChatFooterContainer, ChatLoadingIndicator, MinimalMessageData } from '@fractal/fractal-messaging';
 import { AudioMessagePlayerProvider } from '@fractal/fractal-media';
 import { useOpenURL } from './useOpenURL';
-import { Box, Button, colors, Layer, useTheme } from '@fractal/fractal-ui';
+import { Box, Button, Layer, useTheme } from '@fractal/fractal-ui';
 import { MessageTextField } from './MessageTextField';
 
 const defaultMessages: MinimalMessageData[] = [
@@ -146,7 +146,7 @@ function createWaitPromise(time: number): Promise<void> {
 // TODO: Revisar funcionamiento de onSubmitEditing
 
 function ChatButtons({ buttons, onButtonPress }: { buttons: string[] | null; onButtonPress?: (text: string, index: number) => void }) {
-    const { spacings, sizes, borderRadius } = useTheme();
+    const { spacings, sizes, borderRadius, colors } = useTheme();
     const renderButton = (title: string, index: number) => {
         const handleButtonPress = () => {
             onButtonPress?.(title, index);
@@ -190,10 +190,11 @@ export function ChatContentFragment(): JSX.Element {
         setMessages((currentMessages) => [...currentMessages, { id: newId.toString(), senderType: 'user', text: userMessage }]);
 
         for (const message of botMessages) {
-            await createWaitPromise(2000);
-            setMessages((currentMessages) => {
-                const messageId = currentMessages.length;
-                return [...currentMessages, { id: messageId.toString(), senderType: 'bot', text: message }];
+            await createWaitPromise(2000).then(() => {
+                setMessages((currentMessages) => {
+                    const messageId = currentMessages.length;
+                    return [...currentMessages, { id: messageId.toString(), senderType: 'bot', text: message }];
+                });
             });
         }
         if (buttons != null) {
