@@ -1,16 +1,6 @@
 import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
 import { useNavigate } from '@fractal/fractal-navigation-router';
-import {
-    Layer,
-    PaddingLayer,
-    SearchBar,
-    TableContainer,
-    TouchableOpacity,
-    useTheme,
-    VirtualList,
-    SimpleRow,
-    ScrollView
-} from '@fractal/fractal-ui';
+import { Layer, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, SimpleRow, ScrollView } from '@fractal/fractal-ui';
 import React, { ReactElement, useCallback, useState } from 'react';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
 
@@ -20,13 +10,13 @@ export function RootScreen(): ReactElement {
     const navigate = useNavigate();
 
     const rowRenderer = useCallback(
-        ({ item, index }: { item: Screen; index: number }) => {
+        (item: Screen, index: number) => {
             const goToItem = () => {
                 navigate(item.path);
             };
 
             return (
-                <TouchableOpacity onPress={goToItem}>
+                <TouchableOpacity key={index} onPress={goToItem}>
                     <SimpleRow title={item.name} addSeparator={index !== lastScreenIndex} />
                 </TouchableOpacity>
             );
@@ -45,8 +35,8 @@ export function RootScreen(): ReactElement {
     return (
         <NavigationBarInsetsLayer>
             <ScrollView flex={1}>
-                <PaddingLayer flex={1} minHeight={480}>
-                    <TableContainer title='Table Container' flex={1}>
+                <PaddingLayer minHeight={480}>
+                    <TableContainer title='Table Container'>
                         <SearchBar
                             placeholder='Buscar'
                             buttonText='Buscar'
@@ -54,9 +44,7 @@ export function RootScreen(): ReactElement {
                             enableSearchButton
                             onSearch={handleSearch}
                         />
-                        <Layer flex={1}>
-                            <VirtualList data={screensData} estimatedItemSize={35} renderItem={rowRenderer} />
-                        </Layer>
+                        <Layer>{screensData.map(rowRenderer)}</Layer>
                     </TableContainer>
                 </PaddingLayer>
             </ScrollView>
