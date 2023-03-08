@@ -1,6 +1,16 @@
 import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
 import { useNavigate } from '@fractal/fractal-navigation-router';
-import { Layer, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, VirtualList, SimpleRow } from '@fractal/fractal-ui';
+import {
+    Layer,
+    PaddingLayer,
+    SearchBar,
+    TableContainer,
+    TouchableOpacity,
+    useTheme,
+    VirtualList,
+    SimpleRow,
+    ScrollView
+} from '@fractal/fractal-ui';
 import React, { ReactElement, useCallback, useState } from 'react';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
 
@@ -34,20 +44,22 @@ export function RootScreen(): ReactElement {
 
     return (
         <NavigationBarInsetsLayer>
-            <PaddingLayer flex={1}>
-                <TableContainer title='Table Container' flex={1}>
-                    <SearchBar
-                        placeholder='Buscar'
-                        buttonText='Buscar'
-                        marginBottom={spacings.lg}
-                        enableSearchButton
-                        onSearch={handleSearch}
-                    />
-                    <Layer flex={1}>
-                        <VirtualList data={screensData} estimatedItemSize={35} renderItem={rowRenderer} />
-                    </Layer>
-                </TableContainer>
-            </PaddingLayer>
+            <ScrollView flex={1}>
+                <PaddingLayer flex={1} minHeight={480}>
+                    <TableContainer title='Table Container' flex={1}>
+                        <SearchBar
+                            placeholder='Buscar'
+                            buttonText='Buscar'
+                            marginBottom={spacings.lg}
+                            enableSearchButton
+                            onSearch={handleSearch}
+                        />
+                        <Layer flex={1}>
+                            <VirtualList data={screensData} estimatedItemSize={35} renderItem={rowRenderer} />
+                        </Layer>
+                    </TableContainer>
+                </PaddingLayer>
+            </ScrollView>
         </NavigationBarInsetsLayer>
     );
 }
