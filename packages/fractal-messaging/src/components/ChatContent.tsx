@@ -36,14 +36,12 @@ export function ChatContent<T extends MinimalMessageData>({
                 {isLoading ? (
                     <ChatLoadingIndicator />
                 ) : (
-                    <KeyboardAvoidingLayer keyboardVerticalOffset={100} {...keyboardAvoidingViewProps}>
-                        <MessageInput
-                            useForegroundVariant
-                            placeholder={placeholder}
-                            onSend={onSend}
-                            buttonVariant={messageInputButtonVariant}
-                        />
-                    </KeyboardAvoidingLayer>
+                    <MessageInput
+                        useForegroundVariant
+                        placeholder={placeholder}
+                        onSend={onSend}
+                        buttonVariant={messageInputButtonVariant}
+                    />
                 )}
             </ChatFooterContainer>
         );
@@ -59,7 +57,7 @@ export function ChatContent<T extends MinimalMessageData>({
     };
 
     return (
-        <>
+        <KeyboardAvoidingLayer flex={1} keyboardVerticalOffset={100} {...keyboardAvoidingViewProps}>
             <MessageList
                 {...layerProps}
                 messages={messages}
@@ -81,6 +79,6 @@ export function ChatContent<T extends MinimalMessageData>({
                     return <ImageCounter imageIndex={imageIndex} imagesCount={images.length} />;
                 }}
             />
-        </>
+        </KeyboardAvoidingLayer>
     );
 }

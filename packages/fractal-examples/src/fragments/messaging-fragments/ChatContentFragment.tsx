@@ -143,8 +143,6 @@ function createWaitPromise(time: number): Promise<void> {
     });
 }
 
-// TODO: Revisar funcionamiento de onSubmitEditing
-
 function ChatButtons({ buttons, onButtonPress }: { buttons: string[] | null; onButtonPress?: (text: string, index: number) => void }) {
     const { spacings, sizes, borderRadius, colors } = useTheme();
     const renderButton = (title: string, index: number) => {

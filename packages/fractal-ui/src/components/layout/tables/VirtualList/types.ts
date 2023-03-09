@@ -29,4 +29,8 @@ export interface VirtualListProps<TItem> {
      * Enables nested scrolling for Android API level 21+. Nested scrolling is supported by default on iOS.
      */
     nestedScrollEnabled?: boolean;
+    /**
+     * Only works in native. Reverses the direction of scroll. Uses scale transforms of -1.
+     */
+    inverted?: boolean | null | undefined;
 }

@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { Layer, useTheme } from '@fractal/fractal-ui';
-import { FlashList } from '@shopify/flash-list';
+import { Layer, useTheme, VirtualList } from '@fractal/fractal-ui';
 import { ChatMessage } from '../ChatMessage';
 import { MessageListProps, MinimalMessageData } from '../types';
 
@@ -53,12 +52,12 @@ export function MessageList<T extends MinimalMessageData>({
     return (
         <Layer flex={1} {...layerProps}>
             {messages.length > 0 && (
-                <FlashList
+                <VirtualList
                     inverted
                     data={reversedMessages}
                     renderItem={renderChatMessage}
                     estimatedItemSize={200}
-                    contentContainerStyle={{ paddingTop: spacings.m }}
+                    nativeContentContainerStyle={{ paddingBottom: spacings.m }}
                 />
             )}
         </Layer>

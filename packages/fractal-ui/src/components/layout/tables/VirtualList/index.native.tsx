@@ -22,7 +22,8 @@ export class VirtualList<TItem> extends React.PureComponent<VirtualListProps<TIt
             initialScrollIndex,
             keyExtractor,
             nativeContentContainerStyle,
-            nestedScrollEnabled
+            nestedScrollEnabled,
+            inverted
         } = this.props;
 
         return (
@@ -36,6 +37,7 @@ export class VirtualList<TItem> extends React.PureComponent<VirtualListProps<TIt
                 keyExtractor={keyExtractor}
                 contentContainerStyle={nativeContentContainerStyle}
                 nestedScrollEnabled={nestedScrollEnabled}
+                inverted={inverted}
             />
         );
     }

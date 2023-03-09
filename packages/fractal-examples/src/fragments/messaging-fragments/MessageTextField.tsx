@@ -1,5 +1,4 @@
 import { MessageInput } from '@fractal/fractal-messaging';
-import { KeyboardAvoidingLayer } from '@fractal/fractal-ui';
 import React, { useEffect, useRef } from 'react';
 
 interface Props {
@@ -15,9 +14,5 @@ export function MessageTextField({ onSend }: Props) {
         }
     }, []);
 
-    return (
-        <KeyboardAvoidingLayer keyboardVerticalOffset={120}>
-            <MessageInput inputRef={inputRef} useForegroundVariant placeholder='Escribe aquí' onSend={onSend} buttonVariant='alternative' />
-        </KeyboardAvoidingLayer>
-    );
+    return <MessageInput inputRef={inputRef} useForegroundVariant placeholder='Escribe aquí' onSend={onSend} buttonVariant='alternative' />;
 }
