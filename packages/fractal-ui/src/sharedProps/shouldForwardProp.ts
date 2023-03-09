@@ -42,5 +42,6 @@ import { isValidMotionProp } from 'framer-motion';
 **/
 
 export function shouldForwardProp(prop: string, defaultValidatorFn: (prop: string) => boolean): boolean {
+    if (prop === 'elevation') return false;
     return isValidMotionProp(prop) || defaultValidatorFn(prop);
 }
