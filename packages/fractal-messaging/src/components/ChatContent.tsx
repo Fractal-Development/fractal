@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { KeyboardAvoidingLayer } from '@fractal/fractal-ui';
-import { ImageModalViewer } from '@fractal/fractal-media';
+import { ModalAutoPlayer, ImageModalViewer } from '@fractal/fractal-media';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';
@@ -27,6 +27,8 @@ export function ChatContent<T extends MinimalMessageData>({
 }: ChatContentProps<T>): JSX.Element {
     const [isVisibleImageViewer, setIsVisibleImageViewer] = useState(false);
     const [images, selectedImageIndex, updateImageIndex] = useImagesSource(messages);
+    const [selectedVideoSource, setSelectedVideoSource] = useState<string | number>('');
+    const [isVisibleModalVideoPlayer, setIsVisibleModalVideoPlayer] = useState(false);
 
     const footer =
         customFooter != null ? (
@@ -50,10 +52,18 @@ export function ChatContent<T extends MinimalMessageData>({
             updateImageIndex(message);
             setIsVisibleImageViewer(true);
         }
+        if (message.video != null) {
+            setSelectedVideoSource(message.video);
+            setIsVisibleModalVideoPlayer(true);
+        }
     };
 
     const hideImageModalViewer = () => {
         setIsVisibleImageViewer(false);
+    };
+
+    const hideModalVideoPlayer = () => {
+        setIsVisibleModalVideoPlayer(false);
     };
 
     return (
@@ -79,6 +89,7 @@ export function ChatContent<T extends MinimalMessageData>({
                     return <ImageCounter imageIndex={imageIndex} imagesCount={images.length} />;
                 }}
             />
+            <ModalAutoPlayer visible={isVisibleModalVideoPlayer} source={selectedVideoSource} onRequestClose={hideModalVideoPlayer} />
         </KeyboardAvoidingLayer>
     );
 }

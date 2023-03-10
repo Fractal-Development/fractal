@@ -41,7 +41,7 @@ export const BaseChatMessage = forwardRef(
                 ) : message.audio ? (
                     <MessageAudio messageID={message.id} source={message.audio} />
                 ) : message.video ? (
-                    <MessageVideo source={message.video} />
+                    <MessageVideo source={message.video} onPlayPress={onPress} />
                 ) : (
                     <MessageText
                         parsePatterns={parsePatterns}

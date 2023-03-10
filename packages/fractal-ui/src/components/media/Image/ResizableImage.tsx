@@ -7,7 +7,7 @@ function extractResizeModeProps({ source, resizeMode = 'cover', backgroundSize }
     return `
         height: 100%;
         width: 100%;
-        background-image: url("${source}");
+        background-image: ${source != null ? `url("${source}")` : 'none'};
         background-position: ${resizeMode === 'repeat' ? '0% 0%' : 'center'};
         background-repeat: ${resizeMode === 'repeat' ? 'repeat' : 'no-repeat'};
         background-size: ${

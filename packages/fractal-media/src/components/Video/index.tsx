@@ -1,8 +1,8 @@
-import React, { forwardRef, createElement, useRef, useEffect } from 'react';
+import React, { forwardRef, createElement, useRef, useEffect, VideoHTMLAttributes } from 'react';
 import { VideoProps } from './types';
 import { mergeRefs } from './utils/mergeRefs';
 
-const HTMLVideo: any = forwardRef((props, ref) => createElement('video', { ...props, ref }));
+const HTMLVideo = forwardRef((props: VideoHTMLAttributes<HTMLVideoElement>, ref) => createElement('video', { ...props, ref }));
 
 HTMLVideo.displayName = 'HTMLVideo';
 
@@ -27,11 +27,12 @@ const Video = forwardRef(
         return (
             <HTMLVideo
                 ref={mergeRefs([internalVideoRef, ref])}
-                src={source}
+                src={source as string | undefined}
                 muted={isMuted}
                 loop={isLooping}
                 autoPlay={shouldPlay}
                 controls={useNativeControls}
+                playsInline
                 style={{ ...style, ...customStyle }}
             />
         );

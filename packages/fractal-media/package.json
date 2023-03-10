@@ -26,6 +26,7 @@
         "@fractal/fractal-ui": "*",
         "expo": "*",
         "expo-av": "~13.0.2",
+        "expo-video-thumbnails": "~7.0.0",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -39,6 +40,9 @@
             "optional": true
         },
         "expo-av": {
+            "optional": true
+        },
+        "expo-video-thumbnails": {
             "optional": true
         },
         "react-native": {
