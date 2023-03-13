@@ -1,23 +1,14 @@
 import React, { ReactElement } from 'react';
 import { FractalAppRoot, Layer, PaddingLayer, Text, Background } from '@fractal/fractal-ui';
-import {
-    NavigationBarInsetsProvider,
-    ResponsiveSideTabBar,
-    SimpleTabBarItem,
-    SimpleTabBarItemProps,
-    TabBarContextProvider,
-    TabBarInsetsLayer
-} from '@fractal/fractal-navigation';
+import { NavigationBarInsetsProvider, ResponsiveSideTabBar, TabBarContextProvider, TabBarInsetsLayer } from '@fractal/fractal-navigation';
 import {
     NavigationRouter,
     Routes,
     Route,
     Outlet,
     Navigate,
-    useNavigate,
-    useResolvedPath,
-    useMatch,
-    StackScreenWrapper
+    StackScreenWrapper,
+    SimpleTabBarItemLink
 } from '@fractal/fractal-navigation-router';
 
 import { ReactIcon } from './assets/ReactIcon';
@@ -49,23 +40,6 @@ import {
     AlertFragmentScreen,
     ToastFragmentScreen
 } from './screens';
-
-interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {
-    to: string;
-}
-
-function SimpleTabBarItemLink({ to, ...others }: SimpleTabBarItemLinkProps): ReactElement {
-    const navigate = useNavigate();
-    const path = useResolvedPath(to);
-    const match = useMatch({ path: path.pathname, end: false });
-    const isRouteActive = match != null;
-
-    const goToTab = () => {
-        navigate(to);
-    };
-
-    return <SimpleTabBarItem {...others} tabIdentifier={to} onTabPress={goToTab} active={isRouteActive} />;
-}
 
 function renderReactIcon(color: string, size: number) {
     return <ReactIcon fill={color} height={size} width={size} />;
