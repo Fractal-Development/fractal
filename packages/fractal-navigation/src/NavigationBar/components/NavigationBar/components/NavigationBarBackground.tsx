@@ -1,15 +1,15 @@
 import React, { memo, ReactElement } from 'react';
-import { Layer, useTheme } from '@fractal/fractal-ui';
+import { Layer, LayerProps, useTheme } from '@fractal/fractal-ui';
 import { useSafeAreaInsets } from '../../../../TabBar/hooks';
 
-interface NavigationBarBackgroundProps {
+interface NavigationBarBackgroundProps extends LayerProps {
     children: ReactElement | Array<ReactElement>;
     backgroundColor?: string;
     disabledSafeAreaInsets?: boolean;
 }
 
 export const NavigationBarBackground = memo(
-    ({ children, backgroundColor, disabledSafeAreaInsets }: NavigationBarBackgroundProps): ReactElement => {
+    ({ children, backgroundColor, disabledSafeAreaInsets, ...layerProps }: NavigationBarBackgroundProps): ReactElement => {
         const { spacings, navigationBar } = useTheme();
         const safeAreaInsets = useSafeAreaInsets();
 
@@ -25,6 +25,7 @@ export const NavigationBarBackground = memo(
                 top={0}
                 left={0}
                 right={0}
+                {...layerProps}
             >
                 <Layer height={navigationBar.height} flexDirection='row'>
                     {children}
