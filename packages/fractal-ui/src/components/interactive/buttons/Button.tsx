@@ -1,8 +1,8 @@
 import React, { forwardRef, ReactNode, useState } from 'react';
 
-import { useTheme } from '../../../context';
+import { useTheme } from '../../../context/hooks/useTheme';
 import { AnimationProps, FractalSharedStyleProps } from '../../../sharedProps';
-import { ActivityIndicator } from '../../feedback';
+import { ActivityIndicator } from '../../feedback/ActivityIndicator';
 import { Text } from '../../text';
 import { BaseButton } from './BaseButton';
 import { getButtonAccessibilityProps } from './accessibility/getButtonAccessibilityProps';

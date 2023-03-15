@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Text, ToggleButton, LoadIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, ToggleButton, LoadIcon } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function ToggleButtonFragment(): JSX.Element {
@@ -14,40 +14,40 @@ export function ToggleButtonFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Toggle Button Fragment
             </Text>
-            <Box marginTop={spacings.s} marginBottom={spacings.xl} alignItems="center">
-                <ToggleButton variant="main" active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
+            <Box marginTop={spacings.s} marginBottom={spacings.xl} alignItems='center'>
+                <ToggleButton variant='main' active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
                     {() => (
-                        <Text variant="button" color={colors.text}>
+                        <Text variant='button' color={colors.text}>
                             {text}
                         </Text>
                     )}
                 </ToggleButton>
-                <ToggleButton variant="main" active={false} marginBottom={spacings.s} disabled>
+                <ToggleButton variant='main' active={false} marginBottom={spacings.s} disabled>
                     {() => (
-                        <Text variant="button" color={colors.text}>
+                        <Text variant='button' color={colors.text}>
                             Toggle Button disabled
                         </Text>
                     )}
                 </ToggleButton>
-                <Text variant="subtitle" alignItems="center" marginTop={spacings.lg} {...getTitleTextAccessibilityProps(2)}>
+                <Text variant='subtitle' alignItems='center' marginTop={spacings.lg} {...getTitleTextAccessibilityProps(2)}>
                     Toggle Button with icon
                 </Text>
-                <ToggleButton variant="main" active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
+                <ToggleButton variant='main' active={active} onActiveChange={toggleActive} marginBottom={spacings.s}>
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </ToggleButton>
-                <ToggleButton variant="main" active={active} onActiveChange={toggleActive} marginBottom={spacings.s} disabled>
+                <ToggleButton variant='main' active={active} onActiveChange={toggleActive} marginBottom={spacings.s} disabled>
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </ToggleButton>
-                <Text variant="subtitle" alignItems="center" marginTop={spacings.lg} {...getTitleTextAccessibilityProps(2)}>
+                <Text variant='subtitle' alignItems='center' marginTop={spacings.lg} {...getTitleTextAccessibilityProps(2)}>
                     Toggle Button with icon and useGrayVariant
                 </Text>
-                <ToggleButton variant="main" active={active} onActiveChange={toggleActive} useGrayVariant>
+                <ToggleButton variant='main' active={active} onActiveChange={toggleActive} useGrayVariant>
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </ToggleButton>
-                <ToggleButton variant="main" active={active} onActiveChange={toggleActive} useGrayVariant disabled>
+                <ToggleButton variant='main' active={active} onActiveChange={toggleActive} useGrayVariant disabled>
                     {(color) => <LoadIcon height={24} width={24} fill={color} />}
                 </ToggleButton>
             </Box>

@@ -1,4 +1,4 @@
-import { LayerProps } from '@bma98/fractal-ui';
+import { LayerProps } from '@fractal/fractal-ui';
 import { MinimalTrackData } from './useAudioPlayer/types';
 
 export interface AudioPlayerProps extends Omit<LayerProps, 'flexDirection'> {
@@ -15,4 +15,5 @@ export interface MinimalAudioPlayerObject {
     handlePlayPause: () => void;
     setPositionManually: (time: number) => Promise<void>;
     setRateManually: (time: number) => Promise<void>;
+    loading: boolean;
 }

@@ -1,8 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
 
 export interface CustomAVPlaybackStatus {
-    isLoaded: true;
+    isLoaded: boolean;
     androidImplementation?: string;
+    error?: string;
     uri: string;
     progressUpdateIntervalMillis: number;
     durationMillis?: number;

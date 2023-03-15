@@ -9,12 +9,16 @@ import {
     extractDisplayProps,
     extractTextProps,
     extractWebProps,
-    extractPlaceholder
+    extractPlaceholder,
+    shouldForwardProp
 } from '../../../../sharedProps';
 import { getBaseTextFieldAccessibilityProps } from '../accessibility/getBaseTextFieldAccessibilityProps';
 import { TextFieldProps } from './types';
+import { getHTMLInputTypeAndInputModeAttributesForKeyboardType } from './util/getHTMLInputTypeAndInputModeAttributesForKeyboardTyp';
 
-const StyledTextInput = styled(motion.input as any)`
+const StyledTextInput = styled(motion.input as any).withConfig({
+    shouldForwardProp
+})`
     outline: none;
     border-width: 0;
     ${extractPlaceholder};
@@ -24,13 +28,27 @@ const StyledTextInput = styled(motion.input as any)`
     ${extractBorderProps};
     ${extractTextProps};
     ${extractWebProps};
+    user-select: auto;
 `;
 
 const BaseTextField = forwardRef(
     (
-        { onChangeText, onSubmitEditing, placeholder, secureTextEntry, from, currentVariant, animate, ...others }: TextFieldProps,
+        {
+            onChangeText,
+            onSubmitEditing,
+            placeholder,
+            secureTextEntry,
+            from,
+            currentVariant,
+            animate,
+            placeholderTextColor,
+            autoCapitalize = 'sentences',
+            keyboardType = 'default',
+            ...others
+        }: TextFieldProps,
         ref: Ref<HTMLInputElement>
     ): JSX.Element => {
+        const { type, inputMode } = getHTMLInputTypeAndInputModeAttributesForKeyboardType(keyboardType);
         const handleChange = (event: { target: { value: string } }): void => onChangeText && onChangeText(event.target.value);
 
         const handleKeydown = (keyboardEvent: React.KeyboardEvent<HTMLInputElement>): void => {
@@ -43,12 +61,14 @@ const BaseTextField = forwardRef(
             <StyledTextInput
                 ref={ref}
                 placeholder={placeholder}
-                selectable
                 onChange={handleChange}
                 onKeyDown={handleKeydown}
-                type={secureTextEntry ? 'password' : undefined}
+                type={secureTextEntry ? 'password' : type}
                 initial={currentVariant ? 'from' : from}
                 animate={currentVariant ?? animate}
+                placeholderTextColor={placeholderTextColor}
+                autoCapitalize={autoCapitalize}
+                inputMode={inputMode}
                 {...getBaseTextFieldAccessibilityProps(placeholder)}
                 {...others}
             />

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Layer } from '@bma98/fractal-ui';
+import { Layer } from '@fractal/fractal-ui';
 import { PauseIcon } from '../../../assets/PauseIcon';
 import { PlayIcon } from '../../../assets/PlayIcon';
 

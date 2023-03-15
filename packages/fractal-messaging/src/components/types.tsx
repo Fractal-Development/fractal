@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react';
-import { ButtonVariant, KeyboardAvoidingLayerProps, LayerProps, TouchableOpacityProps, ParseShape } from '@bma98/fractal-ui';
+import { ButtonVariant, KeyboardAvoidingLayerProps, LayerProps, TouchableOpacityProps, ParseShape } from '@fractal/fractal-ui';
 
 export interface BubbleTriangleProps {
     color: string;
@@ -21,11 +21,13 @@ export interface MinimalMessageData {
 
 export interface MessageMediaProps {
     source: number | string;
+    messageID?: string;
 }
 
 export interface ChatMessageProps<T> {
     message: T;
     onFavoritePress?: (message: T) => void;
+    onMessagePress?: (message: T) => void;
     onSharePress?: (message: T) => void;
     messageActions?: (message: T) => ReactNode;
     getBubbleColor?: (message: T) => string;
@@ -34,13 +36,12 @@ export interface ChatMessageProps<T> {
     containerWidth?: number;
 }
 
-export interface ChatContentProps<T extends MinimalMessageData> extends MessageListProps<T> {
+export interface ChatContentProps<T extends MinimalMessageData> extends Omit<MessageListProps<T>, 'onMessagePress'> {
     onSend: (message: string) => void;
     placeholder?: string;
     isLoading?: boolean;
     keyboardAvoidingViewProps?: KeyboardAvoidingLayerProps;
     messageInputButtonVariant?: ButtonVariant;
-    enableFluidFooter?: boolean;
     customFooter?: ReactElement | Array<ReactElement>;
 }
 
@@ -52,6 +53,5 @@ export interface MessageListProps<T extends MinimalMessageData>
     extends Omit<ChatMessageProps<T>, 'message' | 'children'>,
         Omit<LayerProps, 'children'> {
     messages: Array<T>;
-    footerComponent?: ReactElement | Array<ReactElement>;
     rowRenderer?: (props: RowRendererProps<T>) => JSX.Element;
 }

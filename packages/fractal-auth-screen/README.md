@@ -1,4 +1,4 @@
-# @bma98/fractal-ui
+# @fractal/fractal-auth-screen
 
 ## Description
 
@@ -6,7 +6,7 @@ UI Components easy to customize for apps made by Fractal.
 
 ### Installation
 
-yarn add @bma98/fractal-ui
+yarn add @fractal/fractal-auth-screen
 
 ### Peer Dependencies
 
@@ -17,37 +17,38 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### Expo(Web, iOS and Android)
 
 ```
-"@react-native-community/datetimepicker": "^3.5.2",
-"@react-native-community/slider": "^3.0.3",
-"@react-native-picker/picker": "^1.16.3",
-"expo-blur": "^9.0.3",
-"expo-document-picker": "^9.1.2",
-"react": "16.13.1",
-"react-native": "~0.63.4",
-"react-native-reanimated": "~2.1.0",
-"react-native-svg": "12.3.0",
-"react-virtualized-auto-sizer": "^1.0.5"
+"@react-native-community/datetimepicker": "6.5.2",
+"@react-native-community/slider": "4.2.4",
+"@react-native-picker/picker": "2.4.8",
+"expo-blur": "~12.0.1",
+"expo-document-picker": "~11.0.1",
+"react": "18.1.0",
+"react-native": "0.70.5",
+"react-native-reanimated": "~2.12.0",
+"react-native-svg": "13.4.0",
+"react-virtualized-auto-sizer": "^1.0.7"
 ```
 
 #### React Native(iOS and Android only)
 
 ```
-"@react-native-community/datetimepicker": "^3.5.2",
-"@react-native-community/slider": "^3.0.3",
-"@react-native-picker/picker": "^1.16.3",
-"expo-blur": "^9.0.3",
-"expo-document-picker": "^9.1.2",
-"react": "16.13.1",
-"react-native": "~0.63.4",
-"react-native-reanimated": "~2.1.0",
-"react-native-svg": "^12.3.0"
+"@react-native-community/datetimepicker": "6.5.2",
+"@react-native-community/slider": "4.2.4",
+"@react-native-picker/picker": "2.4.8",
+"expo-blur": "~12.0.1",
+"expo-document-picker": "~11.0.1",
+"react": "18.1.0",
+"react-native": "0.70.5",
+"react-native-reanimated": "~2.12.0",
+"react-native-svg": "13.4.0",
+"react-virtualized-auto-sizer": "^1.0.7"
 ```
 
 #### React.JS or Next.JS(Web only)
 
 ```
-"react": "16.13.1",
-"react-virtualized-auto-sizer": "^1.0.5"
+"react": "18.1.0",
+"react-virtualized-auto-sizer": "^1.0.7"
 ```
 
 ### Is there more configuration needed?

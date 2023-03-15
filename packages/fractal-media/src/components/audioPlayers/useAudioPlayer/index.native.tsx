@@ -24,7 +24,7 @@ export function useAudioPlayer<T extends MinimalTrackData>(
     const audioRef = useRef<Audio.Sound>();
     const currentTrackInfo = playList[trackIndex];
 
-    const onPlaybackStatusUpdate = useCallback((status: CustomAVPlaybackStatus): void => {
+    const onPlaybackStatusUpdate = useCallback((status: Partial<CustomAVPlaybackStatus>): void => {
         if (status.positionMillis) {
             setCurrentTime(status.positionMillis);
         }

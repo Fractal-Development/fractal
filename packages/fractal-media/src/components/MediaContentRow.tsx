@@ -9,7 +9,7 @@ import {
     ImageProps,
     Separator,
     TouchableOpacity
-} from '@bma98/fractal-ui';
+} from '@fractal/fractal-ui';
 import { LoveToggleButton } from './LoveToggleButton';
 import { EllipsizeText } from './EllipsizeText';
 

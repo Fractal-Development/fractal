@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback } from 'react';
-import { Button } from '@bma98/fractal-ui';
+import { Button } from '@fractal/fractal-ui';
 import { useTabPress } from '../../hooks/useTabPress';
 import { CircularTabBarItemProps } from './types/CircularTabBarItemProps';
 

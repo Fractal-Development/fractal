@@ -7,5 +7,5 @@ export interface LayerProps extends FractalSharedStyleProps, AnimationProps {
     style?: any;
     onLayout?: (event: any) => void;
     ref?: RefObject<any>;
-    layout?: boolean | 'position' | 'size' | any;
+    layout?: boolean | 'position' | 'size';
 }

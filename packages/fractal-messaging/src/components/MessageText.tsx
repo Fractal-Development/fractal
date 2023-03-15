@@ -1,5 +1,5 @@
 import React from 'react';
-import { RichText, ParseShape } from '@bma98/fractal-ui';
+import { RichText, ParseShape } from '@fractal/fractal-ui';
 
 interface MessageTextProps {
     text: string | undefined;

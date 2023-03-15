@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '@bma98/fractal-ui';
+import { Image } from '@fractal/fractal-ui';
 import { MessageMediaProps } from './types';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 

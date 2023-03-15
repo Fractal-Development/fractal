@@ -8,14 +8,19 @@ import {
     extractDimensionProps,
     extractDisplayProps,
     extractBorderProps,
-    extractWebProps
+    extractWebProps,
+    shouldForwardProp
 } from '../../../../../sharedProps';
 import { getBasePickerAccessibilityProps } from '../../accessibility/getBasePickerAccessibilityProps';
 import { BasePickerProps } from './types';
 
-const StyledSelect = styled(motion.select as any)`
+const StyledSelect = styled(motion.select as any).withConfig({
+    shouldForwardProp
+})`
     appearance: none;
     cursor: pointer;
+    border: none;
+    outline: none;
     ${extractBackgroundProps};
     ${extractDimensionProps};
     ${extractDisplayProps};

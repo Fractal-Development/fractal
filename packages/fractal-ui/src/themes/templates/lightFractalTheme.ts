@@ -120,6 +120,8 @@ export const shadows: FractalThemeShadows = {
     thumbShadow: '0px 1px 2px rgba(0, 0, 0, 0.25)'
 };
 
+export const elevation: number = 1;
+
 export const textVariants: FractalThemeTextVariants = {
     normal: {
         fontSize: 17,
@@ -230,6 +232,7 @@ export const lightFractalTheme: FractalTheme = {
     borderRadius,
     sizes,
     shadows,
+    elevation,
     textVariants,
     navigationBar: lightNavigationBarTheme,
     tabBar: lightTabBarTheme

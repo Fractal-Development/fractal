@@ -1,5 +1,5 @@
 import React, { useState, useCallback, ReactNode } from 'react';
-import { Layer, Popover, useTheme } from '@bma98/fractal-ui';
+import { Layer, Popover, useTheme } from '@fractal/fractal-ui';
 import { ChatMessageProps, MinimalMessageData } from './types';
 import { MessageActions } from './MessageActions';
 import { BaseChatMessage } from './BaseChatMessage';
@@ -7,12 +7,12 @@ import { BaseChatMessage } from './BaseChatMessage';
 export function ChatMessage<T extends MinimalMessageData>({
     message,
     onFavoritePress,
+    onMessagePress,
     onSharePress,
     messageActions,
     getBubbleColor,
     children,
-    parsePatterns,
-    containerWidth
+    parsePatterns
 }: ChatMessageProps<T>): JSX.Element {
     const { spacings } = useTheme();
     const [popoverVisible, setPopoverVisible] = useState(false);
@@ -41,6 +41,10 @@ export function ChatMessage<T extends MinimalMessageData>({
         [hidePopover, onSharePress]
     );
 
+    const handleMessagePress = () => {
+        onMessagePress?.(message);
+    };
+
     const renderPopoverChildren = useCallback((): ReactNode => {
         if (messageActions) {
             return messageActions(message);
@@ -58,7 +62,6 @@ export function ChatMessage<T extends MinimalMessageData>({
                 modalBackgroundColor='rgba(0, 0, 0, 0.15)'
                 usePortal
                 display='flex'
-                width={containerWidth}
             >
                 {(ref) => (
                     <BaseChatMessage
@@ -67,6 +70,7 @@ export function ChatMessage<T extends MinimalMessageData>({
                         getBubbleColor={getBubbleColor}
                         parsePatterns={parsePatterns}
                         onLongPress={showPopover}
+                        onPress={handleMessagePress}
                     >
                         {children}
                     </BaseChatMessage>

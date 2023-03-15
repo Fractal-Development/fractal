@@ -1,12 +1,19 @@
 {
-    "name": "@bma98/fractal-examples",
+    "name": "@fractal/fractal-examples",
     "version": "3.1.0",
     "description": "Example components on how to use Fractal UI in small fragments.",
     "author": "BrandonMA",
     "license": "MIT",
     "main": "dist/index.js",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "source": "src/index.tsx",
+    "files": [
+        "dist",
+        "package.json",
+        "LICENSE",
+        "README.md"
+    ],
     "scripts": {
         "build": "expo-module build",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
@@ -16,18 +23,24 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@bma98/fractal-auth-screen": "*",
-        "@bma98/fractal-charts": "*",
-        "@bma98/fractal-media": "*",
-        "@bma98/fractal-messaging": "*",
-        "@bma98/fractal-navigation": "*",
-        "@bma98/fractal-navigation-router": "*",
-        "@bma98/fractal-ui": "*",
+        "@fractal/fractal-auth-screen": "*",
+        "@fractal/fractal-charts": "*",
+        "@fractal/firebase-db-manager": "*",
+        "@fractal/fractal-firebase-auth": "*",
+        "@fractal/fractal-media": "*",
+        "@fractal/fractal-messaging": "*",
+        "@fractal/fractal-navigation": "*",
+        "@fractal/fractal-navigation-router": "*",
+        "@fractal/fractal-ui": "*",
+        "@react-navigation/native": "^6.1.2",
+        "@react-navigation/native-stack": "^6.9.8",
         "expo": "*",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
         "react-native": "*",
+        "react-native-safe-area-context": "4.4.1",
+        "react-native-screens": "~3.18.0",
         "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
@@ -48,18 +61,26 @@
         }
     },
     "dependencies": {
-        "@bma98/size-class": "^2.2.6"
+        "@fractal/size-class": "*",
+        "react-router-dom": "^6.4.1",
+        "react-router-native": "^6.4.1"
     },
     "devDependencies": {
-        "@bma98/fractal-auth-screen": "*",
-        "@bma98/fractal-charts": "*",
-        "@bma98/fractal-media": "*",
-        "@bma98/fractal-messaging": "*",
-        "@bma98/fractal-navigation": "*",
-        "@bma98/fractal-navigation-router": "*",
-        "@bma98/fractal-ui": "*",
+        "@fractal/fractal-auth-screen": "*",
+        "@fractal/fractal-charts": "*",
+        "@fractal/firebase-db-manager": "*",
+        "@fractal/fractal-firebase-auth": "*",
+        "@fractal/fractal-media": "*",
+        "@fractal/fractal-messaging": "*",
+        "@fractal/fractal-navigation": "*",
+        "@fractal/fractal-navigation-router": "*",
+        "@fractal/fractal-ui": "*",
+        "@react-navigation/native": "^6.1.2",
+        "@react-navigation/native-stack": "^6.9.8",
         "@types/styled-components": "^5.1.26",
-        "react-native-svg": "^12.4.4",
+        "react-native-safe-area-context": "4.4.1",
+        "react-native-screens": "~3.18.0",
+        "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },
     "keywords": [

@@ -7,8 +7,8 @@ interface Options {
 
 const isTouchEvent = (event: Event): event is TouchEvent => 'touches' in event;
 
-const preventDefault = (event: Event) => {
-    if (!isTouchEvent(event)) return;
+const preventDefault = (event: Event): void => {
+    if (!isTouchEvent(event)) return undefined;
 };
 
 export const useLongPress = (callback: (() => void) | undefined, options: Options = {}): any => {

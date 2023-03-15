@@ -1,9 +1,9 @@
-# @bma98/fractal-navigation
+# @fractal/fractal-navigation-router
 
 ## Description
 
-Navigation Components easy to customize for apps made by Fractal.
+Router based on React Router that works on ReactJS and React Native.
 
 ### Installation
 
-yarn add @bma98/fractal-navigation
+yarn add @fractal/fractal-navigation-router

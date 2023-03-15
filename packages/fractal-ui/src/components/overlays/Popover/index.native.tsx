@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState, forwardRef, useRef } from 'react';
-import { LayoutChangeEvent, View } from 'react-native';
+import { LayoutChangeEvent, StyleProp, View, ViewStyle } from 'react-native';
 
 import { Pressable } from '../../interactive/buttons/Pressable';
 import { Layer } from '../../layout';
@@ -22,14 +22,19 @@ const Popover = forwardRef(
         }: PopoverProps,
         ref: any
     ): JSX.Element => {
-        const [anchorViewLayout, setAnchorViewLayout] = useState<LayoutRectangle>({ x: 0, y: 0, height: 0, width: 0 });
+        const [anchorViewLayout, setAnchorViewLayout] = useState<LayoutRectangle | undefined>();
         const [popoverViewLayout, setPopoverViewLayout] = useState<LayoutRectangle>({ x: 0, y: 0, height: 0, width: 0 });
         const anchorRef = useRef<View>();
 
-        const styles = useMemo(
-            () => getNativePlacementOffsetStyle(anchorViewLayout, popoverViewLayout, placement),
-            [anchorViewLayout, placement, popoverViewLayout]
-        );
+        const styles: StyleProp<ViewStyle> = useMemo(() => {
+            if (active && anchorViewLayout != null && popoverViewLayout.height !== 0 && popoverViewLayout.width !== 0) {
+                return getNativePlacementOffsetStyle(anchorViewLayout, popoverViewLayout, placement);
+            } else {
+                return {
+                    opacity: 0
+                };
+            }
+        }, [active, anchorViewLayout, placement, popoverViewLayout]);
 
         const onPopoverLayout = useCallback(({ nativeEvent: { layout } }: LayoutChangeEvent) => {
             setPopoverViewLayout(layout);
@@ -70,7 +75,7 @@ const Popover = forwardRef(
                             exit={styleVariants.initial}
                             {...popoverContainerProps}
                         >
-                            {popoverChildren(anchorViewLayout.width)}
+                            {popoverChildren(anchorViewLayout?.width)}
                         </Layer>
                     </View>
                 </Modal>

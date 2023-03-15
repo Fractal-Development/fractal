@@ -1,3 +1,4 @@
+import { AnimationProps } from '@fractal/fractal-ui';
 export const loadingCircleVariants = {
     start: {
         opacity: 0,
@@ -9,9 +10,10 @@ export const loadingCircleVariants = {
     }
 };
 
-export const loadingCircleTransition = {
+export const loadingCircleTransition: AnimationProps['transition'] = {
     duration: 0.6,
-    yoyo: Infinity,
+    repeatType: 'reverse',
+    repeat: Infinity,
     ease: 'easeInOut'
 };
 

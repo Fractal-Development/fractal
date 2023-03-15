@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Box, Layer, Text, useTheme, Image } from '@bma98/fractal-ui';
+import { Box, Layer, Text, useTheme, Image } from '@fractal/fractal-ui';
 import { AudioPlayerProps } from './types';
 import { useAudioPlayer } from './useAudioPlayer';
 import { AudioControls } from './AudioControls';
@@ -39,7 +39,7 @@ export function AudioPlayer({ tracks, controllableTrackIndex, ...layerProps }: A
                 <Text variant='button' color={colors.text} marginBottom={spacings.s}>
                     {title}
                 </Text>
-                <AudioProgressBar isPlaying={isPlaying} duration={duration} currentTime={currentTime} onTimeUpdate={handleUpdateTime} />
+                <AudioProgressBar duration={duration} currentTime={currentTime} onTimeUpdate={handleUpdateTime} />
                 <AudioControls
                     isEnableShuffle={enableShufflePlayback}
                     isEnableRepeat={enableRepeatPlayback}

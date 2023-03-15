@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Layer } from '@bma98/fractal-ui';
+import { Layer } from '@fractal/fractal-ui';
 import { AudioControlsProps } from './types';
 import { PlayPauseToggleButton } from './PlayPauseToggleButton';
 import { AudioControlButton } from './AudioControlButton';

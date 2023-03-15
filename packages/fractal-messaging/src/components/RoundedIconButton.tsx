@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseButton, useTheme } from '@bma98/fractal-ui';
+import { BaseButton, useTheme } from '@fractal/fractal-ui';
 import { StarIcon } from '../assets/StarIcon';
 import { UploadIcon } from '../assets/UploadIcon';
 

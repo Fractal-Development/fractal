@@ -73,7 +73,7 @@ export function useAudioPlayer<T extends MinimalTrackData>(
         }
     }, [controllableTrackIndex]);
 
-    useAudioWebEffects(audioRef, audioSrc as string, setIsPlaying, setCurrentTime, setDuration, checkIfShouldGoToNextTrack);
+    useAudioWebEffects(audioRef, audioSrc as string, trackIndex, setIsPlaying, setCurrentTime, setDuration, checkIfShouldGoToNextTrack);
 
     return {
         currentTrackInfo,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, CircularIconButton, LoadIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, HorizontalLayer, Popover, SearchBar, Button, Text, CircularIconButton, LoadIcon } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 function PopoverContent(): JSX.Element {
@@ -14,7 +14,8 @@ function PopoverContent(): JSX.Element {
 export function SearchBarFragment(): JSX.Element {
     const { spacings } = useTheme();
     const [active, setActive] = useState(false);
-    const toggleActive = () => setActive((active) => !active);
+    const show = () => setActive(true);
+    const hide = () => setActive(false);
     const popoverChildren = () => <PopoverContent />;
 
     return (
@@ -47,9 +48,9 @@ export function SearchBarFragment(): JSX.Element {
                         onChangeText={(text) => console.log(`New text ${text}`)}
                         onSearch={(query: string) => console.log('Query: ', query)}
                     />
-                    <Popover active={active} onRequestClose={toggleActive} popoverChildren={popoverChildren}>
+                    <Popover active={active} onRequestClose={hide} popoverChildren={popoverChildren}>
                         {(ref) => (
-                            <CircularIconButton ref={ref} onPress={toggleActive} variant='success' marginLeft={spacings.s}>
+                            <CircularIconButton ref={ref} onPress={show} variant='success' marginLeft={spacings.s}>
                                 {(color) => <LoadIcon height={24} width={24} fill={color} />}
                             </CircularIconButton>
                         )}

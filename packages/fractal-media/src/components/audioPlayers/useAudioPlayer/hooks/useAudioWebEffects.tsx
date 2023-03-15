@@ -1,30 +1,27 @@
-import { MutableRefObject, useRef, useEffect, Dispatch, SetStateAction } from 'react';
+import { MutableRefObject, useEffect, Dispatch, SetStateAction, useRef } from 'react';
 
 export function useAudioWebEffects(
     audioRef: MutableRefObject<HTMLAudioElement | undefined>,
     audioSrc: string,
+    trackIndex: number,
     setIsPlaying: Dispatch<SetStateAction<boolean>>,
     setCurrentTime: Dispatch<SetStateAction<number>>,
     setDuration: Dispatch<SetStateAction<number>>,
     checkIfShouldGoToNextTrack: () => void
 ): void {
-    const isReady = useRef(false);
+    const previusTrackIndex = useRef<number>(trackIndex);
 
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.pause();
-        }
-        audioRef.current = new Audio(audioSrc);
-
-        if (isReady.current) {
+        if (!audioRef.current) {
+            audioRef.current = new Audio(audioSrc);
+        } else if (previusTrackIndex.current !== trackIndex) {
+            audioRef.current = new Audio(audioSrc);
             audioRef.current.play();
             setIsPlaying(true);
             setCurrentTime(0);
-        } else {
-            // Set the isReady ref as true for the next pass
-            isReady.current = true;
+            previusTrackIndex.current = trackIndex;
         }
-    }, [audioRef, audioSrc, setCurrentTime, setIsPlaying]);
+    }, [audioRef, audioSrc, setCurrentTime, setIsPlaying, trackIndex]);
 
     useEffect(() => {
         const audioCurrentRef = audioRef.current;
@@ -32,7 +29,9 @@ export function useAudioWebEffects(
         const onLoadedData = (): void => {
             if (audioRef.current) {
                 const { duration } = audioRef.current;
-                if (!Number.isNaN(duration)) setDuration(duration * 1000);
+                if (!Number.isNaN(duration)) {
+                    setDuration(duration * 1000);
+                }
             }
         };
 

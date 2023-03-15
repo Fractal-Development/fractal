@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { Pressable } from '../../interactive/buttons/Pressable';
-import { SafeAreaLayer } from '../../layout';
+import { SafeAreaLayer } from '../../layout/SafeAreaLayer';
 import { Modal } from './Modal';
 import { ModalProps } from './Modal/types';
 

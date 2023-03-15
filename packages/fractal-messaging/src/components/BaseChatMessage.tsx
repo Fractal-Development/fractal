@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '@bma98/fractal-ui';
+import { useTheme } from '@fractal/fractal-ui';
 import { ChatMessageProps, MinimalMessageData } from './types';
 import { Bubble } from './Bubble';
 import { MessageImage } from './MessageImage';
@@ -8,16 +8,17 @@ import { MessageVideo } from './MessageVideo';
 import { MessageText } from './MessageText';
 
 interface BaseChatMessageProps<T extends MinimalMessageData>
-    extends Omit<ChatMessageProps<T>, 'onFavoritePress' | 'onSharePress' | 'messageActions'> {
+    extends Omit<ChatMessageProps<T>, 'onFavoritePress' | 'onSharePress' | 'messageActions' | 'onMessagePress'> {
     onLongPress?: () => void;
+    onPress?: () => void;
 }
 
 export const BaseChatMessage = forwardRef(
     <T extends MinimalMessageData>(
-        { message, getBubbleColor, children, parsePatterns, onLongPress }: BaseChatMessageProps<T>,
+        { message, getBubbleColor, children, parsePatterns, onLongPress, onPress }: BaseChatMessageProps<T>,
         ref: any
     ): JSX.Element => {
-        const { colors } = useTheme();
+        const { colors, spacings } = useTheme();
 
         return (
             <Bubble
@@ -31,13 +32,16 @@ export const BaseChatMessage = forwardRef(
                         : colors.mainInteractiveColor
                 }
                 onLongPress={onLongPress}
+                onPress={onPress}
+                marginLeft={spacings.m}
+                marginRight={spacings.m}
             >
                 {message.image ? (
                     <MessageImage source={message.image} />
                 ) : message.audio ? (
-                    <MessageAudio source={message.audio} />
+                    <MessageAudio messageID={message.id} source={message.audio} />
                 ) : message.video ? (
-                    <MessageVideo source={message.video} />
+                    <MessageVideo source={message.video} onPlayPress={onPress} />
                 ) : (
                     <MessageText
                         parsePatterns={parsePatterns}

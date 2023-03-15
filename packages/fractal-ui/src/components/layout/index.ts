@@ -13,3 +13,4 @@ export * from './tables';
 export * from './Separator';
 export * from './KeyboardAvoidingLayer';
 export * from './KeyboardAvoidingLayer/types';
+export * from './AnimateHeight';

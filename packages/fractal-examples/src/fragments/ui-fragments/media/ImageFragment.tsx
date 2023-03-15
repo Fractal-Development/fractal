@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useTheme, Box, Layer, Image, Text, ResizeModeType } from '@bma98/fractal-ui';
+import { useTheme, Box, Layer, Image, Text, ResizeModeType } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function ImageFragment(): JSX.Element {
@@ -9,25 +9,25 @@ export function ImageFragment(): JSX.Element {
 
     const renderItem = useCallback(
         (resizeMode: ResizeModeType) => {
-            const text = `Image with ${  resizeMode  } resize mode`;
+            const text = `Image with ${resizeMode} resize mode`;
 
             return (
-                <Layer key={resizeMode} alignItems="center">
+                <Layer key={resizeMode} alignItems='center'>
                     <Text
-                        variant="subtitle"
-                        alignItems="center"
+                        variant='subtitle'
+                        alignItems='center'
                         marginTop={spacings.m}
                         marginBottom={spacings.xs}
                         {...getTitleTextAccessibilityProps(2)}
                     >
                         {text}
                     </Text>
-                    <Box marginBottom={spacings.s} height={500} width="100%">
+                    <Box marginBottom={spacings.s} height={500} width='100%'>
                         <Image
-                            source="https://picsum.photos/id/870/200/300"
-                            label="Asset"
+                            source='https://picsum.photos/id/870/200/300'
+                            label='Asset'
                             resizeMode={resizeMode}
-                            height="100%"
+                            height='100%'
                             borderRadius={16}
                             marginTop={spacings.s}
                         />
@@ -40,13 +40,13 @@ export function ImageFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Image Fragment
             </Text>
             <Layer marginTop={spacings.s} marginBottom={spacings.xl}>
-                <Box marginBottom={spacings.s} flexDirection="row">
+                <Box marginBottom={spacings.s} flexDirection='row'>
                     <Image
-                        source="https://picsum.photos/id/870/200/300"
+                        source='https://picsum.photos/id/870/200/300'
                         label='Asset'
                         width={100}
                         height={64}

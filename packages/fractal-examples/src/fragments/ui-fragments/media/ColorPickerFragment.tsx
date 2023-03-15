@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, ColorPicker, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, ColorPicker, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function ColorPickerFragment(): JSX.Element {
@@ -8,7 +8,7 @@ export function ColorPickerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Color Picker Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

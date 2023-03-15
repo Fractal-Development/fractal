@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, TimePicker, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, TimePicker, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function TimePickerFragment(): JSX.Element {
@@ -7,7 +7,7 @@ export function TimePickerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Time Picker Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>

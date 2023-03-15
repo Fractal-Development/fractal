@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { ChatContent, MinimalMessageData } from '@bma98/fractal-messaging';
+import { ChatContent, ChatFooterContainer, ChatLoadingIndicator, MinimalMessageData } from '@fractal/fractal-messaging';
+import { AudioMessagePlayerProvider } from '@fractal/fractal-media';
+import { useOpenURL } from './useOpenURL';
+import { Box, Button, Layer, useTheme } from '@fractal/fractal-ui';
+import { MessageTextField } from './MessageTextField';
 
-const defaultMessages: Array<MinimalMessageData> = [
+const defaultMessages: MinimalMessageData[] = [
     {
         id: '1',
         senderType: 'bot',
@@ -25,6 +29,11 @@ const defaultMessages: Array<MinimalMessageData> = [
         text: 'Lorem Ipsum has been the bob'
     },
     {
+        id: '4a',
+        senderType: 'bot',
+        image: 'https://picsum.photos/id/7/1920/1280'
+    },
+    {
         id: '5',
         senderType: 'bot',
         text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
@@ -42,7 +51,7 @@ const defaultMessages: Array<MinimalMessageData> = [
     {
         id: '8',
         senderType: 'bot',
-        image: 'https://picsum.photos/id/237/200/160'
+        image: 'https://picsum.photos/id/237/1920/1280'
     },
     {
         id: '9',
@@ -60,9 +69,14 @@ const defaultMessages: Array<MinimalMessageData> = [
         audio: 'https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Podington_Bear_-_Rubber_Robot.mp3'
     },
     {
-        id: '12',
+        id: '12a',
         senderType: 'bot',
         text: 'Bueno, te explico: Básicamente hay tres estilos de liderazo que debieras poder utilizar según la situación para lograr resultados a traves de otras personas: \n\nLiderazgo directivo para mostrar rumbo \n\nLiderazgo Democrático para aprovechar las ideas de todos \n \nLiderazgo Desarrollador para incrementar la capacidad del equipo'
+    },
+    {
+        id: '12b',
+        senderType: 'bot',
+        audio: 'https://react-native-track-player.js.org/example/Longing.mp3'
     },
     {
         id: '13',
@@ -108,26 +122,117 @@ const defaultMessages: Array<MinimalMessageData> = [
     }
 ];
 
+const urlTextStyle = {
+    color: 'blue',
+    textDecorationLine: 'underline'
+};
+
+const defaultButtons = ['Button One', 'Button Two', 'Button Three', 'Button Four', 'Button Five', 'Button Six'];
+
+const botMessages = [
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis a neque tempor suscipit. Sed ullamcorper feugiat odio, vel porta metus facilisis at. Fusce sed tortor tellus. Aliquam accumsan mi quis lobortis tristique. Praesent id placerat enim, quis pulvinar lacus. Sed ac ornare eros. Maecenas sit amet ipsum sed tortor elementum elementum. Mauris auctor consectetur nunc eget malesuada. Proin purus lacus, placerat sit amet mauris nec, volutpat condimentum risus.',
+    'Nam mauris felis, sollicitudin vel augue ut, aliquam lobortis nisi. Sed turpis sapien, rhoncus consectetur lorem venenatis, porttitor viverra tellus.'
+];
+
+function createWaitPromise(time: number): Promise<void> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, time);
+    });
+}
+
+function ChatButtons({ buttons, onButtonPress }: { buttons: string[] | null; onButtonPress?: (text: string, index: number) => void }) {
+    const { spacings, sizes, borderRadius, colors } = useTheme();
+    const renderButton = (title: string, index: number) => {
+        const handleButtonPress = () => {
+            onButtonPress?.(title, index);
+        };
+
+        return (
+            <Button
+                key={`${index}`}
+                text={title}
+                onPress={handleButtonPress}
+                marginRight={spacings.s}
+                marginBottom={spacings.s}
+                minHeight={sizes.interactiveItemHeight}
+            />
+        );
+    };
+
+    return (
+        <Box>
+            <Layer flexDirection='row' maxWidth={1360} flexWrap='wrap' backgroundColor={colors.background} borderRadius={borderRadius.m}>
+                {buttons != null && buttons.map(renderButton)}
+            </Layer>
+        </Box>
+    );
+}
+
 export function ChatContentFragment(): JSX.Element {
     const [messages, setMessages] = useState(defaultMessages);
+    const [isLoading, setIsLoading] = useState(false);
+    const [buttons, setButtons] = useState<string[] | null>(null);
+    const openURL = useOpenURL();
 
     const handleFavoriteMessage = (message: MinimalMessageData) => {
         const newMessage = { ...message, favorite: !message.favorite };
         setMessages((currentMessages) => currentMessages.map((messageItem) => (messageItem.id === message.id ? newMessage : messageItem)));
     };
 
-    const handleSendMessage = (message: string) => {
+    const handleSendMessage = async (userMessage: string) => {
         const newId = messages.length;
+        setIsLoading(true);
+        setMessages((currentMessages) => [...currentMessages, { id: newId.toString(), senderType: 'user', text: userMessage }]);
 
-        setMessages((currentMessages) => [...currentMessages, { id: newId.toString(), senderType: 'user', text: message }]);
+        for (const message of botMessages) {
+            await createWaitPromise(2000).then(() => {
+                setMessages((currentMessages) => {
+                    const messageId = currentMessages.length;
+                    return [...currentMessages, { id: messageId.toString(), senderType: 'bot', text: message }];
+                });
+            });
+        }
+        if (buttons != null) {
+            setButtons(null);
+        } else {
+            setButtons(defaultButtons);
+        }
+        setIsLoading(false);
     };
 
+    const footer = (
+        <ChatFooterContainer>
+            {isLoading ? (
+                <ChatLoadingIndicator />
+            ) : buttons != null ? (
+                <ChatButtons buttons={buttons} onButtonPress={handleSendMessage} />
+            ) : (
+                <MessageTextField onSend={handleSendMessage} />
+            )}
+        </ChatFooterContainer>
+    );
+
     return (
-        <ChatContent
-            messages={messages}
-            onFavoritePress={handleFavoriteMessage}
-            onSharePress={(message) => console.log('sharePress: ', message)}
-            onSend={handleSendMessage}
-        />
+        <AudioMessagePlayerProvider>
+            <ChatContent
+                messages={messages}
+                onFavoritePress={handleFavoriteMessage}
+                onSharePress={(message) => console.log('sharePress: ', message)}
+                onSend={handleSendMessage}
+                placeholder='Escribe aquí'
+                parsePatterns={[
+                    {
+                        type: 'url',
+                        style: urlTextStyle,
+                        onPress: openURL
+                    }
+                ]}
+                isLoading={isLoading}
+                customFooter={footer}
+            />
+        </AudioMessagePlayerProvider>
     );
 }

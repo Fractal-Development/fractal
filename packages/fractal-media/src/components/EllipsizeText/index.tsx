@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextProps } from '@bma98/fractal-ui';
+import { Text, TextProps } from '@fractal/fractal-ui';
 
 export function EllipsizeText({ variant, ...others }: TextProps): JSX.Element {
     return (

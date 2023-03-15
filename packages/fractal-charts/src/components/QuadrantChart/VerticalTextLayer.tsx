@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer } from '@bma98/fractal-ui';
+import { Layer } from '@fractal/fractal-ui';
 import { CenteredText } from './CenteredText';
 import { VerticalLayer } from './VerticalLayer';
 

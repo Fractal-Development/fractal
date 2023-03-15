@@ -14,7 +14,7 @@ import {
     LoadIcon,
     SearchIcon,
     ThreeDotsHorizontalIcon
-} from '@bma98/fractal-ui';
+} from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from './accessibility/getTitleTextAccessibilityProps';
 
 export function IconsFragment(): JSX.Element {
@@ -22,21 +22,21 @@ export function IconsFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Icons Fragment
             </Text>
-            <Box flexDirection="row" flexWrap="wrap" justifyContent="space-around" marginTop={spacings.s} marginBottom={spacings.xl}>
-                <AppleIcon height={24} width={24} fill={colors.black} />
-                <BugIcon height={24} width={24} fill={colors.black} />
-                <CheckIcon height={24} width={24} fill={colors.black} />
-                <ChevronDownIcon height={24} width={24} fill={colors.black} />
-                <CloseIcon height={24} width={24} fill={colors.black} />
-                <FacebookIcon height={24} width={24} fill={colors.black} />
-                <FileIcon height={24} width={24} fill={colors.black} />
-                <GoogleIcon height={24} width={24} fill={colors.black} />
-                <LoadIcon height={24} width={24} fill={colors.black} />
-                <SearchIcon height={24} width={24} fill={colors.black} />
-                <ThreeDotsHorizontalIcon height={24} width={24} fill={colors.black} />
+            <Box flexDirection='row' flexWrap='wrap' justifyContent='space-around' marginTop={spacings.s} marginBottom={spacings.xl}>
+                <AppleIcon height={24} width={24} fill={colors.text} />
+                <BugIcon height={24} width={24} fill={colors.text} />
+                <CheckIcon height={24} width={24} fill={colors.text} />
+                <ChevronDownIcon height={24} width={24} fill={colors.text} />
+                <CloseIcon height={24} width={24} fill={colors.text} />
+                <FacebookIcon height={24} width={24} fill={colors.text} />
+                <FileIcon height={24} width={24} fill={colors.text} />
+                <GoogleIcon height={24} width={24} fill={colors.text} />
+                <LoadIcon height={24} width={24} fill={colors.text} />
+                <SearchIcon height={24} width={24} fill={colors.text} />
+                <ThreeDotsHorizontalIcon height={24} width={24} fill={colors.text} />
             </Box>
         </>
     );

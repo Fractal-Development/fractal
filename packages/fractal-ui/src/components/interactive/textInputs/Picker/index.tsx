@@ -24,7 +24,7 @@ export function Picker({
     const { colors, sizes, borderRadius, spacings } = useTheme();
 
     const renderItem = useCallback(
-        (item) => {
+        (item: [string, string]) => {
             const value = item[0];
             const label = item[1];
             return <PickerItem color={colors.black} label={label} value={value} key={value} />;

@@ -1,4 +1,4 @@
-import { useTheme } from '@bma98/fractal-ui';
+import { useTheme } from '@fractal/fractal-ui';
 import { useMemo } from 'react';
 import { TabBarPosition } from '../types';
 import { useSafeAreaInsets } from './useSafeAreaInsets';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Text, TableContainer, DetailsRow, SimpleRow } from '@bma98/fractal-ui';
+import { useTheme, Text, TableContainer, DetailsRow, SimpleRow } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 const detailsCardContent: Array<[string, string]> = [
@@ -12,7 +12,7 @@ export function TableContainerFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Table Container Fragment
             </Text>
             <TableContainer
@@ -23,8 +23,10 @@ export function TableContainerFragment(): JSX.Element {
                 marginTop={spacings.s}
                 marginBottom={spacings.xl}
             >
-                {detailsCardContent.map((item) => <DetailsRow key={item[0]} title={item[0]} details={item[1]} addSeparator />)}
-                <SimpleRow title="Titleeeeeeeeeeee" />
+                {detailsCardContent.map((item) => (
+                    <DetailsRow key={item[0]} title={item[0]} details={item[1]} addSeparator />
+                ))}
+                <SimpleRow title='Titleeeeeeeeeeee' />
             </TableContainer>
         </>
     );

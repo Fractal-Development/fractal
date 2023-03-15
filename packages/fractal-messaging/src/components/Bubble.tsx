@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { Layer, TouchableOpacity, useTheme } from '@bma98/fractal-ui';
+import { Layer, TouchableOpacity, useTheme } from '@fractal/fractal-ui';
 import { BubbleProps, BubbleTriangleProps } from './types';
 
 const BubbleTriangleLeft = styled(Layer)`

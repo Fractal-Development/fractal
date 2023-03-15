@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, GridList } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, GridList } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function GridListFragment(): JSX.Element {
@@ -7,7 +7,7 @@ export function GridListFragment(): JSX.Element {
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Grid List Fragment
             </Text>
             <GridList

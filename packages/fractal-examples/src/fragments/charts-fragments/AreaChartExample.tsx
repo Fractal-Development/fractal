@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Layer, useTheme } from '@bma98/fractal-ui';
-import { YAxis, XAxis, AreaChart } from '@bma98/fractal-charts';
+import { Box, Layer, useTheme } from '@fractal/fractal-ui';
+import { YAxis, XAxis, AreaChart } from '@fractal/fractal-charts';
 
 const areaData = [50, 10, 40, 80, 85, 88, 35, 53, 24, 50];
 const textProps = { fontSize: 10 };
@@ -11,13 +11,13 @@ const xLabels = ['04 Jun', '11 Jun', '18 Jun', '25 Jun', '02 Jul', '09 Jul', '16
 export function AreaChartExample(): JSX.Element {
     const { spacings } = useTheme();
     return (
-        <Box height={220} marginBottom={spacings.m} flexDirection="row">
+        <Box height={220} marginBottom={spacings.m} flexDirection='row'>
             <YAxis data={areaData} marginBottom={xAxisHeight} contentInset={verticalContentInset} textProps={textProps} />
             <Layer flex={1} marginLeft={10}>
                 <AreaChart
                     flex={1}
                     contentInset={verticalContentInset}
-                    areaColor="rgb(134, 65, 244)"
+                    areaColor='rgb(134, 65, 244)'
                     gradientConfig={{
                         startColor: 'rgb(134, 65, 244)',
                         startOpacity: 0.8,

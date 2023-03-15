@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Slider, Text } from '@bma98/fractal-ui';
+import { useTheme, Box, Slider, Text } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SliderFragment(): JSX.Element {
     const { spacings } = useTheme();
     const [sliderValue, setSliderValue] = useState(0);
 
-    const handleSliderValue = (value: number) => setSliderValue(value);
+    const handleSliderValue = (value: number) => {
+        console.log('Slide complete');
+        setSliderValue(value);
+    };
 
     return (
         <>
-            <Text variant="title" {...getTitleTextAccessibilityProps(1)}>
+            <Text variant='title' {...getTitleTextAccessibilityProps(1)}>
                 Slider Fragment
             </Text>
             <Box marginTop={spacings.s} marginBottom={spacings.xl}>
@@ -21,7 +24,7 @@ export function SliderFragment(): JSX.Element {
                     onSlidingComplete={handleSliderValue}
                     onSlidingStart={() => console.log('Slide started')}
                 />
-                <Text variant="normal">{`Value: ${sliderValue}`}</Text>
+                <Text variant='normal'>{`Value: ${sliderValue}`}</Text>
             </Box>
         </>
     );

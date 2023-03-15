@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "359987729942",
+    "project_id": "db-manager-test",
+    "storage_bucket": "db-manager-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359987729942:android:a4f3379d3169e5841a4737",
+        "android_client_info": {
+          "package_name": "com.b.guerrero.expornfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359987729942-rqo24jpgn2ss16uu0v48cvvngcsl7k10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa4AzbQqslyf9pliS4PwumZFlEPlbU8TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359987729942-rqo24jpgn2ss16uu0v48cvvngcsl7k10.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "359987729942-15qgto8fchnkiqtepoooe255vomfbu9g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.b.guerrero.expornfirebase"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359987729942:android:53365f7ae3910fd51a4737",
+        "android_client_info": {
+          "package_name": "com.brandonma.fractaluiexpoexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359987729942-rqo24jpgn2ss16uu0v48cvvngcsl7k10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa4AzbQqslyf9pliS4PwumZFlEPlbU8TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359987729942-rqo24jpgn2ss16uu0v48cvvngcsl7k10.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "359987729942-15qgto8fchnkiqtepoooe255vomfbu9g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.b.guerrero.expornfirebase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

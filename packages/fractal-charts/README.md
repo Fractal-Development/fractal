@@ -1,4 +1,4 @@
-# @bma98/fractal-charts
+# @fractal/fractal-charts
 
 ## Description
 
@@ -6,4 +6,4 @@ Charts and Graphs Components easy to customize for apps made by Fractal.
 
 ### Installation
 
-yarn add @bma98/fractal-charts
+yarn add @fractal/fractal-charts

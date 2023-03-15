@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, useTheme } from '@bma98/fractal-ui';
-import { QuadrantChart, QuadrantVariant } from '@bma98/fractal-charts';
+import { Box, useTheme } from '@fractal/fractal-ui';
+import { QuadrantChart, QuadrantVariant } from '@fractal/fractal-charts';
 import { CalmFaceIcon, ExcitedFaceIcon, FrustratedFaceIcon, DiscouragedFaceIcon } from './icons';
 
 export function QuadrantChartExample(): JSX.Element {

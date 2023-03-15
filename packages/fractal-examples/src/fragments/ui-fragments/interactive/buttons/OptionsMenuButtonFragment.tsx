@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, PopoverOptionsMenuButton, ChevronDownIcon } from '@bma98/fractal-ui';
+import { useTheme, Box, Text, PopoverOptionsMenuButton, ChevronDownIcon } from '@fractal/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 const customIcon = (color: string) => <ChevronDownIcon height={24} width={24} fill={color} />;

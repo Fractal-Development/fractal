@@ -13,7 +13,8 @@ const StyledLayer = styled(MotiView as any)`
     ${FractalSharedCss};
 `;
 
-const Layer = forwardRef(({ currentVariant, variants, ...others }: LayerProps, ref: any): JSX.Element => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Layer = forwardRef(({ currentVariant, variants, layout, ...others }: LayerProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);
     return <StyledLayer ref={ref} state={variantState} {...others} />;
 });

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import { SafeAreaLayer } from '@bma98/fractal-ui';
-import { useValueForLargeSizeType } from '@bma98/size-class';
+import { SafeAreaLayer } from '@fractal/fractal-ui';
+import { useValueForLargeSizeType } from '@fractal/size-class';
 import { TabBarProps } from '../types';
 import { useSetTabBarInsets } from '../hooks/useSetTabBarInsets';
 import { TabBarPositionContext } from '../context/TabBarPositionProvider';
