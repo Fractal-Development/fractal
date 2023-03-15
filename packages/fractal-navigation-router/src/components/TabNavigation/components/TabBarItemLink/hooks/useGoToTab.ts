@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from '../../../../../router';
+
 import { useTabBarItemsHistory } from '../../../../../hooks/useTabBarItemsHistory';
+import { useNavigate, useLocation } from '../../../../../router';
 
 // This function will try to preserve the tab state when jumping between multiple ones.
 // Whenever the currentPathname changes, and we can consider the tab item as active
