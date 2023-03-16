@@ -10,7 +10,7 @@ import {
     ChevronDownIcon,
     FacebookIcon,
     GoogleIcon
-} from '@fractal/fractal-ui';
+} from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function RoundedToggleButtonFragment(): JSX.Element {

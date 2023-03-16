@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextButton, TextButtonProps, useTheme } from '@fractal/fractal-ui';
+import { TextButton, TextButtonProps, useTheme } from '@fractal-software/fractal-ui';
 
 export type NavigationBarButtonProps = Partial<Omit<TextButtonProps, 'variant'>>;
 

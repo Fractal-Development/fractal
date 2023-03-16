@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { DetailsRow, Layer, SearchBar, TableContainer, Text, useTheme, VirtualList } from '@fractal/fractal-ui';
+import { DetailsRow, Layer, SearchBar, TableContainer, Text, useTheme, VirtualList } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 import { tableDummyData } from './util/tableHelpers';
 

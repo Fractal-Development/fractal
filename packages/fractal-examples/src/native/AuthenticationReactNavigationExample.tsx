@@ -15,7 +15,7 @@ import {
     useSubscribeForFirebaseAuthenticationState,
     useSubscribeForUserDocumentState,
     useUserDocument
-} from '@fractal/fractal-firebase-auth';
+} from '@fractal-software/fractal-firebase-auth';
 import {
     LoadingBackground,
     FractalAppRoot,
@@ -26,9 +26,9 @@ import {
     Text,
     Button,
     useThemeIdentifier
-} from '@fractal/fractal-ui';
-import { AuthenticationScreen } from '@fractal/fractal-auth-screen';
-import { Collection, Database, IDEnabled } from '@fractal/firebase-db-manager';
+} from '@fractal-software/fractal-ui';
+import { AuthenticationScreen } from '@fractal-software/fractal-auth-screen';
+import { Collection, Database, IDEnabled } from '@fractal-software/firebase-db-manager';
 
 interface User extends IDEnabled {
     email: string;

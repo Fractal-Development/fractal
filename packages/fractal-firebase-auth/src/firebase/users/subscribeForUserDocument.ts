@@ -1,6 +1,6 @@
 import { MinimalExpectedDatabase } from '../../types/MinimalExpectedDatabase';
 import { MinimalUserData } from '../../types';
-import { Document } from '@fractal/firebase-db-manager';
+import { Document } from '@fractal-software/firebase-db-manager';
 
 export function subscribeForUserDocument<T extends MinimalUserData, S>(
     database: MinimalExpectedDatabase<T, S>,

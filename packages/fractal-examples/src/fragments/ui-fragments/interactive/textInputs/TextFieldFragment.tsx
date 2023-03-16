@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, TextField, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, TextField, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function TextFieldFragment(): JSX.Element {

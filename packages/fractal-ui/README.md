@@ -1,4 +1,4 @@
-# @fractal/fractal-ui
+# @fractal-software/fractal-ui
 
 ## Description
 
@@ -6,7 +6,7 @@ UI Components easy to customize for apps made by Fractal.
 
 ### Installation
 
-`yarn add @fractal/fractal-ui`
+`yarn add @fractal-software/fractal-ui`
 
 ### Peer Dependencies
 

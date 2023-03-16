@@ -1,4 +1,4 @@
-import { MainExample } from '@fractal/fractal-examples';
+import { MainExample } from '@fractal-software/fractal-examples';
 
 function App() {
     return <MainExample />;

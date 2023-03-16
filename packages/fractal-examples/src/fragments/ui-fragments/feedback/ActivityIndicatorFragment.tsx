@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, ActivityIndicator, Box, Text } from '@fractal/fractal-ui';
+import { useTheme, ActivityIndicator, Box, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function ActivityIndicatorFragment(): JSX.Element {

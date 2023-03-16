@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Text, useAlert, useTheme } from '@fractal/fractal-ui';
+import { Box, Button, Text, useAlert, useTheme } from '@fractal-software/fractal-ui';
 
 export function AlertFragment() {
     const { spacings } = useTheme();

@@ -1,4 +1,4 @@
-import { Document, IDEnabled } from '@fractal/firebase-db-manager';
+import { Document, IDEnabled } from '@fractal-software/firebase-db-manager';
 
 export interface MinimalUserData extends IDEnabled {
     email: string;

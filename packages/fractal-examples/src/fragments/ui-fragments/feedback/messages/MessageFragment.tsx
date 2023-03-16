@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, Message, LoadIcon } from '@fractal/fractal-ui';
+import { useTheme, Box, Text, Message, LoadIcon } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 const messageIcon = (color: string) => <LoadIcon fill={color} />;

@@ -1,4 +1,4 @@
-# @fractal/size-class
+# @fractal-software/size-class
 
 React Native library to handle different sizes inspired on iOS size classes.
 

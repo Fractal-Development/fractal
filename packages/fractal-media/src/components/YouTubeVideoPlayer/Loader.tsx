@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer, ActivityIndicator } from '@fractal/fractal-ui';
+import { Layer, ActivityIndicator } from '@fractal-software/fractal-ui';
 
 export function Loader(): JSX.Element {
     return (

@@ -1,4 +1,4 @@
-import { MessageInput } from '@fractal/fractal-messaging';
+import { MessageInput } from '@fractal-software/fractal-messaging';
 import React, { useEffect, useRef } from 'react';
 
 interface Props {

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { LayerProps } from '@fractal/fractal-ui';
+import { LayerProps } from '@fractal-software/fractal-ui';
 import { MATCH_URL_YOUTUBE } from '../patterns';
 import { MediaPlayerPoster } from './MediaPlayerPoster';
 import { getVideoID } from './YouTubeVideoPlayer/utils/getVideoID';

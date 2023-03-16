@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Layer } from '@fractal/fractal-ui';
+import { useTheme, Layer } from '@fractal-software/fractal-ui';
 
 export function HorizontalDashed(): JSX.Element {
     const { colors } = useTheme();

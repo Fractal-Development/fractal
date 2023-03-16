@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Button, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, Button, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function ButtonFragment(): JSX.Element {

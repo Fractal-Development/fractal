@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Layer, useTheme } from '@fractal/fractal-ui';
+import { Layer, useTheme } from '@fractal-software/fractal-ui';
 import { RoundedIconButton } from './RoundedIconButton';
 import { ChatMessageProps, MinimalMessageData } from './types';
 

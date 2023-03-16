@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/fractal-charts",
-    "version": "3.1.0",
+    "name": "@fractal-software/fractal-charts",
+    "version": "4.0.0-beta.0",
     "description": "Charts and Graphs Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -23,7 +23,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "expo": "*",
         "react": "*",
         "react-dom": "*",
@@ -62,7 +62,7 @@
         "d3-shape": "^3.0.1"
     },
     "devDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "@types/d3-array": "^3.0.1",
         "@types/d3-scale": "^4.0.1",
         "@types/d3-shape": "^3.0.0",

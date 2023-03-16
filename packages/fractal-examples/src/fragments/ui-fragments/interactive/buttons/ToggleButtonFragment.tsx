@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Text, ToggleButton, LoadIcon } from '@fractal/fractal-ui';
+import { useTheme, Box, Text, ToggleButton, LoadIcon } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function ToggleButtonFragment(): JSX.Element {

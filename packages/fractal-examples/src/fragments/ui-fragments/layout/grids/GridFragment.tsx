@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, Grid, GridColumn, GridRow } from '@fractal/fractal-ui';
+import { useTheme, Box, Text, Grid, GridColumn, GridRow } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function GridFragment(): JSX.Element {

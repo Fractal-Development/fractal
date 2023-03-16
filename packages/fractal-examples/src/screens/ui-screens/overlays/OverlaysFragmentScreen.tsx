@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
-import { PaddingLayer, ScrollView } from '@fractal/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal-software/fractal-navigation';
+import { PaddingLayer, ScrollView } from '@fractal-software/fractal-ui';
 import {
     BlurredModalFragment,
     BottomCellModalFragment,

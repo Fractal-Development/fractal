@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, SegmentedControl, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, SegmentedControl, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SegmentedControlFragment(): JSX.Element {

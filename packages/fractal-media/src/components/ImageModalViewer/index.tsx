@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from '@fractal/fractal-ui';
+import { Modal } from '@fractal-software/fractal-ui';
 import { ImageViewer } from '../ImageViewer';
 import { ImageDefaultHeader } from './ImageDefaultHeader';
 import { ImageModalViewerProps } from './ImageModalViewerProps';

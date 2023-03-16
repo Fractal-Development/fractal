@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer, LayerProps, useTheme } from '@fractal/fractal-ui';
+import { Layer, LayerProps, useTheme } from '@fractal-software/fractal-ui';
 import { loadingCircleTransition, loadingCircleTransitionThree, loadingCircleTransitionTwo, loadingCircleVariants } from './config';
 
 const bulletStyle = {

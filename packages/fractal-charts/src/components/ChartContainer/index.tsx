@@ -1,5 +1,5 @@
 import React, { useRef, useCallback, useEffect } from 'react';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 import { ChartContainerProps } from '../../types';
 
 export function ChartContainer({

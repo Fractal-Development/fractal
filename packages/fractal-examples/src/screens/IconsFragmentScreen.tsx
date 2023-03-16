@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
-import { PaddingLayer } from '@fractal/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal-software/fractal-navigation';
+import { PaddingLayer } from '@fractal-software/fractal-ui';
 import { IconsFragment } from '../fragments/ui-fragments/IconsFragment';
 
 export function IconsFragmentScreen() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Text, TOAST_DURATIONS, useTheme, useToast } from '@fractal/fractal-ui';
+import { Box, Button, Text, TOAST_DURATIONS, useTheme, useToast } from '@fractal-software/fractal-ui';
 
 export function ToastFragment() {
     const { spacings } = useTheme();

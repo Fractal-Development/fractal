@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { Layer, useTheme, VirtualList } from '@fractal/fractal-ui';
+import { Layer, useTheme, VirtualList } from '@fractal-software/fractal-ui';
 import { ChatMessage } from '../ChatMessage';
 import { MessageListProps, MinimalMessageData } from '../types';
 

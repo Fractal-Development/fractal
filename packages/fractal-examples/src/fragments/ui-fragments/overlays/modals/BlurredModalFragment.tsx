@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Button, Text, BlurrediOSModal } from '@fractal/fractal-ui';
+import { useTheme, Box, Button, Text, BlurrediOSModal } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function BlurredModalFragment(): JSX.Element {

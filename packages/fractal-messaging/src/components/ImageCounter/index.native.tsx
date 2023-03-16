@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer, Text, useTheme } from '@fractal/fractal-ui';
+import { Layer, Text, useTheme } from '@fractal-software/fractal-ui';
 
 type Props = {
     imageIndex: number;

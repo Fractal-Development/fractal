@@ -1,4 +1,4 @@
-import { useTheme, ColorTabList, Layer, Text } from '@fractal/fractal-ui';
+import { useTheme, ColorTabList, Layer, Text } from '@fractal-software/fractal-ui';
 import React from 'react';
 
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';

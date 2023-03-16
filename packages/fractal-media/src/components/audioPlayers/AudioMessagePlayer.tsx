@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { ActivityIndicator, HorizontalLayer, Layer, LayerProps, useTheme } from '@fractal/fractal-ui';
+import { ActivityIndicator, HorizontalLayer, Layer, LayerProps, useTheme } from '@fractal-software/fractal-ui';
 import { useMinimalAudioPlayer } from './useMinimalAudioPlayer';
 import { PlayPauseButton } from './PlayPauseButton';
 import { AudioProgressBar } from './AudioProgressBar';

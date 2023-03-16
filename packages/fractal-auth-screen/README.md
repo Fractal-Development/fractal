@@ -1,4 +1,4 @@
-# @fractal/fractal-auth-screen
+# @fractal-software/fractal-auth-screen
 
 ## Description
 
@@ -6,7 +6,7 @@ UI Components easy to customize for apps made by Fractal.
 
 ### Installation
 
-yarn add @fractal/fractal-auth-screen
+yarn add @fractal-software/fractal-auth-screen
 
 ### Peer Dependencies
 

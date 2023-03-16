@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from 'react';
 import { LayoutChangeEvent } from 'react-native';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 import Animated, { useSharedValue, useAnimatedStyle, withSpring, runOnUI } from 'react-native-reanimated';
 import { ChartContainerProps } from '../../types';
 

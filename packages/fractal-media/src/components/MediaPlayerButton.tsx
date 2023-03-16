@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseButton, ActionButtonProps } from '@fractal/fractal-ui';
+import { BaseButton, ActionButtonProps } from '@fractal-software/fractal-ui';
 import { PlayCircleIcon } from '../assets/PlayCircleIcon';
 
 export function MediaPlayerButton({ size = 60, onPress }: ActionButtonProps): JSX.Element {

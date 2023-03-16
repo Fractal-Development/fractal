@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Layer, LayerProps, HorizontalLayer } from '@fractal/fractal-ui';
+import { useTheme, Layer, LayerProps, HorizontalLayer } from '@fractal-software/fractal-ui';
 import { CenteredText } from './CenteredText';
 import { Dot } from './Dot';
 import { chunkArray } from './utils/chunkArray';

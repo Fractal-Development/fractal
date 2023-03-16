@@ -1,5 +1,5 @@
 import { MinimalUserData } from '..';
-import { Document } from '@fractal/firebase-db-manager';
+import { Document } from '@fractal-software/firebase-db-manager';
 import { useContext } from 'react';
 import { UserDocumentContext } from '../context/UserDocumentProvider';
 

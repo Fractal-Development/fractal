@@ -1,5 +1,5 @@
 import { useContext, useLayoutEffect } from 'react';
-import { useTheme } from '@fractal/fractal-ui';
+import { useTheme } from '@fractal-software/fractal-ui';
 import { NavigationBarInsetsContext } from '../context/NavigationBarInsetsProvider';
 
 export function useSetNavigationBarInsets(): void {

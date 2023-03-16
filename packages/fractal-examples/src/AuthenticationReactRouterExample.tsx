@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { AuthenticationScreen } from '@fractal/fractal-auth-screen';
+import { AuthenticationScreen } from '@fractal-software/fractal-auth-screen';
 import {
     CreateUserScreen,
     FirebaseInit,
@@ -15,10 +15,20 @@ import {
     googleSignInWithPopup,
     facebookSignInWithPopup,
     useFirebaseAuthenticationState
-} from '@fractal/fractal-firebase-auth';
-import { Collection, Database, IDEnabled } from '@fractal/firebase-db-manager';
-import { LoadingBackground, PaddingLayer, Text, Image, Button, FractalAppRoot, Background, Box, SafeAreaLayer } from '@fractal/fractal-ui';
-import { Navigate, NavigationRouter, Outlet, Route, Routes, useNavigate } from '@fractal/fractal-navigation-router';
+} from '@fractal-software/fractal-firebase-auth';
+import { Collection, Database, IDEnabled } from '@fractal-software/firebase-db-manager';
+import {
+    LoadingBackground,
+    PaddingLayer,
+    Text,
+    Image,
+    Button,
+    FractalAppRoot,
+    Background,
+    Box,
+    SafeAreaLayer
+} from '@fractal-software/fractal-ui';
+import { Navigate, NavigationRouter, Outlet, Route, Routes, useNavigate } from '@fractal-software/fractal-navigation-router';
 
 interface User extends IDEnabled {
     email: string;

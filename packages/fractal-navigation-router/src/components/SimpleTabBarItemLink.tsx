@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { SimpleTabBarItem, SimpleTabBarItemProps } from '@fractal/fractal-navigation';
+import { SimpleTabBarItem, SimpleTabBarItemProps } from '@fractal-software/fractal-navigation';
 import { useMatch, useNavigate, useResolvedPath } from '../router';
 
 export interface SimpleTabBarItemLinkProps extends Omit<SimpleTabBarItemProps, 'active' | 'onTabPress' | 'tabIdentifier'> {

@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/fractal-firebase-auth",
-    "version": "3.0.0",
+    "name": "@fractal-software/fractal-firebase-auth",
+    "version": "4.0.0-beta.0",
     "description": "React Components to use firebase on react with custom logic to manage shared state",
     "author": "BrandonMA",
     "license": "MIT",
@@ -24,8 +24,8 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@fractal/fractal-navigation": "*",
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-navigation": "*",
+        "@fractal-software/fractal-ui": "*",
         "@invertase/react-native-apple-authentication": "^2.2.2",
         "@react-native-firebase/auth": "^16.5.0",
         "@react-native-firebase/firestore": "^16.5.0",
@@ -70,14 +70,14 @@
         }
     },
     "dependencies": {
-        "@fractal/firebase-db-manager": "*",
-        "@fractal/fractal-auth-screen": "*",
+        "@fractal-software/firebase-db-manager": "*",
+        "@fractal-software/fractal-auth-screen": "*",
         "immer": "^9.0.15",
         "react-native-svg": "13.4.0"
     },
     "devDependencies": {
-        "@fractal/fractal-navigation": "*",
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-navigation": "*",
+        "@fractal-software/fractal-ui": "*",
         "@invertase/react-native-apple-authentication": "^2.2.2",
         "@react-native-firebase/auth": "^16.5.0",
         "@react-native-firebase/firestore": "^16.5.0",

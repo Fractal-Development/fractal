@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, Badge } from '@fractal/fractal-ui';
+import { useTheme, Box, Text, Badge } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function BadgeFragment(): JSX.Element {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseButton, useTheme } from '@fractal/fractal-ui';
+import { BaseButton, useTheme } from '@fractal-software/fractal-ui';
 import { NextIcon } from '../../../assets/NextIcon';
 import { PreviousIcon } from '../../../assets/PreviousIcon';
 import { SMALL_ICON_SIZE } from './sizes';

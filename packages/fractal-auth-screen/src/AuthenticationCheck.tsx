@@ -1,5 +1,5 @@
 import { ReactElement, useEffect } from 'react';
-import { useControllableState } from '@fractal/fractal-ui';
+import { useControllableState } from '@fractal-software/fractal-ui';
 
 type AuthenticationState = 'loading' | 'accessIsAllowed' | 'accessIsNotAllowed';
 

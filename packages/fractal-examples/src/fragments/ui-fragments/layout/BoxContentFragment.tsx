@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Separator, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, Separator, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getBoxAccessibilityProps } from './accessibility/getBoxAccessibilityProps';
 import { getTextAccessibilityProps } from './accessibility/getTextAccessibilityProps';

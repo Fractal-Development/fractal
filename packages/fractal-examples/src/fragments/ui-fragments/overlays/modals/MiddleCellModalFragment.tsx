@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Button, Text, MiddleCellModal } from '@fractal/fractal-ui';
+import { useTheme, Box, Button, Text, MiddleCellModal } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function MiddleCellModalFragment(): JSX.Element {

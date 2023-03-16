@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Text, ErrorBoundaryMessage } from '@fractal/fractal-ui';
+import { useTheme, Box, Text, ErrorBoundaryMessage } from '@fractal-software/fractal-ui';
 import { BuggyComponent } from './BuggyComponent';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 

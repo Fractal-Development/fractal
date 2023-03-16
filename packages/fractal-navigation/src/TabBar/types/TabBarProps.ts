@@ -1,4 +1,4 @@
-import { LayerProps } from '@fractal/fractal-ui';
+import { LayerProps } from '@fractal-software/fractal-ui';
 import { ReactNode } from 'react';
 import { TabBarPosition } from './TabBarPosition';
 

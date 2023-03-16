@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 import { VerticalLayerProps } from './VerticalLayerProps';
 
 export function VerticalLayer({ children }: VerticalLayerProps): JSX.Element {

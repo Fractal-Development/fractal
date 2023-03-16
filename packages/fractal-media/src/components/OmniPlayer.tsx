@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayerProps } from '@fractal/fractal-ui';
+import { LayerProps } from '@fractal-software/fractal-ui';
 import { MATCH_URL_YOUTUBE } from '../patterns';
 import { YouTubeVideoPlayer } from './YouTubeVideoPlayer';
 import { Video } from './Video';

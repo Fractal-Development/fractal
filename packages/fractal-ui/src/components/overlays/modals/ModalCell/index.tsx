@@ -1,4 +1,4 @@
-import { useValueForLargeSizeType } from '@fractal/size-class';
+import { useValueForLargeSizeType } from '@fractal-software/size-class';
 import React from 'react';
 
 import { LayerProps } from '../../../layout/Layer/types';

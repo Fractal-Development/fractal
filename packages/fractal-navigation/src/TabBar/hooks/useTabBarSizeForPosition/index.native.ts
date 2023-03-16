@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import { useTheme } from '@fractal/fractal-ui';
+import { useTheme } from '@fractal-software/fractal-ui';
 
 import { TabBarPosition } from '../../types';
 

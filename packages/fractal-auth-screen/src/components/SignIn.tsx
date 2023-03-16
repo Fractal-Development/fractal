@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Button, IconTextField, PasswordField, Separator, TextButton, useTheme } from '@fractal/fractal-ui';
+import { Button, IconTextField, PasswordField, Separator, TextButton, useTheme } from '@fractal-software/fractal-ui';
 import { renderLockIcon, renderEmailIcon } from './util';
 import { SignInProps } from './types';
 

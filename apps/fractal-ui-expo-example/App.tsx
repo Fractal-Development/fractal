@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { AuthenticationReactRouterExample } from '@fractal/fractal-examples';
-import { AuthenticationReactNavigationExample } from '@fractal/fractal-examples/dist/native';
+import { AuthenticationReactRouterExample } from '@fractal-software/fractal-examples';
+import { AuthenticationReactNavigationExample } from '@fractal-software/fractal-examples/dist/native';
 import { firebaseConfig } from './firebaseConfig';
 
 export default function App() {

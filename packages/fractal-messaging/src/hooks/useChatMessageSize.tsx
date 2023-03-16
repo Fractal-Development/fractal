@@ -1,4 +1,4 @@
-import { useWidthSizeGroup } from '@fractal/size-class';
+import { useWidthSizeGroup } from '@fractal-software/size-class';
 
 export function useChatMessageSize(): {
     width: number;

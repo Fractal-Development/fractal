@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Text, RadioButton } from '@fractal/fractal-ui';
+import { useTheme, Box, Text, RadioButton } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function RadioButtonFragment(): JSX.Element {

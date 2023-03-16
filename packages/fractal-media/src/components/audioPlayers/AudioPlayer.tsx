@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Box, Layer, Text, useTheme, Image } from '@fractal/fractal-ui';
+import { Box, Layer, Text, useTheme, Image } from '@fractal-software/fractal-ui';
 import { AudioPlayerProps } from './types';
 import { useAudioPlayer } from './useAudioPlayer';
 import { AudioControls } from './AudioControls';

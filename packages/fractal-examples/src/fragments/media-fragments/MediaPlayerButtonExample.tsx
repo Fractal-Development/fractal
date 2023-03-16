@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Text, useTheme, ImageBackground } from '@fractal/fractal-ui';
-import { MediaPlayerButton } from '@fractal/fractal-media';
+import { Box, Text, useTheme, ImageBackground } from '@fractal-software/fractal-ui';
+import { MediaPlayerButton } from '@fractal-software/fractal-media';
 
 export function MediaPlayerButtonExample(): JSX.Element {
     const { spacings, borderRadius } = useTheme();

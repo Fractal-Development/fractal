@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { KeyboardAvoidingLayer } from '@fractal/fractal-ui';
-import { ModalAutoPlayer, ImageModalViewer } from '@fractal/fractal-media';
+import { KeyboardAvoidingLayer } from '@fractal-software/fractal-ui';
+import { ModalAutoPlayer, ImageModalViewer } from '@fractal-software/fractal-media';
 import { MessageList } from './MessageList';
 import { ChatContentProps, MinimalMessageData } from './types';
 import { ChatLoadingIndicator } from './ChatLoadingIndicator';

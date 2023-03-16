@@ -1,6 +1,6 @@
 import React from 'react';
-import { OmniPlayerPoster } from '@fractal/fractal-media';
-import { useTheme } from '@fractal/fractal-ui';
+import { OmniPlayerPoster } from '@fractal-software/fractal-media';
+import { useTheme } from '@fractal-software/fractal-ui';
 import { MessageMediaProps } from './types';
 import { useChatMessageSize } from '../hooks/useChatMessageSize';
 

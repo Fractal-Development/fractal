@@ -1,4 +1,4 @@
-import { ImageSourcePropType } from '@fractal/fractal-ui';
+import { ImageSourcePropType } from '@fractal-software/fractal-ui';
 
 export interface ImageVieweProps {
     images: ImageSourcePropType[];

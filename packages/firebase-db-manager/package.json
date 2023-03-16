@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/firebase-db-manager",
-    "version": "2.0.0",
+    "name": "@fractal-software/firebase-db-manager",
+    "version": "4.0.0-beta.0",
     "description": "Firebase wrapper to have more self explenatory methods.",
     "author": "BrandonMA",
     "license": "MIT",

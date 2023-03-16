@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, TimePicker, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, TimePicker, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function TimePickerFragment(): JSX.Element {

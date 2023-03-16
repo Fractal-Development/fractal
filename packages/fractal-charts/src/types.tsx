@@ -1,6 +1,6 @@
 import { CurveFactory } from 'd3-shape';
 import { ScaleBand, ScaleLinear, ScaleLogarithmic, ScalePower, ScaleTime, scaleLinear } from 'd3-scale';
-import { LayerProps } from '@fractal/fractal-ui';
+import { LayerProps } from '@fractal-software/fractal-ui';
 
 export type DimensionsType = {
     width: number;

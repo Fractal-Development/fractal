@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Layer, LayerProps } from '@fractal/fractal-ui';
+import { Layer, LayerProps } from '@fractal-software/fractal-ui';
 import { MediaPlayerPoster } from '../MediaPlayerPoster';
 import { getVideoID } from './utils/getVideoID';
 import { IframePlayer } from './IframePlayer';
