@@ -40,7 +40,6 @@
         "react-is": "*",
         "react-native": "*",
         "react-native-safe-area-context": "4.4.1",
-        "react-native-screens": "~3.18.0",
         "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
@@ -79,7 +78,6 @@
         "@react-navigation/native-stack": "^6.9.8",
         "@types/styled-components": "^5.1.26",
         "react-native-safe-area-context": "4.4.1",
-        "react-native-screens": "~3.18.0",
         "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },

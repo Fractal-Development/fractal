@@ -1,7 +1,9 @@
 import { LayerProps } from '@fractal-software/fractal-ui';
 
-export interface NavigationBarProps extends LayerProps {
-    children?: JSX.Element | Array<JSX.Element>;
+export interface NavigationBarProps extends Omit<LayerProps, 'children'> {
+    leftChild?: JSX.Element;
+    centerChild?: JSX.Element;
+    rightChild?: JSX.Element;
     hidden?: boolean;
     showBackButton?: boolean;
     backTitle?: string;
