@@ -7,19 +7,21 @@
         "packages/*"
     ],
     "scripts": {
+        "postinstall": "cd packages/fractal-ui && npm install react-native-root-toast",
         "build": "turbo run build",
         "dev": "turbo run dev --no-cache --parallel --continue",
         "lint": "turbo run lint",
         "lint:fix": "turbo run lint:fix",
         "test": "jest",
-        "clean": "yarn clean:turbo && yarn clean:watchman",
-        "clean:turbo": "yarn turbo run clean && rm -rf node_modules",
-        "clean:watchman": "watchman watch-del-all && yarn cache clean",
-        "web:expo": "cd apps/fractal-ui-expo-example && yarn web",
-        "web:react": "cd apps/fractal-ui-react-js-example && yarn start",
-        "web:next": "cd apps/fractal-ui-next-js-example && yarn dev",
-        "web:vite": "cd apps/fractal-ui-vite-example && yarn dev",
-        "native": "cd apps/fractal-ui-expo-example && yarn start"
+        "clean": "npm run clean:turbo && npm run clean:watchman",
+        "clean:turbo": "npm run turbo run clean && rm -rf node_modules",
+        "clean:watchman": "watchman watch-del-all && npm cache verify",
+        "web:expo": "cd apps/fractal-ui-expo-example && npm run web",
+        "web:react": "cd apps/fractal-ui-react-js-example && npm run start",
+        "web:next": "cd apps/fractal-ui-next-js-example && npm run dev",
+        "web:vite": "cd apps/fractal-ui-vite-example && npm run dev",
+        "native": "cd apps/fractal-ui-expo-example && npm run start",
+        "turbo": "turbo"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^5.16.5",
@@ -41,10 +43,11 @@
         "typescript": "^4.7.4"
     },
     "resolutions": {
+        "@react-native-community/slider": "4.2.4",
         "@types/react": "^18.0.17",
+        "@types/react-dom": "^18.0.10",
         "react": "18.2.0",
         "react-native": "0.70.5",
-        "@react-native-community/slider": "4.2.4",
         "expo-device": "~5.0.0",
         "react-native-svg": "13.4.0",
         "framer-motion": "^6.5.1",

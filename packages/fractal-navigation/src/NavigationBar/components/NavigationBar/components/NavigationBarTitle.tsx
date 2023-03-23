@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Text, TextProps } from '@fractal/fractal-ui';
+import { useTheme, Text, TextProps } from '@fractal-software/fractal-ui';
 
 interface NavigationBarTitleProps extends TextProps {
     title: string;

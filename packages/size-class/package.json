@@ -1,6 +1,6 @@
 {
     "name": "@fractal-software/size-class",
-    "version": "4.0.0-beta.0",
+    "version": "4.0.0-beta.1",
     "description": "React Native library to improve width and height handling",
     "author": "BrandonMA",
     "license": "MIT",

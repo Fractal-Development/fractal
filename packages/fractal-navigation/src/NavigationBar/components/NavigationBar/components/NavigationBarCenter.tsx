@@ -1,5 +1,5 @@
 import React, { memo, ReactNode } from 'react';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 import { NavigationBarTitle } from './NavigationBarTitle';
 import { titleStyle } from './util/titleStyle';
 
