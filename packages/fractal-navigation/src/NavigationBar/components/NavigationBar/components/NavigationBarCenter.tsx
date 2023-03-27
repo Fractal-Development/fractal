@@ -1,5 +1,6 @@
 import React, { memo, ReactNode } from 'react';
-import { Layer, Text, useTheme } from '@fractal/fractal-ui';
+import { Layer } from '@fractal/fractal-ui';
+import { NavigationBarTitle } from './NavigationBarTitle';
 import { titleStyle } from './util/titleStyle';
 
 interface NavigationBarCenterProps {
@@ -8,16 +9,9 @@ interface NavigationBarCenterProps {
 }
 
 export const NavigationBarCenter = memo(({ children, title }: NavigationBarCenterProps): JSX.Element => {
-    const { navigationBar } = useTheme();
-
     return (
         <Layer justifyContent='center' flex={1} flexDirection='row' alignItems='center' flexBasis={0}>
-            {children ||
-                (title ? (
-                    <Text {...navigationBar.title} textAlign='center' numberOfLines={1} style={titleStyle}>
-                        {title}
-                    </Text>
-                ) : null)}
+            {children || (title ? <NavigationBarTitle title={title} textAlign='center' numberOfLines={1} style={titleStyle} /> : null)}
         </Layer>
     );
 });
