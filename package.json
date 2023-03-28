@@ -14,7 +14,7 @@
         "test": "jest",
         "clean": "npm run clean:turbo && npm run clean:watchman",
         "clean:turbo": "npm run turbo run clean && rm -rf node_modules",
-        "clean:watchman": "watchman watch-del-all && npm cache verify && rm -rf package-lock.json",
+        "clean:watchman": "watchman watch-del-all && npm cache verify",
         "web:expo": "cd apps/fractal-ui-expo-example && npm run web",
         "web:react": "cd apps/fractal-ui-react-js-example && npm run start",
         "web:next": "cd apps/fractal-ui-next-js-example && npm run dev",
