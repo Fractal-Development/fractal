@@ -23,7 +23,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "devDependencies": {
-        "expo-device": "~5.0.0",
+        "expo-device": "~5.2.1",
         "ua-parser-js": "^0.7.24",
         "utility-types": "^3.10.0"
     },
@@ -33,7 +33,7 @@
     "peerDependencies": {
         "react": "*",
         "react-dom": "*",
-        "expo-device": "~5.0.0"
+        "expo-device": "~5.2.1"
     },
     "sideEffects": false
 }

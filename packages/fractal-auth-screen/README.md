@@ -17,14 +17,14 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### Expo(Web, iOS and Android)
 
 ```
-"@react-native-community/datetimepicker": "6.5.2",
-"@react-native-community/slider": "4.2.4",
+"@react-native-community/datetimepicker": "6.7.3",
+"@react-native-community/slider": "4.4.2",
 "@react-native-picker/picker": "2.4.8",
-"expo-blur": "~12.0.1",
-"expo-document-picker": "~11.0.1",
-"react": "18.1.0",
-"react-native": "0.70.5",
-"react-native-reanimated": "~2.12.0",
+"expo-blur": "~12.2.2",
+"expo-document-picker": "~11.2.1",
+"react": "18.2.0",
+ "react-native": "0.71.4",
+"react-native-reanimated": "~2.14.4",
 "react-native-svg": "13.4.0",
 "react-virtualized-auto-sizer": "^1.0.7"
 ```
@@ -32,14 +32,14 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### React Native(iOS and Android only)
 
 ```
-"@react-native-community/datetimepicker": "6.5.2",
-"@react-native-community/slider": "4.2.4",
+"@react-native-community/datetimepicker": "6.7.3",
+"@react-native-community/slider": "4.4.2",
 "@react-native-picker/picker": "2.4.8",
-"expo-blur": "~12.0.1",
-"expo-document-picker": "~11.0.1",
-"react": "18.1.0",
-"react-native": "0.70.5",
-"react-native-reanimated": "~2.12.0",
+"expo-blur": "~12.2.2",
+"expo-document-picker": "~11.2.1",
+"react": "18.2.0",
+ "react-native": "0.71.4",
+"react-native-reanimated": "~2.14.4",
 "react-native-svg": "13.4.0",
 "react-virtualized-auto-sizer": "^1.0.7"
 ```
@@ -47,7 +47,7 @@ We have other dependencies that are used by all platforms so we manage that auto
 #### React.JS or Next.JS(Web only)
 
 ```
-"react": "18.1.0",
+"react": "18.2.0",
 "react-virtualized-auto-sizer": "^1.0.7"
 ```
 

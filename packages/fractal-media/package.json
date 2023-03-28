@@ -25,14 +25,14 @@
     "peerDependencies": {
         "@fractal-software/fractal-ui": "*",
         "expo": "*",
-        "expo-av": "~13.0.2",
-        "expo-video-thumbnails": "~7.0.0",
+        "expo-av": "~13.2.1",
+        "expo-video-thumbnails": "~7.2.1",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
         "react-native": "*",
         "react-native-svg": "*",
-        "react-native-webview": "11.23.1",
+        "react-native-webview": "11.26.0",
         "react-native-youtube-iframe": "^2.2.2"
     },
     "peerDependenciesMeta": {
@@ -63,7 +63,7 @@
     "devDependencies": {
         "@fractal-software/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
-        "expo-av": "~13.0.2",
+        "expo-av": "~13.2.1",
         "react-native-svg": "13.4.0",
         "react-native-youtube-iframe": "^2.2.2",
         "utility-types": "^3.10.0"

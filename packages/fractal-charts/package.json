@@ -30,7 +30,7 @@
         "react-is": "*",
         "react-native": "*",
         "react-native-gesture-handler": "*",
-        "react-native-reanimated": "~2.12.0",
+        "react-native-reanimated": "~2.14.4",
         "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
@@ -68,7 +68,7 @@
         "@types/d3-shape": "^3.0.0",
         "@types/node": "^16.3.2",
         "@types/styled-components": "^5.1.26",
-        "react-native-reanimated": "~2.12.0",
+        "react-native-reanimated": "~2.14.4",
         "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },

@@ -25,6 +25,7 @@
     "peerDependencies": {
         "@fractal-software/fractal-ui": "*",
         "expo": "*",
+        "moti": "*",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -34,6 +35,9 @@
     },
     "peerDependenciesMeta": {
         "expo": {
+            "optional": true
+        },
+        "moti": {
             "optional": true
         },
         "react-dom": {
@@ -63,6 +67,7 @@
         "@fractal-software/fractal-ui": "*",
         "@types/react-virtualized-auto-sizer": "^1.0.1",
         "@types/styled-components": "^5.1.26",
+        "moti": "^0.21.0",
         "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },
