@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ImageSourcePropType } from '@fractal/fractal-ui';
+import { ImageSourcePropType } from '@fractal-software/fractal-ui';
 import { MinimalMessageData } from '../components/types';
 
 interface ImageMessage {

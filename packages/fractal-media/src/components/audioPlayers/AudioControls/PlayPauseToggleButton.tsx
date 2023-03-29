@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoundedToggleButton } from '@fractal/fractal-ui';
+import { RoundedToggleButton } from '@fractal-software/fractal-ui';
 import { PlayPauseIcon } from './PlayPauseIcon';
 import { ControlToggleButtonProps } from './types';
 import { getPlayPauseButtonAccessibilityProps } from '../accessibility/getPlayPauseButtonAccessibilityProps';

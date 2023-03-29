@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/fractal-messaging",
-    "version": "3.1.0",
+    "name": "@fractal-software/fractal-messaging",
+    "version": "4.0.0-beta.0",
     "description": "Messaging Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -23,8 +23,9 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "expo": "*",
+        "moti": "*",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
@@ -34,6 +35,9 @@
     },
     "peerDependenciesMeta": {
         "expo": {
+            "optional": true
+        },
+        "moti": {
             "optional": true
         },
         "react-dom": {
@@ -53,16 +57,17 @@
         }
     },
     "dependencies": {
-        "@fractal/fractal-media": "*",
-        "@fractal/size-class": "*",
+        "@fractal-software/fractal-media": "*",
+        "@fractal-software/size-class": "*",
         "react-virtualized-auto-sizer": "^1.0.7",
         "styled-components": "^5.3.6",
         "text-metrics": "^3.0.0"
     },
     "devDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "@types/react-virtualized-auto-sizer": "^1.0.1",
         "@types/styled-components": "^5.1.26",
+        "moti": "^0.21.0",
         "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },

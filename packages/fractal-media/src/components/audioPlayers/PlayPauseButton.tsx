@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseButton, useTheme } from '@fractal/fractal-ui';
+import { BaseButton, useTheme } from '@fractal-software/fractal-ui';
 import { PlayPauseIcon } from './AudioControls/PlayPauseIcon';
 
 export interface PlayPauseButtonProps {

@@ -1,4 +1,4 @@
-import { AnimationProps } from '@fractal/fractal-ui';
+import { AnimationProps } from '@fractal-software/fractal-ui';
 export const loadingCircleVariants = {
     start: {
         opacity: 0,

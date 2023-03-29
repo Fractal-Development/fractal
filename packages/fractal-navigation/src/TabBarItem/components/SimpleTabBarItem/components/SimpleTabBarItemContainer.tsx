@@ -1,6 +1,6 @@
 import React, { memo, ReactElement } from 'react';
-import { getValueForLargeSizeType, useWidthSizeGroup } from '@fractal/size-class';
-import { Pressable, useTheme, LayerProps } from '@fractal/fractal-ui';
+import { getValueForLargeSizeType, useWidthSizeGroup } from '@fractal-software/size-class';
+import { Pressable, useTheme, LayerProps } from '@fractal-software/fractal-ui';
 import { useTabBarPosition } from '../../../../TabBar/hooks/useTabBarPosition';
 import { SharedTabItemProps } from '../../../types/SharedTabItemProps';
 import { useTabPress } from '../../../hooks/useTabPress';

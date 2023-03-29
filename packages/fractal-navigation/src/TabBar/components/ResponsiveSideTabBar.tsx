@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { useValueForLargeSizeType } from '@fractal/size-class';
+import { useValueForLargeSizeType } from '@fractal-software/size-class';
 import { TabBarProps } from '../types';
 import { TabBar } from './TabBar';
 

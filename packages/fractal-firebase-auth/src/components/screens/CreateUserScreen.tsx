@@ -1,4 +1,4 @@
-import { LoadingBackground } from '@fractal/fractal-ui';
+import { LoadingBackground } from '@fractal-software/fractal-ui';
 import React, { ReactNode, useEffect } from 'react';
 import { useAuthenticationState } from '../../hooks/useAuthenticationState';
 import { useUserDocument } from '../../hooks';

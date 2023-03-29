@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3Scale from 'd3-scale';
 import * as array from 'd3-array';
-import { useTheme } from '@fractal/fractal-ui';
+import { useTheme } from '@fractal-software/fractal-ui';
 import { XAxisProps } from '../../types';
 import { useDimensions } from '../../hooks/useDimensions';
 import { ChartContainer } from '../ChartContainer';

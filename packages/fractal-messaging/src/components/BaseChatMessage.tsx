@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useTheme } from '@fractal/fractal-ui';
+import { useTheme } from '@fractal-software/fractal-ui';
 import { ChatMessageProps, MinimalMessageData } from './types';
 import { Bubble } from './Bubble';
 import { MessageImage } from './MessageImage';

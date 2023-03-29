@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Layer, Text, MarginLayer } from '@fractal/fractal-ui';
+import { useTheme, Box, Layer, Text, MarginLayer } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getMarginLayerAccessibilityProps } from './accessibility/getMarginLayerAccessibilityProps';
 

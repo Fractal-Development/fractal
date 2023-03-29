@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Layer, Text, Slider, useTheme, LayerProps } from '@fractal/fractal-ui';
+import { Layer, Text, Slider, useTheme, LayerProps } from '@fractal-software/fractal-ui';
 import { formatNumberToTime } from './utils/formatNumberToTime';
 
 interface AudioProgressBarProps extends LayerProps {

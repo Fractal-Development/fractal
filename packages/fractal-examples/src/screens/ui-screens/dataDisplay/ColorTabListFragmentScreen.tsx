@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
-import { PaddingLayer } from '@fractal/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal-software/fractal-navigation';
+import { PaddingLayer } from '@fractal-software/fractal-ui';
 import { ColorTabListFragment } from '../../../fragments/ui-fragments';
 
 export function ColorTabListFragmentScreen(): ReactElement {

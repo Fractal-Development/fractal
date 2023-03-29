@@ -1,5 +1,5 @@
 import React, { memo, ReactNode, useCallback } from 'react';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 import { ChevronLeft } from '../../assets';
 import { NavigationBarButton } from '../../buttons';
 

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { AnimatePresence, Layer, TouchableOpacity } from '@fractal/fractal-ui';
+import { AnimatePresence, Layer, TouchableOpacity } from '@fractal-software/fractal-ui';
 import { motion } from 'framer-motion';
 import { ImageZoom } from '../ImageZoom';
 import { ChevronLeft, ChevronRight } from '../../assets';

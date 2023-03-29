@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, HorizontalLayer, Layer } from '@fractal/fractal-ui';
+import { useTheme, HorizontalLayer, Layer } from '@fractal-software/fractal-ui';
 import { HorizontalDashed } from './HorizontalDashed';
 import { VerticalDashed } from './VerticalDashed';
 import { VerticalTextLayer } from './VerticalTextLayer';

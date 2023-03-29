@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ActivityIndicator, Layer } from '@fractal/fractal-ui';
+import { ActivityIndicator, Layer } from '@fractal-software/fractal-ui';
 
 export const ImageLoading = () => (
     <Layer flex={1} alignItems='center' justifyContent='center'>

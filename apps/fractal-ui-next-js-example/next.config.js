@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const withTM = require('next-transpile-modules')([
-    '@fractal/fractal-charts',
-    '@fractal/fractal-examples',
-    '@fractal/fractal-ui',
-    '@fractal/size-class',
-    '@fractal/fractal-media',
-    '@fractal/fractal-messaging',
-    '@fractal/fractal-navigation',
-    '@fractal/firebase-db-manager',
+    '@fractal-software/fractal-charts',
+    '@fractal-software/fractal-examples',
+    '@fractal-software/fractal-ui',
+    '@fractal-software/size-class',
+    '@fractal-software/fractal-media',
+    '@fractal-software/fractal-messaging',
+    '@fractal-software/fractal-navigation',
+    '@fractal-software/firebase-db-manager',
     'd3-shape',
     'd3-path'
 ]);

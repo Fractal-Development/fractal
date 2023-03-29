@@ -1,4 +1,4 @@
-import { LayerProps } from '@fractal/fractal-ui';
+import { LayerProps } from '@fractal-software/fractal-ui';
 import { MinimalTrackData } from './useAudioPlayer/types';
 
 export interface AudioPlayerProps extends Omit<LayerProps, 'flexDirection'> {

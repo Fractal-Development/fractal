@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Text, useTheme } from '@fractal/fractal-ui';
-import { MediaContentRow } from '@fractal/fractal-media';
+import { Box, Text, useTheme } from '@fractal-software/fractal-ui';
+import { MediaContentRow } from '@fractal-software/fractal-media';
 
 export function MediaContentRowExample(): JSX.Element {
     const { spacings } = useTheme();

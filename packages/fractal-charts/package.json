@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/fractal-charts",
-    "version": "3.1.0",
+    "name": "@fractal-software/fractal-charts",
+    "version": "4.0.0-beta.0",
     "description": "Charts and Graphs Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -23,14 +23,14 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "expo": "*",
         "react": "*",
         "react-dom": "*",
         "react-is": "*",
         "react-native": "*",
         "react-native-gesture-handler": "*",
-        "react-native-reanimated": "~2.12.0",
+        "react-native-reanimated": "~2.14.4",
         "react-native-svg": "*"
     },
     "peerDependenciesMeta": {
@@ -62,13 +62,13 @@
         "d3-shape": "^3.0.1"
     },
     "devDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "@types/d3-array": "^3.0.1",
         "@types/d3-scale": "^4.0.1",
         "@types/d3-shape": "^3.0.0",
         "@types/node": "^16.3.2",
         "@types/styled-components": "^5.1.26",
-        "react-native-reanimated": "~2.12.0",
+        "react-native-reanimated": "~2.14.4",
         "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"
     },

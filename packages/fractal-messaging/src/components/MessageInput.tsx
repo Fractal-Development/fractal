@@ -1,5 +1,5 @@
 import React, { forwardRef, useCallback, useState } from 'react';
-import { ButtonTextField, ButtonVariant, LayerProps } from '@fractal/fractal-ui';
+import { ButtonTextField, ButtonVariant, LayerProps } from '@fractal-software/fractal-ui';
 import { SendIcon } from '../assets/SendIcon';
 
 interface MessageInputProps extends Partial<Omit<LayerProps, 'children'>> {

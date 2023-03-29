@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 
 const SIZE = 8;
 

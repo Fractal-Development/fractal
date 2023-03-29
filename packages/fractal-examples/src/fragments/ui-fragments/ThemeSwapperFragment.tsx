@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useSetThemeIdentifier, useTheme, Box, Button, Text } from '@fractal/fractal-ui';
+import { useSetThemeIdentifier, useTheme, Box, Button, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from './accessibility/getTitleTextAccessibilityProps';
 
 export function ThemeSwapperFragment(): JSX.Element {

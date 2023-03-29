@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/fractal-auth-screen",
-    "version": "3.1.1",
+    "name": "@fractal-software/fractal-auth-screen",
+    "version": "4.0.0-beta.0",
     "description": "Auth Screen that is authentication method agnostic, it also provides a way to check your routes and redirect that works on any kind of router.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -23,7 +23,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "peerDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "expo": "*",
         "react": "*",
         "react-dom": "*",
@@ -49,7 +49,7 @@
         }
     },
     "devDependencies": {
-        "@fractal/fractal-ui": "*",
+        "@fractal-software/fractal-ui": "*",
         "@types/styled-components": "^5.1.26",
         "react-native-svg": "13.4.0",
         "utility-types": "^3.10.0"

@@ -1,6 +1,6 @@
 {
-    "name": "@fractal/size-class",
-    "version": "2.2.7",
+    "name": "@fractal-software/size-class",
+    "version": "4.0.0-beta.1",
     "description": "React Native library to improve width and height handling",
     "author": "BrandonMA",
     "license": "MIT",
@@ -23,7 +23,7 @@
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
     },
     "devDependencies": {
-        "expo-device": "~5.0.0",
+        "expo-device": "~5.2.1",
         "ua-parser-js": "^0.7.24",
         "utility-types": "^3.10.0"
     },
@@ -33,7 +33,7 @@
     "peerDependencies": {
         "react": "*",
         "react-dom": "*",
-        "expo-device": "~5.0.0"
+        "expo-device": "~5.2.1"
     },
     "sideEffects": false
 }

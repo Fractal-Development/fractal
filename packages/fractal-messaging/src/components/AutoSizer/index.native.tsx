@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layer } from '@fractal/fractal-ui';
+import { Layer } from '@fractal-software/fractal-ui';
 import { LayoutChangeEvent } from 'react-native';
 import { AutoSizerProps, Size } from './types';
 

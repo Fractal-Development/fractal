@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useTheme, Box, Layer, Image, Text, ResizeModeType } from '@fractal/fractal-ui';
+import { useTheme, Box, Layer, Image, Text, ResizeModeType } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function ImageFragment(): JSX.Element {

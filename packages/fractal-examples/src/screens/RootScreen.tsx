@@ -1,6 +1,15 @@
-import { NavigationBarInsetsLayer } from '@fractal/fractal-navigation';
-import { useNavigate } from '@fractal/fractal-navigation-router';
-import { Layer, PaddingLayer, SearchBar, TableContainer, TouchableOpacity, useTheme, SimpleRow, ScrollView } from '@fractal/fractal-ui';
+import { NavigationBarInsetsLayer } from '@fractal-software/fractal-navigation';
+import { useNavigate } from '@fractal-software/fractal-navigation-router';
+import {
+    Layer,
+    PaddingLayer,
+    SearchBar,
+    TableContainer,
+    TouchableOpacity,
+    useTheme,
+    SimpleRow,
+    ScrollView
+} from '@fractal-software/fractal-ui';
 import React, { ReactElement, useCallback, useState } from 'react';
 import { Screen, lastScreenIndex, screensArray } from './util/screens';
 

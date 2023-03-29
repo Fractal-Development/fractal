@@ -1,4 +1,4 @@
-# @fractal/react-firebase-auth
+# @fractal-software/react-firebase-auth
 
 ## Description
 
@@ -10,7 +10,7 @@ Example is web only so be aware of that, you can make it work on native if you e
 
 ### Installation
 
-yarn add @fractal/react-firebase-auth
+yarn add @fractal-software/react-firebase-auth
 
 ### Peer dependencies
 

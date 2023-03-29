@@ -29,7 +29,8 @@
             "googleServicesFile": "./google-services.json"
         },
         "web": {
-            "favicon": "./assets/favicon.png"
+            "favicon": "./assets/favicon.png",
+            "bundler": "metro"
         },
         "plugins": [
             "@react-native-firebase/app",

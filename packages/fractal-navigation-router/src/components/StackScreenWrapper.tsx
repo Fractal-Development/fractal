@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react';
-import { NavigationBar, NavigationBarProps } from '@fractal/fractal-navigation';
-import { Layer, LayerProps, useTheme } from '@fractal/fractal-ui';
+import { NavigationBar, NavigationBarProps } from '@fractal-software/fractal-navigation';
+import { Layer, LayerProps, useTheme } from '@fractal-software/fractal-ui';
 import { useNavigate } from '../router';
 
 interface StackScreenWrapperProps extends LayerProps {

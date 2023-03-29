@@ -1,4 +1,4 @@
-import { MainExample } from '@fractal/fractal-examples';
+import { MainExample } from '@fractal-software/fractal-examples';
 import React, { useEffect, useState } from 'react';
 
 export default function App() {

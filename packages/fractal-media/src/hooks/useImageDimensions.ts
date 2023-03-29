@@ -1,4 +1,4 @@
-import { ImageSourcePropType } from '@fractal/fractal-ui';
+import { ImageSourcePropType } from '@fractal-software/fractal-ui';
 import { useEffect, useRef, useState } from 'react';
 import { Image, ImageURISource } from 'react-native';
 import { Dimensions } from '../types';

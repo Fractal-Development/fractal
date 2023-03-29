@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Chip, Layer } from '@fractal/fractal-ui';
+import { useTheme, Chip, Layer } from '@fractal-software/fractal-ui';
 
 const onPress = () => console.log('Cross button pressed');
 

@@ -1,6 +1,6 @@
 import React, { useCallback, useRef, useEffect, useState } from 'react';
 import { Animated, Dimensions, StyleSheet, VirtualizedList } from 'react-native';
-import { ImageSourcePropType, Layer } from '@fractal/fractal-ui';
+import { ImageSourcePropType, Layer } from '@fractal-software/fractal-ui';
 import { ImageZoom } from '../ImageZoom';
 import { useAnimatedComponents, useImageIndexChange } from '../../hooks';
 import { ImageVieweProps } from './ImageVieweProps';

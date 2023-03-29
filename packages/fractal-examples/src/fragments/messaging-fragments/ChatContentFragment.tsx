@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChatContent, ChatFooterContainer, ChatLoadingIndicator, MinimalMessageData } from '@fractal/fractal-messaging';
-import { AudioMessagePlayerProvider } from '@fractal/fractal-media';
+import { ChatContent, ChatFooterContainer, ChatLoadingIndicator, MinimalMessageData } from '@fractal-software/fractal-messaging';
+import { AudioMessagePlayerProvider } from '@fractal-software/fractal-media';
 import { useOpenURL } from './useOpenURL';
-import { Box, Button, Layer, useTheme } from '@fractal/fractal-ui';
+import { Box, Button, Layer, useTheme } from '@fractal-software/fractal-ui';
 import { MessageTextField } from './MessageTextField';
 
 const defaultMessages: MinimalMessageData[] = [

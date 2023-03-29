@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { useTheme } from '@fractal/fractal-ui';
+import { useTheme } from '@fractal-software/fractal-ui';
 import { CircularTabBarItem } from './CircularTabBarItem';
 import { CircularTabBarItemProps } from './CircularTabBarItem/types/CircularTabBarItemProps';
 

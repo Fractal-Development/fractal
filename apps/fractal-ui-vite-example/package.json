@@ -6,17 +6,18 @@
     "scripts": {
         "dev": "vite",
         "build:web": "tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "clean": "rm -rf .turbo && rm -rf node_modules"
     },
     "dependencies": {
-        "@fractal/fractal-auth-screen": "*",
-        "@fractal/fractal-charts": "*",
-        "@fractal/fractal-examples": "*",
-        "@fractal/fractal-media": "*",
-        "@fractal/fractal-messaging": "*",
-        "@fractal/fractal-navigation": "*",
-        "@fractal/fractal-ui": "*",
-        "@fractal/size-class": "*",
+        "@fractal-software/fractal-auth-screen": "*",
+        "@fractal-software/fractal-charts": "*",
+        "@fractal-software/fractal-examples": "*",
+        "@fractal-software/fractal-media": "*",
+        "@fractal-software/fractal-messaging": "*",
+        "@fractal-software/fractal-navigation": "*",
+        "@fractal-software/fractal-ui": "*",
+        "@fractal-software/size-class": "*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "framer-motion": "^6.5.1",
@@ -26,6 +27,7 @@
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
         "@vitejs/plugin-react": "^3.1.0",
+        "esbuild": "^0.16.14",
         "typescript": "^4.9.3",
         "vite": "^4.1.0"
     }

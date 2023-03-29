@@ -51,14 +51,14 @@ You are almost ready to code, the last thing to take into consideration is that 
 For example if you wanna work with `fractal-ui` and `fractal-ui-expo-example` you can run this two commands on your root folder.
 
 ```
-yarn workspace @fractal/fractal-ui install
+yarn workspace @fractal-software/fractal-ui install
 yarn workspace fractal-ui-expo-example install
 ```
 
 You don't have to do anything else, you can consume `fractal-ui` directly without linking and everything should work as expected, if you make any changes on `fractal-ui` you just have to run:
 
 ```
-yarn workspace @fractal/fractal-ui build
+yarn workspace @fractal-software/fractal-ui build
 ```
 
 And this will rebuild the library and you will have instant access to your new components, no need to run install again as everything is managed locally by Yarn 😃.

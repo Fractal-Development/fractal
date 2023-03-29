@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Layer, useTheme } from '@fractal/fractal-ui';
-import { YAxis, XAxis, AreaChart } from '@fractal/fractal-charts';
+import { Box, Layer, useTheme } from '@fractal-software/fractal-ui';
+import { YAxis, XAxis, AreaChart } from '@fractal-software/fractal-charts';
 
 const areaData = [50, 10, 40, 80, 85, 88, 35, 53, 24, 50];
 const textProps = { fontSize: 10 };

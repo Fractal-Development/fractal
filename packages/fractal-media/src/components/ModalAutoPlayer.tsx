@@ -1,8 +1,8 @@
 import React from 'react';
-import { Modal, Layer } from '@fractal/fractal-ui';
+import { Modal, Layer } from '@fractal-software/fractal-ui';
 import { AutoPlayer } from './AutoPlayer';
 import { ImageDefaultHeader } from './ImageModalViewer/ImageDefaultHeader';
-import { useSizeValue, useValueForLargeSizeType } from '@fractal/size-class';
+import { useSizeValue, useValueForLargeSizeType } from '@fractal-software/size-class';
 
 interface ModalAutoPlayerProps {
     visible?: boolean;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Picker, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, Picker, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function PickerFragment(): JSX.Element {

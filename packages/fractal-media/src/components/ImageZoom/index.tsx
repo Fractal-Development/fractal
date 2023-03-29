@@ -1,5 +1,5 @@
 import React, { memo, MouseEvent, useEffect, useRef, useState } from 'react';
-import { HorizontalLayer, Image, Layer, SearchIcon, Text, TouchableOpacity, useTheme } from '@fractal/fractal-ui';
+import { HorizontalLayer, Image, Layer, SearchIcon, Text, TouchableOpacity, useTheme } from '@fractal-software/fractal-ui';
 import { motion, useAnimationControls } from 'framer-motion';
 import { ImageZoomProps } from './ImageZoomProps';
 

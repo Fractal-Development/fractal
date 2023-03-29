@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layer, useTheme } from '@fractal/fractal-ui';
+import { Layer, useTheme } from '@fractal-software/fractal-ui';
 import { TabBarProps } from '../types';
 import { useTabBarPositionLayoutProps, useTabBarSafeAreaPadding } from '../hooks';
 import { tabBarCSSPosition } from '../util/tabBarCSSPosition';

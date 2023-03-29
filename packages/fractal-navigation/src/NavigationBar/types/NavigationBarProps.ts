@@ -1,4 +1,4 @@
-import { LayerProps } from '@fractal/fractal-ui';
+import { LayerProps } from '@fractal-software/fractal-ui';
 
 export interface NavigationBarProps extends Omit<LayerProps, 'children'> {
     leftChild?: JSX.Element;

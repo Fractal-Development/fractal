@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Layer, SocialMediaButtons, Text } from '@fractal/fractal-ui';
+import { useTheme, Layer, SocialMediaButtons, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../../accessibility/getTitleTextAccessibilityProps';
 
 export function SocialMediaButtonsFragment(): JSX.Element {

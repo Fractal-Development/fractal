@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoundedToggleButton, useTheme } from '@fractal/fractal-ui';
+import { RoundedToggleButton, useTheme } from '@fractal-software/fractal-ui';
 import { RepeatIcon, ShuffleIcon } from '../../../assets';
 import { ControlToggleButtonProps } from './types';
 import { getControlToggleButtonAccessibilityProps } from '../accessibility/getControlToggleButtonAccessibilityProps';

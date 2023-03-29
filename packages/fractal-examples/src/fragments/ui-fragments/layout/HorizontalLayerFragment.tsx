@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme, Box, Layer, Text, HorizontalLayer } from '@fractal/fractal-ui';
+import { useTheme, Box, Layer, Text, HorizontalLayer } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 import { getHorizontalLayerAccessibilityProps } from './accessibility/getHorizontalLayerAccessibilityProps';
 

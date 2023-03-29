@@ -1,5 +1,5 @@
 {
-    "name": "fractal-monorepo",
+    "name": "@fractal-software/monorepo",
     "version": "2.0.0",
     "private": true,
     "workspaces": [
@@ -12,14 +12,15 @@
         "lint": "turbo run lint",
         "lint:fix": "turbo run lint:fix",
         "test": "jest",
-        "clean": "yarn clean:turbo && yarn clean:watchman",
-        "clean:turbo": "yarn turbo run clean && rm -rf node_modules",
-        "clean:watchman": "watchman watch-del-all && yarn cache clean",
-        "web:expo": "cd apps/fractal-ui-expo-example && yarn web",
-        "web:react": "cd apps/fractal-ui-react-js-example && yarn start",
-        "web:next": "cd apps/fractal-ui-next-js-example && yarn dev",
-        "web:vite": "cd apps/fractal-ui-vite-example && yarn dev",
-        "native": "cd apps/fractal-ui-expo-example && yarn start"
+        "clean": "npm run clean:turbo && npm run clean:watchman",
+        "clean:turbo": "npm run turbo run clean && rm -rf node_modules",
+        "clean:watchman": "watchman watch-del-all && npm cache verify",
+        "web:expo": "cd apps/fractal-ui-expo-example && npm run web",
+        "web:react": "cd apps/fractal-ui-react-js-example && npm run start",
+        "web:next": "cd apps/fractal-ui-next-js-example && npm run dev",
+        "web:vite": "cd apps/fractal-ui-vite-example && npm run dev",
+        "native": "cd apps/fractal-ui-expo-example && npm run start",
+        "turbo": "turbo"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^5.16.5",
@@ -35,17 +36,20 @@
         "expo-module-scripts": "^2.1.1",
         "jest": "^29.5.0",
         "jest-environment-jsdom": "^29.5.0",
+        "patch-package": "^6.5.1",
         "prettier": "^2.7.1",
         "ts-jest": "^29.0.5",
         "turbo": "^1.8.2",
         "typescript": "^4.7.4"
     },
     "resolutions": {
+        "@react-native-community/slider": "4.4.2",
         "@types/react": "^18.0.17",
+        "@types/react-dom": "^18.0.10",
         "react": "18.2.0",
-        "react-native": "0.70.5",
-        "@react-native-community/slider": "4.2.4",
-        "expo-device": "~5.0.0",
+        "react-native": "0.71.4",
+        "expo-device": "~5.2.1",
+        "react-native-gesture-handler": "~2.9.0",
         "react-native-svg": "13.4.0",
         "framer-motion": "^6.5.1",
         "typescript": "^4.7.4"

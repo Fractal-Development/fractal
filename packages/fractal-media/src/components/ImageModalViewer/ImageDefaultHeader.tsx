@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaLayer, TouchableOpacity, Text } from '@fractal/fractal-ui';
+import { SafeAreaLayer, TouchableOpacity, Text } from '@fractal-software/fractal-ui';
 
 type Props = {
     onRequestClose?: () => void;

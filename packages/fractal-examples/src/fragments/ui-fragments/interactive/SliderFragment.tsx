@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTheme, Box, Slider, Text } from '@fractal/fractal-ui';
+import { useTheme, Box, Slider, Text } from '@fractal-software/fractal-ui';
 import { getTitleTextAccessibilityProps } from '../accessibility/getTitleTextAccessibilityProps';
 
 export function SliderFragment(): JSX.Element {

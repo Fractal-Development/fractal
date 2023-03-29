@@ -1,6 +1,11 @@
 import React, { ReactElement } from 'react';
-import { FractalAppRoot, Layer, PaddingLayer, Text, Background } from '@fractal/fractal-ui';
-import { NavigationBarInsetsProvider, ResponsiveSideTabBar, TabBarContextProvider, TabBarInsetsLayer } from '@fractal/fractal-navigation';
+import { FractalAppRoot, Layer, PaddingLayer, Text, Background } from '@fractal-software/fractal-ui';
+import {
+    NavigationBarInsetsProvider,
+    ResponsiveSideTabBar,
+    TabBarContextProvider,
+    TabBarInsetsLayer
+} from '@fractal-software/fractal-navigation';
 import {
     NavigationRouter,
     Routes,
@@ -9,7 +14,7 @@ import {
     Navigate,
     StackScreenWrapper,
     SimpleTabBarItemLink
-} from '@fractal/fractal-navigation-router';
+} from '@fractal-software/fractal-navigation-router';
 
 import { ReactIcon } from './assets/ReactIcon';
 import {
