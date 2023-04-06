@@ -62,7 +62,7 @@ export function PopoverFragment(): JSX.Element {
                     {(ref) => <Button ref={ref} variant='main' width={220} onPress={showModalBottomPopover} text='Bottom' />}
                 </Popover>
             </Box>
-            <Box marginTop={spacings.m} alignItems='center'>
+            <Box marginTop={spacings.m} alignItems='center' zIndex={isBottomPopoverVisible ? -1 : undefined}>
                 <Popover
                     placement='top'
                     active={isTopPopoverVisible}

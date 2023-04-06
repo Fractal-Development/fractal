@@ -4,6 +4,6 @@ export interface Size {
 }
 
 export interface AutoSizerProps {
-    children: (size: Size) => React.ReactNode;
-    onResize?: (size: Size) => void;
+    children: (size: Size) => React.ReactElement;
+    onResize?: (((size: Size) => void) & React.ReactEventHandler<HTMLDivElement>) | undefined;
 }

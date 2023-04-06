@@ -8,7 +8,6 @@ import { BaseSliderProps } from '../types';
 export function BaseSlider({ step = 0.001, defaultValue, value, ...others }: BaseSliderProps): JSX.Element {
     const { colors } = useTheme();
     return (
-        //@ts-ignore
         <Slider
             minimumTrackTintColor={colors.mainInteractiveColor}
             maximumTrackTintColor={Platform.OS === 'android' ? colors.label : colors.placeholder}
