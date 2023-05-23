@@ -1,6 +1,6 @@
 {
     "name": "@fractal-software/fractal-ui",
-    "version": "4.0.0-beta.0",
+    "version": "4.0.0",
     "description": "UI Components easy to customize for apps made by Fractal.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -21,7 +21,8 @@
         "lint:fix": "eslint --fix 'src/**/*.ts*'",
         "expo-module": "expo-module",
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
-        "test": "jest"
+        "test": "jest",
+        "pub": "npm publish --access public"
     },
     "peerDependencies": {
         "@react-native-community/datetimepicker": "6.7.3",

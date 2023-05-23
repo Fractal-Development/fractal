@@ -1,6 +1,6 @@
 {
     "name": "@fractal-software/fractal-auth-screen",
-    "version": "4.0.0-beta.0",
+    "version": "4.0.0",
     "description": "Auth Screen that is authentication method agnostic, it also provides a way to check your routes and redirect that works on any kind of router.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -20,7 +20,8 @@
         "lint": "eslint 'src/**/*.ts*'",
         "lint:fix": "eslint --fix 'src/**/*.ts*'",
         "expo-module": "expo-module",
-        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
+        "pub": "npm publish --access public"
     },
     "peerDependencies": {
         "@fractal-software/fractal-ui": "*",

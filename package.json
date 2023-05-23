@@ -20,7 +20,8 @@
         "web:next": "cd apps/fractal-ui-next-js-example && npm run dev",
         "web:vite": "cd apps/fractal-ui-vite-example && npm run dev",
         "native": "cd apps/fractal-ui-expo-example && npm run start",
-        "turbo": "turbo"
+        "turbo": "turbo",
+        "pub": "turbo run pub"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^5.16.5",

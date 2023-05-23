@@ -1,6 +1,6 @@
 {
     "name": "@fractal-software/size-class",
-    "version": "4.0.0-beta.1",
+    "version": "4.0.0",
     "description": "React Native library to improve width and height handling",
     "author": "BrandonMA",
     "license": "MIT",
@@ -20,7 +20,8 @@
         "lint": "eslint 'src/**/*.ts*'",
         "lint:fix": "eslint --fix 'src/**/*.ts*'",
         "expo-module": "expo-module",
-        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
+        "pub": "npm publish --access public"
     },
     "devDependencies": {
         "expo-device": "~5.2.1",

@@ -1,6 +1,6 @@
 {
     "name": "@fractal-software/firebase-db-manager",
-    "version": "4.0.0-beta.0",
+    "version": "4.0.0",
     "description": "Firebase wrapper to have more self explenatory methods.",
     "author": "BrandonMA",
     "license": "MIT",
@@ -21,7 +21,8 @@
         "lint": "eslint 'src/**/*.ts*'",
         "lint:fix": "eslint --fix 'src/**/*.ts*'",
         "expo-module": "expo-module",
-        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
+        "pub": "npm publish --access public"
     },
     "peerDependencies": {
         "@react-native-firebase/app": "^16.5.0",
