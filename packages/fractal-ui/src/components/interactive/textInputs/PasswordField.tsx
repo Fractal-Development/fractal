@@ -4,7 +4,7 @@ import { EyeIcon, HiddenEyeIcon } from '../../../assets';
 import { TouchableOpacity } from '../buttons/TouchableOpacity';
 import { IconTextField, IconTextFieldProps } from './IconTextField';
 
-export function PasswordField(props: IconTextFieldProps): JSX.Element {
+export function PasswordField({ textFieldProps, ...others }: IconTextFieldProps): JSX.Element {
     const [isPassword, setIsPassword] = useState(true);
 
     const changePasswordType = () => {
@@ -24,5 +24,5 @@ export function PasswordField(props: IconTextFieldProps): JSX.Element {
         [isPassword]
     );
 
-    return <IconTextField textFieldProps={{ secureTextEntry: isPassword }} rightImage={renderIcon} {...props} />;
+    return <IconTextField textFieldProps={{ secureTextEntry: isPassword, ...textFieldProps }} rightImage={renderIcon} {...others} />;
 }

@@ -11,7 +11,7 @@ interface ContentStyle {
     paddingHorizontal?: string | number;
 }
 
-interface ListRenderItemInfo<TItem> {
+export interface ListRenderItemInfo<TItem> {
     item: TItem;
     index: number;
 }
