@@ -63,10 +63,10 @@
         "react-native": {
             "optional": true
         },
-        "react-native-svg": {
+        "react-native-fbsdk": {
             "optional": true
         },
-        "react-native-fbsdk": {
+        "react-native-svg": {
             "optional": true
         }
     },
@@ -87,8 +87,8 @@
         "@react-native-google-signin/google-signin": "^9.0.2",
         "firebase": "^9.10.0",
         "immer": "^9.0.15",
-        "react-native-svg": "13.4.0",
-        "react-native-fbsdk-next": "^11.1.0"
+        "react-native-fbsdk-next": "^11.1.0",
+        "react-native-svg": "13.4.0"
     },
     "sideEffects": false
 }

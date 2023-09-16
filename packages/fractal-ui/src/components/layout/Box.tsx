@@ -1,20 +1,12 @@
 import React, { forwardRef } from 'react';
+import clsx from 'clsx';
 
-import { useTheme } from '../../context/hooks/useTheme';
 import { LayerProps } from './Layer/types';
 import { PaddingLayer } from './PaddingLayer';
 
-const Box = forwardRef((props: LayerProps, ref: any): JSX.Element => {
-    const { colors, borderRadius, shadows, elevation } = useTheme();
+const Box = forwardRef(({ className, ...others }: LayerProps, ref: any): JSX.Element => {
     return (
-        <PaddingLayer
-            ref={ref}
-            backgroundColor={colors.foreground}
-            borderRadius={borderRadius.m}
-            boxShadow={shadows.mainShadow}
-            elevation={elevation}
-            {...props}
-        />
+        <PaddingLayer ref={ref} className={clsx('bg-foreground-light dark:bg-foreground-dark rounded-xl shadow', className)} {...others} />
     );
 });
 

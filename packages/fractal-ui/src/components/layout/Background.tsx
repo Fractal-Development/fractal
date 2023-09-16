@@ -1,12 +1,11 @@
 import React, { forwardRef } from 'react';
 
-import { useTheme } from '../../context/hooks/useTheme';
 import { Layer } from './Layer';
 import { LayerProps } from './Layer/types';
+import clsx from 'clsx';
 
-const Background = forwardRef((props: LayerProps, ref: any): JSX.Element => {
-    const { colors } = useTheme();
-    return <Layer ref={ref} backgroundColor={colors.background} flex={1} {...props} />;
+const Background = forwardRef(({ className, ...others }: LayerProps, ref: any): JSX.Element => {
+    return <Layer ref={ref} className={clsx('bg-background-light dark:bg-background-dark', className)} {...others} />;
 });
 
 Background.displayName = 'Background';

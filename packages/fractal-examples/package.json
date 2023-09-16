@@ -24,9 +24,9 @@
         "pub": "npm publish --access public"
     },
     "peerDependencies": {
+        "@fractal-software/firebase-db-manager": "*",
         "@fractal-software/fractal-auth-screen": "*",
         "@fractal-software/fractal-charts": "*",
-        "@fractal-software/firebase-db-manager": "*",
         "@fractal-software/fractal-firebase-auth": "*",
         "@fractal-software/fractal-media": "*",
         "@fractal-software/fractal-messaging": "*",
@@ -66,9 +66,9 @@
         "react-router-native": "^6.4.1"
     },
     "devDependencies": {
+        "@fractal-software/firebase-db-manager": "*",
         "@fractal-software/fractal-auth-screen": "*",
         "@fractal-software/fractal-charts": "*",
-        "@fractal-software/firebase-db-manager": "*",
         "@fractal-software/fractal-firebase-auth": "*",
         "@fractal-software/fractal-media": "*",
         "@fractal-software/fractal-messaging": "*",

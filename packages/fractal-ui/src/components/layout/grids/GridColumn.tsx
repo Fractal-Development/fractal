@@ -1,17 +1,13 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import clsx from 'clsx';
 
 import { Layer } from '../Layer';
 import { getGridColumnAccessibilityProps } from './accessibility/getGridColumnAccessibilityProps';
-import { GridItemProps, extractGridItemProps } from './types';
-
-const StyledGrid = styled(Layer)`
-    ${extractGridItemProps};
-`;
+import { GridItemProps } from './types';
 
 const GridColumn = forwardRef(
-    (props: GridItemProps, ref: any): JSX.Element => (
-        <StyledGrid ref={ref} flexDirection='column' {...props} {...getGridColumnAccessibilityProps()} />
+    ({ className = 'flex-1', ...others }: GridItemProps, ref: any): JSX.Element => (
+        <Layer ref={ref} className={clsx('flex-col', className)} {...others} {...getGridColumnAccessibilityProps()} />
     )
 );
 

@@ -1,17 +1,11 @@
-import { motify } from 'moti';
+import { MotiSafeAreaView } from 'moti';
 import React, { forwardRef } from 'react';
-import { SafeAreaView } from 'react-native';
-import styled from 'styled-components/native';
+import { styled } from 'nativewind';
 
 import { useVariantState } from '../../../animations/native/hooks/useVariantState';
-import { FractalSharedCss } from '../../../sharedProps';
 import { LayerProps } from '../Layer/types';
 
-const MotiSafeAreaView = motify(SafeAreaView)();
-
-const StyledSafeAreaLayer = styled(MotiSafeAreaView as any)`
-    ${FractalSharedCss};
-`;
+const StyledSafeAreaLayer = styled(MotiSafeAreaView) as any;
 
 const SafeAreaLayer = forwardRef(({ currentVariant, variants, ...others }: LayerProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);

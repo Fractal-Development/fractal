@@ -1,23 +1,8 @@
 /** @type {import('next').NextConfig} */
-const withTM = require('next-transpile-modules')([
-    '@fractal-software/fractal-charts',
-    '@fractal-software/fractal-examples',
-    '@fractal-software/fractal-ui',
-    '@fractal-software/size-class',
-    '@fractal-software/fractal-media',
-    '@fractal-software/fractal-messaging',
-    '@fractal-software/fractal-navigation',
-    '@fractal-software/firebase-db-manager',
-    'd3-shape',
-    'd3-path'
-]);
 
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    compiler: {
-        styledComponents: true
-    },
+    reactStrictMode: false,
+    transpilePackages: ['@fractal-software/fractal-ui'],
     async rewrites() {
         return [
             {
@@ -28,4 +13,4 @@ const nextConfig = {
     }
 };
 
-module.exports = withTM(nextConfig);
+module.exports = nextConfig;

@@ -18,9 +18,9 @@
         "@fractal-software/fractal-navigation": "*",
         "@fractal-software/fractal-ui": "*",
         "@fractal-software/size-class": "*",
+        "framer-motion": "^6.5.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "framer-motion": "^6.5.1",
         "react-virtualized-auto-sizer": "^1.0.7"
     },
     "devDependencies": {

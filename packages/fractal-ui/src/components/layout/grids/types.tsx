@@ -15,7 +15,3 @@ export interface GridProps extends Omit<LayerProps, 'children'> {
 }
 
 export type GridItemProps = Omit<LayerProps, 'flexDirection'>;
-
-export function extractGridItemProps({ flex, height, width }: GridItemProps): string {
-    return `${height == null && width == null ? `flex: ${flex || 1}` : ''};`;
-}

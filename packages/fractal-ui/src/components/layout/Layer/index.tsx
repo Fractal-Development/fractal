@@ -1,40 +1,34 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-
-import { FractalSharedCss, shouldForwardProp } from '../../../sharedProps';
 import { LayerProps } from './types';
+import { clsx } from 'clsx';
 
-const StyledLayer = styled(motion.div as any).withConfig({
-    shouldForwardProp
-})`
-    ${FractalSharedCss}
-    &:focus {
-        outline-color: initial;
-        outline-style: none;
-        outline-width: initial;
-    }
-`;
-
-const Layer = forwardRef(
-    (
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        { from, currentVariant, animate, transition = { type: 'spring' }, children, onLayout: _onLayout, ...others }: LayerProps,
-        ref: any
-    ): JSX.Element => (
-        <StyledLayer
-            ref={ref}
-            flexDirection='column'
-            initial={currentVariant ? 'from' : from}
-            animate={currentVariant ?? animate}
+const Layer = ({
+    from,
+    currentVariant,
+    animate,
+    transition = { type: 'spring' },
+    children,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    onLayout: _onLayout,
+    className
+}: LayerProps): JSX.Element => {
+    return (
+        <motion.div
+            className={clsx(
+                'focus:outline-initial focus:outline-initial flex shrink-0 focus:outline-none',
+                !className?.includes('flex-row') && 'flex-col',
+                !className?.includes('shrink') && 'shrink-0',
+                !className?.includes('absolute') && 'relative',
+                className
+            )}
+            initial={(currentVariant ? 'from' : from) as any}
+            animate={(currentVariant ?? animate) as any}
             transition={transition}
-            {...others}
         >
             {children}
-        </StyledLayer>
-    )
-);
-
-Layer.displayName = 'Layer';
+        </motion.div>
+    );
+};
 
 export { Layer };

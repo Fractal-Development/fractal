@@ -1,8 +1,18 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "outDir": "dist"
-  },
-  "include": ["src", ".eslintrc.js"],
-  "exclude": ["node_modules", "dist"]
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "dist"
+    },
+    "include": [
+        "src/components/layout/Layer",
+        "src/components/layout/SafeAreaLayer",
+        "src/components/layout/ScrollView",
+        "src/components/layout/Background",
+        "src/components/layout/Box",
+        "src/components/layout/PaddingLayer",
+        "src/index.ts",
+        "src/colorScheme",
+        ".eslintrc.js"
+    ],
+    "exclude": ["node_modules", "dist"]
 }

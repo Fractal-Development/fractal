@@ -10,6 +10,7 @@
     "source": "src/index.tsx",
     "files": [
         "dist",
+        "colors",
         "package.json",
         "LICENSE",
         "README.md"
@@ -33,6 +34,7 @@
         "expo-document-picker": "~11.2.1",
         "framer-motion": "^6.5.1",
         "moti": "^0.21.0",
+        "nativewind": "^2.0.11",
         "react": "*",
         "react-dom": "*",
         "react-native": "*",
@@ -52,6 +54,12 @@
         "@react-native-picker/picker": {
             "optional": true
         },
+        "@shopify/flash-list": {
+            "optional": true
+        },
+        "@tanstack/react-virtual": {
+            "optional": true
+        },
         "expo": {
             "optional": true
         },
@@ -62,6 +70,9 @@
             "optional": true
         },
         "moti": {
+            "optional": true
+        },
+        "nativewind": {
             "optional": true
         },
         "react-dom": {
@@ -90,27 +101,27 @@
         }
     },
     "dependencies": {
-        "@fractal-software/size-class": "*",
-        "@shopify/flash-list": "1.4.0",
-        "@tanstack/react-virtual": "^3.0.0-beta.54",
-        "styled-components": "^5.3.6",
-        "utility-types": "^3.10.0"
+        "clsx": "^2.0.0"
     },
     "devDependencies": {
         "@react-native-community/datetimepicker": "6.7.3",
         "@react-native-community/slider": "4.4.2",
         "@react-native-picker/picker": "2.4.8",
+        "@shopify/flash-list": "1.4.0",
+        "@tanstack/react-virtual": "^3.0.0-beta.54",
         "@types/react-virtualized-auto-sizer": "^1.0.1",
         "@types/styled-components": "^5.1.26",
         "@types/styled-components-react-native": "^5.2.1",
         "expo-blur": "~12.2.2",
         "expo-document-picker": "~11.2.1",
+        "expo-module-scripts": "^3.0.11",
         "framer-motion": "^6.5.1",
         "moti": "^0.21.0",
+        "nativewind": "^2.0.11",
         "react-native-gesture-handler": "~2.9.0",
         "react-native-reanimated": "~2.14.4",
-        "react-native-svg": "13.4.0",
-        "react-native-root-toast": "^3.4.1"
+        "react-native-root-toast": "^3.4.1",
+        "react-native-svg": "13.4.0"
     },
     "keywords": [
         "Javascript",

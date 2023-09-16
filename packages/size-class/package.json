@@ -32,9 +32,9 @@
         "ua-parser-js": "^0.7.24"
     },
     "peerDependencies": {
+        "expo-device": "~5.2.1",
         "react": "*",
-        "react-dom": "*",
-        "expo-device": "~5.2.1"
+        "react-dom": "*"
     },
     "sideEffects": false
 }

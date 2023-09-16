@@ -1,11 +1,12 @@
 import React, { Children, forwardRef } from 'react';
+import clsx from 'clsx';
 
 import { Layer } from '../Layer';
 import { GridRow } from './GridRow';
 import { getGridAccessibilityProps } from './accessibility/getGridAccessibilityProps';
 import { GridProps } from './types';
 
-const Grid = forwardRef(({ children, ...others }: GridProps, ref: any): JSX.Element => {
+const Grid = forwardRef(({ children, className, ...others }: GridProps, ref: any): JSX.Element => {
     const isRow = (): boolean => {
         let row = false;
         Children.forEach(children, (child) => {
@@ -15,7 +16,12 @@ const Grid = forwardRef(({ children, ...others }: GridProps, ref: any): JSX.Elem
     };
 
     return (
-        <Layer ref={ref} flex={1} flexDirection={isRow() ? 'column' : 'row'} {...others} {...getGridAccessibilityProps()}>
+        <Layer
+            ref={ref}
+            className={clsx('flex-1', isRow() ? 'flex-column' : 'flex-row', className)}
+            {...others}
+            {...getGridAccessibilityProps()}
+        >
             {children}
         </Layer>
     );

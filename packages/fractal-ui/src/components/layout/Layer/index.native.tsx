@@ -1,22 +1,15 @@
-import { motify } from 'moti';
+import { MotiView } from 'moti';
 import React, { forwardRef } from 'react';
-import { View } from 'react-native';
-import styled from 'styled-components/native';
-
-import { useVariantState } from '../../../animations/native/hooks/useVariantState';
-import { FractalSharedCss } from '../../../sharedProps';
+import { styled } from 'nativewind';
 import { LayerProps } from './types';
+import { useVariantState } from '../../../animations/native/hooks/useVariantState';
 
-const MotiView = motify(View)();
-
-const StyledLayer = styled(MotiView as any)`
-    ${FractalSharedCss};
-`;
+const StyledLayer = styled(MotiView) as any;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Layer = forwardRef(({ currentVariant, variants, layout, ...others }: LayerProps, ref: any): JSX.Element => {
+const Layer = forwardRef(({ currentVariant, variants, layout, className, ...others }: LayerProps, ref: any): JSX.Element => {
     const variantState = useVariantState(currentVariant, variants);
-    return <StyledLayer ref={ref} state={variantState} {...others} />;
+    return <StyledLayer ref={ref} state={variantState} className={className} {...others} />;
 });
 
 Layer.displayName = 'Layer';
